@@ -1,0 +1,17 @@
+id,generation_status,budget_status,relative_error,protocol_valid
+R73_cup_night_s10_BUDGET_EARLY,completed,matched,2.2450011004517464e-09,True
+R73_cup_night_s10_BUDGET_LATE,completed,matched,1.616566102844498e-08,True
+R73_cup_night_s17_BUDGET_EARLY,completed,matched,4.5833136828043266e-09,True
+R73_cup_night_s17_BUDGET_LATE,completed,matched,7.683329078905893e-09,True
+R73_printed_shirt_studio_s0_BUDGET_EARLY,completed,matched,5.6398074454762735e-09,True
+R73_printed_shirt_studio_s0_BUDGET_LATE,completed,matched,1.8629458063174852e-08,True
+R73_printed_shirt_studio_s17_BUDGET_EARLY,completed,matched,7.554601014606052e-09,True
+R73_printed_shirt_studio_s17_BUDGET_LATE,completed,matched,1.1558138445558371e-08,True
+R73_rug_floor_s0_BUDGET_EARLY,completed,matched,8.815518749404586e-09,True
+R73_rug_floor_s0_BUDGET_LATE,completed,matched,2.5829029007054132e-08,True
+R73_rug_floor_s17_BUDGET_EARLY,completed,matched,6.9878194456818515e-09,True
+R73_rug_floor_s17_BUDGET_LATE,completed,matched,5.139362363294848e-10,True
+R73_dog_rain_s0_BUDGET_EARLY,completed,matched,2.191597298834691e-08,True
+R73_dog_rain_s0_BUDGET_LATE,completed,matched,6.120339486984928e-09,True
+R73_dog_rain_s17_BUDGET_EARLY,completed,matched,4.855599452777057e-09,True
+R73_dog_rain_s17_BUDGET_LATE,completed,matched,6.865368913934291e-09,True

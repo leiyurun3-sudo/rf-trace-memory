@@ -1,4 +1,4 @@
-# RF Trace Memory: Research Progress and Continuation Guide
+# RF Trace Memory: Methods, Experimental Results, and Research Directions
 
 **Project:** [leiyurun3-sudo/rf-trace-memory](https://github.com/leiyurun3-sudo/rf-trace-memory)
 
@@ -6,7 +6,7 @@
 
 **Scope:** training-free image editing with RF-Inversion, trajectory residual correction, and source attention memory.
 
-This document records the research idea, implemented algorithms, experiment design, measured results, implementation details, and the work needed to continue the project. It is intended for collaborators who will reproduce the experiments, extend the method, and prepare a manuscript. The accompanying code and result records define the current research state.
+This document presents the research problem, implemented algorithms, experimental evidence, implementation details, and research directions. The accompanying code, plans, images, and numerical records define the current research state. The central question is how the amount and timing of source-reference correction affect detail preservation during text-guided editing.
 
 [Reproduction instructions](docs/REPRODUCING.md) · [Experiment code](experiments) · [Original results](results) · [Derived tables](docs/tables) · [Downloadable archives](https://github.com/leiyurun3-sudo/rf-trace-memory/releases)
 
@@ -21,7 +21,7 @@ This document records the research idea, implemented algorithms, experiment desi
 7. [Qualitative observations and complete R73 comparisons](#7-qualitative-observations-and-complete-r73-comparisons)
 8. [Computation and caching](#8-computation-and-caching)
 9. [Related work and research positioning](#9-related-work-and-research-positioning)
-10. [Continuation plan](#10-continuation-plan)
+10. [Research directions and evaluation priorities](#10-research-directions-and-evaluation-priorities)
 11. [Material available for a future manuscript](#11-material-available-for-a-future-manuscript)
 12. [Repository organization and data provenance](#12-repository-organization-and-data-provenance)
 
@@ -55,9 +55,13 @@ The archive contains **166 newly generated outputs: 160 edits and six reconstruc
 
 ### 1.2 Main measured result
 
-Across eight matched task/seed pairs in R73, early, constant, and late correction achieve mean shift-compensated pattern NCC values of **0.3783, 0.3507, and 0.3343**, respectively, at the same accumulated residual RMS budget. Early correction improves this metric by **0.0276 over constant correction** and **0.0440 over late correction**. The maximum recorded relative budget mismatch is **$2.583 \times 10^{-8}$**.
+**Equal coefficient integrals conceal unequal correction magnitudes.** R72's early schedule applies 21.94% more accumulated residual magnitude than C50 on average. R73 matches this magnitude, reducing the observed early-versus-constant shift-NCC advantage from **0.1384 to 0.0276**. This comparison identifies residual magnitude as an important control variable for timing studies.
 
-Task-level effects differ. Early correction gives higher average pattern correlation for the cup and printed shirt; constant correction gives the highest correlation for the rainy dog. Late correction often produces a clearer cold night appearance in the cup examples. Section 7 presents all eight R73 comparison sheets.
+At matched residual budget, early, constant, and late correction achieve mean shift NCC values of **0.3783, 0.3507, and 0.3343** across eight source/seed pairs. Early-minus-constant effects average **+0.0896 for the cup, +0.0653 for the printed shirt, +0.0042 for the rug, and -0.0487 for the rainy dog**. The first two tasks improve at both seeds; the dog decreases at both seeds.
+
+Treating the four source images as independent units gives an exploratory source-bootstrap 95% interval of **[-0.0222, +0.0774]** for the average early-minus-constant effect. The source-level two-sided sign test gives **p=0.625**, and the sign-flip test gives **p=0.375**. Section 6.8 describes their assumptions and the reproducible calculation. The maximum recorded relative budget mismatch is **$2.583 \times 10^{-8}$** across all sixteen new R73 outputs.
+
+These results establish a budget-controlled comparison and identify task-dependent responses. Section 7 shows all eight R73 comparison sheets; semantic and subject ratings are the next evaluation priority.
 
 ### 1.3 Working research direction
 
@@ -190,7 +194,14 @@ The target velocity includes its prompt and selected memory branch. The latest e
 
 The source residual is evaluated at the **fixed reference state $r_i$**. With source settings fixed, it is independent of the target latent $z_i$ and target correction schedule. Its norm profile can therefore be reused across schedules for the same reference trajectory and controller.
 
-The residual measures the discrepancy between a discrete reference-path increment and source-conditioned generation velocity. It includes the effects of the inversion construction and generation conditioning.
+The residual measures the discrepancy between a discrete reference-path increment and source-conditioned generation velocity. It includes the effects of the inversion construction and generation conditioning. Inversion uses empty text and guidance zero; source generation uses the source prompt and guidance 3.5. An exact decomposition is
+
+$$
+c_i=\underbrace{p_i-u_i^{s,\mathrm{empty}}}_{\text{reference-to-empty-field residual}}
++\underbrace{u_i^{s,\mathrm{empty}}-u_i^{s,\mathrm{cond}}}_{\text{conditioning difference}}.
+$$
+
+Here the empty and conditioned fields are evaluated at the same reference node with the same generation controller. The first term also reflects inversion control and discretization. Their separate editing effects remain a mechanism question. A controlled ablation must hold source K/V conditioning fixed: the current source call both computes the residual field and captures memory, so changing that call's conditioning changes both mechanisms.
 
 **Reconstruction identity.** With source text on both branches, memory disabled, identical field settings, $z_i=r_i$, and $\lambda_i=1$,
 
@@ -236,7 +247,7 @@ O_{\mathrm{mem}}=O_{\mathrm{text}}+m_{\mathrm{img}}R_s,
 O'=(1-g_i)(O_{\mathrm{text}}+O_{\mathrm{img}})+g_iO_{\mathrm{mem}}.
 $$
 
-This preserves target text contribution and allocates the original image-attention mass to source retrieval. Target text-query outputs remain unchanged.
+For the current layer input, this preserves target text contribution and allocates the original image-attention mass to source retrieval. Target text-query outputs remain unchanged at that layer. The modified image outputs propagate into subsequent layers, where both image and text interactions evolve.
 
 The implementation captures normalized, position-encoded source keys and source values. The evaluated setting uses **single_transformer_blocks 1–26, inclusive**, generation steps **0–6**, and $g_i=1$. The value_blocks field retained in plans belongs to other branches; it does not select active attn_budget blocks.
 
@@ -351,6 +362,7 @@ Experiment snapshots preserve the code that produced each round. R73 contains th
 | [review.py](experiments/R73_ResidualBudget/review.py) | Review sheets, templates, and rating merges |
 | [summarize.py](tools/summarize.py) | Standard-library summary of frozen results |
 | [build_report_assets.py](tools/build_report_assets.py) | Derived CSVs, budget figure, and native-crop sensitivity |
+| [analyze_paired_results.py](tools/analyze_paired_results.py) | Source-clustered effects, exact small-sample calculations, and R73 protocol audit |
 
 Generation uses FLUX.1-dev revision 3de623fc3c33e44ffbe2bad470d0f45bccf2eb21: **512 × 512**, **28 steps**, guidance **3.5**, maximum text length **512**. The transformer uses BF16 and integration state FP32. Loaders enforce Diffusers **0.35.1**, Transformers **4.55.4**, and Accelerate **1.10.1**.
 
@@ -360,6 +372,7 @@ CPU-only summary of published records:
 
 ~~~bash
 python3 tools/summarize.py
+python3 tools/analyze_paired_results.py
 ~~~
 
 Regenerate derived tables and figures after installing report dependencies:
@@ -403,6 +416,8 @@ $$
 
 Object and background MAE apply the same calculation inside and outside the supplied source object mask, in fixed source coordinates.
 
+These quantities describe where pixels change. Desired changes are specified by the prompt: moonlight, studio illumination, wet fur, and a wooden floor each require changes in different regions. Background MAE is therefore interpreted together with edit achievement. Whole-image MAE matching aligns pixel deviation; semantic edit strength is evaluated separately.
+
 Fixed pattern NCC is two-dimensional grayscale correlation in a task-specific ROI. For mean-centered vectors $\tilde a$ and $\tilde b$,
 
 $$
@@ -429,9 +444,13 @@ The review protocol separates three outcomes:
 2. **Subject intact:** category and count are retained, without major structural distortion.
 3. **Pattern retained:** the specific source pattern remains recognizable locally.
 
-R73 joint success requires all three conditions and artifact=0. Every generated image remains in the denominator; artifact types are recorded separately.
+The unified evaluation rule is edit_ok=1, subject_ok=1, pattern_ok=1, and artifact=0. Its denominator is **all planned non-diagnostic edits** for the compared arm; generation failures count as unsuccessful. Pending ratings remain missing, with rating coverage reported separately. Reconstruction diagnostics and repeated copies of reference jobs are excluded from edit counts.
 
-Released review fields are pending. The following tables report image measurements; semantic success rates will be populated through the supplied templates. Section 7 describes visible examples without assigning aggregate ratings.
+Historical summary definitions differ: R71 has three rating fields, R72 adds pattern_ok, and R73 uses the planned-edit denominator. A combined outcome table uses the four-field rule above and original job identities. All 160 unique editing outputs currently await released semantic ratings; the six reconstruction outputs are analyzed separately.
+
+The main outcome table reports edit success, subject integrity, pattern retention, artifacts, joint success, and costs on the full evaluation set. A secondary paired analysis uses the **same source/seed cases successful under both compared methods**, with the subset size reported. Independent raters can score randomized, arm-hidden presentations, preserve their original ratings, and record adjudicated disagreements.
+
+The following tables report image measurements. Section 7 describes visible examples without assigning aggregate ratings.
 
 ## 6. Results and interpretation
 
@@ -491,7 +510,7 @@ Values are two-seed mean fixed NCC. NORMMATCH_KV remains close to the combinatio
 
 Equal coefficient integrals allocate **21.94% more residual magnitude to early correction** and **21.94% less to late correction**, averaged over paired ratios. R73 balances that magnitude. The early-versus-constant NCC difference decreases from **0.1384 to 0.0276**.
 
-Correction amount is an important experimental variable. Temporal allocation retains a smaller, task-dependent effect after the amount is controlled.
+Correction amount is an important experimental variable. Temporal allocation retains a smaller, task-dependent observed effect after the amount is controlled. The difference between these two average gains describes sensitivity to the budget control; the schedules also change when their residual budgets are matched.
 
 ### 6.5 Matched-budget task results
 
@@ -523,6 +542,29 @@ For the rug, early correction combines lower object-region deviation with larger
 The native-crop calculation uses 512-grid JPEG pattern crops and original PNG sources. Reconstruction NCC changes from **0.6771 to 0.6604** for the cup, **0.9812 to 0.9678** for the shirt, and **0.8505 to 0.8400** for the butterfly. The protocol changes exact values while retaining the large reconstruction improvement.
 
 Complete results are in [native_crop_summary.csv](docs/tables/native_crop_summary.csv) and [native_crop_sensitivity.csv](docs/tables/native_crop_sensitivity.csv). Future runs should save full-resolution PNGs for evaluation and separate previews for visualization.
+
+### 6.8 Paired effects and statistical uncertainty
+
+The independent unit is the source image. Each R73 source has one editing task and two seeds. Seed-level differences are averaged within source; each source receives equal weight in the overall effect.
+
+| Task | Seeds | Early - C50, first seed | Early - C50, second seed | Source mean |
+|---|---|---:|---:|---:|
+| Cup / night | 10, 17 | +0.1013 | +0.0778 | +0.0896 |
+| Printed shirt / studio | 0, 17 | +0.0647 | +0.0658 | +0.0653 |
+| Rug / floor | 0, 17 | +0.0247 | -0.0162 | +0.0042 |
+| Dog / rain | 0, 17 | -0.0719 | -0.0254 | -0.0487 |
+
+| Contrast | Mean source effect | Source-bootstrap 95% interval | Two-sided sign p | Two-sided sign-flip p |
+|---|---:|---|---:|---:|
+| Early - Constant | +0.0276 | [-0.0222, +0.0774] | 0.625 | 0.375 |
+| Late - Constant | -0.0164 | [-0.0347, +0.0090] | 0.625 | 0.375 |
+| Early - Late | +0.0440 | [-0.0195, +0.1075] | 1.000 | 0.500 |
+
+The empirical percentile bootstrap enumerates all **256 ordered resamples of four source means**, sampling sources with replacement and retaining each source's seed cluster. Percentiles use linear interpolation. The sign test evaluates positive/negative source effects under an equal-sign null. The sign-flip calculation enumerates all **16 sign assignments** and uses the absolute mean statistic; its null assumes independently sign-symmetric source effects. These are exploratory, unadjusted calculations on four selected development sources, with coarse small-sample uncertainty.
+
+The seed-level count is five positive and three negative Early - Constant pairs. Its descriptive binomial sign calculation is 0.7266 two-sided (0.3633 one-sided); inference above uses source clusters. Cup and shirt show consistent positive effects at the tested seeds, the dog shows consistent negative effects, and the rug has mixed signs. Task and source identity are coupled in this design. Broader category-level rules are hypotheses for independent-source evaluation.
+
+Reproduce with `python3 tools/analyze_paired_results.py`. Outputs: [source effects](docs/tables/r73_source_effects.csv), [source statistics](docs/tables/r73_source_statistics.csv), and [budget protocol audit](docs/tables/r73_protocol_audit.csv). All sixteen R73 jobs meet the archived budget protocol. The analysis reads frozen CSV values and records their comparison-file SHA-256; it performs no image regeneration or semantic scoring.
 
 ## 7. Qualitative observations and complete R73 comparisons
 
@@ -596,6 +638,8 @@ The early arm runs first and creates the source inversion cache. The late arm re
 
 Across the 16 new jobs, the recorded totals are **1,120 actual NFE**, **1,344 standalone NFE**, and **678.634 seconds** summed over per-job execution time. Model loading and subsequent packaging are outside that timing sum. The imported R72 residual profiles are a prior computation used by R73; preparing an unseen source requires obtaining its profile.
 
+The R73 standalone count of 84 covers one inversion and the source/target editing calls **with the norm profile already supplied**. A from-scratch deployment also prepares that profile. Its setup cost should be recorded separately, together with first-edit and subsequent-edit cost. A source-field cache could combine profile preparation with reusable source velocities and K/V; that cache is a proposed extension. Wall time, GPU memory, and cache storage accompany NFE because attention retrieval and transfers have their own cost.
+
 Per-job costs are published in [r73_compute.csv](docs/tables/r73_compute.csv).
 
 ### 8.3 Caching opportunities for continuation
@@ -629,7 +673,7 @@ RF-Solver/RF-Edit specifically shares source values while retaining target atten
 
 DirectEdit uses stored trajectory increments and its own controlled update sequence. The present implementation evaluates a source-conditioned velocity at fixed reference nodes, defines the residual explicitly, and matches its accumulated RMS across temporal schedules. Comparing these update equations, source-field costs, and evaluation protocols is the appropriate next literature-to-code step.
 
-**Positioning paragraph for continued work.** Existing inversion and feature-sharing methods provide powerful source-preservation mechanisms. This project studies their temporal control through an explicit source-residual magnitude budget, combined with a memory read that preserves target text and image-attention mass. R72–R73 show that equal coefficient integrals can conceal a substantial difference in residual magnitude. Matching that magnitude produces a more interpretable comparison of when source correction is applied.
+**Research positioning.** Existing inversion and feature-sharing methods provide powerful source-preservation mechanisms. This project studies their temporal control through an explicit source-residual magnitude budget, combined with a memory read that preserves the current layer's target text contribution and image-attention mass. R72–R73 show that equal coefficient integrals can conceal a substantial difference in residual magnitude. Matching that magnitude produces a more interpretable comparison of when source correction is applied.
 
 ### Reference details
 
@@ -641,17 +685,17 @@ DirectEdit uses stored trajectory increments and its own controlled update seque
 6. Marian Lupascu and Mihai Sorin Stupariu. *Optimal Transport for Rectified Flow Image Editing: Unifying Inversion-Based and Direct Methods*. arXiv:2508.02363, 2025.
 7. Desong Yang and Mang Ye. *DirectEdit*. arXiv:2605.02417, 2026.
 
-## 10. Continuation plan
+## 10. Research directions and evaluation priorities
 
 ### 10.1 Immediate work using the existing outputs
 
 **Complete semantic review.** Use the supplied sheets and templates to label edit achievement, subject integrity, pattern retention, and artifacts. Randomize arm order and hide arm names for scoring. Two independent readers and a recorded adjudication step would provide a useful agreement measure. Evaluate rain and rug edits against the actual prompts in Section 5.
 
-**Build a joint-outcome table.** Report success counts and denominators for each arm. Include all failures. Report local pattern measurements alongside these outcomes and provide the successful-edit subset as a separate view.
+**Build a joint-outcome table.** Apply the four-field rule in Section 5.4 across all rounds. Report full-set success counts, denominators, and rating coverage for each arm. Include all failures. Report local pattern measurements alongside these outcomes and use common-success source/seed pairs for the secondary subset analysis.
 
 **Separate scene, subject, and pattern behavior.** For each task, record the principal failure: wrong illumination, repeated subject, color distortion, altered geometry, or redrawn pattern. This makes the next algorithm change address a concrete outcome.
 
-**Use paired analysis.** Compare the same source and seed. Additional seeds measure sampling variation; additional source images measure generalization. Confidence intervals should account for clustering by source image.
+**Use paired analysis.** Compare the same source and seed. The source-clustered R73 analysis is provided in Section 6.8. Additional seeds measure sampling variation; additional source images measure generalization.
 
 These steps use the existing generated images and require no new generation.
 
@@ -661,10 +705,10 @@ The next generation study should combine a closest external method with a compac
 
 | Element | Proposed choice |
 |---|---|
-| Sources | 12 independent images, including at least six new sources |
+| Sources | 12 entirely new source images; the existing six remain the development set |
 | Task strata | Printed patterns, natural fine texture, plain objects, and explicit geometry/appearance changes |
 | Seeds | Two preselected seeds per source |
-| Internal baseline | ETA03, with its controller schedule fully specified |
+| Internal baseline | RF controller with eta selected on the development set and its schedule fully specified |
 | Reference configuration | CORR_KV |
 | Budget controls | C50 and one timing schedule selected on the existing diagnostic set |
 | External method | RF-Edit or DirectEdit after implementation alignment; FlowEdit is an additional formulation-level comparator |
@@ -673,19 +717,20 @@ The next generation study should combine a closest external method with a compac
 | Primary outcome | Joint semantic/subject/pattern success |
 | Secondary outcomes | Pattern NCC, object/background error, artifact frequency, NFE, time, and memory |
 
-Freeze the selected timing rule and prompts before evaluating new sources. An RF baseline with validation-selected $\eta$ can be added as an internal tuning control. Per-image best-$\eta$ selection on the evaluation set should be labeled an oracle analysis.
+Freeze the selected timing rule and prompts before evaluating new sources. The 120-output design is a proposed research study, not a scheduled run. An RF controller sweep is an internal tuning control. A per-image best-$\eta$ oracle requires actual matched candidate outputs and an explicit selection criterion; report it separately from external methods and fixed-parameter results. External comparisons run on the same inputs and evaluation protocol.
 
 ### 10.3 Algorithm extensions ranked by purpose
 
 | Extension | Intended benefit | Minimal informative comparison |
 |---|---|---|
 | Source-field and K/V caching | Reduce repeated source computation across target edits | Identical outputs and recorded preparation/per-edit cost |
+| Residual conditioning decomposition | Separate reference-to-empty-field residual and conditioning difference | Hold source-memory conditioning fixed while changing the residual field; account for additional field calls |
 | Correction–memory temporal interaction | Explain when the two source mechanisms cooperate | Early/late correction × early/late memory, matching residual budget and memory-step count |
 | Source-object retrieval restriction | Reduce background leakage and extra objects | Full-image versus object-restricted source K/V; unchanged target text branch |
 | Spatial residual routing | Preserve source detail while allowing requested scene changes | Global versus object-weighted correction at matched total residual budget |
 | Edit-aware correction strength | Release source constraints for wet fur, material, or pose edits | Fixed schedule versus a defined prompt/feature-conditioned gate on held-out sources |
 
-The timing interaction is a particularly direct follow-up to R73. Keep residual magnitude and memory-step count fixed so that the result measures relative temporal placement.
+The timing interaction and conditioning decomposition are focused mechanism studies. Their priority follows semantic evaluation and the independent-source comparison. Keep residual magnitude and memory-step count fixed when testing relative temporal placement.
 
 Object-restricted retrieval and spatial residual routing introduce a new generation constraint. Their masks, source/target coordinate convention, and mask-generation cost should be included in the experiment specification.
 
@@ -739,7 +784,7 @@ These rules turn the current diagnostic results into a defined development path.
 | Combined correction and memory improves local NCC relative to ETA03 | Measured, with task-dependent MAE and visual behavior |
 | Equal coefficient integrals give unequal residual magnitudes | Measured across eight paired task/seed cases |
 | Residual-budget matching is numerically accurate | Maximum recorded relative error $2.583\times10^{-8}$ |
-| Early correction improves average shift NCC at matched budget | Measured increase 0.0276 over constant on the diagnostic set |
+| Timing effects at matched residual budget | Development-set mean +0.0276 for early versus constant; source-bootstrap interval [-0.0222, +0.0774], with task differences in Section 6.8 |
 | Joint semantic/subject/pattern success | Rating stage pending |
 | Generalization to independent sources | Next generation study |
 | Runtime savings from full source-field caching | Proposed implementation extension |
@@ -749,7 +794,7 @@ These rules turn the current diagnostic results into a defined development path.
 
 ~~~text
 rf-trace-memory/
-  README.md                       Research progress and continuation guide
+  README.md                       Research overview, methods, results, and directions
   requirements.txt                Runtime and report dependencies
   docs/
     REPRODUCING.md                 Setup, run/progress, outputs, and review
@@ -768,6 +813,7 @@ rf-trace-memory/
   tools/
     summarize.py                  Read-only aggregate summary
     build_report_assets.py        Rebuild derived tables and figure
+    analyze_paired_results.py     Source-level statistics and budget protocol audit
 ~~~
 
 ### 12.1 Records to consult
@@ -787,4 +833,23 @@ Original results remain under results/; derived calculations are written to docs
 
 The supplied [conference template](resources/conference-template) contains formatting guidance and placeholder fields. It is retained as a layout resource for a future manuscript. This README is the current research report.
 
-The repository does not bundle FLUX model weights. Model access follows the upstream provider's terms. Source images and third-party template files retain their original ownership; a broader public release should include their source and permission records.
+The repository does not bundle FLUX model weights. Model access follows the upstream provider's terms. Source images and third-party template files retain their original ownership. Repository-wide licensing remains to be selected after identifying original and inherited code and asset permissions. Publication on GitHub provides access; reuse terms are governed by the applicable licenses and permissions.
+
+### 12.2 Implementation findings and experiment readiness
+
+The frozen snapshots preserve the implementations behind the published records. The following findings define the scope of the next implementation revision.
+
+| Finding | Effect on the archived study | Required change for a new study |
+|---|---|---|
+| Full-resolution output is saved only as preview and pattern JPEGs | Metrics reflect the encoding protocol in Section 5.3 | Save raw.png and the exact source_eval.png on the evaluation grid; compute formal metrics from PNG and retain preview.jpg for browsing |
+| Dynamic attention gate takes precedence over the spatial gate | Published generation masks are all ones | Before local editing, enforce the allowed token region and normalize adaptive budgets within the explicitly defined eligible region |
+| Generation completion and budget matching are separate statuses | All 16 R73 jobs pass; the derived audit records them separately | Propagate protocol_valid into matched-budget tables; retain and list every mismatch separately |
+| Environment and model inventories are absent from the packaging allowlist | Exact historical Python/PyTorch/CUDA versions are missing from the released archive | Package environment.json and model_inventory.json plus GPU/driver details from the actual runtime |
+| Review fields and denominators differ across snapshots | Published semantic fields remain pending | Use the unified four-field outcome and planned-edit denominator in Section 5.4 |
+| Legacy value_blocks and inactive modules remain in snapshots | Active attn_budget layers are single_transformer_blocks 1-26 | Publish a minimal active configuration when creating the next implementation revision |
+
+The spatial-gate issue occurs where content_memory constructs dynamic_gate and Processor.__call__ chooses it ahead of owner.gate. Adaptive gating requires a defined budget over eligible tokens as well as spatial support. The archived global runs retain their original computation.
+
+PROJECT_KV uses target_velocity - source_velocity after the target memory read. This is a sequential, cross-state velocity-direction proxy. Its direction includes memory effects; semantic substitutions observed in that arm motivate keeping it as a diagnostic variant. A causal explanation of those substitutions would require a separate intervention.
+
+Frozen code, plans, images, and metrics remain unchanged by this research-summary revision. Derived statistics are reproducible under tools/ and docs/tables/. Current evaluation priorities are unified semantic ratings, fixed-setting evaluation on new sources, and a same-protocol external baseline.

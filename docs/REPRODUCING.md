@@ -24,6 +24,7 @@ Run from the repository root with Python; this command uses only the standard li
 
 ```bash
 python3 "tools/summarize.py"
+python3 "tools/analyze_paired_results.py"
 ```
 
 | Experiment | Plan and source | Published gallery | New outputs | Embedded reference images |
@@ -47,6 +48,8 @@ Expected R73 values from the archived CSVs:
 | Sum of recorded per-job time | approximately 678.634 seconds |
 
 The summary script prints the new-output aggregates, budget error, costs, and timings. The three-way comparison is in [R73 comparison_metrics.csv](../results/R73/comparison_metrics.csv). Per-job time excludes model loading and the packaging performed after each job; it is not total run wall time. Human ratings in the published summaries are pending, so semantic and joint success rates remain unset.
+
+The paired-analysis script uses only the standard library. It reads the frozen R73 metrics and comparison CSVs, writes a separate budget-protocol audit, averages paired seed effects within each source image, and enumerates source-bootstrap resamples and sign flips. It writes `r73_protocol_audit.csv`, `r73_source_effects.csv`, and `r73_source_statistics.csv` under `docs/tables/`. All sixteen published budget jobs pass. Early minus C50 has source-mean effect 0.0276009, percentile interval [-0.0222156, 0.0774174], two-sided source sign p=0.625, and sign-flip p=0.375. The input CSV hash is retained with the statistics. These outputs describe the recorded NCC measurements; human scores remain separate.
 
 ## 2. Environment and dependencies
 
@@ -261,6 +264,8 @@ The runner caches one inversion trajectory in host memory, up to two encoded sou
 
 `nfe_total` measures newly executed evaluations for a job, so a trajectory-cache hit has `nfe_inversion=0`. `standalone_inversion_nfe` preserves the inversion cost. R72/R73 also record `nfe_standalone`; for R71 compute it as `standalone_inversion_nfe + nfe_edit`. Compare standalone totals for per-image algorithm cost and actual totals for a particular ordered run. The archived R73 sequence performs eight inversions and sixteen edits: `8 × 28 + 16 × 56 = 1120` actual NFE, versus `16 × 84 = 1344` standalone NFE. Restarting midway can change actual totals and timing while keeping the standalone protocol unchanged.
 
+R73's 84-NFE independent-run count assumes the residual norm profile supplied by its plan. For a new source, record profile-preparation calls and time separately. A future compatible cache may reuse source fields and memory tensors across edits; the published snapshots recompute those fields. Empty-text inversion predictions and source-conditioned generation predictions have different conditioning.
+
 ## 7. Measurements and human review
 
 The archived MAE/NCC measurements use saved **384 × 384 JPEG previews**, resized to 512 × 512 with Lanczos. They do not use the native pattern crop. `object_mae` and `bg_mae` use `outer.png` and its complement. Pattern NCC uses luminance in the supplied ROI; `pattern_ncc_shift6` searches integer offsets from −6 to +6 pixels in each axis. The stored `(dx, dy)` shifts the output ROI relative to the source ROI. Empty masks and flat ROIs receive explicit missing-value statuses.
@@ -281,6 +286,10 @@ The importer checks the review schema, experiment fingerprint, job ID, and previ
 
 The archived summary definitions differ: R71/R72 use completed, fully rated edits as their rate denominators; R73 uses all planned non-diagnostic jobs, counting generation failures as unsuccessful and leaving rates pending until remaining completed images are rated. R73 joint success requires `edit_ok=1`, `subject_ok=1`, `pattern_ok=1`, and `artifact=0`. Keep reconstruction diagnostics separate from editing outcomes and state the denominator when comparing rounds.
 
+For the published images, download the repository and open [R73 review](../results/R73/review/index.html) locally; export its ratings and retain that export as a separate annotation artifact. The importer command above targets fresh experiment working directories. Review exports identify the image hashes and job IDs they annotate.
+
+A combined research table uses four fields for every unique edit, deduplicated by original job ID. R71 requires the additional pattern-retention rating. Keep all planned edits in the final denominator, report pending coverage separately, and count generation failures as unsuccessful. Preserve individual ratings and adjudication records. For conditional pattern comparisons, select the same source/seed pairs successful under both compared methods and report their count alongside the full-set outcomes.
+
 ## 8. Rebuild derived report assets
 
 The implemented [report-asset builder](../tools/build_report_assets.py) reads the frozen CSVs, records, native pattern JPEGs, and source PNGs. It requires NumPy, Pillow, and Matplotlib, uses the noninteractive `Agg` backend, and writes derived assets under `docs/`. Run from the repository root with the environment prepared above:
@@ -294,6 +303,8 @@ The implemented [report-asset builder](../tools/build_report_assets.py) reads th
 ```
 
 A separate CPU environment containing those three libraries can run the same script. Expected outputs are nine CSV tables under `docs/tables/`: `r71_task_means.csv`, `r72_task_means.csv`, `r73_task_means.csv`, `r73_comparison_task_means.csv`, `r73_compute.csv`, `r73_paired_budget.csv`, `budget_timing.csv`, `native_crop_sensitivity.csv`, and `native_crop_summary.csv`. The script also writes `docs/figures/budget_timing.svg` and its PNG preview, and prints a JSON summary. It preserves the experiment sources and archived results.
+
+Run `python3 tools/analyze_paired_results.py` to reproduce the three additional statistical/protocol CSVs. It reads the original result tables directly and can run independently of the figure builder. The code snapshots remain frozen; implementation findings and changes required for a new generation study are recorded in [README Section 12.2](../README.md#122-implementation-findings-and-experiment-readiness).
 
 The native-crop sensitivity calculation compares each saved quality-92 `pattern.jpg` against the corresponding crop of the original source PNG, resized to the recorded generated dimensions. It computes fixed-coordinate luminance NCC without shift search. This is a separate measurement from the archived preview NCC: it changes both the image representation and the reference encoding. Its CSVs preserve the archived preview value alongside the new native-crop value.
 
