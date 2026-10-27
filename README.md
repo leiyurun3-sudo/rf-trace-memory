@@ -163,7 +163,7 @@ The controller schedule is
 
 $$
 \eta_i=\eta_{\max}
-\operatorname{clip}\left(\frac{\sigma_i-0.2}{0.25},0,1\right).
+\mathrm{clip}\left(\frac{\sigma_i-0.2}{0.25},0,1\right).
 $$
 
 ETA03 uses a maximum coefficient of 0.3 and releases source attraction near the end. The R73 budget arms use $\eta_{\max}=0$.
@@ -218,7 +218,7 @@ With $\lambda_i=0$, the residual vanishes. The resulting arm is RAW when memory 
 The active memory mode is attn_budget. For target image query $Q_t$, compute ordinary joint attention over target text and image tokens:
 
 $$
-A=\operatorname{softmax}\left(
+A=\mathrm{softmax}\left(
 \frac{Q_t[K_{\mathrm{text}}^t;K_{\mathrm{img}}^t]^\top}{\sqrt d}
 \right).
 $$
@@ -234,7 +234,7 @@ $$
 Read source image content using the same query:
 
 $$
-R_s=\operatorname{softmax}\left(
+R_s=\mathrm{softmax}\left(
 \frac{Q_t(K_{\mathrm{img}}^s)^\top}{\sqrt d}
 \right)V_{\mathrm{img}}^s.
 $$
@@ -254,8 +254,8 @@ The implementation captures normalized, position-encoded source keys and source 
 Simultaneously permuting already-encoded source K and V rows leaves a full attention read unchanged:
 
 $$
-\operatorname{softmax}(Q(PK)^\top)\,PV
-=\operatorname{softmax}(QK^\top)V.
+\mathrm{softmax}(Q(PK)^\top)\,PV
+=\mathrm{softmax}(QK^\top)V.
 $$
 
 A paired shuffle and a V-only permutation therefore test different properties. V-only permutation changes the association between weights and retrieved values. Future pairing tests should record the exact permutation operation and its position relative to positional encoding.
@@ -411,7 +411,7 @@ The rain prompt does not request paved-road replacement. The rug task changes th
 RGB values are scaled to $[0,1]$. Image deviation is
 
 $$
-\operatorname{MAE}(x,y)=\frac{1}{3HW}\sum_{p,c}|x_{p,c}-y_{p,c}|.
+\mathrm{MAE}(x,y)=\frac{1}{3HW}\sum_{p,c}|x_{p,c}-y_{p,c}|.
 $$
 
 Object and background MAE apply the same calculation inside and outside the supplied source object mask, in fixed source coordinates.
@@ -421,7 +421,7 @@ These quantities describe where pixels change. Desired changes are specified by 
 Fixed pattern NCC is two-dimensional grayscale correlation in a task-specific ROI. For mean-centered vectors $\tilde a$ and $\tilde b$,
 
 $$
-\operatorname{NCC}(a,b)=
+\mathrm{NCC}(a,b)=
 \frac{\tilde a^\top\tilde b}
 {\lVert\tilde a\rVert_2\lVert\tilde b\rVert_2}.
 $$
