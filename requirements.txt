@@ -1,0 +1,19 @@
+# Generation and report-asset dependencies. Install a CUDA-enabled torch build for your GPU and
+# driver first; see docs/REPRODUCING.md. No historical torch/CUDA pin is inferred.
+torch
+
+# Exact versions enforced by all three experiment model loaders.
+diffusers==0.35.1
+transformers==4.55.4
+accelerate==1.10.1
+
+# Direct imports, weight loading, and the FLUX T5 tokenizer conversion path.
+# Their historical versions are not recorded in the published R71-R73 results.
+numpy
+Pillow
+safetensors
+sentencepiece
+protobuf
+
+# CPU report tables/figures (tools/build_report_assets.py); no archived version pin.
+matplotlib
