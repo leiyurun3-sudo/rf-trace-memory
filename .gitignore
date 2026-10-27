@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+.runner.pid
+.launch.lock
+*.log
+experiments/*/results/

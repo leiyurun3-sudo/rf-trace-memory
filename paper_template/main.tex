@@ -1,0 +1,148 @@
+\documentclass[]{spie}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx,amsmath,amssymb,graphicx,booktabs,array,etoolbox,hyperref}
+\hypersetup{hidelinks}
+\pagestyle{empty}
+\textheight=8.65in
+\setlength{\emergencystretch}{2em}
+\renewcommand{\floatpagefraction}{0.85}
+\renewcommand{\textfraction}{0.08}
+\makeatletter
+\def\subsectfont{\raggedright\normalsize\bfseries}
+\long\def\@makecaption#1#2{\vskip\abovecaptionskip\hspace*{1em}\parbox{\dimexpr\linewidth-2em\relax}{\small #1. #2}\par\vskip\belowcaptionskip}
+\patchcmd{\thebibliography}{\arabic{enumi}.}{[\arabic{enumi}]}{}{}
+\makeatother
+% Explicit editable placeholders; no real personal information is inferred.
+\newcommand{\AuthorOne}{[Author 1 name]}\newcommand{\AuthorTwo}{[Author 2 name]}
+\newcommand{\AuthorThree}{[Author 3 name]}\newcommand{\AuthorFour}{[Author 4 name]}
+\newcommand{\AffiliationOne}{[Institution 1; city; country]}
+\newcommand{\AffiliationTwo}{[Institution 2; city; country]}
+\newcommand{\AffiliationThree}{[Institution 3; city; country]}
+\newcommand{\AffiliationFour}{[Institution 4; city; country]}
+\newcommand{\ContactOne}{[Author 1 email]}\newcommand{\ContactTwo}{[Author 2 email]}
+\newcommand{\ContactThree}{[Author 3 email]}\newcommand{\ContactFour}{[Author 4 email]}
+\title{[Paper title describing the problem]\\{}[and the proposed approach]}
+\author{\AuthorOne\supit{a}, \AuthorTwo\supit{b}, \AuthorThree\supit{c}, \AuthorFour\supit{d}\skiplinehalf
+\supit{a}\AffiliationOne\quad\supit{b}\AffiliationTwo\\
+\supit{c}\AffiliationThree\quad\supit{d}\AffiliationFour}
+\authorinfo{Contacts: a: \ContactOne; b: \ContactTwo; c: \ContactThree; d: \ContactFour. Corresponding author: [select author 1--4].}
+\newcommand{\suggest}{\textit{Suggestion:} }
+\newcommand{\figslot}[2]{\fbox{\parbox[c][#1][c]{0.94\linewidth}{\centering\small\textit{Empty figure slot}\\[1em]#2}}}
+\begin{document}
+\maketitle
+\begin{center}\small\textit{Writing template - replace guidance before submission}\end{center}
+\begin{abstract}
+\suggest Open with the specific problem and why the current solution is insufficient. State the objective, the proposed approach, and the essential mechanism in language that readers outside the immediate specialty can follow. Identify the evaluation setting and the strongest comparison that tests the central claim. Replace this guidance with verified results, including the primary outcome, its direction, and the relevant uncertainty or sample size. Mention a material cost, tradeoff, or failure when it affects the interpretation. End with a restrained conclusion describing what the evidence supports and where it applies. Keep the abstract self-contained: define uncommon abbreviations, avoid a literature review, and do not introduce claims absent from the paper. Write this paragraph after the results are settled, then check every quantitative statement against the final tables. Use the conference's current word limit; the source manuscript used a compact single-paragraph abstract.
+\end{abstract}
+\keywords{[research topic], [task], [approach], [evaluation focus], [application]}
+\section{INTRODUCTION AND RELATED WORK}
+\begin{figure}[!ht]\centering
+\figslot{1.65in}{[Input or problem setting]\hspace{1em}[Baseline]\hspace{1em}[Proposed approach]\\[1em]Insert a readable overview or a fairly selected illustrative comparison.}
+\caption{\suggest Show the problem and the proposed response at a glance. Label panels, explain the selection rule, and state what this example can and cannot demonstrate. Use your own permitted evidence.}
+\label{fig:overview}
+\end{figure}
+\suggest Begin with a concrete instance of the problem, then explain its practical or scientific consequence. Define the task, the desired outcome, and the limitation that motivates this study. Place citations beside the claims they support; the superscript here points to a clearly marked bibliography placeholder.\cite{slot01} Describe the contribution as a testable change to an existing approach. Distinguish a new mechanism from an integration, evaluation, or application contribution, and give the reader a precise reason to continue.
+\newpage
+\suggest Close the opening argument by stating the research question and the scope of the contribution. Explain which inputs, outputs, and conditions are covered. Connect the overview in Figure~\ref{fig:overview} to this argument without using one attractive example as evidence of average performance. Reserve detailed experimental settings for Section~3 and measured outcomes for Section~4.
+
+\textbf{Prior approaches and the remaining gap.} \suggest Group the closest work by the problem it solves or the control it provides. For each group, describe the underlying idea, what it achieves, and the limitation relevant to your question. Cite the primary sources after reading them.\cite{slot02,slot03,slot04,slot05,slot06,slot07,slot08,slot09,slot10,slot11,slot12,slot13,slot14,slot15,slot16,slot17} Explain how the proposed approach differs on a concrete dimension such as assumptions, supervision, operation, or cost. Avoid a list of paper names without synthesis. End this paragraph with the precise gap your study addresses and the comparison needed to test it.
+
+\textbf{Inputs, representations, and observation.} \suggest Review the evidence behind your chosen inputs, representations, or measurement process.\cite{slot18,slot19,slot20,slot21,slot22,slot23,slot24,slot25,slot26,slot27,slot28,slot29} Explain why they are suitable for this task and what information they cannot supply. Separate components borrowed from prior work from the interface or procedure introduced here. Identify important neighboring approaches that could solve the same problem with fewer assumptions. State which are evaluated and justify exclusions by scope or feasibility.
+
+\section{PROPOSED APPROACH}
+\suggest Define the task mathematically before describing implementation. Introduce the input $x$, state $s_t$, parameters $\theta$, and output $\widehat y$ only if they are needed. Replace the symbolic expression below with the first essential relationship in your method. Explain the meaning, domain, and dimensions of each symbol immediately around the equation.
+\begin{equation}
+\widehat y = \underbrace{\mathcal F_{\theta}(x)}_{\text{replace with the actual model or mapping}}.
+\label{eq:model}
+\end{equation}
+\suggest Describe the inherited baseline or starting procedure precisely enough to reproduce it. Identify what is fixed, what is optimized, and the order of operations. Explain the assumptions linking the model to the observed task. Use the unnumbered slot below for a supporting definition, rather than a second unexplained core claim. Specify relevant boundary conditions and distinguish mathematical notation from implementation details.
+\[
+\mathcal B(s_t;x)=\underbrace{[\text{baseline operation}]}_{\text{replace with a defined expression}}.
+\]
+\suggest Introduce the information used by the new component. State how observations are acquired, matched, filtered, or aggregated, and describe their reliability limits. If estimation is involved, define the objective, feasible set, weights, and selection rule. Do not use the evaluation target as an input unless the experimental protocol permits it.
+\begin{equation}
+\widehat\phi=\arg\min_{\phi\in\Phi}\;\underbrace{\mathcal L(\phi;x)}_{\text{define the objective and all terms}}.
+\label{eq:objective}
+\end{equation}
+\suggest State every acceptance rule, constraint, and fallback that affects behavior. Explain where thresholds come from and identify any settings selected using development data. If a transformation or bound is central, use this slot to give its precise definition, including coordinate conventions and units.
+\begin{equation}
+\widetilde\phi=\underbrace{\mathcal C(\widehat\phi)}_{\text{replace with the actual constraint or transformation}}.
+\label{eq:constraint}
+\end{equation}
+\suggest Give the final operation linking the proposed component to the baseline. Explain its timing, strength, numerical precision, and behavior when observations are absent. The expressions are empty mathematical scaffolds, not an implemented algorithm or an experimental result.
+\begin{equation}
+s_{t+1}=\underbrace{\mathcal U(s_t,\widetilde\phi,x)}_{\text{replace with the actual update or decision rule}}.
+\label{eq:update}
+\end{equation}
+\newpage
+\suggest Explain the complete execution order after Equation~\ref{eq:update}. State which operations require training, gradients, repeated inference, or external annotations. Describe the failure conditions that follow from the mechanism itself. Make clear which safeguards reduce risk and which properties remain unproved. Connect the method description to the controls that will distinguish its intended effect from changes in compute or correction strength.
+
+\section{PROTOCOL AND MEASUREMENTS}
+\textbf{Data and study sets.} \suggest Identify the data source, collection procedure, eligibility criteria, permissions, and exclusions. Cite the dataset documentation when applicable.\cite{slot30} Report the number of independent items and the repeated observations per item. Define the sampling unit clearly; repeated runs of the same item do not automatically create independent evidence. Describe development, validation, and evaluation sets separately, including any overlap or prior inspection that could affect interpretation.
+
+\suggest Explain how a follow-up or held-out set was selected and when its settings were fixed. State the conditions, repetitions, randomization, and pairing rules. Give sufficient identifiers or a reproducible selection procedure in the editable source or permitted supplement. If the study adapts a published benchmark, explain differences in subsets, inputs, annotations, and scoring before comparing with published results. Describe how missing, invalid, and rejected outputs are retained or excluded.
+
+\textbf{Comparators.} \suggest Define the main baseline and the proposed approach under shared conditions. Report the model or software version, input resolution or scale, iteration budget, important parameters, initialization, and numerical precision. Specify exactly what each method shares. Include a simple alternative that tests whether the proposed machinery is necessary. If a comparator uses postprocessing or additional supervision, explain that distinction and its effect on fairness.
+
+\suggest Document adaptations of external methods, implementation differences, and reproduction checks. Separate an exact reproduction from a reasonable adaptation. Report any deterministic duplication or unequal stochastic behavior so that run counts can be interpreted correctly. Describe component controls and ablations with enough detail to identify what changes between rows. Link each comparison to a research question instead of selecting competitors only because they are easy to run.
+
+\textbf{Measures and statistical analysis.} \suggest Define the primary outcome and its desired direction before discussing results. Identify the measurement model, annotation rule, threshold, and preprocessing.\cite{slot31,slot32} Use the equation slot for your actual metric definition; replace the entire expression rather than treating this placeholder as a proposed metric.
+\begin{equation}
+M=\underbrace{[\text{measurement computed from predictions and a defined reference}]}_{\text{insert the verified metric definition}}.
+\label{eq:metric}
+\end{equation}
+\suggest Explain what the metric captures and which relevant properties it misses. Describe secondary outcomes and distinguish exploratory measures from prespecified endpoints. Cite the original definitions of established measures.\cite{slot33,slot34,slot35,slot36,slot37} Do not use a component's own fitting objective as the only independent evidence of success. State whether perceptual, physical, semantic, or practical claims require complementary assessment.
+
+\suggest Describe aggregation, pairing, uncertainty estimation, and statistical units. Report the resampling level and procedure, handling of repeated observations, and any multiplicity adjustment. Explain whether intervals include measurement uncertainty. For subjective review, describe reviewers, blinding, instructions, disagreements, and limitations. Distinguish human assessment from automated review. State what was decided in advance and what was added after inspection.
+
+\section{RESULTS AND INTERPRETATION}\label{sec:results}
+\textbf{Initial study.} \suggest Begin with the primary comparison and point to Table~\ref{tab:primary}. Insert verified estimates, paired differences, and uncertainty after the experiment is complete. Interpret the direction and practical size of the effect. Explain whether secondary outcomes support the same conclusion and disclose tradeoffs. Relate every claim to the actual evaluation population.
+\newpage
+\input{primary}
+\suggest Interpret Table~\ref{tab:primary} without repeating every cell. State which comparison answers the research question and whether the observed difference is robust enough to matter. Identify any implementation or selection differences that limit rankings. Explain how an illustrative figure relates to the measured population, and avoid implying that one selected case represents the average.
+
+\input{confirm}
+\textbf{Follow-up evaluation.} \suggest Report the fixed-setting evaluation separately from development or previously inspected data. Explain the direction and consistency of paired effects across independent items. If a simple alternative performs competitively, discuss what that implies about the necessity of the proposed mechanism. Report adverse secondary outcomes and ambiguous comparisons with the same prominence as improvements.
+
+\suggest Discuss measurement failures, missing outputs, and boundary cases before making an overall judgment. If any post-hoc exclusion is explored, identify it as a sensitivity analysis and report both the complete-set and filtered results. Explain why comparisons on different retained subsets may not support a common ranking. Link Figure~\ref{fig:comparison} to a clearly described selection rule and a specific observation.
+
+\input{controls}
+\textbf{Component controls and intermediate observations.} \suggest Use Table~\ref{tab:controls} to compare the proposed mechanism with meaningful controls. State what is held constant, what is varied, and which alternative explanation is tested. A matched numerical budget may still imply unequal perceptual or practical effects. Explain such differences before attributing a benefit to a component.
+
+\suggest Use Figure~\ref{fig:mechanism} to show what the method observes or changes during execution. Distinguish recorded intermediate states from ground truth and from a causal explanation. Describe whether the observation is typical, selected, or exceptional. State what additional evidence would be needed to establish a mechanism rather than merely illustrate it.
+
+\suggest Summarize the ablations in Table~\ref{tab:ablation}. Explain the role of each removed or altered component, and identify interactions or confounds. If a change simultaneously alters timing, strength, and acceptance, say so. Treat development-set comparisons as evidence about design behavior, with independent confirmation reserved for a separate evaluation.
+\newpage
+\begin{figure}[!ht]\centering
+\figslot{1.82in}{[Input]\hspace{1em}[Baseline]\hspace{1em}[Proposed approach]\hspace{1em}[Alternative]\\[1.4em][Matched detail crops or evidence panels]}
+\caption{\suggest Insert a qualitative comparison under shared conditions. Use identical crops and scaling where relevant. Explain panel order, evidence selection, and any visible failure that a summary metric misses. Do not insert invented findings.}
+\label{fig:comparison}
+\end{figure}
+\begin{figure}[!ht]\centering
+\figslot{1.48in}{[Input or initial state]\hspace{1em}[Recorded intermediate state]\hspace{1em}[Final output]\\[1em]Label the observation time and the quantity actually shown.}
+\caption{\suggest Insert an observed intermediate state or process diagram. Distinguish measurements, predictions, and final outputs. State the conditions and explain the limited inference supported by this illustration.}
+\label{fig:mechanism}
+\end{figure}
+\input{ablation}
+\suggest Use this space for a short explanation of the visual and component evidence. Connect specific features to the corresponding comparison, then identify what remains uncertain. Keep panel labels readable at the final printed size. Refer to supporting material only if it exists, can be shared, and is described consistently with the main paper.
+\newpage
+\textbf{Limitations of the data and measurements.} \suggest Describe the cases in which the measurement target is ambiguous or the method fails. Consider missing annotations, incomplete observations, distribution shifts, and errors in automated evaluation. Explain whether the primary metric can improve while the intended practical outcome becomes worse. Report any sensitivity analysis as post-hoc when appropriate, and avoid treating a favorable subset as a new independent test.
+
+\suggest Discuss representativeness and generalization in concrete terms. Identify which tasks, subjects, conditions, or operating ranges are absent. Explain the effect of a small sample, repeated items, selective examples, or reviewer knowledge. If human validation is missing, describe the unsupported claim rather than implying agreement. Distinguish limitations that affect the estimate from those that restrict its application.
+
+\suggest Introduce Figure~\ref{fig:tradeoffs} as evidence of a specific tradeoff or failure mode. Explain why the case was selected and how it relates to the complete-set results. Use the caption to help readers inspect the evidence directly, including any region or condition that is easy to overlook.
+\begin{figure}[!ht]\centering
+\figslot{1.60in}{[Reference or input]\hspace{1em}[Baseline]\hspace{1em}[Proposed approach]\\[1.2em][Matched details revealing the tradeoff or failure]}
+\caption{\suggest Insert a fair example of a tradeoff, failure, or boundary condition. Explain the shared conditions and any annotated region. State what the visual evidence shows without claiming unmeasured superiority.}
+\label{fig:tradeoffs}
+\end{figure}
+
+\textbf{Computation and reproducibility.} \suggest Report the cost of the complete procedure using a defined accounting boundary. State hardware, software versions, batch size, warm-up, repetitions, and timing exclusions. Separate training, preprocessing, inference, postprocessing, and evaluation when they serve different roles. Include relevant memory or operation counts. Compare costs only under sufficiently similar conditions, and explain uncertainty in timing.
+
+\suggest Describe the availability of code, configurations, raw outputs, and figure mappings accurately. State any access restriction and the information needed to reproduce the central comparison. Avoid claiming a public repository or supplement that does not exist. Check that instructions, parameter values, and evidence identifiers agree with the final paper.
+
+\section{CONCLUSION}
+\suggest Answer the research question using the strongest supported finding. State the setting in which it holds and the most important cost or limitation. Keep the contribution narrower than the evidence when necessary. End with a concrete implication or a justified next step; introduce no new metric, comparison, citation, or unsupported promise here.
+\clearpage
+\input{references}
+\end{document}

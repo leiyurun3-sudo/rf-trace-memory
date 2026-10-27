@@ -1,0 +1,13 @@
+{
+  "pid": 7530,
+  "status": "completed",
+  "stage": "completed",
+  "planned": 90,
+  "completed": 90,
+  "failed": 0,
+  "updated": 1793069324.907774,
+  "job": "R71_rug_floor_s17_PROJECT_KV",
+  "step": 28,
+  "steps": 28,
+  "new_nfe": 4746
+}

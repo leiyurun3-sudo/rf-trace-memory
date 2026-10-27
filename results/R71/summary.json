@@ -1,0 +1,19 @@
+{
+  "completed": 90,
+  "failed": 0,
+  "planned": 0,
+  "total_planned": 90,
+  "pending": 0,
+  "fingerprint": "54ef0f4d62da8fee292b99201fe3ff196e0e148bc771d535c11554846077d006",
+  "edit_planned": 84,
+  "edit_judged": 0,
+  "edit_successes": 0,
+  "edit_success_rate": null,
+  "joint_successes": 0,
+  "joint_success_rate": null,
+  "artifact_count": 0,
+  "artifact_rate": null,
+  "rate_denominator_n": 0,
+  "diagnostic_planned": 6,
+  "success_rate_denominator": "completed non-diagnostic jobs with all three human ratings"
+}
