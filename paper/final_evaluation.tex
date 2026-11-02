@@ -5,7 +5,7 @@ The independent study completes 520 of 520 outputs with successful automatic eva
 
 The method uses only source and target prompts to construct $E$ and $P=1-0.75E$. Official edit annotations enter evaluation only. The primary correction is $0.25P\odot c_i$ without RMS restoration. Its first-seven-step full-source, all-query memory is unchanged. BOTH additionally pools $P$ to the packed image-query grid. ENERGY uses Eq.~\eqref{eq:energy-control} as a counterfactual calibration: at its own current state, it scales the global residual direction to the RMS that the direct local rule would apply at that same state. Each arm follows its own trajectory, so this calibration does not impose equal correction energy across trajectories. These three arms each cost 97 standalone NFE, including six native probe calls.
 
-Target and directional CLIP use ViT-L/14; DINO uses full-image DINOv2-base cosine similarity. AlexNet LPIPS is reported for the whole image and as a spatial-map average weighted by the area-resampled official preservation complement. LPIPS feature receptive fields can cross that boundary. All 40 sources contribute full-image metrics; preservation metrics use 33 sources, with seven empty complements omitted. Full-image source distance includes requested changes; preservation MAE and LPIPS quantify regional source retention. Human labels were not collected, so joint edit--preservation success is unmeasured.
+Target and directional CLIP use ViT-L/14; DINO uses full-image DINOv2-base cosine similarity. AlexNet LPIPS is reported for the whole image and as a spatial-map average weighted by the area-resampled official preservation complement. LPIPS feature receptive fields can cross that boundary. All 40 sources contribute full-image metrics; preservation metrics use 33 sources, with seven empty complements omitted. Full-image source distance includes requested changes; preservation MAE and LPIPS quantify regional source retention. Task-specific evaluation uses the local vision-language protocol in Appendix~\ref{sec:review-protocol}.
 
 \begin{table*}[t]
 \centering\small
@@ -63,30 +63,41 @@ BOTH $-$ CORR25 & DINO & $-0.0325$ & $[-0.0591,-0.0109]$ & 0.0160\\
 \subsection{Benchmark position and memory trade-off}
 Figure~\ref{fig:final-metrics} summarizes directional CLIP and preservation LPIPS across the seven methods.
 
-FlowEdit N26 has higher directional CLIP and lower full-image and preservation LPIPS than CORR25, using 52 versus 97 NFE. CORR25 minus FlowEdit gives directional CLIP $-0.0315$ ($p_{\rm H}=0.0084$) and preservation LPIPS $+0.0861$ ($p_{\rm H}=0.0006$). The DINO difference is $+0.0167$ with interval $[-0.0326,0.0704]$, leaving its direction uncertain. U25 has lower full-image and preservation LPIPS ($p_{\rm H}=0.0006$ for each), higher mean DINO, and slightly higher CLIP means at 91 NFE; the DINO and CLIP differences have adjusted $p>0.05$. CORR25 improves full-image DINO over RF-Inversion ETA03 by 0.1234 ($p_{\rm H}=0.0010$), while RF-Edit emphasizes retention with lower semantic alignment.
+CORR25 has higher mean DINO than FlowEdit N26 (0.5904 versus 0.5737) and lower mean preservation MAE (0.1169 versus 0.1207). FlowEdit N26 has higher directional CLIP and lower full-image and preservation LPIPS than CORR25, using 52 versus 97 NFE. CORR25 minus FlowEdit gives directional CLIP $-0.0315$ ($p_{\rm H}=0.0084$) and preservation LPIPS $+0.0861$ ($p_{\rm H}=0.0006$). The DINO difference is $+0.0167$ with interval $[-0.0326,0.0704]$, leaving its direction uncertain. U25 has lower full-image and preservation LPIPS ($p_{\rm H}=0.0006$ for each), higher mean DINO, and slightly higher CLIP means at 91 NFE; the DINO and CLIP differences have adjusted $p>0.05$. CORR25 improves full-image DINO over RF-Inversion ETA03 by 0.1234 ($p_{\rm H}=0.0010$), while RF-Edit emphasizes retention with lower semantic alignment.
 
-BOTH increases both semantic proxies: target CLIP increases by 0.0104 and directional CLIP by 0.0207 relative to CORR25. Preservation LPIPS increases by 0.0127, full-image LPIPS by 0.0201, and DINO decreases by 0.0325. Spatial memory attenuation increases text alignment together with source departure. The primary and secondary roles were fixed before the independent evaluation.
+BOTH25 has the highest mean target CLIP among the seven reported configurations (0.2733; FlowEdit N26: 0.2712). Relative to CORR25, BOTH increases both semantic proxies: target CLIP increases by 0.0104 and directional CLIP by 0.0207 relative to CORR25. Preservation LPIPS increases by 0.0127, full-image LPIPS by 0.0201, and DINO decreases by 0.0325. Spatial memory attenuation increases text alignment together with source departure. The primary and secondary roles were fixed before the independent evaluation.
 
 \paragraph{Support and dose interpretation.}
 The recorded mean protection weight for CORR25 is 0.7359 on the development sources and 0.7370 on the independent sources. Multiplication by 0.25 gives mean spatial coefficients of 0.1840 and 0.1842. The instantaneous RMS attenuation is instead $\sqrt{e_i(P)}$ from Eq.~\eqref{eq:support-energy}, which also depends on the residual's spatial energy. The three development doses in Section~\ref{sec:development-dose} characterize retention as a function of correction strength within one population. The independent benchmark compares the frozen coefficient 0.25. Together, the dose study, same-state ENERGY control, and BOTH intervention distinguish correction strength, spatial allocation, and memory coverage.
 
-\begin{figure*}[t]
+\begin{figure}[!t]
 \centering
-\includegraphics[width=.96\textwidth,height=.72\textheight,keepaspectratio]{figures/final_metrics.pdf}
+\includegraphics[width=\columnwidth]{figures/final_metrics.pdf}
 \caption{Independent-study metrics in a common arm order. The two horizontal-dot panels show source-level mean directional CLIP and preservation LPIPS with pointwise 95\% source-bootstrap intervals. Directional CLIP uses 40 sources; preservation LPIPS uses 33. Intervals describe each mean; Table~\ref{tab:final-paired} reports paired differences.}
 \label{fig:final-metrics}
+\end{figure}
+
+Figure~\ref{fig:semantic-preservation} displays the joint semantic--preservation operating points and the three-dose development trajectory.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/semantic_preservation.pdf}
+\caption{Semantic alignment and preservation at the measured operating points. Directional CLIP is higher-is-better; preservation LPIPS is lower-is-better. Bars are marginal 95\% source-bootstrap intervals. Only the three development doses are connected; independent configurations are separate fixed operating points. The development and test populations are shown separately.}
+\label{fig:semantic-preservation}
 \end{figure*}
 
 \subsection{Qualitative comparisons}
-Figure~\ref{fig:final-qualitative} shows the same four source requests across CORR25, ENERGY, and FlowEdit at seed 0.
+Figure~\ref{fig:final-qualitative} shows the same four source requests across CORR25, BOTH25, ENERGY, and FlowEdit at seed 0.
 
 In the grass-to-water example, CORR25 and ENERGY create a water setting and retain a shaggy-coated dog appearance; the muzzle, ears, pose, and collar also change. FlowEdit produces a more visibly different, short-coated dog. In the wall-recoloring example, CORR25 and ENERGY color the wall pink/red, with changes to the plant and panel geometry. FlowEdit keeps the wall white and colors the floor red. This case illustrates why the location of an attribute change matters in addition to its presence.
 
-The relational example gives the opposite ranking: FlowEdit brings the parrots' beaks together, while CORR25 and ENERGY keep them apart. In camera-to-phone replacement, all three outputs contain a phone. CORR25 and ENERGY introduce glasses, a hooded garment, color, and a changed face; FlowEdit retains the monochrome rendering while changing facial and clothing details. The examples therefore distinguish requested attributes, spatial relations, and instance identity. Aggregate CLIP, DINO, and preservation LPIPS summarize complementary feature comparisons; explicit task-level judgments are needed to score these particular outcomes.
+The relational example gives the opposite ranking: FlowEdit brings the parrots' beaks together, while CORR25 and ENERGY keep them apart. In camera-to-phone replacement, all four outputs contain a phone. CORR25 and ENERGY introduce glasses, a hooded garment, color, and a changed face; FlowEdit retains the monochrome rendering while changing facial and clothing details. The examples therefore distinguish requested attributes, spatial relations, and instance identity. Aggregate CLIP, DINO, and preservation LPIPS summarize complementary feature comparisons; explicit task-level judgments are needed to score these particular outcomes.
+
+BOTH25 places a visibly different, shorter-coated dog in water; its wall-recoloring output changes both the wall color and hanging plant. Its parrots remain apart, and its phone-replacement output changes facial, eyewear, clothing, and color details. These outcomes motivate evaluating the requested change and protected content separately.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.98\textwidth,height=.72\textheight,keepaspectratio]{figures/final_qualitative.jpg}
-\caption{Final seed-0 qualitative comparisons. Columns: source, TraceMemory (CORR25), ENERGY\_MATCH25, and FlowEdit. Rows show grass-to-water, wall-to-red, parrots-kissing, and camera-to-phone requests. The common examples expose appearance changes and requested relational or category changes alongside source retention; quantitative conclusions use the full source population.}
+\includegraphics[width=.98\textwidth,height=.72\textheight,keepaspectratio]{figures/final_qualitative.pdf}
+\caption{Final seed-0 qualitative comparisons. Columns: source, TraceMemory (CORR25), BOTH25, ENERGY\_MATCH25, and FlowEdit. Rows show grass-to-water, wall-to-red, parrots-kissing, and camera-to-phone requests. The common examples expose appearance changes and requested relational or category changes alongside source retention; quantitative conclusions use the full source population.}
 \label{fig:final-qualitative}
 \end{figure*}

@@ -11,3 +11,8 @@ __pycache__/
 .launch.lock
 *.log
 experiments/*/results/
+
+# Local document variants and delivery bundles
+paper/editions/
+Paper_Delivery_Assets/
+TraceMemory_Paper_Editions.zip

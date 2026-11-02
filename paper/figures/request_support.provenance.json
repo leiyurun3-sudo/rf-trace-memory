@@ -1,0 +1,54 @@
+{
+  "job_id": "R85_pie_000000000100_s0_RELEASE_CORR25",
+  "archive": "R85_FinalNight",
+  "path_base": "archive root",
+  "panels": {
+    "source": "sources/000000000100.jpg",
+    "E": "R85_pie_000000000100_s0_RELEASE_CORR25/edit_response64.jpg",
+    "P": "R85_pie_000000000100_s0_RELEASE_CORR25/route_mask.jpg",
+    "edited": "R85_pie_000000000100_s0_RELEASE_CORR25/preview.jpg"
+  },
+  "step_summary": "R85_pie_000000000100_s0_RELEASE_CORR25/step_summary.json",
+  "source_prompt": "a woman in black holding an umbrella walks through a field",
+  "target_prompt": "a woman in black holding an umbrella walks through a forest",
+  "route_preview_from": "post_execute_controls_effective_P",
+  "route_floor": 0.25,
+  "probe_estimator": "channel_rms_q10_q90_clip_mean3",
+  "probe_nodes": [
+    {
+      "requested_sigma": 0.25,
+      "step_index": 24,
+      "sigma": 0.23834773898124695,
+      "q10": 0.013956965878605843,
+      "q90": 0.04466347023844719,
+      "degenerate": false
+    },
+    {
+      "requested_sigma": 0.5,
+      "step_index": 18,
+      "sigma": 0.5105518102645874,
+      "q10": 0.011645485647022724,
+      "q90": 0.0420735627412796,
+      "degenerate": false
+    },
+    {
+      "requested_sigma": 0.75,
+      "step_index": 11,
+      "sigma": 0.7437055110931396,
+      "q10": 0.012262523174285889,
+      "q90": 0.0874471664428711,
+      "degenerate": false
+    }
+  ],
+  "encoding": "Original archived JPEG previews; E64 grayscale, P64 enlarged to320 nearest by runner; no map reconstruction.",
+  "export_code": {
+    "generation_package": "R85_IndependentComparison",
+    "files": [
+      "runner.py",
+      "engine.py"
+    ],
+    "location": "Separate generation package; file names relative to its root"
+  },
+  "export_lines": "runner.py:289-302; engine.py:67-99",
+  "display": "Original grayscale values, no normalization; nearest-neighbor display, source/output full frame."
+}

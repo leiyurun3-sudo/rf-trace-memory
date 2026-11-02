@@ -1,6 +1,6 @@
 \documentclass[conference]{IEEEtran}
 \usepackage[T1]{fontenc}
-\usepackage[section]{placeins}
+\usepackage{placeins}
 \usepackage{amsmath,amssymb,graphicx,booktabs,array,longtable,url,hyperref}
 \hypersetup{hidelinks,pdftitle={TraceMemory: Spatial Source Correction and Memory for Rectified-Flow Image Editing}}
 \newcommand{\RMS}{\operatorname{RMS}}
@@ -14,6 +14,13 @@
 % Saved experiment snapshots are retained as provenance, not rewritten as new runs.
 \begin{document}
 \raggedbottom
+\setcounter{topnumber}{3}
+\setcounter{dbltopnumber}{3}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.75}
+\renewcommand{\dblfloatpagefraction}{0.75}
 \maketitle
 \begin{abstract}
 Text-guided image editing couples requested changes with preservation of unaffected content. TraceMemory separates three interventions in a frozen rectified-flow editor: correction magnitude, request-conditioned spatial allocation, and source-attention coverage. Native prompt-response probes estimate protection support, and a direct local update applies the residual without global RMS restoration. We derive the support-energy relation and construct a global control with equal correction RMS at any common state. On 40 independent PIE-Bench sources with 520 outputs, local routing reduces preservation-region LPIPS by 0.0084 (95\% source-bootstrap interval $[-0.0143,-0.0022]$) and full-image LPIPS by 0.0064 relative to this control. A ten-source dose study shows monotonically improved preservation across coefficients 0.15, 0.25, and 0.35. Gating source memory by request support increases directional CLIP by 0.0207 while increasing preservation LPIPS by 0.0127. These controlled results distinguish a localization benefit from dose-dependent retention and the semantic--preservation trade-off introduced by memory release. The primary configuration uses 97 transformer evaluations, with component and external comparisons reported under source-level statistical analysis.
@@ -121,6 +128,14 @@ k_i&=\begin{cases}
 \end{equation}
 The expression assumes nonzero supported residual; zero correction is handled explicitly. The contrast-support ablation replaces $P$ with $R_\zeta=\zeta+(1-\zeta)R$, where $R$ is a source-only contrast mask, and tests $\zeta\in\{0.25,0.50,0.75\}$. The endpoints $\zeta=0$ and $\zeta=1$ recover contrast-only support and global correction. Supplied-region controls instead use $P=M$ for an annotated protection region.
 
+Figure~\ref{fig:request-support-map} shows the estimator's recorded response and protection maps alongside the source and resulting edit.
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/figrequest_support.pdf}
+\caption{Recorded request-conditioned support for a field-to-forest request. The three native source/target probes produce the response $E$; $P=1-0.75E$ defines protection before target generation. The maps are archived estimator outputs, shown with their original grayscale range.}
+\label{fig:request-support-map}
+\end{figure*}
+
 \paragraph{Global same-state energy control.}
 ENERGY\_MATCH25 uses
 \begin{equation}
@@ -182,13 +197,15 @@ For $N_{\rm lat}$ scalar latent entries, define the retained energy fraction and
  f_P=\frac{1}{N_{\rm lat}}\sum_jP_j^2.
 \label{eq:support-energy}
 \end{equation}
-For a nonzero global and supported residual, ONLINE applies the exact scalar multiplier
+\textbf{Proposition 1 (support--energy coupling).} For a nonzero global and supported residual, ONLINE applies the exact scalar multiplier
 \begin{equation}
  k_i^{\rm ONLINE}=\frac{\lambda\RMS(c_i)}{\RMS(P\odot c_i)}=\frac{\lambda}{\sqrt{e_i(P)}},
  \qquad k_i^{\rm LOCAL}=\lambda.
 \label{eq:exact-multiplier}
 \end{equation}
-Thus concentrating global RMS through a mask changes local amplitude. If residual squared magnitude is spatially uniform, or uncorrelated with squared support, then $e_i(P)\simeq f_P$. For a binary mask of area fraction $f$, this gives $k_i^{\rm ONLINE}\simeq \lambda/\sqrt f$. For a texture-selective or request-dependent support, measured $e_i(P)$ captures the additional energy correlation. Area alone is insufficient to determine the exact multiplier.
+\emph{Proof.} Squaring the ratio of supported to global RMS cancels the common number of latent entries and gives $e_i(P)$. Substitution into the normalization rule yields Eq.~\eqref{eq:exact-multiplier}. For $0\leq P_j\leq1$, the supported residual norm is at most the global norm, so $k_i^{\rm ONLINE}\geq\lambda$. A uniform support $P_j=a>0$ gives $e_i(P)=a^2$ and $k_i^{\rm ONLINE}=\lambda/a$.\hfill$\square$
+
+Thus concentrating global RMS through a mask changes local amplitude. If residual squared magnitude is spatially uniform, or uncorrelated with squared support, then $e_i(P)\simeq f_P$. For a binary mask of area fraction $f$, this gives $k_i^{\rm ONLINE}\simeq \lambda/\sqrt f$. For a texture-selective or request-dependent support, measured $e_i(P)$ captures the additional energy correlation. The spatial mean of a nonuniform support does not determine this energy-weighted multiplier.
 
 The integrated injected RMS, $I=\sum_i h_i\RMS(\widehat c_i)$, records intervention magnitude. Vector cancellation, nonlinear field evolution, and memory changes determine the resulting displacement. This distinction separates a controlled injection measurement from output retention and requested-edit achievement. The completed ONLINE/LOCAL contrast tests the difference between two implemented scaling rules. Area-exponent interpolation and amplitude caps are specified separately in Appendix~\ref{sec:prospective-controls} as hypotheses.
 
@@ -311,13 +328,14 @@ LOCAL & Off & 0.2573 & 0.1478 & 0.1674 & 0.1015 & 84\\
 \subsection{Paired estimates and uncertainty}
 We pair outputs by source, task, and seed. Table~\ref{tab:paired} reports task-weighted mean differences, with a source-cluster bootstrap that keeps both dog tasks and all seeds together. Each interval uses 100,000 resamples of six source clusters. Source-weighted estimates, exact source sign-flip values, full numeric records, and the deterministic resampling seed appear in Appendix~\ref{sec:evidence-appendix}. The contrasts are descriptive analyses of the development data; intervals capture variation among these source clusters. Figure~\ref{fig:paired} summarizes the paired effects, and Fig.~\ref{fig:departure} separates local correlation from background source departure.
 
-\begin{table*}[t]
-\centering\small
+\begin{table}[t]
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
 \caption{Selected paired local-NCC contrasts. Positive values favor the first configuration. Each row contains 14 task--seed pairs from six source clusters. Different rows answer different intervention questions; ONLINE versus LOCAL changes correction magnitude.}
 \label{tab:paired}
-\begin{tabular}{lrr}
+\begin{tabular}{p{.43\columnwidth}rr}
 \toprule
-Contrast & Mean difference & Source-cluster 95\% interval\\
+Contrast & Difference & 95\% interval\\
 \midrule
 Spectral ROI $-$ global U25 & +0.162 & [0.096, 0.244]\\
 Unfiltered ROI $-$ spectral ROI & +0.097 & [0.049, 0.160]\\
@@ -327,14 +345,14 @@ ONLINE/ROI query $-$ ONLINE/all & $-0.027$ & [$-0.090$, 0.021]\\
 LOCAL/all $-$ LOCAL/off & +0.277 & [0.103, 0.410]\\
 \bottomrule
 \end{tabular}
-\end{table*}
+\end{table}
 
-\begin{figure*}[t]
+\begin{figure}[!t]
 \centering
-\includegraphics[width=.92\textwidth,height=.72\textheight,keepaspectratio]{figures/paired_summary.pdf}
+\includegraphics[width=\columnwidth]{figures/paired_summary.pdf}
 \caption{Paired pattern-retention effects for six selected contrasts. Points give task-weighted mean differences; bars give 95\% source-cluster bootstrap intervals. Blue denotes spatial-allocation contrasts and green denotes magnitude/coverage contrasts. Each contrast contains 14 task--seed pairs from six independent source images; dog/rain and dog/snow are resampled together.}
 \label{fig:paired}
-\end{figure*}
+\end{figure}
 
 \begin{figure*}[t]
 \centering
@@ -351,16 +369,11 @@ External-profile arms require both U25 and the dependent branch, giving $91+91=1
 \section{Support Estimation, Memory Coverage, and Dose on Development Sources}
 \label{sec:public-evaluation}
 \input{r81_results}
-\FloatBarrier
 \input{r82_results}
-\FloatBarrier
 \input{r83_results}
-\FloatBarrier
 \input{development_dose}
-\FloatBarrier
 
 \input{final_evaluation}
-\FloatBarrier
 
 \section{Qualitative Findings and Limitations}
 \label{sec:limitations}
@@ -379,13 +392,13 @@ External-profile arms require both U25 and the dependent branch, giving $91+91=1
 
 \textbf{Magnitude and cost.} Historical ONLINE restoration concentrates a global RMS target through regional support. Direct local correction removes this amplification, and its retention depends on the chosen coefficient. The support estimator adds six transformer calls to the 91-call memory-enabled editor. The final comparison evaluates one frozen primary coefficient and one frozen memory variant; the three-point dose study characterizes the development population. Regional LPIPS and full-image DINO capture different aspects of preservation, as the spatial and identity changes in Fig.~\ref{fig:final-qualitative} illustrate.
 
-\textbf{Outcome coverage.} The dose and independent-source studies contain no formal human labels; task-level edit success, exact relations, protected-pattern fidelity, and joint success therefore remain unmeasured. CLIP scores quantify text alignment, DINO measures broad source similarity, and regional LPIPS measures perceptual source distance under the official preservation complement. These outcomes guide interpretation of the visible examples without substituting a synthetic joint-success rate.
+\textbf{Outcome coverage.} The reported benchmark measures text alignment through CLIP, broad source similarity through DINO, and regional perceptual distance through LPIPS. Exact relations, instance identity, and visible artifacts require task-specific judgments. Appendix~\ref{sec:review-protocol} defines a method-anonymized local vision-language evaluation for these outcomes, with a common task rubric and source-level aggregation.
 
 \section{Conclusion}
 TraceMemory separates the location and magnitude of source correction from the coverage of source attention. The support-energy relation explains how global RMS restoration amplifies a regional update. The frozen direct-local configuration improves preservation-region LPIPS by 0.0084 relative to a global control calibrated to the same-state correction energy. Increasing the local coefficient improves retention across the three development doses, while request-conditioned memory gating strengthens text alignment and increases perceptual source departure. Together, these results identify a controlled localization benefit and quantify the distinct roles of correction dose and memory release. Task-level identity, exact relations, and artifact judgments remain the next outcome layer for evaluating the operating points represented by these automatic scores.
 
-\clearpage
-\begin{thebibliography}{45}
+\FloatBarrier
+\begin{thebibliography}{46}
 \raggedright
 % Insert within the parent thebibliography; existing keys intentionally preserved.
 \bibitem{rout2025rfinversion} Litu Rout, Yujia Chen, Nataniel Ruiz, Constantine Caramanis, Sanjay Shakkottai, and Wen-Sheng Chu, \textit{Semantic Image Inversion and Editing using Rectified Stochastic Differential Equations}, International Conference on Learning Representations, 2025. \url{https://arxiv.org/abs/2410.10792}.
@@ -595,6 +608,7 @@ Shilong Liu, Zhaoyang Zeng, Tianhe Ren, et al.,
 Computer Vision -- ECCV 2024, 2024.
 \url{https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06319.pdf}.
 
+\bibitem{bai2025qwen25vl} Shuai Bai, Keqin Chen, Xuejing Liu, et al., \textit{Qwen2.5-VL Technical Report}, arXiv:2502.13923, 2025. \url{https://arxiv.org/abs/2502.13923}.
 \end{thebibliography}
 
 \clearpage
@@ -661,13 +675,17 @@ The source paths in those local builders point to the supplied experiment archiv
 \label{sec:review-protocol}
 This protocol separates semantic achievement from source retention and perceptual difference. Current evaluation availability is recorded in Appendix~\ref{sec:evaluation-provenance}. The same protocol applies to all compared methods and defines task-specific preservation requirements before scoring.
 
-\subsection{Blind task-specific rating}
-Present the source, target instruction, output, and a fixed detail crop. Hide method names and randomize output order. Two independent raters score four binary fields before any disagreement discussion: requested edit achieved ($E$), subject retained ($S$), exact protected pattern retained ($P$), and severe artifact present ($A$). Preserve original ratings and any adjudicated label separately. Report agreement and Cohen's kappa with the number of judged images. Missing judgments remain missing; generation failures are retained as unsuccessful planned samples.
+\subsection{Local vision-language evaluation}
+The evaluation package uses Qwen2.5-VL-7B-Instruct locally on the experiment server \cite{bai2025qwen25vl}. Images remain on that server. A rubric-construction pass receives only the source image and the source and target descriptions. It decomposes the requested change into visible criteria and fixes the applicable subject and pattern retention requirements. The resulting rubric is frozen before any edited output is scored and shared by every method for that source.
+
+The scoring pass receives the source, edited output, target request, and frozen rubric. Method names, experiment identifiers, file names, and numerical metrics are excluded from the model input. Evaluation order is randomized with a recorded seed. The model returns structured scores for edit achievement ($e_n$), applicable subject and pattern requirements, and severe-artifact presence ($a_n$), together with a short visual explanation for each judgment. A requested category, pose, material, or color change is an edit objective; preservation applies to the attributes left unchanged by the request. Fine pattern retention is evaluated only for tasks with an applicable pattern requirement.
 \begin{equation}
-J_n=E_n\land\neg A_n\land\bigwedge_{r\in\mathcal R(n)}B_{n,r},\qquad
-\widehat{\Pr}(J)=\frac{\sum_{n=1}^{N_{\rm planned}}\ind[J_n=1]}{N_{\rm planned}}.
+J_n^{\rm VLM}=e_n\land\neg a_n\land\bigwedge_{r\in\mathcal R(n)}b_{n,r},\qquad
+\widehat{\Pr}(J^{\rm VLM})=\frac{\sum_{n=1}^{N_{\rm planned}}\ind[J_n^{\rm VLM}=1]}{N_{\rm planned}}.
 \end{equation}
-The planned-denominator rate is finalized when all applicable outcomes are resolved; until then, report rated coverage and lower/upper bounds with unresolved outcomes set to zero/one. Here $B_{n,r}$ is the binary score for applicable retention requirement $r$ on sample $n$, and $\mathcal R(n)$ is the predeclared set of applicable subject/pattern retention requirements for task $n$. Report applicability, judged counts, and unjudged completed outputs before interpreting this rate. Task rubrics split composite instructions into attributes. For example, rain, wet fur, wet paved ground, and overcast light are separate dog/rain attributes; gray background and hard directional light are separate studio attributes. Their aggregation rule is fixed before labels are inspected. Subject retention concerns the identity, count, geometry, or category that the instruction leaves unchanged. Requested pose, material, color, category, and pattern changes are scored as edit objectives. A pattern-retention requirement is marked applicable before judging; tasks without a protected pattern use only their applicable retention requirements in the joint outcome. Applicability and judged denominators are reported separately. Pattern retention, where required, includes recognizable arrangement rather than the presence of any similar texture.
+Here $\mathcal R(n)$ is the task's frozen set of applicable preservation requirements and $b_{n,r}$ is the corresponding binary judgment. A complete rate uses all planned outputs; generation failures contribute unsuccessful outcomes. Unresolved scores, uncertain judgments, and invalid responses retain separate status codes. Coverage and bounds with unresolved outcomes set to zero or one accompany incomplete runs. These are VLM-assessed outcomes, reported separately from embedding metrics.
+
+Greedy decoding, a fixed image-processing policy, the exact model snapshot, software versions, task rubrics, prompts, and raw responses are archived. Repeat scoring and source-as-output controls measure consistency and sensitivity to unchanged outputs. Seeds are averaged within source before paired source-bootstrap analysis. Model judgments can contain systematic errors in spatial relations, small text, and identity; consistency diagnostics accompany the scores. This protocol replaces the earlier human-rating plan. The current numerical tables contain the completed embedding and perceptual evaluation; local Qwen scoring is supplied as an executable evaluation package, and no VLM scores have yet been added to these tables.
 
 \subsection{Automatic scores and their roles}
 For unit-normalized image and text embeddings $v,t$, raw CLIP target compatibility is $v(\widehat x)^\top t(q_t)$ \cite{radford2021clip}. A directional score compares $v(\widehat x)-v(x)$ with $t(q_t)-t(q_s)$ after normalization; zero-length changes are recorded explicitly. CLIPScore uses its own scaling and text preprocessing and should retain its name only when that protocol is used \cite{hessel2021clipscore}. All models, weights, resizing rules, and text variants are fixed across arms.
@@ -675,7 +693,7 @@ For unit-normalized image and text embeddings $v,t$, raw CLIP target compatibili
 Image-level DINOv2 cosine measures broad content retention, while patch or crop comparisons measure spatial detail \cite{caron2021dino,oquab2024dinov2}. LPIPS and SSIM add perceptual and local structural comparisons \cite{zhang2018lpips,wang2004ssim}. Evaluate intended preservation regions separately from intended edit regions. In a background replacement task, source similarity of the background penalizes the requested change; it belongs on a source-departure diagnostic, not the preservation-quality column. Evaluation masks are defined independently of the routing prediction. Receptive-field boundaries, registration, and pooling support are declared for each regional score.
 
 \subsection{Fair comparison and statistical unit}
-Keep source images disjoint between development and test, including every prompt variant of the same source. Use a documented development sweep for each baseline and freeze all settings before test generation. Recommended schedules and NFE-matched settings are separate comparisons. Plot retention against semantic achievement over the frozen operating points, with failures included. Report per-task and source-level paired effects and confidence intervals; repeated seeds remain within source clusters. For a final test, declare the primary comparison and multiplicity treatment before analysis. The historical pilot uses exploratory source-level estimates as specified in Section~\ref{sec:independent}. The final R85 analysis uses source-paired inference and the reported six-comparison Holm family in Section~\ref{sec:final-evaluation}.
+Keep source images disjoint between development and test, including every prompt variant of the same source. Use a documented development sweep for each baseline and freeze all settings before test generation. Recommended schedules and NFE-matched settings are separate comparisons. Plot retention against semantic achievement over the frozen operating points, with failures included. Report per-task and source-level paired effects and confidence intervals; repeated seeds remain within source clusters. For a final test, declare the primary comparison and multiplicity treatment before analysis. The historical pilot uses exploratory source-level estimates as specified in Section~\ref{sec:independent}. The final independent-benchmark analysis uses source-paired inference and the reported six-comparison Holm family in Section~\ref{sec:final-evaluation}.
 
 \section{Evaluation Provenance and Recomputable Evidence}
 \label{sec:evaluation-provenance}

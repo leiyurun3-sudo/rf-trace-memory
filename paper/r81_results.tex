@@ -38,12 +38,12 @@ Table~\ref{tab:independent} shows a transfer gap. AUTO\_DETAIL minus U25\_KV giv
 
 These results locate the problem more precisely than whole-image similarity alone: the additional departure includes pixels that the benchmark marks for preservation. The source-only contrast support also contains edges of content explicitly requested to change and leaves smooth retained content weakly constrained. This mask-selection explanation motivates the next controlled intervention; it is distinct from the measured preservation error itself.
 
-\begin{figure*}[t]
+\begin{figure}[!t]
 \centering
-\includegraphics[width=.96\textwidth,height=.72\textheight,keepaspectratio]{figures/r81_paired_effects.pdf}
+\includegraphics[width=\columnwidth]{figures/r81_paired_effects.pdf}
 \caption{AUTO\_DETAIL minus each comparator on new sources. Points are equally weighted source-level paired means; bars are percentile 95\% source-bootstrap intervals. NCC uses 24 sources; preservation MAE uses the 19 sources with nonempty preservation complements. These measurements describe source retention.}
 \label{fig:independent-effects}
-\end{figure*}
+\end{figure}
 
 RF-Edit has the strongest source correlation and edit-region departure of 0.030. Its illustrated color, deletion, replacement, and style outputs remain close to the source scene. These observations characterize the recorded operating point; the adapter follows the official default injection schedule, with implementation provenance in Appendix~\ref{app:evaluation-provenance}.
 

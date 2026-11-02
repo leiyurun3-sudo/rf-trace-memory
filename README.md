@@ -65,13 +65,19 @@ These results establish a modest controlled localization benefit and quantify th
 
 Seeds are averaged within each source before inference. Reported paired intervals use source-bootstrap resampling; tests use source sign flips and Holm correction across the final six-comparison analysis family within each metric. The frozen plan specifies CORR25 versus FlowEdit as the primary comparison and assigns the added ETA03 comparison to a separate secondary family; the final exporter groups all six CORR25 comparisons within each metric. The manuscript appendix documents this grouping difference and broader-family sensitivity. Full numeric records retain the comparison family, sample counts, and unrounded estimates.
 
-LPIPS preservation is a spatial-feature-map average weighted by the official edit-mask complement, with receptive-field spill across its boundary. Empty complements are excluded from that metric and counted explicitly. CLIP-T, directional CLIP, CLIP-I, DINOv2, LPIPS, PSNR, and SSIM exports are included. **Human edit/subject/pattern/artifact judgments remain unfilled, so human edit and joint-success rates are unreported.**
+LPIPS preservation is a spatial-feature-map average weighted by the official edit-mask complement, with receptive-field spill across its boundary. Empty complements are excluded from that metric and counted explicitly. CLIP-T, directional CLIP, CLIP-I, DINOv2, LPIPS, PSNR, and SSIM exports are included. Task-specific evaluation now uses the [local Qwen-VL protocol and runner](tools/local_qwen_judge). A source-only rubric fixes applicable preservation requirements across methods, followed by anonymized output scoring. The current tables contain completed embedding/perceptual metrics; VLM scores will be added after running the local evaluator.
 
 ### Qualitative examples
 
-![Source, TraceMemory, energy control, and FlowEdit on four seed-0 examples](paper/figures/final_qualitative.jpg)
+![Source, CORR25, BOTH25, energy control, and FlowEdit on four seed-0 examples](paper/figures/final_qualitative.jpg)
 
-Columns: source, CORR25, energy control, FlowEdit N26. Rows: grass-to-water, wall-to-red, parrots-kissing, and camera-to-phone. The wall example illustrates localized attribute editing; FlowEdit more clearly achieves the requested parrot interaction. Dog and person outputs show identity or appearance changes. Population-level comparisons use the complete declared source set.
+Columns: source, CORR25, BOTH25, energy control, FlowEdit N26. Rows: grass-to-water, wall-to-red, parrots-kissing, and camera-to-phone. The wall example illustrates localized attribute editing; FlowEdit more clearly achieves the requested parrot interaction. Dog and person outputs show identity or appearance changes. Population-level comparisons use the complete declared source set.
+
+## Manuscript and local AI evaluation
+
+The extended manuscript contains the method, experiments, statistical analysis, and appendices. It accompanies the executable evaluation code and archived numerical evidence.
+
+Run local AI evaluation on the server from `tools/local_qwen_judge` with `bash start_qwen_judge.sh`. It downloads model weights once, then scores the native images offline; no images are uploaded. See the runner README for inputs and output files.
 
 ## Files and reproduction
 

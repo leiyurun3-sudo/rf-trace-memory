@@ -34,26 +34,26 @@ SOFT75 & 0.1273 & 0.7668 & 0.1147 & 0.1384 & 91 & 43.71\\
 
 For each comparison, we first average paired differences over the two seeds within a source, then give each source equal weight. Percentile 95\% intervals use 20,000 bootstrap resamples of source means. Table~\ref{tab:r83-pairs} reports exploratory intervals without multiple-comparison adjustment.
 
-\begin{table*}[t]
-\centering\small
-\caption{Source-paired differences, first configuration minus reference. MAE uses normalized RGB values. NCC uses the whole image. Each cell gives mean difference and source-bootstrap 95\% interval. Preservation uses eight source clusters; other columns use ten. BOTH, MEAN, and MEMORY denote REQUEST\_BOTH, MEAN\_MEMORY, and REQUEST\_MEMORY; REQUEST denotes REQUEST\_SOFT25 (memory-fixed).}
+\begin{table}[t]
+\centering\scriptsize
+\caption{Source-paired differences, first configuration minus reference. MAE uses normalized RGB values. NCC uses the whole image. Each cell gives mean difference and source-bootstrap 95\% interval. Preservation uses eight source clusters; other columns use ten. BOTH, MEAN, and MEMORY denote REQUEST\_BOTH, MEAN\_MEMORY, and REQUEST\_MEMORY; REQ denotes REQUEST\_SOFT25 (memory-fixed); MEM denotes REQUEST\_MEMORY.}
 \label{tab:r83-pairs}
-\setlength{\tabcolsep}{4pt}
+\setlength{\tabcolsep}{2pt}
 \begin{tabular}{lrrr}
 \toprule
-Comparison & Whole NCC & Preservation MAE & Edit-region MAE\\
+Comparison & Whole NCC & Pres. MAE & Edit MAE\\
 \midrule
-BOTH $-$ MEAN & $0.0034\;[-0.0041,0.0127]$ & $-0.0003\;[-0.0020,0.0012]$ & $0.0008\;[-0.0051,0.0050]$\\
-MEMORY $-$ U25 & $-0.0191\;[-0.0321,-0.0077]$ & $0.0034\;[0.0003,0.0077]$ & $0.0112\;[0.0060,0.0170]$\\
-BOTH $-$ REQUEST & $-0.0191\;[-0.0298,-0.0095]$ & $0.0033\;[0.00007,0.0076]$ & $0.0125\;[0.0072,0.0183]$\\
+BOTH $-$ MEAN & \shortstack{$0.0034$\\$[-0.0041,0.0127]$} & \shortstack{$-0.0003$\\$[-0.0020,0.0012]$} & \shortstack{$0.0008$\\$[-0.0051,0.0050]$}\\
+MEM $-$ U25 & \shortstack{$-0.0191$\\$[-0.0321,-0.0077]$} & \shortstack{$0.0034$\\$[0.0003,0.0077]$} & \shortstack{$0.0112$\\$[0.0060,0.0170]$}\\
+BOTH $-$ REQ & \shortstack{$-0.0191$\\$[-0.0298,-0.0095]$} & \shortstack{$0.0033$\\$[0.0001,0.0076]$} & \shortstack{$0.0125$\\$[0.0072,0.0183]$}\\
 \bottomrule
 \end{tabular}
-\end{table*}
+\end{table}
 
 \subsubsection{Spatial allocation and memory release}
 REQUEST\_BOTH minus MEAN\_MEMORY gives a whole-image NCC difference of $0.0034$, with interval $[-0.0041,0.0127]$; six sources increase and four decrease. Preservation MAE differs by $-0.0003$, with interval $[-0.0020,0.0012]$, with three sources improving and five worsening. The estimates are small and uncertain: the intervals allow effects in either direction, and no equivalence margin was specified. They leave the value of spatial placement relative to mean attenuation open.
 
-REQUEST\_MEMORY increases preservation MAE by 0.0034 relative to U25 and reduces NCC by 0.01914. Six of eight sources have greater preservation error, and nine of ten have lower NCC. With request-routed correction already present, REQUEST\_BOTH increases preservation MAE by 0.0033 and reduces NCC by 0.0191 relative to REQUEST\_SOFT25 (memory-fixed), with the same source-level directions. Edit-region departure increases on every source in both comparisons. These pixel results locate additional change inside and outside the official edit regions. Its value for the requested transformation depends on the task, as illustrated by the style improvement and relational failures below.
+REQUEST\_MEMORY increases preservation MAE by 0.0034 relative to U25 and reduces NCC by 0.0191. Six of eight sources have greater preservation error, and nine of ten have lower NCC. With request-routed correction already present, REQUEST\_BOTH increases preservation MAE by 0.0033 and reduces NCC by 0.0191 relative to REQUEST\_SOFT25 (memory-fixed), with the same source-level directions. Edit-region departure increases on every source in both comparisons. These pixel results locate additional change inside and outside the official edit regions. Its value for the requested transformation depends on the task, as illustrated by the style improvement and relational failures below.
 
 \noindent\textbf{Post hoc sensitivity of the memory comparison.}
 For the archived ten-source spatial-minus-mean whole-image NCC difference, the mean is $0.0034$. Removing the crayon source, whose source-level difference is $0.0377$, gives $-0.0004$ across the remaining nine sources. This post hoc analysis shows sensitivity to source composition; the primary estimate retains all ten sources.
