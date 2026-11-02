@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec 9>"$HERE/.judge.lock"
+flock -n 9 || { echo "Another evaluator is already running; inspect judge.log." >&2; exit 1; }
 BASE=/root/autodl-tmp/MINT_Flow_Jupyter_Ready
 PYTHON="${QWEN_PYTHON:-$BASE/.venv/bin/python}"
 if [[ ! -x "$PYTHON" ]]; then PYTHON="$(command -v python3 || command -v python)"; fi
