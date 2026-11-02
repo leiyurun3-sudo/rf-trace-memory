@@ -1,0 +1,13 @@
+{
+  "pid": 1510,
+  "status": "completed",
+  "stage": "completed",
+  "planned": 520,
+  "completed": 520,
+  "failed": 0,
+  "updated": 1793587169.415283,
+  "job": "R85_pie_913000000003_s17_ETA03",
+  "step": 28,
+  "steps": 28,
+  "new_nfe": 840
+}

@@ -1,0 +1,731 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,graphicx,booktabs,array,longtable,url,hyperref}
+\hypersetup{hidelinks,pdftitle={TraceMemory: Spatial Source Correction and Memory for Rectified-Flow Image Editing}}
+\newcommand{\RMS}{\operatorname{RMS}}
+\newcommand{\softmax}{\operatorname{softmax}}
+\newcommand{\clip}{\operatorname{clip}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\ind}{\mathbb{1}}
+\title{TraceMemory: Spatial Source Correction and Memory for Rectified-Flow Image Editing}
+\author{}
+% Extended research manuscript. Main text, references, and full appendices.
+% Saved experiment snapshots are retained as provenance, not rewritten as new runs.
+\begin{document}
+\raggedbottom
+\maketitle
+\begin{abstract}
+Text-guided image editing requires requested changes and preservation of unaffected content. TraceMemory separates current-state source correction, its spatial allocation, and paired source attention. Three native prompt-response probes define a request-conditioned protection weight, and the primary method applies a direct local correction with coefficient 0.25 without global RMS restoration. An energy analysis explains the amplification induced by historical normalized regional updates. The final independent evaluation completes 520 outputs from seven methods on 40 sources. Relative to a global correction matched to the local rule's RMS at the same state, spatial routing reduces preservation-region LPIPS by 0.0084 (95\% source-bootstrap interval $[-0.0143,-0.0022]$; Holm-adjusted $p=0.024$ across six comparisons within the metric). Semantic differences in this controlled comparison remain uncertain. Spatial memory gating increases target and directional CLIP while reducing preservation. FlowEdit N26 provides stronger directional editing and lower preservation LPIPS at 52 evaluations versus our 97. The results establish a modest controlled localization benefit and identify correction strength and memory coverage as distinct editing--preservation trade-offs.
+\end{abstract}
+\begin{IEEEkeywords}
+image editing, rectified flow, source memory, spatial correction, residual normalization
+\end{IEEEkeywords}
+
+\section{Introduction}
+Text-guided editing should realize a requested change while retaining the source attributes that the request leaves intact. A musical-note mug should remain recognizable in a moonlit scene, and a studio portrait should retain the person's identity and shirt graphics. Other requests deliberately change material, pose, or category. The intended edit therefore determines which source properties deserve protection.
+
+Inversion and source-feature reuse provide useful reference information. Their combination introduces a less visible design choice: a spatial mask selects the support of a correction, while a normalization rule sets the magnitude delivered through that support. Matching a numerical coefficient does not match the applied magnitude. Matching a global RMS can instead concentrate the same magnitude into fewer locations. Source memory further changes the edited trajectory on which subsequent residuals are evaluated. A controlled comparison must distinguish these effects before attributing an outcome to localization.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=.98\textwidth]{figures/motivation.pdf}
+\caption{Motivating examples from the spatial-allocation study. Regional correction is the unfiltered ROI\_UNIFORM25 control; global correction is U25\_KV. The mug uses seed 10 and the printed shirt seed 17. Each comparison uses the same source and target prompt. Regional allocation retains more source-like details in these examples. FlowEdit N24 illustrates a source-preserving operating point with weaker visible scene change. Exact geometry and scene attributes are examined separately in the failure analysis.}
+\label{fig:motivation}
+\end{figure*}
+
+TraceMemory evaluates this interaction in a frozen rectified-flow model. A fixed source reference defines path velocity; a source-conditioned evaluation at the current edited state supplies the correction residual. The primary configuration, TraceMemory (CORR25; archived as \texttt{RELEASE\_CORR25}), applies $0.25P\odot c_i$ with request-conditioned protection $P=1-0.75E$, full-image target generation, and full-source, all-query memory during the first seven steps. Three native prompt-response probes cost six transformer evaluations, yielding 97 standalone evaluations. ONLINE normalization is retained as a historical mechanism control. A global same-state energy control isolates spatial routing from instantaneous correction magnitude. The preregistered BOTH configuration additionally gates memory queries by protection support and remains a secondary comparison.
+
+The contributions are:
+\begin{enumerate}
+\item An exact support-energy analysis explaining regional amplification under global RMS restoration, together with historical supplied-region experiments separating placement from correction strength.
+\item A direct request-conditioned local correction and a global same-state energy control. On 40 independent sources, routing improves preservation LPIPS by 0.0084 relative to this control, with uncertain semantic differences.
+\item A completed seven-method evaluation with source-level uncertainty and explicit computation. Spatial memory gating produces semantic gains at a preservation cost, while FlowEdit N26 achieves stronger directional editing and lower preservation LPIPS at fewer evaluations. Request-conditioned routing improves preservation relative to the same-state energy control.
+\end{enumerate}
+
+Section~\ref{sec:method} specifies the primary method and controls. Section~\ref{sec:final-evaluation} presents the final R84/R85 evaluation before the historical spatial studies in Section~\ref{sec:results} and public-source component studies in Section~\ref{sec:public-evaluation}. The appendices retain the complete historical record, completed frozen protocol, and separate mechanism hypotheses.
+
+\input{related_work_extended}
+
+\section{Request-Conditioned Source Correction and Memory}
+\label{sec:method}
+The design separates \emph{where source correction acts} from \emph{where target generation proceeds}. A protection mask routes an added residual; every spatial location still receives the target-conditioned velocity. Source memory is a second intervention inside attention. Its query coverage can be varied without changing the residual mask or its source-key pool.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=.98\textwidth]{figures/method_overview.pdf}
+\caption{TraceMemory (CORR25) and its same-state energy control. The fixed reference supplies reference motion, native prompt-response probes, and K/V capture states. The source residual is evaluated at the current edited state. CORR25 applies direct local correction and full-source memory during the first seven steps. The control retains the global residual direction at matched instantaneous RMS. Both receive a global target-conditioned update.}
+\label{fig:method}
+\end{figure*}
+\subsection{States and fixed source trajectory}
+Let $y=\mathcal{E}_{\rm VAE}(x)$ be the source VAE latent, $q_s,q_t$ the source and target prompts, and $\mathcal{D}_{\rm VAE}(z_T)$ the decoded output. The frozen transformer predicts $f_\theta(z,\sigma,q,g)$. Generation uses decreasing scheduler nodes $\sigma_0>\cdots>\sigma_T=0$ and positive intervals $h_i=\sigma_i-\sigma_{i+1}$, with $T=28$. We write $u_i^s(z)=u_i(z;q_s)$ for the native source field and $u_i^{t,M}(z)$ for the target field with memory.
+\subsection{Controlled inversion and fixed reference}
+We discretize the controlled inversion ODE of RF-Inversion.\cite{rout2025rfinversion} Inversion starts from $y$ and follows the same nodes in increasing time. A seed determines one Gaussian tensor $\epsilon$. At an ascending node $t$ with positive increment $\Delta t$, the update is
+\begin{equation}
+w^+=w+\Delta t\left[(1-\gamma)f_\theta(w,t,\varnothing,0)+\gamma\frac{\epsilon-w}{1-t}\right].
+\end{equation}
+We use $\gamma=0.5$. The endpoint is reached without evaluating the denominator at $t=1$. Reversing saved states gives $r_0,\ldots,r_T$, with $r_T=y$, and editing starts at $z_0=r_0$. The reference stays fixed throughout target generation. Matched RF arms share its construction and seed.
+
+The corresponding RF-Inversion generation controller, expressed in decreasing noise time, is\cite{rout2025rfinversion}
+\begin{equation}
+\begin{aligned}
+u_i(z;q)&=-(1-\eta_i)f_\theta(z,\sigma_i,q,3.5)+\eta_i\frac{y-z}{\sigma_i},\\
+\eta_i&=\eta_{\max}\min\left(1,\max\left(0,\frac{\sigma_i-0.2}{0.25}\right)\right).
+\end{aligned}
+\end{equation}
+Only nodes before terminal zero are evaluated. The spatial comparisons use $\eta_{\max}=0$. Empty-prompt generation below also uses guidance 3.5, distinguishing it from inversion at guidance zero.
+
+\subsection{Current-state source correction}
+The fixed trace $r_0,\ldots,r_T$ defines reference motion. At the edited state $z_i$, define
+\begin{equation}
+\begin{aligned}
+p_i&=(r_{i+1}-r_i)/h_i,\\
+c_i&=p_i-u_i^s(z_i),\\
+z_{i+1}&=z_i+h_i[u_i^{t,M}(z_i)+\widehat c_i].
+\end{aligned}
+\label{eq:spatial-update}
+\end{equation}
+Here $\widehat c_i$ is the allocated correction. Global quarter-strength correction uses $\widehat c_i=0.25c_i$. The target field remains global in every spatial arm; the ROI allocates only the added correction. At full correction and with memory disabled, the displacement from the reference evolves by the same-state target-minus-source field difference.
+\subsection{Request-conditioned protection support}
+\label{sec:extension}
+DiffEdit estimates edit regions by comparing conditional predictions at a common noisy input. SteerFlow constructs a velocity-difference mask and combines it with a semantic segmenter \cite{couairon2023diffedit,dao2026steerflow}. These methods motivate a concrete alternative to source-only contrast. We estimate the target request's spatial response on the existing reference trajectory, before attaching source-memory hooks. Let $\mathcal K$ contain the three distinct scheduler indices closest to $\sigma\in\{0.25,0.50,0.75\}$. For spatial location $j$ and latent channel $\ell$, compute
+\begin{equation}
+\begin{aligned}
+\Delta_k&=f_\theta(r_k,\sigma_k,q_t,3.5)-f_\theta(r_k,\sigma_k,q_s,3.5),\\
+d_{k,j}&=\sqrt{\frac{1}{C}\sum_{\ell=1}^{C}[\Delta_k]_{j,\ell}^2},\qquad k\in\mathcal K.
+\end{aligned}
+\end{equation}
+Both evaluations use the same latent, time, guidance embedding, and native network. Packed image tokens are first restored to the spatial latent grid. For each response map, let $l_k$ and $v_k$ be its spatial 10th and 90th percentiles. Define
+\begin{equation}
+\begin{aligned}
+e_k&=\clip\!\left(\frac{d_k-l_k}{v_k-l_k},0,1\right),\\
+E&=\frac{1}{3}\sum_{k\in\mathcal K}e_k,\qquad
+P=1-0.75E.
+\end{aligned}
+\label{eq:request-support}
+\end{equation}
+A degenerate percentile range contributes a zero response map and is recorded. $E$ is a relative model-response score. The support $P$ assigns a baseline correction everywhere and stronger correction to locations with lower prompt response. The primary TraceMemory (CORR25) configuration uses $P$ in Eq.~\eqref{eq:soft-support} with direct local scaling $a=\lambda=0.25$ and a full-image target update. It applies no global RMS restoration; ONLINE identifies the historical normalized control. No benchmark region enters the estimator. Source K/V retrieval, target-query coverage, gate, and memory window remain unchanged.
+
+The three source and three target probes add six transformer calls. With 28 inversion calls, 28 current-source calls, 28 target calls and seven reference-memory captures, the request-conditioned configuration costs 97 standalone NFE. The support is fixed before target generation. The probe nodes and percentile transform specify the estimator and are held fixed across its comparisons.
+
+The exact spatial mean is $\overline{P}=1-0.75\overline{E}$, and $P_j\in[0.25,1]$. For a tensor $v$ with $N_{\rm lat}$ scalar entries, define $\RMS(v)=\sqrt{N_{\rm lat}^{-1}\sum_jv_j^2}$. Support weights broadcast across latent channels. The primary rule is $\widehat c_i^{\rm CORR}=\lambda P\odot c_i$, with $\lambda=0.25$. For comparison with historical results, the two scaling rules are
+\begin{equation}
+\begin{aligned}
+\widehat c_i&=k_i(P\odot c_i),\\
+k_i&=\begin{cases}
+a\RMS(c_i)/\RMS(P\odot c_i),&\text{ONLINE},\\
+a,&\text{LOCAL}.
+\end{cases}
+\end{aligned}
+\label{eq:soft-support}
+\end{equation}
+The expression assumes nonzero supported residual; zero correction is handled explicitly. The contrast-support ablation replaces $P$ with $R_\zeta=\zeta+(1-\zeta)R$, where $R$ is a source-only contrast mask, and tests $\zeta\in\{0.25,0.50,0.75\}$. The endpoints $\zeta=0$ and $\zeta=1$ recover contrast-only support and global correction. Supplied-region controls instead use $P=M$ for an annotated protection region.
+
+\paragraph{Global same-state energy control.}
+ENERGY\_MATCH25 uses
+\begin{equation}
+\widehat c_i^{\rm ENERGY}=0.25\frac{\RMS(P\odot c_i)}{\RMS(c_i)}c_i.
+\label{eq:energy-control}
+\end{equation}
+At any common state this global-direction correction has the same RMS as $0.25P\odot c_i$. Each arm evaluates its residual on its own evolving state, so this construction matches the rule at the same state and step, not cumulative energy across trajectories. A zero residual gives zero correction. CORR and ENERGY share probes, source memory, schedule, and 97-NFE accounting.
+
+\subsection{Paired source memory within the target attention budget}
+For each attention head, let $Q_t\in\mathbb R^{N_q\times d_h}$ contain target image queries; $K_{\rm text}^t,K_{\rm img}^t,V_{\rm text}^t,V_{\rm img}^t$ contain native target keys and values. Native joint attention is
+\begin{equation}
+\begin{aligned}
+A&=\softmax\left(\frac{Q_t[K_{\rm text}^t;K_{\rm img}^t]^\top}{\sqrt{d_h}}\right),\\
+O_{\rm text}&=A_{\rm text}V_{\rm text}^t,\quad O_{\rm img}=A_{\rm img}V_{\rm img}^t.
+\end{aligned}
+\end{equation}
+Here $m_{{\rm img},q}=\sum_{j\in{\rm img}}A_{qj}$ is the native image-attention mass of query $q$. Source keys and values $(K_{\rm img}^s,V_{\rm img}^s)$ are captured together during the source-prompt call at $r_i$. Define
+\begin{equation}
+\begin{aligned}
+R_s&=\softmax\left(Q_t(K_{\rm img}^s)^\top/\sqrt{d_h}\right)V_{\rm img}^s,\\
+O_{\rm native}&=O_{\rm text}+O_{\rm img},\\
+O_{\rm memory}&=O_{\rm text}+m_{\rm img}\odot R_s,\\
+O_{\rm gate}&=O_{\rm native}+g_iM_q\odot(O_{\rm memory}-O_{\rm native}).
+\end{aligned}
+\label{eq:query-gate}
+\end{equation}
+Both $m_{\rm img}$ and $M_q$ have shape $N_q\times1$; $\odot$ broadcasts them along the $d_h$ feature dimension. This update preserves the native text contribution and total image-attention mass at the modified layer. Text-query outputs retain their native attention. Modified image features subsequently propagate to later layers. Captured keys include key normalization and rotary position encoding.
+
+Memory-enabled configurations use $g_i=1$ at steps 0--6 in zero-based single-stream blocks 1--26, followed by native attention. The source call captures paired K/V without modifying its output. All-query memory sets $M_q=1$; spatial-query controls average their protection support over each packed $2\times2$ latent patch. Each selected query reads the full source image-token pool. Memory-off sets $g_i=0$.
+\subsection{Spatial allocation and correction magnitude}
+For the supplied-region controls, let $M\in[0,1]$ be the annotated source-pattern mask and $L$ a replicate-padded $5\times5$ spatial averaging filter. On the unpacked latent grid, the spectral and unfiltered candidates are
+\begin{equation}
+\begin{aligned}
+s_i^{\rm route}&=0.5L(c_i)+M\odot[c_i-L(c_i)],\\
+s_i^{\rm ROI}&=M\odot c_i.
+\end{aligned}
+\label{eq:candidates}
+\end{equation}
+The spectral arm retains global low-frequency correction and routes its high-frequency component through $M$. ROI\_UNIFORM25 applies no frequency filter: it restricts the entire residual to $M$ before normalization.
+
+A completed global U25\_KV run supplies
+\begin{equation}
+\begin{aligned}
+b_i^{\rm ref}&=\RMS(0.25c_i^{\rm U25}),\\
+\widehat c_i&=b_i^{\rm ref}\,s_i/\RMS(s_i).
+\end{aligned}
+\label{eq:normalization}
+\end{equation}
+Thus ROI\_UNIFORM25 matches the global U25 per-step RMS, rather than applying the unnormalized update $0.25M\odot c_i$. The development study also evaluates the direct local coefficient below. A zero budget gives zero correction; a nonzero budget with zero candidate is an explicit failure. The realized budget is $\sum_i h_i\RMS(\widehat c_i)$.
+
+Masks use supplied fixed pattern-region annotations, feathered inward over 16 pixels at the 512-pixel image scale, area-downsampled to the latent grid, replicated across channels, and packed for FLUX. All magnitude/coverage-study configurations use the manual \texttt{fixed\_pattern\_roi} annotation. The same annotated region defines the local pattern metric, so the comparison directly tests annotation-assisted allocation. CENTER uses one fixed center box; SHIFT moves the source ROI to the farthest available border without wrapping.
+
+The spectral ROUTE\_ONLINE25 control uses a same-state budget $0.25\RMS(c_i)$ for its filtered candidate. The unfiltered magnitude/coverage comparison sets $P=M$ and $a=0.25$ in Eq.~\eqref{eq:soft-support}. ONLINE rescales the supported residual to the current global quarter-strength RMS, while LOCAL directly applies $0.25M\odot c_i$. Both operate without a separate reference run. We record the integrated injected magnitude $I=\sum_i h_i\RMS(\widehat c_i)$.
+
+\subsection{Exact support-energy coupling and the area approximation}
+For $N_{\rm lat}$ scalar latent entries, define the retained energy fraction and squared support mass as
+\begin{equation}
+ e_i(P)=\frac{\sum_j P_j^2c_{i,j}^2}{\sum_j c_{i,j}^2},\qquad
+ f_P=\frac{1}{N_{\rm lat}}\sum_jP_j^2.
+\label{eq:support-energy}
+\end{equation}
+For a nonzero global and supported residual, ONLINE applies the exact scalar multiplier
+\begin{equation}
+ k_i^{\rm ONLINE}=\frac{a\RMS(c_i)}{\RMS(P\odot c_i)}=\frac{a}{\sqrt{e_i(P)}},
+ \qquad k_i^{\rm LOCAL}=a.
+\label{eq:exact-multiplier}
+\end{equation}
+Thus concentrating global RMS through a mask changes local amplitude. If residual squared magnitude is spatially uniform, or uncorrelated with squared support, then $e_i(P)\simeq f_P$. For a binary mask of area fraction $f$, this gives $k_i^{\rm ONLINE}\simeq a/\sqrt f$. For a texture-selective or request-dependent support, measured $e_i(P)$ captures the additional energy correlation. Area alone is insufficient to determine the exact multiplier.
+
+The integrated injected RMS, $I=\sum_i h_i\RMS(\widehat c_i)$, records intervention magnitude. Vector cancellation, nonlinear field evolution, and memory changes determine the resulting displacement. This distinction separates a controlled injection measurement from output retention and requested-edit achievement. The completed ONLINE/LOCAL contrast tests the difference between two implemented scaling rules. Area-exponent interpolation and amplitude caps are specified separately in Appendix~\ref{sec:prospective-controls} as hypotheses.
+
+\subsection{Reference following and edit displacement}
+For full correction without memory, define $\delta_i=z_i-r_i$. Substituting $\widehat c_i=p_i-u_i^s(z_i)$ gives
+\begin{equation}
+\delta_{i+1}=\delta_i+h_i\{u_i(z_i;q_t)-u_i(z_i;q_s)\}.
+\label{eq:displacement}
+\end{equation}
+With identical prompts, identical field computation, and $z_i=r_i$, this yields $z_{i+1}=r_{i+1}$. With different prompts, departure depends on the conditional velocity difference. This identity describes a mechanism for weak departure when the difference is small. The size and direction of that difference must be measured for each editing configuration. The residual also contains effects of the inversion controller and conditioning choices; its interpretation extends beyond Euler truncation error.
+
+\begin{table}[t]
+\centering\small
+\caption{Algorithm 1: Primary TraceMemory (CORR25) update and explicit controls. Source-reference capture and current-state source evaluation are distinct calls.}
+\label{alg:ours}
+\begin{tabular}{p{.94\columnwidth}}
+\toprule
+\textbf{Inputs:} source $x$, prompts $q_s,q_t$, seed, nodes $\sigma_i$, coefficient $\lambda=0.25$.\\
+1. Encode $y=\mathcal{E}_{\rm VAE}(x)$; build reference $r_{0:T}$; set $z=r_0$. Compute $P=1-0.75E$ by Eq.~\eqref{eq:request-support} using six native calls.\\
+2. For each generation step $i=0,\ldots,T-1$:\\
+\quad Compute $p_i=(r_{i+1}-r_i)/h_i$.\\
+\quad If $i<7$, capture source K/V from $r_i$ under $q_s$.\\
+\quad Evaluate native source field $u_i^s(z)$ and target field $u_i^{t,M}(z)$.\\
+\quad Form $c_i=p_i-u_i^s(z)$ and $s_i=P\odot c_i$.\\
+\quad Primary CORR: set $\widehat c_i=0.25s_i$ directly.\\
+\quad ENERGY control: use Eq.~\eqref{eq:energy-control}. Historical ONLINE: $\widehat c_i=0.25\RMS(c_i)s_i/\RMS(s_i)$.\\
+\quad Update $z\leftarrow z+h_i(u_i^{t,M}(z)+\widehat c_i)$; record norms and calls.\\
+3. Decode $\mathcal{D}_{\rm VAE}(z)$; save the image and its task/seed/parameter record.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\input{final_evaluation}
+
+\section{Historical Spatial Allocation and Magnitude Mechanisms}
+\label{sec:results}
+\subsection{Design, inputs, and configuration}
+The spatial-allocation study contains 98 outputs: seven configurations, seven tasks, and two seeds. The magnitude/coverage study contains 70 outputs: five configurations on the same task--seed pairs. Both studies use six independent source images. Dog/rain and dog/snow share one source image and remain in the same statistical cluster. Cup/night uses seeds 10 and 17; the other tasks use seeds 0 and 17. The complete tasks are cup/night, printed-shirt/studio, butterfly/sunset, plain-shirt/studio, dog/snow, dog/rain, and rug/wooden-floor.
+
+All methods in these tables use FLUX.1-dev at $512\times512$. The transformer uses BF16, integration uses FP32, and source encoding uses the VAE posterior mode. The RF branches use 28 inversion and 28 generation intervals. FlowEdit N24 uses 28 scheduler nodes, $n_{\max}=24$, $n_{\min}=0$, one noise sample, and source/target guidance 1.5/5.5. It is the external configuration measured within the spatial-allocation study. Frozen N26 reference images in the full sheets retain their own configuration labels and are excluded from the new-output counts.
+
+The evaluated TraceMemory masks are manual fixed-pattern regions with 16-pixel inward feathering. They are reused as local evaluation support. This defines an annotation-assisted comparison. The center and shifted controls vary routing support while retaining the original evaluation region. Complete prompts, ROI coordinates, model revision, and task mappings appear in Appendix~\ref{sec:evidence-appendix}.
+
+\subsection{Outcomes and evidence scope}
+The tables use metrics recorded from lossless output PNGs and source evaluation PNGs, evaluated at 512 pixels. For $N_{\rm pix}$ RGB pixels, source departure is
+\begin{equation}
+\operatorname{MAE}=\frac{1}{3N_{\rm pix}}\sum_{j=1}^{N_{\rm pix}}\sum_{\ell=1}^{3}|x_{j,\ell}-\widehat x_{j,\ell}|.
+\end{equation}
+Its direction is task-dependent because a requested background change also changes pixels. For grayscale source and output crops $a,b$, normalized cross-correlation is
+\begin{equation}
+\operatorname{NCC}(a,b)=\frac{\langle a-\bar a,b-\bar b\rangle}{\|a-\bar a\|_2\|b-\bar b\|_2}.
+\end{equation}
+Grayscale weights are $(0.2126,0.7152,0.0722)$. Fixed NCC compares the same annotated box. NCC$_{\pm6}$ takes the largest valid correlation over all integer output-crop shifts in $[-6,6]^2$, favoring the smallest displacement when tied. Flat crops have undefined correlation and are reported as missing. Both fixed and shifted results are retained so that tolerance to small displacement is visible.
+
+Tables quantify native-image retention and departure; visual comparisons identify task-specific edits and artifacts. Joint edit--preservation assessment follows Appendix~\ref{sec:review-protocol}; evaluation coverage is recorded in Appendix~\ref{sec:evaluation-provenance}.
+
+\subsection{Spatial allocation at a matched correction magnitude}
+Table~\ref{tab:r78} compares residual support and filtering at the global U25 per-step RMS target. Spectral routing increases mean NCC$_{\pm6}$ from 0.4901 to 0.6521, while whole-image MAE changes from 0.1053 to 0.1073. Every paired task--seed observation improves local NCC. The matched design isolates the allocation of the injected residual magnitude within the implemented system.
+
+Correctly located routing exceeds shifted routing by 0.2423 mean NCC (Fig.~\ref{fig:mask-position}). The shifted mask preserves its size and moves to a distant border, with the correction RMS matched to the same reference profile. This measures the importance of placing a protection constraint at the evaluated pattern. The contrast is an annotation-assisted localization intervention; automatic contrast-region results are reported in Section~\ref{sec:independent}.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=.97\textwidth]{figures/mask_position.pdf}
+\caption{A controlled change in routing position. Solid orange and dashed blue boxes show the actual aligned and shifted routing supports on each source image. Output labels give the individual image NCC values; output panels preserve the original generated previews. The printed shirt uses seed 17 and the mug seed 10. Correct and shifted arms share the same per-step RMS target and source memory. The local metric remains anchored to the original source-pattern region.}
+\label{fig:mask-position}
+\end{figure*}
+
+Unfiltered regional correction further increases NCC$_{\pm6}$ to 0.7496, a gain of 0.0975 over spectral routing and an increase in every pair. Its whole-image MAE rises to 0.1554. In this comparison, stronger local source correlation coexists with greater global source departure. The global low-frequency component of the spectral arm is therefore a meaningful control, and the unfiltered arm provides the simpler retention-oriented candidate.
+
+The spectral online control reaches NCC$_{\pm6}$ 0.6416 compared with 0.6521 for external-profile normalization. It removes the prerequisite U25 generation and reduces standalone cost from 182 to 91 model calls. Both variants use the same manual mask rule.
+\begin{table*}[t]
+\centering\small
+\caption{Spatial-allocation study: 14 task--seed outputs per arm. Fixed NCC uses the annotated pattern region; NCC$_{\pm6}$ permits a displacement search of up to six pixels. Costs include inversion. Required NFE also charges the prerequisite 91-call U25 run.}
+\label{tab:r78}
+\begin{tabular}{lrrrrr}
+\toprule
+Configuration & Source MAE & Fixed NCC $\uparrow$ & NCC$_{\pm6}$ $\uparrow$ & Branch NFE & Required NFE\\
+\midrule
+U25\_KV & 0.1053 & 0.4799 & 0.4901 & 91 & 91\\
+ROUTE25 & 0.1073 & 0.6469 & 0.6521 & 91 & 182\\
+ROI\_UNIFORM25 & 0.1554 & 0.7479 & 0.7496 & 91 & 182\\
+ROUTE\_CENTER25 & 0.1126 & 0.5506 & 0.5542 & 91 & 182\\
+ROUTE\_SHIFT25 & 0.1054 & 0.3923 & 0.4098 & 91 & 182\\
+ROUTE\_ONLINE25 & 0.1083 & 0.6369 & 0.6416 & 91 & 91\\
+FLOWEDIT\_N24 & 0.0757 & 0.7322 & 0.7339 & 48 & 48\\
+\bottomrule
+\end{tabular}
+\end{table*}
+\subsection{Online magnitude and attention coverage}
+Table~\ref{tab:r79} evaluates the unfiltered residual under two magnitude rules and two memory-query supports. The historical label Ours--ONLINE denotes ONLINE/all, matching the released ROI\_ONLINE25 arm; the current primary method is TraceMemory (CORR25). Figure~\ref{fig:r79-main} labels this candidate explicitly beside its controls.
+
+With all-query memory, ONLINE increases NCC$_{\pm6}$ from 0.4445 to 0.7864 in all 14 paired outputs. Its mean correction impulse is 0.2524, compared with 0.0921 for LOCAL. The observed 2.74-fold increase in impulse is central to interpretation: these two rules produce different effective correction strengths despite sharing the coefficient 0.25.
+
+Restricting ONLINE memory to ROI queries increases source MAE in all pairs, from 0.1543 to 0.2350. Its local NCC rises in eight pairs and falls in six, with mean difference $-0.0272$. The largest task-average decreases occur on the plain and printed shirts. The same query restriction under LOCAL increases MAE in every pair and reduces NCC in 10 of 14 pairs. Attention coverage also changes the evolving residual, increasing ONLINE mean impulse from 0.2524 to 0.3046. Query coverage and effective correction therefore need a joint, magnitude-controlled comparison.
+
+Under LOCAL, all-query memory increases mean local NCC from 0.1674 to 0.4445 and reduces MAE in every pair. NCC improves in 12 of 14 pairs; the two rug outputs are exceptions. This result supports source memory in most examples of this local-coefficient setting and identifies repeated pattern structure as a concrete failure case for retrieval.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=.99\textwidth]{figures/r79_main.pdf}
+\caption{Supplied-region configuration and controls: mug/night seed 10, printed-shirt/studio seed 17, and rug/floor seed 17. \textbf{Historical Ours: ONLINE/all} is the historical ROI\_ONLINE25 configuration with a supplied pattern ROI. LOCAL/all changes the magnitude rule; ONLINE/ROI query changes memory coverage; LOCAL/memory off disables memory at the local coefficient. All panels are recorded outputs. Full sheets for both seeds and every task appear in the appendix.}
+\label{fig:r79-main}
+\end{figure*}
+
+\begin{table*}[t]
+\centering\small
+\caption{Magnitude/coverage study: 14 outputs per configuration. All masks are manual fixed-pattern ROIs. $I$ is realized correction impulse; the budget rules produce different applied magnitudes. NFE includes inversion and requires no external budget run. ONLINE/all is the supplied-region configuration; rows are grouped by intervention, not ranked by overall editing quality.}
+\label{tab:r79}
+\begin{tabular}{llrrrrr}
+\toprule
+Correction & Memory queries & Source MAE & Fixed NCC $\uparrow$ & NCC$_{\pm6}$ $\uparrow$ & $I$ & NFE\\
+\midrule
+ONLINE & All & 0.1543 & 0.7857 & 0.7864 & 0.2524 & 91\\
+ONLINE & ROI & 0.2350 & 0.7538 & 0.7592 & 0.3046 & 91\\
+LOCAL & All & 0.1645 & 0.4319 & 0.4445 & 0.0921 & 91\\
+LOCAL & ROI & 0.2481 & 0.3164 & 0.3473 & 0.0945 & 91\\
+LOCAL & Off & 0.2573 & 0.1478 & 0.1674 & 0.1015 & 84\\
+\bottomrule
+\end{tabular}
+\end{table*}
+\subsection{Paired estimates and uncertainty}
+We pair outputs by source, task, and seed. Table~\ref{tab:paired} reports task-weighted mean differences, with a source-cluster bootstrap that keeps both dog tasks and all seeds together. Each interval uses 100,000 resamples of six source clusters. Source-weighted estimates, exact source sign-flip values, full numeric records, and the deterministic resampling seed appear in Appendix~\ref{sec:evidence-appendix}. The contrasts are descriptive analyses of the development data; intervals capture variation among these source clusters.
+
+\begin{table*}[t]
+\centering\small
+\caption{Selected paired local-NCC contrasts. Positive values favor the first configuration. Each row contains 14 task--seed pairs from six source clusters. Different rows answer different intervention questions; ONLINE versus LOCAL changes correction magnitude.}
+\label{tab:paired}
+\begin{tabular}{lrr}
+\toprule
+Contrast & Mean difference & Source-cluster 95\% interval\\
+\midrule
+Spectral ROI $-$ global U25 & +0.162 & [0.096, 0.244]\\
+Unfiltered ROI $-$ spectral ROI & +0.097 & [0.049, 0.160]\\
+Correct ROI $-$ shifted ROI & +0.242 & [0.162, 0.344]\\
+ONLINE/all $-$ LOCAL/all & +0.342 & [0.224, 0.482]\\
+ONLINE/ROI query $-$ ONLINE/all & $-0.027$ & [$-0.090$, 0.021]\\
+LOCAL/all $-$ LOCAL/off & +0.277 & [0.103, 0.410]\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=.92\textwidth]{figures/paired_summary.pdf}
+\caption{Paired pattern-retention effects for six selected contrasts. Points give task-weighted mean differences; bars give 95\% source-cluster bootstrap intervals. Blue denotes spatial-allocation contrasts and green denotes magnitude/coverage contrasts. Each contrast contains 14 task--seed pairs from six independent source images; dog/rain and dog/snow are resampled together.}
+\label{fig:paired}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=.92\textwidth]{figures/background_retention.pdf}
+\caption{Task-level pattern retention and background source deviation. Each cell averages two seeds. Blue encodes pattern NCC and gray encodes background MAE, with independently labeled scales. The first four configurations come from the spatial-allocation study; ONLINE comes from the magnitude/coverage study. Background MAE measures the amount of change; semantic edit achievement is evaluated separately.}
+\label{fig:departure}
+\end{figure*}
+
+\subsection{Computational cost}
+In the historical supplied-region study, every memory-enabled ONLINE or LOCAL output uses 91 transformer evaluations: 28 for inversion, 28 for the current-state source field, 28 for target generation, and seven fixed-reference source captures. Memory-off uses 84. FlowEdit N24 uses 48 without inversion. Thus the historical Ours--ONLINE configuration uses about 1.90 times the standalone transformer-call count of this FlowEdit setting. Detector/segmenter computation is absent from the measured manual-ROI runs.
+
+External-profile arms require both U25 and the dependent branch, giving $91+91=182$ calls for a fresh result. A shared profile can serve multiple branches; for $K$ branches charge $91+91K$, or $28+63(K+1)$ when the inversion is explicitly reused. Appendix~\ref{sec:evidence-appendix} reports recorded wall-clock values by arm and task. Model loading, transfer, and first-use effects are included where the logs include them, so those times describe the recorded execution rather than a dedicated latency benchmark.
+
+\section{Public-Source Evaluation and Component Ablations}
+\label{sec:public-evaluation}
+\input{r81_results}
+\input{r82_results}
+\input{r83_results}
+
+\section{Qualitative Findings and Limitations}
+\label{sec:limitations}
+\textbf{Patterns and identity.} Source-like musical notes and shirt graphics improve in the regional examples, while cup handles, faces, and exact glyph arrangements can still change. The rug retains a grid-like texture in some outputs while individual cells and borders are rewritten. These cases motivate distinct subject-identity and exact-pattern judgments rather than a single source-similarity score.
+
+\textbf{Requested attributes.} Cup and floor examples show visible lighting and material changes. The dog/snow example retains substantial grass despite falling snow. Rain streaks do not establish wet fur or a wet paved contact surface. Butterfly warmth alone does not establish the requested left-side low-angle light and directional shadows. Figure~\ref{fig:failures} gathers specific failures; all tasks and seeds remain available in the complete gallery.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=.98\textwidth]{figures/failure_cases.pdf}
+\caption{Four failure categories, each presented as a source/output pair with orange-red localization boxes. Panels (a)--(d): dog/snow seed 17 with unfiltered external-profile ROI correction; rug/floor seed 17 with ONLINE/all; printed shirt seed 17 with ONLINE/ROI-query memory; cup/night seed 10 with ONLINE/all. Visible concerns are incomplete snow coverage, rewritten grid details, changed identity, and changed object geometry. These examples motivate separate edit, subject, pattern, and artifact labels.}
+\label{fig:failures}
+\end{figure*}
+
+\textbf{Annotation and population.} The supplied-region studies evaluate targeted protection using a manual region for both routing and local scoring. The historical R81 pilot adds 24 sources that were new at selection, automatic source-contrast masks, and official evaluation regions kept separate from the method. It exposes increased preservation-region error for the automatic variant. Contrast selects edges and textures irrespective of the requested change; object and edit semantics require additional information or a less selective allocation. These pilot sources subsequently informed development. The final R85 evaluation uses 40 separately selected sources and is reported in Section~\ref{sec:final-evaluation}.
+
+\textbf{Magnitude and cost.} Historical ONLINE restoration concentrates a global RMS target through regional support. Direct local correction removes this amplification. The final same-state energy comparison measures a modest routing benefit, while FlowEdit N26 supplies a stronger directional-CLIP and preservation-LPIPS operating point at 52 rather than 97 NFE. The uncertain CORR25--FlowEdit DINO difference leaves broad content retention unresolved.
+
+\textbf{Outcome coverage.} R84 and R85 contain no human labels; task-level edit success, exact relations, protected-pattern fidelity, and joint success therefore remain unmeasured. CLIP scores quantify text alignment, DINO measures broad source similarity, and regional LPIPS measures perceptual source distance under the official preservation complement. These outcomes guide interpretation of the visible examples without substituting a synthetic joint-success rate.
+
+\section{Conclusion}
+TraceMemory separates correction placement, correction magnitude, and source-memory coverage. The primary method uses request-conditioned direct local correction at coefficient 0.25 with the original seven-step source-memory window. The completed 40-source evaluation finds a small preservation-LPIPS advantage over a same-state energy control, alongside uncertain semantic differences. Spatial memory gating increases target and directional CLIP at a measurable preservation cost. FlowEdit N26 achieves stronger directional editing and lower preservation LPIPS with fewer evaluations, and uniform U25 also preserves content more strongly on the reported perceptual means. These results position request-conditioned routing as a controlled localization mechanism whose practical value depends on the surrounding correction and memory operating point.
+
+\begin{thebibliography}{45}
+\raggedright
+% Insert within the parent thebibliography; existing keys intentionally preserved.
+\bibitem{rout2025rfinversion} Litu Rout, Yujia Chen, Nataniel Ruiz, Constantine Caramanis, Sanjay Shakkottai, and Wen-Sheng Chu, \textit{Semantic Image Inversion and Editing using Rectified Stochastic Differential Equations}, International Conference on Learning Representations, 2025. \url{https://arxiv.org/abs/2410.10792}.
+\bibitem{wang2025rfsolver} Jiangshan Wang, Junfu Pu, Zhongang Qi, Jiayi Guo, Yue Ma, Nisha Huang, Yuxin Chen, Xiu Li, and Ying Shan, \textit{Taming Rectified Flow for Inversion and Editing}, Proceedings of the 42nd International Conference on Machine Learning, vol. 267, pp. 64044--64058, 2025. \url{https://proceedings.mlr.press/v267/wang25ce.html}.
+\bibitem{kim2025reflex} Jimyeong Kim, Jungwon Park, Yeji Song, Nojun Kwak, and Wonjong Rhee, \textit{{ReFlex}: Text-Guided Editing of Real Images in Rectified Flow via Mid-Step Feature Extraction and Attention Adaptation}, Proceedings of the IEEE/CVF International Conference on Computer Vision, pp. 15939--15948, 2025. \url{https://arxiv.org/abs/2507.01496}.
+\bibitem{kulikov2025flowedit} Vladimir Kulikov, Matan Kleiner, Inbar Huberman-Spiegelglas, and Tomer Michaeli, \textit{{FlowEdit}: Inversion-Free Text-Based Editing Using Pre-Trained Flow Models}, Proceedings of the IEEE/CVF International Conference on Computer Vision, pp. 19721--19730, 2025. \url{https://openaccess.thecvf.com/content/ICCV2025/html/Kulikov_FlowEdit_Inversion-Free_Text-Based_Editing_Using_Pre-Trained_Flow_Models_ICCV_2025_paper.html}.
+\bibitem{yang2026directedit} Desong Yang and Mang Ye, \textit{{DirectEdit}: Step-Level Accurate Inversion for Flow-Based Image Editing}, Proceedings of the 43rd International Conference on Machine Learning, vol. 306, pp. 146750--146765, 2026. \url{https://proceedings.mlr.press/v306/yang26cy.html}.
+\bibitem{tang2026wavelet} Anqi Tang, Wenhao Sun, and Zhaoqiang Liu, \textit{Wavelet-Guided Semantic Signal Compensation for Inversion-Free Image Editing}, Computer Vision -- ECCV 2026, vol. 17019, pp. 671--688, 2026. \url{https://link.springer.com/chapter/10.1007/978-3-032-37550-6_38}. Method equations cited from \url{https://arxiv.org/abs/2607.02421v1}.
+\bibitem{li2025cvc} Zixiang Li, Yue Song, Jianing Peng, Ting Liu, Jun Huang, Xiaochao Qu, Luoqi Liu, Wei Wang, Yao Zhao, and Yunchao Wei, \textit{On Exact Editing of Flow-Based Diffusion Models}, arXiv:2512.24015 (2025; revised 2026). \url{https://arxiv.org/abs/2512.24015}. Method equations cited from version 2.
+\bibitem{kim2025flowalign} Jeongsol Kim, Yeobin Hong, Jonghyun Park, and Jong Chul Ye, \textit{FlowAlign: Trajectory-Regularized, Inversion-Free Flow-based Image Editing}, arXiv:2505.23145 (2025). \url{https://arxiv.org/abs/2505.23145}.
+\bibitem{liao2025freqedit} Yucheng Liao, Jiajun Liang, Kaiqian Cui, Baoquan Zhao, Haoran Xie, Wei Liu, Qing Li, and Xudong Mao, \textit{FreqEdit: Preserving High-Frequency Features for Robust Multi-Turn Image Editing}, arXiv:2512.01755, 2025 (revised 2026). \url{https://arxiv.org/abs/2512.01755}. Method comparison uses v1, Secs.~4.2--4.4.
+\bibitem{deng2025fireflow} Yingying Deng, Xiangyu He, Changwang Mei, Peisong Wang, and Fan Tang, \textit{FireFlow: Fast Inversion of Rectified Flow for Image Semantic Editing}, ICML, PMLR 267, pp. 13110--13128, 2025. \url{https://proceedings.mlr.press/v267/deng25c.html}.
+\bibitem{avrahami2025stableflow} Omri Avrahami, Or Patashnik, Ohad Fried, Egor Nemchinov, Kfir Aberman, Dani Lischinski, and Daniel Cohen-Or, \textit{Stable Flow: Vital Layers for Training-Free Image Editing}, CVPR, 2025. \url{https://arxiv.org/abs/2411.14430}.
+\bibitem{dalva2025fluxspace} Yusuf Dalva, Kavana Venkatesh, and Pinar Yanardag, \textit{FluxSpace: Disentangled Semantic Editing in Rectified Flow Models}, CVPR, 2025. \url{https://openaccess.thecvf.com/content/CVPR2025/papers/Dalva_FluxSpace_Disentangled_Semantic_Editing_in_Rectified_Flow_Models_CVPR_2025_paper.pdf}.
+\bibitem{dao2026steerflow} Thinh Dao, Zhen Wang, Kien T. Pham, and Long Chen, \textit{SteerFlow: Steering Rectified Flows for Faithful Inversion-Based Image Editing}, arXiv:2604.01715, 2026. \url{https://arxiv.org/abs/2604.01715}.
+\bibitem{zhou2025multiturn} Zijun Zhou, Yingying Deng, Xiangyu He, Weiming Dong, and Fan Tang, \textit{Multi-turn Consistent Image Editing}, ICCV, pp. 15792--15801, 2025. \url{https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_Multi-turn_Consistent_Image_Editing_ICCV_2025_paper.pdf}.
+\bibitem{lupascu2026otrf} Marian Lupa\c{s}cu and Mihai Sorin Stupariu, \textit{Optimal Transport for Rectified Flow Image Editing: Unifying Inversion-Based and Direct Methods}, WACV, pp. 6764--6774, 2026. \url{https://openaccess.thecvf.com/content/WACV2026/papers/Lupascu_Optimal_Transport_for_Rectified_Flow_Image_Editing_Unifying_Inversion-Based_and_WACV_2026_paper.pdf}.
+
+% Independent diffusion-editing literature slice, verified 2026-10-30.
+% Exactly 15 distinct papers. Bibliography fragment: insert inside the existing
+% thebibliography environment, reconciling existing keys rather than duplicating.
+% ju2024pnpinversion also covers the Direct Inversion preprint (arXiv:2310.01506).
+% This is distinct from tumanyan2023pnpfeatures.
+
+\bibitem{ju2024pnpinversion}
+Xuan Ju, Ailing Zeng, Yuxuan Bian, Shaoteng Liu, and Qiang Xu,
+\textit{PnP Inversion: Boosting Diffusion-based Editing with 3 Lines of Code},
+International Conference on Learning Representations (ICLR), 2024.
+\url{https://proceedings.iclr.cc/paper_files/paper/2024/hash/661caac7729aa7d8c6b8ac0d39ccbc6a-Abstract-Conference.html}.
+
+\bibitem{cao2023masactrl}
+Mingdeng Cao, Xintao Wang, Zhongang Qi, Ying Shan, Xiaohu Qie, and Yinqiang Zheng,
+\textit{MasaCtrl: Tuning-Free Mutual Self-Attention Control for Consistent Image Synthesis and Editing},
+Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pp.~22560--22570, 2023.
+\url{https://openaccess.thecvf.com/content/ICCV2023/html/Cao_MasaCtrl_Tuning-Free_Mutual_Self-Attention_Control_for_Consistent_Image_Synthesis_and_ICCV_2023_paper.html}.
+
+\bibitem{hertz2023prompttoprompt}
+Amir Hertz, Ron Mokady, Jay Tenenbaum, Kfir Aberman, Yael Pritch, and Daniel Cohen-Or,
+\textit{Prompt-to-Prompt Image Editing with Cross-Attention Control},
+International Conference on Learning Representations (ICLR), 2023.
+\url{https://openreview.net/forum?id=_CDixzkzeyb}.
+
+\bibitem{tumanyan2023pnpfeatures}
+Narek Tumanyan, Michal Geyer, Shai Bagon, and Tali Dekel,
+\textit{Plug-and-Play Diffusion Features for Text-Driven Image-to-Image Translation},
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp.~1921--1930, 2023.
+\url{https://openaccess.thecvf.com/content/CVPR2023/html/Tumanyan_Plug-and-Play_Diffusion_Features_for_Text-Driven_Image-to-Image_Translation_CVPR_2023_paper.html}.
+
+\bibitem{mokady2023nulltext}
+Ron Mokady, Amir Hertz, Kfir Aberman, Yael Pritch, and Daniel Cohen-Or,
+\textit{NULL-Text Inversion for Editing Real Images Using Guided Diffusion Models},
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp.~6038--6047, 2023.
+\url{https://openaccess.thecvf.com/content/CVPR2023/html/Mokady_NULL-Text_Inversion_for_Editing_Real_Images_Using_Guided_Diffusion_Models_CVPR_2023_paper.html}.
+
+\bibitem{wallace2023edict}
+Bram Wallace, Akash Gokul, and Nikhil Naik,
+\textit{EDICT: Exact Diffusion Inversion via Coupled Transformations},
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp.~22532--22541, 2023.
+\url{https://openaccess.thecvf.com/content/CVPR2023/html/Wallace_EDICT_Exact_Diffusion_Inversion_via_Coupled_Transformations_CVPR_2023_paper.html}.
+
+\bibitem{meng2022sdedit}
+Chenlin Meng, Yutong He, Yang Song, Jiaming Song, Jiajun Wu, Jun-Yan Zhu, and Stefano Ermon,
+\textit{SDEdit: Guided Image Synthesis and Editing with Stochastic Differential Equations},
+International Conference on Learning Representations (ICLR), 2022.
+\url{https://openreview.net/forum?id=aBsCjcPu_tE}.
+
+\bibitem{avrahami2022blended}
+Omri Avrahami, Dani Lischinski, and Ohad Fried,
+\textit{Blended Diffusion for Text-Driven Editing of Natural Images},
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp.~18208--18218, 2022.
+\url{https://openaccess.thecvf.com/content/CVPR2022/html/Avrahami_Blended_Diffusion_for_Text-Driven_Editing_of_Natural_Images_CVPR_2022_paper.html}.
+
+\bibitem{avrahami2023blendedlatent}
+Omri Avrahami, Ohad Fried, and Dani Lischinski,
+\textit{Blended Latent Diffusion},
+ACM Transactions on Graphics, vol.~42, no.~4, article~149, pp.~1--11, 2023.
+\url{https://doi.org/10.1145/3592450}.
+
+\bibitem{couairon2023diffedit}
+Guillaume Couairon, Jakob Verbeek, Holger Schwenk, and Matthieu Cord,
+\textit{DiffEdit: Diffusion-based semantic image editing with mask guidance},
+International Conference on Learning Representations (ICLR), 2023.
+\url{https://openreview.net/forum?id=3lge0p5o-M-}.
+
+\bibitem{brooks2023instructpix2pix}
+Tim Brooks, Aleksander Holynski, and Alexei A. Efros,
+\textit{InstructPix2Pix: Learning To Follow Image Editing Instructions},
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp.~18392--18402, 2023.
+\url{https://openaccess.thecvf.com/content/CVPR2023/html/Brooks_InstructPix2Pix_Learning_To_Follow_Image_Editing_Instructions_CVPR_2023_paper.html}.
+
+\bibitem{li2023gligen}
+Yuheng Li, Haotian Liu, Qingyang Wu, Fangzhou Mu, Jianwei Yang, Jianfeng Gao, Chunyuan Li, and Yong Jae Lee,
+\textit{GLIGEN: Open-Set Grounded Text-to-Image Generation},
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp.~22511--22521, 2023.
+\url{https://openaccess.thecvf.com/content/CVPR2023/html/Li_GLIGEN_Open-Set_Grounded_Text-to-Image_Generation_CVPR_2023_paper.html}.
+
+\bibitem{kim2022diffusionclip}
+Gwanghyun Kim, Taesung Kwon, and Jong Chul Ye,
+\textit{DiffusionCLIP: Text-Guided Diffusion Models for Robust Image Manipulation},
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp.~2426--2435, 2022.
+\url{https://openaccess.thecvf.com/content/CVPR2022/html/Kim_DiffusionCLIP_Text-Guided_Diffusion_Models_for_Robust_Image_Manipulation_CVPR_2022_paper.html}.
+
+\bibitem{kawar2023imagic}
+Bahjat Kawar, Shiran Zada, Oran Lang, Omer Tov, Huiwen Chang, Tali Dekel, Inbar Mosseri, and Michal Irani,
+\textit{Imagic: Text-Based Real Image Editing With Diffusion Models},
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp.~6007--6017, 2023.
+\url{https://openaccess.thecvf.com/content/CVPR2023/html/Kawar_Imagic_Text-Based_Real_Image_Editing_With_Diffusion_Models_CVPR_2023_paper.html}.
+
+\bibitem{yu2023freedom}
+Jiwen Yu, Yinhuai Wang, Chen Zhao, Bernard Ghanem, and Jian Zhang,
+\textit{FreeDoM: Training-Free Energy-Guided Conditional Diffusion Model},
+Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pp.~23174--23184, 2023.
+\url{https://openaccess.thecvf.com/content/ICCV2023/html/Yu_FreeDoM_Training-Free_Energy-Guided_Conditional_Diffusion_Model_ICCV_2023_paper.html}.
+
+% Independent foundations / architecture / evaluation / segmentation slice.
+% Verified against primary records and selected original-paper passages, 2026-10-30.
+% Exactly 15 entries. Merge inside an existing thebibliography environment;
+% this fragment intentionally supplies neither a second environment nor main-text edits.
+
+\bibitem{ho2020ddpm}
+Jonathan Ho, Ajay Jain, and Pieter Abbeel,
+\textit{Denoising Diffusion Probabilistic Models},
+Advances in Neural Information Processing Systems, vol.~33, pp.~6840--6851, 2020.
+\url{https://proceedings.neurips.cc/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html}.
+
+\bibitem{song2021ddim}
+Jiaming Song, Chenlin Meng, and Stefano Ermon,
+\textit{Denoising Diffusion Implicit Models},
+International Conference on Learning Representations, 2021.
+\url{https://openreview.net/forum?id=St1giarCHLP}.
+
+\bibitem{rombach2022ldm}
+Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Bj\"orn Ommer,
+\textit{High-Resolution Image Synthesis With Latent Diffusion Models},
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp.~10684--10695, 2022.
+\url{https://openaccess.thecvf.com/content/CVPR2022/html/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.html}.
+
+\bibitem{lipman2023flowmatching}
+Yaron Lipman, Ricky T.~Q. Chen, Heli Ben-Hamu, et al.,
+\textit{Flow Matching for Generative Modeling},
+International Conference on Learning Representations, 2023.
+\url{https://openreview.net/forum?id=PqvMRDCJT9t}.
+
+\bibitem{liu2023rectifiedflow}
+Xingchao Liu, Chengyue Gong, and Qiang Liu,
+\textit{Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow},
+International Conference on Learning Representations, 2023.
+\url{https://arxiv.org/abs/2209.03003}.
+
+\bibitem{esser2024sd3}
+Patrick Esser, Sumith Kulal, Andreas Blattmann, et al.,
+\textit{Scaling Rectified Flow Transformers for High-Resolution Image Synthesis},
+Proceedings of the 41st International Conference on Machine Learning, vol.~235, pp.~12606--12633, 2024.
+\url{https://proceedings.mlr.press/v235/esser24a.html}.
+
+\bibitem{peebles2023dit}
+William Peebles and Saining Xie,
+\textit{Scalable Diffusion Models with Transformers},
+Proceedings of the IEEE/CVF International Conference on Computer Vision, pp.~4195--4205, 2023.
+\url{https://openaccess.thecvf.com/content/ICCV2023/html/Peebles_Scalable_Diffusion_Models_with_Transformers_ICCV_2023_paper.html}.
+
+\bibitem{radford2021clip}
+Alec Radford, Jong Wook Kim, Chris Hallacy, et al.,
+\textit{Learning Transferable Visual Models From Natural Language Supervision},
+Proceedings of the 38th International Conference on Machine Learning, vol.~139, pp.~8748--8763, 2021.
+\url{https://proceedings.mlr.press/v139/radford21a.html}.
+
+\bibitem{hessel2021clipscore}
+Jack Hessel, Ari Holtzman, Maxwell Forbes, Ronan Le Bras, and Yejin Choi,
+\textit{CLIPScore: A Reference-free Evaluation Metric for Image Captioning},
+Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing, pp.~7514--7528, 2021.
+\url{https://aclanthology.org/2021.emnlp-main.595/}.
+
+\bibitem{caron2021dino}
+Mathilde Caron, Hugo Touvron, Ishan Misra, et al.,
+\textit{Emerging Properties in Self-Supervised Vision Transformers},
+Proceedings of the IEEE/CVF International Conference on Computer Vision, pp.~9650--9660, 2021.
+\url{https://openaccess.thecvf.com/content/ICCV2021/html/Caron_Emerging_Properties_in_Self-Supervised_Vision_Transformers_ICCV_2021_paper.html}.
+
+\bibitem{oquab2024dinov2}
+Maxime Oquab, Timoth\'ee Darcet, Th\'eo Moutakanni, et al.,
+\textit{DINOv2: Learning Robust Visual Features without Supervision},
+Transactions on Machine Learning Research, 2024.
+\url{https://openreview.net/forum?id=a68SUt6zFt}.
+
+\bibitem{zhang2018lpips}
+Richard Zhang, Phillip Isola, Alexei A. Efros, Eli Shechtman, and Oliver Wang,
+\textit{The Unreasonable Effectiveness of Deep Features as a Perceptual Metric},
+Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp.~586--595, 2018.
+\url{https://openaccess.thecvf.com/content_cvpr_2018/html/Zhang_The_Unreasonable_Effectiveness_CVPR_2018_paper.html}.
+
+\bibitem{wang2004ssim}
+Zhou Wang, Alan Conrad Bovik, Hamid Rahim Sheikh, and Eero P. Simoncelli,
+\textit{Image Quality Assessment: From Error Visibility to Structural Similarity},
+IEEE Transactions on Image Processing, vol.~13, no.~4, pp.~600--612, 2004.
+\url{https://doi.org/10.1109/TIP.2003.819861}.
+
+\bibitem{kirillov2023sam}
+Alexander Kirillov, Eric Mintun, Nikhila Ravi, et al.,
+\textit{Segment Anything},
+Proceedings of the IEEE/CVF International Conference on Computer Vision, pp.~4015--4026, 2023.
+\url{https://openaccess.thecvf.com/content/ICCV2023/html/Kirillov_Segment_Anything_ICCV_2023_paper.html}.
+
+\bibitem{liu2024groundingdino}
+Shilong Liu, Zhaoyang Zeng, Tianhe Ren, et al.,
+\textit{Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection},
+Computer Vision -- ECCV 2024, 2024.
+\url{https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06319.pdf}.
+
+\end{thebibliography}
+
+\clearpage
+\onecolumn
+\appendices
+\section{Implementation, Algebra, and Reproduction}
+\label{sec:implementation}
+The supplied-region editor is the frozen historical magnitude/coverage implementation; later support, memory, and final direct-local studies retain their own archived implementations. Archive IDs R78 and R79 are retained in the appendix to connect every observation to its stored output. The main-text names describe interventions; they do not rename or overwrite result files. R78 is the spatial-allocation study, and R79 is the magnitude/coverage study.
+
+\subsection{Code-to-equation map}
+\begin{center}\small
+\begin{tabular}{p{.22\textwidth}p{.68\textwidth}}
+\toprule
+Implementation & Role in the equations\\
+\midrule
+\texttt{rf\_kv.py} & Controlled inversion and source reference construction; noise-time direction and field sign.\\
+\texttt{engine.py} & Current-state source velocity, reference motion, residual shaping, online/local scaling, global target update, and NFE recording.\\
+\texttt{controls.py} & Fixed-pattern ROI, inward feathering, latent-grid conversion, and query-mask construction. The evaluated global-update setting allows every spatial location to evolve.\\
+\texttt{attention.py} & Paired source K/V capture at reference states and target-query retrieval with native text contribution/image mass.\\
+\texttt{reporting.py} & Lossless-image metrics, fixed and shifted NCC, comparison sheets, and explicit pending-label fields.\\
+\texttt{review.py} & Review records and the joint-success aggregation interface.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+At nonzero candidate norm, the implemented unfiltered rules reduce to the following pseudocode:
+\begin{verbatim}
+path = (next_reference - reference) / h
+correction = path - source_velocity_at_current_state
+candidate = route_mask * correction
+if rule == "online":
+    applied = 0.25 * rms(correction) / rms(candidate) * candidate
+if rule == "local":
+    applied = 0.25 * candidate
+z = z + h * (target_velocity_with_memory + applied)
+\end{verbatim}
+The source reference used for K/V capture is separate from the current edited state. Reusing an inversion velocity as the current source-conditioned velocity would change both the evaluation state and the text/guidance condition. Such a cache would define a new approximation with its own comparison.
+
+\subsection{Condition decomposition and displacement}
+For any explicitly chosen auxiliary field $u_i^0(z)$, the residual has the algebraic split
+\begin{equation}
+c_i=[p_i-u_i^0(z_i)]+[u_i^0(z_i)-u_i^s(z_i)].
+\end{equation}
+The first term retains the reference construction, state mismatch, controller, and chosen auxiliary condition. Calling it purely a discretization error would require those other factors to be matched. The second term is a conditional field difference at the same state. A decomposition is useful when each component is evaluated through a controlled intervention.
+
+Equation~\eqref{eq:displacement} concerns full unfiltered correction. In the regional case, the corresponding relation is
+\begin{equation}
+\delta_{i+1}=\delta_i+h_i[u_i^{t,M}(z_i)-p_i+\widehat c_i].
+\end{equation}
+The residual norm, source-memory change, and conditional field difference all influence departure. An observed small distance to a reference is recorded as a trajectory diagnostic; semantic edit success is evaluated from the actual requested attributes. No distance threshold is substituted for those labels.
+
+\subsection{Reconstruction and source similarity}
+The identical-prompt following identity in the main text requires the same source and target computation and disabled memory changes. It is a latent update identity. Decoding error, finite precision, and image preprocessing affect pixel reconstruction. A source VAE round trip should be reported separately from inversion/reconstruction and actual editing, as motivated by latent modeling and inversion studies \cite{rombach2022ldm,mokady2023nulltext,wallace2023edict}.
+
+\subsection{Reference implementation and local rebuild}
+The experiment snapshots and source records identify the implementation used by each table. The appendix CSVs preserve archive IDs, exact arm names, source cases, and recorded fields. Local figure and evidence builders read frozen results and do not launch image generation:
+\begin{verbatim}
+python scripts/build_result_evidence.py
+python scripts/build_paper_figures.py
+\end{verbatim}
+The source paths in those local builders point to the supplied experiment archives. For another machine, set them to the corresponding extracted result and plan directories. The model revision and experiment parameters are reproduced in the quantitative appendix. The actual image generator, model-weight license, and public-data licenses remain part of the original runtime and dataset setup.
+
+\section{Semantic and Perceptual Evaluation Protocol}
+\label{sec:review-protocol}
+This protocol separates semantic achievement from source retention and perceptual difference. Current evaluation availability is recorded in Appendix~\ref{sec:evaluation-provenance}. The same protocol applies to all compared methods and defines task-specific preservation requirements before scoring.
+
+\subsection{Blind task-specific rating}
+Present the source, target instruction, output, and a fixed detail crop. Hide method names and randomize output order. Two independent raters score four binary fields before any disagreement discussion: requested edit achieved ($E$), subject retained ($S$), exact protected pattern retained ($P$), and severe artifact present ($A$). Preserve original ratings and any adjudicated label separately. Report agreement and Cohen's kappa with the number of judged images. Missing judgments remain missing; generation failures are retained as unsuccessful planned samples.
+\begin{equation}
+J_n=E_n\land\neg A_n\land\bigwedge_{r\in\mathcal R(n)}B_{n,r},\qquad
+\widehat{\Pr}(J)=\frac{\sum_{n=1}^{N_{\rm planned}}\ind[J_n=1]}{N_{\rm planned}}.
+\end{equation}
+The planned-denominator rate is finalized when all applicable outcomes are resolved; until then, report rated coverage and lower/upper bounds with unresolved outcomes set to zero/one. Here $B_{n,r}$ is the binary score for applicable retention requirement $r$ on sample $n$, and $\mathcal R(n)$ is the predeclared set of applicable subject/pattern retention requirements for task $n$. Report applicability, judged counts, and unjudged completed outputs before interpreting this rate. Task rubrics split composite instructions into attributes. For example, rain, wet fur, wet paved ground, and overcast light are separate dog/rain attributes; gray background and hard directional light are separate studio attributes. Their aggregation rule is fixed before labels are inspected. Subject retention concerns the identity, count, geometry, or category that the instruction leaves unchanged. Requested pose, material, color, category, and pattern changes are scored as edit objectives. A pattern-retention requirement is marked applicable before judging; tasks without a protected pattern use only their applicable retention requirements in the joint outcome. Applicability and judged denominators are reported separately. Pattern retention, where required, includes recognizable arrangement rather than the presence of any similar texture.
+
+\subsection{Automatic scores and their roles}
+For unit-normalized image and text embeddings $v,t$, raw CLIP target compatibility is $v(\widehat x)^\top t(q_t)$ \cite{radford2021clip}. A directional score compares $v(\widehat x)-v(x)$ with $t(q_t)-t(q_s)$ after normalization; zero-length changes are recorded explicitly. CLIPScore uses its own scaling and text preprocessing and should retain its name only when that protocol is used \cite{hessel2021clipscore}. All models, weights, resizing rules, and text variants are fixed across arms.
+
+Image-level DINOv2 cosine measures broad content retention, while patch or crop comparisons measure spatial detail \cite{caron2021dino,oquab2024dinov2}. LPIPS and SSIM add perceptual and local structural comparisons \cite{zhang2018lpips,wang2004ssim}. Evaluate intended preservation regions separately from intended edit regions. In a background replacement task, source similarity of the background penalizes the requested change; it belongs on a source-departure diagnostic, not the preservation-quality column. Evaluation masks are defined independently of the routing prediction. Receptive-field boundaries, registration, and pooling support are declared for each regional score.
+
+\subsection{Fair comparison and statistical unit}
+Keep source images disjoint between development and test, including every prompt variant of the same source. Use a documented development sweep for each baseline and freeze all settings before test generation. Recommended schedules and NFE-matched settings are separate comparisons. Plot retention against semantic achievement over the frozen operating points, with failures included. Report per-task and source-level paired effects and confidence intervals; repeated seeds remain within source clusters. For a final test, declare the primary comparison and multiplicity treatment before analysis. The historical pilot uses exploratory source-level estimates as specified in Section~\ref{sec:independent}. The final R85 analysis uses the frozen source-paired procedure and six-comparison Holm family in Section~\ref{sec:final-evaluation}.
+
+\section{Evaluation Provenance and Recomputable Evidence}
+\label{sec:evaluation-provenance}
+\input{appendix_evaluation_provenance}
+
+\section{Completed Frozen Evaluation Protocol and Separate Mechanism Hypotheses}
+\label{sec:prospective-controls}
+Appendix~\ref{app:completed-final-protocol} records the completed R84/R85 frozen protocol. The area-cap and restricted-source-pool proposals below remain separate, untested mechanism hypotheses.
+
+\input{next_experiment_protocol}
+
+\subsection{Proposed area-aware, amplitude-capped normalization}
+The ONLINE/LOCAL contrast exposes a precise confound: changing mask area changes the multiplier needed to match a global norm. We propose to make area sensitivity explicit. For a soft mask $P$ repeated over latent channels, define $f_P=N_{\rm lat}^{-1}\sum_j P_j^2$, candidate $s_i=P\odot c_i$, and target magnitude
+\begin{equation}
+b_i^{(\alpha)}=a\, f_P^{\alpha/2}\RMS(c_i),\qquad 0\leq\alpha\leq1.
+\label{eq:area-budget}
+\end{equation}
+Use an amplitude cap $\kappa$ through
+\begin{equation}
+k_i=\min\left\{\frac{b_i^{(\alpha)}}{\RMS(s_i)},\kappa\right\},\qquad
+\widehat c_i=k_i s_i.
+\label{eq:capped}
+\end{equation}
+For nonzero support, $\alpha=0$ without a cap recovers ONLINE. Under approximately uniform residual energy, $\alpha=1$ makes the multiplier approximately $a$ regardless of area. Actual spatial energy remains observable through the two measured norms. A cap-active step records its realized magnitude and shortfall from $b_i^{(\alpha)}$; zero-support inputs use zero regional correction and are counted as localization failures when protection was requested.
+
+The purpose is to separate spatial selection from local amplification. A useful result would retain the current local-pattern advantage while improving requested scene attributes or reducing geometry artifacts across different region sizes. A conditional follow-up can compare ONLINE, LOCAL, and a fixed area-sensitivity setting under the same independent mask. A shifted-support control and reported realized impulse distinguish localization from dose changes. This design builds on the measured 2.74-fold impulse difference; its performance benefit is an explicit hypothesis.
+
+\subsection{Memory access as a separate variable}
+Restricting target queries does not restrict the source content available to those queries. MasaCtrl's source-pool control provides a closer test of background leakage \cite{cao2023masactrl}. For a source support $W_j$ and head-specific target query $Q_q$, a proposed restricted read is
+\begin{equation}
+R_P(q)=\sum_j\frac{W_j\exp(\ell_{qj})}{\sum_k W_k\exp(\ell_{qk})}V_j^s,
+\quad \ell_{qj}=Q_q(K_j^s)^\top/\sqrt{d_h}.
+\end{equation}
+The native output is used if the source pool is empty. This read can replace $R_s$ inside the existing text/image-mass-preserving mixture. The controlled comparison is full-source/all-query, restricted-source/all-query, full-source/ROI-query, and restricted-source/ROI-query. The residual rule and measured impulse are held fixed for this attribution study.
+
+Stable Flow and ReFlex further suggest selective layers and reduced source extraction \cite{avrahami2025stableflow,kim2025reflex}. These are efficiency alternatives after the memory-access comparison. A single reference capture could replace seven captures, changing the bookkeeping from 91 to 85 transformer calls if every other field evaluation is retained. Whether one capture provides adequate detail memory is a separate measured trade-off. Layer identities and schedules should be selected on development sources and frozen for testing.
+
+
+
+\section{Further Mechanism Comparisons}
+\label{sec:mechanism-appendix}
+\subsection{Reconstruction correction versus input alignment}
+PnP Inversion corrects the reconstruction branch while its target editing branch receives no direct reconstruction offset \cite{ju2024pnpinversion}. DirectEdit instead adds an adjacent inversion offset to the field-evaluation input, followed by its attention and latent-blending operations \cite{yang2026directedit}. TraceMemory adds a routed velocity residual to the target update. These are distinct injection sites. A controlled comparison can retain the same reference and attention interface while varying only the injection site, with each method's native full configuration also reported separately.
+
+\subsection{Source pool versus query support}
+MasaCtrl's mask-guided reads divide source-key pools and combine foreground/background outputs \cite{cao2023masactrl}. The evaluated ROI-query arm uses the entire source pool and changes only which target queries receive memory. An automatic region and an ROI-query gate therefore answer different questions. The proposed source-pool factor in Appendix~\ref{sec:prospective-controls} directly tests this distinction.
+
+\subsection{Geometry, appearance, and frequency}
+Plug-and-Play Diffusion Features separates spatial-feature and attention-affinity reuse; Prompt-to-Prompt varies text-attention control over tokens and time \cite{tumanyan2023pnpfeatures,hertz2023prompttoprompt}. FreqEdit and wavelet-guided compensation filter different velocity quantities with different purposes \cite{liao2025freqedit,tang2026wavelet}. A low-pass residual component can contain both illumination and structure. The present matched test measures the chosen filter's outcome; it does not identify a universal frequency-to-semantics mapping. The simpler unfiltered regional candidate is the current basis for further experiments.
+
+\subsection{Nearest-work implementation priorities}
+DirectEdit and SteerFlow are priority comparisons for spatial/reference control. RF-Edit and ReFlex are priority comparisons for source-memory transfer. FlowEdit supplies the measured direct-transport operating point; FireFlow and Stable Flow provide efficiency and layer-selection alternatives \cite{yang2026directedit,dao2026steerflow,wang2025rfsolver,kim2025reflex,kulikov2025flowedit,deng2025fireflow,avrahami2025stableflow}. A large implementation matrix should follow a source-disjoint pilot that establishes successful edits and a useful retention operating point.
+
+\input{appendix_r81}
+
+\input{appendix_results}
+\clearpage
+\section{Complete Qualitative Gallery}
+All fourteen comparison sheets from each study follow, covering every task and both seeds. Source cells and frozen reference cells retain the original archive labels. Frozen sibling references are contextual images and are excluded from the 98 and 70 newly generated output counts. The historical supplied-region configuration in the magnitude/coverage sheets is ROI\_ONLINE25. The gallery preserves failed and ambiguous cases alongside favorable examples. Images are recorded preview JPEGs; the numeric metrics were computed from lossless PNGs.
+\input{appendix_gallery}
+\end{document}

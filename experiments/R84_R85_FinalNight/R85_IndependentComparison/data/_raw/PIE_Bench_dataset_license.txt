@@ -1,0 +1,11 @@
+﻿PIE-Bench (Prompt-driven Image Editing Benchmark) (hereinafter "PIE-Bench") is an image editing benchmark. Specifically, PIE-Bench comprises 700 images, meanwhile providing corresponding editing prompt descriptions and mask labels.
+Notwithstanding the disclosure of PIE-Bench and any material pertaining to this benchmark (including all the images), all copyrights are maintained by and remained proprietary property of the authors and/or the copyright holders. You may use the benchmark by ways in compliance with all applicable laws and regulations.  
+The annotations in PIE-Bench are licensed under the Attribution-Non Commercial-Share Alike 4.0 International License (CC-BY-NC-SA 4.0)
+You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. You may not use the material for commercial purposes. If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+To view a copy of this license, visit:
+https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en
+OR
+https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-Hans (Chinese)
+With this free CC-license, we want to encourage the adoption and use of PIE-Bench and related annotations.
+Attribution for Publications with PIE-Bench
+You agree to cite the most recent paper describing the model, “Direct Inversion: Boosting Diffusion-based Editing with 3 Lines of Code”.

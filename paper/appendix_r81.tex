@@ -1,0 +1,91 @@
+\clearpage
+\section{Independent-Source Pilot: Complete Paired Support}
+\label{sec:r81-appendix}
+The released study contains 366 completed records: 126 development outputs and 240 independent-source outputs. Source identifiers below refer to the PIE-Bench subset selected before generation. Both seed slots (0 and 17) are retained. RF-Edit is deterministic in this adapter, so repeated slots are clustered by source. All 366 original metric records remain in the result archive; the analysis script exports cohort, source, category, paired-effect, missingness, and parameter tables.
+
+\subsection{All 24 independent sources}
+Table entries are two-slot means of whole-image NCC. The final column is AUTO minus U25 preservation-region MAE; missing values mark an empty official preservation complement. The numeric mask identifies evaluation support and is never supplied to AUTO's routing computation.
+\onecolumn
+\small
+\begin{longtable}{llrrrrrr}
+\toprule
+Source ID & Category & ETA03 & U25 & AUTO & FlowEdit & RF-Edit & $\Delta$ preserved MAE\\
+\midrule\endfirsthead
+\toprule
+Source ID & Category & ETA03 & U25 & AUTO & FlowEdit & RF-Edit & $\Delta$ preserved MAE\\
+\midrule\endhead
+000000000007 & random editing & 0.788 & 0.860 & 0.802 & 0.622 & 0.985 & 0.020\\
+000000000034 & random editing & 0.111 & 0.329 & 0.109 & 0.317 & 0.914 & --\\
+000000000072 & random editing & 0.890 & 0.914 & 0.832 & 0.841 & 0.997 & 0.113\\
+113000000000 & change object & 0.731 & 0.763 & 0.729 & 0.587 & 0.984 & 0.064\\
+121000000006 & change object & 0.652 & 0.728 & 0.741 & 0.467 & 0.988 & 0.048\\
+124000000000 & change object & 0.923 & 0.918 & 0.866 & 0.821 & 0.996 & 0.028\\
+212000000009 & add object & 0.517 & 0.578 & 0.435 & 0.671 & 0.967 & 0.047\\
+221000000006 & add object & 0.591 & 0.636 & 0.602 & 0.653 & 0.960 & 0.033\\
+223000000008 & add object & 0.726 & 0.814 & 0.779 & 0.803 & 0.986 & --\\
+312000000008 & delete object & 0.656 & 0.714 & 0.524 & 0.729 & 0.986 & 0.093\\
+322000000005 & delete object & 0.794 & 0.830 & 0.642 & 0.779 & 0.992 & 0.065\\
+323000000002 & delete object & 0.721 & 0.758 & 0.430 & 0.724 & 0.993 & 0.102\\
+412000000001 & change attribute content & 0.736 & 0.842 & 0.608 & 0.624 & 0.990 & --\\
+424000000001 & change attribute content & 0.640 & 0.659 & 0.635 & 0.723 & 0.956 & 0.052\\
+513000000001 & change attribute pose & 0.882 & 0.900 & 0.887 & 0.932 & 0.994 & 0.060\\
+523000000001 & change attribute pose & 0.655 & 0.729 & 0.643 & 0.748 & 0.985 & 0.034\\
+621000000004 & change attribute color & 0.901 & 0.903 & 0.867 & 0.812 & 0.994 & 0.038\\
+622000000001 & change attribute color & 0.716 & 0.754 & 0.556 & 0.788 & 0.985 & 0.006\\
+712000000000 & change attribute material & 0.778 & 0.809 & 0.717 & 0.644 & 0.986 & 0.080\\
+713000000001 & change attribute material & 0.608 & 0.675 & 0.467 & 0.628 & 0.988 & 0.075\\
+811000000000 & change background & 0.497 & 0.511 & 0.223 & 0.627 & 0.970 & -0.029\\
+814000000001 & change background & 0.548 & 0.606 & 0.353 & 0.733 & 0.978 & 0.084\\
+922000000003 & change style & 0.807 & 0.848 & 0.152 & 0.685 & 0.989 & --\\
+922000000009 & change style & 0.702 & 0.835 & 0.788 & 0.552 & 0.990 & --\\
+\bottomrule
+\end{longtable}
+\normalsize
+\subsection{Exact target requests}
+The target request is taken from the supplied job record. Methods receive matching prompts for each source. Some categories deliberately change identity, material, pose, or style; preservation is therefore evaluated on the task's intended unchanged content.
+\small
+\begin{longtable}{lp{.77\textwidth}}
+\toprule
+Source ID & Target instruction\\\midrule\endfirsthead
+\toprule Source ID & Target instruction\\\midrule\endhead
+000000000007 & Change the german shepherd dog's mouth from closed to opened\\
+000000000034 & Add a sketch painting effect of the picture of the mother duck and her babies\\
+000000000072 & Change the glass cups to wooden\\
+113000000000 & change the fruit to candy\\
+121000000006 & Change the dog to a wolf\\
+124000000000 & Replace cars with boats\\
+212000000009 & Add closed eyes to the black skin man's face\\
+221000000006 & Add a bird on the tree with the koala\\
+223000000008 & Add a lemon to the bowl of strawberries and blueberries\\
+312000000008 & Remove the sunglasses from the woman\\
+322000000005 & Remove the bottles of water\\
+323000000002 & Remove olives from the table\\
+412000000001 & change the paint color to drab\\
+424000000001 & Make the sea rough\\
+513000000001 & Change the lid from being closed to being opened\\
+523000000001 & move the red pepper under the towel\\
+621000000004 & Change the kitten's color to yellow\\
+622000000001 & Change the woman's dress color to red\\
+712000000000 & Change the woman to a chintzy doll\\
+713000000001 & Replace the lamp with a crystal lamp\\
+811000000000 & Add a forest\\
+814000000001 & Add monsters and dragons above the mountain\\
+922000000003 & change the image with a kids crayon drawing style\\
+922000000009 & Make the young girl a black and white sketch\\
+\bottomrule\end{longtable}
+\normalsize
+\subsection{Visual observations and evaluation state}
+The accompanying \texttt{r81\_visual\_observations.csv} contains one machine visual observation for each of the 48 independent-cohort sheets, including the exact source prompt, target prompt, seed, and sheet path. These observations are separate from the four formal rating fields. All 366 formal edit, subject, pattern, and artifact labels remain unfilled in the supplied archive. Generation failures are zero; unfilled artifact labels do not mean zero artifacts.
+
+\subsection{Runtime and implementation provenance}
+The actual \texttt{plan.json} defines the executed jobs; the larger arm-template file also contains configurations that were not run. In particular, the R81 development cohort does not rerun ONLINE25. Its comparisons with prior ONLINE25 outputs are historical-reference comparisons. The runtime reports both edit-only NFE and total standalone NFE. The table uses standalone totals. Some non-normalized jobs carry a generic normalization status string; the explicit \texttt{correction\_budget\_mode} field and implemented update define the actual mode. U25 uses fixed global scaling.
+
+\subsection{Local reproducible analysis}
+\begin{verbatim}
+python scripts/analyze_r81.py
+python scripts/build_r81_effects.py
+python scripts/build_r81_qualitative.py
+python scripts/build_r81_appendix.py
+\end{verbatim}
+These scripts read the supplied frozen result archive. They summarize measurements and produce figures without launching image generation. The source-bootstrap seed is 81030, with 20,000 resamples. Comparisons are paired before source-level aggregation. All artifacts retain method names and input provenance.
+

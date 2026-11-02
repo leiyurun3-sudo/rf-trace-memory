@@ -1,0 +1,22 @@
+﻿item,value
+metrics_rows,366
+summary_completed,366
+plan_jobs,366
+plan_ids_missing_metrics,0
+metrics_ids_not_in_plan,0
+manifest_fingerprint_matches_summary,True
+references_imported,0
+train_test_subdivision,"No train/dev/test subdivision of the 24 new sources is specified in metrics, plan, or heldout_tasks; all are heldout_pilot."
+selection_rule,R81-PIE-heldout-v1; SHA256 order; category round-robin; one task per source
+selection_eligible_pool,24
+selection_history,"Report all predefined heldout candidates. Heldout pilot is independent of previous six sources, not a final untouched test after using it for selection."
+development_reference,R80 ONLINE25 required for paired development contrasts; no guessed or substituted results.
+heldout_NCC_semantics,Whole-image grayscale NCC auxiliary; shift search has zero available displacement because ROI spans entire image.
+development_NCC_semantics,Task-specific manually supplied pattern ROI; not comparable in scale to whole-image heldout NCC.
+MAE_semantics,"Source-referenced RGB MAE on [0,1]; edit-region change is not semantic edit success."
+inference,Equal source weighting; paired cohort/case/task/seed; average all finite task-seed deltas within source; 20000 source bootstrap; source sign flip; Holm per cohort/metric.
+package_provenance,Sibling package plan/config read as supplied; no recomputed hashes or claim of verified runtime-code identity.
+rng_seed,81030
+old_new_source_id_overlap,0
+recorded_synchronized_seconds_sum,15624.71710677445
+RFEDIT_identical_preview_hash_across_seeds_task_count,31

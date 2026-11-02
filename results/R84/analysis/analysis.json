@@ -1,0 +1,94 @@
+{
+  "scope": "R84 completed evaluation, development on R81 seen sources; source clustered comparisons; no GPU or web",
+  "input_files": [
+    "summary.json",
+    "metrics.csv",
+    "evaluation.csv",
+    "evidence/overnight_evidence.json",
+    "evidence/overnight_source_values.csv",
+    "evidence/overnight_comparisons.csv",
+    "evaluation.log.tail.txt"
+  ],
+  "verification": {
+    "jobs": 130,
+    "source_cases": 10,
+    "arm_seeds": {
+      "ENERGY_MATCH25": [
+        "0",
+        "17"
+      ],
+      "FLOWEDIT_N28": [
+        "0",
+        "17"
+      ],
+      "RELEASE_BOTH25": [
+        "0",
+        "17"
+      ],
+      "RELEASE_CORR15": [
+        "0",
+        "17"
+      ],
+      "RELEASE_CORR25": [
+        "0",
+        "17"
+      ],
+      "RELEASE_CORR35": [
+        "0",
+        "17"
+      ],
+      "RFEDIT_I08": [
+        "0"
+      ]
+    },
+    "matched_source_mean_comparisons_verified": 60,
+    "comparisons_checked": 60,
+    "source_values_verified_against_jobs": 602,
+    "source_values_checked": 602,
+    "ci_method": "Existing paired source bootstrap percentile 95% (10000 replicates); independently recomputed paired bootstrap with seed 20261102 and exact source sign-flip; results alongside original in CSV.",
+    "test": "existing two-sided source sign-flip, Holm across six planned comparisons per metric; bootstrap CIs are unadjusted",
+    "rf_pairing": "RF seed 0 versus mean of seeds 0 and 17 in comparator; matched by source, not same seed",
+    "empty_preserved_source_cases": [
+      "223000000008",
+      "922000000003"
+    ],
+    "empty_preserved_jobs": 26,
+    "preserved_metric_source_n": 8,
+    "full_metrics_source_n": 10,
+    "lpips_preserved_definition": "spatial map weighted by edit-mask complement; receptive fields may cross boundary",
+    "pixel_ssim": "background region, local windows may cross mask",
+    "dino_pattern_crop": "reported DINO crop can be whole image when ROI full; no established independent local texture evidence from that field",
+    "human_judgments": "0 of 130 rated; edit and joint success pending",
+    "prior_round_references": "80 references: 20 not_run, 40 not_run_no_native_png_in_compact_return, 20 pipeline_error; new metric comparisons with prior rounds unavailable",
+    "bootstrap_max_endpoint_difference": 0.004229283295571805,
+    "signflip_max_abs_difference": 0.0
+  },
+  "findings": [
+    {
+      "contrast": "dose: CORR25 minus CORR15 and CORR35",
+      "evidence": "LPIPS full differences -0.05513 and +0.04727; preserved LPIPS -0.05607 and +0.04221; background SSIM +0.04160 and -0.03670; all respective Holm p <= 0.046875. CLIP target and directional CIs cross zero for both comparisons.",
+      "interpretation": "Increasing correction 15 to 35 improves source preservation by pixel and perceptual metrics; measured CLIP does not establish a corresponding change in target alignment. Dose is local coefficient, not equalized cross-arm realized correction impulse."
+    },
+    {
+      "contrast": "CORR25 minus ENERGY_MATCH25",
+      "evidence": "preserved MAE -0.00562 CI [-0.01095,-0.00057], LPIPS preserved -0.01314 CI [-0.03062,-0.00025], SSIM +0.01194 CI [0.00449,0.01879]; Holm p 0.0781, 0.2344, 0.0938. CLIP image -0.00886 CI [-0.01724,-0.00128], Holm p 0.2832; DINO full -0.00212 CI crosses zero. CLIP target/directional CIs cross zero.",
+      "interpretation": "Pixel and LPIPS point estimates favor response routing for preservation, but adjusted evidence is inconclusive and CLIP image points in the opposite direction. This qualifies any pixel-only claim of consistent perceptual superiority. Same-state energy control does not imply exact matched realized cross-arm impulse."
+    },
+    {
+      "contrast": "CORR25 minus BOTH25",
+      "evidence": "LPIPS full -0.01685 CI [-0.02797,-0.00754], Holm p 0.01172; preserved LPIPS -0.01621 CI [-0.02403,-0.00925], Holm p 0.046875; DINO +0.07438 CI [0.01436,0.14687], Holm p 0.1953; directional CLIP -0.01660 CI crosses zero.",
+      "interpretation": "Adding spatial memory gating to CORR25 worsens preservation by LPIPS in this comparison; evidence does not establish an editing benefit. Compare signed differences using CORR25 minus comparator."
+    },
+    {
+      "contrast": "CORR25 minus FLOWEDIT_N28",
+      "evidence": "target CLIP -0.02004 CI [-0.03542,-0.00855], directional CLIP -0.05696 CI [-0.08358,-0.03073], both Holm p 0.02344; full LPIPS -0.08686 CI [-0.16061,-0.02703], Holm p 0.05469; background SSIM -0.08529 CI [-0.15994,-0.01561], Holm p 0.125. NFE 97 versus 56.",
+      "interpretation": "CORR25 sacrifices text alignment on these proxies while source similarity differs by metric: full LPIPS favors CORR25, background SSIM favors FlowEdit. This directly qualifies a blanket preservation or editing superiority claim; compute differs."
+    },
+    {
+      "contrast": "CORR25 minus RFEDIT_I08",
+      "evidence": "full LPIPS +0.25096 CI [0.21241,0.28659], preserved LPIPS +0.24355 CI [0.18528,0.30726], DINO -0.21246 CI [-0.35027,-0.08768], CLIP image -0.08197 CI [-0.12245,-0.04266]; Holm p <= 0.046875. Directional CLIP +0.05285 CI [0.00955,0.10350], Holm p 0.3223. NFE 97 versus 100.",
+      "interpretation": "RF shows substantially stronger source preservation on these metrics; directional CLIP point estimate favors CORR25 but adjusted evidence is inconclusive. RF has one seed per source."
+    }
+  ],
+  "mechanism_conclusion": "Dose response supports a correction-strength/preservation association in this seen-source experiment; routing-specific superiority and editing success are not established by the available comparisons. Full-image metrics reflect source similarity across edited and preserved content, and target CLIP is only an alignment proxy. Existing earlier pixel-only claim text was not present in inspected R84 evidence, so comparisons address possible claims by metric rather than attributing an exact prior wording."
+}

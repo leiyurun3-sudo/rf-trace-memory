@@ -1,0 +1,20 @@
+FINAL OVERNIGHT RUN: 650 outputs (130 development + 520 independent comparison).
+Existing 570 jobs are unchanged; 80 ETA03 baseline jobs were added before testing.
+
+cd /root/autodl-tmp/MINT_Flow_Jupyter_Ready
+unzip -o /root/autodl-tmp/R84_R85_FinalNight_Ready.zip -d .
+bash R84_R85_FinalNight/start_final_night.sh
+
+Wait for DONE (actual CPU model loading) and Started final night before disconnecting.
+Ctrl-C stops log viewing; the detached run continues. Old launch locks prevent duplicate runs.
+The launcher installs lpips==0.1.4 with --no-deps if absent; the existing torch stack is retained.
+CLIP/DINO/LPIPS weights must finish downloading/loading before generation starts.
+Resume with the same bash command. Retry evaluation alone with --eval-only.
+
+Result: /root/autodl-tmp/MINT_Flow_Jupyter_Ready/R84_R85_FinalNight_results.zip
+Status: R84_R85_FinalNight/final_night.status
+Log: R84_R85_FinalNight/final_night.log
+Original PNGs remain on the server for evaluation; the result ZIP contains previews and evidence.
+Human ratings remain a separate step. Optional subject/pattern applicability is supported by
+results/judgments.csv and overnight_stats.py; the existing web interface uses its original rubric.
+This separate package has its own outputs; it does not reuse old R84/R85 native generations.

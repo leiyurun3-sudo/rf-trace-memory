@@ -1,0 +1,15 @@
+﻿cohort,source_role,arm,outputs,sources,tasks,task_seed_cases,completed,seeds,eval_pixel_regions
+development,old_source_development,BUDGET15,14,6,7,14,14,0;10;17,object
+development,old_source_development,BUDGET35,14,6,7,14,14,0;10;17,object
+development,old_source_development,EARLY3,14,6,7,14,14,0;10;17,object
+development,old_source_development,GATE050,14,6,7,14,14,0;10;17,object
+development,old_source_development,KV_ONLY,14,6,7,14,14,0;10;17,object
+development,old_source_development,PLAIN_KV,14,6,7,14,14,0;10;17,object
+development,old_source_development,RFEDIT,14,6,7,14,14,0;10;17,object
+development,old_source_development,ROI_DILATE16,14,6,7,14,14,0;10;17,object
+development,old_source_development,ROI_ERODE16,14,6,7,14,14,0;10;17,object
+heldout_pilot,new_source_heldout_pilot,AUTO_DETAIL,48,24,24,48,48,0;17,background
+heldout_pilot,new_source_heldout_pilot,ETA03,48,24,24,48,48,0;17,background
+heldout_pilot,new_source_heldout_pilot,FLOWEDIT_N26,48,24,24,48,48,0;17,background
+heldout_pilot,new_source_heldout_pilot,RFEDIT,48,24,24,48,48,0;17,background
+heldout_pilot,new_source_heldout_pilot,U25_KV,48,24,24,48,48,0;17,background

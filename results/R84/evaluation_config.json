@@ -1,0 +1,866 @@
+{
+  "status": "completed",
+  "device": "cpu",
+  "executable": "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/.venv/bin/python",
+  "required_metrics": [
+    "clip_target_similarity",
+    "clip_directional_similarity",
+    "clip_image_similarity",
+    "dino_full_feature_similarity",
+    "dino_pattern_crop_feature_similarity"
+  ],
+  "root": "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/R84_R85_FinalNight/R84_RequestRelease",
+  "lpips_status": "ready",
+  "native_png_audit": [
+    {
+      "id": "R84_pie_000000000072_s0_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_000000000072_s17_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_000000000072_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_000000000072_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_000000000072_s0_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_000000000072_s17_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_000000000072_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_000000000072_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_000000000072_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_000000000072_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_000000000072_s0_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_000000000072_s17_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_000000000072_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_121000000006_s0_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_121000000006_s17_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_121000000006_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_121000000006_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_121000000006_s0_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_121000000006_s17_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_121000000006_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_121000000006_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_121000000006_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_121000000006_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_121000000006_s0_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_121000000006_s17_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_121000000006_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_223000000008_s0_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_223000000008_s17_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_223000000008_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_223000000008_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_223000000008_s0_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_223000000008_s17_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_223000000008_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_223000000008_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_223000000008_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_223000000008_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_223000000008_s0_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_223000000008_s17_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_223000000008_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_323000000002_s0_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_323000000002_s17_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_323000000002_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_323000000002_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_323000000002_s0_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_323000000002_s17_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_323000000002_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_323000000002_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_323000000002_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_323000000002_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_323000000002_s0_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_323000000002_s17_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_323000000002_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_424000000001_s0_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_424000000001_s17_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_424000000001_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_424000000001_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_424000000001_s0_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_424000000001_s17_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_424000000001_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_424000000001_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_424000000001_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_424000000001_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_424000000001_s0_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_424000000001_s17_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_424000000001_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_523000000001_s0_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_523000000001_s17_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_523000000001_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_523000000001_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_523000000001_s0_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_523000000001_s17_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_523000000001_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_523000000001_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_523000000001_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_523000000001_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_523000000001_s0_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_523000000001_s17_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_523000000001_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_621000000004_s0_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_621000000004_s17_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_621000000004_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_621000000004_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_621000000004_s0_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_621000000004_s17_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_621000000004_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_621000000004_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_621000000004_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_621000000004_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_621000000004_s0_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_621000000004_s17_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_621000000004_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_713000000001_s0_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_713000000001_s17_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_713000000001_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_713000000001_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_713000000001_s0_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_713000000001_s17_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_713000000001_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_713000000001_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_713000000001_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_713000000001_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_713000000001_s0_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_713000000001_s17_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_713000000001_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_814000000001_s0_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_814000000001_s17_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_814000000001_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_814000000001_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_814000000001_s0_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_814000000001_s17_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_814000000001_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_814000000001_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_814000000001_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_814000000001_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_814000000001_s0_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_814000000001_s17_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_814000000001_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_922000000003_s0_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_922000000003_s17_RELEASE_CORR15",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_922000000003_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_922000000003_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_922000000003_s0_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_922000000003_s17_RELEASE_CORR35",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_922000000003_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_922000000003_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_922000000003_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_922000000003_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_922000000003_s0_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_922000000003_s17_FLOWEDIT_N28",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R84_pie_922000000003_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    }
+  ],
+  "lpips_policy": "full LPIPS required; preserved LPIPS required except explicit empty region; spatial-map mask weighting allows receptive-field spill",
+  "clip_directional_policy": "finite score or explicitly reported zero_direction with empty score; other four required metrics must be finite",
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.4",
+    "numpy": "2.5.4",
+    "Pillow": "11.3.0",
+    "scikit-image": "0.26.0"
+  },
+  "paths": {
+    "CLIP_PATH": "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "DINO_PATH": "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415"
+  },
+  "readiness_scope": "installed metadata and local files; model load occurs in evaluator",
+  "command": [
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/.venv/bin/python",
+    "-u",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/R84_R85_FinalNight/R84_RequestRelease/evaluate.py",
+    "--from-results",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/R84_R85_FinalNight/R84_RequestRelease/results",
+    "--clip-path",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "--dino-path",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "--device",
+    "cpu",
+    "--data-dir",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/R84_R85_FinalNight/R84_RequestRelease/data",
+    "--lpips-status",
+    "ready",
+    "--lpips-error",
+    "",
+    "--lpips-path",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/lpips/alex_v0.1.pth",
+    "--lpips-trunk-path",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/lpips/alexnet-owt-7be5be79.pth"
+  ],
+  "started": 1793586015.2895696,
+  "pid": 1504,
+  "evaluator_returncode": 0,
+  "error": null,
+  "planned": 130,
+  "incomplete_ids": [],
+  "lpips_status_counts": {
+    "ok": 130
+  },
+  "raw_audit": {
+    "eval_raw_exists": 130,
+    "eval_source_exists": 130,
+    "eval_record_exists": 130
+  },
+  "raw_audit_planned": 130,
+  "statistics_status": "completed",
+  "statistics_reference": "U25_KV",
+  "overnight_statistics_command": [
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/.venv/bin/python",
+    "-u",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/R84_R85_FinalNight/R84_RequestRelease/overnight_stats.py",
+    "--results",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/R84_R85_FinalNight/R84_RequestRelease/results"
+  ],
+  "overnight_statistics_returncode": 0,
+  "statistics_files": [
+    "statistics.json",
+    "category_summary.csv",
+    "evidence/overnight_source_values.csv",
+    "evidence/overnight_arm_summary.csv",
+    "evidence/overnight_comparisons.csv",
+    "evidence/overnight_evidence.json"
+  ]
+}

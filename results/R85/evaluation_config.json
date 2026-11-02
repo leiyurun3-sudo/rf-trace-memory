@@ -1,0 +1,3206 @@
+{
+  "status": "completed",
+  "device": "cpu",
+  "executable": "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/.venv/bin/python",
+  "required_metrics": [
+    "clip_target_similarity",
+    "clip_directional_similarity",
+    "clip_image_similarity",
+    "dino_full_feature_similarity",
+    "dino_pattern_crop_feature_similarity"
+  ],
+  "root": "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/R84_R85_FinalNight/R85_IndependentComparison",
+  "lpips_status": "ready",
+  "native_png_audit": [
+    {
+      "id": "R85_pie_000000000100_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000100_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000100_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000100_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000100_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000100_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000100_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000100_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000100_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000100_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000100_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000132_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000132_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000132_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000132_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000132_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000132_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000132_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000132_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000132_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000132_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000132_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000021_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000021_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000021_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000021_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000021_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000021_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000021_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000021_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000021_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000021_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000021_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000058_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000058_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000058_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000058_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000058_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000058_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000058_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000058_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000058_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000058_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000058_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_123000000001_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_123000000001_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_123000000001_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_123000000001_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_123000000001_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_123000000001_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_123000000001_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_123000000001_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_123000000001_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_123000000001_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_123000000001_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_111000000009_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_111000000009_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_111000000009_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_111000000009_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_111000000009_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_111000000009_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_111000000009_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_111000000009_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_111000000009_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_111000000009_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_111000000009_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_122000000002_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_122000000002_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_122000000002_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_122000000002_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_122000000002_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_122000000002_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_122000000002_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_122000000002_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_122000000002_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_122000000002_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_122000000002_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_114000000002_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_114000000002_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_114000000002_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_114000000002_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_114000000002_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_114000000002_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_114000000002_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_114000000002_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_114000000002_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_114000000002_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_114000000002_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_222000000006_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_222000000006_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_222000000006_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_222000000006_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_222000000006_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_222000000006_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_222000000006_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_222000000006_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_222000000006_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_222000000006_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_222000000006_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_212000000007_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_212000000007_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_212000000007_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_212000000007_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_212000000007_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_212000000007_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_212000000007_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_212000000007_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_212000000007_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_212000000007_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_212000000007_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_223000000009_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_223000000009_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_223000000009_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_223000000009_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_223000000009_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_223000000009_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_223000000009_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_223000000009_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_223000000009_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_223000000009_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_223000000009_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_224000000007_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_224000000007_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_224000000007_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_224000000007_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_224000000007_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_224000000007_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_224000000007_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_224000000007_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_224000000007_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_224000000007_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_224000000007_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000003_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000003_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000003_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000003_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000003_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000003_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000003_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000003_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000003_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000003_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000003_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000005_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000005_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000005_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000005_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000005_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000005_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000005_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000005_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000005_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000005_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000005_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_312000000006_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_312000000006_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_312000000006_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_312000000006_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_312000000006_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_312000000006_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_312000000006_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_312000000006_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_312000000006_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_312000000006_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_312000000006_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_313000000008_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_313000000008_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_313000000008_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_313000000008_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_313000000008_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_313000000008_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_313000000008_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_313000000008_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_313000000008_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_313000000008_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_313000000008_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_423000000003_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_423000000003_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_423000000003_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_423000000003_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_423000000003_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_423000000003_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_423000000003_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_423000000003_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_423000000003_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_423000000003_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_423000000003_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_412000000003_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_412000000003_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_412000000003_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_412000000003_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_412000000003_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_412000000003_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_412000000003_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_412000000003_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_412000000003_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_412000000003_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_412000000003_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_411000000000_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_411000000000_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_411000000000_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_411000000000_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_411000000000_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_411000000000_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_411000000000_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_411000000000_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_411000000000_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_411000000000_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_411000000000_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_422000000001_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_422000000001_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_422000000001_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_422000000001_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_422000000001_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_422000000001_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_422000000001_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_422000000001_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_422000000001_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_422000000001_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_422000000001_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_522000000004_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_522000000004_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_522000000004_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_522000000004_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_522000000004_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_522000000004_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_522000000004_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_522000000004_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_522000000004_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_522000000004_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_522000000004_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_524000000002_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_524000000002_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_524000000002_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_524000000002_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_524000000002_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_524000000002_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_524000000002_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_524000000002_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_524000000002_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_524000000002_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_524000000002_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_511000000004_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_511000000004_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_511000000004_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_511000000004_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_511000000004_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_511000000004_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_511000000004_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_511000000004_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_511000000004_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_511000000004_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_511000000004_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_512000000004_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_512000000004_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_512000000004_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_512000000004_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_512000000004_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_512000000004_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_512000000004_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_512000000004_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_512000000004_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_512000000004_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_512000000004_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_614000000004_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_614000000004_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_614000000004_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_614000000004_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_614000000004_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_614000000004_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_614000000004_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_614000000004_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_614000000004_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_614000000004_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_614000000004_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_622000000000_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_622000000000_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_622000000000_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_622000000000_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_622000000000_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_622000000000_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_622000000000_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_622000000000_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_622000000000_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_622000000000_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_622000000000_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_613000000003_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_613000000003_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_613000000003_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_613000000003_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_613000000003_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_613000000003_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_613000000003_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_613000000003_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_613000000003_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_613000000003_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_613000000003_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_611000000004_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_611000000004_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_611000000004_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_611000000004_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_611000000004_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_611000000004_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_611000000004_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_611000000004_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_611000000004_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_611000000004_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_611000000004_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_711000000000_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_711000000000_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_711000000000_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_711000000000_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_711000000000_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_711000000000_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_711000000000_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_711000000000_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_711000000000_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_711000000000_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_711000000000_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_724000000000_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_724000000000_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_724000000000_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_724000000000_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_724000000000_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_724000000000_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_724000000000_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_724000000000_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_724000000000_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_724000000000_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_724000000000_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_713000000002_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_713000000002_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_713000000002_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_713000000002_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_713000000002_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_713000000002_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_713000000002_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_713000000002_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_713000000002_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_713000000002_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_713000000002_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_723000000004_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_723000000004_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_723000000004_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_723000000004_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_723000000004_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_723000000004_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_723000000004_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_723000000004_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_723000000004_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_723000000004_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_723000000004_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_824000000001_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_824000000001_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_824000000001_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_824000000001_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_824000000001_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_824000000001_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_824000000001_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_824000000001_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_824000000001_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_824000000001_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_824000000001_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_813000000003_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_813000000003_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_813000000003_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_813000000003_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_813000000003_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_813000000003_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_813000000003_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_813000000003_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_813000000003_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_813000000003_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_813000000003_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_812000000004_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_812000000004_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_812000000004_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_812000000004_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_812000000004_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_812000000004_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_812000000004_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_812000000004_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_812000000004_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_812000000004_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_812000000004_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_821000000008_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_821000000008_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_821000000008_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_821000000008_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_821000000008_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_821000000008_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_821000000008_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_821000000008_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_821000000008_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_821000000008_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_821000000008_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000005_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000005_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000005_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000005_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000005_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000005_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000005_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000005_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000005_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000005_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000005_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_921000000004_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_921000000004_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_921000000004_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_921000000004_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_921000000004_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_921000000004_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_921000000004_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_921000000004_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_921000000004_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_921000000004_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_921000000004_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000004_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000004_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000004_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000004_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000004_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000004_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000004_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000004_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000004_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000004_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000004_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000003_s0_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000003_s17_RELEASE_CORR25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000003_s0_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000003_s17_RELEASE_BOTH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000003_s0_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000003_s17_ENERGY_MATCH25",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000003_s0_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000003_s17_U25_KV",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000003_s0_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000003_s17_FLOWEDIT_N26",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000003_s0_RFEDIT_I08",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000100_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000100_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000132_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000132_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000021_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000021_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000058_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_000000000058_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_123000000001_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_123000000001_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_111000000009_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_111000000009_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_122000000002_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_122000000002_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_114000000002_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_114000000002_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_222000000006_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_222000000006_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_212000000007_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_212000000007_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_223000000009_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_223000000009_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_224000000007_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_224000000007_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000003_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000003_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000005_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_324000000005_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_312000000006_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_312000000006_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_313000000008_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_313000000008_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_423000000003_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_423000000003_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_412000000003_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_412000000003_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_411000000000_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_411000000000_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_422000000001_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_422000000001_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_522000000004_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_522000000004_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_524000000002_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_524000000002_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_511000000004_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_511000000004_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_512000000004_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_512000000004_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_614000000004_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_614000000004_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_622000000000_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_622000000000_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_613000000003_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_613000000003_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_611000000004_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_611000000004_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_711000000000_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_711000000000_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_724000000000_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_724000000000_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_713000000002_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_713000000002_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_723000000004_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_723000000004_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_824000000001_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_824000000001_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_813000000003_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_813000000003_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_812000000004_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_812000000004_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_821000000008_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_821000000008_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000005_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000005_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_921000000004_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_921000000004_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000004_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000004_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000003_s0_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R85_pie_913000000003_s17_ETA03",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    }
+  ],
+  "lpips_policy": "full LPIPS required; preserved LPIPS required except explicit empty region; spatial-map mask weighting allows receptive-field spill",
+  "clip_directional_policy": "finite score or explicitly reported zero_direction with empty score; other four required metrics must be finite",
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.4",
+    "numpy": "2.5.4",
+    "Pillow": "11.3.0",
+    "scikit-image": "0.26.0"
+  },
+  "paths": {
+    "CLIP_PATH": "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "DINO_PATH": "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415"
+  },
+  "readiness_scope": "installed metadata and local files; model load occurs in evaluator",
+  "command": [
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/.venv/bin/python",
+    "-u",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/R84_R85_FinalNight/R85_IndependentComparison/evaluate.py",
+    "--from-results",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/R84_R85_FinalNight/R85_IndependentComparison/results",
+    "--clip-path",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "--dino-path",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "--device",
+    "cpu",
+    "--data-dir",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/R84_R85_FinalNight/R85_IndependentComparison/data",
+    "--lpips-status",
+    "ready",
+    "--lpips-error",
+    "",
+    "--lpips-path",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/lpips/alex_v0.1.pth",
+    "--lpips-trunk-path",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/lpips/alexnet-owt-7be5be79.pth"
+  ],
+  "started": 1793587196.2900372,
+  "pid": 2135,
+  "evaluator_returncode": 0,
+  "error": null,
+  "planned": 520,
+  "incomplete_ids": [],
+  "lpips_status_counts": {
+    "ok": 520
+  },
+  "raw_audit": {
+    "eval_raw_exists": 520,
+    "eval_source_exists": 520,
+    "eval_record_exists": 520
+  },
+  "raw_audit_planned": 520,
+  "statistics_status": "completed",
+  "statistics_reference": "U25_KV",
+  "overnight_statistics_command": [
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/.venv/bin/python",
+    "-u",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/R84_R85_FinalNight/R85_IndependentComparison/overnight_stats.py",
+    "--results",
+    "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/R84_R85_FinalNight/R85_IndependentComparison/results"
+  ],
+  "overnight_statistics_returncode": 0,
+  "statistics_files": [
+    "statistics.json",
+    "category_summary.csv",
+    "evidence/overnight_source_values.csv",
+    "evidence/overnight_arm_summary.csv",
+    "evidence/overnight_comparisons.csv",
+    "evidence/overnight_evidence.json"
+  ]
+}

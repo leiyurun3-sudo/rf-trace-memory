@@ -1,0 +1,250 @@
+"""Analyze R80 metrics on CPU. Example:
+python analyze.py --metrics D:/results/metrics.csv --reference ONLINE25 --seed 42
+Writes JSON to stdout; redirect it to a file if desired. No model inference is run.
+"""
+import argparse
+import csv
+import itertools
+import json
+import math
+import sys
+from collections import defaultdict
+from pathlib import Path
+from evidence_stats import joint_value, merge_judgments
+
+import numpy as np
+
+METRICS = ('pattern_ncc_fixed', 'pattern_ncc_shift6', 'mae_vs_source',
+           'object_mae', 'bg_mae', 'clip_target_similarity',
+           'clip_directional_similarity', 'clip_image_similarity',
+           'dino_full_feature_similarity', 'dino_pattern_crop_feature_similarity',
+           'lpips_full', 'lpips_preserved', 'pixel_mse', 'pixel_psnr_db', 'pixel_ssim',
+           'correction_impulse', 'nfe_total', 'seconds')
+LABELS = ('edit_ok', 'subject_ok', 'pattern_ok', 'artifact')
+
+
+def num(value):
+    try:
+        x = float(value)
+        return x if math.isfinite(x) else None
+    except (TypeError, ValueError):
+        return None
+
+
+def joint(row):
+    return joint_value(row)
+
+
+def value(row, metric):
+    if metric == 'joint_success':
+        return joint(row)
+    if row['status'] != 'completed':
+        return None
+    # The evaluator may have partially populated values before an error.
+    if metric.startswith(('clip_', 'dino_', 'lpips_', 'pixel_')) and row.get('eval_status') not in ('', None, 'ok'):
+        return None
+    return num(row.get(metric))
+
+
+def category_summaries(rows):
+    """Official category labels; source-balanced means, explicit valid denominators."""
+    groups = defaultdict(list)
+    for row in rows:
+        key = (row.get('cohort', ''), row.get('target_category_id', ''),
+               row.get('target_category', ''), row.get('arm') or row.get('label', ''))
+        groups[key].append(row)
+    result = []
+    for (cohort, category_id, category, arm), rr in sorted(groups.items()):
+        completed = [r for r in rr if r['status'] == 'completed']
+        item = dict(cohort=cohort, target_category_id=category_id, target_category=category,
+                    arm=arm, planned=len(rr), sources=len({r['case'] for r in rr}),
+                    completed=len(completed), failed=sum(r['status'] in ('failed','error') for r in rr),
+                    pending=sum(r['status'] not in ('completed','failed','error') for r in rr),
+                    evaluation_ok=sum(r.get('eval_status') == 'ok' for r in rr),
+                    evaluation_other=sum(r.get('eval_status') != 'ok' for r in rr),
+                    human_joint_decided=sum(joint(r) is not None and r['status']=='completed' for r in rr),
+                    human_joint_successes=sum(joint(r)==1 for r in rr),
+                    preserved_region='complement of official PIE edit mask',
+                    preserved_mae_empty_mask_excluded=sum(r.get('bg_mae_status')=='empty_mask' for r in completed),
+                    preserved_mae_not_applicable=sum(r.get('eval_pixel_region')=='none' for r in completed))
+        for metric in ('preserved_region_mae', 'clip_target_similarity',
+                       'dino_full_feature_similarity', 'correction_impulse', 'nfe_total'):
+            by_source = defaultdict(list)
+            count = 0
+            for row in completed:
+                if metric == 'preserved_region_mae':
+                    if row.get('bg_mae_status') != 'ok' or row.get('eval_pixel_region') == 'none':
+                        continue
+                    v = num(row.get('preserved_region_mae'))
+                    if v is None:
+                        v = num(row.get('bg_mae'))
+                else:
+                    v = value(row, metric)
+                if v is not None:
+                    by_source[row['case']].append(v)
+                    count += 1
+            means = [sum(v)/len(v) for v in by_source.values()]
+            item[metric+'_mean'] = sum(means)/len(means) if means else None
+            item[metric+'_available'] = count
+            item[metric+'_missing_or_excluded'] = len(rr)-count
+            item[metric+'_sources'] = len(means)
+        result.append(item)
+    return result
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--metrics', type=Path, nargs='+', required=True, help='One or more compatible metrics.csv files, e.g. R80 and R81')
+    p.add_argument('--evaluation', type=Path, help='Optional evaluate.py evaluation.csv, joined by id')
+    p.add_argument('--judgments', type=Path, help='Optional task-specific judgment CSV; default beside metrics')
+    p.add_argument('--reference', required=True, help='Reference arm; also compares every other pair')
+    p.add_argument('--seed', type=int, default=42)
+    p.add_argument('--replicates', type=int, default=10000)
+    p.add_argument('--category-output', type=Path, help='Default: category_summary.csv beside first metrics file')
+    args = p.parse_args()
+    if args.replicates < 1:
+        p.error('--replicates must be positive')
+    try:
+        rows = []
+        for metrics_path in args.metrics:
+            with metrics_path.open(encoding='utf-8-sig', newline='') as f:
+                reader = csv.DictReader(f)
+                required = {'id', 'case', 'task', 'seed', 'status'}
+                if not required.issubset(reader.fieldnames or []):
+                    raise ValueError('Required metric columns missing: '+str(metrics_path))
+                rows.extend(reader)
+        if not rows:
+            raise ValueError('metrics.csv has no rows')
+        ids = [r['id'] for r in rows]
+        if any(not x for x in ids) or len(set(ids)) != len(ids):
+            raise ValueError('metrics.csv contains blank or duplicate ids')
+        if args.evaluation:
+            with args.evaluation.open(encoding='utf-8-sig', newline='') as f:
+                extra = list(csv.DictReader(f))
+            mapping = {}
+            for r in extra:
+                ident = r.get('id')
+                if not ident or ident in mapping:
+                    raise ValueError('evaluation.csv contains blank or duplicate ids')
+                if ident not in ids:
+                    raise ValueError('evaluation.csv id absent from metrics.csv: ' + ident)
+                mapping[ident] = r
+            for row in rows:
+                row.update({k: v for k, v in mapping.get(row['id'], {}).items()
+                            if k.startswith(('clip_', 'dino_', 'lpips_', 'pixel_', 'eval_'))})
+        if args.judgments and not args.judgments.is_file():
+            raise ValueError('Judgment CSV not found: '+str(args.judgments))
+        merge_judgments(rows, args.judgments or args.metrics[0].parent/'judgments.csv')
+        groups = defaultdict(dict)
+        for row in rows:
+            diagnostic = row.get('diagnostic_only', '').strip().lower()
+            if diagnostic in ('true', '1') or row.get('cohort') == 'reconstruction':
+                continue
+            arm = row.get('arm') or row.get('label')
+            if not arm or any(not row.get(k) for k in ('case', 'task', 'seed', 'status')):
+                raise ValueError('Missing arm, case, task, seed or status in row ' + row['id'])
+            cohort = row.get('cohort', '')
+            key = (row['case'], row['task'], row['seed'])
+            if key in groups[(cohort, arm)]:
+                raise ValueError('Duplicate cohort/arm/case/task/seed: ' + str((cohort, arm, key)))
+            groups[(cohort, arm)][key] = row
+        if not groups or not any(arm == args.reference for _, arm in groups):
+            raise ValueError('Reference arm absent from non-diagnostic rows: ' + args.reference)
+        categories = category_summaries([r for group in groups.values() for r in group.values()])
+        category_path = args.category_output or args.metrics[0].parent / 'category_summary.csv'
+        category_path.parent.mkdir(parents=True, exist_ok=True)
+        temp = category_path.with_suffix('.csv.tmp')
+        with temp.open('w', encoding='utf-8-sig', newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=list(categories[0]))
+            writer.writeheader()
+            writer.writerows(categories)
+        temp.replace(category_path)
+        rng = np.random.default_rng(args.seed)
+        metrics = list(METRICS) + ['joint_success']
+        summaries, comparisons = [], []
+        for (cohort, arm), keyed in sorted(groups.items()):
+            rr = list(keyed.values())
+            outcomes = [joint(r) for r in rr]
+            decided = sum(x is not None for x in outcomes)
+            successes = sum(x == 1 for x in outcomes)
+            summary = dict(cohort=cohort, arm=arm, planned=len(rr),
+                           completed=sum(r['status'] == 'completed' for r in rr),
+                           failed=sum(r['status'] in ('failed', 'error') for r in rr),
+                           joint_decided=decided, joint_successes=successes,
+                           joint_success_rate=successes / len(rr) if decided == len(rr) else None,
+                           joint_lower_bound=successes / len(rr),
+                           joint_upper_bound=(successes + len(rr) - decided) / len(rr), metrics={})
+            for metric in metrics:
+                vals = [v for r in rr if (v := value(r, metric)) is not None]
+                # A partial joint mean is not an aggregate success rate.
+                summary['metrics'][metric] = dict(available=len(vals), missing=len(rr)-len(vals),
+                    mean=(sum(vals)/len(vals) if vals and (metric != 'joint_success' or decided == len(rr)) else None))
+            summaries.append(summary)
+        cohorts = sorted({c for c, _ in groups})
+        for cohort in cohorts:
+            arms = sorted(a for c, a in groups if c == cohort)
+            arms.sort(key=lambda a: (a != args.reference, a))
+            for ref, arm in itertools.combinations(arms, 2):
+                left, right = groups[(cohort, ref)], groups[(cohort, arm)]
+                common = sorted(left.keys() & right.keys())
+                for metric in metrics:
+                    left_by_source, right_by_source = defaultdict(list), defaultdict(list)
+                    for key, row in left.items():
+                        left_by_source[key[0]].append(value(row, metric))
+                    for key, row in right.items():
+                        right_by_source[key[0]].append(value(row, metric))
+                    shared_sources = sorted(left_by_source.keys() & right_by_source.keys())
+                    by_source = {}
+                    for case in shared_sources:
+                        l, r = left_by_source[case], right_by_source[case]
+                        if all(v is not None for v in l+r):
+                            by_source[case] = [sum(r)/len(r)-sum(l)/len(l)]
+                    source_means = [v[0] for v in by_source.values()]
+                    n = len(source_means)
+                    mean = float(np.mean(source_means)) if n else None
+                    ci = [None, None]
+                    pvalue = None
+                    if n >= 2:
+                        samples = rng.integers(0, n, size=(args.replicates, n))
+                        ci = [float(x) for x in np.quantile(np.asarray(source_means)[samples].mean(axis=1), [.025, .975])]
+                    if n >= 2:
+                        data = np.asarray(source_means)
+                        if n <= 16:
+                            signs = np.asarray(list(itertools.product((-1,1), repeat=n)))
+                            pvalue = float(np.mean(np.abs((signs*data).mean(axis=1)) >= abs(mean)-1e-12))
+                        else:
+                            signs = rng.choice((-1,1), size=(args.replicates,n))
+                            pvalue = float((1+np.sum(np.abs((signs*data).mean(axis=1)) >= abs(mean)-1e-12))/(args.replicates+1))
+                    if metric == 'joint_success' and (len(by_source) != len(left_by_source) or len(by_source) != len(right_by_source)):
+                        mean, ci, pvalue = None, [None, None], None
+                    comparisons.append(dict(cohort=cohort, arm=arm, reference=ref, metric=metric,
+                        planned_reference=len(left), planned_arm=len(right), matched_planned=len(common),
+                        unmatched_reference=len(left.keys()-right.keys()), unmatched_arm=len(right.keys()-left.keys()),
+                        paired_available=sum(map(len, by_source.values())),
+                        matched_missing=len(shared_sources)-len(by_source), sources=n,
+                        pairing_scope='per-source per-arm mean of all planned seeds before difference',
+                        source_weighted_difference=mean, ci95_low=ci[0], ci95_high=ci[1], source_signflip_p=pvalue))
+        # Holm correction within each cohort and metric, over reported arm pairs.
+        families = defaultdict(list)
+        for row in comparisons:
+            if row['source_signflip_p'] is not None:
+                families[(row['cohort'],row['metric'])].append(row)
+        for family in families.values():
+            ordered = sorted(family,key=lambda r:r['source_signflip_p'])
+            previous = 0.
+            for i,row in enumerate(ordered):
+                previous = max(previous,min(1.,(len(ordered)-i)*row['source_signflip_p']))
+                row['holm_p'] = previous
+        print(json.dumps(dict(seed=args.seed, bootstrap_replicates=args.replicates,
+            estimator='mean of within-source paired differences, then equal-weight mean across sources',
+            confidence_interval='percentile source bootstrap; unavailable with fewer than two sources',
+            pairing='within cohort, case, task and seed; differences are arm minus reference',
+            missing='completed numeric values only; nonfinite values missing; failed joint outcomes are zero; pending or unlabeled outcomes unknown',
+            summaries=summaries, comparisons=comparisons), ensure_ascii=False, indent=2, allow_nan=False))
+    except (OSError, ValueError, csv.Error) as exc:
+        p.exit(2, 'error: ' + str(exc) + '\n')
+
+
+if __name__ == '__main__':
+    main()
+

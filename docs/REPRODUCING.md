@@ -1,5 +1,7 @@
 # Reproducing the experiments
 
+**Historical R71–R73 guide.** See [the final R84/R85 reproduction guide](REPRODUCING_FINAL.md) for the current package, evaluated results, and commands. The original overview is archived in [README_R71_R73.md](../README_R71_R73.md).
+
 This guide covers the published R71–R73 results, offline FLUX generation, and manual evaluation. The [research overview](../README.md) describes the method. Experiment code, plans, and inputs remain in `experiments/`; the published observations remain in `results/`. New runs write to separate directories.
 
 ```text

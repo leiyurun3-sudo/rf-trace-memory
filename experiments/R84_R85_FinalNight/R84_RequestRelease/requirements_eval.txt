@@ -1,0 +1,9 @@
+# Install separately in the existing FLUX environment; no model downloads at runtime.
+transformers==4.55.4
+torch
+numpy
+Pillow
+scikit-image
+
+# LPIPS: after verifying existing torch/torchvision, install separately only:
+# python -m pip install --no-deps lpips==0.1.4

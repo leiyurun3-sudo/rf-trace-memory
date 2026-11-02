@@ -1,0 +1,24 @@
+{
+  "status": "prepared",
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.4",
+    "numpy": "2.5.4",
+    "Pillow": "11.3.0",
+    "scikit-image": "0.26.0"
+  },
+  "paths": {
+    "CLIP_PATH": "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "DINO_PATH": "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415"
+  },
+  "readiness_scope": "installed metadata and local files; model load occurs in evaluator",
+  "actual_load_preflight": "CLIP processor/model, DINO processor/model and LPIPS weights loaded on CPU; no inference",
+  "lpips": {
+    "LPIPS_STATUS": "ready",
+    "LPIPS_ERROR": "",
+    "LPIPS_PATH": "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/lpips/alex_v0.1.pth",
+    "LPIPS_TRUNK_PATH": "/root/autodl-tmp/MINT_Flow_Jupyter_Ready/evaluation_models/lpips/alexnet-owt-7be5be79.pth"
+  },
+  "pid": 1475,
+  "updated": 1793586002.2674475
+}

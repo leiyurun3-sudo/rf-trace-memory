@@ -1,0 +1,292 @@
+{
+  "runtime_source": "D:\\科研论文资料\\实验交付\\R84_R85_FinalNight",
+  "final_results_sources": {
+    "R84": "D:\\科研论文资料\\实验交付\\FinalNight_Evaluated_Review\\R84_FinalNight",
+    "R85": "D:\\科研论文资料\\实验交付\\FinalNight_Evaluated_Review\\R85_FinalNight"
+  },
+  "ready_zip": {
+    "local_source": "D:\\科研论文资料\\实验交付\\R84_R85_FinalNight_Ready.zip",
+    "bytes": 89779919,
+    "distribution": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/evaluated-r84-r85-20261102/R84_R85_FinalNight_Ready.zip"
+  },
+  "path_semantics": "Absolute /root/... paths retained in original plans, evaluation configs and numeric evidence are historical server paths, not local image locations. Relative data/... paths require the intact Ready ZIP.",
+  "primary_method": "RELEASE_CORR25",
+  "primary_configuration": {
+    "correction_budget_mode": "local_coefficient",
+    "corr_lambda": 0.25,
+    "match_residual_rms": false,
+    "route_mask": "prompt_response_reference",
+    "memory_window": [
+      0,
+      7
+    ]
+  },
+  "omissions": [
+    "source images and raw dataset archive",
+    "frozen reference assets",
+    "runtime results, logs and caches",
+    "per-job images and step traces",
+    "HTML galleries"
+  ],
+  "data_bytes_inspected": {
+    "R84_RequestRelease": 3719229,
+    "R85_IndependentComparison": 88493507
+  },
+  "snapshot_files": [
+    {
+      "path": "RUN.txt",
+      "bytes": 1324
+    },
+    {
+      "path": "run_final_night.sh",
+      "bytes": 3887
+    },
+    {
+      "path": "start_final_night.sh",
+      "bytes": 3144
+    },
+    {
+      "path": "R84_RequestRelease/analyze.py",
+      "bytes": 14376
+    },
+    {
+      "path": "R84_RequestRelease/attention.py",
+      "bytes": 23083
+    },
+    {
+      "path": "R84_RequestRelease/BASELINE.md",
+      "bytes": 20969
+    },
+    {
+      "path": "R84_RequestRelease/controls.py",
+      "bytes": 6536
+    },
+    {
+      "path": "R84_RequestRelease/engine.py",
+      "bytes": 29524
+    },
+    {
+      "path": "R84_RequestRelease/evaluate.py",
+      "bytes": 19355
+    },
+    {
+      "path": "R84_RequestRelease/evaluate_all.sh",
+      "bytes": 2378
+    },
+    {
+      "path": "R84_RequestRelease/eval_pipeline.py",
+      "bytes": 17188
+    },
+    {
+      "path": "R84_RequestRelease/evidence_stats.py",
+      "bytes": 9078
+    },
+    {
+      "path": "R84_RequestRelease/external.py",
+      "bytes": 2959
+    },
+    {
+      "path": "R84_RequestRelease/external_rfedit.py",
+      "bytes": 13132
+    },
+    {
+      "path": "R84_RequestRelease/external_sources.md",
+      "bytes": 9805
+    },
+    {
+      "path": "R84_RequestRelease/mint_backend.py",
+      "bytes": 3893
+    },
+    {
+      "path": "R84_RequestRelease/model_loader.py",
+      "bytes": 5512
+    },
+    {
+      "path": "R84_RequestRelease/overnight_stats.py",
+      "bytes": 11410
+    },
+    {
+      "path": "R84_RequestRelease/plan.json",
+      "bytes": 543849
+    },
+    {
+      "path": "R84_RequestRelease/prepare_benchmark.py",
+      "bytes": 10242
+    },
+    {
+      "path": "R84_RequestRelease/prepare_eval_models.py",
+      "bytes": 7304
+    },
+    {
+      "path": "R84_RequestRelease/prepare_pie.py",
+      "bytes": 13798
+    },
+    {
+      "path": "R84_RequestRelease/reporting.py",
+      "bytes": 42315
+    },
+    {
+      "path": "R84_RequestRelease/requirements.txt",
+      "bytes": 390
+    },
+    {
+      "path": "R84_RequestRelease/requirements_eval.txt",
+      "bytes": 274
+    },
+    {
+      "path": "R84_RequestRelease/review.py",
+      "bytes": 3805
+    },
+    {
+      "path": "R84_RequestRelease/rf_kv.py",
+      "bytes": 1282
+    },
+    {
+      "path": "R84_RequestRelease/runner.py",
+      "bytes": 24863
+    },
+    {
+      "path": "R84_RequestRelease/run_all.sh",
+      "bytes": 3076
+    },
+    {
+      "path": "R84_RequestRelease/start.sh",
+      "bytes": 752
+    },
+    {
+      "path": "R84_RequestRelease/value.py",
+      "bytes": 1929
+    },
+    {
+      "path": "R85_IndependentComparison/analyze.py",
+      "bytes": 14376
+    },
+    {
+      "path": "R85_IndependentComparison/attention.py",
+      "bytes": 23083
+    },
+    {
+      "path": "R85_IndependentComparison/BASELINE.md",
+      "bytes": 20969
+    },
+    {
+      "path": "R85_IndependentComparison/controls.py",
+      "bytes": 6536
+    },
+    {
+      "path": "R85_IndependentComparison/engine.py",
+      "bytes": 29524
+    },
+    {
+      "path": "R85_IndependentComparison/evaluate.py",
+      "bytes": 19355
+    },
+    {
+      "path": "R85_IndependentComparison/evaluate_all.sh",
+      "bytes": 2378
+    },
+    {
+      "path": "R85_IndependentComparison/eval_pipeline.py",
+      "bytes": 17188
+    },
+    {
+      "path": "R85_IndependentComparison/evidence_stats.py",
+      "bytes": 9078
+    },
+    {
+      "path": "R85_IndependentComparison/external.py",
+      "bytes": 2959
+    },
+    {
+      "path": "R85_IndependentComparison/external_rfedit.py",
+      "bytes": 13132
+    },
+    {
+      "path": "R85_IndependentComparison/external_sources.md",
+      "bytes": 9805
+    },
+    {
+      "path": "R85_IndependentComparison/mint_backend.py",
+      "bytes": 3893
+    },
+    {
+      "path": "R85_IndependentComparison/model_loader.py",
+      "bytes": 5512
+    },
+    {
+      "path": "R85_IndependentComparison/overnight_stats.py",
+      "bytes": 11410
+    },
+    {
+      "path": "R85_IndependentComparison/plan.json",
+      "bytes": 2145854
+    },
+    {
+      "path": "R85_IndependentComparison/prepare_benchmark.py",
+      "bytes": 10242
+    },
+    {
+      "path": "R85_IndependentComparison/prepare_eval_models.py",
+      "bytes": 7304
+    },
+    {
+      "path": "R85_IndependentComparison/prepare_pie.py",
+      "bytes": 13798
+    },
+    {
+      "path": "R85_IndependentComparison/reporting.py",
+      "bytes": 42350
+    },
+    {
+      "path": "R85_IndependentComparison/requirements.txt",
+      "bytes": 390
+    },
+    {
+      "path": "R85_IndependentComparison/requirements_eval.txt",
+      "bytes": 274
+    },
+    {
+      "path": "R85_IndependentComparison/review.py",
+      "bytes": 3805
+    },
+    {
+      "path": "R85_IndependentComparison/rf_kv.py",
+      "bytes": 1282
+    },
+    {
+      "path": "R85_IndependentComparison/runner.py",
+      "bytes": 24863
+    },
+    {
+      "path": "R85_IndependentComparison/run_all.sh",
+      "bytes": 3083
+    },
+    {
+      "path": "R85_IndependentComparison/selected_tasks.json",
+      "bytes": 28729
+    },
+    {
+      "path": "R85_IndependentComparison/split_manifest.json",
+      "bytes": 993892
+    },
+    {
+      "path": "R85_IndependentComparison/start.sh",
+      "bytes": 759
+    },
+    {
+      "path": "R85_IndependentComparison/value.py",
+      "bytes": 1929
+    },
+    {
+      "path": "R85_IndependentComparison/data/_raw/PIE_Bench_dataset_license.txt",
+      "bytes": 1564
+    },
+    {
+      "path": "R85_IndependentComparison/data/_raw/R81_DATA_provenance_and_license.md",
+      "bytes": 8548
+    }
+  ],
+  "repository_adjustments": [
+    "Independent analysis script accepts --results and --out paths; frozen generation implementations and plans are unchanged."
+  ]
+}
