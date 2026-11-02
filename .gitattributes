@@ -5,3 +5,9 @@
 *.csv text eol=lf
 *.tex text eol=lf
 *.cls text eol=lf
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.zip binary
+*.svg text eol=lf
