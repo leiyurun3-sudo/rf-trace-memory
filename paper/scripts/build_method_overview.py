@@ -60,12 +60,12 @@ def build_method_overview():
         text(30, 415, 'Request response: 3 fixed nodes, 6 native calls')
         text(30, 398, r'$\sigma$ targets: $\{0.25,0.50,0.75\}$')
         # The probe uses native f_theta with guidance 3.5, not controlled u.
-        # k indexes fixed reference nodes; j is spatial and c is channel.
-        text(30, 381, r'$\Delta_{k,j,c}=[f_\theta(r_k,\sigma_k,q_t,3.5)$')
-        text(30, 364, r'$\qquad-f_\theta(r_k,\sigma_k,q_s,3.5)]_{j,c}$')
+        # k indexes fixed reference nodes; j is spatial and ell is channel.
+        text(30, 381, r'$\Delta_{k,j,\ell}=[f_\theta(r_k,\sigma_k,q_t,3.5)$')
+        text(30, 364, r'$\qquad-f_\theta(r_k,\sigma_k,q_s,3.5)]_{j,\ell}$')
         text(30, 347, r'Channel RMS → q10/q90 clip → mean over $k$')
         text(30, 330, r'$P=1-0.75E\quad\in[0.25,1]$')
-        text(30, 313, r'Spatial index $j$; probe node $k$; channel $c$', size=8.6)
+        text(30, 313, r'Spatial index $j$; probe node $k$; channel $\ell$', size=8.6)
 
         card(362, 306, 320, 168, '(b) Source residual at current state', BLUE)
         text(374, 432, r'Current edited state $z_i$; source prompt $q_s$')

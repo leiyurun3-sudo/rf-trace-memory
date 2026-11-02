@@ -4,7 +4,7 @@
 
 Updated **2 November 2026** with completed R84/R85 generation, automatic evaluation, and source-paired analysis.
 
-[Manuscript PDF](paper/main.pdf) · [LaTeX source](paper/main.tex) · [Final evaluation](paper/final_evaluation.tex) · [Run instructions](docs/REPRODUCING_FINAL.md) · [Download packages](https://github.com/leiyurun3-sudo/rf-trace-memory/releases/tag/evaluated-r84-r85-20261102)
+[Manuscript PDF](paper/main.pdf) · [LaTeX source](paper/main.tex) · [Development controls](paper/development_dose.tex) · [Final evaluation](paper/final_evaluation.tex) · [Run instructions](docs/REPRODUCING_FINAL.md) · [Download packages](https://github.com/leiyurun3-sudo/rf-trace-memory/releases/tag/evaluated-r84-r85-20261102)
 
 ## Research question and current method
 
@@ -40,15 +40,15 @@ This matches the local rule's correction RMS at a common state while keeping its
 
 The table reports equal-source means. Preservation LPIPS uses the 33 sources with nonempty preservation masks; other metrics use all 40 sources. CLIP and DINO are cosine-based automatic scores. NFE counts standalone transformer calls, including inversion, memory capture, and response probes.
 
-| Method | CLIP target ↑ | Directional CLIP ↑ | DINO ↑ | LPIPS full ↓ | LPIPS preserved ↓ | NFE |
-|---|---:|---:|---:|---:|---:|---:|
-| **TraceMemory (CORR25)** | 0.2629 | 0.0863 | 0.5904 | 0.5419 | 0.5142 | 97 |
-| BOTH25, secondary | 0.2733 | 0.1069 | 0.5579 | 0.5620 | 0.5269 | 97 |
-| Same-state energy control | 0.2622 | 0.0881 | 0.5856 | 0.5483 | 0.5226 | 97 |
-| Uniform correction, U25 | 0.2632 | 0.0908 | 0.6111 | 0.4971 | 0.4743 | 91 |
-| FlowEdit N26 | 0.2712 | 0.1177 | 0.5737 | 0.4437 | 0.4281 | 52 |
-| RF-Inversion ETA03 | 0.2694 | 0.1065 | 0.4670 | 0.5431 | 0.5322 | 56 |
-| RF-Edit I08 adapter | 0.2453 | 0.0383 | 0.7875 | 0.2778 | 0.2688 | 100 |
+| Method | CLIP target ↑ | Directional CLIP ↑ | DINO ↑ | LPIPS full ↓ | LPIPS preserved ↓ | Preserved MAE ↓ | NFE |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **TraceMemory (CORR25)** | 0.2629 | 0.0863 | 0.5904 | 0.5419 | 0.5142 | 0.1169 | 97 |
+| BOTH25, secondary | 0.2733 | 0.1069 | 0.5579 | 0.5620 | 0.5269 | 0.1221 | 97 |
+| Same-state energy control | 0.2622 | 0.0881 | 0.5856 | 0.5483 | 0.5226 | 0.1202 | 97 |
+| Uniform correction, U25 | 0.2632 | 0.0908 | 0.6111 | 0.4971 | 0.4743 | 0.0972 | 91 |
+| FlowEdit N26 | 0.2712 | 0.1177 | 0.5737 | 0.4437 | 0.4281 | 0.1207 | 52 |
+| RF-Inversion ETA03 | 0.2694 | 0.1065 | 0.4670 | 0.5431 | 0.5322 | 0.1062 | 56 |
+| RF-Edit I08 adapter | 0.2453 | 0.0383 | 0.7875 | 0.2778 | 0.2688 | 0.0455 | 100 |
 
 ![Final metrics and source-bootstrap intervals](paper/figures/final_metrics.png)
 
@@ -63,7 +63,7 @@ These results establish a modest controlled localization benefit and quantify th
 
 ### Statistical and evaluation protocol
 
-Seeds are averaged within each source before inference. Reported paired intervals use source-bootstrap resampling; tests use source sign flips and Holm correction across six planned comparisons within each metric. The full numeric records retain the comparison family, sample counts, and unrounded estimates. The manuscript appendix includes broader-family sensitivity analysis.
+Seeds are averaged within each source before inference. Reported paired intervals use source-bootstrap resampling; tests use source sign flips and Holm correction across the final six-comparison analysis family within each metric. The frozen plan specifies CORR25 versus FlowEdit as the primary comparison and assigns the added ETA03 comparison to a separate secondary family; the final exporter groups all six CORR25 comparisons within each metric. The manuscript appendix documents this grouping difference and broader-family sensitivity. Full numeric records retain the comparison family, sample counts, and unrounded estimates.
 
 LPIPS preservation is a spatial-feature-map average weighted by the official edit-mask complement, with receptive-field spill across its boundary. Empty complements are excluded from that metric and counted explicitly. CLIP-T, directional CLIP, CLIP-I, DINOv2, LPIPS, PSNR, and SSIM exports are included. **Human edit/subject/pattern/artifact judgments remain unfilled, so human edit and joint-success rates are unreported.**
 
@@ -71,7 +71,7 @@ LPIPS preservation is a spatial-feature-map average weighted by the official edi
 
 ![Source, TraceMemory, energy control, and FlowEdit on four seed-0 examples](paper/figures/final_qualitative.jpg)
 
-Columns: source, CORR25, energy control, FlowEdit N26. Rows: grass-to-water, wall-to-red, parrots-kissing, and camera-to-phone. These examples show attribute changes alongside relational failures and identity changes. Population-level comparisons use the complete declared source set.
+Columns: source, CORR25, energy control, FlowEdit N26. Rows: grass-to-water, wall-to-red, parrots-kissing, and camera-to-phone. The wall example illustrates localized attribute editing; FlowEdit more clearly achieves the requested parrot interaction. Dog and person outputs show identity or appearance changes. Population-level comparisons use the complete declared source set.
 
 ## Files and reproduction
 

@@ -25,12 +25,12 @@ FlowEdit N26 & 0.1271 & 0.7163 & 0.1032 & 0.1645 & 52 & 30.78\\
 \end{table*}
 
 \subsubsection{Graded coverage restores global protection}
-Increasing the support floor from 0.25 to 0.75 reduces preservation MAE from 0.139 to 0.115 and raises whole-image NCC from 0.727 to 0.767. SOFT75 approaches U25's preservation error of 0.111. The paired preservation-error difference SOFT75 minus U25 is $+0.00329$, with a source-bootstrap 95\% interval $[0.00211,0.00483]$. Its NCC difference is $+0.00324$ with interval $[-0.00031,0.00687]$. These results explain the recovery through broader correction coverage: the high-floor configuration behaves close to the global endpoint.
+Increasing the support floor from 0.25 to 0.75 reduces preservation MAE from 0.139 to 0.115 and raises whole-image NCC from 0.727 to 0.767. SOFT75 approaches U25's preservation error of 0.111. The paired preservation-error difference SOFT75 minus U25 is $0.0033$, with a source-bootstrap 95\% interval $[0.0021,0.0048]$. Its NCC difference is $0.0032$ with interval $[-0.0003,0.0069]$. These results explain the recovery through broader correction coverage: the high-floor configuration behaves close to the global endpoint.
 
 \subsubsection{Request-conditioned support and matched references}
 REQUEST\_SOFT25 uses Eq.~\eqref{eq:request-support}, with native source and target evaluations at three common reference states. The response map is fixed before generation and uses no official evaluation region. Memory still acts on all image queries in the first seven steps.
 
-REQUEST\_SOFT25 has preservation MAE 0.10601, with a paired difference from U25 of $-0.00543$ and interval $[-0.01180,0.00072]$. Against quarter-floor contrast support SOFT25, preservation MAE decreases from 0.13863 by 23.5\%; all eight eligible sources improve after seed averaging. That paired difference is $-0.03262$, with exploratory 95\% interval $[-0.04727,-0.02020]$. The global reference and contrast control distinguish the candidate's measured retention from the particular support it replaces.
+REQUEST\_SOFT25 has preservation MAE 0.1060, with a paired difference from U25 of $-0.0054$ and interval $[-0.0118,0.0007]$. Against quarter-floor contrast support SOFT25, preservation MAE decreases from 0.1386 by 23.5\%; all eight eligible sources improve after seed averaging. That paired difference is $-0.0326$, with exploratory 95\% interval $[-0.0473,-0.0202]$. The global reference and contrast control distinguish the candidate's measured retention from the particular support it replaces.
 
 \begin{table}[t]
 \centering\footnotesize
@@ -40,23 +40,23 @@ REQUEST\_SOFT25 has preservation MAE 0.10601, with a paired difference from U25 
 \toprule
 Comparison & Difference & 95\% interval\\
 \midrule
-REQUEST $-$ SOFT25 & $-0.03262$ & $[-0.04727,-0.02020]$\\
-REQUEST $-$ U25 & $-0.00543$ & $[-0.01180,0.00072]$\\
-SOFT50 $-$ U25 & $0.01026$ & $[0.00734,0.01415]$\\
-SOFT75 $-$ U25 & $0.00329$ & $[0.00211,0.00483]$\\
+REQUEST $-$ SOFT25 & $-0.0326$ & $[-0.0473,-0.0202]$\\
+REQUEST $-$ U25 & $-0.0054$ & $[-0.0118,0.0007]$\\
+SOFT50 $-$ U25 & $0.0103$ & $[0.0073,0.0141]$\\
+SOFT75 $-$ U25 & $0.0033$ & $[0.0021,0.0048]$\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsubsection{Magnitude and computation}
-All four new arms use the same ONLINE coefficient $a=0.25$, evaluated on each arm's own evolving state. Their mean cumulative correction impulses are 0.24172 (SOFT25), 0.23501 (SOFT50), 0.23296 (SOFT75), and 0.23063 for REQUEST\_SOFT25 (memory-fixed), compared with 0.23191 for U25. Thus this experiment compares a shared normalization rule; trajectories determine the realized cross-arm doses. The request estimator adds six transformer calls, giving 97 standalone NFE versus 91 for graded support, an increase of 6.6\%. Its recorded runtime is 45.42 seconds. Run-level timing variability is documented in the provenance appendix.
+All four new arms use the same ONLINE coefficient $\lambda=0.25$, evaluated on each arm's own evolving state. Their mean cumulative correction impulses are 0.2417 (SOFT25), 0.2350 (SOFT50), 0.2330 (SOFT75), and 0.2306 for REQUEST\_SOFT25 (memory-fixed), compared with 0.2319 for U25. Thus this experiment compares a shared normalization rule; trajectories determine the realized cross-arm doses. The request estimator adds six transformer calls, giving 97 standalone NFE versus 91 for graded support, an increase of 6.6\%. Its recorded runtime is 45.42 seconds. Run-level timing variability is documented in the provenance appendix.
 
 \subsubsection{Requested edits and visible failure categories}
 All twenty comparison sheets were inspected against the source and target prompts. Figure~\ref{fig:r82-qualitative} shows a relational failure, a seed-specific successful addition, and a style/geometry case. The examples distinguish object presence, requested relations, and rendering artifacts.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.98\textwidth]{figures/r82_request_examples.pdf}
+\includegraphics[width=.98\textwidth,height=.72\textheight,keepaspectratio]{figures/r82_request_examples.pdf}
 \caption{Selected completed support-study outputs. Rows show: adding a lemon inside the berry bowl (seed 0), adding monsters and dragons above mountains (seed 0), and converting a portrait to a child's crayon drawing (seed 17). REQUEST\_SOFT25 (memory-fixed) places the lemon beside the bowl; FlowEdit places it inside in this seed. The request/soft variants generate a visible dragon in the second row. In the third row REQUEST\_SOFT25 (memory-fixed) reduces the prominent duplicate-face structure visible in SOFT25, while the requested crayon appearance remains weak. Examples illustrate distinct outcomes, not aggregate success rates.}
 \label{fig:r82-qualitative}
 \end{figure*}

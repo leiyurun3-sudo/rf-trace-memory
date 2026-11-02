@@ -1,5 +1,6 @@
 \documentclass[conference]{IEEEtran}
 \usepackage[T1]{fontenc}
+\usepackage[section]{placeins}
 \usepackage{amsmath,amssymb,graphicx,booktabs,array,longtable,url,hyperref}
 \hypersetup{hidelinks,pdftitle={TraceMemory: Spatial Source Correction and Memory for Rectified-Flow Image Editing}}
 \newcommand{\RMS}{\operatorname{RMS}}
@@ -15,20 +16,20 @@
 \raggedbottom
 \maketitle
 \begin{abstract}
-Text-guided image editing requires requested changes and preservation of unaffected content. TraceMemory separates current-state source correction, its spatial allocation, and paired source attention. Three native prompt-response probes define a request-conditioned protection weight, and the primary method applies a direct local correction with coefficient 0.25 without global RMS restoration. An energy analysis explains the amplification induced by historical normalized regional updates. The final independent evaluation completes 520 outputs from seven methods on 40 sources. Relative to a global correction matched to the local rule's RMS at the same state, spatial routing reduces preservation-region LPIPS by 0.0084 (95\% source-bootstrap interval $[-0.0143,-0.0022]$; Holm-adjusted $p=0.024$ across six comparisons within the metric). Semantic differences in this controlled comparison remain uncertain. Spatial memory gating increases target and directional CLIP while reducing preservation. FlowEdit N26 provides stronger directional editing and lower preservation LPIPS at 52 evaluations versus our 97. The results establish a modest controlled localization benefit and identify correction strength and memory coverage as distinct editing--preservation trade-offs.
+Text-guided image editing couples requested changes with preservation of unaffected content. TraceMemory separates three interventions in a frozen rectified-flow editor: correction magnitude, request-conditioned spatial allocation, and source-attention coverage. Native prompt-response probes estimate protection support, and a direct local update applies the residual without global RMS restoration. We derive the support-energy relation and construct a global control with equal correction RMS at any common state. On 40 independent PIE-Bench sources with 520 outputs, local routing reduces preservation-region LPIPS by 0.0084 (95\% source-bootstrap interval $[-0.0143,-0.0022]$) and full-image LPIPS by 0.0064 relative to this control. A ten-source dose study shows monotonically improved preservation across coefficients 0.15, 0.25, and 0.35. Gating source memory by request support increases directional CLIP by 0.0207 while increasing preservation LPIPS by 0.0127. These controlled results distinguish a localization benefit from dose-dependent retention and the semantic--preservation trade-off introduced by memory release. The primary configuration uses 97 transformer evaluations, with component and external comparisons reported under source-level statistical analysis.
 \end{abstract}
 \begin{IEEEkeywords}
 image editing, rectified flow, source memory, spatial correction, residual normalization
 \end{IEEEkeywords}
 
 \section{Introduction}
-Text-guided editing should realize a requested change while retaining the source attributes that the request leaves intact. A musical-note mug should remain recognizable in a moonlit scene, and a studio portrait should retain the person's identity and shirt graphics. Other requests deliberately change material, pose, or category. The intended edit therefore determines which source properties deserve protection.
+Text-guided editing should realize a requested change while retaining the source attributes that the request leaves intact. A musical-note mug should remain recognizable in a moonlit scene, and a studio portrait should retain the person's identity and shirt graphics. Other requests deliberately change material, pose, or category. The intended edit therefore determines which source properties deserve protection. Figure~\ref{fig:motivation} illustrates the scene-change and detail-retention objectives.
 
 Inversion and source-feature reuse provide useful reference information. Their combination introduces a less visible design choice: a spatial mask selects the support of a correction, while a normalization rule sets the magnitude delivered through that support. Matching a numerical coefficient does not match the applied magnitude. Matching a global RMS can instead concentrate the same magnitude into fewer locations. Source memory further changes the edited trajectory on which subsequent residuals are evaluated. A controlled comparison must distinguish these effects before attributing an outcome to localization.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.98\textwidth]{figures/motivation.pdf}
+\includegraphics[width=.98\textwidth,height=.72\textheight,keepaspectratio]{figures/motivation.pdf}
 \caption{Motivating examples from the spatial-allocation study. Regional correction is the unfiltered ROI\_UNIFORM25 control; global correction is U25\_KV. The mug uses seed 10 and the printed shirt seed 17. Each comparison uses the same source and target prompt. Regional allocation retains more source-like details in these examples. FlowEdit N24 illustrates a source-preserving operating point with weaker visible scene change. Exact geometry and scene attributes are examined separately in the failure analysis.}
 \label{fig:motivation}
 \end{figure*}
@@ -37,22 +38,22 @@ TraceMemory evaluates this interaction in a frozen rectified-flow model. A fixed
 
 The contributions are:
 \begin{enumerate}
-\item An exact support-energy analysis explaining regional amplification under global RMS restoration, together with historical supplied-region experiments separating placement from correction strength.
-\item A direct request-conditioned local correction and a global same-state energy control. On 40 independent sources, routing improves preservation LPIPS by 0.0084 relative to this control, with uncertain semantic differences.
-\item A completed seven-method evaluation with source-level uncertainty and explicit computation. Spatial memory gating produces semantic gains at a preservation cost, while FlowEdit N26 achieves stronger directional editing and lower preservation LPIPS at fewer evaluations. Request-conditioned routing improves preservation relative to the same-state energy control.
+\item An exact support-energy relation for regional RMS normalization, together with controlled supplied-region studies of spatial placement and local amplification. These studies connect the applied correction to both mask support and residual energy.
+\item Request-conditioned direct residual routing with a same-state energy control. On 40 independent sources, routing reduces preservation-region and full-image LPIPS by 0.0084 and 0.0064 relative to global energy scaling; the ten-source dose study separately characterizes correction strength.
+\item A controlled evaluation of residual routing and attention-memory release. Request-conditioned query gating increases directional CLIP by 0.0207 at a preservation-LPIPS cost of 0.0127, separating the semantic response to memory release from the retention effect of residual magnitude.
 \end{enumerate}
 
-Section~\ref{sec:method} specifies the primary method and controls. Section~\ref{sec:final-evaluation} presents the final R84/R85 evaluation before the historical spatial studies in Section~\ref{sec:results} and public-source component studies in Section~\ref{sec:public-evaluation}. The appendices retain the complete historical record, completed frozen protocol, and separate mechanism hypotheses.
+Section~\ref{sec:method} specifies the primary method and controls. Section~\ref{sec:results} establishes the spatial-allocation and magnitude mechanisms. Section~\ref{sec:public-evaluation} evaluates support estimation, memory coverage, and correction dose on development sources. Section~\ref{sec:final-evaluation} then tests the frozen configurations on independent sources. The appendices provide full numeric records, reproduction details, and separately identified mechanism hypotheses.
 
 \input{related_work_extended}
 
 \section{Request-Conditioned Source Correction and Memory}
 \label{sec:method}
-The design separates \emph{where source correction acts} from \emph{where target generation proceeds}. A protection mask routes an added residual; every spatial location still receives the target-conditioned velocity. Source memory is a second intervention inside attention. Its query coverage can be varied without changing the residual mask or its source-key pool.
+The design separates \emph{where source correction acts} from \emph{where target generation proceeds}. A protection mask routes an added residual; every spatial location still receives the target-conditioned velocity. Source memory is a second intervention inside attention. Its query coverage can be varied without changing the residual mask or its source-key pool. Figure~\ref{fig:method} shows the reference, response estimator, correction rule, and attention path.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.98\textwidth]{figures/method_overview.pdf}
+\includegraphics[width=.98\textwidth,height=.72\textheight,keepaspectratio]{figures/method_overview.pdf}
 \caption{TraceMemory (CORR25) and its same-state energy control. The fixed reference supplies reference motion, native prompt-response probes, and K/V capture states. The source residual is evaluated at the current edited state. CORR25 applies direct local correction and full-source memory during the first seven steps. The control retains the global residual direction at matched instantaneous RMS. Both receive a global target-conditioned update.}
 \label{fig:method}
 \end{figure*}
@@ -99,11 +100,11 @@ Both evaluations use the same latent, time, guidance embedding, and native netwo
 \begin{aligned}
 e_k&=\clip\!\left(\frac{d_k-l_k}{v_k-l_k},0,1\right),\\
 E&=\frac{1}{3}\sum_{k\in\mathcal K}e_k,\qquad
-P=1-0.75E.
+P=0.25+0.75(1-E)=1-0.75E.
 \end{aligned}
 \label{eq:request-support}
 \end{equation}
-A degenerate percentile range contributes a zero response map and is recorded. $E$ is a relative model-response score. The support $P$ assigns a baseline correction everywhere and stronger correction to locations with lower prompt response. The primary TraceMemory (CORR25) configuration uses $P$ in Eq.~\eqref{eq:soft-support} with direct local scaling $a=\lambda=0.25$ and a full-image target update. It applies no global RMS restoration; ONLINE identifies the historical normalized control. No benchmark region enters the estimator. Source K/V retrieval, target-query coverage, gate, and memory window remain unchanged.
+A degenerate percentile range contributes a zero response map and is recorded. $E$ is a relative model-response score. The support $P$ assigns a baseline correction everywhere and stronger correction to locations with lower prompt response. The primary TraceMemory (CORR25) configuration uses $P$ in Eq.~\eqref{eq:soft-support} with direct local scaling $\lambda=0.25$ and a full-image target update. The direct rule isolates local attenuation: reducing protection reduces the added correction at that location. ONLINE, used in the earlier mechanism studies, restores the global RMS after masking and therefore changes the local multiplier. Comparing the two rules motivates the final direct-local and global-energy controls. No benchmark region enters the estimator. Source K/V retrieval, target-query coverage, gate, and memory window remain unchanged.
 
 The three source and three target probes add six transformer calls. With 28 inversion calls, 28 current-source calls, 28 target calls and seven reference-memory captures, the request-conditioned configuration costs 97 standalone NFE. The support is fixed before target generation. The probe nodes and percentile transform specify the estimator and are held fixed across its comparisons.
 
@@ -112,8 +113,8 @@ The exact spatial mean is $\overline{P}=1-0.75\overline{E}$, and $P_j\in[0.25,1]
 \begin{aligned}
 \widehat c_i&=k_i(P\odot c_i),\\
 k_i&=\begin{cases}
-a\RMS(c_i)/\RMS(P\odot c_i),&\text{ONLINE},\\
-a,&\text{LOCAL}.
+\lambda\RMS(c_i)/\RMS(P\odot c_i),&\text{ONLINE},\\
+\lambda,&\text{LOCAL}.
 \end{cases}
 \end{aligned}
 \label{eq:soft-support}
@@ -172,7 +173,7 @@ Thus ROI\_UNIFORM25 matches the global U25 per-step RMS, rather than applying th
 
 Masks use supplied fixed pattern-region annotations, feathered inward over 16 pixels at the 512-pixel image scale, area-downsampled to the latent grid, replicated across channels, and packed for FLUX. All magnitude/coverage-study configurations use the manual \texttt{fixed\_pattern\_roi} annotation. The same annotated region defines the local pattern metric, so the comparison directly tests annotation-assisted allocation. CENTER uses one fixed center box; SHIFT moves the source ROI to the farthest available border without wrapping.
 
-The spectral ROUTE\_ONLINE25 control uses a same-state budget $0.25\RMS(c_i)$ for its filtered candidate. The unfiltered magnitude/coverage comparison sets $P=M$ and $a=0.25$ in Eq.~\eqref{eq:soft-support}. ONLINE rescales the supported residual to the current global quarter-strength RMS, while LOCAL directly applies $0.25M\odot c_i$. Both operate without a separate reference run. We record the integrated injected magnitude $I=\sum_i h_i\RMS(\widehat c_i)$.
+The spectral ROUTE\_ONLINE25 control uses a same-state budget $0.25\RMS(c_i)$ for its filtered candidate. The unfiltered magnitude/coverage comparison sets $P=M$ and $\lambda=0.25$ in Eq.~\eqref{eq:soft-support}. ONLINE rescales the supported residual to the current global quarter-strength RMS, while LOCAL directly applies $0.25M\odot c_i$. Both operate without a separate reference run. We record the integrated injected magnitude $I=\sum_i h_i\RMS(\widehat c_i)$.
 
 \subsection{Exact support-energy coupling and the area approximation}
 For $N_{\rm lat}$ scalar latent entries, define the retained energy fraction and squared support mass as
@@ -183,11 +184,11 @@ For $N_{\rm lat}$ scalar latent entries, define the retained energy fraction and
 \end{equation}
 For a nonzero global and supported residual, ONLINE applies the exact scalar multiplier
 \begin{equation}
- k_i^{\rm ONLINE}=\frac{a\RMS(c_i)}{\RMS(P\odot c_i)}=\frac{a}{\sqrt{e_i(P)}},
- \qquad k_i^{\rm LOCAL}=a.
+ k_i^{\rm ONLINE}=\frac{\lambda\RMS(c_i)}{\RMS(P\odot c_i)}=\frac{\lambda}{\sqrt{e_i(P)}},
+ \qquad k_i^{\rm LOCAL}=\lambda.
 \label{eq:exact-multiplier}
 \end{equation}
-Thus concentrating global RMS through a mask changes local amplitude. If residual squared magnitude is spatially uniform, or uncorrelated with squared support, then $e_i(P)\simeq f_P$. For a binary mask of area fraction $f$, this gives $k_i^{\rm ONLINE}\simeq a/\sqrt f$. For a texture-selective or request-dependent support, measured $e_i(P)$ captures the additional energy correlation. Area alone is insufficient to determine the exact multiplier.
+Thus concentrating global RMS through a mask changes local amplitude. If residual squared magnitude is spatially uniform, or uncorrelated with squared support, then $e_i(P)\simeq f_P$. For a binary mask of area fraction $f$, this gives $k_i^{\rm ONLINE}\simeq \lambda/\sqrt f$. For a texture-selective or request-dependent support, measured $e_i(P)$ captures the additional energy correlation. Area alone is insufficient to determine the exact multiplier.
 
 The integrated injected RMS, $I=\sum_i h_i\RMS(\widehat c_i)$, records intervention magnitude. Vector cancellation, nonlinear field evolution, and memory changes determine the resulting displacement. This distinction separates a controlled injection measurement from output retention and requested-edit achievement. The completed ONLINE/LOCAL contrast tests the difference between two implemented scaling rules. Area-exponent interpolation and amplitude caps are specified separately in Appendix~\ref{sec:prospective-controls} as hypotheses.
 
@@ -220,9 +221,7 @@ With identical prompts, identical field computation, and $z_i=r_i$, this yields 
 \end{tabular}
 \end{table}
 
-\input{final_evaluation}
-
-\section{Historical Spatial Allocation and Magnitude Mechanisms}
+\section{Controlled Spatial Allocation and Magnitude Mechanisms}
 \label{sec:results}
 \subsection{Design, inputs, and configuration}
 The spatial-allocation study contains 98 outputs: seven configurations, seven tasks, and two seeds. The magnitude/coverage study contains 70 outputs: five configurations on the same task--seed pairs. Both studies use six independent source images. Dog/rain and dog/snow share one source image and remain in the same statistical cluster. Cup/night uses seeds 10 and 17; the other tasks use seeds 0 and 17. The complete tasks are cup/night, printed-shirt/studio, butterfly/sunset, plain-shirt/studio, dog/snow, dog/rain, and rug/wooden-floor.
@@ -251,7 +250,7 @@ Correctly located routing exceeds shifted routing by 0.2423 mean NCC (Fig.~\ref{
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.97\textwidth]{figures/mask_position.pdf}
+\includegraphics[width=.97\textwidth,height=.72\textheight,keepaspectratio]{figures/mask_position.pdf}
 \caption{A controlled change in routing position. Solid orange and dashed blue boxes show the actual aligned and shifted routing supports on each source image. Output labels give the individual image NCC values; output panels preserve the original generated previews. The printed shirt uses seed 17 and the mug seed 10. Correct and shifted arms share the same per-step RMS target and source memory. The local metric remains anchored to the original source-pattern region.}
 \label{fig:mask-position}
 \end{figure*}
@@ -288,7 +287,7 @@ Under LOCAL, all-query memory increases mean local NCC from 0.1674 to 0.4445 and
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.99\textwidth]{figures/r79_main.pdf}
+\includegraphics[width=.99\textwidth,height=.72\textheight,keepaspectratio]{figures/r79_main.pdf}
 \caption{Supplied-region configuration and controls: mug/night seed 10, printed-shirt/studio seed 17, and rug/floor seed 17. \textbf{Historical Ours: ONLINE/all} is the historical ROI\_ONLINE25 configuration with a supplied pattern ROI. LOCAL/all changes the magnitude rule; ONLINE/ROI query changes memory coverage; LOCAL/memory off disables memory at the local coefficient. All panels are recorded outputs. Full sheets for both seeds and every task appear in the appendix.}
 \label{fig:r79-main}
 \end{figure*}
@@ -310,7 +309,7 @@ LOCAL & Off & 0.2573 & 0.1478 & 0.1674 & 0.1015 & 84\\
 \end{tabular}
 \end{table*}
 \subsection{Paired estimates and uncertainty}
-We pair outputs by source, task, and seed. Table~\ref{tab:paired} reports task-weighted mean differences, with a source-cluster bootstrap that keeps both dog tasks and all seeds together. Each interval uses 100,000 resamples of six source clusters. Source-weighted estimates, exact source sign-flip values, full numeric records, and the deterministic resampling seed appear in Appendix~\ref{sec:evidence-appendix}. The contrasts are descriptive analyses of the development data; intervals capture variation among these source clusters.
+We pair outputs by source, task, and seed. Table~\ref{tab:paired} reports task-weighted mean differences, with a source-cluster bootstrap that keeps both dog tasks and all seeds together. Each interval uses 100,000 resamples of six source clusters. Source-weighted estimates, exact source sign-flip values, full numeric records, and the deterministic resampling seed appear in Appendix~\ref{sec:evidence-appendix}. The contrasts are descriptive analyses of the development data; intervals capture variation among these source clusters. Figure~\ref{fig:paired} summarizes the paired effects, and Fig.~\ref{fig:departure} separates local correlation from background source departure.
 
 \begin{table*}[t]
 \centering\small
@@ -332,14 +331,14 @@ LOCAL/all $-$ LOCAL/off & +0.277 & [0.103, 0.410]\\
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.92\textwidth]{figures/paired_summary.pdf}
+\includegraphics[width=.92\textwidth,height=.72\textheight,keepaspectratio]{figures/paired_summary.pdf}
 \caption{Paired pattern-retention effects for six selected contrasts. Points give task-weighted mean differences; bars give 95\% source-cluster bootstrap intervals. Blue denotes spatial-allocation contrasts and green denotes magnitude/coverage contrasts. Each contrast contains 14 task--seed pairs from six independent source images; dog/rain and dog/snow are resampled together.}
 \label{fig:paired}
 \end{figure*}
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.92\textwidth]{figures/background_retention.pdf}
+\includegraphics[width=.92\textwidth,height=.72\textheight,keepaspectratio]{figures/background_retention.pdf}
 \caption{Task-level pattern retention and background source deviation. Each cell averages two seeds. Blue encodes pattern NCC and gray encodes background MAE, with independently labeled scales. The first four configurations come from the spatial-allocation study; ONLINE comes from the magnitude/coverage study. Background MAE measures the amount of change; semantic edit achievement is evaluated separately.}
 \label{fig:departure}
 \end{figure*}
@@ -349,11 +348,19 @@ In the historical supplied-region study, every memory-enabled ONLINE or LOCAL ou
 
 External-profile arms require both U25 and the dependent branch, giving $91+91=182$ calls for a fresh result. A shared profile can serve multiple branches; for $K$ branches charge $91+91K$, or $28+63(K+1)$ when the inversion is explicitly reused. Appendix~\ref{sec:evidence-appendix} reports recorded wall-clock values by arm and task. Model loading, transfer, and first-use effects are included where the logs include them, so those times describe the recorded execution rather than a dedicated latency benchmark.
 
-\section{Public-Source Evaluation and Component Ablations}
+\section{Support Estimation, Memory Coverage, and Dose on Development Sources}
 \label{sec:public-evaluation}
 \input{r81_results}
+\FloatBarrier
 \input{r82_results}
+\FloatBarrier
 \input{r83_results}
+\FloatBarrier
+\input{development_dose}
+\FloatBarrier
+
+\input{final_evaluation}
+\FloatBarrier
 
 \section{Qualitative Findings and Limitations}
 \label{sec:limitations}
@@ -363,20 +370,21 @@ External-profile arms require both U25 and the dependent branch, giving $91+91=1
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.98\textwidth]{figures/failure_cases.pdf}
+\includegraphics[width=.98\textwidth,height=.72\textheight,keepaspectratio]{figures/failure_cases.pdf}
 \caption{Four failure categories, each presented as a source/output pair with orange-red localization boxes. Panels (a)--(d): dog/snow seed 17 with unfiltered external-profile ROI correction; rug/floor seed 17 with ONLINE/all; printed shirt seed 17 with ONLINE/ROI-query memory; cup/night seed 10 with ONLINE/all. Visible concerns are incomplete snow coverage, rewritten grid details, changed identity, and changed object geometry. These examples motivate separate edit, subject, pattern, and artifact labels.}
 \label{fig:failures}
 \end{figure*}
 
-\textbf{Annotation and population.} The supplied-region studies evaluate targeted protection using a manual region for both routing and local scoring. The historical R81 pilot adds 24 sources that were new at selection, automatic source-contrast masks, and official evaluation regions kept separate from the method. It exposes increased preservation-region error for the automatic variant. Contrast selects edges and textures irrespective of the requested change; object and edit semantics require additional information or a less selective allocation. These pilot sources subsequently informed development. The final R85 evaluation uses 40 separately selected sources and is reported in Section~\ref{sec:final-evaluation}.
+\textbf{Annotation and population.} The supplied-region studies evaluate targeted protection using a manual region for both routing and local scoring. The 24-source contrast-routing pilot adds 24 sources that were new at selection, automatic source-contrast masks, and official evaluation regions kept separate from the method. It exposes increased preservation-region error for the automatic variant. Contrast selects edges and textures irrespective of the requested change; object and edit semantics require additional information or a less selective allocation. These pilot sources subsequently informed development. The final independent evaluation uses 40 separately selected sources and is reported in Section~\ref{sec:final-evaluation}.
 
-\textbf{Magnitude and cost.} Historical ONLINE restoration concentrates a global RMS target through regional support. Direct local correction removes this amplification. The final same-state energy comparison measures a modest routing benefit, while FlowEdit N26 supplies a stronger directional-CLIP and preservation-LPIPS operating point at 52 rather than 97 NFE. The uncertain CORR25--FlowEdit DINO difference leaves broad content retention unresolved.
+\textbf{Magnitude and cost.} Historical ONLINE restoration concentrates a global RMS target through regional support. Direct local correction removes this amplification, and its retention depends on the chosen coefficient. The support estimator adds six transformer calls to the 91-call memory-enabled editor. The final comparison evaluates one frozen primary coefficient and one frozen memory variant; the three-point dose study characterizes the development population. Regional LPIPS and full-image DINO capture different aspects of preservation, as the spatial and identity changes in Fig.~\ref{fig:final-qualitative} illustrate.
 
-\textbf{Outcome coverage.} R84 and R85 contain no human labels; task-level edit success, exact relations, protected-pattern fidelity, and joint success therefore remain unmeasured. CLIP scores quantify text alignment, DINO measures broad source similarity, and regional LPIPS measures perceptual source distance under the official preservation complement. These outcomes guide interpretation of the visible examples without substituting a synthetic joint-success rate.
+\textbf{Outcome coverage.} The dose and independent-source studies contain no formal human labels; task-level edit success, exact relations, protected-pattern fidelity, and joint success therefore remain unmeasured. CLIP scores quantify text alignment, DINO measures broad source similarity, and regional LPIPS measures perceptual source distance under the official preservation complement. These outcomes guide interpretation of the visible examples without substituting a synthetic joint-success rate.
 
 \section{Conclusion}
-TraceMemory separates correction placement, correction magnitude, and source-memory coverage. The primary method uses request-conditioned direct local correction at coefficient 0.25 with the original seven-step source-memory window. The completed 40-source evaluation finds a small preservation-LPIPS advantage over a same-state energy control, alongside uncertain semantic differences. Spatial memory gating increases target and directional CLIP at a measurable preservation cost. FlowEdit N26 achieves stronger directional editing and lower preservation LPIPS with fewer evaluations, and uniform U25 also preserves content more strongly on the reported perceptual means. These results position request-conditioned routing as a controlled localization mechanism whose practical value depends on the surrounding correction and memory operating point.
+TraceMemory separates the location and magnitude of source correction from the coverage of source attention. The support-energy relation explains how global RMS restoration amplifies a regional update. The frozen direct-local configuration improves preservation-region LPIPS by 0.0084 relative to a global control calibrated to the same-state correction energy. Increasing the local coefficient improves retention across the three development doses, while request-conditioned memory gating strengthens text alignment and increases perceptual source departure. Together, these results identify a controlled localization benefit and quantify the distinct roles of correction dose and memory release. Task-level identity, exact relations, and artifact judgments remain the next outcome layer for evaluating the operating points represented by these automatic scores.
 
+\clearpage
 \begin{thebibliography}{45}
 \raggedright
 % Insert within the parent thebibliography; existing keys intentionally preserved.
@@ -667,7 +675,7 @@ For unit-normalized image and text embeddings $v,t$, raw CLIP target compatibili
 Image-level DINOv2 cosine measures broad content retention, while patch or crop comparisons measure spatial detail \cite{caron2021dino,oquab2024dinov2}. LPIPS and SSIM add perceptual and local structural comparisons \cite{zhang2018lpips,wang2004ssim}. Evaluate intended preservation regions separately from intended edit regions. In a background replacement task, source similarity of the background penalizes the requested change; it belongs on a source-departure diagnostic, not the preservation-quality column. Evaluation masks are defined independently of the routing prediction. Receptive-field boundaries, registration, and pooling support are declared for each regional score.
 
 \subsection{Fair comparison and statistical unit}
-Keep source images disjoint between development and test, including every prompt variant of the same source. Use a documented development sweep for each baseline and freeze all settings before test generation. Recommended schedules and NFE-matched settings are separate comparisons. Plot retention against semantic achievement over the frozen operating points, with failures included. Report per-task and source-level paired effects and confidence intervals; repeated seeds remain within source clusters. For a final test, declare the primary comparison and multiplicity treatment before analysis. The historical pilot uses exploratory source-level estimates as specified in Section~\ref{sec:independent}. The final R85 analysis uses the frozen source-paired procedure and six-comparison Holm family in Section~\ref{sec:final-evaluation}.
+Keep source images disjoint between development and test, including every prompt variant of the same source. Use a documented development sweep for each baseline and freeze all settings before test generation. Recommended schedules and NFE-matched settings are separate comparisons. Plot retention against semantic achievement over the frozen operating points, with failures included. Report per-task and source-level paired effects and confidence intervals; repeated seeds remain within source clusters. For a final test, declare the primary comparison and multiplicity treatment before analysis. The historical pilot uses exploratory source-level estimates as specified in Section~\ref{sec:independent}. The final R85 analysis uses source-paired inference and the reported six-comparison Holm family in Section~\ref{sec:final-evaluation}.
 
 \section{Evaluation Provenance and Recomputable Evidence}
 \label{sec:evaluation-provenance}
@@ -682,7 +690,7 @@ Appendix~\ref{app:completed-final-protocol} records the completed R84/R85 frozen
 \subsection{Proposed area-aware, amplitude-capped normalization}
 The ONLINE/LOCAL contrast exposes a precise confound: changing mask area changes the multiplier needed to match a global norm. We propose to make area sensitivity explicit. For a soft mask $P$ repeated over latent channels, define $f_P=N_{\rm lat}^{-1}\sum_j P_j^2$, candidate $s_i=P\odot c_i$, and target magnitude
 \begin{equation}
-b_i^{(\alpha)}=a\, f_P^{\alpha/2}\RMS(c_i),\qquad 0\leq\alpha\leq1.
+b_i^{(\alpha)}=\lambda\, f_P^{\alpha/2}\RMS(c_i),\qquad 0\leq\alpha\leq1.
 \label{eq:area-budget}
 \end{equation}
 Use an amplitude cap $\kappa$ through
@@ -691,7 +699,7 @@ k_i=\min\left\{\frac{b_i^{(\alpha)}}{\RMS(s_i)},\kappa\right\},\qquad
 \widehat c_i=k_i s_i.
 \label{eq:capped}
 \end{equation}
-For nonzero support, $\alpha=0$ without a cap recovers ONLINE. Under approximately uniform residual energy, $\alpha=1$ makes the multiplier approximately $a$ regardless of area. Actual spatial energy remains observable through the two measured norms. A cap-active step records its realized magnitude and shortfall from $b_i^{(\alpha)}$; zero-support inputs use zero regional correction and are counted as localization failures when protection was requested.
+For nonzero support, $\alpha=0$ without a cap recovers ONLINE. Under approximately uniform residual energy, $\alpha=1$ makes the multiplier approximately $\lambda$ regardless of area. Actual spatial energy remains observable through the two measured norms. A cap-active step records its realized magnitude and shortfall from $b_i^{(\alpha)}$; zero-support inputs use zero regional correction and are counted as localization failures when protection was requested.
 
 The purpose is to separate spatial selection from local amplification. A useful result would retain the current local-pattern advantage while improving requested scene attributes or reducing geometry artifacts across different region sizes. A conditional follow-up can compare ONLINE, LOCAL, and a fixed area-sensitivity setting under the same independent mask. A shifted-support control and reported realized impulse distinguish localization from dose changes. This design builds on the measured 2.74-fold impulse difference; its performance benefit is an explicit hypothesis.
 

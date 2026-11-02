@@ -1,0 +1,31 @@
+\subsection{Development dose response and controls}
+\label{sec:development-dose}
+The development study completes 130 of 130 outputs with successful automatic evaluation on ten previously used sources, one per official category. Six configurations use seeds 0 and 17; deterministic RF-Edit I08 uses seed 0 once per source. Table~\ref{tab:development-dose} reports all seven configurations. Means first average seeds within source and then weight sources equally. CLIP and full-image DINO and LPIPS use ten sources; preservation MAE and LPIPS use eight, excluding two empty official preservation complements. Evaluation masks are independent of the request-conditioned routing support. This population is kept separate from the 40-source independent evaluation.
+
+\paragraph{From normalized routing to direct local correction.}
+Historical ONLINE correction restores the global quarter-strength RMS after routing, applying $0.25\RMS(c_i)P\odot c_i/\RMS(P\odot c_i)$. Direct local correction applies $\lambda P\odot c_i$ with $P=1-0.75E$ and no restoration. This transition preserves the request-conditioned spatial support and the first-seven-step source-memory window while allowing support to attenuate the instantaneous correction. The coefficient sweep $\lambda\in\{0.15,0.25,0.35\}$ studies the resulting strength dependence. CORR25 remains the fixed primary configuration, and BOTH25 adds the secondary spatial query-memory gate.
+
+ENERGY calibrates the global direction at its own current state to the RMS that $0.25P\odot c_i$ would have at that same state. It supplies a counterfactual same-state magnitude control; the independently evolving arms retain their own residuals and cumulative correction energies. CORR, BOTH, and ENERGY each use three native prompt-response probes (six extra calls) and cost 97 standalone NFE.
+
+\begin{table*}[t]
+\centering\small
+\caption{Ten-source development study: all seven configurations and 130 outputs. CLIP and DINO are higher-is-better; LPIPS and preservation MAE are lower-is-better. Full-image metrics use ten sources and preservation metrics use eight. Each non-RF-Edit arm has 20 outputs; RF-Edit has ten. NFE counts all standalone transformer evaluations.}
+\label{tab:development-dose}
+\label{tab:r84-dose}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Configuration & CLIP target $\uparrow$ & CLIP dir. $\uparrow$ & DINO $\uparrow$ & LPIPS full $\downarrow$ & LPIPS preserved $\downarrow$ & Pres. MAE $\downarrow$ & NFE\\
+\midrule
+Local correction 0.15 & 0.2618 & 0.0964 & 0.5543 & 0.5827 & 0.5544 & 0.1600 & 97\\
+TraceMemory (CORR25) & 0.2609 & 0.0979 & 0.5946 & 0.5276 & 0.4983 & 0.1284 & 97\\
+Local correction 0.35 & 0.2562 & 0.0939 & 0.6063 & 0.4803 & 0.4561 & 0.1055 & 97\\
+BOTH25 (secondary) & 0.2659 & 0.1145 & 0.5202 & 0.5444 & 0.5145 & 0.1338 & 97\\
+ENERGY\_MATCH25 & 0.2599 & 0.0957 & 0.5967 & 0.5396 & 0.5115 & 0.1341 & 97\\
+FlowEdit N28 & 0.2809 & 0.1549 & 0.4728 & 0.6144 & 0.5293 & 0.2014 & 56\\
+RF-Edit I08 & 0.2511 & 0.0451 & 0.8071 & 0.2766 & 0.2548 & 0.0452 & 100\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Within these ten development sources, increasing the local coefficient from 0.15 through 0.25 to 0.35 gives monotonic decreases in preservation MAE (0.1600, 0.1284, 0.1055), full-image LPIPS (0.5827, 0.5276, 0.4803), and preservation LPIPS (0.5544, 0.4983, 0.4561), together with increasing mean DINO (0.5543, 0.5946, 0.6063). These are aggregate dose trends within a matched population. Relative to 0.15, CORR25 changes full-image and preservation LPIPS by $-0.0551$ and $-0.0561$; relative to 0.35, the differences are $+0.0473$ and $+0.0422$. All four LPIPS contrasts have within-metric Holm $p\leq0.0469$. Target and directional CLIP difference intervals span zero in both dose comparisons. The sweep demonstrates a correction-strength dependence of source retention; spatial allocation is examined separately through the same-state ENERGY control. Dose means from these seen sources and benchmark means from the independent population describe their respective matched comparisons.

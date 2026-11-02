@@ -5,7 +5,7 @@ Tables report source-referenced pixel measurements; evaluation provenance is doc
 
 We evaluate five methods on 24 PIE-Bench sources with two seed slots per source. Selection used a fixed SHA256 ranking and category round-robin rule, excluding the six historical development sources; the first four categories contribute three sources each and the other six two each. The pilot sources subsequently inform development, including the ten-source support and memory ablations below. A separate parameter sweep uses the historical six-source, seven-task development set.
 
-The automatic configuration, AUTO\_DETAIL, uses the same unfiltered regional update and online budget coefficient $a=0.25$ as Eq.~\eqref{eq:soft-support}. Its mask is computed solely from source-image contrast. After grayscale area resizing to the latent grid, absolute horizontal and vertical differences are summed, smoothed with a $5\times5$ average, thresholded at the image's 75th percentile, and smoothed again. This procedure selects detailed image regions. It uses neither an object segmenter nor a target instruction. Official PIE edit masks are reserved for evaluation. Memory remains active in steps 0--6 with gate one and all-image query coverage.
+The automatic configuration, AUTO\_DETAIL, uses the same unfiltered regional update and online budget coefficient $\lambda=0.25$ as Eq.~\eqref{eq:soft-support}. Its mask is computed solely from source-image contrast. After grayscale area resizing to the latent grid, absolute horizontal and vertical differences are summed, smoothed with a $5\times5$ average, thresholded at the image's 75th percentile, and smoothed again. This procedure selects detailed image regions. It uses neither an object segmenter nor a target instruction. Official PIE edit masks are reserved for evaluation. Memory remains active in steps 0--6 with gate one and all-image query coverage.
 
 The four comparators are global quarter-strength correction with memory (U25\_KV), RF-Inversion with maximum $\eta=0.3$ (ETA03), FlowEdit N26, and the released RF-Edit adapter. FlowEdit uses 28 scheduler nodes, $n_{\max}=26$, $n_{\min}=0$, one noise sample, and source/target guidance 1.5/5.5. The RF-Edit adapter uses 25 second-order steps per direction, 20 injection steps, and guidance 1/5; its configuration is kept fixed across sources. It uses 100 transformer evaluations and is deterministic for these inputs. Deterministic repeats are aggregated within source; record-level details appear in the provenance appendix.
 
@@ -34,13 +34,13 @@ RF-Edit adapter & 0.9814 & 0.0216 & 0.0302 & 100 & 46.69 & 48\\
 \end{table*}
 
 \subsubsection{Automatic contrast routing increases unintended change}
-Table~\ref{tab:independent} shows a transfer gap. AUTO\_DETAIL minus U25\_KV gives a whole-image NCC difference of $-0.14685$ and preservation-MAE difference of $+0.05338$, with source-bootstrap intervals $[-0.21115,-0.09307]$ and $[0.03767,0.06833]$. Relative to FlowEdit N26, the differences are $-0.08842$ in NCC, with interval $[-0.16775,-0.01004]$, and $+0.05278$ in preservation MAE, with interval $[0.03113,0.07455]$. Figure~\ref{fig:independent-effects} includes all four comparisons.
+Table~\ref{tab:independent} shows a transfer gap. AUTO\_DETAIL minus U25\_KV gives a whole-image NCC difference of $-0.1469$ and preservation-MAE difference of $0.0534$, with source-bootstrap intervals $[-0.2112,-0.0931]$ and $[0.0377,0.0683]$. Relative to FlowEdit N26, the differences are $-0.0884$ in NCC, with interval $[-0.1678,-0.0100]$, and $0.0528$ in preservation MAE, with interval $[0.0311,0.0746]$. Figure~\ref{fig:independent-effects} includes all four comparisons.
 
 These results locate the problem more precisely than whole-image similarity alone: the additional departure includes pixels that the benchmark marks for preservation. The source-only contrast support also contains edges of content explicitly requested to change and leaves smooth retained content weakly constrained. This mask-selection explanation motivates the next controlled intervention; it is distinct from the measured preservation error itself.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.96\textwidth]{figures/r81_paired_effects.pdf}
+\includegraphics[width=.96\textwidth,height=.72\textheight,keepaspectratio]{figures/r81_paired_effects.pdf}
 \caption{AUTO\_DETAIL minus each comparator on new sources. Points are equally weighted source-level paired means; bars are percentile 95\% source-bootstrap intervals. NCC uses 24 sources; preservation MAE uses the 19 sources with nonempty preservation complements. These measurements describe source retention.}
 \label{fig:independent-effects}
 \end{figure*}
@@ -52,7 +52,7 @@ Figure~\ref{fig:independent-examples} presents two visible edits and two failure
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.98\textwidth]{figures/r81_heldout_examples.pdf}
+\includegraphics[width=.98\textwidth,height=.72\textheight,keepaspectratio]{figures/r81_heldout_examples.pdf}
 \caption{Independent-source examples with fixed prompts and seeds across methods. Rows show kitten recoloring, olive removal, car-to-boat replacement, and a crayon-style request. The first two illustrate visible requested changes with varying source retention; the last two illustrate missing replacement and duplicated geometry. Figure selection is qualitative, and no success rate is inferred from these four examples. All 48 sheet observations are retained in the accompanying CSV.}
 \label{fig:independent-examples}
 \end{figure*}
@@ -83,4 +83,4 @@ Increasing the manual-region budget from 0.15 to 0.35 raises local NCC from 0.59
 
 The preservation-error increase occurs in 18 of the 19 eligible sources. Removing any single source leaves the mean increase between 0.050 and 0.058. Every category with an eligible preservation region has a positive mean difference. These source-level results locate the transfer failure beyond any single image or category.
 
-The support ablation retains $a=0.25$, seven memory steps, and gate one while changing spatial allocation. ONLINE normalizes against uniform correction at each arm's own current state. The pilot's mean impulses are 0.259 for AUTO and 0.232 for U25, an 11.4\% difference; a shared coefficient therefore requires reporting realized impulse alongside normalization error.
+The support ablation retains $\lambda=0.25$, seven memory steps, and gate one while changing spatial allocation. ONLINE normalizes against uniform correction at each arm's own current state. The pilot's mean impulses are 0.259 for AUTO and 0.232 for U25, an 11.4\% difference; a shared coefficient therefore requires reporting realized impulse alongside normalization error.
