@@ -2,13 +2,13 @@
 \usepackage[T1]{fontenc}
 \usepackage{placeins}
 \usepackage{amsmath,amssymb,graphicx,booktabs,array,longtable,url,hyperref}
-\hypersetup{hidelinks,pdftitle={TraceMemory: Spatial Source Correction and Memory for Rectified-Flow Image Editing}}
+\hypersetup{hidelinks,pdftitle={Disentangling Spatial Allocation, Correction Dose, and Source Memory in Rectified-Flow Image Editing}}
 \newcommand{\RMS}{\operatorname{RMS}}
 \newcommand{\softmax}{\operatorname{softmax}}
 \newcommand{\clip}{\operatorname{clip}}
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\ind}{\mathbb{1}}
-\title{TraceMemory: Spatial Source Correction and Memory for Rectified-Flow Image Editing}
+\title{Disentangling Spatial Allocation, Correction Dose, and Source Memory in Rectified-Flow Image Editing}
 \author{}
 % Extended research manuscript. Main text, references, and full appendices.
 % Saved experiment snapshots are retained as provenance, not rewritten as new runs.
@@ -23,7 +23,7 @@
 \renewcommand{\dblfloatpagefraction}{0.75}
 \maketitle
 \begin{abstract}
-Text-guided image editing couples requested changes with preservation of unaffected content. TraceMemory studies correction magnitude, request-conditioned spatial allocation, and source-attention coverage in a frozen rectified-flow editor. Native prompt-response probes estimate protection support, and a direct local update applies the residual without global RMS restoration. An exact support-energy relation defines a global control with equal RMS at a common state. On 40 held-out PIE-Bench sources with 520 outputs, routing reduces preservation LPIPS by 0.0084 on 33 eligible sources and full-image LPIPS by 0.0064 relative to this control. A ten-source sweep characterizes retention across coefficients 0.15--0.35. Memory query release raises directional CLIP by 0.0207 while increasing preservation LPIPS by 0.0127. A local vision-language evaluation records 16 confirmed joint passes for CORR25, 16 for FlowEdit, and 20 for uniform correction among 80 outputs per method, with 8, 12, and 9 unresolved joint outcomes. The combined evidence identifies an allocation benefit over energy scaling and a dose-dependent editing--preservation trade-off; uniform correction and FlowEdit remain competitive benchmark operating points.
+Text-guided image editing couples requested changes with preservation of unaffected content. We study spatial correction allocation, correction dose, and source-attention coverage in a frozen rectified-flow editor. On 40 held-out sources, uniform quarter-strength correction achieves stronger retention than the preregistered request-conditioned routing arm at lower cost. Relative to a same-state RMS-calibrated global control, routing changes preservation LPIPS by $-0.0084$ on 33 eligible sources; the inference is sensitive to the comparison family and realized trajectory doses differ. A ten-source dose sweep shows retention dependence on correction strength, while memory query release increases text alignment and source departure. An exploratory factual-rule proxy on 520 outputs yields 104 passes, 358 failures, and 58 unknowns. These controlled results characterize trade-offs at the measured operating points.
 \end{abstract}
 \begin{IEEEkeywords}
 image editing, rectified flow, source memory, spatial correction, residual normalization
@@ -41,16 +41,16 @@ Inversion and source-feature reuse provide useful reference information. Their c
 \label{fig:motivation}
 \end{figure*}
 
-TraceMemory evaluates this interaction in a frozen rectified-flow model. A fixed source reference defines path velocity; a source-conditioned evaluation at the current edited state supplies the correction residual. The primary configuration, TraceMemory (CORR25; archived as \texttt{RELEASE\_CORR25}), applies $0.25P\odot c_i$ with request-conditioned protection $P=1-0.75E$, full-image target generation, and full-source, all-query memory during the first seven steps. Three native prompt-response probes cost six transformer evaluations, yielding 97 standalone evaluations. ONLINE normalization is retained as a historical mechanism control. A global control compares allocation policies under a common-state RMS calibration, while their actual trajectories and accumulated doses evolve separately. The preregistered BOTH configuration additionally gates memory queries by protection support and remains a secondary comparison.
+TraceMemory evaluates this interaction in a frozen rectified-flow model. A fixed source reference defines path velocity; a source-conditioned evaluation at the current edited state supplies the correction residual. The preregistered routing arm, CORR25 (TraceMemory; archived as \texttt{RELEASE\_CORR25}), applies $0.25P\odot c_i$ with request-conditioned protection $P=1-0.75E$, full-image target generation, and full-source, all-query memory during the first seven steps. Three native prompt-response probes cost six transformer evaluations, yielding 97 standalone evaluations. ONLINE normalization is retained as a historical mechanism control. A global control compares allocation policies under a common-state RMS calibration, while their actual trajectories and accumulated doses evolve separately. The preregistered BOTH configuration additionally gates memory queries by protection support and remains a secondary comparison.
 
-The contributions are:
+The empirical contributions are:
 \begin{enumerate}
-\item An exact support-energy relation for regional RMS normalization, together with controlled supplied-region studies of spatial placement and local amplification. These studies connect the applied correction to both mask support and residual energy.
-\item Request-conditioned direct residual routing with a same-state energy control. On 40 independent sources, routing reduces preservation-region and full-image LPIPS by 0.0084 and 0.0064 relative to global energy scaling; the ten-source dose study separately characterizes correction strength.
-\item A controlled evaluation of residual routing and attention-memory release. Request-conditioned query gating increases directional CLIP by 0.0207 at a preservation-LPIPS cost of 0.0127, separating the semantic response to memory release from the retention effect of residual magnitude. Complementary factual judgments distinguish full target satisfaction, protected attributes, and unresolved outcomes on the same 520 outputs.
+\item Uniform quarter-strength correction achieves stronger retention than request-conditioned CORR25 at 91 versus 97 NFE on the independent sources.
+\item CORR25 and the same-state RMS-calibrated global control differ by a small amount in LPIPS; inference depends on the comparison family, and trajectories accumulate different doses. The development sweep shows retention dependence on correction dose.
+\item Memory query release increases text alignment alongside perceptual source departure. A factual-rule proxy complements these measurements with protected-content judgments and explicit unknown outcomes.
 \end{enumerate}
 
-Section~\ref{sec:method} specifies the primary method and controls. Section~\ref{sec:results} establishes the spatial-allocation and magnitude mechanisms. Section~\ref{sec:public-evaluation} evaluates support estimation, memory coverage, and correction dose on development sources. Section~\ref{sec:final-evaluation} then tests the frozen configurations on independent sources. The appendices provide full numeric records, reproduction details, and separately identified mechanism hypotheses.
+Section~\ref{sec:method} specifies the routing arm and controls. Section~\ref{sec:results} establishes the spatial-allocation and magnitude mechanisms. Section~\ref{sec:public-evaluation} evaluates support estimation, memory coverage, and correction dose on development sources. Section~\ref{sec:final-evaluation} then tests the frozen configurations on independent sources. The appendices provide full numeric records, reproduction details, and separately identified mechanism hypotheses.
 
 \input{related_work_extended}
 
@@ -111,11 +111,11 @@ P=0.25+0.75(1-E)=1-0.75E.
 \end{aligned}
 \label{eq:request-support}
 \end{equation}
-A degenerate percentile range contributes a zero response map and is recorded. $E$ is a relative model-response score. The support $P$ assigns a baseline correction everywhere and stronger correction to locations with lower prompt response. The primary TraceMemory (CORR25) configuration uses $P$ in Eq.~\eqref{eq:soft-support} with direct local scaling $\lambda=0.25$ and a full-image target update. The direct rule isolates local attenuation: reducing protection reduces the added correction at that location. ONLINE, used in the earlier mechanism studies, restores the global RMS after masking and therefore changes the local multiplier. Comparing the two rules motivates the final direct-local and global-energy controls. No benchmark region enters the estimator. Source K/V retrieval, target-query coverage, gate, and memory window remain unchanged.
+A degenerate percentile range contributes a zero response map and is recorded. $E$ is a relative model-response score. The support $P$ assigns a baseline correction everywhere and stronger correction to locations with lower prompt response. The preregistered CORR25 routing arm uses $P$ in Eq.~\eqref{eq:soft-support} with direct local scaling $\lambda=0.25$ and a full-image target update. The direct rule isolates local attenuation: reducing protection reduces the added correction at that location. ONLINE, used in the earlier mechanism studies, restores the global RMS after masking and therefore changes the local multiplier. Comparing the two rules motivates the final direct-local and global-energy controls. No benchmark region enters the estimator. Source K/V retrieval, target-query coverage, gate, and memory window remain unchanged.
 
 The three source and three target probes add six transformer calls. With 28 inversion calls, 28 current-source calls, 28 target calls and seven reference-memory captures, the request-conditioned configuration costs 97 standalone NFE. The support is fixed before target generation. The probe nodes and percentile transform specify the estimator and are held fixed across its comparisons.
 
-The exact spatial mean is $\overline{P}=1-0.75\overline{E}$, and $P_j\in[0.25,1]$. For a tensor $v$ with $N_{\rm lat}$ scalar entries, define $\RMS(v)=\sqrt{N_{\rm lat}^{-1}\sum_jv_j^2}$. Support weights broadcast across latent channels. The primary rule is $\widehat c_i^{\rm CORR}=\lambda P\odot c_i$, with $\lambda=0.25$. For comparison with historical results, the two scaling rules are
+The exact spatial mean is $\overline{P}=1-0.75\overline{E}$, and $P_j\in[0.25,1]$. For a tensor $v$ with $N_{\rm lat}$ scalar entries, define $\RMS(v)=\sqrt{N_{\rm lat}^{-1}\sum_jv_j^2}$. Support weights broadcast across latent channels. The CORR25 rule is $\widehat c_i^{\rm CORR}=\lambda P\odot c_i$, with $\lambda=0.25$. For comparison with historical results, the two scaling rules are
 \begin{equation}
 \begin{aligned}
 \widehat c_i&=k_i(P\odot c_i),\\
@@ -219,7 +219,7 @@ With identical prompts, identical field computation, and $z_i=r_i$, this yields 
 
 \begin{table}[t]
 \centering\small
-\caption{Algorithm 1: Primary TraceMemory (CORR25) update and explicit controls. Source-reference capture and current-state source evaluation are distinct calls.}
+\caption{Algorithm 1: CORR25 routing update and explicit controls. Source-reference capture and current-state source evaluation are distinct calls.}
 \label{alg:ours}
 \begin{tabular}{p{.94\columnwidth}}
 \toprule
@@ -230,7 +230,7 @@ With identical prompts, identical field computation, and $z_i=r_i$, this yields 
 \quad If $i<7$, capture source K/V from $r_i$ under $q_s$.\\
 \quad Evaluate native source field $u_i^s(z)$ and target field $u_i^{t,M}(z)$.\\
 \quad Form $c_i=p_i-u_i^s(z)$ and $s_i=P\odot c_i$.\\
-\quad Primary CORR: set $\widehat c_i=0.25s_i$ directly.\\
+\quad CORR: set $\widehat c_i=0.25s_i$ directly.\\
 \quad ENERGY control: use Eq.~\eqref{eq:energy-control}. Historical ONLINE: $\widehat c_i=0.25\RMS(c_i)s_i/\RMS(s_i)$.\\
 \quad Update $z\leftarrow z+h_i(u_i^{t,M}(z)+\widehat c_i)$; record norms and calls.\\
 3. Decode $\mathcal{D}_{\rm VAE}(z)$; save the image and its task/seed/parameter record.\\
@@ -294,7 +294,7 @@ FLOWEDIT\_N24 & 0.0757 & 0.7322 & 0.7339 & 48 & 48\\
 \end{tabular}
 \end{table*}
 \subsection{Online magnitude and attention coverage}
-Table~\ref{tab:r79} evaluates the unfiltered residual under two magnitude rules and two memory-query supports. The historical label Ours--ONLINE denotes ONLINE/all, matching the released ROI\_ONLINE25 arm; the current primary method is TraceMemory (CORR25). Figure~\ref{fig:r79-main} labels this candidate explicitly beside its controls.
+Table~\ref{tab:r79} evaluates the unfiltered residual under two magnitude rules and two memory-query supports. The historical label Ours--ONLINE denotes ONLINE/all, matching the released ROI\_ONLINE25 arm; the later preregistered routing arm is CORR25. Figure~\ref{fig:r79-main} labels this candidate explicitly beside its controls.
 
 With all-query memory, ONLINE increases NCC$_{\pm6}$ from 0.4445 to 0.7864 in all 14 paired outputs. Its mean correction impulse is 0.2524, compared with 0.0921 for LOCAL. The observed 2.74-fold increase in impulse is central to interpretation: these two rules produce different effective correction strengths despite sharing the coefficient 0.25.
 
@@ -388,14 +388,17 @@ External-profile arms require both U25 and the dependent branch, giving $91+91=1
 \label{fig:failures}
 \end{figure*}
 
-\textbf{Annotation and population.} The supplied-region studies evaluate targeted protection using a manual region for both routing and local scoring. The 24-source contrast-routing pilot adds 24 sources that were new at selection, automatic source-contrast masks, and official evaluation regions kept separate from the method. It exposes increased preservation-region error for the automatic variant. Contrast selects edges and textures irrespective of the requested change; object and edit semantics require additional information or a less selective allocation. These pilot sources subsequently informed development. The final independent evaluation uses 40 separately selected sources and is reported in Section~\ref{sec:final-evaluation}.
+\textbf{Annotation and population.} The supplied-region studies evaluate targeted protection using a manual region for both routing and local scoring. The 24-source contrast-routing pilot adds 24 sources that were new at selection, automatic source-contrast masks, and official evaluation regions kept separate from the method. It exposes increased preservation-region error for the automatic variant. Contrast selects edges and textures irrespective of the requested change; object and edit semantics require additional information or a less selective allocation. These pilot sources subsequently informed development. The final independent evaluation uses 40 separately selected sources and is reported in Section~\ref{sec:final-evaluation}. Historical manual ROI shifts test supplied-region placement and do not test request-conditioned support localization.
 
-\textbf{Magnitude and cost.} Historical ONLINE restoration concentrates a global RMS target through regional support. Direct local correction removes this amplification, and its retention depends on the chosen coefficient. The support estimator adds six transformer calls to the 91-call memory-enabled editor. The final comparison evaluates one frozen primary coefficient and one frozen memory variant; the three-point dose study characterizes the development population. Regional LPIPS and full-image DINO capture different aspects of preservation, as the spatial and identity changes in Fig.~\ref{fig:final-qualitative} illustrate.
+\textbf{Magnitude and cost.} Historical ONLINE restoration concentrates a global RMS target through regional support. Direct local correction removes this amplification, and its retention depends on the chosen coefficient. The support estimator adds six transformer calls to the 91-call memory-enabled editor. The final comparison evaluates one frozen routing coefficient and one frozen memory variant; the three-point dose study characterizes the development population. Regional LPIPS and full-image DINO capture different aspects of preservation, as the spatial and identity changes in Fig.~\ref{fig:final-qualitative} illustrate.
 
-\textbf{Outcome coverage.} CLIP, DINO, and LPIPS are complemented by frozen task-specific factual rules and paired preservation judgments from a local vision-language model. Of 520 outputs, 136 have unresolved preservation judgments and 58 have unresolved joint outcomes. These cases remain in the reported identification bounds. The factual rules score the full frozen target condition; some operationalize broad concepts with a narrower visual proxy. All artifact answers are negative, and calibration contains only clean artifact controls, leaving sensitivity to positive defects unmeasured. Appendix~\ref{sec:review-protocol} specifies this scope and the recovery of explicit saved factual answers.
+\textbf{Outcome coverage.} CLIP, DINO, and LPIPS are complemented by frozen task-specific factual rules and paired preservation judgments from a local vision-language model. Of 520 outputs, 136 have unresolved preservation judgments and 58 have unresolved joint outcomes. These cases remain in the reported identification bounds. The frozen factual rules are proxies for selected facts, with narrower coverage than some original instructions. All artifact answers are negative; with no positive artifact controls, the artifact channel is unvalidated and non-informative. Appendix~\ref{sec:review-protocol} specifies this scope and the recovery of explicit saved factual answers.
+
+\textbf{Scope of inference.} The independent study uses one model at $512\times512$, 40 sources, and two seeds for six arms (one deterministic output per source for RF-Edit). The factual proxy has no independent human labels. External baselines are measured at fixed operating points. Random, shifted, shuffled-prompt, and oracle controls for request-conditioned support are absent, so the allocation comparison does not isolate the causal value of request localization.
 
 \section{Conclusion}
-TraceMemory compares spatial allocation, correction strength, and source-memory coverage in a frozen editor. The support-energy relation explains how global RMS restoration amplifies a regional update. The frozen direct-local configuration reduces preservation-region LPIPS by 0.0084 relative to a global control with common-state RMS calibration; its adjusted significance depends on the comparison family, and realized trajectory doses differ. Increasing the local coefficient improves retention across the three development doses, while memory query release increases text alignment and perceptual source departure. Uniform correction and FlowEdit provide stronger LPIPS operating points at lower cost on the independent sources. The factual evaluation records 16 confirmed joint passes for CORR25, 16 for FlowEdit, and 20 for uniform correction out of 80 outputs each, with 8, 12, and 9 unresolved outcomes. On paired complete sources, CORR25's joint effect is zero relative to FlowEdit and $-0.0606$ relative to uniform correction. Together, the perceptual and task-specific evidence supports a controlled allocation effect over energy scaling while placing the strongest observed benchmark performance at other measured operating points.
+This controlled study separates spatial allocation, correction dose, and source-memory coverage at measured operating points. Uniform correction provides stronger retention than CORR25 at lower cost. The small CORR25--ENERGY LPIPS difference is sensitive to the comparison family and includes trajectory-dependent dose differences. Increasing correction dose improves retention in the development sweep; memory query release increases text alignment and source departure. The exploratory factual-rule proxy records 104 passes, 358 failures, and 58 unknowns across 520 outputs, with substantial uncertainty from unresolved labels.
+
 
 \FloatBarrier
 \begin{thebibliography}{46}

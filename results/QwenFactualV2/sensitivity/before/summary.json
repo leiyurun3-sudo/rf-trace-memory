@@ -1,0 +1,551 @@
+{
+  "aggregation_version": "factual-judge-benchmark-aggregate-v1",
+  "scope": "Benchmark jobs only; calibration, identity controls and repeat rows are separate.",
+  "planned_outputs": 520,
+  "plan_file_job_count": 520,
+  "planned_source_count": 40,
+  "excluded_auxiliary_jobs": 0,
+  "excluded_auxiliary_job_ids": [],
+  "ignored_record_ids": [],
+  "label_policy": "Runner-supplied 0/1/null only; no joint recomputation. Missing labels remain unknown; valid partial labels survive unresolved status.",
+  "rate_policy": "Event value=1. Bounds: positive/planned to (positive+unknown)/planned. resolved_rate: positive/resolved, with its denominator reported. Artifact value=1 means artifact presence.",
+  "source_policy": "Joint only. A source is included only when every planned seed in that arm has a resolved joint label. Average seeds within source, then weight sources equally. Paired differences use the intersection of complete sources, CORR25 minus comparator.",
+  "inference": {
+    "method": "Percentile source bootstrap; paired bootstrap resamples source differences",
+    "resamples": 5000,
+    "seed": 85006,
+    "rng_stream": "SHA256-derived seed per arm/contrast",
+    "percentiles": "2.5 and 97.5, linear interpolation",
+    "minimum_sources_for_ci": 2,
+    "intervals": "pointwise, unadjusted",
+    "signflip_tests": false,
+    "holm_adjustment": false
+  },
+  "primary_arm": "RELEASE_CORR25",
+  "primary_arm_present": true,
+  "arms": {
+    "ENERGY_MATCH25": {
+      "planned_outputs": 80,
+      "planned_sources": 40,
+      "record_status_counts": {
+        "ok": 53,
+        "unresolved": 18,
+        "error": 9,
+        "missing": 0
+      },
+      "joint_source_estimate": {
+        "complete_sources": 29,
+        "incomplete_sources": 11,
+        "mean_source_seed_average": 0.2413793103448276,
+        "source_bootstrap_95ci": [
+          0.10344827586206896,
+          0.39655172413793105
+        ]
+      },
+      "criteria": {
+        "edit": {
+          "planned_outputs": 80,
+          "positive_outputs": 34,
+          "negative_outputs": 38,
+          "unknown_outputs": 8,
+          "resolved_outputs": 72,
+          "resolved_rate": 0.4722222222222222,
+          "resolved_rate_denominator": 72,
+          "output_rate_lower": 0.425,
+          "output_rate_upper": 0.525
+        },
+        "protected": {
+          "planned_outputs": 80,
+          "positive_outputs": 37,
+          "negative_outputs": 19,
+          "unknown_outputs": 24,
+          "resolved_outputs": 56,
+          "resolved_rate": 0.6607142857142857,
+          "resolved_rate_denominator": 56,
+          "output_rate_lower": 0.4625,
+          "output_rate_upper": 0.7625
+        },
+        "artifact": {
+          "planned_outputs": 80,
+          "positive_outputs": 0,
+          "negative_outputs": 80,
+          "unknown_outputs": 0,
+          "resolved_outputs": 80,
+          "resolved_rate": 0.0,
+          "resolved_rate_denominator": 80,
+          "output_rate_lower": 0.0,
+          "output_rate_upper": 0.0
+        },
+        "joint": {
+          "planned_outputs": 80,
+          "positive_outputs": 14,
+          "negative_outputs": 51,
+          "unknown_outputs": 15,
+          "resolved_outputs": 65,
+          "resolved_rate": 0.2153846153846154,
+          "resolved_rate_denominator": 65,
+          "output_rate_lower": 0.175,
+          "output_rate_upper": 0.3625
+        }
+      }
+    },
+    "ETA03": {
+      "planned_outputs": 80,
+      "planned_sources": 40,
+      "record_status_counts": {
+        "ok": 58,
+        "unresolved": 14,
+        "error": 8,
+        "missing": 0
+      },
+      "joint_source_estimate": {
+        "complete_sources": 34,
+        "incomplete_sources": 6,
+        "mean_source_seed_average": 0.22058823529411764,
+        "source_bootstrap_95ci": [
+          0.10294117647058823,
+          0.35294117647058826
+        ]
+      },
+      "criteria": {
+        "edit": {
+          "planned_outputs": 80,
+          "positive_outputs": 39,
+          "negative_outputs": 35,
+          "unknown_outputs": 6,
+          "resolved_outputs": 74,
+          "resolved_rate": 0.527027027027027,
+          "resolved_rate_denominator": 74,
+          "output_rate_lower": 0.4875,
+          "output_rate_upper": 0.5625
+        },
+        "protected": {
+          "planned_outputs": 80,
+          "positive_outputs": 34,
+          "negative_outputs": 28,
+          "unknown_outputs": 18,
+          "resolved_outputs": 62,
+          "resolved_rate": 0.5483870967741935,
+          "resolved_rate_denominator": 62,
+          "output_rate_lower": 0.425,
+          "output_rate_upper": 0.65
+        },
+        "artifact": {
+          "planned_outputs": 80,
+          "positive_outputs": 0,
+          "negative_outputs": 80,
+          "unknown_outputs": 0,
+          "resolved_outputs": 80,
+          "resolved_rate": 0.0,
+          "resolved_rate_denominator": 80,
+          "output_rate_lower": 0.0,
+          "output_rate_upper": 0.0
+        },
+        "joint": {
+          "planned_outputs": 80,
+          "positive_outputs": 15,
+          "negative_outputs": 55,
+          "unknown_outputs": 10,
+          "resolved_outputs": 70,
+          "resolved_rate": 0.21428571428571427,
+          "resolved_rate_denominator": 70,
+          "output_rate_lower": 0.1875,
+          "output_rate_upper": 0.3125
+        }
+      }
+    },
+    "FLOWEDIT_N26": {
+      "planned_outputs": 80,
+      "planned_sources": 40,
+      "record_status_counts": {
+        "ok": 59,
+        "unresolved": 14,
+        "error": 7,
+        "missing": 0
+      },
+      "joint_source_estimate": {
+        "complete_sources": 31,
+        "incomplete_sources": 9,
+        "mean_source_seed_average": 0.25806451612903225,
+        "source_bootstrap_95ci": [
+          0.12903225806451613,
+          0.4032258064516129
+        ]
+      },
+      "criteria": {
+        "edit": {
+          "planned_outputs": 80,
+          "positive_outputs": 37,
+          "negative_outputs": 36,
+          "unknown_outputs": 7,
+          "resolved_outputs": 73,
+          "resolved_rate": 0.5068493150684932,
+          "resolved_rate_denominator": 73,
+          "output_rate_lower": 0.4625,
+          "output_rate_upper": 0.55
+        },
+        "protected": {
+          "planned_outputs": 80,
+          "positive_outputs": 41,
+          "negative_outputs": 21,
+          "unknown_outputs": 18,
+          "resolved_outputs": 62,
+          "resolved_rate": 0.6612903225806451,
+          "resolved_rate_denominator": 62,
+          "output_rate_lower": 0.5125,
+          "output_rate_upper": 0.7375
+        },
+        "artifact": {
+          "planned_outputs": 80,
+          "positive_outputs": 0,
+          "negative_outputs": 80,
+          "unknown_outputs": 0,
+          "resolved_outputs": 80,
+          "resolved_rate": 0.0,
+          "resolved_rate_denominator": 80,
+          "output_rate_lower": 0.0,
+          "output_rate_upper": 0.0
+        },
+        "joint": {
+          "planned_outputs": 80,
+          "positive_outputs": 16,
+          "negative_outputs": 49,
+          "unknown_outputs": 15,
+          "resolved_outputs": 65,
+          "resolved_rate": 0.24615384615384617,
+          "resolved_rate_denominator": 65,
+          "output_rate_lower": 0.2,
+          "output_rate_upper": 0.3875
+        }
+      }
+    },
+    "RELEASE_BOTH25": {
+      "planned_outputs": 80,
+      "planned_sources": 40,
+      "record_status_counts": {
+        "ok": 53,
+        "unresolved": 18,
+        "error": 9,
+        "missing": 0
+      },
+      "joint_source_estimate": {
+        "complete_sources": 29,
+        "incomplete_sources": 11,
+        "mean_source_seed_average": 0.3103448275862069,
+        "source_bootstrap_95ci": [
+          0.15517241379310345,
+          0.46594827586206267
+        ]
+      },
+      "criteria": {
+        "edit": {
+          "planned_outputs": 80,
+          "positive_outputs": 40,
+          "negative_outputs": 32,
+          "unknown_outputs": 8,
+          "resolved_outputs": 72,
+          "resolved_rate": 0.5555555555555556,
+          "resolved_rate_denominator": 72,
+          "output_rate_lower": 0.5,
+          "output_rate_upper": 0.6
+        },
+        "protected": {
+          "planned_outputs": 80,
+          "positive_outputs": 38,
+          "negative_outputs": 18,
+          "unknown_outputs": 24,
+          "resolved_outputs": 56,
+          "resolved_rate": 0.6785714285714286,
+          "resolved_rate_denominator": 56,
+          "output_rate_lower": 0.475,
+          "output_rate_upper": 0.775
+        },
+        "artifact": {
+          "planned_outputs": 80,
+          "positive_outputs": 0,
+          "negative_outputs": 80,
+          "unknown_outputs": 0,
+          "resolved_outputs": 80,
+          "resolved_rate": 0.0,
+          "resolved_rate_denominator": 80,
+          "output_rate_lower": 0.0,
+          "output_rate_upper": 0.0
+        },
+        "joint": {
+          "planned_outputs": 80,
+          "positive_outputs": 19,
+          "negative_outputs": 44,
+          "unknown_outputs": 17,
+          "resolved_outputs": 63,
+          "resolved_rate": 0.30158730158730157,
+          "resolved_rate_denominator": 63,
+          "output_rate_lower": 0.2375,
+          "output_rate_upper": 0.45
+        }
+      }
+    },
+    "RELEASE_CORR25": {
+      "planned_outputs": 80,
+      "planned_sources": 40,
+      "record_status_counts": {
+        "ok": 56,
+        "unresolved": 15,
+        "error": 9,
+        "missing": 0
+      },
+      "joint_source_estimate": {
+        "complete_sources": 32,
+        "incomplete_sources": 8,
+        "mean_source_seed_average": 0.25,
+        "source_bootstrap_95ci": [
+          0.109375,
+          0.390625
+        ]
+      },
+      "criteria": {
+        "edit": {
+          "planned_outputs": 80,
+          "positive_outputs": 35,
+          "negative_outputs": 37,
+          "unknown_outputs": 8,
+          "resolved_outputs": 72,
+          "resolved_rate": 0.4861111111111111,
+          "resolved_rate_denominator": 72,
+          "output_rate_lower": 0.4375,
+          "output_rate_upper": 0.5375
+        },
+        "protected": {
+          "planned_outputs": 80,
+          "positive_outputs": 39,
+          "negative_outputs": 21,
+          "unknown_outputs": 20,
+          "resolved_outputs": 60,
+          "resolved_rate": 0.65,
+          "resolved_rate_denominator": 60,
+          "output_rate_lower": 0.4875,
+          "output_rate_upper": 0.7375
+        },
+        "artifact": {
+          "planned_outputs": 80,
+          "positive_outputs": 0,
+          "negative_outputs": 80,
+          "unknown_outputs": 0,
+          "resolved_outputs": 80,
+          "resolved_rate": 0.0,
+          "resolved_rate_denominator": 80,
+          "output_rate_lower": 0.0,
+          "output_rate_upper": 0.0
+        },
+        "joint": {
+          "planned_outputs": 80,
+          "positive_outputs": 16,
+          "negative_outputs": 52,
+          "unknown_outputs": 12,
+          "resolved_outputs": 68,
+          "resolved_rate": 0.23529411764705882,
+          "resolved_rate_denominator": 68,
+          "output_rate_lower": 0.2,
+          "output_rate_upper": 0.35
+        }
+      }
+    },
+    "RFEDIT_I08": {
+      "planned_outputs": 40,
+      "planned_sources": 40,
+      "record_status_counts": {
+        "ok": 29,
+        "unresolved": 8,
+        "error": 3,
+        "missing": 0
+      },
+      "joint_source_estimate": {
+        "complete_sources": 37,
+        "incomplete_sources": 3,
+        "mean_source_seed_average": 0.08108108108108109,
+        "source_bootstrap_95ci": [
+          0.0,
+          0.16216216216216217
+        ]
+      },
+      "criteria": {
+        "edit": {
+          "planned_outputs": 40,
+          "positive_outputs": 4,
+          "negative_outputs": 33,
+          "unknown_outputs": 3,
+          "resolved_outputs": 37,
+          "resolved_rate": 0.10810810810810811,
+          "resolved_rate_denominator": 37,
+          "output_rate_lower": 0.1,
+          "output_rate_upper": 0.175
+        },
+        "protected": {
+          "planned_outputs": 40,
+          "positive_outputs": 25,
+          "negative_outputs": 6,
+          "unknown_outputs": 9,
+          "resolved_outputs": 31,
+          "resolved_rate": 0.8064516129032258,
+          "resolved_rate_denominator": 31,
+          "output_rate_lower": 0.625,
+          "output_rate_upper": 0.85
+        },
+        "artifact": {
+          "planned_outputs": 40,
+          "positive_outputs": 0,
+          "negative_outputs": 40,
+          "unknown_outputs": 0,
+          "resolved_outputs": 40,
+          "resolved_rate": 0.0,
+          "resolved_rate_denominator": 40,
+          "output_rate_lower": 0.0,
+          "output_rate_upper": 0.0
+        },
+        "joint": {
+          "planned_outputs": 40,
+          "positive_outputs": 3,
+          "negative_outputs": 34,
+          "unknown_outputs": 3,
+          "resolved_outputs": 37,
+          "resolved_rate": 0.08108108108108109,
+          "resolved_rate_denominator": 37,
+          "output_rate_lower": 0.075,
+          "output_rate_upper": 0.15
+        }
+      }
+    },
+    "U25_KV": {
+      "planned_outputs": 80,
+      "planned_sources": 40,
+      "record_status_counts": {
+        "ok": 55,
+        "unresolved": 19,
+        "error": 6,
+        "missing": 0
+      },
+      "joint_source_estimate": {
+        "complete_sources": 30,
+        "incomplete_sources": 10,
+        "mean_source_seed_average": 0.3333333333333333,
+        "source_bootstrap_95ci": [
+          0.18333333333333332,
+          0.5
+        ]
+      },
+      "criteria": {
+        "edit": {
+          "planned_outputs": 80,
+          "positive_outputs": 40,
+          "negative_outputs": 35,
+          "unknown_outputs": 5,
+          "resolved_outputs": 75,
+          "resolved_rate": 0.5333333333333333,
+          "resolved_rate_denominator": 75,
+          "output_rate_lower": 0.5,
+          "output_rate_upper": 0.5625
+        },
+        "protected": {
+          "planned_outputs": 80,
+          "positive_outputs": 41,
+          "negative_outputs": 16,
+          "unknown_outputs": 23,
+          "resolved_outputs": 57,
+          "resolved_rate": 0.7192982456140351,
+          "resolved_rate_denominator": 57,
+          "output_rate_lower": 0.5125,
+          "output_rate_upper": 0.8
+        },
+        "artifact": {
+          "planned_outputs": 80,
+          "positive_outputs": 0,
+          "negative_outputs": 80,
+          "unknown_outputs": 0,
+          "resolved_outputs": 80,
+          "resolved_rate": 0.0,
+          "resolved_rate_denominator": 80,
+          "output_rate_lower": 0.0,
+          "output_rate_upper": 0.0
+        },
+        "joint": {
+          "planned_outputs": 80,
+          "positive_outputs": 20,
+          "negative_outputs": 47,
+          "unknown_outputs": 13,
+          "resolved_outputs": 67,
+          "resolved_rate": 0.29850746268656714,
+          "resolved_rate_denominator": 67,
+          "output_rate_lower": 0.25,
+          "output_rate_upper": 0.4125
+        }
+      }
+    }
+  },
+  "paired_joint": [
+    {
+      "arm": "RELEASE_CORR25",
+      "reference": "ENERGY_MATCH25",
+      "criterion": "joint",
+      "paired_complete_sources": 28,
+      "arm_complete_sources": 32,
+      "reference_complete_sources": 29,
+      "difference": 0.03571428571428571,
+      "ci95_low": 0.0,
+      "ci95_high": 0.08928571428571429
+    },
+    {
+      "arm": "RELEASE_CORR25",
+      "reference": "ETA03",
+      "criterion": "joint",
+      "paired_complete_sources": 31,
+      "arm_complete_sources": 32,
+      "reference_complete_sources": 34,
+      "difference": 0.016129032258064516,
+      "ci95_low": -0.11290322580645161,
+      "ci95_high": 0.16129032258064516
+    },
+    {
+      "arm": "RELEASE_CORR25",
+      "reference": "FLOWEDIT_N26",
+      "criterion": "joint",
+      "paired_complete_sources": 28,
+      "arm_complete_sources": 32,
+      "reference_complete_sources": 31,
+      "difference": 0.0,
+      "ci95_low": -0.14285714285714285,
+      "ci95_high": 0.14285714285714285
+    },
+    {
+      "arm": "RELEASE_CORR25",
+      "reference": "RELEASE_BOTH25",
+      "criterion": "joint",
+      "paired_complete_sources": 28,
+      "arm_complete_sources": 32,
+      "reference_complete_sources": 29,
+      "difference": -0.03571428571428571,
+      "ci95_low": -0.14285714285714285,
+      "ci95_high": 0.05357142857142857
+    },
+    {
+      "arm": "RELEASE_CORR25",
+      "reference": "RFEDIT_I08",
+      "criterion": "joint",
+      "paired_complete_sources": 32,
+      "arm_complete_sources": 32,
+      "reference_complete_sources": 37,
+      "difference": 0.15625,
+      "ci95_low": 0.046875,
+      "ci95_high": 0.28125
+    },
+    {
+      "arm": "RELEASE_CORR25",
+      "reference": "U25_KV",
+      "criterion": "joint",
+      "paired_complete_sources": 29,
+      "arm_complete_sources": 32,
+      "reference_complete_sources": 30,
+      "difference": -0.06896551724137931,
+      "ci95_low": -0.13793103448275862,
+      "ci95_high": -0.017241379310344827
+    }
+  ]
+}

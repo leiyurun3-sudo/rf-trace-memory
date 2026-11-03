@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering\small
+\caption{Offline format-recovery sensitivity with identical frozen rules and three-valued logic. Counts are joint-proxy pass/fail/unknown; intervals are deterministic planned-output percentage bounds, not confidence intervals. No new inference is performed.}
+\label{tab:recovery-counts}
+\begin{tabular}{lrrrr}
+\toprule
+Arm & Before P/F/U & After P/F/U & Before bounds (\%) & After bounds (\%)\\
+\midrule
+CORR25 & 16/52/12 & 16/56/8 & [20.00, 35.00] & [20.00, 30.00]\\
+BOTH25 & 19/44/17 & 19/48/13 & [23.75, 45.00] & [23.75, 40.00]\\
+ENERGY & 14/51/15 & 14/57/9 & [17.50, 36.25] & [17.50, 28.75]\\
+U25\_KV & 20/47/13 & 20/51/9 & [25.00, 41.25] & [25.00, 36.25]\\
+FlowEdit & 16/49/15 & 16/52/12 & [20.00, 38.75] & [20.00, 35.00]\\
+ETA03 & 15/55/10 & 16/58/6 & [18.75, 31.25] & [20.00, 27.50]\\
+RF-Edit & 3/34/3 & 3/36/1 & [7.50, 15.00] & [7.50, 10.00]\\
+\midrule
+All outputs & 103/332/85 & 104/358/58 & [19.81, 36.15] & [20.00, 31.15]\\
+\bottomrule
+\end{tabular}
+\end{table*}
