@@ -1,0 +1,201 @@
+{
+  "source_000000000100": {
+    "woman": true,
+    "umbrella": true,
+    "setting": "field"
+  },
+  "source_000000000132": {
+    "girl": true,
+    "dress": false,
+    "shirt": true,
+    "dress_color": "gray"
+  },
+  "source_000000000021": {
+    "parrot_count": "two",
+    "beaks": "separated",
+    "stick": true
+  },
+  "source_000000000058": {
+    "tulips": true,
+    "flower_color": "purple",
+    "vase": true
+  },
+  "source_123000000001": {
+    "dresser": false,
+    "chair": true,
+    "room": true
+  },
+  "source_111000000009": {
+    "pig": false,
+    "rat": true,
+    "eye_color": "red",
+    "painting": true
+  },
+  "source_122000000002": {
+    "woman": false,
+    "phone": false,
+    "camera": true
+  },
+  "source_114000000002": {
+    "giant": false,
+    "castle": false,
+    "lake": true,
+    "painting": true
+  },
+  "source_222000000006": {
+    "woman": true,
+    "jacket_color": "brown",
+    "jeans": true
+  },
+  "source_212000000007": {
+    "woman": true,
+    "snakes": false,
+    "roses": true
+  },
+  "source_223000000009": {
+    "conference_room": true,
+    "people": "zero"
+  },
+  "source_224000000007": {
+    "clouds": true,
+    "stars": false,
+    "sky": true
+  },
+  "source_324000000003": {
+    "mushroom": true,
+    "pine_branch": true
+  },
+  "source_324000000005": {
+    "moon": true,
+    "tree": true,
+    "water": true
+  },
+  "source_312000000006": {
+    "woman": true,
+    "wings": true,
+    "beach": false
+  },
+  "source_313000000008": {
+    "kiwi": true,
+    "smoothie": true,
+    "other_fruit": true
+  },
+  "source_423000000003": {
+    "bedroom": true,
+    "tidiness": "tidy",
+    "bed": true
+  },
+  "source_412000000003": {
+    "man": true,
+    "visibility": "silhouette",
+    "stairs": true
+  },
+  "source_411000000000": {
+    "fox": true,
+    "eye_size": "large",
+    "car": true
+  },
+  "source_422000000001": {
+    "woman": true,
+    "hair_length": "long",
+    "hair_texture": "curly"
+  },
+  "source_522000000004": {
+    "woman": true,
+    "gaze": "forward"
+  },
+  "source_524000000002": {
+    "tree": true,
+    "blooms": false,
+    "animals": true
+  },
+  "source_511000000004": {
+    "panda": true,
+    "posture": "sitting",
+    "heart": true
+  },
+  "source_512000000004": {
+    "girl": true,
+    "arm_position": "raised",
+    "confetti": true
+  },
+  "source_614000000004": {
+    "santa": true,
+    "tree_color": "white",
+    "tree": true
+  },
+  "source_622000000000": {
+    "shirt": true,
+    "shirt_color": "white"
+  },
+  "source_613000000003": {
+    "wall": true,
+    "wall_color": "white",
+    "plant": true
+  },
+  "source_611000000004": {
+    "mouse": true,
+    "mouse_color": "white",
+    "wand": true
+  },
+  "source_711000000000": {
+    "bear": true,
+    "material": "plush",
+    "toy": true,
+    "posture": "sitting"
+  },
+  "source_724000000000": {
+    "snowdrops": true,
+    "material": "natural"
+  },
+  "source_713000000002": {
+    "sofa": true,
+    "material": "fabric",
+    "room": true
+  },
+  "source_723000000004": {
+    "camera": true,
+    "material": "metal",
+    "toy": false
+  },
+  "source_824000000001": {
+    "chair": true,
+    "background": "mountains"
+  },
+  "source_813000000003": {
+    "couch": true,
+    "background_color": "brown"
+  },
+  "source_812000000004": {
+    "angel": true,
+    "location": "field",
+    "wings": true
+  },
+  "source_821000000008": {
+    "dog": true,
+    "surroundings": "grass",
+    "collar": true
+  },
+  "source_913000000005": {
+    "room": true,
+    "beach": true,
+    "style": "digital_art"
+  },
+  "source_921000000004": {
+    "wolf": true,
+    "style": "digital_art"
+  },
+  "source_913000000004": {
+    "room": true,
+    "window": true,
+    "floor": true,
+    "style": "digital_art",
+    "brushwork": false
+  },
+  "source_913000000003": {
+    "living_room": true,
+    "couch": true,
+    "table": true,
+    "style": "digital_art"
+  }
+}

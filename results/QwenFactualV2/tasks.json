@@ -1,0 +1,1608 @@
+[
+  {
+    "case": "000000000100",
+    "fields": {
+      "woman": {
+        "question": "Is a woman visible?",
+        "type": "boolean"
+      },
+      "umbrella": {
+        "question": "Is an umbrella visible?",
+        "type": "boolean"
+      },
+      "setting": {
+        "question": "What is the predominant surrounding environment?",
+        "values": [
+          "forest",
+          "field",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      }
+    },
+    "target_all": {
+      "woman": true,
+      "umbrella": true,
+      "setting": "forest"
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the woman’s identity and black clothing."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the umbrella and the woman’s approximate pose."
+      }
+    ],
+    "allowed_changes": "The environment may change from field to forest.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "000000000132",
+    "fields": {
+      "girl": {
+        "question": "Is a girl visible?",
+        "type": "boolean"
+      },
+      "dress": {
+        "question": "Is the girl wearing a dress?",
+        "type": "boolean"
+      },
+      "shirt": {
+        "question": "Is the girl wearing a separate shirt?",
+        "type": "boolean"
+      },
+      "dress_color": {
+        "question": "What is the color of the girl’s dress, if present?",
+        "values": [
+          "white",
+          "black",
+          "red",
+          "pink",
+          "brown",
+          "orange",
+          "yellow",
+          "green",
+          "blue",
+          "purple",
+          "other",
+          "gray",
+          "uncertain",
+          "absent"
+        ]
+      }
+    },
+    "target_all": {
+      "girl": true,
+      "dress": true,
+      "shirt": false,
+      "dress_color": "gray"
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the girl’s identity and sunglasses."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the wall and leaning pose."
+      }
+    ],
+    "allowed_changes": "The gray shirt may become a gray dress.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "000000000021",
+    "fields": {
+      "parrot_count": {
+        "question": "How many parrots are visible?",
+        "values": [
+          "zero",
+          "one",
+          "two",
+          "three_or_more",
+          "uncertain"
+        ]
+      },
+      "beaks": {
+        "question": "What is the visible relationship between the two parrots’ beaks?",
+        "values": [
+          "touching",
+          "separated",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "stick": {
+        "question": "Is a perch or stick visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "parrot_count": "two",
+      "beaks": "touching",
+      "stick": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the two parrots’ appearance and colors."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the perch and city street background."
+      }
+    ],
+    "allowed_changes": "The parrots’ heads and poses may change to make their beaks touch.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "000000000058",
+    "fields": {
+      "tulips": {
+        "question": "Are tulips visible?",
+        "type": "boolean"
+      },
+      "flower_color": {
+        "question": "What is the predominant color of the tulip petals?",
+        "values": [
+          "white",
+          "black",
+          "red",
+          "pink",
+          "brown",
+          "orange",
+          "yellow",
+          "green",
+          "blue",
+          "purple",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "vase": {
+        "question": "Is a vase visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "tulips": true,
+      "flower_color": "yellow",
+      "vase": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the vase and its position."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the flower arrangement and background."
+      }
+    ],
+    "allowed_changes": "Tulip petals may change color from purple to yellow.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "123000000001",
+    "fields": {
+      "dresser": {
+        "question": "Is a dresser visible?",
+        "type": "boolean"
+      },
+      "chair": {
+        "question": "Is a chair visible?",
+        "type": "boolean"
+      },
+      "room": {
+        "question": "Is an indoor room visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "dresser": true,
+      "chair": false,
+      "room": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the room’s layout and surrounding furnishings."
+      }
+    ],
+    "allowed_changes": "Replace the chair with a dresser; its size and shape may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "111000000009",
+    "fields": {
+      "pig": {
+        "question": "Is a pig depicted?",
+        "type": "boolean"
+      },
+      "rat": {
+        "question": "Is a rat depicted?",
+        "type": "boolean"
+      },
+      "eye_color": {
+        "question": "What is the depicted animal’s eye color?",
+        "values": [
+          "white",
+          "black",
+          "red",
+          "pink",
+          "brown",
+          "orange",
+          "yellow",
+          "green",
+          "blue",
+          "purple",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "painting": {
+        "question": "Does the image depict a painting?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "pig": true,
+      "rat": false,
+      "eye_color": "red",
+      "painting": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the red eyes."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the painting’s background and overall composition."
+      }
+    ],
+    "allowed_changes": "Replace the rat with a pig; animal identity and shape may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "122000000002",
+    "fields": {
+      "woman": {
+        "question": "Is a woman visible?",
+        "type": "boolean"
+      },
+      "phone": {
+        "question": "Is a phone visible in her hand?",
+        "type": "boolean"
+      },
+      "camera": {
+        "question": "Is a camera visible in her hand?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "woman": true,
+      "phone": true,
+      "camera": false
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the woman’s identity, coat and pose."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the background."
+      }
+    ],
+    "allowed_changes": "Replace the held camera with a phone; hand grip may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "114000000002",
+    "fields": {
+      "giant": {
+        "question": "Is a giant figure visible?",
+        "type": "boolean"
+      },
+      "castle": {
+        "question": "Is a castle visible?",
+        "type": "boolean"
+      },
+      "lake": {
+        "question": "Is a lake visible?",
+        "type": "boolean"
+      },
+      "painting": {
+        "question": "Does the image depict a painting?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "giant": true,
+      "castle": false,
+      "lake": true,
+      "painting": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the lake and surrounding painted scenery."
+      }
+    ],
+    "allowed_changes": "Replace the castle with a giant figure; its shape and scale may change.",
+    "interpretation_note": "The target prompt spells giant as “gaint”; interpret it as a giant figure. Use null when visual evidence is unclear."
+  },
+  {
+    "case": "222000000006",
+    "fields": {
+      "woman": {
+        "question": "Is a woman visible?",
+        "type": "boolean"
+      },
+      "jacket_color": {
+        "question": "What is the color of the woman’s jacket?",
+        "values": [
+          "white",
+          "black",
+          "red",
+          "pink",
+          "brown",
+          "orange",
+          "yellow",
+          "green",
+          "blue",
+          "purple",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "jeans": {
+        "question": "Is the woman wearing jeans?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "woman": true,
+      "jacket_color": "black",
+      "jeans": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the woman’s identity and pose."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the jeans and background."
+      }
+    ],
+    "allowed_changes": "The jacket may change from brown to black.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "212000000007",
+    "fields": {
+      "woman": {
+        "question": "Is a woman visible?",
+        "type": "boolean"
+      },
+      "snakes": {
+        "question": "Are one or more snakes visible around the woman?",
+        "type": "boolean"
+      },
+      "roses": {
+        "question": "Are dark roses visible around the woman?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "woman": true,
+      "snakes": true,
+      "roses": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the woman’s identity, dress, and pose."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the dark roses and digital-art composition."
+      }
+    ],
+    "allowed_changes": "Add snakes around the woman; local occlusion is allowed.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "223000000009",
+    "fields": {
+      "conference_room": {
+        "question": "Is a conference room visible?",
+        "type": "boolean"
+      },
+      "people": {
+        "question": "How many people are visible in the room?",
+        "values": [
+          "zero",
+          "one",
+          "several",
+          "crowd",
+          "uncertain"
+        ]
+      }
+    },
+    "target_all": {
+      "conference_room": true,
+      "people": "crowd"
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the conference-room setting and recognizable layout."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve major furniture where not occluded by people."
+      }
+    ],
+    "allowed_changes": "Add a crowd of people to the conference room.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "224000000007",
+    "fields": {
+      "clouds": {
+        "question": "Are clouds visible?",
+        "type": "boolean"
+      },
+      "stars": {
+        "question": "Are stars visible in the sky?",
+        "type": "boolean"
+      },
+      "sky": {
+        "question": "Is sky visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "clouds": true,
+      "stars": true,
+      "sky": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the cloud shapes and sky composition as far as possible."
+      }
+    ],
+    "allowed_changes": "Add stars to the sky; local lighting may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "324000000003",
+    "fields": {
+      "mushroom": {
+        "question": "Is a mushroom visible?",
+        "type": "boolean"
+      },
+      "pine_branch": {
+        "question": "Is a pine branch visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "mushroom": false,
+      "pine_branch": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the pine branch and its needles."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the surrounding background."
+      }
+    ],
+    "allowed_changes": "Remove the mushroom and fill its location consistently.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "324000000005",
+    "fields": {
+      "moon": {
+        "question": "Is a moon visible in the sky?",
+        "type": "boolean"
+      },
+      "tree": {
+        "question": "Is a tree visible?",
+        "type": "boolean"
+      },
+      "water": {
+        "question": "Is water visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "moon": false,
+      "tree": true,
+      "water": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the tree and its reflection in the water."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the nighttime landscape."
+      }
+    ],
+    "allowed_changes": "Remove the bright moon; locally fill the sky.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "312000000006",
+    "fields": {
+      "woman": {
+        "question": "Is a woman visible?",
+        "type": "boolean"
+      },
+      "wings": {
+        "question": "Are wings visible on or behind the woman?",
+        "type": "boolean"
+      },
+      "beach": {
+        "question": "Is a beach visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "woman": true,
+      "wings": false,
+      "beach": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the woman’s identity, clothing and standing pose."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the beach and sunset."
+      }
+    ],
+    "allowed_changes": "Remove the wings and reconstruct the nearby background.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "313000000008",
+    "fields": {
+      "kiwi": {
+        "question": "Is any kiwi fruit or kiwi slice visible?",
+        "type": "boolean"
+      },
+      "smoothie": {
+        "question": "Is a smoothie glass visible?",
+        "type": "boolean"
+      },
+      "other_fruit": {
+        "question": "Are strawberries or blueberries visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "kiwi": false,
+      "smoothie": true,
+      "other_fruit": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the smoothie glass and remaining strawberries and blueberries."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the surrounding arrangement."
+      }
+    ],
+    "allowed_changes": "Remove kiwi; fill the removed region consistently.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "423000000003",
+    "fields": {
+      "bedroom": {
+        "question": "Is a bedroom visible?",
+        "type": "boolean"
+      },
+      "tidiness": {
+        "question": "How tidy is the bedroom?",
+        "values": [
+          "tidy",
+          "untidy",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "bed": {
+        "question": "Is a bed visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "bedroom": true,
+      "tidiness": "untidy",
+      "bed": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the bedroom, bed, chair and window where visible."
+      }
+    ],
+    "allowed_changes": "Make the room untidy; scattered belongings may be added.",
+    "interpretation_note": "The target word “mussy” means untidy or messy; use uncertain when unclear."
+  },
+  {
+    "case": "412000000003",
+    "fields": {
+      "man": {
+        "question": "Is a man visible?",
+        "type": "boolean"
+      },
+      "visibility": {
+        "question": "How visible are the man’s body and clothing details?",
+        "values": [
+          "silhouette",
+          "clear_detail",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "stairs": {
+        "question": "Is a staircase visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "man": true,
+      "visibility": "clear_detail",
+      "stairs": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the man’s position and walking direction."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the staircase and clouds."
+      }
+    ],
+    "allowed_changes": "Reveal the man’s details rather than a silhouette; appearance may become visible.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "411000000000",
+    "fields": {
+      "fox": {
+        "question": "Is a fox visible?",
+        "type": "boolean"
+      },
+      "eye_size": {
+        "question": "How large are the fox’s eyes relative to its face?",
+        "values": [
+          "small",
+          "large",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "car": {
+        "question": "Is a car visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "fox": true,
+      "eye_size": "small",
+      "car": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the fox’s identity and remaining facial features."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the car and cartoon painting style."
+      }
+    ],
+    "allowed_changes": "Reduce the fox’s eye size; nearby eye contours may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "422000000001",
+    "fields": {
+      "woman": {
+        "question": "Is a woman visible?",
+        "type": "boolean"
+      },
+      "hair_length": {
+        "question": "What is the woman’s hair length?",
+        "values": [
+          "short",
+          "long",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "hair_texture": {
+        "question": "What is the woman’s hair texture?",
+        "values": [
+          "curly",
+          "straight",
+          "wavy",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      }
+    },
+    "target_all": {
+      "woman": true,
+      "hair_length": "short",
+      "hair_texture": "curly"
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the woman’s face and identity."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the background and clothing."
+      }
+    ],
+    "allowed_changes": "Shorten the hair while keeping it curly.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "522000000004",
+    "fields": {
+      "woman": {
+        "question": "Is a woman visible?",
+        "type": "boolean"
+      },
+      "gaze": {
+        "question": "In which direction is the woman looking in the image frame?",
+        "values": [
+          "viewer_left",
+          "viewer_right",
+          "forward",
+          "away",
+          "uncertain",
+          "absent"
+        ]
+      }
+    },
+    "target_all": {
+      "woman": true,
+      "gaze": "viewer_right"
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the woman’s identity, shirt and shorts."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the old building and overall composition."
+      }
+    ],
+    "allowed_changes": "Change the direction of the woman’s gaze and head as needed.",
+    "interpretation_note": "Right means viewer-right in the image frame; use uncertain if gaze direction is not discernible."
+  },
+  {
+    "case": "524000000002",
+    "fields": {
+      "tree": {
+        "question": "Is a tree visible?",
+        "type": "boolean"
+      },
+      "blooms": {
+        "question": "Are flowers or blossoms visible on the tree?",
+        "type": "boolean"
+      },
+      "animals": {
+        "question": "Are animals visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "tree": true,
+      "blooms": true,
+      "animals": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the animals and their arrangement."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the desert landscape and tree location."
+      }
+    ],
+    "allowed_changes": "Turn the dead tree into a blooming tree; tree crown and branches may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "511000000004",
+    "fields": {
+      "panda": {
+        "question": "Is a panda visible?",
+        "type": "boolean"
+      },
+      "posture": {
+        "question": "What is the panda’s posture?",
+        "values": [
+          "sitting",
+          "standing",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "heart": {
+        "question": "Is the panda holding a heart?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "panda": true,
+      "posture": "standing",
+      "heart": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the panda’s identity and heart."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the overall background."
+      }
+    ],
+    "allowed_changes": "Change the panda’s posture from sitting to standing; limbs may move.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "512000000004",
+    "fields": {
+      "girl": {
+        "question": "Is a graduation girl visible?",
+        "type": "boolean"
+      },
+      "arm_position": {
+        "question": "Where are the girl’s hands relative to her body?",
+        "values": [
+          "down",
+          "raised",
+          "mixed",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "confetti": {
+        "question": "Is confetti visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "girl": true,
+      "arm_position": "down",
+      "confetti": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the girl’s identity and graduation clothing."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the confetti background."
+      }
+    ],
+    "allowed_changes": "Lower the girl’s hands and arms; arm pose may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "614000000004",
+    "fields": {
+      "santa": {
+        "question": "Is Santa visible?",
+        "type": "boolean"
+      },
+      "tree_color": {
+        "question": "What is the predominant color of the Christmas tree?",
+        "values": [
+          "white",
+          "black",
+          "red",
+          "pink",
+          "brown",
+          "orange",
+          "yellow",
+          "green",
+          "blue",
+          "purple",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "tree": {
+        "question": "Is a Christmas tree visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "santa": true,
+      "tree_color": "green",
+      "tree": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve Santa’s appearance and position."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the tree decorations and surrounding design."
+      }
+    ],
+    "allowed_changes": "Change the Christmas tree from white to green.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "622000000000",
+    "fields": {
+      "shirt": {
+        "question": "Is a shirt visible?",
+        "type": "boolean"
+      },
+      "shirt_color": {
+        "question": "What is the predominant color of the shirt?",
+        "values": [
+          "white",
+          "black",
+          "red",
+          "pink",
+          "brown",
+          "orange",
+          "yellow",
+          "green",
+          "blue",
+          "purple",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      }
+    },
+    "target_all": {
+      "shirt": true,
+      "shirt_color": "yellow"
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the shirt’s shape, fit and garment type."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the wearer and background."
+      }
+    ],
+    "allowed_changes": "Change the shirt color from white to yellow.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "613000000003",
+    "fields": {
+      "wall": {
+        "question": "Is a wall visible?",
+        "type": "boolean"
+      },
+      "wall_color": {
+        "question": "What is the predominant color of the wall behind the hanging plant?",
+        "values": [
+          "white",
+          "black",
+          "red",
+          "pink",
+          "brown",
+          "orange",
+          "yellow",
+          "green",
+          "blue",
+          "purple",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "plant": {
+        "question": "Is a hanging plant visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "wall": true,
+      "wall_color": "red",
+      "plant": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the hanging plant, pot and position."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the floor and wall geometry."
+      }
+    ],
+    "allowed_changes": "Change the wall color from white to red.",
+    "interpretation_note": "Distinguish red from pink and distinguish wall from floor; pink is not red for this target."
+  },
+  {
+    "case": "611000000004",
+    "fields": {
+      "mouse": {
+        "question": "Is a mouse visible?",
+        "type": "boolean"
+      },
+      "mouse_color": {
+        "question": "What is the predominant color of the mouse’s fur?",
+        "values": [
+          "white",
+          "black",
+          "red",
+          "pink",
+          "brown",
+          "orange",
+          "yellow",
+          "green",
+          "blue",
+          "purple",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "wand": {
+        "question": "Is a wand with a star visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "mouse": true,
+      "mouse_color": "purple",
+      "wand": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the mouse’s identity, pose and facial features."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the wand, star and background."
+      }
+    ],
+    "allowed_changes": "Change the mouse’s fur color from white to purple.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "711000000000",
+    "fields": {
+      "bear": {
+        "question": "Is a bear visible?",
+        "type": "boolean"
+      },
+      "material": {
+        "question": "What material is visibly suggested by the bear’s surface?",
+        "values": [
+          "knitted",
+          "plush",
+          "wood",
+          "plastic",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "toy": {
+        "question": "Does the bear visibly appear to be a toy?",
+        "type": "boolean"
+      },
+      "posture": {
+        "question": "What is the bear’s posture?",
+        "values": [
+          "sitting",
+          "standing",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      }
+    },
+    "target_all": {
+      "bear": true,
+      "material": "knitted",
+      "toy": true,
+      "posture": "sitting"
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the brown bear’s recognizable appearance and seated pose."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the drawing’s composition and background."
+      }
+    ],
+    "allowed_changes": "Change the bear into a knitted toy; surface and toy construction may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "724000000000",
+    "fields": {
+      "snowdrops": {
+        "question": "Are snowdrop flowers visible?",
+        "type": "boolean"
+      },
+      "material": {
+        "question": "What material do the snowdrop flowers visibly appear to be made of?",
+        "values": [
+          "plastic",
+          "natural",
+          "metal",
+          "paper",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      }
+    },
+    "target_all": {
+      "snowdrops": true,
+      "material": "plastic"
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the snowdrops’ arrangement and recognizable shapes."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the garden background."
+      }
+    ],
+    "allowed_changes": "Change the flowers’ material to plastic; surface texture and highlights may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "713000000002",
+    "fields": {
+      "sofa": {
+        "question": "Is a sofa visible?",
+        "type": "boolean"
+      },
+      "material": {
+        "question": "What material or surface finish does the sofa visibly have?",
+        "values": [
+          "rusty_iron",
+          "fabric",
+          "leather",
+          "wood",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "room": {
+        "question": "Is a living room visible?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "sofa": true,
+      "material": "rusty_iron",
+      "room": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the sofa’s placement and recognizable overall geometry."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the black wall and room layout."
+      }
+    ],
+    "allowed_changes": "Change the sofa to a ferruginous sofa; its surface and color may change.",
+    "interpretation_note": "Ferruginous means rusty iron or an iron-rust appearance; use uncertain when the finish is not visually discernible."
+  },
+  {
+    "case": "723000000004",
+    "fields": {
+      "camera": {
+        "question": "Is a camera visible?",
+        "type": "boolean"
+      },
+      "material": {
+        "question": "What material is the camera body visibly made of?",
+        "values": [
+          "wood",
+          "metal",
+          "plastic",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "toy": {
+        "question": "Does the camera visibly appear to be a toy?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "camera": true,
+      "material": "wood",
+      "toy": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the camera’s recognizable placement and photographic context."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve travel-related background items where visible."
+      }
+    ],
+    "allowed_changes": "Turn the camera into a wooden toy camera; camera material and construction may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "824000000001",
+    "fields": {
+      "chair": {
+        "question": "Is a chair or bench visible?",
+        "type": "boolean"
+      },
+      "background": {
+        "question": "What is the predominant distant background?",
+        "values": [
+          "mountains",
+          "sea",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      }
+    },
+    "target_all": {
+      "chair": true,
+      "background": "sea"
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the chair or bench and its placement."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the foreground composition."
+      }
+    ],
+    "allowed_changes": "Change the background from mountains to sea; distant scenery may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "813000000003",
+    "fields": {
+      "couch": {
+        "question": "Is a couch visible?",
+        "type": "boolean"
+      },
+      "background_color": {
+        "question": "What is the predominant color of the background behind the couch?",
+        "values": [
+          "white",
+          "black",
+          "red",
+          "pink",
+          "brown",
+          "orange",
+          "yellow",
+          "green",
+          "blue",
+          "purple",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      }
+    },
+    "target_all": {
+      "couch": true,
+      "background_color": "red"
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the couch’s shape, studded arms and gold frame."
+      }
+    ],
+    "allowed_changes": "Change the background color from brown to red.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "812000000004",
+    "fields": {
+      "angel": {
+        "question": "Is an angel or winged woman visible?",
+        "type": "boolean"
+      },
+      "location": {
+        "question": "Where is the angel standing?",
+        "values": [
+          "field",
+          "river",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "wings": {
+        "question": "Are wings visible on the angel?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "angel": true,
+      "location": "river",
+      "wings": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the angel’s identity, wings and clothing."
+      }
+    ],
+    "allowed_changes": "Change the angel’s location from a field to a river; the surrounding landscape may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "821000000008",
+    "fields": {
+      "dog": {
+        "question": "Is a dog visible?",
+        "type": "boolean"
+      },
+      "surroundings": {
+        "question": "What surrounds the dog?",
+        "values": [
+          "grass",
+          "water",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "collar": {
+        "question": "Is the dog wearing a collar?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "dog": true,
+      "surroundings": "water",
+      "collar": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the brown dog’s identity, face and collar."
+      }
+    ],
+    "allowed_changes": "Replace the grass surrounding the dog with water; wet fur or reflections may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "913000000005",
+    "fields": {
+      "room": {
+        "question": "Is an empty room visible?",
+        "type": "boolean"
+      },
+      "beach": {
+        "question": "Is a beach visible through an opening?",
+        "type": "boolean"
+      },
+      "style": {
+        "question": "Which category best describes the image’s overall visual style?",
+        "values": [
+          "photorealism",
+          "digital_art",
+          "ink_sketch",
+          "monochrome_ink_painting",
+          "watercolor",
+          "oil_painting",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      }
+    },
+    "target_all": {
+      "room": true,
+      "beach": true,
+      "style": "monochrome_ink_painting"
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the empty-room layout and beach view."
+      }
+    ],
+    "allowed_changes": "Render the scene as a black-and-white ink painting; colors and rendering texture may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "921000000004",
+    "fields": {
+      "wolf": {
+        "question": "Is a wolf visible?",
+        "type": "boolean"
+      },
+      "style": {
+        "question": "Which category best describes the image’s overall visual style?",
+        "values": [
+          "photorealism",
+          "digital_art",
+          "ink_sketch",
+          "monochrome_ink_painting",
+          "watercolor",
+          "oil_painting",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      }
+    },
+    "target_all": {
+      "wolf": true,
+      "style": "ink_sketch"
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the wolf’s face, dark eyes and nose."
+      },
+      {
+        "id": "p2",
+        "text": "Preserve the composition."
+      }
+    ],
+    "allowed_changes": "Render the image as a pen-and-ink sketch; colors and surface texture may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  },
+  {
+    "case": "913000000004",
+    "fields": {
+      "room": {
+        "question": "Is an empty room visible?",
+        "type": "boolean"
+      },
+      "window": {
+        "question": "Is a window visible?",
+        "type": "boolean"
+      },
+      "floor": {
+        "question": "Is a wooden floor visible?",
+        "type": "boolean"
+      },
+      "style": {
+        "question": "Which category best describes the image’s overall visual style?",
+        "values": [
+          "photorealism",
+          "digital_art",
+          "ink_sketch",
+          "monochrome_ink_painting",
+          "watercolor",
+          "oil_painting",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      },
+      "brushwork": {
+        "question": "Are visible watercolor washes or brushwork present?",
+        "type": "boolean"
+      }
+    },
+    "target_all": {
+      "room": true,
+      "window": true,
+      "floor": true,
+      "style": "watercolor",
+      "brushwork": true
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the room layout, window and wooden floor."
+      }
+    ],
+    "allowed_changes": "Render the room with Chinese watercolor-like washes and brushwork; color and texture may change.",
+    "interpretation_note": "Assess visible wash and brushwork, not ethnicity or inferred cultural identity."
+  },
+  {
+    "case": "913000000003",
+    "fields": {
+      "living_room": {
+        "question": "Is a living room visible?",
+        "type": "boolean"
+      },
+      "couch": {
+        "question": "Is a couch visible?",
+        "type": "boolean"
+      },
+      "table": {
+        "question": "Is a table visible?",
+        "type": "boolean"
+      },
+      "style": {
+        "question": "Which category best describes the image’s overall visual style?",
+        "values": [
+          "photorealism",
+          "digital_art",
+          "ink_sketch",
+          "monochrome_ink_painting",
+          "watercolor",
+          "oil_painting",
+          "other",
+          "uncertain",
+          "absent"
+        ]
+      }
+    },
+    "target_all": {
+      "living_room": true,
+      "couch": true,
+      "table": true,
+      "style": "watercolor"
+    },
+    "protected_checks": [
+      {
+        "id": "p1",
+        "text": "Preserve the couch, table and living-room layout."
+      }
+    ],
+    "allowed_changes": "Apply a watercolor effect; color, edges and texture may change.",
+    "interpretation_note": "Judge each image independently; use uncertain or null for unclear visual evidence."
+  }
+]

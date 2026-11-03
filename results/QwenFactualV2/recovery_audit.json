@@ -1,0 +1,2438 @@
+{
+  "source_000000000021": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "```json\n{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}\n```",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "```json\n{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}\n```",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "separated",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "source_724000000000": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}}",
+        "unrecovered_reason": "Missing field: material"
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}}",
+        "unrecovered_reason": "Missing field: material"
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "source_824000000001": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"chair\": {\"question\": \"Is a chair or bench visible?\", \"type\": \"true\"}, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"selected\": \"mountains\"}}",
+        "unrecovered_reason": "No explicit single answer; schema lists are not answers"
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"chair\": {\"question\": \"Is a chair or bench visible?\", \"type\": \"boolean\", \"value\": true}, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"value\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "value",
+          "background": "value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"chair\": {\"question\": \"Is a chair or bench visible?\", \"type\": \"true\"}, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"selected\": \"mountains\"}}",
+        "unrecovered_reason": "No explicit single answer; schema lists are not answers"
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"chair\": {\"question\": \"Is a chair or bench visible?\", \"type\": \"boolean\", \"value\": true}, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"value\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "value",
+          "background": "value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "chair": true,
+      "background": "mountains"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_1fbec7282f9fc3cc48ba127f": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "separated",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_1a65e85e5be9290c5611d03c": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "separated",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_c3e0fe99a35c265d7210d691": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "separated",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_30822c8ae69b5b76639474a9": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "separated",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_c581a21b9df4951c2bdcf5fc": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "separated",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_21f7c5d9402a9a93b97c7407": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "separated",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_58f593229eb0913407bfca77": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "separated",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_8480de711d6e808a7fa7dd97": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "separated",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_a63cc2e5036da84a4c30c69b": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "touching",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_38ff15523f05c7993d33b639": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "touching",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_75974868f9831ea83861d722": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"separated\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "separated",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "separated",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_30b1499498fb9ef2cfc441ea": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"conference_room\": true, \"people\": {\"values\": [\"several\"]}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "scalar_or_boolean_string",
+          "people": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"boolean\", \"value\": true}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": [\"several\"], \"value\": several}}",
+        "unrecovered_reason": "Expecting value: line 1 column 201 (char 200)"
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"conference_room\": true, \"people\": {\"values\": [\"several\"]}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "scalar_or_boolean_string",
+          "people": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"boolean\", \"value\": true}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": [\"several\"], \"value\": several}}",
+        "unrecovered_reason": "Expecting value: line 1 column 201 (char 200)"
+      }
+    ],
+    "canonicalized": {
+      "conference_room": true,
+      "people": "several"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_91d2f6724b829e6eec69e6df": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"conference_room\": true, \"people\": {\"values\": \"several\"}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "scalar_or_boolean_string",
+          "people": "categorical_answer_in_values"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"boolean\", \"value\": true}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": [\"several\"], \"value\": several}}",
+        "unrecovered_reason": "Expecting value: line 1 column 201 (char 200)"
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"conference_room\": true, \"people\": {\"values\": \"several\"}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "scalar_or_boolean_string",
+          "people": "categorical_answer_in_values"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"boolean\", \"value\": true}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": [\"several\"], \"value\": several}}",
+        "unrecovered_reason": "Expecting value: line 1 column 201 (char 200)"
+      }
+    ],
+    "canonicalized": {
+      "conference_room": true,
+      "people": "several"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_c3d0e2818806bb2a48cf417c": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"conference_room\": true, \"people\": {\"values\": [\"several\"]}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "scalar_or_boolean_string",
+          "people": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"boolean\", \"value\": true}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": [\"several\"], \"value\": \"several\"}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "value",
+          "people": "value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"conference_room\": true, \"people\": {\"values\": [\"several\"]}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "scalar_or_boolean_string",
+          "people": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"boolean\", \"value\": true}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": [\"several\"], \"value\": \"several\"}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "value",
+          "people": "value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "conference_room": true,
+      "people": "several"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_826d7e8d01791982cb3d2bf3": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"conference_room\": true, \"people\": {\"values\": \"several\"}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "scalar_or_boolean_string",
+          "people": "categorical_answer_in_values"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"boolean\", \"value\": true}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": [\"several\"], \"value\": several}}",
+        "unrecovered_reason": "Expecting value: line 1 column 201 (char 200)"
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"conference_room\": true, \"people\": {\"values\": \"several\"}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "scalar_or_boolean_string",
+          "people": "categorical_answer_in_values"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"boolean\", \"value\": true}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": [\"several\"], \"value\": several}}",
+        "unrecovered_reason": "Expecting value: line 1 column 201 (char 200)"
+      }
+    ],
+    "canonicalized": {
+      "conference_room": true,
+      "people": "several"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_bb5e72c9686f773c1fbf3aa5": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"yellow\"]}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"yellow\"]}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"yellow\"]}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"yellow\"]}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "singleton_selected_value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "shirt": true,
+      "shirt_color": "yellow"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_9858fff53679d0718581d4b4": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"white\", \"black\", \"red\", \"pink\", \"brown\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\", \"other\", \"uncertain\", \"absent\"], \"value\": \"uncertain\"}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "uncertain"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"white\", \"black\", \"red\", \"pink\", \"brown\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\", \"other\", \"uncertain\", \"absent\"], \"value\": \"yellow\"}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "shirt": true,
+      "shirt_color": "uncertain"
+    },
+    "conflicting_fields_kept_unknown": [
+      "shirt_color"
+    ]
+  },
+  "output_e0f5e0f77a592e1c79bab432": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"yellow\"]}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"white\", \"black\", \"red\", \"pink\", \"brown\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\", \"other\", \"uncertain\", \"absent\"], \"value\": \"yellow\"}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"yellow\"]}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"white\", \"black\", \"red\", \"pink\", \"brown\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\", \"other\", \"uncertain\", \"absent\"], \"value\": \"yellow\"}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "shirt": true,
+      "shirt_color": "yellow"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_9b984f4d4c0899258207a9fc": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"yellow\"]}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"white\", \"black\", \"red\", \"pink\", \"brown\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\", \"other\", \"uncertain\", \"absent\"], \"value\": \"yellow\"}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"yellow\"]}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"white\", \"black\", \"red\", \"pink\", \"brown\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\", \"other\", \"uncertain\", \"absent\"], \"value\": \"yellow\"}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "shirt": true,
+      "shirt_color": "yellow"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_7e5c73ba7f36b66c13658f3c": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"yellow\"]}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"white\", \"black\", \"red\", \"pink\", \"brown\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\", \"other\", \"uncertain\", \"absent\"], \"value\": \"yellow\"}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"yellow\"]}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"shirt\": {\"question\": \"Is a shirt visible?\", \"type\": \"true\"}, \"shirt_color\": {\"question\": \"What is the predominant color of the shirt?\", \"values\": [\"white\", \"black\", \"red\", \"pink\", \"brown\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\", \"other\", \"uncertain\", \"absent\"], \"value\": \"yellow\"}}",
+        "parsed": {
+          "shirt": true,
+          "shirt_color": "yellow"
+        },
+        "rules": {
+          "shirt": "boolean_answer_in_type",
+          "shirt_color": "value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "shirt": true,
+      "shirt_color": "yellow"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_70f966adc4d20843bdfa2130": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}}",
+        "unrecovered_reason": "Missing field: material"
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}}",
+        "unrecovered_reason": "Missing field: material"
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_43e0544a973f28a3eb8840f3": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}}",
+        "unrecovered_reason": "Missing field: material"
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_76b1ed26e8dbd028af4473aa": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}}",
+        "unrecovered_reason": "Missing field: material"
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_1995c055b996d228529aa0d6": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_ebbef8f07515c3a5203dcfce": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_002b3e608cba94760c9abf36": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}}",
+        "unrecovered_reason": "Missing field: material"
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_95eb25fbb32bf30e054d0aeb": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_7f8e0e70d01d212b3893774d": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}}",
+        "unrecovered_reason": "Missing field: material"
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}}",
+        "unrecovered_reason": "Missing field: material"
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_a7bf36500dbb08a002ce6f98": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_b4d13b4eae73266a3641b6ab": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_8c3d6044867a75f615a18ad9": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}}",
+        "unrecovered_reason": "Missing field: material"
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}}",
+        "unrecovered_reason": "Missing field: material"
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_96e2456932beb3070ab98a2e": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"camera\": {\"question\": \"Is a camera visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material is the camera body visibly made of?\", \"values\": [\"wood\"]}, \"toy\": {\"question\": \"Does the camera visibly appear to be a toy?\", \"type\": \"false\"}}",
+        "parsed": {
+          "camera": true,
+          "material": "wood",
+          "toy": false
+        },
+        "rules": {
+          "camera": "boolean_answer_in_type",
+          "material": "singleton_selected_value",
+          "toy": "boolean_answer_in_type"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"camera\": {\"question\": \"Is a camera visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material is the camera body visibly made of?\", \"values\": [\"wood\"]}, \"toy\": {\"question\": \"Does the camera visibly appear to be a toy?\", \"type\": \"false\"}}",
+        "parsed": {
+          "camera": true,
+          "material": "wood",
+          "toy": false
+        },
+        "rules": {
+          "camera": "boolean_answer_in_type",
+          "material": "singleton_selected_value",
+          "toy": "boolean_answer_in_type"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"camera\": {\"question\": \"Is a camera visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material is the camera body visibly made of?\", \"values\": [\"wood\"]}, \"toy\": {\"question\": \"Does the camera visibly appear to be a toy?\", \"type\": \"false\"}}",
+        "parsed": {
+          "camera": true,
+          "material": "wood",
+          "toy": false
+        },
+        "rules": {
+          "camera": "boolean_answer_in_type",
+          "material": "singleton_selected_value",
+          "toy": "boolean_answer_in_type"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"camera\": {\"question\": \"Is a camera visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material is the camera body visibly made of?\", \"values\": [\"wood\"]}, \"toy\": {\"question\": \"Does the camera visibly appear to be a toy?\", \"type\": \"false\"}}",
+        "parsed": {
+          "camera": true,
+          "material": "wood",
+          "toy": false
+        },
+        "rules": {
+          "camera": "boolean_answer_in_type",
+          "material": "singleton_selected_value",
+          "toy": "boolean_answer_in_type"
+        }
+      }
+    ],
+    "canonicalized": {
+      "camera": true,
+      "material": "wood",
+      "toy": false
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_3943e9593af39b068028d55c": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"chair\": true, \"background\": {\"predominant_distant_background\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "scalar_or_boolean_string",
+          "background": "named_background_answer"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"chair\": {\"question\": \"Is a chair or bench visible?\", \"type\": \"boolean\", \"value\": true}, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"value\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "value",
+          "background": "value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"chair\": true, \"background\": {\"predominant_distant_background\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "scalar_or_boolean_string",
+          "background": "named_background_answer"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"chair\": {\"question\": \"Is a chair or bench visible?\", \"type\": \"boolean\", \"value\": true}, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"value\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "value",
+          "background": "value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "chair": true,
+      "background": "mountains"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_514942790e66dc4e8630fb27": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"chair\": true, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"]}}",
+        "unrecovered_reason": "No explicit single answer; schema lists are not answers"
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"chair\": {\"question\": \"Is a chair or bench visible?\", \"type\": \"boolean\", \"value\": true}, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"value\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "value",
+          "background": "value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"chair\": true, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"]}}",
+        "unrecovered_reason": "No explicit single answer; schema lists are not answers"
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"chair\": {\"question\": \"Is a chair or bench visible?\", \"type\": \"boolean\", \"value\": true}, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"value\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "value",
+          "background": "value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "chair": true,
+      "background": "mountains"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_7cc211713a8b9a529ec7a2ed": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"chair\": true, \"background\": {\"predominant_distant_background\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "scalar_or_boolean_string",
+          "background": "named_background_answer"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"chair\": {\"question\": \"Is a chair or bench visible?\", \"type\": \"boolean\", \"value\": true}, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"value\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "value",
+          "background": "value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"chair\": true, \"background\": {\"predominant_distant_background\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "scalar_or_boolean_string",
+          "background": "named_background_answer"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"chair\": {\"question\": \"Is a chair or bench visible?\", \"type\": \"boolean\", \"value\": true}, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"value\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "value",
+          "background": "value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "chair": true,
+      "background": "mountains"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_a4a9a02297120f50b49b8710": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"chair\": true, \"background\": {\"predominant_distant_background\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "scalar_or_boolean_string",
+          "background": "named_background_answer"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"chair\": {\"question\": \"Is a chair or bench visible?\", \"type\": \"boolean\", \"value\": true}, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"value\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "value",
+          "background": "value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "chair": true,
+      "background": "mountains"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_bf53d7364c4fb3aef0b45f85": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"chair\": true, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"sea\"]}}",
+        "parsed": {
+          "chair": true,
+          "background": "sea"
+        },
+        "rules": {
+          "chair": "scalar_or_boolean_string",
+          "background": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"chair\": true, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"answer\": \"sea\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "sea"
+        },
+        "rules": {
+          "chair": "scalar_or_boolean_string",
+          "background": "answer"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"chair\": true, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"sea\"]}}",
+        "parsed": {
+          "chair": true,
+          "background": "sea"
+        },
+        "rules": {
+          "chair": "scalar_or_boolean_string",
+          "background": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"chair\": true, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"answer\": \"sea\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "sea"
+        },
+        "rules": {
+          "chair": "scalar_or_boolean_string",
+          "background": "answer"
+        }
+      }
+    ],
+    "canonicalized": {
+      "chair": true,
+      "background": "sea"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_f0d5efc73daf06dc9fcd2137": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"chair\": true, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"sea\"]}}",
+        "parsed": {
+          "chair": true,
+          "background": "sea"
+        },
+        "rules": {
+          "chair": "scalar_or_boolean_string",
+          "background": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"chair\": true, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"answer\": \"sea\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "sea"
+        },
+        "rules": {
+          "chair": "scalar_or_boolean_string",
+          "background": "answer"
+        }
+      }
+    ],
+    "canonicalized": {
+      "chair": true,
+      "background": "sea"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_32330919fec6144192e616f4": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"chair\": true, \"background\": {\"predominant_distant_background\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "scalar_or_boolean_string",
+          "background": "named_background_answer"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"chair\": {\"question\": \"Is a chair or bench visible?\", \"type\": \"boolean\", \"value\": true}, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"value\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "value",
+          "background": "value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"chair\": true, \"background\": {\"predominant_distant_background\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "scalar_or_boolean_string",
+          "background": "named_background_answer"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"chair\": {\"question\": \"Is a chair or bench visible?\", \"type\": \"boolean\", \"value\": true}, \"background\": {\"question\": \"What is the predominant distant background?\", \"values\": [\"mountains\", \"sea\", \"other\", \"uncertain\", \"absent\"], \"value\": \"mountains\"}}",
+        "parsed": {
+          "chair": true,
+          "background": "mountains"
+        },
+        "rules": {
+          "chair": "value",
+          "background": "value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "chair": true,
+      "background": "mountains"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_c1fd22447af43bf3c673ef28": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "touching",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_4b3ad1ea1e27aca5985a417f": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"parrot_count\": \"two\", \"beaks\": \"touching\", \"stick\": \"true\"}",
+        "parsed": {
+          "parrot_count": "two",
+          "beaks": "touching",
+          "stick": true
+        },
+        "rules": {
+          "parrot_count": "scalar_or_boolean_string",
+          "beaks": "scalar_or_boolean_string",
+          "stick": "scalar_or_boolean_string"
+        }
+      }
+    ],
+    "canonicalized": {
+      "parrot_count": "two",
+      "beaks": "touching",
+      "stick": true
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_8eee31d2bd6a04cee1b08e28": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"true\"}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": \"crowd\"}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "crowd"
+        },
+        "rules": {
+          "conference_room": "boolean_answer_in_type",
+          "people": "categorical_answer_in_values"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"conference_room\": true, \"people\": {\"values\": \"crowd\"}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "crowd"
+        },
+        "rules": {
+          "conference_room": "scalar_or_boolean_string",
+          "people": "categorical_answer_in_values"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"true\"}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": \"crowd\"}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "crowd"
+        },
+        "rules": {
+          "conference_room": "boolean_answer_in_type",
+          "people": "categorical_answer_in_values"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"conference_room\": true, \"people\": {\"values\": \"crowd\"}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "crowd"
+        },
+        "rules": {
+          "conference_room": "scalar_or_boolean_string",
+          "people": "categorical_answer_in_values"
+        }
+      }
+    ],
+    "canonicalized": {
+      "conference_room": true,
+      "people": "crowd"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_32f927f2d8cca598907b7fbb": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"true\"}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": \"several\"}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "boolean_answer_in_type",
+          "people": "categorical_answer_in_values"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"true\"}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": [\"several\"]}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "boolean_answer_in_type",
+          "people": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"true\"}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": \"several\"}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "boolean_answer_in_type",
+          "people": "categorical_answer_in_values"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"conference_room\": {\"question\": \"Is a conference room visible?\", \"type\": \"true\"}, \"people\": {\"question\": \"How many people are visible in the room?\", \"values\": [\"several\"]}}",
+        "parsed": {
+          "conference_room": true,
+          "people": "several"
+        },
+        "rules": {
+          "conference_room": "boolean_answer_in_type",
+          "people": "singleton_selected_value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "conference_room": true,
+      "people": "several"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_032ed592b995e6074369774b": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  },
+  "output_ede4c106770e01ff132e701b": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 2,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}}",
+        "unrecovered_reason": "Missing field: material"
+      },
+      {
+        "attempt": 3,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}, \"material\": {\"question\": \"What material do the snowdrop flowers visibly appear to be made of?\", \"values\": [\"natural\"]}}",
+        "parsed": {
+          "snowdrops": true,
+          "material": "natural"
+        },
+        "rules": {
+          "snowdrops": "boolean_answer_in_type",
+          "material": "singleton_selected_value"
+        }
+      },
+      {
+        "attempt": 4,
+        "raw_response": "{\"snowdrops\": {\"question\": \"Are snowdrop flowers visible?\", \"type\": \"true\"}}",
+        "unrecovered_reason": "Missing field: material"
+      }
+    ],
+    "canonicalized": {
+      "snowdrops": true,
+      "material": "natural"
+    },
+    "conflicting_fields_kept_unknown": []
+  }
+}

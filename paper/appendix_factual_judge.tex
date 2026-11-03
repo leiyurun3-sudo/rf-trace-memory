@@ -1,0 +1,54 @@
+\subsection{Local factual evaluation and frozen target rules}
+\label{app:factual-v2}
+The completed factual evaluation uses local Qwen2.5-VL-7B-Instruct \cite{bai2025qwen25vl}, snapshot \texttt{cc594898137f460bfe9f0759e9844b3ce807cfb5}, on native source and output images. The runtime uses PyTorch 2.8.0+cu128 and Transformers 4.55.4, greedy decoding, a 384-token response limit, and the fast image processor with a maximum 262,144 image pixels. Every source shares one frozen task specification across all methods and seeds. Method names, file identifiers, and numerical quality metrics are excluded from the model prompts.
+
+The factual pass observes one image at a time using neutral, task-specific questions and explicit response alternatives. It receives neither the desired target answer nor a request to rate editing quality. A deterministic rule tests the conjunction of the frozen target facts. Let $T_s$ and $T_o$ indicate satisfaction of that full condition in the source and output. The edit label is one when $T_o=1$ and $T_s=0$, zero when $T_o=0$, and unknown otherwise. This criterion measures full target-condition satisfaction with a source change, rather than the correctness of only one changed attribute.
+
+A separate pair pass receives source and output with their order counterbalanced, allowed changes, and frozen protected-content questions. It returns true, false, or unknown for each protected requirement. Their conjunction defines $p_n$. A candidate-only pass returns an artifact-presence flag $a_n$. The joint label is
+\begin{equation}
+J_n^{\mathrm{VLM}}=e_n\land p_n\land\neg a_n.
+\label{eq:factual-joint}
+\end{equation}
+Conjunction is three-valued: an observed required failure sets the result to zero; all required passes set it to one; remaining cases stay unknown. Consequently, a record with unknown preservation may still have joint zero when its target condition fails. Unknown, inapplicable, and observed failure are separate states.
+
+The fixed rules operationalize particular visual properties. For example, the giant case tests presence without a separate middle-of-lake relation; the Chinese-watercolor case tests watercolor brushwork without a distinct Chinese-style classifier; the ferruginous-sofa case uses a rusty-iron proxy. These choices delimit the measured task condition and are retained across arms. Rule definitions are not revised after observing method rankings.
+
+\subsection{Calibration and deterministic answer recovery}
+Fifteen controls pass: six single-image factual controls, six ordered-pair controls, and three clean-image artifact controls. These test basic input handling and answer sensitivity on their known cases. The artifact set has no positive defect example; all 520 benchmark artifact decisions are negative. Artifact sensitivity on real editing defects therefore remains unmeasured.
+
+The saved evaluator responses initially contain 48 rejected factual observations: 45 outputs and three sources. Offline recovery extracts only explicit selected answers from the saved replies, including quoted Boolean values, an explicit nested answer, a singleton selected list, an exact nested background field, or an earlier valid saved attempt. A list containing every schema option is not treated as a selected answer. One conflicting uncertain/yellow answer remains unresolved. No image is rescored, and the original valid observations, preservation-pair decisions, and artifact decisions are retained. Recovering these 48 observations updates 51 dependent benchmark records. The released audit identifies every changed record and its original response.
+
+After recovery, all 520 planned outputs have records: 384 are fully resolved, 136 are partially unresolved, and none remains a schema error. Across the population, full-target labels are 240 positive, 279 negative, and one unknown; protected-content labels are 255 positive, 129 negative, and 136 unknown; joint labels are 104 positive, 358 negative, and 58 unknown. Structural validity and semantic uncertainty remain distinct.
+
+\subsection{Population bounds and paired source inference}
+For an arm with $N$ planned outputs, $n_+$ confirmed joint passes, and $n_?$ unresolved joint labels, we report
+\begin{equation}
+\left[\frac{n_+}{N},\frac{n_++n_?}{N}\right].
+\label{eq:factual-bounds}
+\end{equation}
+These identification bounds allow either value for each unresolved label; they describe the finite planned population and contain no sampling confidence claim. Table~\ref{tab:factual-counts} reports all counts and bounds. Resolved-only proportions have a selected denominator and are not substituted for a complete-population rate.
+
+Source-level joint estimates first require every planned seed in that arm to have a resolved joint label, then average seeds within source. Each source receives equal weight. RF-Edit contributes its single deterministic result. Paired comparisons use the intersection of complete sources for CORR25 and the comparator. We use 5,000 percentile source-bootstrap resamples, with base seed 85006 and a SHA256-derived stream for each contrast. Intervals are pointwise and unadjusted; this factual analysis adds no sign-flip test or Holm-adjusted significance labels. Missingness need not be random, so complete-source effects and full-population bounds are reported together.
+
+\begin{table*}[t]
+\centering\small
+\caption{Exploratory factual joint effects, CORR25 minus comparator. Complete-source counts before pairing are 35 for CORR25 and the indicated count for the comparator. Paired intervals resample only their complete-source intersection. Units are proportions, not percentage points.}
+\label{tab:factual-paired}
+\begin{tabular}{lrrrr}
+\toprule
+Comparator & Complete sources & Paired sources & Difference & Pointwise 95\% interval\\
+\midrule
+ENERGY\_MATCH25 & 34 & 33 & $+0.0303$ & $[0.0000,0.0758]$\\
+RF-Inversion ETA03 & 36 & 34 & $0.0000$ & $[-0.1176,0.1324]$\\
+FlowEdit N26 & 33 & 30 & $0.0000$ & $[-0.1333,0.1333]$\\
+BOTH25 & 32 & 31 & $-0.0323$ & $[-0.1290,0.0484]$\\
+RF-Edit I08 & 39 & 35 & $+0.1429$ & $[0.0429,0.2571]$\\
+U25\_KV & 33 & 33 & $-0.0606$ & $[-0.1212,-0.0152]$\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Earlier judge audit and evidence provenance}
+The earlier \texttt{local-qwen-judge-v6} run contains 580 records: 520 outputs, 40 identical-source controls, and 20 repeats. Its rubric activated no subject or pattern retention criterion; 13 of 40 identical-source controls received edit-yes labels, with at least eight visually verified false positives. Those labels are retained as an evaluator-development audit and excluded from the factual benchmark comparison. Subsequent diagnostics distinguished prompt-conditioned judgment errors from schema-handling errors; the factual protocol separates neutral observations from target-rule evaluation.
+
+The reproducible release stores per-output records, source facts, frozen task rules, recovery provenance, and arm/source-paired summaries in \path{results/QwenFactualV2/}. The deterministic recovery and aggregation implementation is in \path{tools/factual_qwen_audit/}. The factual tables use that recovered archive exclusively. The previously reported CLIP, DINO, LPIPS, generation outputs, and source split are unchanged.

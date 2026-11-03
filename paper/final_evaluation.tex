@@ -30,7 +30,9 @@ RF-Edit I08 & 0.2453 & 0.0383 & 0.7875 & 0.2778 & 0.2688 & 0.0455 & 100\\
 \subsection{Source-paired estimates and localization benefit}
 Pointwise percentile 95\% intervals use 10,000 source-bootstrap resamples. Two-sided source sign-flip tests use 10,000 Monte Carlo draws with plus-one correction. For each metric separately, the reported analysis applies Holm adjustment to six comparisons of CORR25 with ENERGY, U25, FlowEdit N26, RF-Inversion ETA03, RF-Edit I08, and BOTH25. Table~\ref{tab:final-paired} reports these adjusted $p$ values; only selected effects are displayed. The frozen plan specifies source-paired inference and Holm adjustment; Appendix~\ref{sec:evaluation-provenance} documents its comparison grouping and the final analysis family. RF-Edit's single deterministic result is compared with each other arm's two-seed source mean.
 
-CORR25 reduces preservation LPIPS relative to ENERGY by 0.0084, with interval $[-0.0143,-0.0022]$ and adjusted $p=0.0238$. Full-image LPIPS decreases by 0.0064 ($p=0.0014$). This is a modest measured benefit from request-conditioned allocation beyond the global same-state magnitude control. Target CLIP differs by $+0.0007$ and directional CLIP by $-0.0018$, with both intervals spanning zero.
+CORR25 reduces preservation LPIPS relative to ENERGY by 0.0084 (1.6\% of the comparator mean), with pointwise interval $[-0.0143,-0.0022]$ and six-comparison adjusted $p=0.0238$. The adjusted value is 0.0702 for all 21 pairs per metric and 0.2856 for the 66-numeric-test family. Full-image LPIPS decreases by 0.0064, with six-family $p=0.0014$ and 66-test $p=0.0238$. Target CLIP differs by $+0.0007$ and directional CLIP by $-0.0018$, with both intervals spanning zero. These estimates compare allocation policies under the common instantaneous calibration rule.
+
+The actual trajectories have different injection integrals $I=\sum_i h_i\RMS(\widehat c_i)$. Across all 80 task--seed pairs, the means are 0.18074 for CORR and 0.18269 for ENERGY. Averaging pairwise relative differences within source gives $-1.02\%$; individual-pair differences range from $-6.67\%$ to $+1.03\%$. The maximum absolute corresponding-step difference is $9.53\%$. These integrals measure injected RMS over step length, not squared physical energy. The observed endpoint contrast includes both correction placement and subsequent state-dependent dose changes.
 
 \begin{table*}[t]
 \centering\footnotesize
@@ -86,12 +88,42 @@ Figure~\ref{fig:semantic-preservation} displays the joint semantic--preservation
 \label{fig:semantic-preservation}
 \end{figure*}
 
+\subsection{Task-specific factual comparison}
+\label{sec:factual-comparison}
+We additionally evaluate the 520 frozen outputs with local Qwen2.5-VL-7B-Instruct \cite{bai2025qwen25vl}. Single-image observations record visible facts without the desired target answer; externally frozen rules then test the full target condition and whether it changed from the source. Separate source--output judgments assess protected attributes. Method identities and numeric metrics are absent from the model input. This evaluates task-specific outcomes beyond embedding similarity. Appendix~\ref{sec:review-protocol} specifies the rules, calibration, and source-level statistics.
+
+\begin{table*}[t]
+\centering\small
+\caption{Factual VLM assessment of all 520 independent-study outputs. Each criterion shows positive / negative / unknown counts; positive means full-target achievement or protected-content preservation. Joint success combines achieved target, preserved requirements, and no flagged artifact. The last column gives identification bounds over all planned outputs, not confidence intervals. Unknown values stay in the denominator. RF-Edit has one deterministic output per source; other methods have two seeds.}
+\label{tab:factual-counts}
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{lrrrrr}
+\toprule
+Method & Outputs & Full target & Protected & Joint & Joint bounds (\%)\\
+\midrule
+TraceMemory (CORR25) & 80 & 36 / 43 / 1 & 39 / 21 / 20 & 16 / 56 / 8 & [20.0, 30.0]\\
+BOTH25 (secondary) & 80 & 42 / 38 / 0 & 38 / 18 / 24 & 19 / 48 / 13 & [23.8, 40.0]\\
+ENERGY\_MATCH25 & 80 & 35 / 45 / 0 & 37 / 19 / 24 & 14 / 57 / 9 & [17.5, 28.8]\\
+U25\_KV & 80 & 40 / 40 / 0 & 41 / 16 / 23 & 20 / 51 / 9 & [25.0, 36.3]\\
+FlowEdit N26 & 80 & 41 / 39 / 0 & 41 / 21 / 18 & 16 / 52 / 12 & [20.0, 35.0]\\
+RF-Inversion ETA03 & 80 & 42 / 38 / 0 & 34 / 28 / 18 & 16 / 58 / 6 & [20.0, 27.5]\\
+RF-Edit I08 & 40 & 4 / 36 / 0 & 25 / 6 / 9 & 3 / 36 / 1 & [7.5, 10.0]\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+CORR25 and FlowEdit each have 16 confirmed joint passes, while uniform correction has 20 (Table~\ref{tab:factual-counts}). Their unresolved joint counts are 8, 12, and 9, respectively. BOTH raises the confirmed full-target count from 36 to 42 relative to CORR25, while its protected-content count changes from 39 to 38 and its joint unknown count rises from 8 to 13. The factual comparison therefore resolves individual target and retention decisions rather than assigning a total ranking from embedding scores alone.
+
+For exploratory source-paired inference, a source contributes only when all planned seeds have resolved joint labels in both methods. CORR25 minus FlowEdit is $0.0000$ on 30 such sources, with pointwise 95\% bootstrap interval $[-0.1333,0.1333]$. CORR25 minus U25 is $-0.0606$ on 33 sources, with interval $[-0.1212,-0.0152]$; the difference against ENERGY is $+0.0303$ on 33 sources, with interval $[0.0000,0.0758]$. These unadjusted, complete-source contrasts accompany the full-population bounds because unresolved judgments can select different source subsets. Relative to RF-Edit, CORR25 has more confirmed target and joint passes, consistent with the adapter's source-preserving operating point. Thus the measured localization benefit over ENERGY coexists with stronger uniform-correction retention and no observed joint advantage over FlowEdit in the paired complete-source comparison.
+
+The audit resolves 384 complete records and retains 136 partially unresolved records. Offline recovery extracts explicit factual answers from 48 previously rejected observations and updates 51 dependent output records; it adds no model calls. All 15 basic calibration controls pass. All 520 artifact responses are negative, and the artifact controls contain only three clean examples, so the joint scores inherit an unmeasured sensitivity to positive artifacts.
+
 \subsection{Qualitative comparisons}
-Figure~\ref{fig:final-qualitative} shows the same four source requests across CORR25, BOTH25, ENERGY, and FlowEdit at seed 0.
+Figure~\ref{fig:final-qualitative} shows four manually selected illustrative source requests across CORR25, BOTH25, ENERGY, and FlowEdit at seed 0. They illustrate outcome types; aggregate estimates use every eligible source.
 
 In the grass-to-water example, CORR25 and ENERGY create a water setting and retain a shaggy-coated dog appearance; the muzzle, ears, pose, and collar also change. FlowEdit produces a more visibly different, short-coated dog. In the wall-recoloring example, CORR25 and ENERGY color the wall pink/red, with changes to the plant and panel geometry. FlowEdit keeps the wall white and colors the floor red. This case illustrates why the location of an attribute change matters in addition to its presence.
 
-The relational example gives the opposite ranking: FlowEdit brings the parrots' beaks together, while CORR25 and ENERGY keep them apart. In camera-to-phone replacement, all four outputs contain a phone. CORR25 and ENERGY introduce glasses, a hooded garment, color, and a changed face; FlowEdit retains the monochrome rendering while changing facial and clothing details. The examples therefore distinguish requested attributes, spatial relations, and instance identity. Aggregate CLIP, DINO, and preservation LPIPS summarize complementary feature comparisons; explicit task-level judgments are needed to score these particular outcomes.
+The relational example gives the opposite ranking: FlowEdit brings the parrots' beaks together, while CORR25 and ENERGY keep them apart. In camera-to-phone replacement, all four outputs contain a phone. CORR25 and ENERGY introduce glasses, a hooded garment, color, and a changed face; FlowEdit retains the monochrome rendering while changing facial and clothing details. The examples therefore distinguish requested attributes, spatial relations, and instance identity. Aggregate CLIP, DINO, and preservation LPIPS summarize complementary feature comparisons. The factual judgments in Section~\ref{sec:factual-comparison} apply fixed target rules to these outputs; for example, the wall rule requires red rather than any visible recoloring.
 
 BOTH25 places a visibly different, shorter-coated dog in water; its wall-recoloring output changes both the wall color and hanging plant. Its parrots remain apart, and its phone-replacement output changes facial, eyewear, clothing, and color details. These outcomes motivate evaluating the requested change and protected content separately.
 

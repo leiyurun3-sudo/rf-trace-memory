@@ -2,7 +2,7 @@
 
 **Spatial source correction and memory for training-free rectified-flow image editing**
 
-Updated **2 November 2026** with completed R84/R85 generation, automatic evaluation, and source-paired analysis.
+Updated **3 November 2026** with corrected factual-judge evidence for R85.
 
 [Manuscript PDF](paper/main.pdf) · [LaTeX source](paper/main.tex) · [Development controls](paper/development_dose.tex) · [Final evaluation](paper/final_evaluation.tex) · [Run instructions](docs/REPRODUCING_FINAL.md) · [Download packages](https://github.com/leiyurun3-sudo/rf-trace-memory/releases/tag/evaluated-r84-r85-20261102)
 
@@ -65,7 +65,33 @@ These results establish a modest controlled localization benefit and quantify th
 
 Seeds are averaged within each source before inference. Reported paired intervals use source-bootstrap resampling; tests use source sign flips and Holm correction across the final six-comparison analysis family within each metric. The frozen plan specifies CORR25 versus FlowEdit as the primary comparison and assigns the added ETA03 comparison to a separate secondary family; the final exporter groups all six CORR25 comparisons within each metric. The manuscript appendix documents this grouping difference and broader-family sensitivity. Full numeric records retain the comparison family, sample counts, and unrounded estimates.
 
-LPIPS preservation is a spatial-feature-map average weighted by the official edit-mask complement, with receptive-field spill across its boundary. Empty complements are excluded from that metric and counted explicitly. CLIP-T, directional CLIP, CLIP-I, DINOv2, LPIPS, PSNR, and SSIM exports are included. Task-specific evaluation now uses the [local Qwen-VL protocol and runner](tools/local_qwen_judge). A source-only rubric fixes applicable preservation requirements across methods, followed by anonymized output scoring. The current tables contain completed embedding/perceptual metrics; VLM scores will be added after running the local evaluator.
+LPIPS preservation is a spatial-feature-map average weighted by the official edit-mask complement, with receptive-field spill across its boundary. Empty complements are excluded from that metric and counted explicitly. CLIP-T, directional CLIP, CLIP-I, DINOv2, LPIPS, PSNR, and SSIM exports are included. Task-specific evaluation uses frozen task rules, separate factual observations of source and output, and paired preservation judgments with anonymized method identities. Corrected factual-judge results are reported below; the automatic R84/R85 metrics above are unchanged.
+
+### Corrected factual-judge evaluation (v2)
+
+The local Qwen-VL factual judge evaluated all 520 R85 outputs. Edit requires all frozen target conditions and a source-to-target change; protected means applicable source requirements are preserved. Joint pass requires edit and protected pass and no severe artifact. Counts use all planned outputs; unknowns remain unknown.
+
+| Method | Outputs | Edit pass / unknown | Protected pass / unknown | Joint pass / unknown |
+|---|---:|---:|---:|---:|
+| TraceMemory (CORR25) | 80 | 36 / 1 | 39 / 20 | 16 / 8 |
+| BOTH25 | 80 | 42 / 0 | 38 / 24 | 19 / 13 |
+| Same-state energy control | 80 | 35 / 0 | 37 / 24 | 14 / 9 |
+| Uniform correction, U25 | 80 | 40 / 0 | 41 / 23 | 20 / 9 |
+| FlowEdit N26 | 80 | 41 / 0 | 41 / 18 | 16 / 12 |
+| RF-Inversion ETA03 | 80 | 42 / 0 | 34 / 18 | 16 / 6 |
+| RF-Edit I08 adapter | 40 | 4 / 0 | 25 / 9 | 3 / 1 |
+
+Across all outputs, protected is unknown for 136, edit for 1, and joint for 58. A known failure can determine joint failure despite another unknown. All 520 severe-artifact judgments were negative. All 15 synthetic controls passed (six factual, six paired, three clean-artifact); there were no positive artifact controls, so artifact sensitivity remains unmeasured.
+
+Offline parser recovery extracted explicit answers from 48 previously rejected observations, affecting 51 records; one conflicting observation remains uncertain. This fixes response formatting, while semantic unknowns remain in the corrected records. The frozen task rules have specific coverage limits: the giant rule checks presence rather than lake position; the watercolor rule checks brushwork rather than Chinese style; and the sofa rule specifies rusty iron and allows color changes. The older v6 judge is excluded from ranking; this table uses the corrected v2 judge.
+
+The [archived records and summaries](results/QwenFactualV2) include pointwise, unadjusted bootstrap intervals on complete sources and paired complete-source intersections. Those intervals describe the selected complete sources, not the full 40-source population, and do not establish confirmatory superiority. Recompute the aggregation with Python 3:
+
+```bash
+python tools/factual_qwen_audit/recompute.py qwen_recomputed
+```
+
+The [recovery implementation](tools/factual_qwen_audit/recover.py) documents the original format repair; recomputation above starts from archived corrected records and requires no model or images.
 
 ### Qualitative examples
 
@@ -77,7 +103,7 @@ Columns: source, CORR25, BOTH25, energy control, FlowEdit N26. Rows: grass-to-wa
 
 The extended manuscript contains the method, experiments, statistical analysis, and appendices. It accompanies the executable evaluation code and archived numerical evidence.
 
-Run local AI evaluation on the server from `tools/local_qwen_judge` with `bash start_qwen_judge.sh`. It downloads model weights once, then scores the native images offline; no images are uploaded. See the runner README for inputs and output files.
+The current factual-judge comparison is reproduced from the corrected records in `results/QwenFactualV2` using `tools/factual_qwen_audit/recompute.py`. Inference ran locally with Qwen2.5-VL-7B-Instruct; images were not uploaded. The earlier runner under `tools/local_qwen_judge` is historical, and its v6 scores are excluded from the current comparison.
 
 ## Files and reproduction
 
@@ -85,11 +111,12 @@ Run local AI evaluation on the server from `tools/local_qwen_judge` with `bash s
 |---|---|
 | [paper/main.pdf](paper/main.pdf) | Updated extended manuscript and appendices |
 | [paper/main.tex](paper/main.tex) | Manuscript source incorporating final evaluated results |
+| [results/QwenFactualV2](results/QwenFactualV2) | Corrected factual-judge records, recovery audit, and summaries |
 | [results/R85](results/R85) | Independent comparison: evaluation CSV, metrics, summaries, source-paired evidence |
 | [results/R84](results/R84) | Development controls and dose response |
 | [experiments/R84_R85_FinalNight](experiments/R84_R85_FinalNight) | Frozen code, plans, selectors, launchers, evaluators, and statistics |
 | [docs/REPRODUCING_FINAL.md](docs/REPRODUCING_FINAL.md) | Environment, generation, evaluation-only restart, and package layout |
-| [Release assets](https://github.com/leiyurun3-sudo/rf-trace-memory/releases/tag/evaluated-r84-r85-20261102) | Intact runnable package, compact evaluated results, and manuscript PDF |
+| [Release assets](https://github.com/leiyurun3-sudo/rf-trace-memory/releases/tag/evaluated-r84-r85-20261102) | Frozen 2 November package, numerical results, and manuscript snapshot; current PDF is linked above |
 | [README_R71_R73.md](README_R71_R73.md) | Archived early timing/budget study; original code and results remain available |
 
 The runnable ZIP contains benchmark inputs and frozen references needed by the nested launchers. Native generated PNGs remain on the experiment server for image-metric reevaluation; compact return packages provide thumbnails, comparisons, numerical results, and small logs. Historical absolute paths in frozen records preserve run provenance. The reproduction guide identifies the runtime root and restore procedure.

@@ -38,5 +38,18 @@ The frozen plans specify source-level seed averaging, paired source bootstrap, s
 
 CLIP uses ViT-L/14, DINO uses DINOv2-base full-image features, and LPIPS uses AlexNet. Preservation LPIPS weights its spatial map by the area-resampled official edit-mask complement; feature receptive fields may cross the boundary. The archived \texttt{pixel\_ssim} is a background-region metric whose local windows can also cross that boundary. Full-image DINO and a crop that spans the whole source do not supply an independent local-pattern measurement. NFE records complete standalone calls: CORR, BOTH, and ENERGY 97; U25 91; FlowEdit N26 52; ETA03 56; RF-Edit I08 100. R84 FlowEdit N28 uses 56 calls and remains a development control, separate from the final N26 benchmark.
 
+\paragraph{Actual-trajectory correction audit.}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/actual_rollout_impulse.pdf}
+\caption{Actual-trajectory correction magnitudes for CORR25 and ENERGY over 40 independent sources. Panels (a,b) average two seeds within each source, then weight sources equally. Panel (c) plots each source's relative cumulative impulse difference $100(I^{\rm CORR}-I^{\rm ENERGY})/I^{\rm ENERGY}$ in gray and its mean in black, where $I_k=\sum_{i\leq k}h_i\RMS(\widehat c_i)$. Common-state RMS calibration does not fix accumulated dose along distinct trajectories.}
+\label{fig:actual-rollout-audit}
+\end{figure*}
+All 80 pairs contain 28 step records. Mean final impulse is 0.18074 for CORR25 and 0.18269 for ENERGY; the source-mean relative difference is approximately $-1.02\%$. Individual-pair differences range from $-6.67\%$ to $+1.03\%$, and the maximum absolute single-step relative RMS difference is $9.53\%$. These are diagnostics of injected latent magnitude. Figure~\ref{fig:actual-rollout-audit} and its per-step CSV retain the trajectory dependence of the control.
+
 \paragraph{Multiplicity sensitivity of the final comparison.}
 The sensitivity analyses use broader comparison families: for preservation LPIPS, its adjusted $p$ is 0.0702 over all 21 arm pairs within the metric and 0.2856 over the additional 66-test numeric family. The full-image LPIPS improvement remains significant under the 66-test adjustment ($p=0.0238$). The main table uses the six CORR-versus-comparator contrasts within each metric. The broader families answer different, explicitly recorded multiplicity questions; all exported estimates remain available.
+
+
+\paragraph{Task-specific factual outcomes.}
+The local factual evaluator covers the same 520 independent-study outputs. Table~\ref{tab:factual-counts} and Appendix~\ref{app:factual-v2} report the recovered records and scope: 384 fully resolved, 136 partially unresolved, and 58 unresolved joint outcomes. The offline audit repairs explicit saved factual fields without new model calls or changes to pair-preservation and artifact judgments. Historical v6 labels are excluded. The archived arm counts, paired-source sample sizes, and 5,000-resample unadjusted bootstrap intervals are independently recomputable from the released records.
