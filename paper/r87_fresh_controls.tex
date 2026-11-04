@@ -1,0 +1,83 @@
+\section{Fresh-Source Direction Controls at Matched Realized RMS}
+\label{sec:r87-fresh}
+Fresh-source controls confirm a spatial-allocation effect at matched realized amplitudes. Request weighting improves preservation over nonzero global correction, shifted weights, and block-permuted weights. The prespecified primary and secondary tests support these contrasts, and the permutation contrast also passes the all-18 sensitivity family.
+
+\subsection{Prespecified population and intervention}
+The R87 protocol was frozen before generation. It specifies 20 previously unused PIE-Bench sources, two per category, with nonempty official edit and preservation regions. Selection excludes all 70 historical case IDs and image-content duplicates. All 160 planned outputs complete automatic evaluation successfully: 20 sources, seeds 0 and 17, and REQ/GLB/SFT/PERM. All six metrics have 20 complete source pairs for every contrast, with no missing jobs or outcome-based exclusions. Official masks enter eligibility and evaluation; inference uses prompts and reference states.
+
+For each source and seed, a newly generated REQ run applies the direct CORR25 correction $0.25P\odot c_i$, with $P=1-0.75E$, and records its 28-step RMS sequence $b_{s,i}$. GLB, SFT, and PERM compute their own current-state residuals and apply
+\begin{equation}
+\widehat c_i=b_{s,i}\frac{v_i}{\operatorname{RMS}(v_i)},\qquad
+v_i\in\{c_i,\widetilde P\odot c_i,P^\pi\odot c_i\}.
+\label{eq:r87-matching}
+\end{equation}
+GLB supplies nonzero full-image correction. SFT rolls the $64\times64$ weight map by 32 cells on each axis. PERM partitions it into an $8\times8$ grid of $8\times8$-cell blocks and permutes those blocks by fixed SHA256 ordering with the source-specific key \texttt{R87-permute-v1:case}. The permutation is shared across seeds and steps. SFT and PERM preserve the weight histogram; PERM changes spatial arrangement with prompt text held fixed. All arms share the 28-step schedule, prompts, source-memory settings, and FLUX.1-dev model at $512\times512$. Actual states and target-field responses evolve with the assigned direction.
+
+\paragraph{Realized-RMS audit and execution cost.}
+The scalar-log audit covers 4,480 step records: 1,120 REQ anchor steps and 3,360 control-to-anchor comparisons. Maximum relative and absolute correction-RMS discrepancies are $1.75\times10^{-7}$ and $5.96\times10^{-8}$. The maximum step-size-weighted discrepancy is $1.82\times10^{-9}$; the maximum relative cumulative-impulse discrepancy is $2.48\times10^{-8}$. Anchor profiles and exported step records agree throughout. These quantities describe the realized correction magnitudes recorded along each trajectory.
+
+The shared-reference execution costs 11,440 transformer calls: $40(97+3\times63)$. Each new REQ anchor uses 28 inversion calls, six probes, and 63 generation/reference-memory calls. Each dependent control reuses the reference and probes and adds 63 calls (28 target, 28 current-source, and seven memory captures). The recorded 97-call standalone and 194-call unshared anchor-plus-control accounting differ from this measured incremental execution cost. Each control uses its corresponding REQ-generated RMS profile.
+
+
+\subsection{Source-level outcomes and inference}
+Seeds are first averaged within each source, then the 20 sources receive equal weight. Table~\ref{tab:r87-means} reports all arm means. The prespecified primary endpoint is REQ minus GLB preservation LPIPS, tested by a two-sided exact source sign-flip test at $\alpha=0.05$. The prespecified secondary family contains REQ--SFT and REQ--PERM preservation LPIPS, with Holm adjustment across those two tests. Pointwise 95\% CIs use 10,000 paired source-bootstrap draws with seed 87004. Source IDs are sorted; the bootstrap generator is consumed sequentially in GLB/SFT/PERM and protocol-metric order. The exact test enumerates all $2^{20}$ source-sign assignments, with absolute signed sums and tie tolerance $10^{-12}$.
+
+The primary difference is $-0.0126$ ($[-0.0235,-0.0038]$, exact $p=0.0061$), a 2.28\% reduction relative to GLB. The SFT and PERM differences are $-0.0223$ ($[-0.0402,-0.0077]$) and $-0.0197$ ($[-0.0328,-0.0091]$), with secondary Holm values 0.0045 and 0.0004. The PERM reduction is 3.53\% of its mean. These results confirm that spatial direction changes preservation when the applied magnitude sequence is fixed.
+
+\begin{table*}[t]
+\centering\small
+\caption{Fresh-source means after averaging two seeds within each of 20 sources. Each arm has 40 completed outputs. All 20 sources support both full-image and preservation-region metrics. Arrows indicate the preferred direction; bold marks the best mean in each column.}
+\label{tab:r87-means}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Arm & Target CLIP $\uparrow$ & Dir. CLIP $\uparrow$ & DINO $\uparrow$ & LPIPS full $\downarrow$ & LPIPS pres. $\downarrow$ & Pres. MAE $\downarrow$\\
+\midrule
+REQ & 0.2600 & \textbf{0.0883} & 0.5691 & \textbf{0.5644} & \textbf{0.5381} & \textbf{0.1392}\\
+GLB & 0.2608 & 0.0875 & \textbf{0.5805} & 0.5716 & 0.5506 & 0.1434\\
+SFT & 0.2596 & 0.0878 & 0.5730 & 0.5788 & 0.5604 & 0.1477\\
+PERM & \textbf{0.2613} & 0.0833 & 0.5683 & 0.5780 & 0.5578 & 0.1463\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{Prespecified sensitivity families.}
+Holm adjustment across the three preservation contrasts gives 0.0089, 0.0089, and 0.0005 for GLB, SFT, and PERM. Across all 18 contrast--metric tests, preservation values are 0.0615, 0.0581, and 0.0026. Table~\ref{tab:r87-all18} reports every contrast, its pointwise interval, exact $p$, and 18-test adjusted value. These sensitivity families were specified in the R87 protocol and complement its primary and two-test secondary analyses. The original R85 six-comparison reporting family and R86 post-hoc dose tests retain their separate provenance and analysis populations.
+
+\begin{table*}[t]
+\centering\small
+\caption{All 18 fresh-source contrasts, REQ minus comparator, with 20 paired sources each. Negative LPIPS/MAE favors REQ. Intervals are pointwise 95\% source-bootstrap CIs; $p_{H18}$ adjusts all rows. The primary and secondary families are specified in the text.}
+\label{tab:r87-all18}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrr}
+\toprule
+Control & Metric & Difference & 95\% CI & Exact $p$ & $p_{H18}$\\
+\midrule
+GLB & LPIPS pres. & $-0.0126$ & $[-0.0235,-0.0038]$ & 0.0061 & 0.0615\\
+GLB & Target CLIP & $-0.0007$ & $[-0.0028,+0.0015]$ & 0.5203 & 1.0000\\
+GLB & Dir. CLIP & $+0.0008$ & $[-0.0040,+0.0057]$ & 0.7561 & 1.0000\\
+GLB & DINO & $-0.0114$ & $[-0.0300,+0.0038]$ & 0.2290 & 1.0000\\
+GLB & LPIPS full & $-0.0072$ & $[-0.0122,-0.0028]$ & 0.0054 & 0.0595\\
+GLB & Pres. MAE & $-0.0042$ & $[-0.0080,-0.0013]$ & 0.0037 & 0.0516\\
+\midrule
+SFT & LPIPS pres. & $-0.0223$ & $[-0.0402,-0.0077]$ & 0.0045 & 0.0581\\
+SFT & Target CLIP & $+0.0004$ & $[-0.0032,+0.0046]$ & 0.8554 & 1.0000\\
+SFT & Dir. CLIP & $+0.0005$ & $[-0.0058,+0.0069]$ & 0.8735 & 1.0000\\
+SFT & DINO & $-0.0039$ & $[-0.0224,+0.0127]$ & 0.7008 & 1.0000\\
+SFT & LPIPS full & $-0.0143$ & $[-0.0237,-0.0055]$ & 0.0048 & 0.0581\\
+SFT & Pres. MAE & $-0.0085$ & $[-0.0143,-0.0041]$ & 0.0001 & 0.0021\\
+\midrule
+PERM & LPIPS pres. & $-0.0197$ & $[-0.0328,-0.0091]$ & 0.0002 & 0.0026\\
+PERM & Target CLIP & $-0.0013$ & $[-0.0041,+0.0015]$ & 0.3925 & 1.0000\\
+PERM & Dir. CLIP & $+0.0051$ & $[-0.0029,+0.0146]$ & 0.2908 & 1.0000\\
+PERM & DINO & $+0.0008$ & $[-0.0101,+0.0127]$ & 0.9010 & 1.0000\\
+PERM & LPIPS full & $-0.0135$ & $[-0.0206,-0.0074]$ & $2.29\times10^{-5}$ & 0.0004\\
+PERM & Pres. MAE & $-0.0070$ & $[-0.0112,-0.0036]$ & 0.0001 & 0.0018\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Target and directional CLIP intervals span zero for all three controls. The directional intervention establishes improved source retention; text alignment is assessed as a separate outcome. The block-permuted comparison tests spatial arrangement within the recorded request-weight distribution. The inference concerns this model, eligible source population, anchor construction, and fixed memory settings.
+
+\paragraph{Evidence and separate identity calibration.}
+The scalar audit is recorded in \texttt{audit\_r87.json}. The result archive retains \texttt{protocol.json}, \texttt{r87\_statistics.json}, \texttt{r87\_paired.csv}, and \texttt{r87\_arm\_means.csv}, together with per-step RMS records and response maps. The planned Qwen identity-control experiment uses 40 original benchmark sources with 40 fresh reference observations and 40 fresh source-as-output observations. Its results await a separate archive and contribute no identity-calibration measurement to R87.

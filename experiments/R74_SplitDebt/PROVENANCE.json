@@ -1,0 +1,30 @@
+{
+  "source_archive": "R74_SplitDebt_Update.zip",
+  "source_location": "delivery",
+  "source_archive_bytes": 3727,
+  "strip_root": false,
+  "source_member_root": "",
+  "included_members": [
+    {
+      "path": "install_r74.py",
+      "bytes": 7706,
+      "crc32": 3190226170
+    },
+    {
+      "path": "R74_README.txt",
+      "bytes": 435,
+      "crc32": 1248101567
+    }
+  ],
+  "omitted_inputs": [],
+  "excluded_members": [],
+  "text_normalized_members": [],
+  "archive_identity": "Original ZIP byte count and member CRC32 values; no new hashes computed.",
+  "status": "Archived workflow; no execution during synchronization.",
+  "archived_run_plan": {
+    "path": "plan.json",
+    "source_archive": "R74_SplitDebt_Results.zip",
+    "source_location": "Downloads",
+    "status": "Actual 32-job archived plan, 16 completed; retained separately from installer synthesis."
+  }
+}

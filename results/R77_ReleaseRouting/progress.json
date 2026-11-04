@@ -1,0 +1,13 @@
+{
+  "pid": 274682,
+  "status": "completed",
+  "stage": "completed",
+  "planned": 84,
+  "completed": 84,
+  "failed": 0,
+  "updated": 1793280837.5204687,
+  "job": "R77_rug_floor_s17_REF25_KV",
+  "step": 28,
+  "steps": 28,
+  "new_nfe": 6118
+}

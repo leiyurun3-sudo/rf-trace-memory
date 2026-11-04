@@ -1,0 +1,1697 @@
+{
+  "source_archive": "R86_ActualDoseControls_pilot_v2.zip",
+  "source_location": "Downloads",
+  "source_archive_bytes": 5213404,
+  "included_members": [
+    {
+      "path": "plan.json",
+      "bytes": 177162,
+      "crc32": 2370473974
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 6514,
+      "crc32": 4179306143
+    },
+    {
+      "path": "summary.json",
+      "bytes": 945,
+      "crc32": 3841524036
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 154607,
+      "crc32": 3868860428
+    },
+    {
+      "path": "arm_summary.csv",
+      "bytes": 2300,
+      "crc32": 1612548253
+    },
+    {
+      "path": "comparison_metrics.csv",
+      "bytes": 162206,
+      "crc32": 3957236122
+    },
+    {
+      "path": "comparison_arm_summary.csv",
+      "bytes": 2300,
+      "crc32": 1612548253
+    },
+    {
+      "path": "category_summary.csv",
+      "bytes": 7959,
+      "crc32": 2941756360
+    },
+    {
+      "path": "progress.json",
+      "bytes": 244,
+      "crc32": 1511809167
+    },
+    {
+      "path": "evaluation.csv",
+      "bytes": 154747,
+      "crc32": 2899589587
+    },
+    {
+      "path": "evaluation_config.json",
+      "bytes": 9078,
+      "crc32": 1501923493
+    },
+    {
+      "path": "statistics.json",
+      "bytes": 85709,
+      "crc32": 1860064682
+    },
+    {
+      "path": "dose_audit.json",
+      "bytes": 428,
+      "crc32": 1880712890
+    },
+    {
+      "path": "r86_paired.csv",
+      "bytes": 5310,
+      "crc32": 3475568632
+    },
+    {
+      "path": "anchor_evaluation.csv",
+      "bytes": 17626,
+      "crc32": 2261564517
+    },
+    {
+      "path": "localization_L.csv",
+      "bytes": 13542,
+      "crc32": 2305994276
+    },
+    {
+      "path": "localization_metadata.json",
+      "bytes": 818,
+      "crc32": 4018579373
+    },
+    {
+      "path": "anchor_previews/R85_pie_000000000058_s0_RELEASE_CORR25.jpg",
+      "bytes": 15427,
+      "crc32": 3506538050
+    },
+    {
+      "path": "anchor_previews/R85_pie_111000000009_s0_RELEASE_CORR25.jpg",
+      "bytes": 19557,
+      "crc32": 3166966171
+    },
+    {
+      "path": "anchor_previews/R85_pie_122000000002_s0_RELEASE_CORR25.jpg",
+      "bytes": 13139,
+      "crc32": 193844302
+    },
+    {
+      "path": "anchor_previews/R85_pie_224000000007_s0_RELEASE_CORR25.jpg",
+      "bytes": 10925,
+      "crc32": 274768477
+    },
+    {
+      "path": "anchor_previews/R85_pie_312000000006_s0_RELEASE_CORR25.jpg",
+      "bytes": 14393,
+      "crc32": 2256250100
+    },
+    {
+      "path": "anchor_previews/R85_pie_422000000001_s0_RELEASE_CORR25.jpg",
+      "bytes": 16844,
+      "crc32": 1935945767
+    },
+    {
+      "path": "anchor_previews/R85_pie_614000000004_s0_RELEASE_CORR25.jpg",
+      "bytes": 20836,
+      "crc32": 1127454732
+    },
+    {
+      "path": "anchor_previews/R85_pie_723000000004_s0_RELEASE_CORR25.jpg",
+      "bytes": 18105,
+      "crc32": 487981276
+    },
+    {
+      "path": "anchor_previews/R85_pie_813000000003_s0_RELEASE_CORR25.jpg",
+      "bytes": 12338,
+      "crc32": 1866976783
+    },
+    {
+      "path": "anchor_previews/R85_pie_812000000004_s0_RELEASE_CORR25.jpg",
+      "bytes": 19939,
+      "crc32": 3860618297
+    },
+    {
+      "path": "evidence/overnight_arm_summary.csv",
+      "bytes": 5604,
+      "crc32": 836812896
+    },
+    {
+      "path": "evidence/overnight_comparisons.csv",
+      "bytes": 9478,
+      "crc32": 2691058087
+    },
+    {
+      "path": "evidence/overnight_evidence.json",
+      "bytes": 55797,
+      "crc32": 4147836408
+    },
+    {
+      "path": "evidence/overnight_source_values.csv",
+      "bytes": 32072,
+      "crc32": 3692355991
+    },
+    {
+      "path": "sources/312000000006.jpg",
+      "bytes": 18948,
+      "crc32": 2257767502
+    },
+    {
+      "path": "sources/723000000004.jpg",
+      "bytes": 20655,
+      "crc32": 3490782177
+    },
+    {
+      "path": "sources/614000000004.jpg",
+      "bytes": 13198,
+      "crc32": 2449600446
+    },
+    {
+      "path": "sources/812000000004.jpg",
+      "bytes": 25607,
+      "crc32": 1541620768
+    },
+    {
+      "path": "sources/111000000009.jpg",
+      "bytes": 25802,
+      "crc32": 2547772996
+    },
+    {
+      "path": "sources/000000000058.jpg",
+      "bytes": 22373,
+      "crc32": 835374749
+    },
+    {
+      "path": "sources/122000000002.jpg",
+      "bytes": 13030,
+      "crc32": 1461179866
+    },
+    {
+      "path": "sources/422000000001.jpg",
+      "bytes": 21177,
+      "crc32": 2840589355
+    },
+    {
+      "path": "sources/813000000003.jpg",
+      "bytes": 12124,
+      "crc32": 3863057681
+    },
+    {
+      "path": "sources/224000000007.jpg",
+      "bytes": 14238,
+      "crc32": 1201804614
+    },
+    {
+      "path": "R86_pie_000000000058_s0_SHIFT_1/preview.jpg",
+      "bytes": 17368,
+      "crc32": 2668352001
+    },
+    {
+      "path": "R86_pie_000000000058_s0_SHIFT_1/pattern.jpg",
+      "bytes": 17428,
+      "crc32": 438983830
+    },
+    {
+      "path": "R86_pie_000000000058_s0_SHIFT_1/route_mask.jpg",
+      "bytes": 17777,
+      "crc32": 1962934744
+    },
+    {
+      "path": "R86_pie_000000000058_s0_SHIFT_1/edit_response64.jpg",
+      "bytes": 1732,
+      "crc32": 4188020396
+    },
+    {
+      "path": "R86_pie_000000000058_s0_SHIFT_1/step_summary.json",
+      "bytes": 85412,
+      "crc32": 3184654795
+    },
+    {
+      "path": "R86_pie_000000000058_s0_SHIFT_1/request_maps.npz",
+      "bytes": 70322,
+      "crc32": 2418415890
+    },
+    {
+      "path": "R86_pie_000000000058_s0_SHIFT_1/request_maps.json",
+      "bytes": 727,
+      "crc32": 3643350098
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_1/preview.jpg",
+      "bytes": 16182,
+      "crc32": 4025633271
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_1/pattern.jpg",
+      "bytes": 16241,
+      "crc32": 2494362735
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_1/route_mask.jpg",
+      "bytes": 17781,
+      "crc32": 128266856
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_1/edit_response64.jpg",
+      "bytes": 1732,
+      "crc32": 4188020396
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_1/step_summary.json",
+      "bytes": 85401,
+      "crc32": 1885130462
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_1/request_maps.npz",
+      "bytes": 28293,
+      "crc32": 1194502569
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_1/request_maps.json",
+      "bytes": 728,
+      "crc32": 2633800181
+    },
+    {
+      "path": "R86_pie_000000000058_s0_CORR_07/preview.jpg",
+      "bytes": 15754,
+      "crc32": 1221274092
+    },
+    {
+      "path": "R86_pie_000000000058_s0_CORR_07/pattern.jpg",
+      "bytes": 15723,
+      "crc32": 124545358
+    },
+    {
+      "path": "R86_pie_000000000058_s0_CORR_07/route_mask.jpg",
+      "bytes": 17781,
+      "crc32": 128266856
+    },
+    {
+      "path": "R86_pie_000000000058_s0_CORR_07/edit_response64.jpg",
+      "bytes": 1732,
+      "crc32": 4188020396
+    },
+    {
+      "path": "R86_pie_000000000058_s0_CORR_07/step_summary.json",
+      "bytes": 86018,
+      "crc32": 1201241377
+    },
+    {
+      "path": "R86_pie_000000000058_s0_CORR_07/request_maps.npz",
+      "bytes": 42036,
+      "crc32": 3145642164
+    },
+    {
+      "path": "R86_pie_000000000058_s0_CORR_07/request_maps.json",
+      "bytes": 727,
+      "crc32": 3599111229
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_07/preview.jpg",
+      "bytes": 16223,
+      "crc32": 3716474015
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_07/pattern.jpg",
+      "bytes": 16227,
+      "crc32": 1792703280
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_07/route_mask.jpg",
+      "bytes": 17781,
+      "crc32": 128266856
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_07/edit_response64.jpg",
+      "bytes": 1732,
+      "crc32": 4188020396
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_07/step_summary.json",
+      "bytes": 86106,
+      "crc32": 3857175776
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_07/request_maps.npz",
+      "bytes": 28293,
+      "crc32": 1194502569
+    },
+    {
+      "path": "R86_pie_000000000058_s0_GLOBAL_07/request_maps.json",
+      "bytes": 729,
+      "crc32": 2574788793
+    },
+    {
+      "path": "R86_pie_111000000009_s0_SHIFT_1/preview.jpg",
+      "bytes": 20555,
+      "crc32": 518949935
+    },
+    {
+      "path": "R86_pie_111000000009_s0_SHIFT_1/pattern.jpg",
+      "bytes": 20601,
+      "crc32": 1152323692
+    },
+    {
+      "path": "R86_pie_111000000009_s0_SHIFT_1/route_mask.jpg",
+      "bytes": 19726,
+      "crc32": 235877824
+    },
+    {
+      "path": "R86_pie_111000000009_s0_SHIFT_1/edit_response64.jpg",
+      "bytes": 1960,
+      "crc32": 860170815
+    },
+    {
+      "path": "R86_pie_111000000009_s0_SHIFT_1/step_summary.json",
+      "bytes": 85279,
+      "crc32": 3345171200
+    },
+    {
+      "path": "R86_pie_111000000009_s0_SHIFT_1/request_maps.npz",
+      "bytes": 71569,
+      "crc32": 17507472
+    },
+    {
+      "path": "R86_pie_111000000009_s0_SHIFT_1/request_maps.json",
+      "bytes": 727,
+      "crc32": 1435425627
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_1/preview.jpg",
+      "bytes": 20204,
+      "crc32": 3708775854
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_1/pattern.jpg",
+      "bytes": 20267,
+      "crc32": 2648002171
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_1/route_mask.jpg",
+      "bytes": 19741,
+      "crc32": 1396525046
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_1/edit_response64.jpg",
+      "bytes": 1960,
+      "crc32": 860170815
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_1/step_summary.json",
+      "bytes": 85502,
+      "crc32": 105702695
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_1/request_maps.npz",
+      "bytes": 28767,
+      "crc32": 3155387819
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_1/request_maps.json",
+      "bytes": 728,
+      "crc32": 3485153903
+    },
+    {
+      "path": "R86_pie_111000000009_s0_CORR_07/preview.jpg",
+      "bytes": 18842,
+      "crc32": 1679749136
+    },
+    {
+      "path": "R86_pie_111000000009_s0_CORR_07/pattern.jpg",
+      "bytes": 18883,
+      "crc32": 2681504856
+    },
+    {
+      "path": "R86_pie_111000000009_s0_CORR_07/route_mask.jpg",
+      "bytes": 19741,
+      "crc32": 1396525046
+    },
+    {
+      "path": "R86_pie_111000000009_s0_CORR_07/edit_response64.jpg",
+      "bytes": 1960,
+      "crc32": 860170815
+    },
+    {
+      "path": "R86_pie_111000000009_s0_CORR_07/step_summary.json",
+      "bytes": 86098,
+      "crc32": 3202272121
+    },
+    {
+      "path": "R86_pie_111000000009_s0_CORR_07/request_maps.npz",
+      "bytes": 42814,
+      "crc32": 1376665270
+    },
+    {
+      "path": "R86_pie_111000000009_s0_CORR_07/request_maps.json",
+      "bytes": 727,
+      "crc32": 518607890
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_07/preview.jpg",
+      "bytes": 19201,
+      "crc32": 3918526013
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_07/pattern.jpg",
+      "bytes": 19270,
+      "crc32": 2866963553
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_07/route_mask.jpg",
+      "bytes": 19741,
+      "crc32": 1396525046
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_07/edit_response64.jpg",
+      "bytes": 1960,
+      "crc32": 860170815
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_07/step_summary.json",
+      "bytes": 86199,
+      "crc32": 4036958133
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_07/request_maps.npz",
+      "bytes": 28767,
+      "crc32": 3155387819
+    },
+    {
+      "path": "R86_pie_111000000009_s0_GLOBAL_07/request_maps.json",
+      "bytes": 729,
+      "crc32": 4116005630
+    },
+    {
+      "path": "R86_pie_122000000002_s0_SHIFT_1/preview.jpg",
+      "bytes": 13108,
+      "crc32": 2435447244
+    },
+    {
+      "path": "R86_pie_122000000002_s0_SHIFT_1/pattern.jpg",
+      "bytes": 13159,
+      "crc32": 4092739565
+    },
+    {
+      "path": "R86_pie_122000000002_s0_SHIFT_1/route_mask.jpg",
+      "bytes": 18804,
+      "crc32": 2393300486
+    },
+    {
+      "path": "R86_pie_122000000002_s0_SHIFT_1/edit_response64.jpg",
+      "bytes": 1853,
+      "crc32": 961794242
+    },
+    {
+      "path": "R86_pie_122000000002_s0_SHIFT_1/step_summary.json",
+      "bytes": 85273,
+      "crc32": 2220069492
+    },
+    {
+      "path": "R86_pie_122000000002_s0_SHIFT_1/request_maps.npz",
+      "bytes": 68887,
+      "crc32": 394260384
+    },
+    {
+      "path": "R86_pie_122000000002_s0_SHIFT_1/request_maps.json",
+      "bytes": 727,
+      "crc32": 3735003708
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_1/preview.jpg",
+      "bytes": 13375,
+      "crc32": 3471366672
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_1/pattern.jpg",
+      "bytes": 13461,
+      "crc32": 150940216
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_1/route_mask.jpg",
+      "bytes": 18799,
+      "crc32": 3500105246
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_1/edit_response64.jpg",
+      "bytes": 1853,
+      "crc32": 961794242
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_1/step_summary.json",
+      "bytes": 85307,
+      "crc32": 3738097208
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_1/request_maps.npz",
+      "bytes": 27722,
+      "crc32": 779433574
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_1/request_maps.json",
+      "bytes": 728,
+      "crc32": 481764915
+    },
+    {
+      "path": "R86_pie_122000000002_s0_CORR_07/preview.jpg",
+      "bytes": 14184,
+      "crc32": 3628987248
+    },
+    {
+      "path": "R86_pie_122000000002_s0_CORR_07/pattern.jpg",
+      "bytes": 14214,
+      "crc32": 3360531993
+    },
+    {
+      "path": "R86_pie_122000000002_s0_CORR_07/route_mask.jpg",
+      "bytes": 18799,
+      "crc32": 3500105246
+    },
+    {
+      "path": "R86_pie_122000000002_s0_CORR_07/edit_response64.jpg",
+      "bytes": 1853,
+      "crc32": 961794242
+    },
+    {
+      "path": "R86_pie_122000000002_s0_CORR_07/step_summary.json",
+      "bytes": 86045,
+      "crc32": 3206275286
+    },
+    {
+      "path": "R86_pie_122000000002_s0_CORR_07/request_maps.npz",
+      "bytes": 41178,
+      "crc32": 1996109556
+    },
+    {
+      "path": "R86_pie_122000000002_s0_CORR_07/request_maps.json",
+      "bytes": 727,
+      "crc32": 4046948594
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_07/preview.jpg",
+      "bytes": 14014,
+      "crc32": 2516432384
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_07/pattern.jpg",
+      "bytes": 14038,
+      "crc32": 2549539469
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_07/route_mask.jpg",
+      "bytes": 18799,
+      "crc32": 3500105246
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_07/edit_response64.jpg",
+      "bytes": 1853,
+      "crc32": 961794242
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_07/step_summary.json",
+      "bytes": 86080,
+      "crc32": 3649444404
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_07/request_maps.npz",
+      "bytes": 27722,
+      "crc32": 779433574
+    },
+    {
+      "path": "R86_pie_122000000002_s0_GLOBAL_07/request_maps.json",
+      "bytes": 729,
+      "crc32": 3073916439
+    },
+    {
+      "path": "R86_pie_224000000007_s0_SHIFT_1/preview.jpg",
+      "bytes": 11155,
+      "crc32": 2887944900
+    },
+    {
+      "path": "R86_pie_224000000007_s0_SHIFT_1/pattern.jpg",
+      "bytes": 11213,
+      "crc32": 4090679544
+    },
+    {
+      "path": "R86_pie_224000000007_s0_SHIFT_1/route_mask.jpg",
+      "bytes": 25239,
+      "crc32": 978051712
+    },
+    {
+      "path": "R86_pie_224000000007_s0_SHIFT_1/edit_response64.jpg",
+      "bytes": 2288,
+      "crc32": 1901101337
+    },
+    {
+      "path": "R86_pie_224000000007_s0_SHIFT_1/step_summary.json",
+      "bytes": 85216,
+      "crc32": 3406025499
+    },
+    {
+      "path": "R86_pie_224000000007_s0_SHIFT_1/request_maps.npz",
+      "bytes": 72261,
+      "crc32": 3229958244
+    },
+    {
+      "path": "R86_pie_224000000007_s0_SHIFT_1/request_maps.json",
+      "bytes": 727,
+      "crc32": 924858654
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_1/preview.jpg",
+      "bytes": 11074,
+      "crc32": 2268903672
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_1/pattern.jpg",
+      "bytes": 11162,
+      "crc32": 1380829162
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_1/route_mask.jpg",
+      "bytes": 25212,
+      "crc32": 949358962
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_1/edit_response64.jpg",
+      "bytes": 2288,
+      "crc32": 1901101337
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_1/step_summary.json",
+      "bytes": 85374,
+      "crc32": 1724793661
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_1/request_maps.npz",
+      "bytes": 29011,
+      "crc32": 2555280416
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_1/request_maps.json",
+      "bytes": 728,
+      "crc32": 566794446
+    },
+    {
+      "path": "R86_pie_224000000007_s0_CORR_07/preview.jpg",
+      "bytes": 11005,
+      "crc32": 928065515
+    },
+    {
+      "path": "R86_pie_224000000007_s0_CORR_07/pattern.jpg",
+      "bytes": 11063,
+      "crc32": 3399390482
+    },
+    {
+      "path": "R86_pie_224000000007_s0_CORR_07/route_mask.jpg",
+      "bytes": 25212,
+      "crc32": 949358962
+    },
+    {
+      "path": "R86_pie_224000000007_s0_CORR_07/edit_response64.jpg",
+      "bytes": 2288,
+      "crc32": 1901101337
+    },
+    {
+      "path": "R86_pie_224000000007_s0_CORR_07/step_summary.json",
+      "bytes": 86085,
+      "crc32": 369157178
+    },
+    {
+      "path": "R86_pie_224000000007_s0_CORR_07/request_maps.npz",
+      "bytes": 43280,
+      "crc32": 2297417361
+    },
+    {
+      "path": "R86_pie_224000000007_s0_CORR_07/request_maps.json",
+      "bytes": 727,
+      "crc32": 803558169
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_07/preview.jpg",
+      "bytes": 11050,
+      "crc32": 2799307455
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_07/pattern.jpg",
+      "bytes": 11113,
+      "crc32": 2231913552
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_07/route_mask.jpg",
+      "bytes": 25212,
+      "crc32": 949358962
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_07/edit_response64.jpg",
+      "bytes": 2288,
+      "crc32": 1901101337
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_07/step_summary.json",
+      "bytes": 86157,
+      "crc32": 1826036642
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_07/request_maps.npz",
+      "bytes": 29011,
+      "crc32": 2555280416
+    },
+    {
+      "path": "R86_pie_224000000007_s0_GLOBAL_07/request_maps.json",
+      "bytes": 729,
+      "crc32": 740370213
+    },
+    {
+      "path": "R86_pie_312000000006_s0_SHIFT_1/preview.jpg",
+      "bytes": 14892,
+      "crc32": 3952449114
+    },
+    {
+      "path": "R86_pie_312000000006_s0_SHIFT_1/pattern.jpg",
+      "bytes": 14876,
+      "crc32": 2271060954
+    },
+    {
+      "path": "R86_pie_312000000006_s0_SHIFT_1/route_mask.jpg",
+      "bytes": 19918,
+      "crc32": 327098141
+    },
+    {
+      "path": "R86_pie_312000000006_s0_SHIFT_1/edit_response64.jpg",
+      "bytes": 1945,
+      "crc32": 3049291058
+    },
+    {
+      "path": "R86_pie_312000000006_s0_SHIFT_1/step_summary.json",
+      "bytes": 85313,
+      "crc32": 2059137534
+    },
+    {
+      "path": "R86_pie_312000000006_s0_SHIFT_1/request_maps.npz",
+      "bytes": 71560,
+      "crc32": 2991915470
+    },
+    {
+      "path": "R86_pie_312000000006_s0_SHIFT_1/request_maps.json",
+      "bytes": 727,
+      "crc32": 3994383024
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_1/preview.jpg",
+      "bytes": 14662,
+      "crc32": 568406146
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_1/pattern.jpg",
+      "bytes": 14657,
+      "crc32": 1808972856
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_1/route_mask.jpg",
+      "bytes": 19910,
+      "crc32": 1481666256
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_1/edit_response64.jpg",
+      "bytes": 1945,
+      "crc32": 3049291058
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_1/step_summary.json",
+      "bytes": 85444,
+      "crc32": 3925059014
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_1/request_maps.npz",
+      "bytes": 28747,
+      "crc32": 1626042128
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_1/request_maps.json",
+      "bytes": 728,
+      "crc32": 4108671990
+    },
+    {
+      "path": "R86_pie_312000000006_s0_CORR_07/preview.jpg",
+      "bytes": 14052,
+      "crc32": 1036768410
+    },
+    {
+      "path": "R86_pie_312000000006_s0_CORR_07/pattern.jpg",
+      "bytes": 14019,
+      "crc32": 148499585
+    },
+    {
+      "path": "R86_pie_312000000006_s0_CORR_07/route_mask.jpg",
+      "bytes": 19910,
+      "crc32": 1481666256
+    },
+    {
+      "path": "R86_pie_312000000006_s0_CORR_07/edit_response64.jpg",
+      "bytes": 1945,
+      "crc32": 3049291058
+    },
+    {
+      "path": "R86_pie_312000000006_s0_CORR_07/step_summary.json",
+      "bytes": 86115,
+      "crc32": 349354415
+    },
+    {
+      "path": "R86_pie_312000000006_s0_CORR_07/request_maps.npz",
+      "bytes": 42810,
+      "crc32": 588710285
+    },
+    {
+      "path": "R86_pie_312000000006_s0_CORR_07/request_maps.json",
+      "bytes": 727,
+      "crc32": 1485509972
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_07/preview.jpg",
+      "bytes": 14613,
+      "crc32": 2653816343
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_07/pattern.jpg",
+      "bytes": 14569,
+      "crc32": 2523075658
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_07/route_mask.jpg",
+      "bytes": 19910,
+      "crc32": 1481666256
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_07/edit_response64.jpg",
+      "bytes": 1945,
+      "crc32": 3049291058
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_07/step_summary.json",
+      "bytes": 86232,
+      "crc32": 4119388948
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_07/request_maps.npz",
+      "bytes": 28747,
+      "crc32": 1626042128
+    },
+    {
+      "path": "R86_pie_312000000006_s0_GLOBAL_07/request_maps.json",
+      "bytes": 729,
+      "crc32": 156756839
+    },
+    {
+      "path": "R86_pie_422000000001_s0_SHIFT_1/preview.jpg",
+      "bytes": 17070,
+      "crc32": 3093161418
+    },
+    {
+      "path": "R86_pie_422000000001_s0_SHIFT_1/pattern.jpg",
+      "bytes": 17102,
+      "crc32": 1996427115
+    },
+    {
+      "path": "R86_pie_422000000001_s0_SHIFT_1/route_mask.jpg",
+      "bytes": 22650,
+      "crc32": 1002091572
+    },
+    {
+      "path": "R86_pie_422000000001_s0_SHIFT_1/edit_response64.jpg",
+      "bytes": 2154,
+      "crc32": 872013040
+    },
+    {
+      "path": "R86_pie_422000000001_s0_SHIFT_1/step_summary.json",
+      "bytes": 85516,
+      "crc32": 720780574
+    },
+    {
+      "path": "R86_pie_422000000001_s0_SHIFT_1/request_maps.npz",
+      "bytes": 72101,
+      "crc32": 247047086
+    },
+    {
+      "path": "R86_pie_422000000001_s0_SHIFT_1/request_maps.json",
+      "bytes": 727,
+      "crc32": 2471092127
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_1/preview.jpg",
+      "bytes": 16839,
+      "crc32": 2856092995
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_1/pattern.jpg",
+      "bytes": 16881,
+      "crc32": 2943027326
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_1/route_mask.jpg",
+      "bytes": 22652,
+      "crc32": 2408823129
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_1/edit_response64.jpg",
+      "bytes": 2154,
+      "crc32": 872013040
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_1/step_summary.json",
+      "bytes": 85616,
+      "crc32": 3774035638
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_1/request_maps.npz",
+      "bytes": 28948,
+      "crc32": 1958868531
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_1/request_maps.json",
+      "bytes": 728,
+      "crc32": 3471295048
+    },
+    {
+      "path": "R86_pie_422000000001_s0_CORR_07/preview.jpg",
+      "bytes": 16545,
+      "crc32": 1098039307
+    },
+    {
+      "path": "R86_pie_422000000001_s0_CORR_07/pattern.jpg",
+      "bytes": 16547,
+      "crc32": 1568531435
+    },
+    {
+      "path": "R86_pie_422000000001_s0_CORR_07/route_mask.jpg",
+      "bytes": 22652,
+      "crc32": 2408823129
+    },
+    {
+      "path": "R86_pie_422000000001_s0_CORR_07/edit_response64.jpg",
+      "bytes": 2154,
+      "crc32": 872013040
+    },
+    {
+      "path": "R86_pie_422000000001_s0_CORR_07/step_summary.json",
+      "bytes": 86025,
+      "crc32": 2631925032
+    },
+    {
+      "path": "R86_pie_422000000001_s0_CORR_07/request_maps.npz",
+      "bytes": 43172,
+      "crc32": 4071935346
+    },
+    {
+      "path": "R86_pie_422000000001_s0_CORR_07/request_maps.json",
+      "bytes": 727,
+      "crc32": 269936093
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_07/preview.jpg",
+      "bytes": 16885,
+      "crc32": 373967485
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_07/pattern.jpg",
+      "bytes": 16947,
+      "crc32": 887319122
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_07/route_mask.jpg",
+      "bytes": 22652,
+      "crc32": 2408823129
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_07/edit_response64.jpg",
+      "bytes": 2154,
+      "crc32": 872013040
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_07/step_summary.json",
+      "bytes": 86101,
+      "crc32": 897206487
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_07/request_maps.npz",
+      "bytes": 28948,
+      "crc32": 1958868531
+    },
+    {
+      "path": "R86_pie_422000000001_s0_GLOBAL_07/request_maps.json",
+      "bytes": 729,
+      "crc32": 4285539838
+    },
+    {
+      "path": "R86_pie_614000000004_s0_SHIFT_1/preview.jpg",
+      "bytes": 23401,
+      "crc32": 1008492397
+    },
+    {
+      "path": "R86_pie_614000000004_s0_SHIFT_1/pattern.jpg",
+      "bytes": 23306,
+      "crc32": 1821391462
+    },
+    {
+      "path": "R86_pie_614000000004_s0_SHIFT_1/route_mask.jpg",
+      "bytes": 23161,
+      "crc32": 2451363535
+    },
+    {
+      "path": "R86_pie_614000000004_s0_SHIFT_1/edit_response64.jpg",
+      "bytes": 2198,
+      "crc32": 1569328411
+    },
+    {
+      "path": "R86_pie_614000000004_s0_SHIFT_1/step_summary.json",
+      "bytes": 85335,
+      "crc32": 3305015273
+    },
+    {
+      "path": "R86_pie_614000000004_s0_SHIFT_1/request_maps.npz",
+      "bytes": 70971,
+      "crc32": 1660946658
+    },
+    {
+      "path": "R86_pie_614000000004_s0_SHIFT_1/request_maps.json",
+      "bytes": 727,
+      "crc32": 388854879
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_1/preview.jpg",
+      "bytes": 21881,
+      "crc32": 2196597600
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_1/pattern.jpg",
+      "bytes": 21782,
+      "crc32": 1931000504
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_1/route_mask.jpg",
+      "bytes": 23158,
+      "crc32": 2973116108
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_1/edit_response64.jpg",
+      "bytes": 2198,
+      "crc32": 1569328411
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_1/step_summary.json",
+      "bytes": 85388,
+      "crc32": 2256881981
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_1/request_maps.npz",
+      "bytes": 28533,
+      "crc32": 4134423503
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_1/request_maps.json",
+      "bytes": 728,
+      "crc32": 947105924
+    },
+    {
+      "path": "R86_pie_614000000004_s0_CORR_07/preview.jpg",
+      "bytes": 23562,
+      "crc32": 1727617732
+    },
+    {
+      "path": "R86_pie_614000000004_s0_CORR_07/pattern.jpg",
+      "bytes": 23426,
+      "crc32": 1470602246
+    },
+    {
+      "path": "R86_pie_614000000004_s0_CORR_07/route_mask.jpg",
+      "bytes": 23158,
+      "crc32": 2973116108
+    },
+    {
+      "path": "R86_pie_614000000004_s0_CORR_07/edit_response64.jpg",
+      "bytes": 2198,
+      "crc32": 1569328411
+    },
+    {
+      "path": "R86_pie_614000000004_s0_CORR_07/step_summary.json",
+      "bytes": 86052,
+      "crc32": 643087536
+    },
+    {
+      "path": "R86_pie_614000000004_s0_CORR_07/request_maps.npz",
+      "bytes": 42474,
+      "crc32": 172093030
+    },
+    {
+      "path": "R86_pie_614000000004_s0_CORR_07/request_maps.json",
+      "bytes": 727,
+      "crc32": 4219148867
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_07/preview.jpg",
+      "bytes": 25494,
+      "crc32": 3025103339
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_07/pattern.jpg",
+      "bytes": 25317,
+      "crc32": 29276960
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_07/route_mask.jpg",
+      "bytes": 23158,
+      "crc32": 2973116108
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_07/edit_response64.jpg",
+      "bytes": 2198,
+      "crc32": 1569328411
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_07/step_summary.json",
+      "bytes": 86111,
+      "crc32": 3992885495
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_07/request_maps.npz",
+      "bytes": 28533,
+      "crc32": 4134423503
+    },
+    {
+      "path": "R86_pie_614000000004_s0_GLOBAL_07/request_maps.json",
+      "bytes": 729,
+      "crc32": 2529856412
+    },
+    {
+      "path": "R86_pie_723000000004_s0_SHIFT_1/preview.jpg",
+      "bytes": 18043,
+      "crc32": 3008053670
+    },
+    {
+      "path": "R86_pie_723000000004_s0_SHIFT_1/pattern.jpg",
+      "bytes": 18076,
+      "crc32": 1555381624
+    },
+    {
+      "path": "R86_pie_723000000004_s0_SHIFT_1/route_mask.jpg",
+      "bytes": 20058,
+      "crc32": 2381489468
+    },
+    {
+      "path": "R86_pie_723000000004_s0_SHIFT_1/edit_response64.jpg",
+      "bytes": 1956,
+      "crc32": 1565460180
+    },
+    {
+      "path": "R86_pie_723000000004_s0_SHIFT_1/step_summary.json",
+      "bytes": 85543,
+      "crc32": 4050397189
+    },
+    {
+      "path": "R86_pie_723000000004_s0_SHIFT_1/request_maps.npz",
+      "bytes": 72174,
+      "crc32": 1138340196
+    },
+    {
+      "path": "R86_pie_723000000004_s0_SHIFT_1/request_maps.json",
+      "bytes": 727,
+      "crc32": 1859133569
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_1/preview.jpg",
+      "bytes": 17901,
+      "crc32": 3100083253
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_1/pattern.jpg",
+      "bytes": 17921,
+      "crc32": 1318702063
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_1/route_mask.jpg",
+      "bytes": 20047,
+      "crc32": 3399867390
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_1/edit_response64.jpg",
+      "bytes": 1956,
+      "crc32": 1565460180
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_1/step_summary.json",
+      "bytes": 85619,
+      "crc32": 2208441763
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_1/request_maps.npz",
+      "bytes": 28995,
+      "crc32": 922515577
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_1/request_maps.json",
+      "bytes": 728,
+      "crc32": 1071955851
+    },
+    {
+      "path": "R86_pie_723000000004_s0_CORR_07/preview.jpg",
+      "bytes": 18268,
+      "crc32": 1359628925
+    },
+    {
+      "path": "R86_pie_723000000004_s0_CORR_07/pattern.jpg",
+      "bytes": 18246,
+      "crc32": 3469882586
+    },
+    {
+      "path": "R86_pie_723000000004_s0_CORR_07/route_mask.jpg",
+      "bytes": 20047,
+      "crc32": 3399867390
+    },
+    {
+      "path": "R86_pie_723000000004_s0_CORR_07/edit_response64.jpg",
+      "bytes": 1956,
+      "crc32": 1565460180
+    },
+    {
+      "path": "R86_pie_723000000004_s0_CORR_07/step_summary.json",
+      "bytes": 86203,
+      "crc32": 1434210431
+    },
+    {
+      "path": "R86_pie_723000000004_s0_CORR_07/request_maps.npz",
+      "bytes": 43201,
+      "crc32": 4226100578
+    },
+    {
+      "path": "R86_pie_723000000004_s0_CORR_07/request_maps.json",
+      "bytes": 727,
+      "crc32": 2930613779
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_07/preview.jpg",
+      "bytes": 18307,
+      "crc32": 1118621435
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_07/pattern.jpg",
+      "bytes": 18320,
+      "crc32": 2366847869
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_07/route_mask.jpg",
+      "bytes": 20047,
+      "crc32": 3399867390
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_07/edit_response64.jpg",
+      "bytes": 1956,
+      "crc32": 1565460180
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_07/step_summary.json",
+      "bytes": 86270,
+      "crc32": 728724770
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_07/request_maps.npz",
+      "bytes": 28995,
+      "crc32": 922515577
+    },
+    {
+      "path": "R86_pie_723000000004_s0_GLOBAL_07/request_maps.json",
+      "bytes": 729,
+      "crc32": 1245893840
+    },
+    {
+      "path": "R86_pie_813000000003_s0_SHIFT_1/preview.jpg",
+      "bytes": 12770,
+      "crc32": 1851916289
+    },
+    {
+      "path": "R86_pie_813000000003_s0_SHIFT_1/pattern.jpg",
+      "bytes": 12810,
+      "crc32": 1352109171
+    },
+    {
+      "path": "R86_pie_813000000003_s0_SHIFT_1/route_mask.jpg",
+      "bytes": 19298,
+      "crc32": 3720553325
+    },
+    {
+      "path": "R86_pie_813000000003_s0_SHIFT_1/edit_response64.jpg",
+      "bytes": 1890,
+      "crc32": 320404690
+    },
+    {
+      "path": "R86_pie_813000000003_s0_SHIFT_1/step_summary.json",
+      "bytes": 85477,
+      "crc32": 2783037167
+    },
+    {
+      "path": "R86_pie_813000000003_s0_SHIFT_1/request_maps.npz",
+      "bytes": 72476,
+      "crc32": 1530913274
+    },
+    {
+      "path": "R86_pie_813000000003_s0_SHIFT_1/request_maps.json",
+      "bytes": 727,
+      "crc32": 2831013173
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_1/preview.jpg",
+      "bytes": 13189,
+      "crc32": 1712299751
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_1/pattern.jpg",
+      "bytes": 13249,
+      "crc32": 1083429475
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_1/route_mask.jpg",
+      "bytes": 19292,
+      "crc32": 2025428784
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_1/edit_response64.jpg",
+      "bytes": 1890,
+      "crc32": 320404690
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_1/step_summary.json",
+      "bytes": 85345,
+      "crc32": 2393360342
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_1/request_maps.npz",
+      "bytes": 29116,
+      "crc32": 1231514612
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_1/request_maps.json",
+      "bytes": 728,
+      "crc32": 1622083114
+    },
+    {
+      "path": "R86_pie_813000000003_s0_CORR_07/preview.jpg",
+      "bytes": 13517,
+      "crc32": 306284271
+    },
+    {
+      "path": "R86_pie_813000000003_s0_CORR_07/pattern.jpg",
+      "bytes": 13574,
+      "crc32": 75664957
+    },
+    {
+      "path": "R86_pie_813000000003_s0_CORR_07/route_mask.jpg",
+      "bytes": 19292,
+      "crc32": 2025428784
+    },
+    {
+      "path": "R86_pie_813000000003_s0_CORR_07/edit_response64.jpg",
+      "bytes": 1890,
+      "crc32": 320404690
+    },
+    {
+      "path": "R86_pie_813000000003_s0_CORR_07/step_summary.json",
+      "bytes": 86172,
+      "crc32": 3952500103
+    },
+    {
+      "path": "R86_pie_813000000003_s0_CORR_07/request_maps.npz",
+      "bytes": 43385,
+      "crc32": 1664164206
+    },
+    {
+      "path": "R86_pie_813000000003_s0_CORR_07/request_maps.json",
+      "bytes": 727,
+      "crc32": 1704694315
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_07/preview.jpg",
+      "bytes": 13364,
+      "crc32": 2993108433
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_07/pattern.jpg",
+      "bytes": 13375,
+      "crc32": 807873505
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_07/route_mask.jpg",
+      "bytes": 19292,
+      "crc32": 2025428784
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_07/edit_response64.jpg",
+      "bytes": 1890,
+      "crc32": 320404690
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_07/step_summary.json",
+      "bytes": 86173,
+      "crc32": 513431777
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_07/request_maps.npz",
+      "bytes": 29116,
+      "crc32": 1231514612
+    },
+    {
+      "path": "R86_pie_813000000003_s0_GLOBAL_07/request_maps.json",
+      "bytes": 729,
+      "crc32": 148314867
+    },
+    {
+      "path": "R86_pie_812000000004_s0_SHIFT_1/preview.jpg",
+      "bytes": 20201,
+      "crc32": 4187661562
+    },
+    {
+      "path": "R86_pie_812000000004_s0_SHIFT_1/pattern.jpg",
+      "bytes": 20233,
+      "crc32": 146111367
+    },
+    {
+      "path": "R86_pie_812000000004_s0_SHIFT_1/route_mask.jpg",
+      "bytes": 20811,
+      "crc32": 3404275357
+    },
+    {
+      "path": "R86_pie_812000000004_s0_SHIFT_1/edit_response64.jpg",
+      "bytes": 2020,
+      "crc32": 767428731
+    },
+    {
+      "path": "R86_pie_812000000004_s0_SHIFT_1/step_summary.json",
+      "bytes": 85504,
+      "crc32": 864419815
+    },
+    {
+      "path": "R86_pie_812000000004_s0_SHIFT_1/request_maps.npz",
+      "bytes": 71421,
+      "crc32": 2551811027
+    },
+    {
+      "path": "R86_pie_812000000004_s0_SHIFT_1/request_maps.json",
+      "bytes": 727,
+      "crc32": 3326704491
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_1/preview.jpg",
+      "bytes": 20212,
+      "crc32": 481271432
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_1/pattern.jpg",
+      "bytes": 20232,
+      "crc32": 1698686016
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_1/route_mask.jpg",
+      "bytes": 20786,
+      "crc32": 3181348002
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_1/edit_response64.jpg",
+      "bytes": 2020,
+      "crc32": 767428731
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_1/step_summary.json",
+      "bytes": 85510,
+      "crc32": 2824364933
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_1/request_maps.npz",
+      "bytes": 28689,
+      "crc32": 1221594778
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_1/request_maps.json",
+      "bytes": 728,
+      "crc32": 3641954652
+    },
+    {
+      "path": "R86_pie_812000000004_s0_CORR_07/preview.jpg",
+      "bytes": 19656,
+      "crc32": 564472154
+    },
+    {
+      "path": "R86_pie_812000000004_s0_CORR_07/pattern.jpg",
+      "bytes": 19660,
+      "crc32": 200269007
+    },
+    {
+      "path": "R86_pie_812000000004_s0_CORR_07/route_mask.jpg",
+      "bytes": 20786,
+      "crc32": 3181348002
+    },
+    {
+      "path": "R86_pie_812000000004_s0_CORR_07/edit_response64.jpg",
+      "bytes": 2020,
+      "crc32": 767428731
+    },
+    {
+      "path": "R86_pie_812000000004_s0_CORR_07/step_summary.json",
+      "bytes": 86163,
+      "crc32": 1710323620
+    },
+    {
+      "path": "R86_pie_812000000004_s0_CORR_07/request_maps.npz",
+      "bytes": 42759,
+      "crc32": 1133443760
+    },
+    {
+      "path": "R86_pie_812000000004_s0_CORR_07/request_maps.json",
+      "bytes": 727,
+      "crc32": 1061502148
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_07/preview.jpg",
+      "bytes": 19784,
+      "crc32": 3503094514
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_07/pattern.jpg",
+      "bytes": 19782,
+      "crc32": 464922486
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_07/route_mask.jpg",
+      "bytes": 20786,
+      "crc32": 3181348002
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_07/edit_response64.jpg",
+      "bytes": 2020,
+      "crc32": 767428731
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_07/step_summary.json",
+      "bytes": 86274,
+      "crc32": 861191409
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_07/request_maps.npz",
+      "bytes": 28689,
+      "crc32": 1221594778
+    },
+    {
+      "path": "R86_pie_812000000004_s0_GLOBAL_07/request_maps.json",
+      "bytes": 729,
+      "crc32": 3862348485
+    },
+    {
+      "path": "references/manifest.json",
+      "bytes": 102,
+      "crc32": 313392522
+    },
+    {
+      "path": "references/metrics.csv",
+      "bytes": 5,
+      "crc32": 1034698998
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "index.html",
+      "bytes": 22790,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "review/index.html",
+      "bytes": 27988,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_000000000058_s0.jpg",
+      "bytes": 63980,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_111000000009_s0.jpg",
+      "bytes": 73856,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_122000000002_s0.jpg",
+      "bytes": 54379,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_224000000007_s0.jpg",
+      "bytes": 47187,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_312000000006_s0.jpg",
+      "bytes": 60854,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_422000000001_s0.jpg",
+      "bytes": 67961,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_614000000004_s0.jpg",
+      "bytes": 81888,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_723000000004_s0.jpg",
+      "bytes": 69046,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_813000000003_s0.jpg",
+      "bytes": 48399,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_812000000004_s0.jpg",
+      "bytes": 76487,
+      "reason": "comparison grid or generated interface"
+    }
+  ],
+  "text_normalized_members": [],
+  "original_manifest_note": "Archived code/plan/input hashes identify the historical run. Neutral naming and path redaction change published text; hashes are not recalculated or presented as hashes of this export.",
+  "available": {
+    "completed": 40,
+    "total_planned": 40,
+    "pending": 0,
+    "step_summaries": 40,
+    "record_json": 0,
+    "full_steps_json": 0,
+    "native_raw_png_in_archive": 0,
+    "float_map_npz": 40
+  },
+  "missing": "Native generated images absent from compact source ZIP."
+}

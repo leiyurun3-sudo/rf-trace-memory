@@ -1,0 +1,272 @@
+[
+  {
+    "name": "A_Qwen_Diagnostic_results_20261102_200746.zip",
+    "bytes": 43183,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/A_Qwen_Diagnostic_results_20261102_200746.zip"
+  },
+  {
+    "name": "A_Qwen_EvidenceCalibration_results_20261102_203338.zip",
+    "bytes": 37291,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/A_Qwen_EvidenceCalibration_results_20261102_203338.zip"
+  },
+  {
+    "name": "A_Qwen_FactualJudge_results.zip",
+    "bytes": 83334,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/A_Qwen_FactualJudge_results.zip"
+  },
+  {
+    "name": "A_Qwen_FactualJudge_v2_results.zip",
+    "bytes": 1850878,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/A_Qwen_FactualJudge_v2_results.zip"
+  },
+  {
+    "name": "A_Qwen_LocalJudge_results.zip",
+    "bytes": 1878357,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/A_Qwen_LocalJudge_results.zip"
+  },
+  {
+    "name": "A_Qwen_ApplicabilityFix_v6.zip",
+    "bytes": 18753,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/A_Qwen_ApplicabilityFix_v6.zip"
+  },
+  {
+    "name": "A_Qwen_Calibration_Recovery.zip",
+    "bytes": 49576,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/A_Qwen_Calibration_Recovery.zip"
+  },
+  {
+    "name": "A_Qwen_Diagnostic.zip",
+    "bytes": 9396,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/A_Qwen_Diagnostic.zip"
+  },
+  {
+    "name": "A_Qwen_EvidenceCalibration.zip",
+    "bytes": 11785,
+    "notes": "Public archive labels and prose normalized; experiment values and image bytes retained.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/A_Qwen_EvidenceCalibration.zip"
+  },
+  {
+    "name": "A_Qwen_FactualJudge_Ready.zip",
+    "bytes": 32790,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/A_Qwen_FactualJudge_Ready.zip"
+  },
+  {
+    "name": "A_Qwen_FactualJudge_v2_Ready.zip",
+    "bytes": 34292,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/A_Qwen_FactualJudge_v2_Ready.zip"
+  },
+  {
+    "name": "A_Qwen_SchemaFix.zip",
+    "bytes": 17454,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/A_Qwen_SchemaFix.zip"
+  },
+  {
+    "name": "A_Qwen_v2_OfflineAudit.zip",
+    "bytes": 1433216,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/A_Qwen_v2_OfflineAudit.zip"
+  },
+  {
+    "name": "R74_MethodStudy_Ready.zip",
+    "bytes": 1914613,
+    "notes": "Public archive labels and prose normalized; experiment values and image bytes retained.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R74_MethodStudy_Ready.zip"
+  },
+  {
+    "name": "R74_SplitDebt_Update.zip",
+    "bytes": 3727,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R74_SplitDebt_Update.zip"
+  },
+  {
+    "name": "R75_MatchedStrength_Update.zip",
+    "bytes": 4990,
+    "notes": "Public archive labels and prose normalized; experiment values and image bytes retained.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R75_MatchedStrength_Update.zip"
+  },
+  {
+    "name": "R75_TransportStudy_Ready.zip",
+    "bytes": 2868460,
+    "notes": "Public archive labels and prose normalized; experiment values and image bytes retained.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R75_TransportStudy_Ready.zip"
+  },
+  {
+    "name": "R76_EditRelease_Ready.zip",
+    "bytes": 3233355,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R76_EditRelease_Ready.zip"
+  },
+  {
+    "name": "R77_ReleaseRouting_Ready.zip",
+    "bytes": 2613662,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R77_ReleaseRouting_Ready.zip"
+  },
+  {
+    "name": "R78_EvidenceBridge_Ready.zip",
+    "bytes": 1923861,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R78_EvidenceBridge_Ready.zip"
+  },
+  {
+    "name": "R79_RegionMemory_Ready.zip",
+    "bytes": 1922893,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R79_RegionMemory_Ready.zip"
+  },
+  {
+    "name": "R80_RegionBalance_Ready.zip",
+    "bytes": 1923613,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R80_RegionBalance_Ready.zip"
+  },
+  {
+    "name": "R81_ParallelEvidence_Ready.zip",
+    "bytes": 16004201,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R81_ParallelEvidence_Ready.zip"
+  },
+  {
+    "name": "R82_EditAwareSupport_Ready.zip",
+    "bytes": 5003450,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R82_EditAwareSupport_Ready.zip"
+  },
+  {
+    "name": "R82_Reporting_Hotfix.zip",
+    "bytes": 12277,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R82_Reporting_Hotfix.zip"
+  },
+  {
+    "name": "R82_Reporting_Hotfix_v2.zip",
+    "bytes": 12315,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R82_Reporting_Hotfix_v2.zip"
+  },
+  {
+    "name": "R82_SoftSupport_Ready.zip",
+    "bytes": 3766530,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R82_SoftSupport_Ready.zip"
+  },
+  {
+    "name": "R83_RequestMemory_Ready.zip",
+    "bytes": 5364361,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R83_RequestMemory_Ready.zip"
+  },
+  {
+    "name": "R86_ActualDoseControls.zip",
+    "bytes": 56100,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R86_ActualDoseControls.zip"
+  },
+  {
+    "name": "R86_ProfileFix_v2.zip",
+    "bytes": 59233,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R86_ProfileFix_v2.zip"
+  },
+  {
+    "name": "R87_FreshDoseConfirmation_Ready.zip",
+    "bytes": 7865934,
+    "notes": "Public archive labels and prose normalized; experiment values and image bytes retained.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R87_FreshDoseConfirmation_Ready.zip"
+  },
+  {
+    "name": "R74_MethodStudy.zip",
+    "bytes": 66265785,
+    "notes": "Public archive labels and prose normalized; experiment values and image bytes retained.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R74_MethodStudy.zip"
+  },
+  {
+    "name": "R74_SplitDebt_Results.zip",
+    "bytes": 1428549,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R74_SplitDebt_Results.zip"
+  },
+  {
+    "name": "R75_TransportStudy.zip",
+    "bytes": 5489003,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R75_TransportStudy.zip"
+  },
+  {
+    "name": "R76_EditRelease.zip",
+    "bytes": 6282724,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R76_EditRelease.zip"
+  },
+  {
+    "name": "R77_ReleaseRouting.zip",
+    "bytes": 4855821,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R77_ReleaseRouting.zip"
+  },
+  {
+    "name": "R78_EvidenceBridge.zip",
+    "bytes": 7803208,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R78_EvidenceBridge.zip"
+  },
+  {
+    "name": "R79_RegionMemory.zip",
+    "bytes": 5295376,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R79_RegionMemory.zip"
+  },
+  {
+    "name": "R80_RegionBalance.zip",
+    "bytes": 4624527,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R80_RegionBalance.zip"
+  },
+  {
+    "name": "R81_ParallelEvidence.zip",
+    "bytes": 21385758,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R81_ParallelEvidence.zip"
+  },
+  {
+    "name": "R82_EditAwareSupport.zip",
+    "bytes": 8308343,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R82_EditAwareSupport.zip"
+  },
+  {
+    "name": "R83_RequestMemory.zip",
+    "bytes": 8205090,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R83_RequestMemory.zip"
+  },
+  {
+    "name": "R86_ActualDoseControls_pilot_v2.zip",
+    "bytes": 5213404,
+    "notes": "Original archive.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R86_ActualDoseControls_pilot_v2.zip"
+  },
+  {
+    "name": "R87_FreshDoseConfirmation_results.zip",
+    "bytes": 21507397,
+    "notes": "Public archive labels and prose normalized; experiment values and image bytes retained.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/R87_FreshDoseConfirmation_results.zip"
+  },
+  {
+    "name": "TraceMemory_Extended.pdf",
+    "bytes": 12906822,
+    "notes": "Neutral extended manuscript through R87; no venue-specific editions.",
+    "url": "https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/research-evidence-r87-20261104/TraceMemory_Extended.pdf"
+  }
+]

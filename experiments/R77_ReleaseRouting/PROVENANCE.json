@@ -1,0 +1,385 @@
+{
+  "source_archive": "R77_ReleaseRouting_Ready.zip",
+  "source_location": "delivery",
+  "source_archive_bytes": 2613662,
+  "strip_root": true,
+  "source_member_root": "R77_ReleaseRouting",
+  "included_members": [
+    {
+      "path": "attention.py",
+      "bytes": 21836,
+      "crc32": 3378683391
+    },
+    {
+      "path": "controls.py",
+      "bytes": 3982,
+      "crc32": 2874791631
+    },
+    {
+      "path": "data/121000000003/outer.png",
+      "bytes": 2367,
+      "crc32": 1630368804
+    },
+    {
+      "path": "data/321000000001/outer.png",
+      "bytes": 2016,
+      "crc32": 978068677
+    },
+    {
+      "path": "data/423000000000/outer.png",
+      "bytes": 1020,
+      "crc32": 3795552631
+    },
+    {
+      "path": "data/522000000000/outer.png",
+      "bytes": 2486,
+      "crc32": 3130133692
+    },
+    {
+      "path": "data/622000000002/outer.png",
+      "bytes": 1303,
+      "crc32": 1779003446
+    },
+    {
+      "path": "data/723000000002/outer.png",
+      "bytes": 1853,
+      "crc32": 995071571
+    },
+    {
+      "path": "engine.py",
+      "bytes": 13259,
+      "crc32": 1528231947
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 10127,
+      "crc32": 3842798166
+    },
+    {
+      "path": "external.py",
+      "bytes": 2959,
+      "crc32": 2827260217
+    },
+    {
+      "path": "mint_backend.py",
+      "bytes": 3893,
+      "crc32": 2892078264
+    },
+    {
+      "path": "model_loader.py",
+      "bytes": 5512,
+      "crc32": 1113038759
+    },
+    {
+      "path": "plan.json",
+      "bytes": 319400,
+      "crc32": 268166749
+    },
+    {
+      "path": "prepare_benchmark.py",
+      "bytes": 7919,
+      "crc32": 1471473918
+    },
+    {
+      "path": "reference_r76/manifest.json",
+      "bytes": 213984,
+      "crc32": 2917928989
+    },
+    {
+      "path": "reference_r76/R76_butterfly_sunset_s0_FLOWEDIT_N26.jpg",
+      "bytes": 17465,
+      "crc32": 4048321012
+    },
+    {
+      "path": "reference_r76/R76_butterfly_sunset_s0_SPECTRAL50_KV.jpg",
+      "bytes": 14865,
+      "crc32": 1453475459
+    },
+    {
+      "path": "reference_r76/R76_butterfly_sunset_s0_UNIFORM50_KV.jpg",
+      "bytes": 16148,
+      "crc32": 4104276631
+    },
+    {
+      "path": "reference_r76/R76_butterfly_sunset_s17_FLOWEDIT_N26.jpg",
+      "bytes": 17068,
+      "crc32": 2697530469
+    },
+    {
+      "path": "reference_r76/R76_butterfly_sunset_s17_SPECTRAL50_KV.jpg",
+      "bytes": 13779,
+      "crc32": 4045245215
+    },
+    {
+      "path": "reference_r76/R76_butterfly_sunset_s17_UNIFORM50_KV.jpg",
+      "bytes": 15673,
+      "crc32": 552948455
+    },
+    {
+      "path": "reference_r76/R76_cup_night_s10_FLOWEDIT_N26.jpg",
+      "bytes": 16854,
+      "crc32": 298938043
+    },
+    {
+      "path": "reference_r76/R76_cup_night_s10_SPECTRAL50_KV.jpg",
+      "bytes": 14981,
+      "crc32": 908497796
+    },
+    {
+      "path": "reference_r76/R76_cup_night_s10_UNIFORM50_KV.jpg",
+      "bytes": 14853,
+      "crc32": 57315792
+    },
+    {
+      "path": "reference_r76/R76_cup_night_s17_FLOWEDIT_N26.jpg",
+      "bytes": 15737,
+      "crc32": 1572607079
+    },
+    {
+      "path": "reference_r76/R76_cup_night_s17_SPECTRAL50_KV.jpg",
+      "bytes": 15032,
+      "crc32": 1340281644
+    },
+    {
+      "path": "reference_r76/R76_cup_night_s17_UNIFORM50_KV.jpg",
+      "bytes": 15440,
+      "crc32": 38880394
+    },
+    {
+      "path": "reference_r76/R76_dog_rain_s0_FLOWEDIT_N26.jpg",
+      "bytes": 21023,
+      "crc32": 2683364763
+    },
+    {
+      "path": "reference_r76/R76_dog_rain_s0_SPECTRAL50_KV.jpg",
+      "bytes": 16843,
+      "crc32": 3031784790
+    },
+    {
+      "path": "reference_r76/R76_dog_rain_s0_UNIFORM50_KV.jpg",
+      "bytes": 23304,
+      "crc32": 2161178136
+    },
+    {
+      "path": "reference_r76/R76_dog_rain_s17_FLOWEDIT_N26.jpg",
+      "bytes": 21048,
+      "crc32": 3455041736
+    },
+    {
+      "path": "reference_r76/R76_dog_rain_s17_SPECTRAL50_KV.jpg",
+      "bytes": 16861,
+      "crc32": 2930379624
+    },
+    {
+      "path": "reference_r76/R76_dog_rain_s17_UNIFORM50_KV.jpg",
+      "bytes": 23498,
+      "crc32": 132504829
+    },
+    {
+      "path": "reference_r76/R76_dog_snow_s0_FLOWEDIT_N26.jpg",
+      "bytes": 20633,
+      "crc32": 1339379366
+    },
+    {
+      "path": "reference_r76/R76_dog_snow_s0_SPECTRAL50_KV.jpg",
+      "bytes": 17396,
+      "crc32": 2665298117
+    },
+    {
+      "path": "reference_r76/R76_dog_snow_s0_UNIFORM50_KV.jpg",
+      "bytes": 24455,
+      "crc32": 3811668300
+    },
+    {
+      "path": "reference_r76/R76_dog_snow_s17_FLOWEDIT_N26.jpg",
+      "bytes": 20089,
+      "crc32": 1282983392
+    },
+    {
+      "path": "reference_r76/R76_dog_snow_s17_SPECTRAL50_KV.jpg",
+      "bytes": 17538,
+      "crc32": 1623706693
+    },
+    {
+      "path": "reference_r76/R76_dog_snow_s17_UNIFORM50_KV.jpg",
+      "bytes": 25142,
+      "crc32": 3796715045
+    },
+    {
+      "path": "reference_r76/R76_printed_shirt_studio_s0_FLOWEDIT_N26.jpg",
+      "bytes": 14595,
+      "crc32": 3201557681
+    },
+    {
+      "path": "reference_r76/R76_printed_shirt_studio_s0_SPECTRAL50_KV.jpg",
+      "bytes": 12481,
+      "crc32": 334593677
+    },
+    {
+      "path": "reference_r76/R76_printed_shirt_studio_s0_UNIFORM50_KV.jpg",
+      "bytes": 13515,
+      "crc32": 2506933146
+    },
+    {
+      "path": "reference_r76/R76_printed_shirt_studio_s17_FLOWEDIT_N26.jpg",
+      "bytes": 14102,
+      "crc32": 2791141970
+    },
+    {
+      "path": "reference_r76/R76_printed_shirt_studio_s17_SPECTRAL50_KV.jpg",
+      "bytes": 12927,
+      "crc32": 70459754
+    },
+    {
+      "path": "reference_r76/R76_printed_shirt_studio_s17_UNIFORM50_KV.jpg",
+      "bytes": 13995,
+      "crc32": 1930905166
+    },
+    {
+      "path": "reference_r76/R76_rug_floor_s0_FLOWEDIT_N26.jpg",
+      "bytes": 16285,
+      "crc32": 940072017
+    },
+    {
+      "path": "reference_r76/R76_rug_floor_s0_SPECTRAL50_KV.jpg",
+      "bytes": 17354,
+      "crc32": 2479529034
+    },
+    {
+      "path": "reference_r76/R76_rug_floor_s0_UNIFORM50_KV.jpg",
+      "bytes": 13081,
+      "crc32": 3942232933
+    },
+    {
+      "path": "reference_r76/R76_rug_floor_s17_FLOWEDIT_N26.jpg",
+      "bytes": 19992,
+      "crc32": 2670767786
+    },
+    {
+      "path": "reference_r76/R76_rug_floor_s17_SPECTRAL50_KV.jpg",
+      "bytes": 18092,
+      "crc32": 1209622268
+    },
+    {
+      "path": "reference_r76/R76_rug_floor_s17_UNIFORM50_KV.jpg",
+      "bytes": 13331,
+      "crc32": 3087806636
+    },
+    {
+      "path": "reference_r76/R76_shirt_studio_s0_FLOWEDIT_N26.jpg",
+      "bytes": 12439,
+      "crc32": 2855712260
+    },
+    {
+      "path": "reference_r76/R76_shirt_studio_s0_SPECTRAL50_KV.jpg",
+      "bytes": 10332,
+      "crc32": 3532609998
+    },
+    {
+      "path": "reference_r76/R76_shirt_studio_s0_UNIFORM50_KV.jpg",
+      "bytes": 10623,
+      "crc32": 838547557
+    },
+    {
+      "path": "reference_r76/R76_shirt_studio_s17_FLOWEDIT_N26.jpg",
+      "bytes": 12892,
+      "crc32": 476392649
+    },
+    {
+      "path": "reference_r76/R76_shirt_studio_s17_SPECTRAL50_KV.jpg",
+      "bytes": 10106,
+      "crc32": 1331158994
+    },
+    {
+      "path": "reference_r76/R76_shirt_studio_s17_UNIFORM50_KV.jpg",
+      "bytes": 10784,
+      "crc32": 203317481
+    },
+    {
+      "path": "reporting.py",
+      "bytes": 32144,
+      "crc32": 458335582
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 390,
+      "crc32": 3486942803
+    },
+    {
+      "path": "requirements_eval.txt",
+      "bytes": 139,
+      "crc32": 1775092259
+    },
+    {
+      "path": "review.py",
+      "bytes": 3805,
+      "crc32": 363941033
+    },
+    {
+      "path": "rf_kv.py",
+      "bytes": 1282,
+      "crc32": 4037482886
+    },
+    {
+      "path": "run_all.sh",
+      "bytes": 551,
+      "crc32": 2509902044
+    },
+    {
+      "path": "runner.py",
+      "bytes": 19662,
+      "crc32": 3026015847
+    },
+    {
+      "path": "start.sh",
+      "bytes": 857,
+      "crc32": 774812805
+    },
+    {
+      "path": "value.py",
+      "bytes": 1929,
+      "crc32": 955245182
+    }
+  ],
+  "omitted_inputs": [
+    {
+      "path": "data/121000000003/source.png",
+      "bytes": 449239,
+      "crc32": 3699728353
+    },
+    {
+      "path": "data/321000000001/source.png",
+      "bytes": 331220,
+      "crc32": 2239209372
+    },
+    {
+      "path": "data/423000000000/source.png",
+      "bytes": 232237,
+      "crc32": 4083644331
+    },
+    {
+      "path": "data/522000000000/source.png",
+      "bytes": 222678,
+      "crc32": 3133429392
+    },
+    {
+      "path": "data/622000000002/source.png",
+      "bytes": 302579,
+      "crc32": 1790874418
+    },
+    {
+      "path": "data/723000000002/source.png",
+      "bytes": 305414,
+      "crc32": 2004488360
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "README.md",
+      "reason": "historical narrative; current workflow is in experiment index"
+    }
+  ],
+  "text_normalized_members": [],
+  "archive_identity": "Original ZIP byte count and member CRC32 values; no new hashes computed.",
+  "status": "Archived workflow; no execution during synchronization."
+}

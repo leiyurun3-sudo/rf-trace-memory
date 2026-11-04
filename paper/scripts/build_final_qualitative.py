@@ -1,10 +1,11 @@
 from pathlib import Path
+import os
 from PIL import Image, ImageDraw, ImageFont
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
 
 ROOT = Path(__file__).resolve().parents[1]
-ARCHIVE = Path('D:/科研论文资料/实验交付/FinalNight_Evaluated_Review/R85_FinalNight')
+ARCHIVE = Path(os.environ.get('R85_ARCHIVE', str(Path(__file__).resolve().parents[2] / 'results/R85')))
 OUT = ROOT / 'figures' / 'final_qualitative'
 ROWS = [
     ('821000000008', 'Grass to water'),

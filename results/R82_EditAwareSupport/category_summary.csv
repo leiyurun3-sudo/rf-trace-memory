@@ -1,0 +1,71 @@
+cohort,target_category_id,target_category,arm,planned,sources,completed,failed,pending,evaluation_ok,evaluation_other,human_joint_decided,human_joint_successes,preserved_region,preserved_mae_empty_mask_excluded,preserved_mae_not_applicable,preserved_region_mae_mean,preserved_region_mae_available,preserved_region_mae_missing_or_excluded,preserved_region_mae_sources,clip_target_similarity_mean,clip_target_similarity_available,clip_target_similarity_missing_or_excluded,clip_target_similarity_sources,dino_full_feature_similarity_mean,dino_full_feature_similarity_available,dino_full_feature_similarity_missing_or_excluded,dino_full_feature_similarity_sources,correction_impulse_mean,correction_impulse_available,correction_impulse_missing_or_excluded,correction_impulse_sources,nfe_total_mean,nfe_total_available,nfe_total_missing_or_excluded,nfe_total_sources
+development_on_R81_seen_sources,0,random editing,AUTO_DETAIL,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.22254118445232782,2,0,1,,0,2,0,,0,2,0,0.26251404615732654,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,0,random editing,FLOWEDIT_N26,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.06618906736209937,2,0,1,,0,2,0,,0,2,0,,0,2,0,52.0,2,0,1
+development_on_R81_seen_sources,0,random editing,REQUEST_SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.08584473946618427,2,0,1,,0,2,0,,0,2,0,0.23082695268409997,2,0,1,97.0,2,0,1
+development_on_R81_seen_sources,0,random editing,SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.16042864873309742,2,0,1,,0,2,0,,0,2,0,0.24666634862095405,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,0,random editing,SOFT50,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.13115931646803106,2,0,1,,0,2,0,,0,2,0,0.2387067498838703,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,0,random editing,SOFT75,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.11722721837509939,2,0,1,,0,2,0,,0,2,0,0.23437737755203014,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,0,random editing,U25_KV,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.10931653895883314,2,0,1,,0,2,0,,0,2,0,0.2325926844147438,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,1,change object,AUTO_DETAIL,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.1278526832394422,2,0,1,,0,2,0,,0,2,0,0.22431195443991658,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,1,change object,FLOWEDIT_N26,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.09735606745211878,2,0,1,,0,2,0,,0,2,0,,0,2,0,52.0,2,0,1
+development_on_R81_seen_sources,1,change object,REQUEST_SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.07145277437890667,2,0,1,,0,2,0,,0,2,0,0.21601415842594474,2,0,1,97.0,2,0,1
+development_on_R81_seen_sources,1,change object,SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.10245511818556344,2,0,1,,0,2,0,,0,2,0,0.21658719492975131,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,1,change object,SOFT50,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.08988860103493695,2,0,1,,0,2,0,,0,2,0,0.2138661732043492,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,1,change object,SOFT75,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.08324990026263458,2,0,1,,0,2,0,,0,2,0,0.21439409456780878,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,1,change object,U25_KV,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.07966522191070904,2,0,1,,0,2,0,,0,2,0,0.21446445702554734,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,2,add object,AUTO_DETAIL,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,0,,0,2,0,,0,2,0,,0,2,0,0.23092270370177803,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,2,add object,FLOWEDIT_N26,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,0,,0,2,0,,0,2,0,,0,2,0,,0,2,0,52.0,2,0,1
+development_on_R81_seen_sources,2,add object,REQUEST_SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,0,,0,2,0,,0,2,0,,0,2,0,0.22682182135759643,2,0,1,97.0,2,0,1
+development_on_R81_seen_sources,2,add object,SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,0,,0,2,0,,0,2,0,,0,2,0,0.22809779747775016,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,2,add object,SOFT50,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,0,,0,2,0,,0,2,0,,0,2,0,0.22644435103632488,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,2,add object,SOFT75,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,0,,0,2,0,,0,2,0,,0,2,0,0.22598283485417459,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,2,add object,U25_KV,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,0,,0,2,0,,0,2,0,,0,2,0,0.22674033083560297,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,3,delete object,AUTO_DETAIL,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.2615391600555136,2,0,1,,0,2,0,,0,2,0,0.30359967242314645,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,3,delete object,FLOWEDIT_N26,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.1357707276957145,2,0,1,,0,2,0,,0,2,0,,0,2,0,52.0,2,0,1
+development_on_R81_seen_sources,3,delete object,REQUEST_SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.15188715843819395,2,0,1,,0,2,0,,0,2,0,0.25593021493495693,2,0,1,97.0,2,0,1
+development_on_R81_seen_sources,3,delete object,SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.19153982454550136,2,0,1,,0,2,0,,0,2,0,0.27233381659077194,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,3,delete object,SOFT50,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.16817501495102471,2,0,1,,0,2,0,,0,2,0,0.260319768457977,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,3,delete object,SOFT75,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.16253235402300026,2,0,1,,0,2,0,,0,2,0,0.2606155655750425,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,3,delete object,U25_KV,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.1596206809628512,2,0,1,,0,2,0,,0,2,0,0.25893062453377136,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,4,change attribute content,AUTO_DETAIL,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.1500007944396632,2,0,1,,0,2,0,,0,2,0,0.21145837525674427,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,4,change attribute content,FLOWEDIT_N26,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.08747360681358243,2,0,1,,0,2,0,,0,2,0,,0,2,0,52.0,2,0,1
+development_on_R81_seen_sources,4,change attribute content,REQUEST_SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.10556707249374025,2,0,1,,0,2,0,,0,2,0,0.19612848740863337,2,0,1,97.0,2,0,1
+development_on_R81_seen_sources,4,change attribute content,SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.11795971713269082,2,0,1,,0,2,0,,0,2,0,0.19927568672093599,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,4,change attribute content,SOFT50,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.10410234995252368,2,0,1,,0,2,0,,0,2,0,0.19554577384392463,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,4,change attribute content,SOFT75,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.09924045719563968,2,0,1,,0,2,0,,0,2,0,0.1946028566566428,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,4,change attribute content,U25_KV,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.09765166559880331,2,0,1,,0,2,0,,0,2,0,0.1945855184007924,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,5,change attribute pose,AUTO_DETAIL,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.177005648488253,2,0,1,,0,2,0,,0,2,0,0.24806629380579626,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,5,change attribute pose,FLOWEDIT_N26,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.13638186866259333,2,0,1,,0,2,0,,0,2,0,,0,2,0,52.0,2,0,1
+development_on_R81_seen_sources,5,change attribute pose,REQUEST_SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.1501448220432798,2,0,1,,0,2,0,,0,2,0,0.2384127272241624,2,0,1,97.0,2,0,1
+development_on_R81_seen_sources,5,change attribute pose,SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.1580002756003373,2,0,1,,0,2,0,,0,2,0,0.24056472844127186,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,5,change attribute pose,SOFT50,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.14894574959006096,2,0,1,,0,2,0,,0,2,0,0.2397804326104549,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,5,change attribute pose,SOFT75,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.14441517015024175,2,0,1,,0,2,0,,0,2,0,0.23885885332890988,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,5,change attribute pose,U25_KV,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.14312185293095683,2,0,1,,0,2,0,,0,2,0,0.23868280470568892,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,6,change attribute color,AUTO_DETAIL,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.11424393958904991,2,0,1,,0,2,0,,0,2,0,0.24060561984280315,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,6,change attribute color,FLOWEDIT_N26,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.08144382597594196,2,0,1,,0,2,0,,0,2,0,,0,2,0,52.0,2,0,1
+development_on_R81_seen_sources,6,change attribute color,REQUEST_SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.06835579303374964,2,0,1,,0,2,0,,0,2,0,0.22787719063571493,2,0,1,97.0,2,0,1
+development_on_R81_seen_sources,6,change attribute color,SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.09245810419266179,2,0,1,,0,2,0,,0,2,0,0.23478369223671425,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,6,change attribute color,SOFT50,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.0822342254501931,2,0,1,,0,2,0,,0,2,0,0.23255703334347383,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,6,change attribute color,SOFT75,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.07798365089926443,2,0,1,,0,2,0,,0,2,0,0.2316542556655008,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,6,change attribute color,U25_KV,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.07601296516890407,2,0,1,,0,2,0,,0,2,0,0.23113821542143576,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,7,change attribute material,AUTO_DETAIL,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.18874959617837817,2,0,1,,0,2,0,,0,2,0,0.26721331015464456,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,7,change attribute material,FLOWEDIT_N26,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.11439247025102478,2,0,1,,0,2,0,,0,2,0,,0,2,0,52.0,2,0,1
+development_on_R81_seen_sources,7,change attribute material,REQUEST_SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.11037289702016848,2,0,1,,0,2,0,,0,2,0,0.2409295352893679,2,0,1,97.0,2,0,1
+development_on_R81_seen_sources,7,change attribute material,SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.140536807610397,2,0,1,,0,2,0,,0,2,0,0.24978116485880897,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,7,change attribute material,SOFT50,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.12367453391200584,2,0,1,,0,2,0,,0,2,0,0.24411590660829652,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,7,change attribute material,SOFT75,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.1168671866804544,2,0,1,,0,2,0,,0,2,0,0.24197754880746025,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,7,change attribute material,U25_KV,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.11411961897792204,2,0,1,,0,2,0,,0,2,0,0.24169798633882789,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,8,change background,AUTO_DETAIL,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.19622538345302692,2,0,1,,0,2,0,,0,2,0,0.25168739600604884,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,8,change background,FLOWEDIT_N26,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.10683325872477535,2,0,1,,0,2,0,,0,2,0,,0,2,0,52.0,2,0,1
+development_on_R81_seen_sources,8,change background,REQUEST_SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.10447009773795482,2,0,1,,0,2,0,,0,2,0,0.2257087902885453,2,0,1,97.0,2,0,1
+development_on_R81_seen_sources,8,change background,SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.14569426424580867,2,0,1,,0,2,0,,0,2,0,0.23597393184247883,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,8,change background,SOFT50,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.12542640687713869,2,0,1,,0,2,0,,0,2,0,0.23062805496409056,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,8,change background,SOFT75,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.1163612364877058,2,0,1,,0,2,0,,0,2,0,0.22764428006394777,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,8,change background,U25_KV,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,0,0,0.11201744516196602,2,0,1,,0,2,0,,0,2,0,0.22638850648724995,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,9,change style,AUTO_DETAIL,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,0,,0,2,0,,0,2,0,,0,2,0,0.35846963838903423,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,9,change style,FLOWEDIT_N26,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,0,,0,2,0,,0,2,0,,0,2,0,,0,2,0,52.0,2,0,1
+development_on_R81_seen_sources,9,change style,REQUEST_SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,2,,0,2,0,,0,2,0,,0,2,0,0.24759696643681672,2,0,1,97.0,2,0,1
+development_on_R81_seen_sources,9,change style,SOFT25,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,2,,0,2,0,,0,2,0,,0,2,0,0.29311767700774805,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,9,change style,SOFT50,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,2,,0,2,0,,0,2,0,,0,2,0,0.2681663136402246,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,9,change style,SOFT75,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,2,,0,2,0,,0,2,0,,0,2,0,0.2595263874621627,2,0,1,91.0,2,0,1
+development_on_R81_seen_sources,9,change style,U25_KV,2,1,2,0,0,0,2,0,0,complement of official PIE edit mask,2,0,,0,2,0,,0,2,0,,0,2,0,0.2538324622035314,2,0,1,91.0,2,0,1

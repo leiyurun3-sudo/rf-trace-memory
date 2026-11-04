@@ -1,0 +1,1327 @@
+{
+  "source_archive": "R75_TransportStudy.zip",
+  "source_location": "Downloads",
+  "source_archive_bytes": 5489003,
+  "included_members": [
+    {
+      "path": "manifest.json",
+      "bytes": 2868,
+      "crc32": 4071314118
+    },
+    {
+      "path": "summary.json",
+      "bytes": 579,
+      "crc32": 2579483578
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 107086,
+      "crc32": 680922398
+    },
+    {
+      "path": "arm_summary.csv",
+      "bytes": 3410,
+      "crc32": 566731736
+    },
+    {
+      "path": "progress.json",
+      "bytes": 261,
+      "crc32": 2958762885
+    },
+    {
+      "path": "sources/622000000002.jpg",
+      "bytes": 16765,
+      "crc32": 300695938
+    },
+    {
+      "path": "sources/321000000001.jpg",
+      "bytes": 18560,
+      "crc32": 3959143
+    },
+    {
+      "path": "sources/121000000003.jpg",
+      "bytes": 27238,
+      "crc32": 3499695915
+    },
+    {
+      "path": "sources/522000000000.jpg",
+      "bytes": 13036,
+      "crc32": 3053922829
+    },
+    {
+      "path": "sources/723000000002.jpg",
+      "bytes": 19020,
+      "crc32": 2275911347
+    },
+    {
+      "path": "sources/423000000000.jpg",
+      "bytes": 15597,
+      "crc32": 3729756092
+    },
+    {
+      "path": "R75_cup_night_s10_TRANSPORT100_KV/preview.jpg",
+      "bytes": 18355,
+      "crc32": 654011062
+    },
+    {
+      "path": "R75_cup_night_s10_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 8813,
+      "crc32": 2816320494
+    },
+    {
+      "path": "R75_cup_night_s10_TRANSPORT50_KV/preview.jpg",
+      "bytes": 17715,
+      "crc32": 1648421930
+    },
+    {
+      "path": "R75_cup_night_s10_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 8480,
+      "crc32": 4018423312
+    },
+    {
+      "path": "R75_cup_night_s10_REF100_OFF/preview.jpg",
+      "bytes": 15792,
+      "crc32": 2396620081
+    },
+    {
+      "path": "R75_cup_night_s10_REF100_OFF/pattern.jpg",
+      "bytes": 7446,
+      "crc32": 3507604826
+    },
+    {
+      "path": "R75_cup_night_s10_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 18699,
+      "crc32": 3939399542
+    },
+    {
+      "path": "R75_cup_night_s10_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 9005,
+      "crc32": 3571170826
+    },
+    {
+      "path": "R75_cup_night_s10_FLOWEDIT_N28/preview.jpg",
+      "bytes": 15065,
+      "crc32": 3164713186
+    },
+    {
+      "path": "R75_cup_night_s10_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 8795,
+      "crc32": 3936406299
+    },
+    {
+      "path": "R75_cup_night_s10_FLOWEDIT_G8/preview.jpg",
+      "bytes": 18645,
+      "crc32": 1156240475
+    },
+    {
+      "path": "R75_cup_night_s10_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 10956,
+      "crc32": 847578618
+    },
+    {
+      "path": "R75_cup_night_s17_TRANSPORT100_KV/preview.jpg",
+      "bytes": 18494,
+      "crc32": 2616542448
+    },
+    {
+      "path": "R75_cup_night_s17_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 8857,
+      "crc32": 497765551
+    },
+    {
+      "path": "R75_cup_night_s17_TRANSPORT50_KV/preview.jpg",
+      "bytes": 18020,
+      "crc32": 3607110231
+    },
+    {
+      "path": "R75_cup_night_s17_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 8624,
+      "crc32": 4275710218
+    },
+    {
+      "path": "R75_cup_night_s17_REF100_OFF/preview.jpg",
+      "bytes": 16295,
+      "crc32": 4237332282
+    },
+    {
+      "path": "R75_cup_night_s17_REF100_OFF/pattern.jpg",
+      "bytes": 6538,
+      "crc32": 2268072107
+    },
+    {
+      "path": "R75_cup_night_s17_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 18713,
+      "crc32": 3350398640
+    },
+    {
+      "path": "R75_cup_night_s17_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 8978,
+      "crc32": 216755380
+    },
+    {
+      "path": "R75_cup_night_s17_FLOWEDIT_N28/preview.jpg",
+      "bytes": 14424,
+      "crc32": 1454879902
+    },
+    {
+      "path": "R75_cup_night_s17_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 7869,
+      "crc32": 784103400
+    },
+    {
+      "path": "R75_cup_night_s17_FLOWEDIT_G8/preview.jpg",
+      "bytes": 18680,
+      "crc32": 436487640
+    },
+    {
+      "path": "R75_cup_night_s17_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 10482,
+      "crc32": 3728232757
+    },
+    {
+      "path": "R75_printed_shirt_studio_s0_TRANSPORT100_KV/preview.jpg",
+      "bytes": 16406,
+      "crc32": 2073312942
+    },
+    {
+      "path": "R75_printed_shirt_studio_s0_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 3457,
+      "crc32": 690289755
+    },
+    {
+      "path": "R75_printed_shirt_studio_s0_TRANSPORT50_KV/preview.jpg",
+      "bytes": 16026,
+      "crc32": 605484370
+    },
+    {
+      "path": "R75_printed_shirt_studio_s0_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 3536,
+      "crc32": 938420204
+    },
+    {
+      "path": "R75_printed_shirt_studio_s0_REF100_OFF/preview.jpg",
+      "bytes": 13480,
+      "crc32": 2536859351
+    },
+    {
+      "path": "R75_printed_shirt_studio_s0_REF100_OFF/pattern.jpg",
+      "bytes": 3431,
+      "crc32": 1910010922
+    },
+    {
+      "path": "R75_printed_shirt_studio_s0_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 16347,
+      "crc32": 3730614947
+    },
+    {
+      "path": "R75_printed_shirt_studio_s0_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 3350,
+      "crc32": 710677259
+    },
+    {
+      "path": "R75_printed_shirt_studio_s0_FLOWEDIT_N28/preview.jpg",
+      "bytes": 13753,
+      "crc32": 2389976171
+    },
+    {
+      "path": "R75_printed_shirt_studio_s0_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 2978,
+      "crc32": 580656596
+    },
+    {
+      "path": "R75_printed_shirt_studio_s0_FLOWEDIT_G8/preview.jpg",
+      "bytes": 16620,
+      "crc32": 4189451243
+    },
+    {
+      "path": "R75_printed_shirt_studio_s0_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 4139,
+      "crc32": 839215894
+    },
+    {
+      "path": "R75_printed_shirt_studio_s17_TRANSPORT100_KV/preview.jpg",
+      "bytes": 16417,
+      "crc32": 3687026151
+    },
+    {
+      "path": "R75_printed_shirt_studio_s17_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 3419,
+      "crc32": 3848998727
+    },
+    {
+      "path": "R75_printed_shirt_studio_s17_TRANSPORT50_KV/preview.jpg",
+      "bytes": 15948,
+      "crc32": 978760126
+    },
+    {
+      "path": "R75_printed_shirt_studio_s17_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 3274,
+      "crc32": 1225282022
+    },
+    {
+      "path": "R75_printed_shirt_studio_s17_REF100_OFF/preview.jpg",
+      "bytes": 14616,
+      "crc32": 2997468015
+    },
+    {
+      "path": "R75_printed_shirt_studio_s17_REF100_OFF/pattern.jpg",
+      "bytes": 3995,
+      "crc32": 1755213034
+    },
+    {
+      "path": "R75_printed_shirt_studio_s17_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 16347,
+      "crc32": 1411119168
+    },
+    {
+      "path": "R75_printed_shirt_studio_s17_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 3344,
+      "crc32": 2157094824
+    },
+    {
+      "path": "R75_printed_shirt_studio_s17_FLOWEDIT_N28/preview.jpg",
+      "bytes": 12616,
+      "crc32": 2661997254
+    },
+    {
+      "path": "R75_printed_shirt_studio_s17_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 2565,
+      "crc32": 896138005
+    },
+    {
+      "path": "R75_printed_shirt_studio_s17_FLOWEDIT_G8/preview.jpg",
+      "bytes": 15935,
+      "crc32": 1560112226
+    },
+    {
+      "path": "R75_printed_shirt_studio_s17_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 3872,
+      "crc32": 2362915589
+    },
+    {
+      "path": "R75_butterfly_sunset_s0_TRANSPORT100_KV/preview.jpg",
+      "bytes": 18261,
+      "crc32": 2196548668
+    },
+    {
+      "path": "R75_butterfly_sunset_s0_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 9265,
+      "crc32": 498367697
+    },
+    {
+      "path": "R75_butterfly_sunset_s0_TRANSPORT50_KV/preview.jpg",
+      "bytes": 18413,
+      "crc32": 3959552446
+    },
+    {
+      "path": "R75_butterfly_sunset_s0_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 9150,
+      "crc32": 1758085828
+    },
+    {
+      "path": "R75_butterfly_sunset_s0_REF100_OFF/preview.jpg",
+      "bytes": 21281,
+      "crc32": 3126498601
+    },
+    {
+      "path": "R75_butterfly_sunset_s0_REF100_OFF/pattern.jpg",
+      "bytes": 5860,
+      "crc32": 3855852204
+    },
+    {
+      "path": "R75_butterfly_sunset_s0_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 18332,
+      "crc32": 3742548989
+    },
+    {
+      "path": "R75_butterfly_sunset_s0_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 9323,
+      "crc32": 1685012299
+    },
+    {
+      "path": "R75_butterfly_sunset_s0_FLOWEDIT_N28/preview.jpg",
+      "bytes": 15433,
+      "crc32": 1526072651
+    },
+    {
+      "path": "R75_butterfly_sunset_s0_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 5650,
+      "crc32": 22342477
+    },
+    {
+      "path": "R75_butterfly_sunset_s0_FLOWEDIT_G8/preview.jpg",
+      "bytes": 18095,
+      "crc32": 3319154457
+    },
+    {
+      "path": "R75_butterfly_sunset_s0_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 9435,
+      "crc32": 862063747
+    },
+    {
+      "path": "R75_butterfly_sunset_s17_TRANSPORT100_KV/preview.jpg",
+      "bytes": 18348,
+      "crc32": 3591023132
+    },
+    {
+      "path": "R75_butterfly_sunset_s17_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 9424,
+      "crc32": 2769966734
+    },
+    {
+      "path": "R75_butterfly_sunset_s17_TRANSPORT50_KV/preview.jpg",
+      "bytes": 18474,
+      "crc32": 3140076906
+    },
+    {
+      "path": "R75_butterfly_sunset_s17_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 9400,
+      "crc32": 1181973079
+    },
+    {
+      "path": "R75_butterfly_sunset_s17_REF100_OFF/preview.jpg",
+      "bytes": 21782,
+      "crc32": 540433770
+    },
+    {
+      "path": "R75_butterfly_sunset_s17_REF100_OFF/pattern.jpg",
+      "bytes": 7876,
+      "crc32": 3152162171
+    },
+    {
+      "path": "R75_butterfly_sunset_s17_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 18743,
+      "crc32": 2366502820
+    },
+    {
+      "path": "R75_butterfly_sunset_s17_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 9420,
+      "crc32": 2114014000
+    },
+    {
+      "path": "R75_butterfly_sunset_s17_FLOWEDIT_N28/preview.jpg",
+      "bytes": 16030,
+      "crc32": 334275426
+    },
+    {
+      "path": "R75_butterfly_sunset_s17_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 5885,
+      "crc32": 4105259106
+    },
+    {
+      "path": "R75_butterfly_sunset_s17_FLOWEDIT_G8/preview.jpg",
+      "bytes": 18203,
+      "crc32": 1840761239
+    },
+    {
+      "path": "R75_butterfly_sunset_s17_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 9816,
+      "crc32": 127327523
+    },
+    {
+      "path": "R75_dog_snow_s0_TRANSPORT100_KV/preview.jpg",
+      "bytes": 27436,
+      "crc32": 2402680428
+    },
+    {
+      "path": "R75_dog_snow_s0_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 11465,
+      "crc32": 3360437960
+    },
+    {
+      "path": "R75_dog_snow_s0_TRANSPORT50_KV/preview.jpg",
+      "bytes": 27951,
+      "crc32": 3137511931
+    },
+    {
+      "path": "R75_dog_snow_s0_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 11891,
+      "crc32": 1539447754
+    },
+    {
+      "path": "R75_dog_snow_s0_REF100_OFF/preview.jpg",
+      "bytes": 15238,
+      "crc32": 1822675540
+    },
+    {
+      "path": "R75_dog_snow_s0_REF100_OFF/pattern.jpg",
+      "bytes": 12382,
+      "crc32": 369526631
+    },
+    {
+      "path": "R75_dog_snow_s0_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 28304,
+      "crc32": 2061970497
+    },
+    {
+      "path": "R75_dog_snow_s0_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 11232,
+      "crc32": 944557925
+    },
+    {
+      "path": "R75_dog_snow_s0_FLOWEDIT_N28/preview.jpg",
+      "bytes": 12707,
+      "crc32": 1784754548
+    },
+    {
+      "path": "R75_dog_snow_s0_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 8620,
+      "crc32": 416918396
+    },
+    {
+      "path": "R75_dog_snow_s0_FLOWEDIT_G8/preview.jpg",
+      "bytes": 24790,
+      "crc32": 2316847110
+    },
+    {
+      "path": "R75_dog_snow_s0_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 10890,
+      "crc32": 49179369
+    },
+    {
+      "path": "R75_dog_snow_s17_TRANSPORT100_KV/preview.jpg",
+      "bytes": 27385,
+      "crc32": 3569260903
+    },
+    {
+      "path": "R75_dog_snow_s17_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 11340,
+      "crc32": 1839195489
+    },
+    {
+      "path": "R75_dog_snow_s17_TRANSPORT50_KV/preview.jpg",
+      "bytes": 27643,
+      "crc32": 1352875241
+    },
+    {
+      "path": "R75_dog_snow_s17_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 11752,
+      "crc32": 1060883349
+    },
+    {
+      "path": "R75_dog_snow_s17_REF100_OFF/preview.jpg",
+      "bytes": 16033,
+      "crc32": 658317044
+    },
+    {
+      "path": "R75_dog_snow_s17_REF100_OFF/pattern.jpg",
+      "bytes": 12276,
+      "crc32": 748559699
+    },
+    {
+      "path": "R75_dog_snow_s17_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 28224,
+      "crc32": 3525986286
+    },
+    {
+      "path": "R75_dog_snow_s17_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 11499,
+      "crc32": 1105289122
+    },
+    {
+      "path": "R75_dog_snow_s17_FLOWEDIT_N28/preview.jpg",
+      "bytes": 11733,
+      "crc32": 1440692256
+    },
+    {
+      "path": "R75_dog_snow_s17_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 8007,
+      "crc32": 1636908998
+    },
+    {
+      "path": "R75_dog_snow_s17_FLOWEDIT_G8/preview.jpg",
+      "bytes": 25466,
+      "crc32": 3529803659
+    },
+    {
+      "path": "R75_dog_snow_s17_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 10829,
+      "crc32": 2188677366
+    },
+    {
+      "path": "R75_dog_rain_s0_TRANSPORT100_KV/preview.jpg",
+      "bytes": 27302,
+      "crc32": 2578052327
+    },
+    {
+      "path": "R75_dog_rain_s0_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 11451,
+      "crc32": 2429699222
+    },
+    {
+      "path": "R75_dog_rain_s0_TRANSPORT50_KV/preview.jpg",
+      "bytes": 27472,
+      "crc32": 3994766845
+    },
+    {
+      "path": "R75_dog_rain_s0_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 11933,
+      "crc32": 1075640476
+    },
+    {
+      "path": "R75_dog_rain_s0_REF100_OFF/preview.jpg",
+      "bytes": 22261,
+      "crc32": 450884344
+    },
+    {
+      "path": "R75_dog_rain_s0_REF100_OFF/pattern.jpg",
+      "bytes": 12224,
+      "crc32": 3408441167
+    },
+    {
+      "path": "R75_dog_rain_s0_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 27460,
+      "crc32": 3291466968
+    },
+    {
+      "path": "R75_dog_rain_s0_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 11672,
+      "crc32": 3957612916
+    },
+    {
+      "path": "R75_dog_rain_s0_FLOWEDIT_N28/preview.jpg",
+      "bytes": 19288,
+      "crc32": 3329855117
+    },
+    {
+      "path": "R75_dog_rain_s0_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 9930,
+      "crc32": 3632707108
+    },
+    {
+      "path": "R75_dog_rain_s0_FLOWEDIT_G8/preview.jpg",
+      "bytes": 24139,
+      "crc32": 653466488
+    },
+    {
+      "path": "R75_dog_rain_s0_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 11019,
+      "crc32": 2030957002
+    },
+    {
+      "path": "R75_dog_rain_s17_TRANSPORT100_KV/preview.jpg",
+      "bytes": 27150,
+      "crc32": 204971767
+    },
+    {
+      "path": "R75_dog_rain_s17_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 11385,
+      "crc32": 2876208899
+    },
+    {
+      "path": "R75_dog_rain_s17_TRANSPORT50_KV/preview.jpg",
+      "bytes": 27253,
+      "crc32": 793313613
+    },
+    {
+      "path": "R75_dog_rain_s17_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 11903,
+      "crc32": 4067422693
+    },
+    {
+      "path": "R75_dog_rain_s17_REF100_OFF/preview.jpg",
+      "bytes": 23681,
+      "crc32": 1141994935
+    },
+    {
+      "path": "R75_dog_rain_s17_REF100_OFF/pattern.jpg",
+      "bytes": 11709,
+      "crc32": 3017773491
+    },
+    {
+      "path": "R75_dog_rain_s17_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 27989,
+      "crc32": 54977684
+    },
+    {
+      "path": "R75_dog_rain_s17_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 11446,
+      "crc32": 1743633510
+    },
+    {
+      "path": "R75_dog_rain_s17_FLOWEDIT_N28/preview.jpg",
+      "bytes": 18086,
+      "crc32": 135160551
+    },
+    {
+      "path": "R75_dog_rain_s17_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 9484,
+      "crc32": 1727703232
+    },
+    {
+      "path": "R75_dog_rain_s17_FLOWEDIT_G8/preview.jpg",
+      "bytes": 24531,
+      "crc32": 2532760115
+    },
+    {
+      "path": "R75_dog_rain_s17_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 10902,
+      "crc32": 2030216274
+    },
+    {
+      "path": "R75_shirt_studio_s0_TRANSPORT100_KV/preview.jpg",
+      "bytes": 12903,
+      "crc32": 1470437784
+    },
+    {
+      "path": "R75_shirt_studio_s0_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 3353,
+      "crc32": 2576337410
+    },
+    {
+      "path": "R75_shirt_studio_s0_TRANSPORT50_KV/preview.jpg",
+      "bytes": 12576,
+      "crc32": 3778244598
+    },
+    {
+      "path": "R75_shirt_studio_s0_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 3376,
+      "crc32": 737077295
+    },
+    {
+      "path": "R75_shirt_studio_s0_REF100_OFF/preview.jpg",
+      "bytes": 10706,
+      "crc32": 1993690131
+    },
+    {
+      "path": "R75_shirt_studio_s0_REF100_OFF/pattern.jpg",
+      "bytes": 6507,
+      "crc32": 2829526150
+    },
+    {
+      "path": "R75_shirt_studio_s0_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 12676,
+      "crc32": 2644299354
+    },
+    {
+      "path": "R75_shirt_studio_s0_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 3451,
+      "crc32": 2532070842
+    },
+    {
+      "path": "R75_shirt_studio_s0_FLOWEDIT_N28/preview.jpg",
+      "bytes": 10282,
+      "crc32": 3435648903
+    },
+    {
+      "path": "R75_shirt_studio_s0_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 3464,
+      "crc32": 1979141069
+    },
+    {
+      "path": "R75_shirt_studio_s0_FLOWEDIT_G8/preview.jpg",
+      "bytes": 13619,
+      "crc32": 2302370567
+    },
+    {
+      "path": "R75_shirt_studio_s0_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 3534,
+      "crc32": 4075274686
+    },
+    {
+      "path": "R75_shirt_studio_s17_TRANSPORT100_KV/preview.jpg",
+      "bytes": 12911,
+      "crc32": 2713925939
+    },
+    {
+      "path": "R75_shirt_studio_s17_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 3321,
+      "crc32": 3017793507
+    },
+    {
+      "path": "R75_shirt_studio_s17_TRANSPORT50_KV/preview.jpg",
+      "bytes": 12852,
+      "crc32": 3721816622
+    },
+    {
+      "path": "R75_shirt_studio_s17_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 3441,
+      "crc32": 312385997
+    },
+    {
+      "path": "R75_shirt_studio_s17_REF100_OFF/preview.jpg",
+      "bytes": 11324,
+      "crc32": 1301469035
+    },
+    {
+      "path": "R75_shirt_studio_s17_REF100_OFF/pattern.jpg",
+      "bytes": 6451,
+      "crc32": 3750399052
+    },
+    {
+      "path": "R75_shirt_studio_s17_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 12640,
+      "crc32": 461662296
+    },
+    {
+      "path": "R75_shirt_studio_s17_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 3424,
+      "crc32": 566231195
+    },
+    {
+      "path": "R75_shirt_studio_s17_FLOWEDIT_N28/preview.jpg",
+      "bytes": 9742,
+      "crc32": 210204074
+    },
+    {
+      "path": "R75_shirt_studio_s17_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 4972,
+      "crc32": 2229352837
+    },
+    {
+      "path": "R75_shirt_studio_s17_FLOWEDIT_G8/preview.jpg",
+      "bytes": 13157,
+      "crc32": 2072405062
+    },
+    {
+      "path": "R75_shirt_studio_s17_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 3574,
+      "crc32": 3799565167
+    },
+    {
+      "path": "R75_rug_floor_s0_TRANSPORT100_KV/preview.jpg",
+      "bytes": 15494,
+      "crc32": 3019310634
+    },
+    {
+      "path": "R75_rug_floor_s0_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 5795,
+      "crc32": 814426582
+    },
+    {
+      "path": "R75_rug_floor_s0_TRANSPORT50_KV/preview.jpg",
+      "bytes": 15701,
+      "crc32": 610469892
+    },
+    {
+      "path": "R75_rug_floor_s0_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 6100,
+      "crc32": 1418822616
+    },
+    {
+      "path": "R75_rug_floor_s0_REF100_OFF/preview.jpg",
+      "bytes": 12229,
+      "crc32": 4076679188
+    },
+    {
+      "path": "R75_rug_floor_s0_REF100_OFF/pattern.jpg",
+      "bytes": 3866,
+      "crc32": 3918726260
+    },
+    {
+      "path": "R75_rug_floor_s0_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 15568,
+      "crc32": 1403622853
+    },
+    {
+      "path": "R75_rug_floor_s0_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 5709,
+      "crc32": 2754672975
+    },
+    {
+      "path": "R75_rug_floor_s0_FLOWEDIT_N28/preview.jpg",
+      "bytes": 21703,
+      "crc32": 1649952690
+    },
+    {
+      "path": "R75_rug_floor_s0_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 11479,
+      "crc32": 2041637592
+    },
+    {
+      "path": "R75_rug_floor_s0_FLOWEDIT_G8/preview.jpg",
+      "bytes": 16049,
+      "crc32": 519141852
+    },
+    {
+      "path": "R75_rug_floor_s0_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 6199,
+      "crc32": 2903318234
+    },
+    {
+      "path": "R75_rug_floor_s17_TRANSPORT100_KV/preview.jpg",
+      "bytes": 15029,
+      "crc32": 969507138
+    },
+    {
+      "path": "R75_rug_floor_s17_TRANSPORT100_KV/pattern.jpg",
+      "bytes": 5690,
+      "crc32": 1740481734
+    },
+    {
+      "path": "R75_rug_floor_s17_TRANSPORT50_KV/preview.jpg",
+      "bytes": 14615,
+      "crc32": 4131311341
+    },
+    {
+      "path": "R75_rug_floor_s17_TRANSPORT50_KV/pattern.jpg",
+      "bytes": 5267,
+      "crc32": 3598292525
+    },
+    {
+      "path": "R75_rug_floor_s17_REF100_OFF/preview.jpg",
+      "bytes": 11298,
+      "crc32": 3516222515
+    },
+    {
+      "path": "R75_rug_floor_s17_REF100_OFF/pattern.jpg",
+      "bytes": 3524,
+      "crc32": 3429759398
+    },
+    {
+      "path": "R75_rug_floor_s17_TRANSPORT100_OFF/preview.jpg",
+      "bytes": 15367,
+      "crc32": 1610998279
+    },
+    {
+      "path": "R75_rug_floor_s17_TRANSPORT100_OFF/pattern.jpg",
+      "bytes": 5734,
+      "crc32": 429390600
+    },
+    {
+      "path": "R75_rug_floor_s17_FLOWEDIT_N28/preview.jpg",
+      "bytes": 20510,
+      "crc32": 1723897730
+    },
+    {
+      "path": "R75_rug_floor_s17_FLOWEDIT_N28/pattern.jpg",
+      "bytes": 10289,
+      "crc32": 2322344148
+    },
+    {
+      "path": "R75_rug_floor_s17_FLOWEDIT_G8/preview.jpg",
+      "bytes": 16631,
+      "crc32": 2951027456
+    },
+    {
+      "path": "R75_rug_floor_s17_FLOWEDIT_G8/pattern.jpg",
+      "bytes": 6520,
+      "crc32": 2166298448
+    },
+    {
+      "path": "R75_cup_night_recon_s10_RECON_TRANSPORT100/preview.jpg",
+      "bytes": 18740,
+      "crc32": 2372546246
+    },
+    {
+      "path": "R75_cup_night_recon_s10_RECON_TRANSPORT100/pattern.jpg",
+      "bytes": 8823,
+      "crc32": 771712244
+    },
+    {
+      "path": "R75_printed_shirt_studio_recon_s0_RECON_TRANSPORT100/preview.jpg",
+      "bytes": 16572,
+      "crc32": 2297564382
+    },
+    {
+      "path": "R75_printed_shirt_studio_recon_s0_RECON_TRANSPORT100/pattern.jpg",
+      "bytes": 3445,
+      "crc32": 2324192900
+    },
+    {
+      "path": "R75_butterfly_sunset_recon_s0_RECON_TRANSPORT100/preview.jpg",
+      "bytes": 18235,
+      "crc32": 4047488770
+    },
+    {
+      "path": "R75_butterfly_sunset_recon_s0_RECON_TRANSPORT100/pattern.jpg",
+      "bytes": 9416,
+      "crc32": 1077807681
+    },
+    {
+      "path": "reference_r74/manifest.json",
+      "bytes": 132773,
+      "crc32": 2528595107
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s0_C100.jpg",
+      "bytes": 19578,
+      "crc32": 650739002
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s0_ETA03.jpg",
+      "bytes": 17038,
+      "crc32": 2796233716
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s0_FLOWEDIT.jpg",
+      "bytes": 17992,
+      "crc32": 268682967
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s0_SPLIT0.jpg",
+      "bytes": 14383,
+      "crc32": 6059067
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s17_C100.jpg",
+      "bytes": 19369,
+      "crc32": 958715541
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s17_ETA03.jpg",
+      "bytes": 17436,
+      "crc32": 1211865876
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s17_FLOWEDIT.jpg",
+      "bytes": 17922,
+      "crc32": 1544427077
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s17_SPLIT0.jpg",
+      "bytes": 13190,
+      "crc32": 1601238363
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s10_C100.jpg",
+      "bytes": 15751,
+      "crc32": 4225953944
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s10_ETA03.jpg",
+      "bytes": 16743,
+      "crc32": 2639396787
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s10_FLOWEDIT.jpg",
+      "bytes": 17799,
+      "crc32": 3011512710
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s10_SPLIT0.jpg",
+      "bytes": 14172,
+      "crc32": 82174009
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s17_C100.jpg",
+      "bytes": 18904,
+      "crc32": 329165061
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s17_ETA03.jpg",
+      "bytes": 16571,
+      "crc32": 3633019340
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s17_FLOWEDIT.jpg",
+      "bytes": 18430,
+      "crc32": 1224676968
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s17_SPLIT0.jpg",
+      "bytes": 13767,
+      "crc32": 891295127
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s0_C100.jpg",
+      "bytes": 24521,
+      "crc32": 650004060
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s0_ETA03.jpg",
+      "bytes": 22503,
+      "crc32": 728071742
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s0_FLOWEDIT.jpg",
+      "bytes": 23485,
+      "crc32": 1734291379
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s0_SPLIT0.jpg",
+      "bytes": 14975,
+      "crc32": 809110942
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s17_C100.jpg",
+      "bytes": 24421,
+      "crc32": 2904169424
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s17_ETA03.jpg",
+      "bytes": 22442,
+      "crc32": 3725971684
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s17_FLOWEDIT.jpg",
+      "bytes": 23201,
+      "crc32": 3433503505
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s17_SPLIT0.jpg",
+      "bytes": 14548,
+      "crc32": 3128234710
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s0_C100.jpg",
+      "bytes": 23399,
+      "crc32": 3959245796
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s0_ETA03.jpg",
+      "bytes": 22013,
+      "crc32": 2421546482
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s0_FLOWEDIT.jpg",
+      "bytes": 24084,
+      "crc32": 3929707703
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s0_SPLIT0.jpg",
+      "bytes": 15134,
+      "crc32": 3563554914
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s17_C100.jpg",
+      "bytes": 24320,
+      "crc32": 3300226936
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s17_ETA03.jpg",
+      "bytes": 20483,
+      "crc32": 3118140639
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s17_FLOWEDIT.jpg",
+      "bytes": 24179,
+      "crc32": 376306047
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s17_SPLIT0.jpg",
+      "bytes": 14368,
+      "crc32": 1921730362
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s0_C100.jpg",
+      "bytes": 15102,
+      "crc32": 3978786379
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s0_ETA03.jpg",
+      "bytes": 14323,
+      "crc32": 3576449033
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s0_FLOWEDIT.jpg",
+      "bytes": 16348,
+      "crc32": 2375787507
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s0_SPLIT0.jpg",
+      "bytes": 11402,
+      "crc32": 700436570
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s17_C100.jpg",
+      "bytes": 15453,
+      "crc32": 3752917757
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s17_ETA03.jpg",
+      "bytes": 14133,
+      "crc32": 2018941860
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s17_FLOWEDIT.jpg",
+      "bytes": 15797,
+      "crc32": 1674845761
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s17_SPLIT0.jpg",
+      "bytes": 11739,
+      "crc32": 785607428
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s0_C100.jpg",
+      "bytes": 14150,
+      "crc32": 744108323
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s0_ETA03.jpg",
+      "bytes": 13630,
+      "crc32": 772346773
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s0_FLOWEDIT.jpg",
+      "bytes": 16945,
+      "crc32": 1057230451
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s0_SPLIT0.jpg",
+      "bytes": 13018,
+      "crc32": 1444991436
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s17_C100.jpg",
+      "bytes": 13179,
+      "crc32": 2382482545
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s17_ETA03.jpg",
+      "bytes": 14930,
+      "crc32": 229381487
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s17_FLOWEDIT.jpg",
+      "bytes": 16966,
+      "crc32": 2915869052
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s17_SPLIT0.jpg",
+      "bytes": 15667,
+      "crc32": 743996825
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s0_C100.jpg",
+      "bytes": 11561,
+      "crc32": 238286101
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s0_ETA03.jpg",
+      "bytes": 10922,
+      "crc32": 3175538928
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s0_FLOWEDIT.jpg",
+      "bytes": 14028,
+      "crc32": 2496308946
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s0_SPLIT0.jpg",
+      "bytes": 9614,
+      "crc32": 4067032137
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s17_C100.jpg",
+      "bytes": 12848,
+      "crc32": 4214996728
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s17_ETA03.jpg",
+      "bytes": 11165,
+      "crc32": 3386506361
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s17_FLOWEDIT.jpg",
+      "bytes": 13488,
+      "crc32": 3808212203
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s17_SPLIT0.jpg",
+      "bytes": 9267,
+      "crc32": 605579445
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "index.html",
+      "bytes": 42401,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "review/index.html",
+      "bytes": 84243,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/cup_night_s10.jpg",
+      "bytes": 145589,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/cup_night_s17.jpg",
+      "bytes": 149018,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/printed_shirt_studio_s0.jpg",
+      "bytes": 130566,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/printed_shirt_studio_s17.jpg",
+      "bytes": 129717,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/butterfly_sunset_s0.jpg",
+      "bytes": 150863,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/butterfly_sunset_s17.jpg",
+      "bytes": 151338,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_snow_s0.jpg",
+      "bytes": 179668,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_snow_s17.jpg",
+      "bytes": 180518,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_rain_s0.jpg",
+      "bytes": 188049,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_rain_s17.jpg",
+      "bytes": 188733,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/shirt_studio_s0.jpg",
+      "bytes": 108648,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/shirt_studio_s17.jpg",
+      "bytes": 108692,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/rug_floor_s0.jpg",
+      "bytes": 133779,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/rug_floor_s17.jpg",
+      "bytes": 133070,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/cup_night_recon_s10.jpg",
+      "bytes": 30380,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/printed_shirt_studio_recon_s0.jpg",
+      "bytes": 27089,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/butterfly_sunset_recon_s0.jpg",
+      "bytes": 29235,
+      "reason": "comparison grid or generated interface"
+    }
+  ],
+  "text_normalized_members": [],
+  "original_manifest_note": "Archived code/plan/input hashes identify the historical run. Neutral naming and path redaction change published text; hashes are not recalculated or presented as hashes of this export.",
+  "available": {
+    "completed": 87,
+    "total_planned": 87,
+    "pending": 0,
+    "step_summaries": 0,
+    "record_json": 0,
+    "full_steps_json": 0,
+    "native_raw_png_in_archive": 0,
+    "float_map_npz": 0
+  },
+  "missing": "Native generated images absent from compact source ZIP."
+}

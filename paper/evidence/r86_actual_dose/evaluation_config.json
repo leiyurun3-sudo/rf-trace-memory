@@ -1,0 +1,326 @@
+{
+  "status": "completed",
+  "device": "cpu",
+  "executable": "archive/runtime/MINT_Flow_Jupyter_Ready/.venv/bin/python",
+  "required_metrics": [
+    "clip_target_similarity",
+    "clip_directional_similarity",
+    "clip_image_similarity",
+    "dino_full_feature_similarity",
+    "dino_pattern_crop_feature_similarity"
+  ],
+  "root": "archive/runtime/R86_ActualDoseControls/runtime_pilot_v2",
+  "lpips_status": "not_requested",
+  "native_png_audit": [
+    {
+      "id": "R86_pie_000000000058_s0_SHIFT_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_000000000058_s0_GLOBAL_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_000000000058_s0_CORR_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_000000000058_s0_GLOBAL_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_111000000009_s0_SHIFT_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_111000000009_s0_GLOBAL_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_111000000009_s0_CORR_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_111000000009_s0_GLOBAL_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_122000000002_s0_SHIFT_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_122000000002_s0_GLOBAL_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_122000000002_s0_CORR_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_122000000002_s0_GLOBAL_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_224000000007_s0_SHIFT_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_224000000007_s0_GLOBAL_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_224000000007_s0_CORR_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_224000000007_s0_GLOBAL_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_312000000006_s0_SHIFT_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_312000000006_s0_GLOBAL_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_312000000006_s0_CORR_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_312000000006_s0_GLOBAL_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_422000000001_s0_SHIFT_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_422000000001_s0_GLOBAL_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_422000000001_s0_CORR_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_422000000001_s0_GLOBAL_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_614000000004_s0_SHIFT_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_614000000004_s0_GLOBAL_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_614000000004_s0_CORR_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_614000000004_s0_GLOBAL_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_723000000004_s0_SHIFT_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_723000000004_s0_GLOBAL_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_723000000004_s0_CORR_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_723000000004_s0_GLOBAL_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_813000000003_s0_SHIFT_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_813000000003_s0_GLOBAL_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_813000000003_s0_CORR_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_813000000003_s0_GLOBAL_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_812000000004_s0_SHIFT_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_812000000004_s0_GLOBAL_1",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_812000000004_s0_CORR_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    },
+    {
+      "id": "R86_pie_812000000004_s0_GLOBAL_07",
+      "raw_exists": true,
+      "record_exists": true,
+      "source_exists": true
+    }
+  ],
+  "lpips_policy": "full LPIPS required; preserved LPIPS required except explicit empty region; spatial-map mask weighting allows receptive-field spill",
+  "clip_directional_policy": "finite score or explicitly reported zero_direction with empty score; other four required metrics must be finite",
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.55.4",
+    "numpy": "2.5.4",
+    "Pillow": "11.3.0",
+    "scikit-image": "0.26.0"
+  },
+  "paths": {
+    "CLIP_PATH": "archive/runtime/MINT_Flow_Jupyter_Ready/evaluation_models/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "DINO_PATH": "archive/runtime/MINT_Flow_Jupyter_Ready/evaluation_models/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415"
+  },
+  "readiness_scope": "installed metadata and local files; model load occurs in evaluator",
+  "command": [
+    "archive/runtime/MINT_Flow_Jupyter_Ready/.venv/bin/python",
+    "-u",
+    "archive/runtime/R86_ActualDoseControls/runtime_pilot_v2/evaluate.py",
+    "--from-results",
+    "archive/runtime/R86_ActualDoseControls/runtime_pilot_v2/results",
+    "--clip-path",
+    "archive/runtime/MINT_Flow_Jupyter_Ready/evaluation_models/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "--dino-path",
+    "archive/runtime/MINT_Flow_Jupyter_Ready/evaluation_models/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "--device",
+    "cpu",
+    "--data-dir",
+    "archive/runtime/R86_ActualDoseControls/runtime_pilot_v2/data",
+    "--lpips-status",
+    "not_requested",
+    "--lpips-error",
+    "",
+    "--lpips-path",
+    "archive/runtime/MINT_Flow_Jupyter_Ready/evaluation_models/lpips/alex_v0.1.pth",
+    "--lpips-trunk-path",
+    "archive/runtime/MINT_Flow_Jupyter_Ready/evaluation_models/lpips/alexnet-owt-7be5be79.pth"
+  ],
+  "started": 1793702098.370749,
+  "pid": 14931,
+  "evaluator_returncode": 0,
+  "error": null,
+  "planned": 40,
+  "incomplete_ids": [],
+  "lpips_status_counts": {
+    "ok": 40
+  },
+  "raw_audit": {
+    "eval_raw_exists": 40,
+    "eval_source_exists": 40,
+    "eval_record_exists": 40
+  },
+  "raw_audit_planned": 40,
+  "statistics_status": "completed",
+  "statistics_reference": "SHIFT_1",
+  "overnight_statistics_command": [
+    "archive/runtime/MINT_Flow_Jupyter_Ready/.venv/bin/python",
+    "-u",
+    "archive/runtime/R86_ActualDoseControls/runtime_pilot_v2/overnight_stats.py",
+    "--results",
+    "archive/runtime/R86_ActualDoseControls/runtime_pilot_v2/results"
+  ],
+  "overnight_statistics_returncode": 0,
+  "statistics_files": [
+    "statistics.json",
+    "category_summary.csv",
+    "evidence/overnight_source_values.csv",
+    "evidence/overnight_arm_summary.csv",
+    "evidence/overnight_comparisons.csv",
+    "evidence/overnight_evidence.json"
+  ]
+}

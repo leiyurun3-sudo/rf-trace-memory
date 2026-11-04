@@ -1,0 +1,19 @@
+{
+  "case": "922000000009",
+  "usage": "evaluation_only_after_generation",
+  "official_record": {
+    "image_path": "9_change_style_80/2_natural/2_human/922000000009.jpg",
+    "original_prompt": "a young girl with painted hands and face",
+    "editing_prompt": "[black and white sketch of] a young girl with painted hands and face",
+    "editing_instruction": "Make the young girl a black and white sketch",
+    "editing_type_id": "9",
+    "blended_word": "",
+    "mask": [
+      0,
+      262144
+    ]
+  },
+  "mask_encoding": "zero_based_start_length_pairs_row_major_512x512",
+  "official_evaluator_boundary_policy": "set four border edges to edited=1",
+  "independence": "supplied dataset annotation; not a new human annotation or ground-truth edited image"
+}

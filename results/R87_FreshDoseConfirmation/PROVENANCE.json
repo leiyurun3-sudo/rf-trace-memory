@@ -1,0 +1,6029 @@
+{
+  "source_archive": "R87_FreshDoseConfirmation_results.zip",
+  "source_location": "Downloads",
+  "source_archive_bytes": 21507403,
+  "included_members": [
+    {
+      "path": "plan.json",
+      "bytes": 655211,
+      "crc32": 3326869118
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 9866,
+      "crc32": 4221782428
+    },
+    {
+      "path": "summary.json",
+      "bytes": 951,
+      "crc32": 318548363
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 601387,
+      "crc32": 3917599305
+    },
+    {
+      "path": "arm_summary.csv",
+      "bytes": 2270,
+      "crc32": 3205276904
+    },
+    {
+      "path": "comparison_metrics.csv",
+      "bytes": 631306,
+      "crc32": 2301048086
+    },
+    {
+      "path": "comparison_arm_summary.csv",
+      "bytes": 2270,
+      "crc32": 3205276904
+    },
+    {
+      "path": "progress.json",
+      "bytes": 244,
+      "crc32": 1731883067
+    },
+    {
+      "path": "evaluation.csv",
+      "bytes": 263573,
+      "crc32": 1557287922
+    },
+    {
+      "path": "anchor_profiles.json",
+      "bytes": 199564,
+      "crc32": 2323197040
+    },
+    {
+      "path": "source_selection_manifest.json",
+      "bytes": 576638,
+      "crc32": 1188626571
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 3354,
+      "crc32": 883189863
+    },
+    {
+      "path": "evidence/r87_actual_profiles.csv",
+      "bytes": 570997,
+      "crc32": 2953684153
+    },
+    {
+      "path": "evidence/r87_arm_means.csv",
+      "bytes": 1233,
+      "crc32": 617897811
+    },
+    {
+      "path": "evidence/r87_localization.csv",
+      "bytes": 19324,
+      "crc32": 602025707
+    },
+    {
+      "path": "evidence/r87_paired.csv",
+      "bytes": 17677,
+      "crc32": 1220619273
+    },
+    {
+      "path": "evidence/r87_source_values.csv",
+      "bytes": 45911,
+      "crc32": 2949253208
+    },
+    {
+      "path": "evidence/r87_statistics.json",
+      "bytes": 77277,
+      "crc32": 341089205
+    },
+    {
+      "path": "sources/000000000139.jpg",
+      "bytes": 31649,
+      "crc32": 3151076751
+    },
+    {
+      "path": "sources/000000000011.jpg",
+      "bytes": 12055,
+      "crc32": 254759153
+    },
+    {
+      "path": "sources/112000000001.jpg",
+      "bytes": 23570,
+      "crc32": 2535543059
+    },
+    {
+      "path": "sources/111000000008.jpg",
+      "bytes": 21933,
+      "crc32": 869864144
+    },
+    {
+      "path": "sources/221000000004.jpg",
+      "bytes": 22202,
+      "crc32": 3970517275
+    },
+    {
+      "path": "sources/213000000007.jpg",
+      "bytes": 8870,
+      "crc32": 377459024
+    },
+    {
+      "path": "sources/323000000001.jpg",
+      "bytes": 19224,
+      "crc32": 1536039163
+    },
+    {
+      "path": "sources/322000000007.jpg",
+      "bytes": 26886,
+      "crc32": 2827825702
+    },
+    {
+      "path": "sources/411000000004.jpg",
+      "bytes": 26014,
+      "crc32": 4258504019
+    },
+    {
+      "path": "sources/413000000003.jpg",
+      "bytes": 28948,
+      "crc32": 620956622
+    },
+    {
+      "path": "sources/512000000002.jpg",
+      "bytes": 20485,
+      "crc32": 3350158850
+    },
+    {
+      "path": "sources/523000000002.jpg",
+      "bytes": 16137,
+      "crc32": 4051134341
+    },
+    {
+      "path": "sources/611000000003.jpg",
+      "bytes": 31299,
+      "crc32": 3464066203
+    },
+    {
+      "path": "sources/623000000004.jpg",
+      "bytes": 11938,
+      "crc32": 1721808279
+    },
+    {
+      "path": "sources/723000000001.jpg",
+      "bytes": 27813,
+      "crc32": 3110463943
+    },
+    {
+      "path": "sources/724000000001.jpg",
+      "bytes": 41142,
+      "crc32": 3827627614
+    },
+    {
+      "path": "sources/813000000007.jpg",
+      "bytes": 20557,
+      "crc32": 1320069158
+    },
+    {
+      "path": "sources/813000000006.jpg",
+      "bytes": 24210,
+      "crc32": 2990384837
+    },
+    {
+      "path": "sources/913000000000.jpg",
+      "bytes": 24481,
+      "crc32": 432857592
+    },
+    {
+      "path": "sources/911000000007.jpg",
+      "bytes": 8540,
+      "crc32": 3816981871
+    },
+    {
+      "path": "R87_pie_000000000139_s0_REQ/preview.jpg",
+      "bytes": 19894,
+      "crc32": 2343527710
+    },
+    {
+      "path": "R87_pie_000000000139_s0_REQ/pattern.jpg",
+      "bytes": 19911,
+      "crc32": 667196411
+    },
+    {
+      "path": "R87_pie_000000000139_s0_REQ/route_mask.jpg",
+      "bytes": 20574,
+      "crc32": 2834888345
+    },
+    {
+      "path": "R87_pie_000000000139_s0_REQ/edit_response64.jpg",
+      "bytes": 1974,
+      "crc32": 4121756883
+    },
+    {
+      "path": "R87_pie_000000000139_s0_REQ/step_summary.json",
+      "bytes": 82820,
+      "crc32": 3370636560
+    },
+    {
+      "path": "R87_pie_000000000139_s0_REQ/request_maps.npz",
+      "bytes": 43526,
+      "crc32": 1768108962
+    },
+    {
+      "path": "R87_pie_000000000139_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 889347555
+    },
+    {
+      "path": "R87_pie_000000000139_s0_GLB/preview.jpg",
+      "bytes": 19890,
+      "crc32": 2469666769
+    },
+    {
+      "path": "R87_pie_000000000139_s0_GLB/pattern.jpg",
+      "bytes": 19893,
+      "crc32": 1821805322
+    },
+    {
+      "path": "R87_pie_000000000139_s0_GLB/route_mask.jpg",
+      "bytes": 20574,
+      "crc32": 2834888345
+    },
+    {
+      "path": "R87_pie_000000000139_s0_GLB/edit_response64.jpg",
+      "bytes": 1974,
+      "crc32": 4121756883
+    },
+    {
+      "path": "R87_pie_000000000139_s0_GLB/step_summary.json",
+      "bytes": 85640,
+      "crc32": 1079345137
+    },
+    {
+      "path": "R87_pie_000000000139_s0_GLB/request_maps.npz",
+      "bytes": 29211,
+      "crc32": 2626394753
+    },
+    {
+      "path": "R87_pie_000000000139_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 2407927229
+    },
+    {
+      "path": "R87_pie_000000000139_s0_SFT/preview.jpg",
+      "bytes": 19679,
+      "crc32": 2016564518
+    },
+    {
+      "path": "R87_pie_000000000139_s0_SFT/pattern.jpg",
+      "bytes": 19636,
+      "crc32": 1240578959
+    },
+    {
+      "path": "R87_pie_000000000139_s0_SFT/route_mask.jpg",
+      "bytes": 20579,
+      "crc32": 709098793
+    },
+    {
+      "path": "R87_pie_000000000139_s0_SFT/edit_response64.jpg",
+      "bytes": 1974,
+      "crc32": 4121756883
+    },
+    {
+      "path": "R87_pie_000000000139_s0_SFT/step_summary.json",
+      "bytes": 85631,
+      "crc32": 1070438381
+    },
+    {
+      "path": "R87_pie_000000000139_s0_SFT/request_maps.npz",
+      "bytes": 72719,
+      "crc32": 2026458469
+    },
+    {
+      "path": "R87_pie_000000000139_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 2677959804
+    },
+    {
+      "path": "R87_pie_000000000139_s0_PERM/preview.jpg",
+      "bytes": 19901,
+      "crc32": 1139470704
+    },
+    {
+      "path": "R87_pie_000000000139_s0_PERM/pattern.jpg",
+      "bytes": 19850,
+      "crc32": 748545415
+    },
+    {
+      "path": "R87_pie_000000000139_s0_PERM/route_mask.jpg",
+      "bytes": 20703,
+      "crc32": 1436052429
+    },
+    {
+      "path": "R87_pie_000000000139_s0_PERM/edit_response64.jpg",
+      "bytes": 1974,
+      "crc32": 4121756883
+    },
+    {
+      "path": "R87_pie_000000000139_s0_PERM/step_summary.json",
+      "bytes": 85597,
+      "crc32": 4072593746
+    },
+    {
+      "path": "R87_pie_000000000139_s0_PERM/request_maps.npz",
+      "bytes": 72769,
+      "crc32": 1930130272
+    },
+    {
+      "path": "R87_pie_000000000139_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 688840053
+    },
+    {
+      "path": "R87_pie_000000000139_s17_REQ/preview.jpg",
+      "bytes": 19420,
+      "crc32": 619096263
+    },
+    {
+      "path": "R87_pie_000000000139_s17_REQ/pattern.jpg",
+      "bytes": 19411,
+      "crc32": 2474000240
+    },
+    {
+      "path": "R87_pie_000000000139_s17_REQ/route_mask.jpg",
+      "bytes": 20966,
+      "crc32": 1673863020
+    },
+    {
+      "path": "R87_pie_000000000139_s17_REQ/edit_response64.jpg",
+      "bytes": 1990,
+      "crc32": 1609264815
+    },
+    {
+      "path": "R87_pie_000000000139_s17_REQ/step_summary.json",
+      "bytes": 82829,
+      "crc32": 3103185431
+    },
+    {
+      "path": "R87_pie_000000000139_s17_REQ/request_maps.npz",
+      "bytes": 43131,
+      "crc32": 4289864421
+    },
+    {
+      "path": "R87_pie_000000000139_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 1016182772
+    },
+    {
+      "path": "R87_pie_000000000139_s17_GLB/preview.jpg",
+      "bytes": 19374,
+      "crc32": 423203255
+    },
+    {
+      "path": "R87_pie_000000000139_s17_GLB/pattern.jpg",
+      "bytes": 19382,
+      "crc32": 1831826258
+    },
+    {
+      "path": "R87_pie_000000000139_s17_GLB/route_mask.jpg",
+      "bytes": 20966,
+      "crc32": 1673863020
+    },
+    {
+      "path": "R87_pie_000000000139_s17_GLB/edit_response64.jpg",
+      "bytes": 1990,
+      "crc32": 1609264815
+    },
+    {
+      "path": "R87_pie_000000000139_s17_GLB/step_summary.json",
+      "bytes": 85728,
+      "crc32": 4282044595
+    },
+    {
+      "path": "R87_pie_000000000139_s17_GLB/request_maps.npz",
+      "bytes": 28936,
+      "crc32": 3888851140
+    },
+    {
+      "path": "R87_pie_000000000139_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 1003775391
+    },
+    {
+      "path": "R87_pie_000000000139_s17_SFT/preview.jpg",
+      "bytes": 19179,
+      "crc32": 2190761556
+    },
+    {
+      "path": "R87_pie_000000000139_s17_SFT/pattern.jpg",
+      "bytes": 19183,
+      "crc32": 1949158746
+    },
+    {
+      "path": "R87_pie_000000000139_s17_SFT/route_mask.jpg",
+      "bytes": 20949,
+      "crc32": 2407589094
+    },
+    {
+      "path": "R87_pie_000000000139_s17_SFT/edit_response64.jpg",
+      "bytes": 1990,
+      "crc32": 1609264815
+    },
+    {
+      "path": "R87_pie_000000000139_s17_SFT/step_summary.json",
+      "bytes": 85654,
+      "crc32": 1648118964
+    },
+    {
+      "path": "R87_pie_000000000139_s17_SFT/request_maps.npz",
+      "bytes": 72054,
+      "crc32": 4226095896
+    },
+    {
+      "path": "R87_pie_000000000139_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 1674730269
+    },
+    {
+      "path": "R87_pie_000000000139_s17_PERM/preview.jpg",
+      "bytes": 19053,
+      "crc32": 1503266501
+    },
+    {
+      "path": "R87_pie_000000000139_s17_PERM/pattern.jpg",
+      "bytes": 19006,
+      "crc32": 1715498112
+    },
+    {
+      "path": "R87_pie_000000000139_s17_PERM/route_mask.jpg",
+      "bytes": 21068,
+      "crc32": 1133634658
+    },
+    {
+      "path": "R87_pie_000000000139_s17_PERM/edit_response64.jpg",
+      "bytes": 1990,
+      "crc32": 1609264815
+    },
+    {
+      "path": "R87_pie_000000000139_s17_PERM/step_summary.json",
+      "bytes": 85657,
+      "crc32": 1138581168
+    },
+    {
+      "path": "R87_pie_000000000139_s17_PERM/request_maps.npz",
+      "bytes": 72132,
+      "crc32": 3689136288
+    },
+    {
+      "path": "R87_pie_000000000139_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 4193098754
+    },
+    {
+      "path": "R87_pie_000000000011_s0_REQ/preview.jpg",
+      "bytes": 12027,
+      "crc32": 610888285
+    },
+    {
+      "path": "R87_pie_000000000011_s0_REQ/pattern.jpg",
+      "bytes": 12013,
+      "crc32": 2015525227
+    },
+    {
+      "path": "R87_pie_000000000011_s0_REQ/route_mask.jpg",
+      "bytes": 15373,
+      "crc32": 3362859147
+    },
+    {
+      "path": "R87_pie_000000000011_s0_REQ/edit_response64.jpg",
+      "bytes": 1676,
+      "crc32": 767581393
+    },
+    {
+      "path": "R87_pie_000000000011_s0_REQ/step_summary.json",
+      "bytes": 82836,
+      "crc32": 3793219630
+    },
+    {
+      "path": "R87_pie_000000000011_s0_REQ/request_maps.npz",
+      "bytes": 41612,
+      "crc32": 607684320
+    },
+    {
+      "path": "R87_pie_000000000011_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 3318548269
+    },
+    {
+      "path": "R87_pie_000000000011_s0_GLB/preview.jpg",
+      "bytes": 12484,
+      "crc32": 2606144947
+    },
+    {
+      "path": "R87_pie_000000000011_s0_GLB/pattern.jpg",
+      "bytes": 12562,
+      "crc32": 2858117511
+    },
+    {
+      "path": "R87_pie_000000000011_s0_GLB/route_mask.jpg",
+      "bytes": 15373,
+      "crc32": 3362859147
+    },
+    {
+      "path": "R87_pie_000000000011_s0_GLB/edit_response64.jpg",
+      "bytes": 1676,
+      "crc32": 767581393
+    },
+    {
+      "path": "R87_pie_000000000011_s0_GLB/step_summary.json",
+      "bytes": 85533,
+      "crc32": 985568557
+    },
+    {
+      "path": "R87_pie_000000000011_s0_GLB/request_maps.npz",
+      "bytes": 28013,
+      "crc32": 2746261355
+    },
+    {
+      "path": "R87_pie_000000000011_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 2233382596
+    },
+    {
+      "path": "R87_pie_000000000011_s0_SFT/preview.jpg",
+      "bytes": 12747,
+      "crc32": 2106508481
+    },
+    {
+      "path": "R87_pie_000000000011_s0_SFT/pattern.jpg",
+      "bytes": 12821,
+      "crc32": 213300719
+    },
+    {
+      "path": "R87_pie_000000000011_s0_SFT/route_mask.jpg",
+      "bytes": 15367,
+      "crc32": 357286324
+    },
+    {
+      "path": "R87_pie_000000000011_s0_SFT/edit_response64.jpg",
+      "bytes": 1676,
+      "crc32": 767581393
+    },
+    {
+      "path": "R87_pie_000000000011_s0_SFT/step_summary.json",
+      "bytes": 85595,
+      "crc32": 2890469231
+    },
+    {
+      "path": "R87_pie_000000000011_s0_SFT/request_maps.npz",
+      "bytes": 69653,
+      "crc32": 3610942568
+    },
+    {
+      "path": "R87_pie_000000000011_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 3491725120
+    },
+    {
+      "path": "R87_pie_000000000011_s0_PERM/preview.jpg",
+      "bytes": 12956,
+      "crc32": 1145959331
+    },
+    {
+      "path": "R87_pie_000000000011_s0_PERM/pattern.jpg",
+      "bytes": 13014,
+      "crc32": 1248077170
+    },
+    {
+      "path": "R87_pie_000000000011_s0_PERM/route_mask.jpg",
+      "bytes": 15500,
+      "crc32": 2707826809
+    },
+    {
+      "path": "R87_pie_000000000011_s0_PERM/edit_response64.jpg",
+      "bytes": 1676,
+      "crc32": 767581393
+    },
+    {
+      "path": "R87_pie_000000000011_s0_PERM/step_summary.json",
+      "bytes": 85491,
+      "crc32": 2114337975
+    },
+    {
+      "path": "R87_pie_000000000011_s0_PERM/request_maps.npz",
+      "bytes": 69779,
+      "crc32": 1770332852
+    },
+    {
+      "path": "R87_pie_000000000011_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 2178025041
+    },
+    {
+      "path": "R87_pie_000000000011_s17_REQ/preview.jpg",
+      "bytes": 11433,
+      "crc32": 4156382753
+    },
+    {
+      "path": "R87_pie_000000000011_s17_REQ/pattern.jpg",
+      "bytes": 11484,
+      "crc32": 2231412268
+    },
+    {
+      "path": "R87_pie_000000000011_s17_REQ/route_mask.jpg",
+      "bytes": 15407,
+      "crc32": 2850828883
+    },
+    {
+      "path": "R87_pie_000000000011_s17_REQ/edit_response64.jpg",
+      "bytes": 1624,
+      "crc32": 1698113974
+    },
+    {
+      "path": "R87_pie_000000000011_s17_REQ/step_summary.json",
+      "bytes": 82803,
+      "crc32": 2069301043
+    },
+    {
+      "path": "R87_pie_000000000011_s17_REQ/request_maps.npz",
+      "bytes": 41917,
+      "crc32": 2663934513
+    },
+    {
+      "path": "R87_pie_000000000011_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 3809075616
+    },
+    {
+      "path": "R87_pie_000000000011_s17_GLB/preview.jpg",
+      "bytes": 11902,
+      "crc32": 1310383499
+    },
+    {
+      "path": "R87_pie_000000000011_s17_GLB/pattern.jpg",
+      "bytes": 11903,
+      "crc32": 521778080
+    },
+    {
+      "path": "R87_pie_000000000011_s17_GLB/route_mask.jpg",
+      "bytes": 15407,
+      "crc32": 2850828883
+    },
+    {
+      "path": "R87_pie_000000000011_s17_GLB/edit_response64.jpg",
+      "bytes": 1624,
+      "crc32": 1698113974
+    },
+    {
+      "path": "R87_pie_000000000011_s17_GLB/step_summary.json",
+      "bytes": 85421,
+      "crc32": 4178878142
+    },
+    {
+      "path": "R87_pie_000000000011_s17_GLB/request_maps.npz",
+      "bytes": 28218,
+      "crc32": 1998804844
+    },
+    {
+      "path": "R87_pie_000000000011_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 1625684130
+    },
+    {
+      "path": "R87_pie_000000000011_s17_SFT/preview.jpg",
+      "bytes": 12156,
+      "crc32": 3175467484
+    },
+    {
+      "path": "R87_pie_000000000011_s17_SFT/pattern.jpg",
+      "bytes": 12189,
+      "crc32": 4062894614
+    },
+    {
+      "path": "R87_pie_000000000011_s17_SFT/route_mask.jpg",
+      "bytes": 15397,
+      "crc32": 3411662863
+    },
+    {
+      "path": "R87_pie_000000000011_s17_SFT/edit_response64.jpg",
+      "bytes": 1624,
+      "crc32": 1698113974
+    },
+    {
+      "path": "R87_pie_000000000011_s17_SFT/step_summary.json",
+      "bytes": 85526,
+      "crc32": 3921464595
+    },
+    {
+      "path": "R87_pie_000000000011_s17_SFT/request_maps.npz",
+      "bytes": 70102,
+      "crc32": 3908134080
+    },
+    {
+      "path": "R87_pie_000000000011_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 1874954293
+    },
+    {
+      "path": "R87_pie_000000000011_s17_PERM/preview.jpg",
+      "bytes": 12078,
+      "crc32": 365029845
+    },
+    {
+      "path": "R87_pie_000000000011_s17_PERM/pattern.jpg",
+      "bytes": 12073,
+      "crc32": 2536489776
+    },
+    {
+      "path": "R87_pie_000000000011_s17_PERM/route_mask.jpg",
+      "bytes": 15523,
+      "crc32": 673273146
+    },
+    {
+      "path": "R87_pie_000000000011_s17_PERM/edit_response64.jpg",
+      "bytes": 1624,
+      "crc32": 1698113974
+    },
+    {
+      "path": "R87_pie_000000000011_s17_PERM/step_summary.json",
+      "bytes": 85349,
+      "crc32": 3544182222
+    },
+    {
+      "path": "R87_pie_000000000011_s17_PERM/request_maps.npz",
+      "bytes": 70191,
+      "crc32": 2107901470
+    },
+    {
+      "path": "R87_pie_000000000011_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 4033707568
+    },
+    {
+      "path": "R87_pie_112000000001_s0_REQ/preview.jpg",
+      "bytes": 17171,
+      "crc32": 3429641620
+    },
+    {
+      "path": "R87_pie_112000000001_s0_REQ/pattern.jpg",
+      "bytes": 17182,
+      "crc32": 4230951986
+    },
+    {
+      "path": "R87_pie_112000000001_s0_REQ/route_mask.jpg",
+      "bytes": 21159,
+      "crc32": 3349280731
+    },
+    {
+      "path": "R87_pie_112000000001_s0_REQ/edit_response64.jpg",
+      "bytes": 2060,
+      "crc32": 1366325854
+    },
+    {
+      "path": "R87_pie_112000000001_s0_REQ/step_summary.json",
+      "bytes": 82822,
+      "crc32": 395507077
+    },
+    {
+      "path": "R87_pie_112000000001_s0_REQ/request_maps.npz",
+      "bytes": 43042,
+      "crc32": 1367456054
+    },
+    {
+      "path": "R87_pie_112000000001_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 1032391741
+    },
+    {
+      "path": "R87_pie_112000000001_s0_GLB/preview.jpg",
+      "bytes": 17651,
+      "crc32": 3676058307
+    },
+    {
+      "path": "R87_pie_112000000001_s0_GLB/pattern.jpg",
+      "bytes": 17637,
+      "crc32": 426306226
+    },
+    {
+      "path": "R87_pie_112000000001_s0_GLB/route_mask.jpg",
+      "bytes": 21159,
+      "crc32": 3349280731
+    },
+    {
+      "path": "R87_pie_112000000001_s0_GLB/edit_response64.jpg",
+      "bytes": 2060,
+      "crc32": 1366325854
+    },
+    {
+      "path": "R87_pie_112000000001_s0_GLB/step_summary.json",
+      "bytes": 85681,
+      "crc32": 178447896
+    },
+    {
+      "path": "R87_pie_112000000001_s0_GLB/request_maps.npz",
+      "bytes": 28859,
+      "crc32": 805233220
+    },
+    {
+      "path": "R87_pie_112000000001_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 3450496578
+    },
+    {
+      "path": "R87_pie_112000000001_s0_SFT/preview.jpg",
+      "bytes": 17894,
+      "crc32": 253669167
+    },
+    {
+      "path": "R87_pie_112000000001_s0_SFT/pattern.jpg",
+      "bytes": 17986,
+      "crc32": 2967875299
+    },
+    {
+      "path": "R87_pie_112000000001_s0_SFT/route_mask.jpg",
+      "bytes": 21139,
+      "crc32": 2563110384
+    },
+    {
+      "path": "R87_pie_112000000001_s0_SFT/edit_response64.jpg",
+      "bytes": 2060,
+      "crc32": 1366325854
+    },
+    {
+      "path": "R87_pie_112000000001_s0_SFT/step_summary.json",
+      "bytes": 85596,
+      "crc32": 332790368
+    },
+    {
+      "path": "R87_pie_112000000001_s0_SFT/request_maps.npz",
+      "bytes": 71877,
+      "crc32": 2790801575
+    },
+    {
+      "path": "R87_pie_112000000001_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 940660896
+    },
+    {
+      "path": "R87_pie_112000000001_s0_PERM/preview.jpg",
+      "bytes": 17781,
+      "crc32": 3073680654
+    },
+    {
+      "path": "R87_pie_112000000001_s0_PERM/pattern.jpg",
+      "bytes": 17836,
+      "crc32": 2668561542
+    },
+    {
+      "path": "R87_pie_112000000001_s0_PERM/route_mask.jpg",
+      "bytes": 21239,
+      "crc32": 839811631
+    },
+    {
+      "path": "R87_pie_112000000001_s0_PERM/edit_response64.jpg",
+      "bytes": 2060,
+      "crc32": 1366325854
+    },
+    {
+      "path": "R87_pie_112000000001_s0_PERM/step_summary.json",
+      "bytes": 85596,
+      "crc32": 1155022748
+    },
+    {
+      "path": "R87_pie_112000000001_s0_PERM/request_maps.npz",
+      "bytes": 71924,
+      "crc32": 732333670
+    },
+    {
+      "path": "R87_pie_112000000001_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 861144850
+    },
+    {
+      "path": "R87_pie_112000000001_s17_REQ/preview.jpg",
+      "bytes": 16571,
+      "crc32": 3737583168
+    },
+    {
+      "path": "R87_pie_112000000001_s17_REQ/pattern.jpg",
+      "bytes": 16612,
+      "crc32": 554092606
+    },
+    {
+      "path": "R87_pie_112000000001_s17_REQ/route_mask.jpg",
+      "bytes": 21095,
+      "crc32": 81352290
+    },
+    {
+      "path": "R87_pie_112000000001_s17_REQ/edit_response64.jpg",
+      "bytes": 2069,
+      "crc32": 1243683012
+    },
+    {
+      "path": "R87_pie_112000000001_s17_REQ/step_summary.json",
+      "bytes": 82738,
+      "crc32": 242629221
+    },
+    {
+      "path": "R87_pie_112000000001_s17_REQ/request_maps.npz",
+      "bytes": 42911,
+      "crc32": 3896373154
+    },
+    {
+      "path": "R87_pie_112000000001_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 2137633853
+    },
+    {
+      "path": "R87_pie_112000000001_s17_GLB/preview.jpg",
+      "bytes": 17239,
+      "crc32": 2977931218
+    },
+    {
+      "path": "R87_pie_112000000001_s17_GLB/pattern.jpg",
+      "bytes": 17301,
+      "crc32": 3630979191
+    },
+    {
+      "path": "R87_pie_112000000001_s17_GLB/route_mask.jpg",
+      "bytes": 21095,
+      "crc32": 81352290
+    },
+    {
+      "path": "R87_pie_112000000001_s17_GLB/edit_response64.jpg",
+      "bytes": 2069,
+      "crc32": 1243683012
+    },
+    {
+      "path": "R87_pie_112000000001_s17_GLB/step_summary.json",
+      "bytes": 85335,
+      "crc32": 4287610641
+    },
+    {
+      "path": "R87_pie_112000000001_s17_GLB/request_maps.npz",
+      "bytes": 28794,
+      "crc32": 2454529242
+    },
+    {
+      "path": "R87_pie_112000000001_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 59461604
+    },
+    {
+      "path": "R87_pie_112000000001_s17_SFT/preview.jpg",
+      "bytes": 17250,
+      "crc32": 69360813
+    },
+    {
+      "path": "R87_pie_112000000001_s17_SFT/pattern.jpg",
+      "bytes": 17368,
+      "crc32": 10443850
+    },
+    {
+      "path": "R87_pie_112000000001_s17_SFT/route_mask.jpg",
+      "bytes": 21088,
+      "crc32": 4263913990
+    },
+    {
+      "path": "R87_pie_112000000001_s17_SFT/edit_response64.jpg",
+      "bytes": 2069,
+      "crc32": 1243683012
+    },
+    {
+      "path": "R87_pie_112000000001_s17_SFT/step_summary.json",
+      "bytes": 85380,
+      "crc32": 2953622673
+    },
+    {
+      "path": "R87_pie_112000000001_s17_SFT/request_maps.npz",
+      "bytes": 71706,
+      "crc32": 1840689618
+    },
+    {
+      "path": "R87_pie_112000000001_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 1845614702
+    },
+    {
+      "path": "R87_pie_112000000001_s17_PERM/preview.jpg",
+      "bytes": 16120,
+      "crc32": 985981185
+    },
+    {
+      "path": "R87_pie_112000000001_s17_PERM/pattern.jpg",
+      "bytes": 16131,
+      "crc32": 67085304
+    },
+    {
+      "path": "R87_pie_112000000001_s17_PERM/route_mask.jpg",
+      "bytes": 21216,
+      "crc32": 4012300719
+    },
+    {
+      "path": "R87_pie_112000000001_s17_PERM/edit_response64.jpg",
+      "bytes": 2069,
+      "crc32": 1243683012
+    },
+    {
+      "path": "R87_pie_112000000001_s17_PERM/step_summary.json",
+      "bytes": 85444,
+      "crc32": 2023521973
+    },
+    {
+      "path": "R87_pie_112000000001_s17_PERM/request_maps.npz",
+      "bytes": 71761,
+      "crc32": 1914160942
+    },
+    {
+      "path": "R87_pie_112000000001_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 4289235756
+    },
+    {
+      "path": "R87_pie_111000000008_s0_REQ/preview.jpg",
+      "bytes": 19687,
+      "crc32": 2002428438
+    },
+    {
+      "path": "R87_pie_111000000008_s0_REQ/pattern.jpg",
+      "bytes": 19614,
+      "crc32": 1448064008
+    },
+    {
+      "path": "R87_pie_111000000008_s0_REQ/route_mask.jpg",
+      "bytes": 18500,
+      "crc32": 1424818276
+    },
+    {
+      "path": "R87_pie_111000000008_s0_REQ/edit_response64.jpg",
+      "bytes": 1833,
+      "crc32": 2047490532
+    },
+    {
+      "path": "R87_pie_111000000008_s0_REQ/step_summary.json",
+      "bytes": 82833,
+      "crc32": 3280277697
+    },
+    {
+      "path": "R87_pie_111000000008_s0_REQ/request_maps.npz",
+      "bytes": 43048,
+      "crc32": 2656956103
+    },
+    {
+      "path": "R87_pie_111000000008_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 2558220738
+    },
+    {
+      "path": "R87_pie_111000000008_s0_GLB/preview.jpg",
+      "bytes": 19842,
+      "crc32": 2403360397
+    },
+    {
+      "path": "R87_pie_111000000008_s0_GLB/pattern.jpg",
+      "bytes": 19781,
+      "crc32": 1037316596
+    },
+    {
+      "path": "R87_pie_111000000008_s0_GLB/route_mask.jpg",
+      "bytes": 18500,
+      "crc32": 1424818276
+    },
+    {
+      "path": "R87_pie_111000000008_s0_GLB/edit_response64.jpg",
+      "bytes": 1833,
+      "crc32": 2047490532
+    },
+    {
+      "path": "R87_pie_111000000008_s0_GLB/step_summary.json",
+      "bytes": 85808,
+      "crc32": 2105194457
+    },
+    {
+      "path": "R87_pie_111000000008_s0_GLB/request_maps.npz",
+      "bytes": 28929,
+      "crc32": 1774909878
+    },
+    {
+      "path": "R87_pie_111000000008_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 3966747406
+    },
+    {
+      "path": "R87_pie_111000000008_s0_SFT/preview.jpg",
+      "bytes": 19963,
+      "crc32": 3538123549
+    },
+    {
+      "path": "R87_pie_111000000008_s0_SFT/pattern.jpg",
+      "bytes": 19859,
+      "crc32": 3102086765
+    },
+    {
+      "path": "R87_pie_111000000008_s0_SFT/route_mask.jpg",
+      "bytes": 18503,
+      "crc32": 2609036303
+    },
+    {
+      "path": "R87_pie_111000000008_s0_SFT/edit_response64.jpg",
+      "bytes": 1833,
+      "crc32": 2047490532
+    },
+    {
+      "path": "R87_pie_111000000008_s0_SFT/step_summary.json",
+      "bytes": 85614,
+      "crc32": 547187606
+    },
+    {
+      "path": "R87_pie_111000000008_s0_SFT/request_maps.npz",
+      "bytes": 71953,
+      "crc32": 4177391191
+    },
+    {
+      "path": "R87_pie_111000000008_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 3683478375
+    },
+    {
+      "path": "R87_pie_111000000008_s0_PERM/preview.jpg",
+      "bytes": 19895,
+      "crc32": 2532369857
+    },
+    {
+      "path": "R87_pie_111000000008_s0_PERM/pattern.jpg",
+      "bytes": 19859,
+      "crc32": 1304258658
+    },
+    {
+      "path": "R87_pie_111000000008_s0_PERM/route_mask.jpg",
+      "bytes": 18643,
+      "crc32": 2536657578
+    },
+    {
+      "path": "R87_pie_111000000008_s0_PERM/edit_response64.jpg",
+      "bytes": 1833,
+      "crc32": 2047490532
+    },
+    {
+      "path": "R87_pie_111000000008_s0_PERM/step_summary.json",
+      "bytes": 85785,
+      "crc32": 1823761687
+    },
+    {
+      "path": "R87_pie_111000000008_s0_PERM/request_maps.npz",
+      "bytes": 72022,
+      "crc32": 2122538193
+    },
+    {
+      "path": "R87_pie_111000000008_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 74781339
+    },
+    {
+      "path": "R87_pie_111000000008_s17_REQ/preview.jpg",
+      "bytes": 19622,
+      "crc32": 4259144550
+    },
+    {
+      "path": "R87_pie_111000000008_s17_REQ/pattern.jpg",
+      "bytes": 19498,
+      "crc32": 2403536993
+    },
+    {
+      "path": "R87_pie_111000000008_s17_REQ/route_mask.jpg",
+      "bytes": 18192,
+      "crc32": 4235514299
+    },
+    {
+      "path": "R87_pie_111000000008_s17_REQ/edit_response64.jpg",
+      "bytes": 1820,
+      "crc32": 3342058871
+    },
+    {
+      "path": "R87_pie_111000000008_s17_REQ/step_summary.json",
+      "bytes": 82800,
+      "crc32": 1795163793
+    },
+    {
+      "path": "R87_pie_111000000008_s17_REQ/request_maps.npz",
+      "bytes": 43021,
+      "crc32": 440691399
+    },
+    {
+      "path": "R87_pie_111000000008_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 993119655
+    },
+    {
+      "path": "R87_pie_111000000008_s17_GLB/preview.jpg",
+      "bytes": 20279,
+      "crc32": 979267465
+    },
+    {
+      "path": "R87_pie_111000000008_s17_GLB/pattern.jpg",
+      "bytes": 20179,
+      "crc32": 3617840988
+    },
+    {
+      "path": "R87_pie_111000000008_s17_GLB/route_mask.jpg",
+      "bytes": 18192,
+      "crc32": 4235514299
+    },
+    {
+      "path": "R87_pie_111000000008_s17_GLB/edit_response64.jpg",
+      "bytes": 1820,
+      "crc32": 3342058871
+    },
+    {
+      "path": "R87_pie_111000000008_s17_GLB/step_summary.json",
+      "bytes": 85439,
+      "crc32": 2508961118
+    },
+    {
+      "path": "R87_pie_111000000008_s17_GLB/request_maps.npz",
+      "bytes": 28890,
+      "crc32": 136735405
+    },
+    {
+      "path": "R87_pie_111000000008_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 2858474920
+    },
+    {
+      "path": "R87_pie_111000000008_s17_SFT/preview.jpg",
+      "bytes": 20357,
+      "crc32": 2961885970
+    },
+    {
+      "path": "R87_pie_111000000008_s17_SFT/pattern.jpg",
+      "bytes": 20302,
+      "crc32": 3212926871
+    },
+    {
+      "path": "R87_pie_111000000008_s17_SFT/route_mask.jpg",
+      "bytes": 18195,
+      "crc32": 3091208059
+    },
+    {
+      "path": "R87_pie_111000000008_s17_SFT/edit_response64.jpg",
+      "bytes": 1820,
+      "crc32": 3342058871
+    },
+    {
+      "path": "R87_pie_111000000008_s17_SFT/step_summary.json",
+      "bytes": 85563,
+      "crc32": 669189703
+    },
+    {
+      "path": "R87_pie_111000000008_s17_SFT/request_maps.npz",
+      "bytes": 71875,
+      "crc32": 140833635
+    },
+    {
+      "path": "R87_pie_111000000008_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 92512988
+    },
+    {
+      "path": "R87_pie_111000000008_s17_PERM/preview.jpg",
+      "bytes": 20145,
+      "crc32": 724730544
+    },
+    {
+      "path": "R87_pie_111000000008_s17_PERM/pattern.jpg",
+      "bytes": 20092,
+      "crc32": 3427798236
+    },
+    {
+      "path": "R87_pie_111000000008_s17_PERM/route_mask.jpg",
+      "bytes": 18328,
+      "crc32": 1234482750
+    },
+    {
+      "path": "R87_pie_111000000008_s17_PERM/edit_response64.jpg",
+      "bytes": 1820,
+      "crc32": 3342058871
+    },
+    {
+      "path": "R87_pie_111000000008_s17_PERM/step_summary.json",
+      "bytes": 85529,
+      "crc32": 4134259069
+    },
+    {
+      "path": "R87_pie_111000000008_s17_PERM/request_maps.npz",
+      "bytes": 71978,
+      "crc32": 3016707237
+    },
+    {
+      "path": "R87_pie_111000000008_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 2751785327
+    },
+    {
+      "path": "R87_pie_221000000004_s0_REQ/preview.jpg",
+      "bytes": 17062,
+      "crc32": 2006243462
+    },
+    {
+      "path": "R87_pie_221000000004_s0_REQ/pattern.jpg",
+      "bytes": 17046,
+      "crc32": 2874513375
+    },
+    {
+      "path": "R87_pie_221000000004_s0_REQ/route_mask.jpg",
+      "bytes": 21014,
+      "crc32": 741557888
+    },
+    {
+      "path": "R87_pie_221000000004_s0_REQ/edit_response64.jpg",
+      "bytes": 2032,
+      "crc32": 2996519207
+    },
+    {
+      "path": "R87_pie_221000000004_s0_REQ/step_summary.json",
+      "bytes": 82842,
+      "crc32": 1663271638
+    },
+    {
+      "path": "R87_pie_221000000004_s0_REQ/request_maps.npz",
+      "bytes": 42739,
+      "crc32": 125398900
+    },
+    {
+      "path": "R87_pie_221000000004_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 3819963513
+    },
+    {
+      "path": "R87_pie_221000000004_s0_GLB/preview.jpg",
+      "bytes": 17001,
+      "crc32": 1680200464
+    },
+    {
+      "path": "R87_pie_221000000004_s0_GLB/pattern.jpg",
+      "bytes": 16986,
+      "crc32": 3215738593
+    },
+    {
+      "path": "R87_pie_221000000004_s0_GLB/route_mask.jpg",
+      "bytes": 21014,
+      "crc32": 741557888
+    },
+    {
+      "path": "R87_pie_221000000004_s0_GLB/edit_response64.jpg",
+      "bytes": 2032,
+      "crc32": 2996519207
+    },
+    {
+      "path": "R87_pie_221000000004_s0_GLB/step_summary.json",
+      "bytes": 85575,
+      "crc32": 2537974190
+    },
+    {
+      "path": "R87_pie_221000000004_s0_GLB/request_maps.npz",
+      "bytes": 28676,
+      "crc32": 1123014592
+    },
+    {
+      "path": "R87_pie_221000000004_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 517774331
+    },
+    {
+      "path": "R87_pie_221000000004_s0_SFT/preview.jpg",
+      "bytes": 16918,
+      "crc32": 2875735188
+    },
+    {
+      "path": "R87_pie_221000000004_s0_SFT/pattern.jpg",
+      "bytes": 16911,
+      "crc32": 2387676141
+    },
+    {
+      "path": "R87_pie_221000000004_s0_SFT/route_mask.jpg",
+      "bytes": 21013,
+      "crc32": 3521449037
+    },
+    {
+      "path": "R87_pie_221000000004_s0_SFT/edit_response64.jpg",
+      "bytes": 2032,
+      "crc32": 2996519207
+    },
+    {
+      "path": "R87_pie_221000000004_s0_SFT/step_summary.json",
+      "bytes": 85566,
+      "crc32": 1666698892
+    },
+    {
+      "path": "R87_pie_221000000004_s0_SFT/request_maps.npz",
+      "bytes": 71408,
+      "crc32": 410752985
+    },
+    {
+      "path": "R87_pie_221000000004_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 2738241600
+    },
+    {
+      "path": "R87_pie_221000000004_s0_PERM/preview.jpg",
+      "bytes": 17126,
+      "crc32": 2144842306
+    },
+    {
+      "path": "R87_pie_221000000004_s0_PERM/pattern.jpg",
+      "bytes": 17142,
+      "crc32": 2998515000
+    },
+    {
+      "path": "R87_pie_221000000004_s0_PERM/route_mask.jpg",
+      "bytes": 21120,
+      "crc32": 1780105452
+    },
+    {
+      "path": "R87_pie_221000000004_s0_PERM/edit_response64.jpg",
+      "bytes": 2032,
+      "crc32": 2996519207
+    },
+    {
+      "path": "R87_pie_221000000004_s0_PERM/step_summary.json",
+      "bytes": 85615,
+      "crc32": 1767424676
+    },
+    {
+      "path": "R87_pie_221000000004_s0_PERM/request_maps.npz",
+      "bytes": 71532,
+      "crc32": 2724705703
+    },
+    {
+      "path": "R87_pie_221000000004_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 696221081
+    },
+    {
+      "path": "R87_pie_221000000004_s17_REQ/preview.jpg",
+      "bytes": 16702,
+      "crc32": 3389573029
+    },
+    {
+      "path": "R87_pie_221000000004_s17_REQ/pattern.jpg",
+      "bytes": 16700,
+      "crc32": 1713896545
+    },
+    {
+      "path": "R87_pie_221000000004_s17_REQ/route_mask.jpg",
+      "bytes": 20363,
+      "crc32": 3590330324
+    },
+    {
+      "path": "R87_pie_221000000004_s17_REQ/edit_response64.jpg",
+      "bytes": 1977,
+      "crc32": 1742578761
+    },
+    {
+      "path": "R87_pie_221000000004_s17_REQ/step_summary.json",
+      "bytes": 82816,
+      "crc32": 3950475680
+    },
+    {
+      "path": "R87_pie_221000000004_s17_REQ/request_maps.npz",
+      "bytes": 42905,
+      "crc32": 3307230925
+    },
+    {
+      "path": "R87_pie_221000000004_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 84463888
+    },
+    {
+      "path": "R87_pie_221000000004_s17_GLB/preview.jpg",
+      "bytes": 16834,
+      "crc32": 2993128377
+    },
+    {
+      "path": "R87_pie_221000000004_s17_GLB/pattern.jpg",
+      "bytes": 16817,
+      "crc32": 3586140000
+    },
+    {
+      "path": "R87_pie_221000000004_s17_GLB/route_mask.jpg",
+      "bytes": 20363,
+      "crc32": 3590330324
+    },
+    {
+      "path": "R87_pie_221000000004_s17_GLB/edit_response64.jpg",
+      "bytes": 1977,
+      "crc32": 1742578761
+    },
+    {
+      "path": "R87_pie_221000000004_s17_GLB/step_summary.json",
+      "bytes": 85666,
+      "crc32": 990156406
+    },
+    {
+      "path": "R87_pie_221000000004_s17_GLB/request_maps.npz",
+      "bytes": 28795,
+      "crc32": 1401405884
+    },
+    {
+      "path": "R87_pie_221000000004_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 4134084353
+    },
+    {
+      "path": "R87_pie_221000000004_s17_SFT/preview.jpg",
+      "bytes": 16688,
+      "crc32": 3820799136
+    },
+    {
+      "path": "R87_pie_221000000004_s17_SFT/pattern.jpg",
+      "bytes": 16715,
+      "crc32": 488693161
+    },
+    {
+      "path": "R87_pie_221000000004_s17_SFT/route_mask.jpg",
+      "bytes": 20352,
+      "crc32": 2692935970
+    },
+    {
+      "path": "R87_pie_221000000004_s17_SFT/edit_response64.jpg",
+      "bytes": 1977,
+      "crc32": 1742578761
+    },
+    {
+      "path": "R87_pie_221000000004_s17_SFT/step_summary.json",
+      "bytes": 85540,
+      "crc32": 582266598
+    },
+    {
+      "path": "R87_pie_221000000004_s17_SFT/request_maps.npz",
+      "bytes": 71670,
+      "crc32": 3695769244
+    },
+    {
+      "path": "R87_pie_221000000004_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 120118551
+    },
+    {
+      "path": "R87_pie_221000000004_s17_PERM/preview.jpg",
+      "bytes": 17053,
+      "crc32": 2459206111
+    },
+    {
+      "path": "R87_pie_221000000004_s17_PERM/pattern.jpg",
+      "bytes": 17054,
+      "crc32": 2619220419
+    },
+    {
+      "path": "R87_pie_221000000004_s17_PERM/route_mask.jpg",
+      "bytes": 20488,
+      "crc32": 875580477
+    },
+    {
+      "path": "R87_pie_221000000004_s17_PERM/edit_response64.jpg",
+      "bytes": 1977,
+      "crc32": 1742578761
+    },
+    {
+      "path": "R87_pie_221000000004_s17_PERM/step_summary.json",
+      "bytes": 85618,
+      "crc32": 3865229708
+    },
+    {
+      "path": "R87_pie_221000000004_s17_PERM/request_maps.npz",
+      "bytes": 71750,
+      "crc32": 994584247
+    },
+    {
+      "path": "R87_pie_221000000004_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 3693483564
+    },
+    {
+      "path": "R87_pie_213000000007_s0_REQ/preview.jpg",
+      "bytes": 13458,
+      "crc32": 719910259
+    },
+    {
+      "path": "R87_pie_213000000007_s0_REQ/pattern.jpg",
+      "bytes": 13436,
+      "crc32": 3458970365
+    },
+    {
+      "path": "R87_pie_213000000007_s0_REQ/route_mask.jpg",
+      "bytes": 21722,
+      "crc32": 2035406985
+    },
+    {
+      "path": "R87_pie_213000000007_s0_REQ/edit_response64.jpg",
+      "bytes": 2066,
+      "crc32": 1814115526
+    },
+    {
+      "path": "R87_pie_213000000007_s0_REQ/step_summary.json",
+      "bytes": 82833,
+      "crc32": 1341946890
+    },
+    {
+      "path": "R87_pie_213000000007_s0_REQ/request_maps.npz",
+      "bytes": 42411,
+      "crc32": 3137968428
+    },
+    {
+      "path": "R87_pie_213000000007_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 1971434055
+    },
+    {
+      "path": "R87_pie_213000000007_s0_GLB/preview.jpg",
+      "bytes": 13085,
+      "crc32": 28234225
+    },
+    {
+      "path": "R87_pie_213000000007_s0_GLB/pattern.jpg",
+      "bytes": 13068,
+      "crc32": 970265815
+    },
+    {
+      "path": "R87_pie_213000000007_s0_GLB/route_mask.jpg",
+      "bytes": 21722,
+      "crc32": 2035406985
+    },
+    {
+      "path": "R87_pie_213000000007_s0_GLB/edit_response64.jpg",
+      "bytes": 2066,
+      "crc32": 1814115526
+    },
+    {
+      "path": "R87_pie_213000000007_s0_GLB/step_summary.json",
+      "bytes": 85749,
+      "crc32": 935818760
+    },
+    {
+      "path": "R87_pie_213000000007_s0_GLB/request_maps.npz",
+      "bytes": 28476,
+      "crc32": 1697036845
+    },
+    {
+      "path": "R87_pie_213000000007_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 3882162720
+    },
+    {
+      "path": "R87_pie_213000000007_s0_SFT/preview.jpg",
+      "bytes": 13570,
+      "crc32": 4159330181
+    },
+    {
+      "path": "R87_pie_213000000007_s0_SFT/pattern.jpg",
+      "bytes": 13580,
+      "crc32": 668842011
+    },
+    {
+      "path": "R87_pie_213000000007_s0_SFT/route_mask.jpg",
+      "bytes": 21716,
+      "crc32": 1731027810
+    },
+    {
+      "path": "R87_pie_213000000007_s0_SFT/edit_response64.jpg",
+      "bytes": 2066,
+      "crc32": 1814115526
+    },
+    {
+      "path": "R87_pie_213000000007_s0_SFT/step_summary.json",
+      "bytes": 85487,
+      "crc32": 4118426576
+    },
+    {
+      "path": "R87_pie_213000000007_s0_SFT/request_maps.npz",
+      "bytes": 70876,
+      "crc32": 4215806244
+    },
+    {
+      "path": "R87_pie_213000000007_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 872382563
+    },
+    {
+      "path": "R87_pie_213000000007_s0_PERM/preview.jpg",
+      "bytes": 13526,
+      "crc32": 1925472563
+    },
+    {
+      "path": "R87_pie_213000000007_s0_PERM/pattern.jpg",
+      "bytes": 13567,
+      "crc32": 1320030275
+    },
+    {
+      "path": "R87_pie_213000000007_s0_PERM/route_mask.jpg",
+      "bytes": 21831,
+      "crc32": 3986340049
+    },
+    {
+      "path": "R87_pie_213000000007_s0_PERM/edit_response64.jpg",
+      "bytes": 2066,
+      "crc32": 1814115526
+    },
+    {
+      "path": "R87_pie_213000000007_s0_PERM/step_summary.json",
+      "bytes": 85480,
+      "crc32": 2888093159
+    },
+    {
+      "path": "R87_pie_213000000007_s0_PERM/request_maps.npz",
+      "bytes": 70983,
+      "crc32": 1349611723
+    },
+    {
+      "path": "R87_pie_213000000007_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 3341371691
+    },
+    {
+      "path": "R87_pie_213000000007_s17_REQ/preview.jpg",
+      "bytes": 11455,
+      "crc32": 1511553066
+    },
+    {
+      "path": "R87_pie_213000000007_s17_REQ/pattern.jpg",
+      "bytes": 11518,
+      "crc32": 1970498393
+    },
+    {
+      "path": "R87_pie_213000000007_s17_REQ/route_mask.jpg",
+      "bytes": 22000,
+      "crc32": 1482372168
+    },
+    {
+      "path": "R87_pie_213000000007_s17_REQ/edit_response64.jpg",
+      "bytes": 2077,
+      "crc32": 3779809750
+    },
+    {
+      "path": "R87_pie_213000000007_s17_REQ/step_summary.json",
+      "bytes": 82803,
+      "crc32": 2244661644
+    },
+    {
+      "path": "R87_pie_213000000007_s17_REQ/request_maps.npz",
+      "bytes": 42939,
+      "crc32": 736549736
+    },
+    {
+      "path": "R87_pie_213000000007_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 691870164
+    },
+    {
+      "path": "R87_pie_213000000007_s17_GLB/preview.jpg",
+      "bytes": 12072,
+      "crc32": 2170877310
+    },
+    {
+      "path": "R87_pie_213000000007_s17_GLB/pattern.jpg",
+      "bytes": 12092,
+      "crc32": 3667830804
+    },
+    {
+      "path": "R87_pie_213000000007_s17_GLB/route_mask.jpg",
+      "bytes": 22000,
+      "crc32": 1482372168
+    },
+    {
+      "path": "R87_pie_213000000007_s17_GLB/edit_response64.jpg",
+      "bytes": 2077,
+      "crc32": 3779809750
+    },
+    {
+      "path": "R87_pie_213000000007_s17_GLB/step_summary.json",
+      "bytes": 85460,
+      "crc32": 1499916332
+    },
+    {
+      "path": "R87_pie_213000000007_s17_GLB/request_maps.npz",
+      "bytes": 28810,
+      "crc32": 1217868802
+    },
+    {
+      "path": "R87_pie_213000000007_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 2348437214
+    },
+    {
+      "path": "R87_pie_213000000007_s17_SFT/preview.jpg",
+      "bytes": 12719,
+      "crc32": 1035365568
+    },
+    {
+      "path": "R87_pie_213000000007_s17_SFT/pattern.jpg",
+      "bytes": 12723,
+      "crc32": 3067559052
+    },
+    {
+      "path": "R87_pie_213000000007_s17_SFT/route_mask.jpg",
+      "bytes": 21998,
+      "crc32": 3100401915
+    },
+    {
+      "path": "R87_pie_213000000007_s17_SFT/edit_response64.jpg",
+      "bytes": 2077,
+      "crc32": 3779809750
+    },
+    {
+      "path": "R87_pie_213000000007_s17_SFT/step_summary.json",
+      "bytes": 85488,
+      "crc32": 1276267398
+    },
+    {
+      "path": "R87_pie_213000000007_s17_SFT/request_maps.npz",
+      "bytes": 71720,
+      "crc32": 2097759807
+    },
+    {
+      "path": "R87_pie_213000000007_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 1271723292
+    },
+    {
+      "path": "R87_pie_213000000007_s17_PERM/preview.jpg",
+      "bytes": 12910,
+      "crc32": 284591303
+    },
+    {
+      "path": "R87_pie_213000000007_s17_PERM/pattern.jpg",
+      "bytes": 12929,
+      "crc32": 1667561424
+    },
+    {
+      "path": "R87_pie_213000000007_s17_PERM/route_mask.jpg",
+      "bytes": 22100,
+      "crc32": 3880730840
+    },
+    {
+      "path": "R87_pie_213000000007_s17_PERM/edit_response64.jpg",
+      "bytes": 2077,
+      "crc32": 3779809750
+    },
+    {
+      "path": "R87_pie_213000000007_s17_PERM/step_summary.json",
+      "bytes": 85520,
+      "crc32": 1750792550
+    },
+    {
+      "path": "R87_pie_213000000007_s17_PERM/request_maps.npz",
+      "bytes": 71803,
+      "crc32": 2409432022
+    },
+    {
+      "path": "R87_pie_213000000007_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 2780877281
+    },
+    {
+      "path": "R87_pie_323000000001_s0_REQ/preview.jpg",
+      "bytes": 15875,
+      "crc32": 2455282544
+    },
+    {
+      "path": "R87_pie_323000000001_s0_REQ/pattern.jpg",
+      "bytes": 15899,
+      "crc32": 2626152301
+    },
+    {
+      "path": "R87_pie_323000000001_s0_REQ/route_mask.jpg",
+      "bytes": 19040,
+      "crc32": 2975816416
+    },
+    {
+      "path": "R87_pie_323000000001_s0_REQ/edit_response64.jpg",
+      "bytes": 1864,
+      "crc32": 2410446435
+    },
+    {
+      "path": "R87_pie_323000000001_s0_REQ/step_summary.json",
+      "bytes": 82860,
+      "crc32": 2630313979
+    },
+    {
+      "path": "R87_pie_323000000001_s0_REQ/request_maps.npz",
+      "bytes": 42688,
+      "crc32": 4134216603
+    },
+    {
+      "path": "R87_pie_323000000001_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 3758520215
+    },
+    {
+      "path": "R87_pie_323000000001_s0_GLB/preview.jpg",
+      "bytes": 15701,
+      "crc32": 1355932815
+    },
+    {
+      "path": "R87_pie_323000000001_s0_GLB/pattern.jpg",
+      "bytes": 15743,
+      "crc32": 2047113451
+    },
+    {
+      "path": "R87_pie_323000000001_s0_GLB/route_mask.jpg",
+      "bytes": 19040,
+      "crc32": 2975816416
+    },
+    {
+      "path": "R87_pie_323000000001_s0_GLB/edit_response64.jpg",
+      "bytes": 1864,
+      "crc32": 2410446435
+    },
+    {
+      "path": "R87_pie_323000000001_s0_GLB/step_summary.json",
+      "bytes": 85616,
+      "crc32": 3422990356
+    },
+    {
+      "path": "R87_pie_323000000001_s0_GLB/request_maps.npz",
+      "bytes": 28684,
+      "crc32": 30355705
+    },
+    {
+      "path": "R87_pie_323000000001_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 2568363257
+    },
+    {
+      "path": "R87_pie_323000000001_s0_SFT/preview.jpg",
+      "bytes": 15599,
+      "crc32": 3464420842
+    },
+    {
+      "path": "R87_pie_323000000001_s0_SFT/pattern.jpg",
+      "bytes": 15622,
+      "crc32": 946075775
+    },
+    {
+      "path": "R87_pie_323000000001_s0_SFT/route_mask.jpg",
+      "bytes": 19041,
+      "crc32": 428104588
+    },
+    {
+      "path": "R87_pie_323000000001_s0_SFT/edit_response64.jpg",
+      "bytes": 1864,
+      "crc32": 2410446435
+    },
+    {
+      "path": "R87_pie_323000000001_s0_SFT/step_summary.json",
+      "bytes": 85823,
+      "crc32": 268225545
+    },
+    {
+      "path": "R87_pie_323000000001_s0_SFT/request_maps.npz",
+      "bytes": 71365,
+      "crc32": 1348268825
+    },
+    {
+      "path": "R87_pie_323000000001_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 2843730790
+    },
+    {
+      "path": "R87_pie_323000000001_s0_PERM/preview.jpg",
+      "bytes": 15720,
+      "crc32": 1336279079
+    },
+    {
+      "path": "R87_pie_323000000001_s0_PERM/pattern.jpg",
+      "bytes": 15734,
+      "crc32": 2651556897
+    },
+    {
+      "path": "R87_pie_323000000001_s0_PERM/route_mask.jpg",
+      "bytes": 19176,
+      "crc32": 921995377
+    },
+    {
+      "path": "R87_pie_323000000001_s0_PERM/edit_response64.jpg",
+      "bytes": 1864,
+      "crc32": 2410446435
+    },
+    {
+      "path": "R87_pie_323000000001_s0_PERM/step_summary.json",
+      "bytes": 85434,
+      "crc32": 3156728528
+    },
+    {
+      "path": "R87_pie_323000000001_s0_PERM/request_maps.npz",
+      "bytes": 71427,
+      "crc32": 1443904878
+    },
+    {
+      "path": "R87_pie_323000000001_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 1928368369
+    },
+    {
+      "path": "R87_pie_323000000001_s17_REQ/preview.jpg",
+      "bytes": 15031,
+      "crc32": 1593034420
+    },
+    {
+      "path": "R87_pie_323000000001_s17_REQ/pattern.jpg",
+      "bytes": 15060,
+      "crc32": 1460269968
+    },
+    {
+      "path": "R87_pie_323000000001_s17_REQ/route_mask.jpg",
+      "bytes": 21300,
+      "crc32": 3677541961
+    },
+    {
+      "path": "R87_pie_323000000001_s17_REQ/edit_response64.jpg",
+      "bytes": 2029,
+      "crc32": 1072403420
+    },
+    {
+      "path": "R87_pie_323000000001_s17_REQ/step_summary.json",
+      "bytes": 82724,
+      "crc32": 1538741943
+    },
+    {
+      "path": "R87_pie_323000000001_s17_REQ/request_maps.npz",
+      "bytes": 42808,
+      "crc32": 2513603991
+    },
+    {
+      "path": "R87_pie_323000000001_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 1310899605
+    },
+    {
+      "path": "R87_pie_323000000001_s17_GLB/preview.jpg",
+      "bytes": 14999,
+      "crc32": 2272522146
+    },
+    {
+      "path": "R87_pie_323000000001_s17_GLB/pattern.jpg",
+      "bytes": 15005,
+      "crc32": 2287257996
+    },
+    {
+      "path": "R87_pie_323000000001_s17_GLB/route_mask.jpg",
+      "bytes": 21300,
+      "crc32": 3677541961
+    },
+    {
+      "path": "R87_pie_323000000001_s17_GLB/edit_response64.jpg",
+      "bytes": 2029,
+      "crc32": 1072403420
+    },
+    {
+      "path": "R87_pie_323000000001_s17_GLB/step_summary.json",
+      "bytes": 85513,
+      "crc32": 3488043752
+    },
+    {
+      "path": "R87_pie_323000000001_s17_GLB/request_maps.npz",
+      "bytes": 28717,
+      "crc32": 1259285088
+    },
+    {
+      "path": "R87_pie_323000000001_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 1681403329
+    },
+    {
+      "path": "R87_pie_323000000001_s17_SFT/preview.jpg",
+      "bytes": 14958,
+      "crc32": 404731383
+    },
+    {
+      "path": "R87_pie_323000000001_s17_SFT/pattern.jpg",
+      "bytes": 14997,
+      "crc32": 3095724496
+    },
+    {
+      "path": "R87_pie_323000000001_s17_SFT/route_mask.jpg",
+      "bytes": 21311,
+      "crc32": 3445299228
+    },
+    {
+      "path": "R87_pie_323000000001_s17_SFT/edit_response64.jpg",
+      "bytes": 2029,
+      "crc32": 1072403420
+    },
+    {
+      "path": "R87_pie_323000000001_s17_SFT/step_summary.json",
+      "bytes": 85513,
+      "crc32": 3484387493
+    },
+    {
+      "path": "R87_pie_323000000001_s17_SFT/request_maps.npz",
+      "bytes": 71511,
+      "crc32": 4007707436
+    },
+    {
+      "path": "R87_pie_323000000001_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 1268279862
+    },
+    {
+      "path": "R87_pie_323000000001_s17_PERM/preview.jpg",
+      "bytes": 15132,
+      "crc32": 4077891479
+    },
+    {
+      "path": "R87_pie_323000000001_s17_PERM/pattern.jpg",
+      "bytes": 15174,
+      "crc32": 2804702424
+    },
+    {
+      "path": "R87_pie_323000000001_s17_PERM/route_mask.jpg",
+      "bytes": 21397,
+      "crc32": 4241339837
+    },
+    {
+      "path": "R87_pie_323000000001_s17_PERM/edit_response64.jpg",
+      "bytes": 2029,
+      "crc32": 1072403420
+    },
+    {
+      "path": "R87_pie_323000000001_s17_PERM/step_summary.json",
+      "bytes": 85351,
+      "crc32": 3935666215
+    },
+    {
+      "path": "R87_pie_323000000001_s17_PERM/request_maps.npz",
+      "bytes": 71584,
+      "crc32": 3256985798
+    },
+    {
+      "path": "R87_pie_323000000001_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 1778520010
+    },
+    {
+      "path": "R87_pie_322000000007_s0_REQ/preview.jpg",
+      "bytes": 19486,
+      "crc32": 4022508455
+    },
+    {
+      "path": "R87_pie_322000000007_s0_REQ/pattern.jpg",
+      "bytes": 19523,
+      "crc32": 3503196129
+    },
+    {
+      "path": "R87_pie_322000000007_s0_REQ/route_mask.jpg",
+      "bytes": 21166,
+      "crc32": 155766940
+    },
+    {
+      "path": "R87_pie_322000000007_s0_REQ/edit_response64.jpg",
+      "bytes": 2090,
+      "crc32": 1242427034
+    },
+    {
+      "path": "R87_pie_322000000007_s0_REQ/step_summary.json",
+      "bytes": 82790,
+      "crc32": 1146103950
+    },
+    {
+      "path": "R87_pie_322000000007_s0_REQ/request_maps.npz",
+      "bytes": 42390,
+      "crc32": 1174059031
+    },
+    {
+      "path": "R87_pie_322000000007_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 3090676122
+    },
+    {
+      "path": "R87_pie_322000000007_s0_GLB/preview.jpg",
+      "bytes": 19874,
+      "crc32": 4027775885
+    },
+    {
+      "path": "R87_pie_322000000007_s0_GLB/pattern.jpg",
+      "bytes": 19914,
+      "crc32": 2786645482
+    },
+    {
+      "path": "R87_pie_322000000007_s0_GLB/route_mask.jpg",
+      "bytes": 21166,
+      "crc32": 155766940
+    },
+    {
+      "path": "R87_pie_322000000007_s0_GLB/edit_response64.jpg",
+      "bytes": 2090,
+      "crc32": 1242427034
+    },
+    {
+      "path": "R87_pie_322000000007_s0_GLB/step_summary.json",
+      "bytes": 85455,
+      "crc32": 2463983619
+    },
+    {
+      "path": "R87_pie_322000000007_s0_GLB/request_maps.npz",
+      "bytes": 28431,
+      "crc32": 2546059316
+    },
+    {
+      "path": "R87_pie_322000000007_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 2727054172
+    },
+    {
+      "path": "R87_pie_322000000007_s0_SFT/preview.jpg",
+      "bytes": 20021,
+      "crc32": 3531470475
+    },
+    {
+      "path": "R87_pie_322000000007_s0_SFT/pattern.jpg",
+      "bytes": 20092,
+      "crc32": 1139935074
+    },
+    {
+      "path": "R87_pie_322000000007_s0_SFT/route_mask.jpg",
+      "bytes": 21173,
+      "crc32": 3147398457
+    },
+    {
+      "path": "R87_pie_322000000007_s0_SFT/edit_response64.jpg",
+      "bytes": 2090,
+      "crc32": 1242427034
+    },
+    {
+      "path": "R87_pie_322000000007_s0_SFT/step_summary.json",
+      "bytes": 85502,
+      "crc32": 261969082
+    },
+    {
+      "path": "R87_pie_322000000007_s0_SFT/request_maps.npz",
+      "bytes": 70812,
+      "crc32": 1898955827
+    },
+    {
+      "path": "R87_pie_322000000007_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 2120141063
+    },
+    {
+      "path": "R87_pie_322000000007_s0_PERM/preview.jpg",
+      "bytes": 19907,
+      "crc32": 977799998
+    },
+    {
+      "path": "R87_pie_322000000007_s0_PERM/pattern.jpg",
+      "bytes": 19936,
+      "crc32": 2315888544
+    },
+    {
+      "path": "R87_pie_322000000007_s0_PERM/route_mask.jpg",
+      "bytes": 21283,
+      "crc32": 564800357
+    },
+    {
+      "path": "R87_pie_322000000007_s0_PERM/edit_response64.jpg",
+      "bytes": 2090,
+      "crc32": 1242427034
+    },
+    {
+      "path": "R87_pie_322000000007_s0_PERM/step_summary.json",
+      "bytes": 85360,
+      "crc32": 2857582147
+    },
+    {
+      "path": "R87_pie_322000000007_s0_PERM/request_maps.npz",
+      "bytes": 70883,
+      "crc32": 4050571265
+    },
+    {
+      "path": "R87_pie_322000000007_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 594070208
+    },
+    {
+      "path": "R87_pie_322000000007_s17_REQ/preview.jpg",
+      "bytes": 19993,
+      "crc32": 2528952330
+    },
+    {
+      "path": "R87_pie_322000000007_s17_REQ/pattern.jpg",
+      "bytes": 20000,
+      "crc32": 2360571438
+    },
+    {
+      "path": "R87_pie_322000000007_s17_REQ/route_mask.jpg",
+      "bytes": 20358,
+      "crc32": 2939246226
+    },
+    {
+      "path": "R87_pie_322000000007_s17_REQ/edit_response64.jpg",
+      "bytes": 2020,
+      "crc32": 3058784497
+    },
+    {
+      "path": "R87_pie_322000000007_s17_REQ/step_summary.json",
+      "bytes": 82822,
+      "crc32": 4034794096
+    },
+    {
+      "path": "R87_pie_322000000007_s17_REQ/request_maps.npz",
+      "bytes": 42147,
+      "crc32": 1403690251
+    },
+    {
+      "path": "R87_pie_322000000007_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 1298786718
+    },
+    {
+      "path": "R87_pie_322000000007_s17_GLB/preview.jpg",
+      "bytes": 19946,
+      "crc32": 3149391516
+    },
+    {
+      "path": "R87_pie_322000000007_s17_GLB/pattern.jpg",
+      "bytes": 19970,
+      "crc32": 2000930129
+    },
+    {
+      "path": "R87_pie_322000000007_s17_GLB/route_mask.jpg",
+      "bytes": 20358,
+      "crc32": 2939246226
+    },
+    {
+      "path": "R87_pie_322000000007_s17_GLB/edit_response64.jpg",
+      "bytes": 2020,
+      "crc32": 3058784497
+    },
+    {
+      "path": "R87_pie_322000000007_s17_GLB/step_summary.json",
+      "bytes": 85500,
+      "crc32": 799842260
+    },
+    {
+      "path": "R87_pie_322000000007_s17_GLB/request_maps.npz",
+      "bytes": 28290,
+      "crc32": 552812911
+    },
+    {
+      "path": "R87_pie_322000000007_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 3694805715
+    },
+    {
+      "path": "R87_pie_322000000007_s17_SFT/preview.jpg",
+      "bytes": 20047,
+      "crc32": 3669473486
+    },
+    {
+      "path": "R87_pie_322000000007_s17_SFT/pattern.jpg",
+      "bytes": 20107,
+      "crc32": 1426731947
+    },
+    {
+      "path": "R87_pie_322000000007_s17_SFT/route_mask.jpg",
+      "bytes": 20342,
+      "crc32": 3349085079
+    },
+    {
+      "path": "R87_pie_322000000007_s17_SFT/edit_response64.jpg",
+      "bytes": 2020,
+      "crc32": 3058784497
+    },
+    {
+      "path": "R87_pie_322000000007_s17_SFT/step_summary.json",
+      "bytes": 85433,
+      "crc32": 3984051631
+    },
+    {
+      "path": "R87_pie_322000000007_s17_SFT/request_maps.npz",
+      "bytes": 70420,
+      "crc32": 1521409024
+    },
+    {
+      "path": "R87_pie_322000000007_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 2992395232
+    },
+    {
+      "path": "R87_pie_322000000007_s17_PERM/preview.jpg",
+      "bytes": 19975,
+      "crc32": 1404053360
+    },
+    {
+      "path": "R87_pie_322000000007_s17_PERM/pattern.jpg",
+      "bytes": 20053,
+      "crc32": 1615418745
+    },
+    {
+      "path": "R87_pie_322000000007_s17_PERM/route_mask.jpg",
+      "bytes": 20444,
+      "crc32": 57994304
+    },
+    {
+      "path": "R87_pie_322000000007_s17_PERM/edit_response64.jpg",
+      "bytes": 2020,
+      "crc32": 3058784497
+    },
+    {
+      "path": "R87_pie_322000000007_s17_PERM/step_summary.json",
+      "bytes": 85529,
+      "crc32": 869688442
+    },
+    {
+      "path": "R87_pie_322000000007_s17_PERM/request_maps.npz",
+      "bytes": 70498,
+      "crc32": 912746789
+    },
+    {
+      "path": "R87_pie_322000000007_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 59396187
+    },
+    {
+      "path": "R87_pie_411000000004_s0_REQ/preview.jpg",
+      "bytes": 20398,
+      "crc32": 752162337
+    },
+    {
+      "path": "R87_pie_411000000004_s0_REQ/pattern.jpg",
+      "bytes": 20418,
+      "crc32": 3466226972
+    },
+    {
+      "path": "R87_pie_411000000004_s0_REQ/route_mask.jpg",
+      "bytes": 20876,
+      "crc32": 983541813
+    },
+    {
+      "path": "R87_pie_411000000004_s0_REQ/edit_response64.jpg",
+      "bytes": 2003,
+      "crc32": 1147338542
+    },
+    {
+      "path": "R87_pie_411000000004_s0_REQ/step_summary.json",
+      "bytes": 82813,
+      "crc32": 1562380989
+    },
+    {
+      "path": "R87_pie_411000000004_s0_REQ/request_maps.npz",
+      "bytes": 42823,
+      "crc32": 1617330481
+    },
+    {
+      "path": "R87_pie_411000000004_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 3773431487
+    },
+    {
+      "path": "R87_pie_411000000004_s0_GLB/preview.jpg",
+      "bytes": 20838,
+      "crc32": 1862363600
+    },
+    {
+      "path": "R87_pie_411000000004_s0_GLB/pattern.jpg",
+      "bytes": 20870,
+      "crc32": 887347719
+    },
+    {
+      "path": "R87_pie_411000000004_s0_GLB/route_mask.jpg",
+      "bytes": 20876,
+      "crc32": 983541813
+    },
+    {
+      "path": "R87_pie_411000000004_s0_GLB/edit_response64.jpg",
+      "bytes": 2003,
+      "crc32": 1147338542
+    },
+    {
+      "path": "R87_pie_411000000004_s0_GLB/step_summary.json",
+      "bytes": 85441,
+      "crc32": 2904444256
+    },
+    {
+      "path": "R87_pie_411000000004_s0_GLB/request_maps.npz",
+      "bytes": 28751,
+      "crc32": 2537796115
+    },
+    {
+      "path": "R87_pie_411000000004_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 889799310
+    },
+    {
+      "path": "R87_pie_411000000004_s0_SFT/preview.jpg",
+      "bytes": 20722,
+      "crc32": 3348963398
+    },
+    {
+      "path": "R87_pie_411000000004_s0_SFT/pattern.jpg",
+      "bytes": 20756,
+      "crc32": 4208293743
+    },
+    {
+      "path": "R87_pie_411000000004_s0_SFT/route_mask.jpg",
+      "bytes": 20875,
+      "crc32": 2750293736
+    },
+    {
+      "path": "R87_pie_411000000004_s0_SFT/edit_response64.jpg",
+      "bytes": 2003,
+      "crc32": 1147338542
+    },
+    {
+      "path": "R87_pie_411000000004_s0_SFT/step_summary.json",
+      "bytes": 85587,
+      "crc32": 3050401708
+    },
+    {
+      "path": "R87_pie_411000000004_s0_SFT/request_maps.npz",
+      "bytes": 71569,
+      "crc32": 717134414
+    },
+    {
+      "path": "R87_pie_411000000004_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 1811607665
+    },
+    {
+      "path": "R87_pie_411000000004_s0_PERM/preview.jpg",
+      "bytes": 20898,
+      "crc32": 777279529
+    },
+    {
+      "path": "R87_pie_411000000004_s0_PERM/pattern.jpg",
+      "bytes": 20920,
+      "crc32": 2059600077
+    },
+    {
+      "path": "R87_pie_411000000004_s0_PERM/route_mask.jpg",
+      "bytes": 21004,
+      "crc32": 192184441
+    },
+    {
+      "path": "R87_pie_411000000004_s0_PERM/edit_response64.jpg",
+      "bytes": 2003,
+      "crc32": 1147338542
+    },
+    {
+      "path": "R87_pie_411000000004_s0_PERM/step_summary.json",
+      "bytes": 85512,
+      "crc32": 160638302
+    },
+    {
+      "path": "R87_pie_411000000004_s0_PERM/request_maps.npz",
+      "bytes": 71640,
+      "crc32": 426228344
+    },
+    {
+      "path": "R87_pie_411000000004_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 1919244371
+    },
+    {
+      "path": "R87_pie_411000000004_s17_REQ/preview.jpg",
+      "bytes": 20878,
+      "crc32": 3907894088
+    },
+    {
+      "path": "R87_pie_411000000004_s17_REQ/pattern.jpg",
+      "bytes": 20933,
+      "crc32": 2572969330
+    },
+    {
+      "path": "R87_pie_411000000004_s17_REQ/route_mask.jpg",
+      "bytes": 20690,
+      "crc32": 4247899929
+    },
+    {
+      "path": "R87_pie_411000000004_s17_REQ/edit_response64.jpg",
+      "bytes": 2029,
+      "crc32": 57232978
+    },
+    {
+      "path": "R87_pie_411000000004_s17_REQ/step_summary.json",
+      "bytes": 82833,
+      "crc32": 297980088
+    },
+    {
+      "path": "R87_pie_411000000004_s17_REQ/request_maps.npz",
+      "bytes": 42645,
+      "crc32": 1903167588
+    },
+    {
+      "path": "R87_pie_411000000004_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 1501597215
+    },
+    {
+      "path": "R87_pie_411000000004_s17_GLB/preview.jpg",
+      "bytes": 21111,
+      "crc32": 1658725385
+    },
+    {
+      "path": "R87_pie_411000000004_s17_GLB/pattern.jpg",
+      "bytes": 21151,
+      "crc32": 259180600
+    },
+    {
+      "path": "R87_pie_411000000004_s17_GLB/route_mask.jpg",
+      "bytes": 20690,
+      "crc32": 4247899929
+    },
+    {
+      "path": "R87_pie_411000000004_s17_GLB/edit_response64.jpg",
+      "bytes": 2029,
+      "crc32": 57232978
+    },
+    {
+      "path": "R87_pie_411000000004_s17_GLB/step_summary.json",
+      "bytes": 85572,
+      "crc32": 2699771282
+    },
+    {
+      "path": "R87_pie_411000000004_s17_GLB/request_maps.npz",
+      "bytes": 28633,
+      "crc32": 602832775
+    },
+    {
+      "path": "R87_pie_411000000004_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 3027496229
+    },
+    {
+      "path": "R87_pie_411000000004_s17_SFT/preview.jpg",
+      "bytes": 21313,
+      "crc32": 371953502
+    },
+    {
+      "path": "R87_pie_411000000004_s17_SFT/pattern.jpg",
+      "bytes": 21354,
+      "crc32": 2460672864
+    },
+    {
+      "path": "R87_pie_411000000004_s17_SFT/route_mask.jpg",
+      "bytes": 20695,
+      "crc32": 1040497248
+    },
+    {
+      "path": "R87_pie_411000000004_s17_SFT/edit_response64.jpg",
+      "bytes": 2029,
+      "crc32": 57232978
+    },
+    {
+      "path": "R87_pie_411000000004_s17_SFT/step_summary.json",
+      "bytes": 85518,
+      "crc32": 2745687189
+    },
+    {
+      "path": "R87_pie_411000000004_s17_SFT/request_maps.npz",
+      "bytes": 71269,
+      "crc32": 1150756619
+    },
+    {
+      "path": "R87_pie_411000000004_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 1612646577
+    },
+    {
+      "path": "R87_pie_411000000004_s17_PERM/preview.jpg",
+      "bytes": 21087,
+      "crc32": 1298521255
+    },
+    {
+      "path": "R87_pie_411000000004_s17_PERM/pattern.jpg",
+      "bytes": 21108,
+      "crc32": 3636987986
+    },
+    {
+      "path": "R87_pie_411000000004_s17_PERM/route_mask.jpg",
+      "bytes": 20822,
+      "crc32": 773851313
+    },
+    {
+      "path": "R87_pie_411000000004_s17_PERM/edit_response64.jpg",
+      "bytes": 2029,
+      "crc32": 57232978
+    },
+    {
+      "path": "R87_pie_411000000004_s17_PERM/step_summary.json",
+      "bytes": 85409,
+      "crc32": 1567486614
+    },
+    {
+      "path": "R87_pie_411000000004_s17_PERM/request_maps.npz",
+      "bytes": 71362,
+      "crc32": 1546545433
+    },
+    {
+      "path": "R87_pie_411000000004_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 57280904
+    },
+    {
+      "path": "R87_pie_413000000003_s0_REQ/preview.jpg",
+      "bytes": 20626,
+      "crc32": 1017625188
+    },
+    {
+      "path": "R87_pie_413000000003_s0_REQ/pattern.jpg",
+      "bytes": 20590,
+      "crc32": 1775011065
+    },
+    {
+      "path": "R87_pie_413000000003_s0_REQ/route_mask.jpg",
+      "bytes": 22718,
+      "crc32": 1926516732
+    },
+    {
+      "path": "R87_pie_413000000003_s0_REQ/edit_response64.jpg",
+      "bytes": 2179,
+      "crc32": 3380668724
+    },
+    {
+      "path": "R87_pie_413000000003_s0_REQ/step_summary.json",
+      "bytes": 82791,
+      "crc32": 707933086
+    },
+    {
+      "path": "R87_pie_413000000003_s0_REQ/request_maps.npz",
+      "bytes": 43305,
+      "crc32": 2239269519
+    },
+    {
+      "path": "R87_pie_413000000003_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 811589633
+    },
+    {
+      "path": "R87_pie_413000000003_s0_GLB/preview.jpg",
+      "bytes": 20786,
+      "crc32": 4096265009
+    },
+    {
+      "path": "R87_pie_413000000003_s0_GLB/pattern.jpg",
+      "bytes": 20824,
+      "crc32": 2868580013
+    },
+    {
+      "path": "R87_pie_413000000003_s0_GLB/route_mask.jpg",
+      "bytes": 22718,
+      "crc32": 1926516732
+    },
+    {
+      "path": "R87_pie_413000000003_s0_GLB/edit_response64.jpg",
+      "bytes": 2179,
+      "crc32": 3380668724
+    },
+    {
+      "path": "R87_pie_413000000003_s0_GLB/step_summary.json",
+      "bytes": 85664,
+      "crc32": 3478585630
+    },
+    {
+      "path": "R87_pie_413000000003_s0_GLB/request_maps.npz",
+      "bytes": 29028,
+      "crc32": 4115465789
+    },
+    {
+      "path": "R87_pie_413000000003_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 3419687684
+    },
+    {
+      "path": "R87_pie_413000000003_s0_SFT/preview.jpg",
+      "bytes": 20696,
+      "crc32": 660717287
+    },
+    {
+      "path": "R87_pie_413000000003_s0_SFT/pattern.jpg",
+      "bytes": 20678,
+      "crc32": 2863453022
+    },
+    {
+      "path": "R87_pie_413000000003_s0_SFT/route_mask.jpg",
+      "bytes": 22732,
+      "crc32": 2998899485
+    },
+    {
+      "path": "R87_pie_413000000003_s0_SFT/edit_response64.jpg",
+      "bytes": 2179,
+      "crc32": 3380668724
+    },
+    {
+      "path": "R87_pie_413000000003_s0_SFT/step_summary.json",
+      "bytes": 85498,
+      "crc32": 3986956728
+    },
+    {
+      "path": "R87_pie_413000000003_s0_SFT/request_maps.npz",
+      "bytes": 72315,
+      "crc32": 3524537601
+    },
+    {
+      "path": "R87_pie_413000000003_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 2252778537
+    },
+    {
+      "path": "R87_pie_413000000003_s0_PERM/preview.jpg",
+      "bytes": 20774,
+      "crc32": 911556834
+    },
+    {
+      "path": "R87_pie_413000000003_s0_PERM/pattern.jpg",
+      "bytes": 20792,
+      "crc32": 4153834355
+    },
+    {
+      "path": "R87_pie_413000000003_s0_PERM/route_mask.jpg",
+      "bytes": 22782,
+      "crc32": 864138645
+    },
+    {
+      "path": "R87_pie_413000000003_s0_PERM/edit_response64.jpg",
+      "bytes": 2179,
+      "crc32": 3380668724
+    },
+    {
+      "path": "R87_pie_413000000003_s0_PERM/step_summary.json",
+      "bytes": 85452,
+      "crc32": 2161803308
+    },
+    {
+      "path": "R87_pie_413000000003_s0_PERM/request_maps.npz",
+      "bytes": 72362,
+      "crc32": 4068277677
+    },
+    {
+      "path": "R87_pie_413000000003_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 181985090
+    },
+    {
+      "path": "R87_pie_413000000003_s17_REQ/preview.jpg",
+      "bytes": 22320,
+      "crc32": 2922187517
+    },
+    {
+      "path": "R87_pie_413000000003_s17_REQ/pattern.jpg",
+      "bytes": 22304,
+      "crc32": 1754229789
+    },
+    {
+      "path": "R87_pie_413000000003_s17_REQ/route_mask.jpg",
+      "bytes": 22277,
+      "crc32": 1970057178
+    },
+    {
+      "path": "R87_pie_413000000003_s17_REQ/edit_response64.jpg",
+      "bytes": 2129,
+      "crc32": 2406461454
+    },
+    {
+      "path": "R87_pie_413000000003_s17_REQ/step_summary.json",
+      "bytes": 82720,
+      "crc32": 4195714442
+    },
+    {
+      "path": "R87_pie_413000000003_s17_REQ/request_maps.npz",
+      "bytes": 43121,
+      "crc32": 1175668898
+    },
+    {
+      "path": "R87_pie_413000000003_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 1884034859
+    },
+    {
+      "path": "R87_pie_413000000003_s17_GLB/preview.jpg",
+      "bytes": 23109,
+      "crc32": 1642435725
+    },
+    {
+      "path": "R87_pie_413000000003_s17_GLB/pattern.jpg",
+      "bytes": 23054,
+      "crc32": 1810591071
+    },
+    {
+      "path": "R87_pie_413000000003_s17_GLB/route_mask.jpg",
+      "bytes": 22277,
+      "crc32": 1970057178
+    },
+    {
+      "path": "R87_pie_413000000003_s17_GLB/edit_response64.jpg",
+      "bytes": 2129,
+      "crc32": 2406461454
+    },
+    {
+      "path": "R87_pie_413000000003_s17_GLB/step_summary.json",
+      "bytes": 85476,
+      "crc32": 3836171482
+    },
+    {
+      "path": "R87_pie_413000000003_s17_GLB/request_maps.npz",
+      "bytes": 28909,
+      "crc32": 2558731162
+    },
+    {
+      "path": "R87_pie_413000000003_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 727326526
+    },
+    {
+      "path": "R87_pie_413000000003_s17_SFT/preview.jpg",
+      "bytes": 22898,
+      "crc32": 3607654756
+    },
+    {
+      "path": "R87_pie_413000000003_s17_SFT/pattern.jpg",
+      "bytes": 22890,
+      "crc32": 2848568040
+    },
+    {
+      "path": "R87_pie_413000000003_s17_SFT/route_mask.jpg",
+      "bytes": 22275,
+      "crc32": 401213428
+    },
+    {
+      "path": "R87_pie_413000000003_s17_SFT/edit_response64.jpg",
+      "bytes": 2129,
+      "crc32": 2406461454
+    },
+    {
+      "path": "R87_pie_413000000003_s17_SFT/step_summary.json",
+      "bytes": 85454,
+      "crc32": 692873599
+    },
+    {
+      "path": "R87_pie_413000000003_s17_SFT/request_maps.npz",
+      "bytes": 71980,
+      "crc32": 2713371998
+    },
+    {
+      "path": "R87_pie_413000000003_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 643626288
+    },
+    {
+      "path": "R87_pie_413000000003_s17_PERM/preview.jpg",
+      "bytes": 23021,
+      "crc32": 4025022134
+    },
+    {
+      "path": "R87_pie_413000000003_s17_PERM/pattern.jpg",
+      "bytes": 22969,
+      "crc32": 2403334861
+    },
+    {
+      "path": "R87_pie_413000000003_s17_PERM/route_mask.jpg",
+      "bytes": 22321,
+      "crc32": 3402282869
+    },
+    {
+      "path": "R87_pie_413000000003_s17_PERM/edit_response64.jpg",
+      "bytes": 2129,
+      "crc32": 2406461454
+    },
+    {
+      "path": "R87_pie_413000000003_s17_PERM/step_summary.json",
+      "bytes": 85356,
+      "crc32": 3999178613
+    },
+    {
+      "path": "R87_pie_413000000003_s17_PERM/request_maps.npz",
+      "bytes": 72041,
+      "crc32": 1917037866
+    },
+    {
+      "path": "R87_pie_413000000003_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 2987350532
+    },
+    {
+      "path": "R87_pie_512000000002_s0_REQ/preview.jpg",
+      "bytes": 20275,
+      "crc32": 3368441217
+    },
+    {
+      "path": "R87_pie_512000000002_s0_REQ/pattern.jpg",
+      "bytes": 20288,
+      "crc32": 2863608888
+    },
+    {
+      "path": "R87_pie_512000000002_s0_REQ/route_mask.jpg",
+      "bytes": 22956,
+      "crc32": 1139226166
+    },
+    {
+      "path": "R87_pie_512000000002_s0_REQ/edit_response64.jpg",
+      "bytes": 2121,
+      "crc32": 391060579
+    },
+    {
+      "path": "R87_pie_512000000002_s0_REQ/step_summary.json",
+      "bytes": 82831,
+      "crc32": 2366596606
+    },
+    {
+      "path": "R87_pie_512000000002_s0_REQ/request_maps.npz",
+      "bytes": 43107,
+      "crc32": 3609435418
+    },
+    {
+      "path": "R87_pie_512000000002_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 1461400513
+    },
+    {
+      "path": "R87_pie_512000000002_s0_GLB/preview.jpg",
+      "bytes": 20504,
+      "crc32": 43612159
+    },
+    {
+      "path": "R87_pie_512000000002_s0_GLB/pattern.jpg",
+      "bytes": 20508,
+      "crc32": 3454477390
+    },
+    {
+      "path": "R87_pie_512000000002_s0_GLB/route_mask.jpg",
+      "bytes": 22956,
+      "crc32": 1139226166
+    },
+    {
+      "path": "R87_pie_512000000002_s0_GLB/edit_response64.jpg",
+      "bytes": 2121,
+      "crc32": 391060579
+    },
+    {
+      "path": "R87_pie_512000000002_s0_GLB/step_summary.json",
+      "bytes": 85546,
+      "crc32": 2341919903
+    },
+    {
+      "path": "R87_pie_512000000002_s0_GLB/request_maps.npz",
+      "bytes": 28908,
+      "crc32": 441293260
+    },
+    {
+      "path": "R87_pie_512000000002_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 3666962475
+    },
+    {
+      "path": "R87_pie_512000000002_s0_SFT/preview.jpg",
+      "bytes": 21202,
+      "crc32": 731015712
+    },
+    {
+      "path": "R87_pie_512000000002_s0_SFT/pattern.jpg",
+      "bytes": 21221,
+      "crc32": 617228986
+    },
+    {
+      "path": "R87_pie_512000000002_s0_SFT/route_mask.jpg",
+      "bytes": 22954,
+      "crc32": 781819304
+    },
+    {
+      "path": "R87_pie_512000000002_s0_SFT/edit_response64.jpg",
+      "bytes": 2121,
+      "crc32": 391060579
+    },
+    {
+      "path": "R87_pie_512000000002_s0_SFT/step_summary.json",
+      "bytes": 85533,
+      "crc32": 2000949249
+    },
+    {
+      "path": "R87_pie_512000000002_s0_SFT/request_maps.npz",
+      "bytes": 72016,
+      "crc32": 3708318124
+    },
+    {
+      "path": "R87_pie_512000000002_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 2012189318
+    },
+    {
+      "path": "R87_pie_512000000002_s0_PERM/preview.jpg",
+      "bytes": 20827,
+      "crc32": 1108261988
+    },
+    {
+      "path": "R87_pie_512000000002_s0_PERM/pattern.jpg",
+      "bytes": 20844,
+      "crc32": 2585086164
+    },
+    {
+      "path": "R87_pie_512000000002_s0_PERM/route_mask.jpg",
+      "bytes": 23017,
+      "crc32": 2110402755
+    },
+    {
+      "path": "R87_pie_512000000002_s0_PERM/edit_response64.jpg",
+      "bytes": 2121,
+      "crc32": 391060579
+    },
+    {
+      "path": "R87_pie_512000000002_s0_PERM/step_summary.json",
+      "bytes": 85384,
+      "crc32": 251033737
+    },
+    {
+      "path": "R87_pie_512000000002_s0_PERM/request_maps.npz",
+      "bytes": 72049,
+      "crc32": 296876863
+    },
+    {
+      "path": "R87_pie_512000000002_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 2074852694
+    },
+    {
+      "path": "R87_pie_512000000002_s17_REQ/preview.jpg",
+      "bytes": 20270,
+      "crc32": 62587329
+    },
+    {
+      "path": "R87_pie_512000000002_s17_REQ/pattern.jpg",
+      "bytes": 20286,
+      "crc32": 671960380
+    },
+    {
+      "path": "R87_pie_512000000002_s17_REQ/route_mask.jpg",
+      "bytes": 21688,
+      "crc32": 782486383
+    },
+    {
+      "path": "R87_pie_512000000002_s17_REQ/edit_response64.jpg",
+      "bytes": 2056,
+      "crc32": 909801176
+    },
+    {
+      "path": "R87_pie_512000000002_s17_REQ/step_summary.json",
+      "bytes": 82832,
+      "crc32": 4005044998
+    },
+    {
+      "path": "R87_pie_512000000002_s17_REQ/request_maps.npz",
+      "bytes": 42308,
+      "crc32": 189819037
+    },
+    {
+      "path": "R87_pie_512000000002_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 1586245763
+    },
+    {
+      "path": "R87_pie_512000000002_s17_GLB/preview.jpg",
+      "bytes": 21082,
+      "crc32": 2211108466
+    },
+    {
+      "path": "R87_pie_512000000002_s17_GLB/pattern.jpg",
+      "bytes": 21125,
+      "crc32": 3926005475
+    },
+    {
+      "path": "R87_pie_512000000002_s17_GLB/route_mask.jpg",
+      "bytes": 21688,
+      "crc32": 782486383
+    },
+    {
+      "path": "R87_pie_512000000002_s17_GLB/edit_response64.jpg",
+      "bytes": 2056,
+      "crc32": 909801176
+    },
+    {
+      "path": "R87_pie_512000000002_s17_GLB/step_summary.json",
+      "bytes": 85550,
+      "crc32": 2111092202
+    },
+    {
+      "path": "R87_pie_512000000002_s17_GLB/request_maps.npz",
+      "bytes": 28384,
+      "crc32": 956763133
+    },
+    {
+      "path": "R87_pie_512000000002_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 1088857562
+    },
+    {
+      "path": "R87_pie_512000000002_s17_SFT/preview.jpg",
+      "bytes": 22089,
+      "crc32": 2000329466
+    },
+    {
+      "path": "R87_pie_512000000002_s17_SFT/pattern.jpg",
+      "bytes": 22115,
+      "crc32": 1518594523
+    },
+    {
+      "path": "R87_pie_512000000002_s17_SFT/route_mask.jpg",
+      "bytes": 21691,
+      "crc32": 1805512862
+    },
+    {
+      "path": "R87_pie_512000000002_s17_SFT/edit_response64.jpg",
+      "bytes": 2056,
+      "crc32": 909801176
+    },
+    {
+      "path": "R87_pie_512000000002_s17_SFT/step_summary.json",
+      "bytes": 85421,
+      "crc32": 1247746044
+    },
+    {
+      "path": "R87_pie_512000000002_s17_SFT/request_maps.npz",
+      "bytes": 70711,
+      "crc32": 1533970492
+    },
+    {
+      "path": "R87_pie_512000000002_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 3291038428
+    },
+    {
+      "path": "R87_pie_512000000002_s17_PERM/preview.jpg",
+      "bytes": 20777,
+      "crc32": 1978516256
+    },
+    {
+      "path": "R87_pie_512000000002_s17_PERM/pattern.jpg",
+      "bytes": 20804,
+      "crc32": 292715426
+    },
+    {
+      "path": "R87_pie_512000000002_s17_PERM/route_mask.jpg",
+      "bytes": 21787,
+      "crc32": 2096238779
+    },
+    {
+      "path": "R87_pie_512000000002_s17_PERM/edit_response64.jpg",
+      "bytes": 2056,
+      "crc32": 909801176
+    },
+    {
+      "path": "R87_pie_512000000002_s17_PERM/step_summary.json",
+      "bytes": 85582,
+      "crc32": 2321775506
+    },
+    {
+      "path": "R87_pie_512000000002_s17_PERM/request_maps.npz",
+      "bytes": 70773,
+      "crc32": 2042146984
+    },
+    {
+      "path": "R87_pie_512000000002_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 1845302309
+    },
+    {
+      "path": "R87_pie_523000000002_s0_REQ/preview.jpg",
+      "bytes": 14243,
+      "crc32": 818569346
+    },
+    {
+      "path": "R87_pie_523000000002_s0_REQ/pattern.jpg",
+      "bytes": 14280,
+      "crc32": 3125136442
+    },
+    {
+      "path": "R87_pie_523000000002_s0_REQ/route_mask.jpg",
+      "bytes": 22686,
+      "crc32": 2266573980
+    },
+    {
+      "path": "R87_pie_523000000002_s0_REQ/edit_response64.jpg",
+      "bytes": 2126,
+      "crc32": 3980257320
+    },
+    {
+      "path": "R87_pie_523000000002_s0_REQ/step_summary.json",
+      "bytes": 82817,
+      "crc32": 2490668503
+    },
+    {
+      "path": "R87_pie_523000000002_s0_REQ/request_maps.npz",
+      "bytes": 43471,
+      "crc32": 1530910221
+    },
+    {
+      "path": "R87_pie_523000000002_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 2740252835
+    },
+    {
+      "path": "R87_pie_523000000002_s0_GLB/preview.jpg",
+      "bytes": 14275,
+      "crc32": 3963174396
+    },
+    {
+      "path": "R87_pie_523000000002_s0_GLB/pattern.jpg",
+      "bytes": 14286,
+      "crc32": 297724432
+    },
+    {
+      "path": "R87_pie_523000000002_s0_GLB/route_mask.jpg",
+      "bytes": 22686,
+      "crc32": 2266573980
+    },
+    {
+      "path": "R87_pie_523000000002_s0_GLB/edit_response64.jpg",
+      "bytes": 2126,
+      "crc32": 3980257320
+    },
+    {
+      "path": "R87_pie_523000000002_s0_GLB/step_summary.json",
+      "bytes": 85612,
+      "crc32": 956166095
+    },
+    {
+      "path": "R87_pie_523000000002_s0_GLB/request_maps.npz",
+      "bytes": 29149,
+      "crc32": 3018052175
+    },
+    {
+      "path": "R87_pie_523000000002_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 309389046
+    },
+    {
+      "path": "R87_pie_523000000002_s0_SFT/preview.jpg",
+      "bytes": 14498,
+      "crc32": 2346338474
+    },
+    {
+      "path": "R87_pie_523000000002_s0_SFT/pattern.jpg",
+      "bytes": 14530,
+      "crc32": 689973444
+    },
+    {
+      "path": "R87_pie_523000000002_s0_SFT/route_mask.jpg",
+      "bytes": 22699,
+      "crc32": 2746365981
+    },
+    {
+      "path": "R87_pie_523000000002_s0_SFT/edit_response64.jpg",
+      "bytes": 2126,
+      "crc32": 3980257320
+    },
+    {
+      "path": "R87_pie_523000000002_s0_SFT/step_summary.json",
+      "bytes": 85320,
+      "crc32": 2901133878
+    },
+    {
+      "path": "R87_pie_523000000002_s0_SFT/request_maps.npz",
+      "bytes": 72601,
+      "crc32": 1119219878
+    },
+    {
+      "path": "R87_pie_523000000002_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 2637958471
+    },
+    {
+      "path": "R87_pie_523000000002_s0_PERM/preview.jpg",
+      "bytes": 14203,
+      "crc32": 376977242
+    },
+    {
+      "path": "R87_pie_523000000002_s0_PERM/pattern.jpg",
+      "bytes": 14194,
+      "crc32": 501925901
+    },
+    {
+      "path": "R87_pie_523000000002_s0_PERM/route_mask.jpg",
+      "bytes": 22774,
+      "crc32": 354182051
+    },
+    {
+      "path": "R87_pie_523000000002_s0_PERM/edit_response64.jpg",
+      "bytes": 2126,
+      "crc32": 3980257320
+    },
+    {
+      "path": "R87_pie_523000000002_s0_PERM/step_summary.json",
+      "bytes": 85403,
+      "crc32": 782522838
+    },
+    {
+      "path": "R87_pie_523000000002_s0_PERM/request_maps.npz",
+      "bytes": 72641,
+      "crc32": 2687604391
+    },
+    {
+      "path": "R87_pie_523000000002_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 1951283934
+    },
+    {
+      "path": "R87_pie_523000000002_s17_REQ/preview.jpg",
+      "bytes": 14072,
+      "crc32": 3578838281
+    },
+    {
+      "path": "R87_pie_523000000002_s17_REQ/pattern.jpg",
+      "bytes": 14108,
+      "crc32": 3005480713
+    },
+    {
+      "path": "R87_pie_523000000002_s17_REQ/route_mask.jpg",
+      "bytes": 21699,
+      "crc32": 2819165042
+    },
+    {
+      "path": "R87_pie_523000000002_s17_REQ/edit_response64.jpg",
+      "bytes": 2100,
+      "crc32": 3719534571
+    },
+    {
+      "path": "R87_pie_523000000002_s17_REQ/step_summary.json",
+      "bytes": 82705,
+      "crc32": 2274912865
+    },
+    {
+      "path": "R87_pie_523000000002_s17_REQ/request_maps.npz",
+      "bytes": 43365,
+      "crc32": 3215742678
+    },
+    {
+      "path": "R87_pie_523000000002_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 3475297418
+    },
+    {
+      "path": "R87_pie_523000000002_s17_GLB/preview.jpg",
+      "bytes": 13996,
+      "crc32": 449630025
+    },
+    {
+      "path": "R87_pie_523000000002_s17_GLB/pattern.jpg",
+      "bytes": 14045,
+      "crc32": 1587840667
+    },
+    {
+      "path": "R87_pie_523000000002_s17_GLB/route_mask.jpg",
+      "bytes": 21699,
+      "crc32": 2819165042
+    },
+    {
+      "path": "R87_pie_523000000002_s17_GLB/edit_response64.jpg",
+      "bytes": 2100,
+      "crc32": 3719534571
+    },
+    {
+      "path": "R87_pie_523000000002_s17_GLB/step_summary.json",
+      "bytes": 85372,
+      "crc32": 2862814300
+    },
+    {
+      "path": "R87_pie_523000000002_s17_GLB/request_maps.npz",
+      "bytes": 29086,
+      "crc32": 1253903208
+    },
+    {
+      "path": "R87_pie_523000000002_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 3273688777
+    },
+    {
+      "path": "R87_pie_523000000002_s17_SFT/preview.jpg",
+      "bytes": 14320,
+      "crc32": 3379016953
+    },
+    {
+      "path": "R87_pie_523000000002_s17_SFT/pattern.jpg",
+      "bytes": 14384,
+      "crc32": 2322244051
+    },
+    {
+      "path": "R87_pie_523000000002_s17_SFT/route_mask.jpg",
+      "bytes": 21697,
+      "crc32": 1490715944
+    },
+    {
+      "path": "R87_pie_523000000002_s17_SFT/edit_response64.jpg",
+      "bytes": 2100,
+      "crc32": 3719534571
+    },
+    {
+      "path": "R87_pie_523000000002_s17_SFT/step_summary.json",
+      "bytes": 85480,
+      "crc32": 15813627
+    },
+    {
+      "path": "R87_pie_523000000002_s17_SFT/request_maps.npz",
+      "bytes": 72426,
+      "crc32": 464881811
+    },
+    {
+      "path": "R87_pie_523000000002_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 3708715256
+    },
+    {
+      "path": "R87_pie_523000000002_s17_PERM/preview.jpg",
+      "bytes": 14476,
+      "crc32": 1534219415
+    },
+    {
+      "path": "R87_pie_523000000002_s17_PERM/pattern.jpg",
+      "bytes": 14528,
+      "crc32": 3336663178
+    },
+    {
+      "path": "R87_pie_523000000002_s17_PERM/route_mask.jpg",
+      "bytes": 21818,
+      "crc32": 3491274
+    },
+    {
+      "path": "R87_pie_523000000002_s17_PERM/edit_response64.jpg",
+      "bytes": 2100,
+      "crc32": 3719534571
+    },
+    {
+      "path": "R87_pie_523000000002_s17_PERM/step_summary.json",
+      "bytes": 85289,
+      "crc32": 2775759087
+    },
+    {
+      "path": "R87_pie_523000000002_s17_PERM/request_maps.npz",
+      "bytes": 72494,
+      "crc32": 2227704726
+    },
+    {
+      "path": "R87_pie_523000000002_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 4103845475
+    },
+    {
+      "path": "R87_pie_611000000003_s0_REQ/preview.jpg",
+      "bytes": 19359,
+      "crc32": 90748885
+    },
+    {
+      "path": "R87_pie_611000000003_s0_REQ/pattern.jpg",
+      "bytes": 19341,
+      "crc32": 812205674
+    },
+    {
+      "path": "R87_pie_611000000003_s0_REQ/route_mask.jpg",
+      "bytes": 23870,
+      "crc32": 3251275478
+    },
+    {
+      "path": "R87_pie_611000000003_s0_REQ/edit_response64.jpg",
+      "bytes": 2209,
+      "crc32": 4202485518
+    },
+    {
+      "path": "R87_pie_611000000003_s0_REQ/step_summary.json",
+      "bytes": 82794,
+      "crc32": 2316156755
+    },
+    {
+      "path": "R87_pie_611000000003_s0_REQ/request_maps.npz",
+      "bytes": 43106,
+      "crc32": 314307167
+    },
+    {
+      "path": "R87_pie_611000000003_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 1757301384
+    },
+    {
+      "path": "R87_pie_611000000003_s0_GLB/preview.jpg",
+      "bytes": 19465,
+      "crc32": 3856573615
+    },
+    {
+      "path": "R87_pie_611000000003_s0_GLB/pattern.jpg",
+      "bytes": 19431,
+      "crc32": 1903268563
+    },
+    {
+      "path": "R87_pie_611000000003_s0_GLB/route_mask.jpg",
+      "bytes": 23870,
+      "crc32": 3251275478
+    },
+    {
+      "path": "R87_pie_611000000003_s0_GLB/edit_response64.jpg",
+      "bytes": 2209,
+      "crc32": 4202485518
+    },
+    {
+      "path": "R87_pie_611000000003_s0_GLB/step_summary.json",
+      "bytes": 85549,
+      "crc32": 4202451157
+    },
+    {
+      "path": "R87_pie_611000000003_s0_GLB/request_maps.npz",
+      "bytes": 28898,
+      "crc32": 3830275731
+    },
+    {
+      "path": "R87_pie_611000000003_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 1420282358
+    },
+    {
+      "path": "R87_pie_611000000003_s0_SFT/preview.jpg",
+      "bytes": 19397,
+      "crc32": 3760396558
+    },
+    {
+      "path": "R87_pie_611000000003_s0_SFT/pattern.jpg",
+      "bytes": 19356,
+      "crc32": 8035127
+    },
+    {
+      "path": "R87_pie_611000000003_s0_SFT/route_mask.jpg",
+      "bytes": 23872,
+      "crc32": 3870962678
+    },
+    {
+      "path": "R87_pie_611000000003_s0_SFT/edit_response64.jpg",
+      "bytes": 2209,
+      "crc32": 4202485518
+    },
+    {
+      "path": "R87_pie_611000000003_s0_SFT/step_summary.json",
+      "bytes": 85529,
+      "crc32": 341958530
+    },
+    {
+      "path": "R87_pie_611000000003_s0_SFT/request_maps.npz",
+      "bytes": 71944,
+      "crc32": 972036055
+    },
+    {
+      "path": "R87_pie_611000000003_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 1821874009
+    },
+    {
+      "path": "R87_pie_611000000003_s0_PERM/preview.jpg",
+      "bytes": 19330,
+      "crc32": 4279669463
+    },
+    {
+      "path": "R87_pie_611000000003_s0_PERM/pattern.jpg",
+      "bytes": 19330,
+      "crc32": 4285657558
+    },
+    {
+      "path": "R87_pie_611000000003_s0_PERM/route_mask.jpg",
+      "bytes": 23935,
+      "crc32": 1705314126
+    },
+    {
+      "path": "R87_pie_611000000003_s0_PERM/edit_response64.jpg",
+      "bytes": 2209,
+      "crc32": 4202485518
+    },
+    {
+      "path": "R87_pie_611000000003_s0_PERM/step_summary.json",
+      "bytes": 85534,
+      "crc32": 1602681666
+    },
+    {
+      "path": "R87_pie_611000000003_s0_PERM/request_maps.npz",
+      "bytes": 71996,
+      "crc32": 319946473
+    },
+    {
+      "path": "R87_pie_611000000003_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 2508912294
+    },
+    {
+      "path": "R87_pie_611000000003_s17_REQ/preview.jpg",
+      "bytes": 19381,
+      "crc32": 3017889201
+    },
+    {
+      "path": "R87_pie_611000000003_s17_REQ/pattern.jpg",
+      "bytes": 19397,
+      "crc32": 3525411914
+    },
+    {
+      "path": "R87_pie_611000000003_s17_REQ/route_mask.jpg",
+      "bytes": 23659,
+      "crc32": 3696466439
+    },
+    {
+      "path": "R87_pie_611000000003_s17_REQ/edit_response64.jpg",
+      "bytes": 2214,
+      "crc32": 2923734306
+    },
+    {
+      "path": "R87_pie_611000000003_s17_REQ/step_summary.json",
+      "bytes": 82779,
+      "crc32": 1427646364
+    },
+    {
+      "path": "R87_pie_611000000003_s17_REQ/request_maps.npz",
+      "bytes": 43302,
+      "crc32": 2712293753
+    },
+    {
+      "path": "R87_pie_611000000003_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 2479631760
+    },
+    {
+      "path": "R87_pie_611000000003_s17_GLB/preview.jpg",
+      "bytes": 19513,
+      "crc32": 2650755680
+    },
+    {
+      "path": "R87_pie_611000000003_s17_GLB/pattern.jpg",
+      "bytes": 19556,
+      "crc32": 365184923
+    },
+    {
+      "path": "R87_pie_611000000003_s17_GLB/route_mask.jpg",
+      "bytes": 23659,
+      "crc32": 3696466439
+    },
+    {
+      "path": "R87_pie_611000000003_s17_GLB/edit_response64.jpg",
+      "bytes": 2214,
+      "crc32": 2923734306
+    },
+    {
+      "path": "R87_pie_611000000003_s17_GLB/step_summary.json",
+      "bytes": 85664,
+      "crc32": 3031007697
+    },
+    {
+      "path": "R87_pie_611000000003_s17_GLB/request_maps.npz",
+      "bytes": 29019,
+      "crc32": 1824793606
+    },
+    {
+      "path": "R87_pie_611000000003_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 649638662
+    },
+    {
+      "path": "R87_pie_611000000003_s17_SFT/preview.jpg",
+      "bytes": 19462,
+      "crc32": 3773843773
+    },
+    {
+      "path": "R87_pie_611000000003_s17_SFT/pattern.jpg",
+      "bytes": 19495,
+      "crc32": 2330209241
+    },
+    {
+      "path": "R87_pie_611000000003_s17_SFT/route_mask.jpg",
+      "bytes": 23664,
+      "crc32": 998466785
+    },
+    {
+      "path": "R87_pie_611000000003_s17_SFT/edit_response64.jpg",
+      "bytes": 2214,
+      "crc32": 2923734306
+    },
+    {
+      "path": "R87_pie_611000000003_s17_SFT/step_summary.json",
+      "bytes": 85351,
+      "crc32": 1907241266
+    },
+    {
+      "path": "R87_pie_611000000003_s17_SFT/request_maps.npz",
+      "bytes": 72282,
+      "crc32": 287411852
+    },
+    {
+      "path": "R87_pie_611000000003_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 776946408
+    },
+    {
+      "path": "R87_pie_611000000003_s17_PERM/preview.jpg",
+      "bytes": 19255,
+      "crc32": 2357307308
+    },
+    {
+      "path": "R87_pie_611000000003_s17_PERM/pattern.jpg",
+      "bytes": 19287,
+      "crc32": 1699931495
+    },
+    {
+      "path": "R87_pie_611000000003_s17_PERM/route_mask.jpg",
+      "bytes": 23739,
+      "crc32": 1587636462
+    },
+    {
+      "path": "R87_pie_611000000003_s17_PERM/edit_response64.jpg",
+      "bytes": 2214,
+      "crc32": 2923734306
+    },
+    {
+      "path": "R87_pie_611000000003_s17_PERM/step_summary.json",
+      "bytes": 85331,
+      "crc32": 919133965
+    },
+    {
+      "path": "R87_pie_611000000003_s17_PERM/request_maps.npz",
+      "bytes": 72310,
+      "crc32": 3552733966
+    },
+    {
+      "path": "R87_pie_611000000003_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 1021573436
+    },
+    {
+      "path": "R87_pie_623000000004_s0_REQ/preview.jpg",
+      "bytes": 14891,
+      "crc32": 2612643899
+    },
+    {
+      "path": "R87_pie_623000000004_s0_REQ/pattern.jpg",
+      "bytes": 14933,
+      "crc32": 3011139985
+    },
+    {
+      "path": "R87_pie_623000000004_s0_REQ/route_mask.jpg",
+      "bytes": 20581,
+      "crc32": 2824901850
+    },
+    {
+      "path": "R87_pie_623000000004_s0_REQ/edit_response64.jpg",
+      "bytes": 1963,
+      "crc32": 3514119128
+    },
+    {
+      "path": "R87_pie_623000000004_s0_REQ/step_summary.json",
+      "bytes": 82737,
+      "crc32": 1346526209
+    },
+    {
+      "path": "R87_pie_623000000004_s0_REQ/request_maps.npz",
+      "bytes": 42931,
+      "crc32": 2109484750
+    },
+    {
+      "path": "R87_pie_623000000004_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 1566418292
+    },
+    {
+      "path": "R87_pie_623000000004_s0_GLB/preview.jpg",
+      "bytes": 14901,
+      "crc32": 3591305011
+    },
+    {
+      "path": "R87_pie_623000000004_s0_GLB/pattern.jpg",
+      "bytes": 14904,
+      "crc32": 3165171707
+    },
+    {
+      "path": "R87_pie_623000000004_s0_GLB/route_mask.jpg",
+      "bytes": 20581,
+      "crc32": 2824901850
+    },
+    {
+      "path": "R87_pie_623000000004_s0_GLB/edit_response64.jpg",
+      "bytes": 1963,
+      "crc32": 3514119128
+    },
+    {
+      "path": "R87_pie_623000000004_s0_GLB/step_summary.json",
+      "bytes": 85528,
+      "crc32": 1884627715
+    },
+    {
+      "path": "R87_pie_623000000004_s0_GLB/request_maps.npz",
+      "bytes": 28832,
+      "crc32": 2203081762
+    },
+    {
+      "path": "R87_pie_623000000004_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 495927794
+    },
+    {
+      "path": "R87_pie_623000000004_s0_SFT/preview.jpg",
+      "bytes": 15256,
+      "crc32": 3016974915
+    },
+    {
+      "path": "R87_pie_623000000004_s0_SFT/pattern.jpg",
+      "bytes": 15284,
+      "crc32": 1104569481
+    },
+    {
+      "path": "R87_pie_623000000004_s0_SFT/route_mask.jpg",
+      "bytes": 20586,
+      "crc32": 2330329171
+    },
+    {
+      "path": "R87_pie_623000000004_s0_SFT/edit_response64.jpg",
+      "bytes": 1963,
+      "crc32": 3514119128
+    },
+    {
+      "path": "R87_pie_623000000004_s0_SFT/step_summary.json",
+      "bytes": 85417,
+      "crc32": 3473035849
+    },
+    {
+      "path": "R87_pie_623000000004_s0_SFT/request_maps.npz",
+      "bytes": 71755,
+      "crc32": 702789474
+    },
+    {
+      "path": "R87_pie_623000000004_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 217855765
+    },
+    {
+      "path": "R87_pie_623000000004_s0_PERM/preview.jpg",
+      "bytes": 15327,
+      "crc32": 603092656
+    },
+    {
+      "path": "R87_pie_623000000004_s0_PERM/pattern.jpg",
+      "bytes": 15298,
+      "crc32": 1310178741
+    },
+    {
+      "path": "R87_pie_623000000004_s0_PERM/route_mask.jpg",
+      "bytes": 20712,
+      "crc32": 459677067
+    },
+    {
+      "path": "R87_pie_623000000004_s0_PERM/edit_response64.jpg",
+      "bytes": 1963,
+      "crc32": 3514119128
+    },
+    {
+      "path": "R87_pie_623000000004_s0_PERM/step_summary.json",
+      "bytes": 85326,
+      "crc32": 3213070593
+    },
+    {
+      "path": "R87_pie_623000000004_s0_PERM/request_maps.npz",
+      "bytes": 71825,
+      "crc32": 738081425
+    },
+    {
+      "path": "R87_pie_623000000004_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 978492347
+    },
+    {
+      "path": "R87_pie_623000000004_s17_REQ/preview.jpg",
+      "bytes": 14440,
+      "crc32": 1756124884
+    },
+    {
+      "path": "R87_pie_623000000004_s17_REQ/pattern.jpg",
+      "bytes": 14457,
+      "crc32": 163696995
+    },
+    {
+      "path": "R87_pie_623000000004_s17_REQ/route_mask.jpg",
+      "bytes": 21056,
+      "crc32": 3149124825
+    },
+    {
+      "path": "R87_pie_623000000004_s17_REQ/edit_response64.jpg",
+      "bytes": 1983,
+      "crc32": 3861525440
+    },
+    {
+      "path": "R87_pie_623000000004_s17_REQ/step_summary.json",
+      "bytes": 82772,
+      "crc32": 1413838832
+    },
+    {
+      "path": "R87_pie_623000000004_s17_REQ/request_maps.npz",
+      "bytes": 42792,
+      "crc32": 270528504
+    },
+    {
+      "path": "R87_pie_623000000004_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 2442285708
+    },
+    {
+      "path": "R87_pie_623000000004_s17_GLB/preview.jpg",
+      "bytes": 14943,
+      "crc32": 3862984664
+    },
+    {
+      "path": "R87_pie_623000000004_s17_GLB/pattern.jpg",
+      "bytes": 14943,
+      "crc32": 686416128
+    },
+    {
+      "path": "R87_pie_623000000004_s17_GLB/route_mask.jpg",
+      "bytes": 21056,
+      "crc32": 3149124825
+    },
+    {
+      "path": "R87_pie_623000000004_s17_GLB/edit_response64.jpg",
+      "bytes": 1983,
+      "crc32": 3861525440
+    },
+    {
+      "path": "R87_pie_623000000004_s17_GLB/step_summary.json",
+      "bytes": 85393,
+      "crc32": 1287812959
+    },
+    {
+      "path": "R87_pie_623000000004_s17_GLB/request_maps.npz",
+      "bytes": 28712,
+      "crc32": 3886265571
+    },
+    {
+      "path": "R87_pie_623000000004_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 787084028
+    },
+    {
+      "path": "R87_pie_623000000004_s17_SFT/preview.jpg",
+      "bytes": 15014,
+      "crc32": 1988724331
+    },
+    {
+      "path": "R87_pie_623000000004_s17_SFT/pattern.jpg",
+      "bytes": 15040,
+      "crc32": 55638598
+    },
+    {
+      "path": "R87_pie_623000000004_s17_SFT/route_mask.jpg",
+      "bytes": 21058,
+      "crc32": 704362338
+    },
+    {
+      "path": "R87_pie_623000000004_s17_SFT/edit_response64.jpg",
+      "bytes": 1983,
+      "crc32": 3861525440
+    },
+    {
+      "path": "R87_pie_623000000004_s17_SFT/step_summary.json",
+      "bytes": 85405,
+      "crc32": 1643721808
+    },
+    {
+      "path": "R87_pie_623000000004_s17_SFT/request_maps.npz",
+      "bytes": 71500,
+      "crc32": 1008221929
+    },
+    {
+      "path": "R87_pie_623000000004_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 3113386760
+    },
+    {
+      "path": "R87_pie_623000000004_s17_PERM/preview.jpg",
+      "bytes": 14792,
+      "crc32": 301756380
+    },
+    {
+      "path": "R87_pie_623000000004_s17_PERM/pattern.jpg",
+      "bytes": 14802,
+      "crc32": 357258926
+    },
+    {
+      "path": "R87_pie_623000000004_s17_PERM/route_mask.jpg",
+      "bytes": 21173,
+      "crc32": 1453030658
+    },
+    {
+      "path": "R87_pie_623000000004_s17_PERM/edit_response64.jpg",
+      "bytes": 1983,
+      "crc32": 3861525440
+    },
+    {
+      "path": "R87_pie_623000000004_s17_PERM/step_summary.json",
+      "bytes": 85321,
+      "crc32": 3111634696
+    },
+    {
+      "path": "R87_pie_623000000004_s17_PERM/request_maps.npz",
+      "bytes": 71553,
+      "crc32": 1407670514
+    },
+    {
+      "path": "R87_pie_623000000004_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 1780019475
+    },
+    {
+      "path": "R87_pie_723000000001_s0_REQ/preview.jpg",
+      "bytes": 19991,
+      "crc32": 3963670666
+    },
+    {
+      "path": "R87_pie_723000000001_s0_REQ/pattern.jpg",
+      "bytes": 19964,
+      "crc32": 3637611334
+    },
+    {
+      "path": "R87_pie_723000000001_s0_REQ/route_mask.jpg",
+      "bytes": 21737,
+      "crc32": 1789059354
+    },
+    {
+      "path": "R87_pie_723000000001_s0_REQ/edit_response64.jpg",
+      "bytes": 2075,
+      "crc32": 3006714243
+    },
+    {
+      "path": "R87_pie_723000000001_s0_REQ/step_summary.json",
+      "bytes": 82812,
+      "crc32": 173096177
+    },
+    {
+      "path": "R87_pie_723000000001_s0_REQ/request_maps.npz",
+      "bytes": 42783,
+      "crc32": 120473693
+    },
+    {
+      "path": "R87_pie_723000000001_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 2263725644
+    },
+    {
+      "path": "R87_pie_723000000001_s0_GLB/preview.jpg",
+      "bytes": 20051,
+      "crc32": 1376442405
+    },
+    {
+      "path": "R87_pie_723000000001_s0_GLB/pattern.jpg",
+      "bytes": 20050,
+      "crc32": 2016611245
+    },
+    {
+      "path": "R87_pie_723000000001_s0_GLB/route_mask.jpg",
+      "bytes": 21737,
+      "crc32": 1789059354
+    },
+    {
+      "path": "R87_pie_723000000001_s0_GLB/edit_response64.jpg",
+      "bytes": 2075,
+      "crc32": 3006714243
+    },
+    {
+      "path": "R87_pie_723000000001_s0_GLB/step_summary.json",
+      "bytes": 85556,
+      "crc32": 2278086519
+    },
+    {
+      "path": "R87_pie_723000000001_s0_GLB/request_maps.npz",
+      "bytes": 28673,
+      "crc32": 3659947841
+    },
+    {
+      "path": "R87_pie_723000000001_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 1523272667
+    },
+    {
+      "path": "R87_pie_723000000001_s0_SFT/preview.jpg",
+      "bytes": 20237,
+      "crc32": 960498800
+    },
+    {
+      "path": "R87_pie_723000000001_s0_SFT/pattern.jpg",
+      "bytes": 20168,
+      "crc32": 4248941132
+    },
+    {
+      "path": "R87_pie_723000000001_s0_SFT/route_mask.jpg",
+      "bytes": 21749,
+      "crc32": 126734532
+    },
+    {
+      "path": "R87_pie_723000000001_s0_SFT/edit_response64.jpg",
+      "bytes": 2075,
+      "crc32": 3006714243
+    },
+    {
+      "path": "R87_pie_723000000001_s0_SFT/step_summary.json",
+      "bytes": 85385,
+      "crc32": 2921772341
+    },
+    {
+      "path": "R87_pie_723000000001_s0_SFT/request_maps.npz",
+      "bytes": 71417,
+      "crc32": 2722069399
+    },
+    {
+      "path": "R87_pie_723000000001_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 2205096183
+    },
+    {
+      "path": "R87_pie_723000000001_s0_PERM/preview.jpg",
+      "bytes": 20228,
+      "crc32": 985857698
+    },
+    {
+      "path": "R87_pie_723000000001_s0_PERM/pattern.jpg",
+      "bytes": 20170,
+      "crc32": 3547393000
+    },
+    {
+      "path": "R87_pie_723000000001_s0_PERM/route_mask.jpg",
+      "bytes": 21850,
+      "crc32": 441374212
+    },
+    {
+      "path": "R87_pie_723000000001_s0_PERM/edit_response64.jpg",
+      "bytes": 2075,
+      "crc32": 3006714243
+    },
+    {
+      "path": "R87_pie_723000000001_s0_PERM/step_summary.json",
+      "bytes": 85389,
+      "crc32": 3287380481
+    },
+    {
+      "path": "R87_pie_723000000001_s0_PERM/request_maps.npz",
+      "bytes": 71491,
+      "crc32": 20674712
+    },
+    {
+      "path": "R87_pie_723000000001_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 706479595
+    },
+    {
+      "path": "R87_pie_723000000001_s17_REQ/preview.jpg",
+      "bytes": 18454,
+      "crc32": 3518727416
+    },
+    {
+      "path": "R87_pie_723000000001_s17_REQ/pattern.jpg",
+      "bytes": 18427,
+      "crc32": 2856367637
+    },
+    {
+      "path": "R87_pie_723000000001_s17_REQ/route_mask.jpg",
+      "bytes": 22092,
+      "crc32": 3707075559
+    },
+    {
+      "path": "R87_pie_723000000001_s17_REQ/edit_response64.jpg",
+      "bytes": 2095,
+      "crc32": 777537892
+    },
+    {
+      "path": "R87_pie_723000000001_s17_REQ/step_summary.json",
+      "bytes": 82742,
+      "crc32": 1067567525
+    },
+    {
+      "path": "R87_pie_723000000001_s17_REQ/request_maps.npz",
+      "bytes": 43087,
+      "crc32": 3661523747
+    },
+    {
+      "path": "R87_pie_723000000001_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 3591134557
+    },
+    {
+      "path": "R87_pie_723000000001_s17_GLB/preview.jpg",
+      "bytes": 18852,
+      "crc32": 2299944512
+    },
+    {
+      "path": "R87_pie_723000000001_s17_GLB/pattern.jpg",
+      "bytes": 18863,
+      "crc32": 347362005
+    },
+    {
+      "path": "R87_pie_723000000001_s17_GLB/route_mask.jpg",
+      "bytes": 22092,
+      "crc32": 3707075559
+    },
+    {
+      "path": "R87_pie_723000000001_s17_GLB/edit_response64.jpg",
+      "bytes": 2095,
+      "crc32": 777537892
+    },
+    {
+      "path": "R87_pie_723000000001_s17_GLB/step_summary.json",
+      "bytes": 85528,
+      "crc32": 533814934
+    },
+    {
+      "path": "R87_pie_723000000001_s17_GLB/request_maps.npz",
+      "bytes": 28890,
+      "crc32": 239085108
+    },
+    {
+      "path": "R87_pie_723000000001_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 132865288
+    },
+    {
+      "path": "R87_pie_723000000001_s17_SFT/preview.jpg",
+      "bytes": 18785,
+      "crc32": 3609525933
+    },
+    {
+      "path": "R87_pie_723000000001_s17_SFT/pattern.jpg",
+      "bytes": 18806,
+      "crc32": 295442547
+    },
+    {
+      "path": "R87_pie_723000000001_s17_SFT/route_mask.jpg",
+      "bytes": 22113,
+      "crc32": 1406264294
+    },
+    {
+      "path": "R87_pie_723000000001_s17_SFT/edit_response64.jpg",
+      "bytes": 2095,
+      "crc32": 777537892
+    },
+    {
+      "path": "R87_pie_723000000001_s17_SFT/step_summary.json",
+      "bytes": 85268,
+      "crc32": 3380570796
+    },
+    {
+      "path": "R87_pie_723000000001_s17_SFT/request_maps.npz",
+      "bytes": 71955,
+      "crc32": 1952538663
+    },
+    {
+      "path": "R87_pie_723000000001_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 3648102844
+    },
+    {
+      "path": "R87_pie_723000000001_s17_PERM/preview.jpg",
+      "bytes": 18736,
+      "crc32": 1192865851
+    },
+    {
+      "path": "R87_pie_723000000001_s17_PERM/pattern.jpg",
+      "bytes": 18712,
+      "crc32": 453270982
+    },
+    {
+      "path": "R87_pie_723000000001_s17_PERM/route_mask.jpg",
+      "bytes": 22178,
+      "crc32": 3300210793
+    },
+    {
+      "path": "R87_pie_723000000001_s17_PERM/edit_response64.jpg",
+      "bytes": 2095,
+      "crc32": 777537892
+    },
+    {
+      "path": "R87_pie_723000000001_s17_PERM/step_summary.json",
+      "bytes": 85550,
+      "crc32": 2217757894
+    },
+    {
+      "path": "R87_pie_723000000001_s17_PERM/request_maps.npz",
+      "bytes": 72026,
+      "crc32": 1117587432
+    },
+    {
+      "path": "R87_pie_723000000001_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 2787170311
+    },
+    {
+      "path": "R87_pie_724000000001_s0_REQ/preview.jpg",
+      "bytes": 30304,
+      "crc32": 3327762015
+    },
+    {
+      "path": "R87_pie_724000000001_s0_REQ/pattern.jpg",
+      "bytes": 30283,
+      "crc32": 1267416734
+    },
+    {
+      "path": "R87_pie_724000000001_s0_REQ/route_mask.jpg",
+      "bytes": 22794,
+      "crc32": 2609497701
+    },
+    {
+      "path": "R87_pie_724000000001_s0_REQ/edit_response64.jpg",
+      "bytes": 2140,
+      "crc32": 4176572916
+    },
+    {
+      "path": "R87_pie_724000000001_s0_REQ/step_summary.json",
+      "bytes": 82773,
+      "crc32": 1468376856
+    },
+    {
+      "path": "R87_pie_724000000001_s0_REQ/request_maps.npz",
+      "bytes": 43388,
+      "crc32": 263820465
+    },
+    {
+      "path": "R87_pie_724000000001_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 2258576860
+    },
+    {
+      "path": "R87_pie_724000000001_s0_GLB/preview.jpg",
+      "bytes": 30735,
+      "crc32": 2279828265
+    },
+    {
+      "path": "R87_pie_724000000001_s0_GLB/pattern.jpg",
+      "bytes": 30730,
+      "crc32": 1413609683
+    },
+    {
+      "path": "R87_pie_724000000001_s0_GLB/route_mask.jpg",
+      "bytes": 22794,
+      "crc32": 2609497701
+    },
+    {
+      "path": "R87_pie_724000000001_s0_GLB/edit_response64.jpg",
+      "bytes": 2140,
+      "crc32": 4176572916
+    },
+    {
+      "path": "R87_pie_724000000001_s0_GLB/step_summary.json",
+      "bytes": 85445,
+      "crc32": 65312871
+    },
+    {
+      "path": "R87_pie_724000000001_s0_GLB/request_maps.npz",
+      "bytes": 29069,
+      "crc32": 2488894901
+    },
+    {
+      "path": "R87_pie_724000000001_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 541299070
+    },
+    {
+      "path": "R87_pie_724000000001_s0_SFT/preview.jpg",
+      "bytes": 30583,
+      "crc32": 1784582123
+    },
+    {
+      "path": "R87_pie_724000000001_s0_SFT/pattern.jpg",
+      "bytes": 30666,
+      "crc32": 1947099540
+    },
+    {
+      "path": "R87_pie_724000000001_s0_SFT/route_mask.jpg",
+      "bytes": 22804,
+      "crc32": 2370534286
+    },
+    {
+      "path": "R87_pie_724000000001_s0_SFT/edit_response64.jpg",
+      "bytes": 2140,
+      "crc32": 4176572916
+    },
+    {
+      "path": "R87_pie_724000000001_s0_SFT/step_summary.json",
+      "bytes": 85527,
+      "crc32": 2931190192
+    },
+    {
+      "path": "R87_pie_724000000001_s0_SFT/request_maps.npz",
+      "bytes": 72419,
+      "crc32": 1953629245
+    },
+    {
+      "path": "R87_pie_724000000001_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 3738438165
+    },
+    {
+      "path": "R87_pie_724000000001_s0_PERM/preview.jpg",
+      "bytes": 30657,
+      "crc32": 1667725327
+    },
+    {
+      "path": "R87_pie_724000000001_s0_PERM/pattern.jpg",
+      "bytes": 30662,
+      "crc32": 4124727818
+    },
+    {
+      "path": "R87_pie_724000000001_s0_PERM/route_mask.jpg",
+      "bytes": 22884,
+      "crc32": 428915940
+    },
+    {
+      "path": "R87_pie_724000000001_s0_PERM/edit_response64.jpg",
+      "bytes": 2140,
+      "crc32": 4176572916
+    },
+    {
+      "path": "R87_pie_724000000001_s0_PERM/step_summary.json",
+      "bytes": 85449,
+      "crc32": 126727544
+    },
+    {
+      "path": "R87_pie_724000000001_s0_PERM/request_maps.npz",
+      "bytes": 72441,
+      "crc32": 3517715269
+    },
+    {
+      "path": "R87_pie_724000000001_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 1374761269
+    },
+    {
+      "path": "R87_pie_724000000001_s17_REQ/preview.jpg",
+      "bytes": 31886,
+      "crc32": 1564320997
+    },
+    {
+      "path": "R87_pie_724000000001_s17_REQ/pattern.jpg",
+      "bytes": 31921,
+      "crc32": 1226439775
+    },
+    {
+      "path": "R87_pie_724000000001_s17_REQ/route_mask.jpg",
+      "bytes": 22144,
+      "crc32": 2795447303
+    },
+    {
+      "path": "R87_pie_724000000001_s17_REQ/edit_response64.jpg",
+      "bytes": 2097,
+      "crc32": 2483000299
+    },
+    {
+      "path": "R87_pie_724000000001_s17_REQ/step_summary.json",
+      "bytes": 82794,
+      "crc32": 2897250840
+    },
+    {
+      "path": "R87_pie_724000000001_s17_REQ/request_maps.npz",
+      "bytes": 43371,
+      "crc32": 1814378246
+    },
+    {
+      "path": "R87_pie_724000000001_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 1802921109
+    },
+    {
+      "path": "R87_pie_724000000001_s17_GLB/preview.jpg",
+      "bytes": 32570,
+      "crc32": 815226793
+    },
+    {
+      "path": "R87_pie_724000000001_s17_GLB/pattern.jpg",
+      "bytes": 32609,
+      "crc32": 1145127873
+    },
+    {
+      "path": "R87_pie_724000000001_s17_GLB/route_mask.jpg",
+      "bytes": 22144,
+      "crc32": 2795447303
+    },
+    {
+      "path": "R87_pie_724000000001_s17_GLB/edit_response64.jpg",
+      "bytes": 2097,
+      "crc32": 2483000299
+    },
+    {
+      "path": "R87_pie_724000000001_s17_GLB/step_summary.json",
+      "bytes": 85499,
+      "crc32": 4014747241
+    },
+    {
+      "path": "R87_pie_724000000001_s17_GLB/request_maps.npz",
+      "bytes": 29053,
+      "crc32": 1096649903
+    },
+    {
+      "path": "R87_pie_724000000001_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 1045855354
+    },
+    {
+      "path": "R87_pie_724000000001_s17_SFT/preview.jpg",
+      "bytes": 32482,
+      "crc32": 3229464362
+    },
+    {
+      "path": "R87_pie_724000000001_s17_SFT/pattern.jpg",
+      "bytes": 32487,
+      "crc32": 2916551961
+    },
+    {
+      "path": "R87_pie_724000000001_s17_SFT/route_mask.jpg",
+      "bytes": 22155,
+      "crc32": 354175534
+    },
+    {
+      "path": "R87_pie_724000000001_s17_SFT/edit_response64.jpg",
+      "bytes": 2097,
+      "crc32": 2483000299
+    },
+    {
+      "path": "R87_pie_724000000001_s17_SFT/step_summary.json",
+      "bytes": 85542,
+      "crc32": 4213626131
+    },
+    {
+      "path": "R87_pie_724000000001_s17_SFT/request_maps.npz",
+      "bytes": 72407,
+      "crc32": 1956161775
+    },
+    {
+      "path": "R87_pie_724000000001_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 1657305300
+    },
+    {
+      "path": "R87_pie_724000000001_s17_PERM/preview.jpg",
+      "bytes": 32359,
+      "crc32": 1921640854
+    },
+    {
+      "path": "R87_pie_724000000001_s17_PERM/pattern.jpg",
+      "bytes": 32413,
+      "crc32": 4184679626
+    },
+    {
+      "path": "R87_pie_724000000001_s17_PERM/route_mask.jpg",
+      "bytes": 22259,
+      "crc32": 2612289455
+    },
+    {
+      "path": "R87_pie_724000000001_s17_PERM/edit_response64.jpg",
+      "bytes": 2097,
+      "crc32": 2483000299
+    },
+    {
+      "path": "R87_pie_724000000001_s17_PERM/step_summary.json",
+      "bytes": 85433,
+      "crc32": 423579240
+    },
+    {
+      "path": "R87_pie_724000000001_s17_PERM/request_maps.npz",
+      "bytes": 72437,
+      "crc32": 48715466
+    },
+    {
+      "path": "R87_pie_724000000001_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 1522926017
+    },
+    {
+      "path": "R87_pie_813000000007_s0_REQ/preview.jpg",
+      "bytes": 18530,
+      "crc32": 350492459
+    },
+    {
+      "path": "R87_pie_813000000007_s0_REQ/pattern.jpg",
+      "bytes": 18572,
+      "crc32": 851541356
+    },
+    {
+      "path": "R87_pie_813000000007_s0_REQ/route_mask.jpg",
+      "bytes": 22693,
+      "crc32": 2462470718
+    },
+    {
+      "path": "R87_pie_813000000007_s0_REQ/edit_response64.jpg",
+      "bytes": 2119,
+      "crc32": 2567055883
+    },
+    {
+      "path": "R87_pie_813000000007_s0_REQ/step_summary.json",
+      "bytes": 82756,
+      "crc32": 1589929640
+    },
+    {
+      "path": "R87_pie_813000000007_s0_REQ/request_maps.npz",
+      "bytes": 43245,
+      "crc32": 2689093619
+    },
+    {
+      "path": "R87_pie_813000000007_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 314449431
+    },
+    {
+      "path": "R87_pie_813000000007_s0_GLB/preview.jpg",
+      "bytes": 18539,
+      "crc32": 2467664291
+    },
+    {
+      "path": "R87_pie_813000000007_s0_GLB/pattern.jpg",
+      "bytes": 18589,
+      "crc32": 3998701510
+    },
+    {
+      "path": "R87_pie_813000000007_s0_GLB/route_mask.jpg",
+      "bytes": 22693,
+      "crc32": 2462470718
+    },
+    {
+      "path": "R87_pie_813000000007_s0_GLB/edit_response64.jpg",
+      "bytes": 2119,
+      "crc32": 2567055883
+    },
+    {
+      "path": "R87_pie_813000000007_s0_GLB/step_summary.json",
+      "bytes": 85524,
+      "crc32": 4239789044
+    },
+    {
+      "path": "R87_pie_813000000007_s0_GLB/request_maps.npz",
+      "bytes": 29014,
+      "crc32": 1218639105
+    },
+    {
+      "path": "R87_pie_813000000007_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 3264636767
+    },
+    {
+      "path": "R87_pie_813000000007_s0_SFT/preview.jpg",
+      "bytes": 18203,
+      "crc32": 2992929559
+    },
+    {
+      "path": "R87_pie_813000000007_s0_SFT/pattern.jpg",
+      "bytes": 18239,
+      "crc32": 841548768
+    },
+    {
+      "path": "R87_pie_813000000007_s0_SFT/route_mask.jpg",
+      "bytes": 22695,
+      "crc32": 3638433682
+    },
+    {
+      "path": "R87_pie_813000000007_s0_SFT/edit_response64.jpg",
+      "bytes": 2119,
+      "crc32": 2567055883
+    },
+    {
+      "path": "R87_pie_813000000007_s0_SFT/step_summary.json",
+      "bytes": 85334,
+      "crc32": 3699005133
+    },
+    {
+      "path": "R87_pie_813000000007_s0_SFT/request_maps.npz",
+      "bytes": 72223,
+      "crc32": 2878181503
+    },
+    {
+      "path": "R87_pie_813000000007_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 467985959
+    },
+    {
+      "path": "R87_pie_813000000007_s0_PERM/preview.jpg",
+      "bytes": 18398,
+      "crc32": 2018861180
+    },
+    {
+      "path": "R87_pie_813000000007_s0_PERM/pattern.jpg",
+      "bytes": 18472,
+      "crc32": 2920113685
+    },
+    {
+      "path": "R87_pie_813000000007_s0_PERM/route_mask.jpg",
+      "bytes": 22758,
+      "crc32": 2345255870
+    },
+    {
+      "path": "R87_pie_813000000007_s0_PERM/edit_response64.jpg",
+      "bytes": 2119,
+      "crc32": 2567055883
+    },
+    {
+      "path": "R87_pie_813000000007_s0_PERM/step_summary.json",
+      "bytes": 85527,
+      "crc32": 3394884651
+    },
+    {
+      "path": "R87_pie_813000000007_s0_PERM/request_maps.npz",
+      "bytes": 72255,
+      "crc32": 4076210860
+    },
+    {
+      "path": "R87_pie_813000000007_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 876688535
+    },
+    {
+      "path": "R87_pie_813000000007_s17_REQ/preview.jpg",
+      "bytes": 19112,
+      "crc32": 3318187953
+    },
+    {
+      "path": "R87_pie_813000000007_s17_REQ/pattern.jpg",
+      "bytes": 19208,
+      "crc32": 1509144231
+    },
+    {
+      "path": "R87_pie_813000000007_s17_REQ/route_mask.jpg",
+      "bytes": 23086,
+      "crc32": 2997711792
+    },
+    {
+      "path": "R87_pie_813000000007_s17_REQ/edit_response64.jpg",
+      "bytes": 2161,
+      "crc32": 3774867881
+    },
+    {
+      "path": "R87_pie_813000000007_s17_REQ/step_summary.json",
+      "bytes": 82755,
+      "crc32": 2750439763
+    },
+    {
+      "path": "R87_pie_813000000007_s17_REQ/request_maps.npz",
+      "bytes": 43315,
+      "crc32": 3914567150
+    },
+    {
+      "path": "R87_pie_813000000007_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 2754250892
+    },
+    {
+      "path": "R87_pie_813000000007_s17_GLB/preview.jpg",
+      "bytes": 19471,
+      "crc32": 2390663387
+    },
+    {
+      "path": "R87_pie_813000000007_s17_GLB/pattern.jpg",
+      "bytes": 19521,
+      "crc32": 220119589
+    },
+    {
+      "path": "R87_pie_813000000007_s17_GLB/route_mask.jpg",
+      "bytes": 23086,
+      "crc32": 2997711792
+    },
+    {
+      "path": "R87_pie_813000000007_s17_GLB/edit_response64.jpg",
+      "bytes": 2161,
+      "crc32": 3774867881
+    },
+    {
+      "path": "R87_pie_813000000007_s17_GLB/step_summary.json",
+      "bytes": 85560,
+      "crc32": 334268169
+    },
+    {
+      "path": "R87_pie_813000000007_s17_GLB/request_maps.npz",
+      "bytes": 29050,
+      "crc32": 329037898
+    },
+    {
+      "path": "R87_pie_813000000007_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 3517584214
+    },
+    {
+      "path": "R87_pie_813000000007_s17_SFT/preview.jpg",
+      "bytes": 19414,
+      "crc32": 2275375031
+    },
+    {
+      "path": "R87_pie_813000000007_s17_SFT/pattern.jpg",
+      "bytes": 19433,
+      "crc32": 797210877
+    },
+    {
+      "path": "R87_pie_813000000007_s17_SFT/route_mask.jpg",
+      "bytes": 23086,
+      "crc32": 3204566901
+    },
+    {
+      "path": "R87_pie_813000000007_s17_SFT/edit_response64.jpg",
+      "bytes": 2161,
+      "crc32": 3774867881
+    },
+    {
+      "path": "R87_pie_813000000007_s17_SFT/step_summary.json",
+      "bytes": 85381,
+      "crc32": 1841946742
+    },
+    {
+      "path": "R87_pie_813000000007_s17_SFT/request_maps.npz",
+      "bytes": 72347,
+      "crc32": 3792186390
+    },
+    {
+      "path": "R87_pie_813000000007_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 3590053219
+    },
+    {
+      "path": "R87_pie_813000000007_s17_PERM/preview.jpg",
+      "bytes": 19659,
+      "crc32": 3454623395
+    },
+    {
+      "path": "R87_pie_813000000007_s17_PERM/pattern.jpg",
+      "bytes": 19715,
+      "crc32": 4279906245
+    },
+    {
+      "path": "R87_pie_813000000007_s17_PERM/route_mask.jpg",
+      "bytes": 23140,
+      "crc32": 477529257
+    },
+    {
+      "path": "R87_pie_813000000007_s17_PERM/edit_response64.jpg",
+      "bytes": 2161,
+      "crc32": 3774867881
+    },
+    {
+      "path": "R87_pie_813000000007_s17_PERM/step_summary.json",
+      "bytes": 85397,
+      "crc32": 2737964313
+    },
+    {
+      "path": "R87_pie_813000000007_s17_PERM/request_maps.npz",
+      "bytes": 72358,
+      "crc32": 2304482085
+    },
+    {
+      "path": "R87_pie_813000000007_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 3636058350
+    },
+    {
+      "path": "R87_pie_813000000006_s0_REQ/preview.jpg",
+      "bytes": 14215,
+      "crc32": 4189351534
+    },
+    {
+      "path": "R87_pie_813000000006_s0_REQ/pattern.jpg",
+      "bytes": 14265,
+      "crc32": 3682511034
+    },
+    {
+      "path": "R87_pie_813000000006_s0_REQ/route_mask.jpg",
+      "bytes": 17964,
+      "crc32": 1295001685
+    },
+    {
+      "path": "R87_pie_813000000006_s0_REQ/edit_response64.jpg",
+      "bytes": 1778,
+      "crc32": 148748701
+    },
+    {
+      "path": "R87_pie_813000000006_s0_REQ/step_summary.json",
+      "bytes": 82819,
+      "crc32": 2028782547
+    },
+    {
+      "path": "R87_pie_813000000006_s0_REQ/request_maps.npz",
+      "bytes": 43368,
+      "crc32": 432020216
+    },
+    {
+      "path": "R87_pie_813000000006_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 3929981728
+    },
+    {
+      "path": "R87_pie_813000000006_s0_GLB/preview.jpg",
+      "bytes": 13805,
+      "crc32": 2669540879
+    },
+    {
+      "path": "R87_pie_813000000006_s0_GLB/pattern.jpg",
+      "bytes": 13845,
+      "crc32": 67200006
+    },
+    {
+      "path": "R87_pie_813000000006_s0_GLB/route_mask.jpg",
+      "bytes": 17964,
+      "crc32": 1295001685
+    },
+    {
+      "path": "R87_pie_813000000006_s0_GLB/edit_response64.jpg",
+      "bytes": 1778,
+      "crc32": 148748701
+    },
+    {
+      "path": "R87_pie_813000000006_s0_GLB/step_summary.json",
+      "bytes": 85482,
+      "crc32": 3298781104
+    },
+    {
+      "path": "R87_pie_813000000006_s0_GLB/request_maps.npz",
+      "bytes": 29158,
+      "crc32": 2318658423
+    },
+    {
+      "path": "R87_pie_813000000006_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 200198036
+    },
+    {
+      "path": "R87_pie_813000000006_s0_SFT/preview.jpg",
+      "bytes": 13717,
+      "crc32": 1218608979
+    },
+    {
+      "path": "R87_pie_813000000006_s0_SFT/pattern.jpg",
+      "bytes": 13778,
+      "crc32": 825533200
+    },
+    {
+      "path": "R87_pie_813000000006_s0_SFT/route_mask.jpg",
+      "bytes": 17951,
+      "crc32": 3129147541
+    },
+    {
+      "path": "R87_pie_813000000006_s0_SFT/edit_response64.jpg",
+      "bytes": 1778,
+      "crc32": 148748701
+    },
+    {
+      "path": "R87_pie_813000000006_s0_SFT/step_summary.json",
+      "bytes": 85527,
+      "crc32": 681424024
+    },
+    {
+      "path": "R87_pie_813000000006_s0_SFT/request_maps.npz",
+      "bytes": 72528,
+      "crc32": 745822242
+    },
+    {
+      "path": "R87_pie_813000000006_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 1744185479
+    },
+    {
+      "path": "R87_pie_813000000006_s0_PERM/preview.jpg",
+      "bytes": 13895,
+      "crc32": 615974888
+    },
+    {
+      "path": "R87_pie_813000000006_s0_PERM/pattern.jpg",
+      "bytes": 13951,
+      "crc32": 1496286383
+    },
+    {
+      "path": "R87_pie_813000000006_s0_PERM/route_mask.jpg",
+      "bytes": 18083,
+      "crc32": 2864892609
+    },
+    {
+      "path": "R87_pie_813000000006_s0_PERM/edit_response64.jpg",
+      "bytes": 1778,
+      "crc32": 148748701
+    },
+    {
+      "path": "R87_pie_813000000006_s0_PERM/step_summary.json",
+      "bytes": 85436,
+      "crc32": 1032973390
+    },
+    {
+      "path": "R87_pie_813000000006_s0_PERM/request_maps.npz",
+      "bytes": 72576,
+      "crc32": 1850362415
+    },
+    {
+      "path": "R87_pie_813000000006_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 953655418
+    },
+    {
+      "path": "R87_pie_813000000006_s17_REQ/preview.jpg",
+      "bytes": 11956,
+      "crc32": 3343298307
+    },
+    {
+      "path": "R87_pie_813000000006_s17_REQ/pattern.jpg",
+      "bytes": 12032,
+      "crc32": 3985771535
+    },
+    {
+      "path": "R87_pie_813000000006_s17_REQ/route_mask.jpg",
+      "bytes": 21205,
+      "crc32": 264235659
+    },
+    {
+      "path": "R87_pie_813000000006_s17_REQ/edit_response64.jpg",
+      "bytes": 1978,
+      "crc32": 4164077875
+    },
+    {
+      "path": "R87_pie_813000000006_s17_REQ/step_summary.json",
+      "bytes": 82711,
+      "crc32": 4072329608
+    },
+    {
+      "path": "R87_pie_813000000006_s17_REQ/request_maps.npz",
+      "bytes": 43441,
+      "crc32": 4024705842
+    },
+    {
+      "path": "R87_pie_813000000006_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 3554346738
+    },
+    {
+      "path": "R87_pie_813000000006_s17_GLB/preview.jpg",
+      "bytes": 12217,
+      "crc32": 1321054590
+    },
+    {
+      "path": "R87_pie_813000000006_s17_GLB/pattern.jpg",
+      "bytes": 12269,
+      "crc32": 2457060157
+    },
+    {
+      "path": "R87_pie_813000000006_s17_GLB/route_mask.jpg",
+      "bytes": 21205,
+      "crc32": 264235659
+    },
+    {
+      "path": "R87_pie_813000000006_s17_GLB/edit_response64.jpg",
+      "bytes": 1978,
+      "crc32": 4164077875
+    },
+    {
+      "path": "R87_pie_813000000006_s17_GLB/step_summary.json",
+      "bytes": 85583,
+      "crc32": 531278319
+    },
+    {
+      "path": "R87_pie_813000000006_s17_GLB/request_maps.npz",
+      "bytes": 29141,
+      "crc32": 2301148009
+    },
+    {
+      "path": "R87_pie_813000000006_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 3179754672
+    },
+    {
+      "path": "R87_pie_813000000006_s17_SFT/preview.jpg",
+      "bytes": 12451,
+      "crc32": 3529087808
+    },
+    {
+      "path": "R87_pie_813000000006_s17_SFT/pattern.jpg",
+      "bytes": 12564,
+      "crc32": 1840092292
+    },
+    {
+      "path": "R87_pie_813000000006_s17_SFT/route_mask.jpg",
+      "bytes": 21208,
+      "crc32": 3037929651
+    },
+    {
+      "path": "R87_pie_813000000006_s17_SFT/edit_response64.jpg",
+      "bytes": 1978,
+      "crc32": 4164077875
+    },
+    {
+      "path": "R87_pie_813000000006_s17_SFT/step_summary.json",
+      "bytes": 85436,
+      "crc32": 1652702888
+    },
+    {
+      "path": "R87_pie_813000000006_s17_SFT/request_maps.npz",
+      "bytes": 72561,
+      "crc32": 2866089873
+    },
+    {
+      "path": "R87_pie_813000000006_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 1576886148
+    },
+    {
+      "path": "R87_pie_813000000006_s17_PERM/preview.jpg",
+      "bytes": 12783,
+      "crc32": 774446795
+    },
+    {
+      "path": "R87_pie_813000000006_s17_PERM/pattern.jpg",
+      "bytes": 12870,
+      "crc32": 518870972
+    },
+    {
+      "path": "R87_pie_813000000006_s17_PERM/route_mask.jpg",
+      "bytes": 21333,
+      "crc32": 272151844
+    },
+    {
+      "path": "R87_pie_813000000006_s17_PERM/edit_response64.jpg",
+      "bytes": 1978,
+      "crc32": 4164077875
+    },
+    {
+      "path": "R87_pie_813000000006_s17_PERM/step_summary.json",
+      "bytes": 85473,
+      "crc32": 3487356974
+    },
+    {
+      "path": "R87_pie_813000000006_s17_PERM/request_maps.npz",
+      "bytes": 72587,
+      "crc32": 1741700753
+    },
+    {
+      "path": "R87_pie_813000000006_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 3837869753
+    },
+    {
+      "path": "R87_pie_913000000000_s0_REQ/preview.jpg",
+      "bytes": 21389,
+      "crc32": 3756679877
+    },
+    {
+      "path": "R87_pie_913000000000_s0_REQ/pattern.jpg",
+      "bytes": 21389,
+      "crc32": 511171664
+    },
+    {
+      "path": "R87_pie_913000000000_s0_REQ/route_mask.jpg",
+      "bytes": 21120,
+      "crc32": 1160166211
+    },
+    {
+      "path": "R87_pie_913000000000_s0_REQ/edit_response64.jpg",
+      "bytes": 2046,
+      "crc32": 2439360210
+    },
+    {
+      "path": "R87_pie_913000000000_s0_REQ/step_summary.json",
+      "bytes": 82737,
+      "crc32": 1967320743
+    },
+    {
+      "path": "R87_pie_913000000000_s0_REQ/request_maps.npz",
+      "bytes": 42651,
+      "crc32": 111030111
+    },
+    {
+      "path": "R87_pie_913000000000_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 2512026356
+    },
+    {
+      "path": "R87_pie_913000000000_s0_GLB/preview.jpg",
+      "bytes": 21474,
+      "crc32": 4018317802
+    },
+    {
+      "path": "R87_pie_913000000000_s0_GLB/pattern.jpg",
+      "bytes": 21486,
+      "crc32": 1104458844
+    },
+    {
+      "path": "R87_pie_913000000000_s0_GLB/route_mask.jpg",
+      "bytes": 21120,
+      "crc32": 1160166211
+    },
+    {
+      "path": "R87_pie_913000000000_s0_GLB/edit_response64.jpg",
+      "bytes": 2046,
+      "crc32": 2439360210
+    },
+    {
+      "path": "R87_pie_913000000000_s0_GLB/step_summary.json",
+      "bytes": 85418,
+      "crc32": 89682768
+    },
+    {
+      "path": "R87_pie_913000000000_s0_GLB/request_maps.npz",
+      "bytes": 28620,
+      "crc32": 218292554
+    },
+    {
+      "path": "R87_pie_913000000000_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 587549738
+    },
+    {
+      "path": "R87_pie_913000000000_s0_SFT/preview.jpg",
+      "bytes": 21533,
+      "crc32": 379157886
+    },
+    {
+      "path": "R87_pie_913000000000_s0_SFT/pattern.jpg",
+      "bytes": 21500,
+      "crc32": 3211586146
+    },
+    {
+      "path": "R87_pie_913000000000_s0_SFT/route_mask.jpg",
+      "bytes": 21105,
+      "crc32": 3498495595
+    },
+    {
+      "path": "R87_pie_913000000000_s0_SFT/edit_response64.jpg",
+      "bytes": 2046,
+      "crc32": 2439360210
+    },
+    {
+      "path": "R87_pie_913000000000_s0_SFT/step_summary.json",
+      "bytes": 85350,
+      "crc32": 2715644850
+    },
+    {
+      "path": "R87_pie_913000000000_s0_SFT/request_maps.npz",
+      "bytes": 71259,
+      "crc32": 4016963952
+    },
+    {
+      "path": "R87_pie_913000000000_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 168174999
+    },
+    {
+      "path": "R87_pie_913000000000_s0_PERM/preview.jpg",
+      "bytes": 21535,
+      "crc32": 3748328733
+    },
+    {
+      "path": "R87_pie_913000000000_s0_PERM/pattern.jpg",
+      "bytes": 21500,
+      "crc32": 692961431
+    },
+    {
+      "path": "R87_pie_913000000000_s0_PERM/route_mask.jpg",
+      "bytes": 21172,
+      "crc32": 3263965023
+    },
+    {
+      "path": "R87_pie_913000000000_s0_PERM/edit_response64.jpg",
+      "bytes": 2046,
+      "crc32": 2439360210
+    },
+    {
+      "path": "R87_pie_913000000000_s0_PERM/step_summary.json",
+      "bytes": 85415,
+      "crc32": 1304633389
+    },
+    {
+      "path": "R87_pie_913000000000_s0_PERM/request_maps.npz",
+      "bytes": 71332,
+      "crc32": 4028411832
+    },
+    {
+      "path": "R87_pie_913000000000_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 4083034592
+    },
+    {
+      "path": "R87_pie_913000000000_s17_REQ/preview.jpg",
+      "bytes": 19633,
+      "crc32": 2679501619
+    },
+    {
+      "path": "R87_pie_913000000000_s17_REQ/pattern.jpg",
+      "bytes": 19691,
+      "crc32": 1444257603
+    },
+    {
+      "path": "R87_pie_913000000000_s17_REQ/route_mask.jpg",
+      "bytes": 22057,
+      "crc32": 3353021371
+    },
+    {
+      "path": "R87_pie_913000000000_s17_REQ/edit_response64.jpg",
+      "bytes": 2094,
+      "crc32": 1451648999
+    },
+    {
+      "path": "R87_pie_913000000000_s17_REQ/step_summary.json",
+      "bytes": 82830,
+      "crc32": 3958887976
+    },
+    {
+      "path": "R87_pie_913000000000_s17_REQ/request_maps.npz",
+      "bytes": 42792,
+      "crc32": 4196119687
+    },
+    {
+      "path": "R87_pie_913000000000_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 2254990572
+    },
+    {
+      "path": "R87_pie_913000000000_s17_GLB/preview.jpg",
+      "bytes": 19467,
+      "crc32": 1280425690
+    },
+    {
+      "path": "R87_pie_913000000000_s17_GLB/pattern.jpg",
+      "bytes": 19498,
+      "crc32": 3454069258
+    },
+    {
+      "path": "R87_pie_913000000000_s17_GLB/route_mask.jpg",
+      "bytes": 22057,
+      "crc32": 3353021371
+    },
+    {
+      "path": "R87_pie_913000000000_s17_GLB/edit_response64.jpg",
+      "bytes": 2094,
+      "crc32": 1451648999
+    },
+    {
+      "path": "R87_pie_913000000000_s17_GLB/step_summary.json",
+      "bytes": 85648,
+      "crc32": 2597883567
+    },
+    {
+      "path": "R87_pie_913000000000_s17_GLB/request_maps.npz",
+      "bytes": 28703,
+      "crc32": 2223955148
+    },
+    {
+      "path": "R87_pie_913000000000_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 3772085702
+    },
+    {
+      "path": "R87_pie_913000000000_s17_SFT/preview.jpg",
+      "bytes": 19592,
+      "crc32": 3133396964
+    },
+    {
+      "path": "R87_pie_913000000000_s17_SFT/pattern.jpg",
+      "bytes": 19579,
+      "crc32": 3923407953
+    },
+    {
+      "path": "R87_pie_913000000000_s17_SFT/route_mask.jpg",
+      "bytes": 22057,
+      "crc32": 3176740804
+    },
+    {
+      "path": "R87_pie_913000000000_s17_SFT/edit_response64.jpg",
+      "bytes": 2094,
+      "crc32": 1451648999
+    },
+    {
+      "path": "R87_pie_913000000000_s17_SFT/step_summary.json",
+      "bytes": 85533,
+      "crc32": 3833089782
+    },
+    {
+      "path": "R87_pie_913000000000_s17_SFT/request_maps.npz",
+      "bytes": 71491,
+      "crc32": 812001461
+    },
+    {
+      "path": "R87_pie_913000000000_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 207028529
+    },
+    {
+      "path": "R87_pie_913000000000_s17_PERM/preview.jpg",
+      "bytes": 19465,
+      "crc32": 3503815995
+    },
+    {
+      "path": "R87_pie_913000000000_s17_PERM/pattern.jpg",
+      "bytes": 19483,
+      "crc32": 109934427
+    },
+    {
+      "path": "R87_pie_913000000000_s17_PERM/route_mask.jpg",
+      "bytes": 22121,
+      "crc32": 4198327435
+    },
+    {
+      "path": "R87_pie_913000000000_s17_PERM/edit_response64.jpg",
+      "bytes": 2094,
+      "crc32": 1451648999
+    },
+    {
+      "path": "R87_pie_913000000000_s17_PERM/step_summary.json",
+      "bytes": 85492,
+      "crc32": 3928162486
+    },
+    {
+      "path": "R87_pie_913000000000_s17_PERM/request_maps.npz",
+      "bytes": 71508,
+      "crc32": 3656127486
+    },
+    {
+      "path": "R87_pie_913000000000_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 744086719
+    },
+    {
+      "path": "R87_pie_911000000007_s0_REQ/preview.jpg",
+      "bytes": 10287,
+      "crc32": 1882133658
+    },
+    {
+      "path": "R87_pie_911000000007_s0_REQ/pattern.jpg",
+      "bytes": 10254,
+      "crc32": 2617020746
+    },
+    {
+      "path": "R87_pie_911000000007_s0_REQ/route_mask.jpg",
+      "bytes": 15743,
+      "crc32": 225842282
+    },
+    {
+      "path": "R87_pie_911000000007_s0_REQ/edit_response64.jpg",
+      "bytes": 1626,
+      "crc32": 3701335767
+    },
+    {
+      "path": "R87_pie_911000000007_s0_REQ/step_summary.json",
+      "bytes": 82831,
+      "crc32": 1951284936
+    },
+    {
+      "path": "R87_pie_911000000007_s0_REQ/request_maps.npz",
+      "bytes": 42595,
+      "crc32": 998000512
+    },
+    {
+      "path": "R87_pie_911000000007_s0_REQ/request_maps.json",
+      "bytes": 907,
+      "crc32": 610050132
+    },
+    {
+      "path": "R87_pie_911000000007_s0_GLB/preview.jpg",
+      "bytes": 10077,
+      "crc32": 3576935553
+    },
+    {
+      "path": "R87_pie_911000000007_s0_GLB/pattern.jpg",
+      "bytes": 10075,
+      "crc32": 3273608383
+    },
+    {
+      "path": "R87_pie_911000000007_s0_GLB/route_mask.jpg",
+      "bytes": 15743,
+      "crc32": 225842282
+    },
+    {
+      "path": "R87_pie_911000000007_s0_GLB/edit_response64.jpg",
+      "bytes": 1626,
+      "crc32": 3701335767
+    },
+    {
+      "path": "R87_pie_911000000007_s0_GLB/step_summary.json",
+      "bytes": 85494,
+      "crc32": 2743553706
+    },
+    {
+      "path": "R87_pie_911000000007_s0_GLB/request_maps.npz",
+      "bytes": 28710,
+      "crc32": 2582515231
+    },
+    {
+      "path": "R87_pie_911000000007_s0_GLB/request_maps.json",
+      "bytes": 907,
+      "crc32": 525513437
+    },
+    {
+      "path": "R87_pie_911000000007_s0_SFT/preview.jpg",
+      "bytes": 10092,
+      "crc32": 3820278057
+    },
+    {
+      "path": "R87_pie_911000000007_s0_SFT/pattern.jpg",
+      "bytes": 10076,
+      "crc32": 2077272115
+    },
+    {
+      "path": "R87_pie_911000000007_s0_SFT/route_mask.jpg",
+      "bytes": 15746,
+      "crc32": 3248118701
+    },
+    {
+      "path": "R87_pie_911000000007_s0_SFT/edit_response64.jpg",
+      "bytes": 1626,
+      "crc32": 3701335767
+    },
+    {
+      "path": "R87_pie_911000000007_s0_SFT/step_summary.json",
+      "bytes": 85721,
+      "crc32": 2315050805
+    },
+    {
+      "path": "R87_pie_911000000007_s0_SFT/request_maps.npz",
+      "bytes": 71296,
+      "crc32": 1063322118
+    },
+    {
+      "path": "R87_pie_911000000007_s0_SFT/request_maps.json",
+      "bytes": 907,
+      "crc32": 1809673000
+    },
+    {
+      "path": "R87_pie_911000000007_s0_PERM/preview.jpg",
+      "bytes": 10214,
+      "crc32": 3573888645
+    },
+    {
+      "path": "R87_pie_911000000007_s0_PERM/pattern.jpg",
+      "bytes": 10205,
+      "crc32": 2140540623
+    },
+    {
+      "path": "R87_pie_911000000007_s0_PERM/route_mask.jpg",
+      "bytes": 15879,
+      "crc32": 3262185004
+    },
+    {
+      "path": "R87_pie_911000000007_s0_PERM/edit_response64.jpg",
+      "bytes": 1626,
+      "crc32": 3701335767
+    },
+    {
+      "path": "R87_pie_911000000007_s0_PERM/step_summary.json",
+      "bytes": 85650,
+      "crc32": 3355591557
+    },
+    {
+      "path": "R87_pie_911000000007_s0_PERM/request_maps.npz",
+      "bytes": 71351,
+      "crc32": 2940656760
+    },
+    {
+      "path": "R87_pie_911000000007_s0_PERM/request_maps.json",
+      "bytes": 1410,
+      "crc32": 3549289995
+    },
+    {
+      "path": "R87_pie_911000000007_s17_REQ/preview.jpg",
+      "bytes": 9732,
+      "crc32": 934489282
+    },
+    {
+      "path": "R87_pie_911000000007_s17_REQ/pattern.jpg",
+      "bytes": 9763,
+      "crc32": 1261438821
+    },
+    {
+      "path": "R87_pie_911000000007_s17_REQ/route_mask.jpg",
+      "bytes": 15791,
+      "crc32": 2488782014
+    },
+    {
+      "path": "R87_pie_911000000007_s17_REQ/edit_response64.jpg",
+      "bytes": 1640,
+      "crc32": 336185328
+    },
+    {
+      "path": "R87_pie_911000000007_s17_REQ/step_summary.json",
+      "bytes": 82875,
+      "crc32": 1430650970
+    },
+    {
+      "path": "R87_pie_911000000007_s17_REQ/request_maps.npz",
+      "bytes": 42259,
+      "crc32": 2678321182
+    },
+    {
+      "path": "R87_pie_911000000007_s17_REQ/request_maps.json",
+      "bytes": 908,
+      "crc32": 501216414
+    },
+    {
+      "path": "R87_pie_911000000007_s17_GLB/preview.jpg",
+      "bytes": 9601,
+      "crc32": 692327930
+    },
+    {
+      "path": "R87_pie_911000000007_s17_GLB/pattern.jpg",
+      "bytes": 9593,
+      "crc32": 2265185497
+    },
+    {
+      "path": "R87_pie_911000000007_s17_GLB/route_mask.jpg",
+      "bytes": 15791,
+      "crc32": 2488782014
+    },
+    {
+      "path": "R87_pie_911000000007_s17_GLB/edit_response64.jpg",
+      "bytes": 1640,
+      "crc32": 336185328
+    },
+    {
+      "path": "R87_pie_911000000007_s17_GLB/step_summary.json",
+      "bytes": 85659,
+      "crc32": 2357839445
+    },
+    {
+      "path": "R87_pie_911000000007_s17_GLB/request_maps.npz",
+      "bytes": 28481,
+      "crc32": 2810665354
+    },
+    {
+      "path": "R87_pie_911000000007_s17_GLB/request_maps.json",
+      "bytes": 908,
+      "crc32": 2957820379
+    },
+    {
+      "path": "R87_pie_911000000007_s17_SFT/preview.jpg",
+      "bytes": 9555,
+      "crc32": 4294031020
+    },
+    {
+      "path": "R87_pie_911000000007_s17_SFT/pattern.jpg",
+      "bytes": 9534,
+      "crc32": 624399482
+    },
+    {
+      "path": "R87_pie_911000000007_s17_SFT/route_mask.jpg",
+      "bytes": 15778,
+      "crc32": 3903613024
+    },
+    {
+      "path": "R87_pie_911000000007_s17_SFT/edit_response64.jpg",
+      "bytes": 1640,
+      "crc32": 336185328
+    },
+    {
+      "path": "R87_pie_911000000007_s17_SFT/step_summary.json",
+      "bytes": 85618,
+      "crc32": 2251181421
+    },
+    {
+      "path": "R87_pie_911000000007_s17_SFT/request_maps.npz",
+      "bytes": 70733,
+      "crc32": 3216317798
+    },
+    {
+      "path": "R87_pie_911000000007_s17_SFT/request_maps.json",
+      "bytes": 908,
+      "crc32": 42243477
+    },
+    {
+      "path": "R87_pie_911000000007_s17_PERM/preview.jpg",
+      "bytes": 9723,
+      "crc32": 1468747330
+    },
+    {
+      "path": "R87_pie_911000000007_s17_PERM/pattern.jpg",
+      "bytes": 9724,
+      "crc32": 737899950
+    },
+    {
+      "path": "R87_pie_911000000007_s17_PERM/route_mask.jpg",
+      "bytes": 15918,
+      "crc32": 2399591283
+    },
+    {
+      "path": "R87_pie_911000000007_s17_PERM/edit_response64.jpg",
+      "bytes": 1640,
+      "crc32": 336185328
+    },
+    {
+      "path": "R87_pie_911000000007_s17_PERM/step_summary.json",
+      "bytes": 85459,
+      "crc32": 718098365
+    },
+    {
+      "path": "R87_pie_911000000007_s17_PERM/request_maps.npz",
+      "bytes": 70794,
+      "crc32": 3086224109
+    },
+    {
+      "path": "R87_pie_911000000007_s17_PERM/request_maps.json",
+      "bytes": 1411,
+      "crc32": 3759047430
+    },
+    {
+      "path": "references/manifest.json",
+      "bytes": 102,
+      "crc32": 313392522
+    },
+    {
+      "path": "references/metrics.csv",
+      "bytes": 5,
+      "crc32": 1034698998
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "index.html",
+      "bytes": 83398,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_000000000139_s0.jpg",
+      "bytes": 78993,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_000000000139_s17.jpg",
+      "bytes": 78682,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_000000000011_s0.jpg",
+      "bytes": 48828,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_000000000011_s17.jpg",
+      "bytes": 46300,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_112000000001_s0.jpg",
+      "bytes": 69936,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_112000000001_s17.jpg",
+      "bytes": 67755,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_111000000008_s0.jpg",
+      "bytes": 73121,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_111000000008_s17.jpg",
+      "bytes": 74052,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_221000000004_s0.jpg",
+      "bytes": 67644,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_221000000004_s17.jpg",
+      "bytes": 67208,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_213000000007_s0.jpg",
+      "bytes": 49233,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_213000000007_s17.jpg",
+      "bytes": 46527,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_323000000001_s0.jpg",
+      "bytes": 61281,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_323000000001_s17.jpg",
+      "bytes": 60056,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_322000000007_s0.jpg",
+      "bytes": 77852,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_322000000007_s17.jpg",
+      "bytes": 77808,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_411000000004_s0.jpg",
+      "bytes": 79691,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_411000000004_s17.jpg",
+      "bytes": 80549,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_413000000003_s0.jpg",
+      "bytes": 83143,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_413000000003_s17.jpg",
+      "bytes": 88616,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_512000000002_s0.jpg",
+      "bytes": 73371,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_512000000002_s17.jpg",
+      "bytes": 74830,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_523000000002_s0.jpg",
+      "bytes": 56485,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_523000000002_s17.jpg",
+      "bytes": 56595,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_611000000003_s0.jpg",
+      "bytes": 80029,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_611000000003_s17.jpg",
+      "bytes": 79528,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_623000000004_s0.jpg",
+      "bytes": 55382,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_623000000004_s17.jpg",
+      "bytes": 54347,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_723000000001_s0.jpg",
+      "bytes": 80356,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_723000000001_s17.jpg",
+      "bytes": 75352,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_724000000001_s0.jpg",
+      "bytes": 109167,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_724000000001_s17.jpg",
+      "bytes": 114261,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_813000000007_s0.jpg",
+      "bytes": 69805,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_813000000007_s17.jpg",
+      "bytes": 72421,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_813000000006_s0.jpg",
+      "bytes": 58178,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_813000000006_s17.jpg",
+      "bytes": 54405,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_913000000000_s0.jpg",
+      "bytes": 80348,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_913000000000_s17.jpg",
+      "bytes": 75227,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_911000000007_s0.jpg",
+      "bytes": 38570,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_911000000007_s17.jpg",
+      "bytes": 37151,
+      "reason": "comparison grid or generated interface"
+    }
+  ],
+  "text_normalized_members": [
+    "source_selection_manifest.json"
+  ],
+  "original_manifest_note": "Archived code/plan/input hashes identify the historical run. Neutral naming and path redaction change published text; hashes are not recalculated or presented as hashes of this export.",
+  "available": {
+    "completed": 160,
+    "total_planned": 160,
+    "pending": 0,
+    "step_summaries": 160,
+    "record_json": 0,
+    "full_steps_json": 0,
+    "native_raw_png_in_archive": 0,
+    "float_map_npz": 160
+  },
+  "missing": "Native generated images absent from compact source ZIP."
+}

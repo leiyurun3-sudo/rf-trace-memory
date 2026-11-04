@@ -1,0 +1,13 @@
+{
+  "pid": 22718,
+  "status": "completed",
+  "stage": "completed",
+  "planned": 136,
+  "completed": 136,
+  "failed": 0,
+  "updated": 1793251943.730264,
+  "job": "R74_butterfly_sunset_recon_s0_RECON_SPLIT50",
+  "step": 28,
+  "steps": 28,
+  "new_nfe": 11046
+}

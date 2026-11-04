@@ -1,0 +1,572 @@
+{
+  "excluded_sources": {
+    "114000000002": "giant lake placement",
+    "913000000004": "Chinese watercolor style",
+    "713000000002": "ferruginous black sofa"
+  },
+  "scope": "Frozen recovered v2 labels. E AND P uses three-valued conjunction; no artifact criterion. Exclusion is post hoc and changes task mix. Bounds are deterministic missing-label bounds.",
+  "provenance": {
+    "plan_and_control_archive": "archive/A_Qwen_v2_OfflineAudit/original/A_Qwen_FactualJudge_v2_results.zip",
+    "recovered_records": "archive/A_Qwen_v2_OfflineAudit/results/records.json",
+    "tasks": "archive/A_Qwen_v2_OfflineAudit/results/tasks.json",
+    "recovered_source_facts": "archive/A_Qwen_v2_OfflineAudit/results/source_facts.json",
+    "supplement": "archive/manuscript/supplement.tex"
+  },
+  "source_control_audit": {
+    "actual_v2_40_independent_source_as_output_calls_found": false,
+    "evidence": "Archived runner observes each source once, then observes planned outputs separately; no source-as-output control jobs or observation filenames found. Deterministic self comparison reuses the same observation, not independent inference.",
+    "source_observation_files": 40,
+    "identity_control_filenames": [],
+    "logical_recomputation": {
+      "total": 40,
+      "pass": 0,
+      "fail": 40,
+      "unknown": 0
+    },
+    "known_image_controls": {
+      "facts": "6/6",
+      "ordered_pairs": "6/6",
+      "clean_artifact": "3/3"
+    },
+    "rows": [
+      {
+        "case": "000000000100",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "000000000132",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "000000000021",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "000000000058",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "123000000001",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "111000000009",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "122000000002",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "114000000002",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "222000000006",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "212000000007",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "223000000009",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "224000000007",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "324000000003",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "324000000005",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "312000000006",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "313000000008",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "423000000003",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "412000000003",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "411000000000",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "422000000001",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "522000000004",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "524000000002",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "511000000004",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "512000000004",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "614000000004",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "622000000000",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "613000000003",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "611000000004",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "711000000000",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "724000000000",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "713000000002",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "723000000004",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "824000000001",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "813000000003",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "812000000004",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "821000000008",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "913000000005",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "921000000004",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "913000000004",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      },
+      {
+        "case": "913000000003",
+        "target_match": 0,
+        "same_observation_self_edit": 0
+      }
+    ]
+  },
+  "counts": [
+    {
+      "cohort": "all_40",
+      "arm": "ENERGY_MATCH25",
+      "metric": "edit",
+      "sources": 40,
+      "outputs": 80,
+      "pass": 35,
+      "fail": 45,
+      "unknown": 0,
+      "lower": 0.4375,
+      "upper": 0.4375
+    },
+    {
+      "cohort": "all_40",
+      "arm": "ENERGY_MATCH25",
+      "metric": "edit_and_preserve",
+      "sources": 40,
+      "outputs": 80,
+      "pass": 14,
+      "fail": 57,
+      "unknown": 9,
+      "lower": 0.175,
+      "upper": 0.2875
+    },
+    {
+      "cohort": "all_40",
+      "arm": "ETA03",
+      "metric": "edit",
+      "sources": 40,
+      "outputs": 80,
+      "pass": 42,
+      "fail": 38,
+      "unknown": 0,
+      "lower": 0.525,
+      "upper": 0.525
+    },
+    {
+      "cohort": "all_40",
+      "arm": "ETA03",
+      "metric": "edit_and_preserve",
+      "sources": 40,
+      "outputs": 80,
+      "pass": 16,
+      "fail": 58,
+      "unknown": 6,
+      "lower": 0.2,
+      "upper": 0.275
+    },
+    {
+      "cohort": "all_40",
+      "arm": "FLOWEDIT_N26",
+      "metric": "edit",
+      "sources": 40,
+      "outputs": 80,
+      "pass": 41,
+      "fail": 39,
+      "unknown": 0,
+      "lower": 0.5125,
+      "upper": 0.5125
+    },
+    {
+      "cohort": "all_40",
+      "arm": "FLOWEDIT_N26",
+      "metric": "edit_and_preserve",
+      "sources": 40,
+      "outputs": 80,
+      "pass": 16,
+      "fail": 52,
+      "unknown": 12,
+      "lower": 0.2,
+      "upper": 0.35
+    },
+    {
+      "cohort": "all_40",
+      "arm": "RELEASE_BOTH25",
+      "metric": "edit",
+      "sources": 40,
+      "outputs": 80,
+      "pass": 42,
+      "fail": 38,
+      "unknown": 0,
+      "lower": 0.525,
+      "upper": 0.525
+    },
+    {
+      "cohort": "all_40",
+      "arm": "RELEASE_BOTH25",
+      "metric": "edit_and_preserve",
+      "sources": 40,
+      "outputs": 80,
+      "pass": 19,
+      "fail": 48,
+      "unknown": 13,
+      "lower": 0.2375,
+      "upper": 0.4
+    },
+    {
+      "cohort": "all_40",
+      "arm": "RELEASE_CORR25",
+      "metric": "edit",
+      "sources": 40,
+      "outputs": 80,
+      "pass": 36,
+      "fail": 43,
+      "unknown": 1,
+      "lower": 0.45,
+      "upper": 0.4625
+    },
+    {
+      "cohort": "all_40",
+      "arm": "RELEASE_CORR25",
+      "metric": "edit_and_preserve",
+      "sources": 40,
+      "outputs": 80,
+      "pass": 16,
+      "fail": 56,
+      "unknown": 8,
+      "lower": 0.2,
+      "upper": 0.3
+    },
+    {
+      "cohort": "all_40",
+      "arm": "RFEDIT_I08",
+      "metric": "edit",
+      "sources": 40,
+      "outputs": 40,
+      "pass": 4,
+      "fail": 36,
+      "unknown": 0,
+      "lower": 0.1,
+      "upper": 0.1
+    },
+    {
+      "cohort": "all_40",
+      "arm": "RFEDIT_I08",
+      "metric": "edit_and_preserve",
+      "sources": 40,
+      "outputs": 40,
+      "pass": 3,
+      "fail": 36,
+      "unknown": 1,
+      "lower": 0.075,
+      "upper": 0.1
+    },
+    {
+      "cohort": "all_40",
+      "arm": "U25_KV",
+      "metric": "edit",
+      "sources": 40,
+      "outputs": 80,
+      "pass": 40,
+      "fail": 40,
+      "unknown": 0,
+      "lower": 0.5,
+      "upper": 0.5
+    },
+    {
+      "cohort": "all_40",
+      "arm": "U25_KV",
+      "metric": "edit_and_preserve",
+      "sources": 40,
+      "outputs": 80,
+      "pass": 20,
+      "fail": 51,
+      "unknown": 9,
+      "lower": 0.25,
+      "upper": 0.3625
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "ENERGY_MATCH25",
+      "metric": "edit",
+      "sources": 37,
+      "outputs": 74,
+      "pass": 35,
+      "fail": 39,
+      "unknown": 0,
+      "lower": 0.47297297297297297,
+      "upper": 0.47297297297297297
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "ENERGY_MATCH25",
+      "metric": "edit_and_preserve",
+      "sources": 37,
+      "outputs": 74,
+      "pass": 14,
+      "fail": 51,
+      "unknown": 9,
+      "lower": 0.1891891891891892,
+      "upper": 0.3108108108108108
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "ETA03",
+      "metric": "edit",
+      "sources": 37,
+      "outputs": 74,
+      "pass": 42,
+      "fail": 32,
+      "unknown": 0,
+      "lower": 0.5675675675675675,
+      "upper": 0.5675675675675675
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "ETA03",
+      "metric": "edit_and_preserve",
+      "sources": 37,
+      "outputs": 74,
+      "pass": 16,
+      "fail": 52,
+      "unknown": 6,
+      "lower": 0.21621621621621623,
+      "upper": 0.2972972972972973
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "FLOWEDIT_N26",
+      "metric": "edit",
+      "sources": 37,
+      "outputs": 74,
+      "pass": 41,
+      "fail": 33,
+      "unknown": 0,
+      "lower": 0.5540540540540541,
+      "upper": 0.5540540540540541
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "FLOWEDIT_N26",
+      "metric": "edit_and_preserve",
+      "sources": 37,
+      "outputs": 74,
+      "pass": 16,
+      "fail": 46,
+      "unknown": 12,
+      "lower": 0.21621621621621623,
+      "upper": 0.3783783783783784
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "RELEASE_BOTH25",
+      "metric": "edit",
+      "sources": 37,
+      "outputs": 74,
+      "pass": 42,
+      "fail": 32,
+      "unknown": 0,
+      "lower": 0.5675675675675675,
+      "upper": 0.5675675675675675
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "RELEASE_BOTH25",
+      "metric": "edit_and_preserve",
+      "sources": 37,
+      "outputs": 74,
+      "pass": 19,
+      "fail": 42,
+      "unknown": 13,
+      "lower": 0.25675675675675674,
+      "upper": 0.43243243243243246
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "RELEASE_CORR25",
+      "metric": "edit",
+      "sources": 37,
+      "outputs": 74,
+      "pass": 36,
+      "fail": 37,
+      "unknown": 1,
+      "lower": 0.4864864864864865,
+      "upper": 0.5
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "RELEASE_CORR25",
+      "metric": "edit_and_preserve",
+      "sources": 37,
+      "outputs": 74,
+      "pass": 16,
+      "fail": 50,
+      "unknown": 8,
+      "lower": 0.21621621621621623,
+      "upper": 0.32432432432432434
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "RFEDIT_I08",
+      "metric": "edit",
+      "sources": 37,
+      "outputs": 37,
+      "pass": 4,
+      "fail": 33,
+      "unknown": 0,
+      "lower": 0.10810810810810811,
+      "upper": 0.10810810810810811
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "RFEDIT_I08",
+      "metric": "edit_and_preserve",
+      "sources": 37,
+      "outputs": 37,
+      "pass": 3,
+      "fail": 33,
+      "unknown": 1,
+      "lower": 0.08108108108108109,
+      "upper": 0.10810810810810811
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "U25_KV",
+      "metric": "edit",
+      "sources": 37,
+      "outputs": 74,
+      "pass": 40,
+      "fail": 34,
+      "unknown": 0,
+      "lower": 0.5405405405405406,
+      "upper": 0.5405405405405406
+    },
+    {
+      "cohort": "exclude_3_37",
+      "arm": "U25_KV",
+      "metric": "edit_and_preserve",
+      "sources": 37,
+      "outputs": 74,
+      "pass": 20,
+      "fail": 45,
+      "unknown": 9,
+      "lower": 0.2702702702702703,
+      "upper": 0.3918918918918919
+    }
+  ]
+}

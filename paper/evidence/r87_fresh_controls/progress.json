@@ -1,0 +1,13 @@
+{
+  "pid": 19242,
+  "status": "completed",
+  "stage": "completed",
+  "planned": 160,
+  "completed": 160,
+  "failed": 0,
+  "updated": 1793718748.9231172,
+  "job": "R87_pie_911000000007_s17_PERM",
+  "step": 28,
+  "steps": 28,
+  "new_nfe": 11440
+}

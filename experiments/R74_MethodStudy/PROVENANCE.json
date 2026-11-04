@@ -1,0 +1,181 @@
+{
+  "source_archive": "R74_MethodStudy_Ready.zip",
+  "source_location": "delivery",
+  "source_archive_bytes": 1915099,
+  "strip_root": true,
+  "source_member_root": "R74_MethodStudy",
+  "included_members": [
+    {
+      "path": "attention.py",
+      "bytes": 21836,
+      "crc32": 3378683391
+    },
+    {
+      "path": "controls.py",
+      "bytes": 2575,
+      "crc32": 2321579762
+    },
+    {
+      "path": "data/121000000003/outer.png",
+      "bytes": 2367,
+      "crc32": 1630368804
+    },
+    {
+      "path": "data/321000000001/outer.png",
+      "bytes": 2016,
+      "crc32": 978068677
+    },
+    {
+      "path": "data/423000000000/outer.png",
+      "bytes": 1020,
+      "crc32": 3795552631
+    },
+    {
+      "path": "data/522000000000/outer.png",
+      "bytes": 2486,
+      "crc32": 3130133692
+    },
+    {
+      "path": "data/622000000002/outer.png",
+      "bytes": 1303,
+      "crc32": 1779003446
+    },
+    {
+      "path": "data/723000000002/outer.png",
+      "bytes": 1853,
+      "crc32": 995071571
+    },
+    {
+      "path": "engine.py",
+      "bytes": 5494,
+      "crc32": 201828592
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 10127,
+      "crc32": 506880330
+    },
+    {
+      "path": "external.py",
+      "bytes": 2959,
+      "crc32": 2827260217
+    },
+    {
+      "path": "external_sources.md",
+      "bytes": 8827,
+      "crc32": 876103941
+    },
+    {
+      "path": "mint_backend.py",
+      "bytes": 3893,
+      "crc32": 2892078264
+    },
+    {
+      "path": "model_loader.py",
+      "bytes": 5512,
+      "crc32": 1113038759
+    },
+    {
+      "path": "plan.json",
+      "bytes": 442851,
+      "crc32": 141043236
+    },
+    {
+      "path": "prepare_benchmark.py",
+      "bytes": 7894,
+      "crc32": 2582296444
+    },
+    {
+      "path": "reporting.py",
+      "bytes": 27183,
+      "crc32": 3526020140
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 601,
+      "crc32": 191286072
+    },
+    {
+      "path": "requirements_eval.txt",
+      "bytes": 139,
+      "crc32": 1775092259
+    },
+    {
+      "path": "review.py",
+      "bytes": 3525,
+      "crc32": 3296027198
+    },
+    {
+      "path": "rf_kv.py",
+      "bytes": 1282,
+      "crc32": 4037482886
+    },
+    {
+      "path": "run_all.sh",
+      "bytes": 551,
+      "crc32": 2509902044
+    },
+    {
+      "path": "runner.py",
+      "bytes": 17207,
+      "crc32": 1912490666
+    },
+    {
+      "path": "start.sh",
+      "bytes": 859,
+      "crc32": 578103250
+    },
+    {
+      "path": "value.py",
+      "bytes": 1929,
+      "crc32": 955245182
+    }
+  ],
+  "omitted_inputs": [
+    {
+      "path": "data/121000000003/source.png",
+      "bytes": 449239,
+      "crc32": 3699728353
+    },
+    {
+      "path": "data/321000000001/source.png",
+      "bytes": 331220,
+      "crc32": 2239209372
+    },
+    {
+      "path": "data/423000000000/source.png",
+      "bytes": 232237,
+      "crc32": 4083644331
+    },
+    {
+      "path": "data/522000000000/source.png",
+      "bytes": 222678,
+      "crc32": 3133429392
+    },
+    {
+      "path": "data/622000000002/source.png",
+      "bytes": 302579,
+      "crc32": 1790874418
+    },
+    {
+      "path": "data/723000000002/source.png",
+      "bytes": 305414,
+      "crc32": 2004488360
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "README.md",
+      "reason": "historical narrative; current workflow is in experiment index"
+    }
+  ],
+  "text_normalized_members": [
+    "plan.json",
+    "reporting.py",
+    "start.sh"
+  ],
+  "archive_identity": "Original ZIP byte count and member CRC32 values; no new hashes computed.",
+  "status": "Archived workflow; no execution during synchronization.",
+  "local_archive_locator": "R74_*_MethodStudy_Ready.zip",
+  "original_mapping": "The single historical root matching R74_*_MethodStudy is published as R74_MethodStudy; output defaults and plan references follow the neutral name."
+}

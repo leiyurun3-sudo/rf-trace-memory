@@ -1,0 +1,19 @@
+{
+  "case": "000000000034",
+  "usage": "evaluation_only_after_generation",
+  "official_record": {
+    "image_path": "0_random_140/000000000034.jpg",
+    "original_prompt": "a mother duck and her babies are standing near the water",
+    "editing_prompt": "[a sketch painting of] a mother duck and her babies are standing near the water",
+    "editing_instruction": "Add a sketch painting effect of the picture of the mother duck and her babies",
+    "editing_type_id": "0",
+    "blended_word": "duck duck",
+    "mask": [
+      0,
+      262144
+    ]
+  },
+  "mask_encoding": "zero_based_start_length_pairs_row_major_512x512",
+  "official_evaluator_boundary_policy": "set four border edges to edited=1",
+  "independence": "supplied dataset annotation; not a new human annotation or ground-truth edited image"
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "r87-fresh-actual-dose-confirmation-v1",
+  "frozen_before_generation": true,
+  "created_local_date": "2026-11-03",
+  "question": "At a fixed CORR25-derived realized correction-RMS profile, does request-conditioned spatial allocation improve preservation relative to uniform allocation on fresh sources?",
+  "population": "20 previously unused PIE-Bench sources; two per category; valid nonempty official edit and preserved regions; all 70 historical case IDs and image-content duplicates excluded",
+  "selection_manifest": "manifest.json",
+  "seeds": [0, 17],
+  "arms": {
+    "REQ": "New direct local CORR25 anchor: 0.25 P c, P=1-0.75 E; its realized 28-step RMS is the shared profile",
+    "GLB": "Global residual direction at own current state, normalized to the anchor RMS each step",
+    "SFT": "Request weights rolled by 32 pixels on both 64x64 axes; same histogram and anchor RMS",
+    "PERM": "8x8 blocks of size 8x8 on the 64x64 weights, permuted by fixed SHA256 ordering R87-permute-v1:case; same permutation across seeds/steps; same histogram and anchor RMS"
+  },
+  "new_generation_count": 160,
+  "common_settings": "FLUX.1-dev, 512 pixels, 28 steps, fixed memory and prompts; official masks used only for eligibility/evaluation, never inference",
+  "primary": {"comparison":"REQ - GLB", "metric":"lpips_preserved", "direction":"lower is better", "test":"two-sided exact source sign-flip, alpha=0.05", "unit":"source; average the two seeds first"},
+  "secondary": {"family":"REQ-SFT and REQ-PERM preservation LPIPS", "adjustment":"Holm over these two prespecified positional contrasts"},
+  "sensitivity": "Report Holm across all three preservation contrasts and across all 18 contrasts (three controls x six metrics). Do not reinterpret the earlier R86 post-hoc family as preregistered.",
+  "metrics": ["lpips_preserved", "clip_target_similarity", "clip_directional_similarity", "dino_full_feature_similarity", "lpips_full", "bg_mae"],
+  "confidence_intervals": "10000 paired source bootstrap draws, seed 87004, percentile pointwise 95% intervals",
+  "missingness": "No source replacement or outcome-based removal; generation failures, metric missingness and complete-pair source counts reported. No unresolved label is silently scored as failure/success.",
+  "stopping": "All 160 prelisted outputs; no significance-based early stop. Stop on systematic infrastructure errors; resume valid outputs unchanged.",
+  "interpretation": "Fresh-source confirmation is conditional on this model, settings, benchmark eligibility, anchor profile and mask intervention. A negative retention contrast does not establish complete editing success or noninferiority in editing.",
+  "localization": "Exploratory official-mask mean response inside minus outside; compare request, shifted and block-permuted maps",
+  "identity_control": "Separate local Qwen v2 experiment, 40 R85 sources, edit-only; default 40 fresh reference plus 40 fresh source-as-output observations. Report false positives, unknowns, errors, and already-satisfied reference strata. No artifact validity or human agreement claim.",
+  "artifact_policy": "Native PNGs retained on server for metric recomputation. Compact downloadable package includes previews, floating response maps, per-step RMS, source metadata, raw metric CSVs and statistics; no model weights or latents."
+}

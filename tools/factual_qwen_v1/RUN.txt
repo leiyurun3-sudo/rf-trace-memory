@@ -1,0 +1,7 @@
+cd /root/autodl-tmp/A_Qwen_FactualJudge
+RUN_PREFLIGHT=1 bash run.sh
+bash start.sh
+tail -f run.log
+
+Optional output override: FACTUAL_JUDGE_OUT=/root/autodl-tmp/another_results bash start.sh
+Result ZIP: /root/autodl-tmp/A_Qwen_FactualJudge_results.zip (written by judge.py).

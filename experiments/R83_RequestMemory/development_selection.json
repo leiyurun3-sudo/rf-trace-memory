@@ -1,0 +1,395 @@
+{
+  "status": "final_80_job_plan_prepared_engine_integration_by_parent",
+  "cohort": "development_on_R81_seen_sources",
+  "origin": "R81_ParallelEvidence/heldout_tasks.json",
+  "selection_rule": "first 10 distinct categories encountered in original frozen R81 heldout_tasks.json order; no output ranking",
+  "seeds": [
+    0,
+    17
+  ],
+  "reference_arms": [
+    "AUTO_DETAIL",
+    "U25_KV",
+    "FLOWEDIT_N26"
+  ],
+  "reference_count": 60,
+  "tasks": [
+    {
+      "case": "000000000072",
+      "key": "pie_000000000072",
+      "source_image": "heldout_data/sources/000000000072.jpg",
+      "image": "heldout_data/sources/000000000072.jpg",
+      "task": "pie_000000000072",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "colorful cups",
+      "target_prompt": "wooden colorful cups",
+      "target_category_id": "0",
+      "target_category": "random editing",
+      "edit_rubric": "Change the glass cups to wooden",
+      "source_rgb_sha256": "935818fdd7c59ea9d3737ab8bd9d5e82f054a15c208fcd45f9eaad307a620bfd",
+      "source_size": [
+        512,
+        512
+      ],
+      "pattern_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "detail_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "diagnostic_only": false,
+      "eval_pixel_region": "background",
+      "roi_scope": "whole_image_auxiliary",
+      "cohort": "development_on_R81_seen_sources"
+    },
+    {
+      "case": "121000000006",
+      "key": "pie_121000000006",
+      "source_image": "heldout_data/sources/121000000006.jpg",
+      "image": "heldout_data/sources/121000000006.jpg",
+      "task": "pie_121000000006",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a dog sitting on the beach with a body of water in the background",
+      "target_prompt": "a wolf sitting on the beach with a body of water in the background",
+      "target_category_id": "1",
+      "target_category": "change object",
+      "edit_rubric": "Change the dog to a wolf",
+      "source_rgb_sha256": "f294054ead567685a19b6cef244952629cd6a75ed0a7c8a1baa46c0e56b47b1a",
+      "source_size": [
+        512,
+        512
+      ],
+      "pattern_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "detail_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "diagnostic_only": false,
+      "eval_pixel_region": "background",
+      "roi_scope": "whole_image_auxiliary",
+      "cohort": "development_on_R81_seen_sources"
+    },
+    {
+      "case": "223000000008",
+      "key": "pie_223000000008",
+      "source_image": "heldout_data/sources/223000000008.jpg",
+      "image": "heldout_data/sources/223000000008.jpg",
+      "task": "pie_223000000008",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a bowl of strawberries and blueberries on a striped tablecloth",
+      "target_prompt": "a bowl of strawberries and blueberries and a lemon on a striped tablecloth",
+      "target_category_id": "2",
+      "target_category": "add object",
+      "edit_rubric": "Add a lemon to the bowl of strawberries and blueberries",
+      "source_rgb_sha256": "5eb5010e026c7a59227c118bcb8883dbca08bfb8cc9453beb45edde1299ada25",
+      "source_size": [
+        512,
+        512
+      ],
+      "pattern_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "detail_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "diagnostic_only": false,
+      "eval_pixel_region": "background",
+      "roi_scope": "whole_image_auxiliary",
+      "cohort": "development_on_R81_seen_sources"
+    },
+    {
+      "case": "323000000002",
+      "key": "pie_323000000002",
+      "source_image": "heldout_data/sources/323000000002.jpg",
+      "image": "heldout_data/sources/323000000002.jpg",
+      "task": "pie_323000000002",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "olive oil being poured into a bowl with olive on table",
+      "target_prompt": "olive oil being poured into a bowl on table",
+      "target_category_id": "3",
+      "target_category": "delete object",
+      "edit_rubric": "Remove olives from the table",
+      "source_rgb_sha256": "d588c27dfaf9d45db6b7dc91180d76b4d784dac7ea59935cdc72a3d78f1ed5d4",
+      "source_size": [
+        512,
+        512
+      ],
+      "pattern_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "detail_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "diagnostic_only": false,
+      "eval_pixel_region": "background",
+      "roi_scope": "whole_image_auxiliary",
+      "cohort": "development_on_R81_seen_sources"
+    },
+    {
+      "case": "424000000001",
+      "key": "pie_424000000001",
+      "source_image": "heldout_data/sources/424000000001.jpg",
+      "image": "heldout_data/sources/424000000001.jpg",
+      "task": "pie_424000000001",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "peaceful sea",
+      "target_prompt": "rough sea",
+      "target_category_id": "4",
+      "target_category": "change attribute content",
+      "edit_rubric": "Make the sea rough",
+      "source_rgb_sha256": "3389378b7260c7adbf36791b90cabbc9a66e2f7d537389aa792c7d70e7c01253",
+      "source_size": [
+        512,
+        512
+      ],
+      "pattern_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "detail_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "diagnostic_only": false,
+      "eval_pixel_region": "background",
+      "roi_scope": "whole_image_auxiliary",
+      "cohort": "development_on_R81_seen_sources"
+    },
+    {
+      "case": "523000000001",
+      "key": "pie_523000000001",
+      "source_image": "heldout_data/sources/523000000001.jpg",
+      "image": "heldout_data/sources/523000000001.jpg",
+      "task": "pie_523000000001",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a red pepper on a towel",
+      "target_prompt": "a red pepper under a towel",
+      "target_category_id": "5",
+      "target_category": "change attribute pose",
+      "edit_rubric": "move the red pepper under the towel",
+      "source_rgb_sha256": "fea177a4c726dcd7e63a95bdb690cf49bbcdfe5e239f6642a018a7457ccbfb4b",
+      "source_size": [
+        512,
+        512
+      ],
+      "pattern_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "detail_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "diagnostic_only": false,
+      "eval_pixel_region": "background",
+      "roi_scope": "whole_image_auxiliary",
+      "cohort": "development_on_R81_seen_sources"
+    },
+    {
+      "case": "621000000004",
+      "key": "pie_621000000004",
+      "source_image": "heldout_data/sources/621000000004.jpg",
+      "image": "heldout_data/sources/621000000004.jpg",
+      "task": "pie_621000000004",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a white kitten sitting on a leopard print blanket",
+      "target_prompt": "a yellow kitten sitting on a leopard print blanket",
+      "target_category_id": "6",
+      "target_category": "change attribute color",
+      "edit_rubric": "Change the kitten's color to yellow",
+      "source_rgb_sha256": "cb1115ae5c736e843da86c762f726911b2ffaddd12dc5678de15238ea158ad6a",
+      "source_size": [
+        512,
+        512
+      ],
+      "pattern_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "detail_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "diagnostic_only": false,
+      "eval_pixel_region": "background",
+      "roi_scope": "whole_image_auxiliary",
+      "cohort": "development_on_R81_seen_sources"
+    },
+    {
+      "case": "713000000001",
+      "key": "pie_713000000001",
+      "source_image": "heldout_data/sources/713000000001.jpg",
+      "image": "heldout_data/sources/713000000001.jpg",
+      "task": "pie_713000000001",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "illustration of a cup and a lamp on a table by a window",
+      "target_prompt": "illustration of a cup and a crystal lamp on a table by a window",
+      "target_category_id": "7",
+      "target_category": "change attribute material",
+      "edit_rubric": "Replace the lamp with a crystal lamp",
+      "source_rgb_sha256": "1642b794827d00cbf7a8e15712013bcb5971a3e94677381aa80fbd34a54c4ec1",
+      "source_size": [
+        512,
+        512
+      ],
+      "pattern_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "detail_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "diagnostic_only": false,
+      "eval_pixel_region": "background",
+      "roi_scope": "whole_image_auxiliary",
+      "cohort": "development_on_R81_seen_sources"
+    },
+    {
+      "case": "814000000001",
+      "key": "pie_814000000001",
+      "source_image": "heldout_data/sources/814000000001.jpg",
+      "image": "heldout_data/sources/814000000001.jpg",
+      "task": "pie_814000000001",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a person sitting on a mountain with a starry sky above",
+      "target_prompt": "a person sitting on a mountain with monsters and dragons above",
+      "target_category_id": "8",
+      "target_category": "change background",
+      "edit_rubric": "Add monsters and dragons above the mountain",
+      "source_rgb_sha256": "4a0d33aff8b999be4411a5f57e825fb5cd5e2a416c313d35c99418ddc8ceb5d2",
+      "source_size": [
+        512,
+        512
+      ],
+      "pattern_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "detail_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "diagnostic_only": false,
+      "eval_pixel_region": "background",
+      "roi_scope": "whole_image_auxiliary",
+      "cohort": "development_on_R81_seen_sources"
+    },
+    {
+      "case": "922000000003",
+      "key": "pie_922000000003",
+      "source_image": "heldout_data/sources/922000000003.jpg",
+      "image": "heldout_data/sources/922000000003.jpg",
+      "task": "pie_922000000003",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a young boy with curly hair and blue shirt",
+      "target_prompt": "kids crayon drawing of a young boy with curly hair and blue shirt",
+      "target_category_id": "9",
+      "target_category": "change style",
+      "edit_rubric": "change the image with a kids crayon drawing style",
+      "source_rgb_sha256": "288849dd3f4033f640496fbe6130aa325c0e2c4bbaf0a22219d0d4480569f398",
+      "source_size": [
+        512,
+        512
+      ],
+      "pattern_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "detail_roi": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "diagnostic_only": false,
+      "eval_pixel_region": "none",
+      "roi_scope": "whole_image_auxiliary",
+      "cohort": "development_on_R81_seen_sources"
+    }
+  ],
+  "arms": [
+    "SOFT25",
+    "SOFT50",
+    "SOFT75",
+    "REQUEST_SOFT25"
+  ],
+  "planned": 80
+}

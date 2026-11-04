@@ -1,0 +1,13 @@
+{
+  "pid": 16300,
+  "status": "completed",
+  "stage": "completed",
+  "planned": 80,
+  "completed": 80,
+  "failed": 0,
+  "updated": 1793362117.5471241,
+  "job": "R82_pie_922000000003_s17_REQUEST_SOFT25",
+  "step": 28,
+  "steps": 28,
+  "new_nfe": 7400
+}

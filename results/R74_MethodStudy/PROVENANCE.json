@@ -1,0 +1,4301 @@
+{
+  "source_archive": "R74_MethodStudy.zip",
+  "source_location": "Downloads",
+  "source_archive_bytes": 66265801,
+  "included_members": [
+    {
+      "path": "manifest.json",
+      "bytes": 2769,
+      "crc32": 3507707542
+    },
+    {
+      "path": "plan.json",
+      "bytes": 442850,
+      "crc32": 175208801
+    },
+    {
+      "path": "summary.json",
+      "bytes": 582,
+      "crc32": 1626950103
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 187320,
+      "crc32": 1219979256
+    },
+    {
+      "path": "arm_summary.csv",
+      "bytes": 5598,
+      "crc32": 2418470082
+    },
+    {
+      "path": "comparison_metrics.csv",
+      "bytes": 187877,
+      "crc32": 1804802557
+    },
+    {
+      "path": "comparison_arm_summary.csv",
+      "bytes": 5598,
+      "crc32": 2418470082
+    },
+    {
+      "path": "progress.json",
+      "bytes": 257,
+      "crc32": 1866833754
+    },
+    {
+      "path": "sources/522000000000.jpg",
+      "bytes": 26479,
+      "crc32": 1941440107
+    },
+    {
+      "path": "sources/423000000000.jpg",
+      "bytes": 30696,
+      "crc32": 3438298511
+    },
+    {
+      "path": "sources/622000000002.jpg",
+      "bytes": 33767,
+      "crc32": 136874421
+    },
+    {
+      "path": "sources/121000000003.jpg",
+      "bytes": 55489,
+      "crc32": 3037233563
+    },
+    {
+      "path": "sources/321000000001.jpg",
+      "bytes": 37840,
+      "crc32": 1950841242
+    },
+    {
+      "path": "sources/723000000002.jpg",
+      "bytes": 37124,
+      "crc32": 2628851883
+    },
+    {
+      "path": "R74_cup_night_s10_RAW/preview.jpg",
+      "bytes": 27589,
+      "crc32": 2435457127
+    },
+    {
+      "path": "R74_cup_night_s10_RAW/pattern.jpg",
+      "bytes": 12459,
+      "crc32": 4263672520
+    },
+    {
+      "path": "R74_cup_night_s10_RAW/record.json",
+      "bytes": 10298,
+      "crc32": 3475380852
+    },
+    {
+      "path": "R74_cup_night_s10_RAW/steps.json",
+      "bytes": 28350,
+      "crc32": 1832107705
+    },
+    {
+      "path": "R74_cup_night_s10_ETA03/preview.jpg",
+      "bytes": 33213,
+      "crc32": 1968651760
+    },
+    {
+      "path": "R74_cup_night_s10_ETA03/pattern.jpg",
+      "bytes": 14131,
+      "crc32": 3851893733
+    },
+    {
+      "path": "R74_cup_night_s10_ETA03/record.json",
+      "bytes": 10312,
+      "crc32": 814902205
+    },
+    {
+      "path": "R74_cup_night_s10_ETA03/steps.json",
+      "bytes": 28436,
+      "crc32": 3532155760
+    },
+    {
+      "path": "R74_cup_night_s10_KV100/preview.jpg",
+      "bytes": 28905,
+      "crc32": 4022677252
+    },
+    {
+      "path": "R74_cup_night_s10_KV100/pattern.jpg",
+      "bytes": 14137,
+      "crc32": 2363935872
+    },
+    {
+      "path": "R74_cup_night_s10_KV100/record.json",
+      "bytes": 10349,
+      "crc32": 9508817
+    },
+    {
+      "path": "R74_cup_night_s10_KV100/steps.json",
+      "bytes": 172138,
+      "crc32": 4114914387
+    },
+    {
+      "path": "R74_cup_night_s10_C50/preview.jpg",
+      "bytes": 31250,
+      "crc32": 2999127563
+    },
+    {
+      "path": "R74_cup_night_s10_C50/pattern.jpg",
+      "bytes": 14291,
+      "crc32": 4214535591
+    },
+    {
+      "path": "R74_cup_night_s10_C50/record.json",
+      "bytes": 10367,
+      "crc32": 2061622476
+    },
+    {
+      "path": "R74_cup_night_s10_C50/steps.json",
+      "bytes": 173736,
+      "crc32": 731398081
+    },
+    {
+      "path": "R74_cup_night_s10_C100/preview.jpg",
+      "bytes": 31626,
+      "crc32": 1656577101
+    },
+    {
+      "path": "R74_cup_night_s10_C100/pattern.jpg",
+      "bytes": 12738,
+      "crc32": 4107503926
+    },
+    {
+      "path": "R74_cup_night_s10_C100/record.json",
+      "bytes": 10372,
+      "crc32": 782111384
+    },
+    {
+      "path": "R74_cup_night_s10_C100/steps.json",
+      "bytes": 173719,
+      "crc32": 3946591291
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT0/preview.jpg",
+      "bytes": 26950,
+      "crc32": 3129178132
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT0/pattern.jpg",
+      "bytes": 13425,
+      "crc32": 942179867
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT0/record.json",
+      "bytes": 10405,
+      "crc32": 1204914861
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT0/steps.json",
+      "bytes": 175402,
+      "crc32": 3590767203
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50/preview.jpg",
+      "bytes": 28063,
+      "crc32": 2770471971
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50/pattern.jpg",
+      "bytes": 14336,
+      "crc32": 3766664767
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50/record.json",
+      "bytes": 10413,
+      "crc32": 1413156005
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50/steps.json",
+      "bytes": 175427,
+      "crc32": 3194093059
+    },
+    {
+      "path": "R74_cup_night_s10_FLOWEDIT/preview.jpg",
+      "bytes": 35063,
+      "crc32": 1834238277
+    },
+    {
+      "path": "R74_cup_night_s10_FLOWEDIT/pattern.jpg",
+      "bytes": 17797,
+      "crc32": 3655316211
+    },
+    {
+      "path": "R74_cup_night_s10_FLOWEDIT/record.json",
+      "bytes": 10605,
+      "crc32": 86005476
+    },
+    {
+      "path": "R74_cup_night_s10_FLOWEDIT/steps.json",
+      "bytes": 1058,
+      "crc32": 1761153468
+    },
+    {
+      "path": "R74_cup_night_s10_C50_OFF/preview.jpg",
+      "bytes": 27112,
+      "crc32": 401233778
+    },
+    {
+      "path": "R74_cup_night_s10_C50_OFF/pattern.jpg",
+      "bytes": 12015,
+      "crc32": 2740123030
+    },
+    {
+      "path": "R74_cup_night_s10_C50_OFF/record.json",
+      "bytes": 10373,
+      "crc32": 1424471244
+    },
+    {
+      "path": "R74_cup_night_s10_C50_OFF/steps.json",
+      "bytes": 30045,
+      "crc32": 3699011829
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50_OFF/preview.jpg",
+      "bytes": 26838,
+      "crc32": 1796147943
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50_OFF/pattern.jpg",
+      "bytes": 12508,
+      "crc32": 3129041973
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50_OFF/record.json",
+      "bytes": 10419,
+      "crc32": 1705745105
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50_OFF/steps.json",
+      "bytes": 31743,
+      "crc32": 724120286
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50_SRC_ONLY/preview.jpg",
+      "bytes": 32012,
+      "crc32": 552324668
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50_SRC_ONLY/pattern.jpg",
+      "bytes": 14816,
+      "crc32": 590998774
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50_SRC_ONLY/record.json",
+      "bytes": 10473,
+      "crc32": 2334826349
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50_SRC_ONLY/steps.json",
+      "bytes": 61431,
+      "crc32": 2648119018
+    },
+    {
+      "path": "R74_cup_night_s17_RAW/preview.jpg",
+      "bytes": 27679,
+      "crc32": 3868945467
+    },
+    {
+      "path": "R74_cup_night_s17_RAW/pattern.jpg",
+      "bytes": 12784,
+      "crc32": 2629785048
+    },
+    {
+      "path": "R74_cup_night_s17_RAW/record.json",
+      "bytes": 10303,
+      "crc32": 3994543274
+    },
+    {
+      "path": "R74_cup_night_s17_RAW/steps.json",
+      "bytes": 28349,
+      "crc32": 1665354466
+    },
+    {
+      "path": "R74_cup_night_s17_ETA03/preview.jpg",
+      "bytes": 32715,
+      "crc32": 805665540
+    },
+    {
+      "path": "R74_cup_night_s17_ETA03/pattern.jpg",
+      "bytes": 14072,
+      "crc32": 955733167
+    },
+    {
+      "path": "R74_cup_night_s17_ETA03/record.json",
+      "bytes": 10317,
+      "crc32": 696518787
+    },
+    {
+      "path": "R74_cup_night_s17_ETA03/steps.json",
+      "bytes": 28423,
+      "crc32": 3230977789
+    },
+    {
+      "path": "R74_cup_night_s17_KV100/preview.jpg",
+      "bytes": 29350,
+      "crc32": 1707396402
+    },
+    {
+      "path": "R74_cup_night_s17_KV100/pattern.jpg",
+      "bytes": 15702,
+      "crc32": 4019964665
+    },
+    {
+      "path": "R74_cup_night_s17_KV100/record.json",
+      "bytes": 10348,
+      "crc32": 1158256137
+    },
+    {
+      "path": "R74_cup_night_s17_KV100/steps.json",
+      "bytes": 172130,
+      "crc32": 1308222943
+    },
+    {
+      "path": "R74_cup_night_s17_C50/preview.jpg",
+      "bytes": 30147,
+      "crc32": 400869839
+    },
+    {
+      "path": "R74_cup_night_s17_C50/pattern.jpg",
+      "bytes": 14518,
+      "crc32": 2246978833
+    },
+    {
+      "path": "R74_cup_night_s17_C50/record.json",
+      "bytes": 10366,
+      "crc32": 2057652549
+    },
+    {
+      "path": "R74_cup_night_s17_C50/steps.json",
+      "bytes": 173716,
+      "crc32": 1039364501
+    },
+    {
+      "path": "R74_cup_night_s17_C100/preview.jpg",
+      "bytes": 36312,
+      "crc32": 2777927932
+    },
+    {
+      "path": "R74_cup_night_s17_C100/pattern.jpg",
+      "bytes": 12184,
+      "crc32": 2981037902
+    },
+    {
+      "path": "R74_cup_night_s17_C100/record.json",
+      "bytes": 10370,
+      "crc32": 3380245451
+    },
+    {
+      "path": "R74_cup_night_s17_C100/steps.json",
+      "bytes": 173719,
+      "crc32": 3594999294
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT0/preview.jpg",
+      "bytes": 25894,
+      "crc32": 4265131213
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT0/pattern.jpg",
+      "bytes": 13416,
+      "crc32": 617809706
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT0/record.json",
+      "bytes": 10407,
+      "crc32": 245393844
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT0/steps.json",
+      "bytes": 175436,
+      "crc32": 4242932042
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50/preview.jpg",
+      "bytes": 27144,
+      "crc32": 2261281050
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50/pattern.jpg",
+      "bytes": 14162,
+      "crc32": 2239460984
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50/record.json",
+      "bytes": 10415,
+      "crc32": 2052214335
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50/steps.json",
+      "bytes": 175507,
+      "crc32": 3210537920
+    },
+    {
+      "path": "R74_cup_night_s17_FLOWEDIT/preview.jpg",
+      "bytes": 35450,
+      "crc32": 1362464796
+    },
+    {
+      "path": "R74_cup_night_s17_FLOWEDIT/pattern.jpg",
+      "bytes": 16417,
+      "crc32": 3807549535
+    },
+    {
+      "path": "R74_cup_night_s17_FLOWEDIT/record.json",
+      "bytes": 10604,
+      "crc32": 3717841632
+    },
+    {
+      "path": "R74_cup_night_s17_FLOWEDIT/steps.json",
+      "bytes": 1058,
+      "crc32": 865696958
+    },
+    {
+      "path": "R74_cup_night_s17_C50_OFF/preview.jpg",
+      "bytes": 28850,
+      "crc32": 1239753507
+    },
+    {
+      "path": "R74_cup_night_s17_C50_OFF/pattern.jpg",
+      "bytes": 11243,
+      "crc32": 2339347913
+    },
+    {
+      "path": "R74_cup_night_s17_C50_OFF/record.json",
+      "bytes": 10371,
+      "crc32": 387294855
+    },
+    {
+      "path": "R74_cup_night_s17_C50_OFF/steps.json",
+      "bytes": 30050,
+      "crc32": 3353325009
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50_OFF/preview.jpg",
+      "bytes": 27497,
+      "crc32": 2600773729
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50_OFF/pattern.jpg",
+      "bytes": 11521,
+      "crc32": 93468316
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50_OFF/record.json",
+      "bytes": 10416,
+      "crc32": 1576314173
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50_OFF/steps.json",
+      "bytes": 31748,
+      "crc32": 365585296
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50_SRC_ONLY/preview.jpg",
+      "bytes": 29866,
+      "crc32": 393477269
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50_SRC_ONLY/pattern.jpg",
+      "bytes": 14702,
+      "crc32": 2004011325
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50_SRC_ONLY/record.json",
+      "bytes": 10473,
+      "crc32": 3932791162
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50_SRC_ONLY/steps.json",
+      "bytes": 61429,
+      "crc32": 791062034
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_RAW/preview.jpg",
+      "bytes": 22982,
+      "crc32": 3225617409
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_RAW/pattern.jpg",
+      "bytes": 5492,
+      "crc32": 1639994778
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_RAW/record.json",
+      "bytes": 10528,
+      "crc32": 396829494
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_RAW/steps.json",
+      "bytes": 28352,
+      "crc32": 739062005
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_ETA03/preview.jpg",
+      "bytes": 29409,
+      "crc32": 4045426057
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_ETA03/pattern.jpg",
+      "bytes": 5468,
+      "crc32": 1895055042
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_ETA03/record.json",
+      "bytes": 10543,
+      "crc32": 3072920514
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_ETA03/steps.json",
+      "bytes": 28434,
+      "crc32": 3752261447
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_KV100/preview.jpg",
+      "bytes": 24943,
+      "crc32": 2602328943
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_KV100/pattern.jpg",
+      "bytes": 4297,
+      "crc32": 311645435
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_KV100/record.json",
+      "bytes": 10575,
+      "crc32": 3119087184
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_KV100/steps.json",
+      "bytes": 171932,
+      "crc32": 1771782059
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C50/preview.jpg",
+      "bytes": 24719,
+      "crc32": 3905320659
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C50/pattern.jpg",
+      "bytes": 4278,
+      "crc32": 2354236999
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C50/record.json",
+      "bytes": 10593,
+      "crc32": 974118990
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C50/steps.json",
+      "bytes": 173670,
+      "crc32": 4195507274
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C100/preview.jpg",
+      "bytes": 29879,
+      "crc32": 656634770
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C100/pattern.jpg",
+      "bytes": 5733,
+      "crc32": 4074779405
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C100/record.json",
+      "bytes": 10592,
+      "crc32": 4152645926
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C100/steps.json",
+      "bytes": 173663,
+      "crc32": 2243423233
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT0/preview.jpg",
+      "bytes": 22484,
+      "crc32": 574982815
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT0/pattern.jpg",
+      "bytes": 4205,
+      "crc32": 3609171045
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT0/record.json",
+      "bytes": 10631,
+      "crc32": 2645950968
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT0/steps.json",
+      "bytes": 175291,
+      "crc32": 1005704196
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50/preview.jpg",
+      "bytes": 24246,
+      "crc32": 1546642264
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50/pattern.jpg",
+      "bytes": 4596,
+      "crc32": 2334664539
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50/record.json",
+      "bytes": 10636,
+      "crc32": 2623240333
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50/steps.json",
+      "bytes": 175347,
+      "crc32": 1381146750
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_FLOWEDIT/preview.jpg",
+      "bytes": 32336,
+      "crc32": 232186881
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_FLOWEDIT/pattern.jpg",
+      "bytes": 6855,
+      "crc32": 1946902113
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_FLOWEDIT/record.json",
+      "bytes": 10831,
+      "crc32": 1529375136
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_FLOWEDIT/steps.json",
+      "bytes": 1057,
+      "crc32": 3415321987
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C50_OFF/preview.jpg",
+      "bytes": 24607,
+      "crc32": 2327678053
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C50_OFF/pattern.jpg",
+      "bytes": 5463,
+      "crc32": 4041339936
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C50_OFF/record.json",
+      "bytes": 10602,
+      "crc32": 2742407531
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C50_OFF/steps.json",
+      "bytes": 30039,
+      "crc32": 2402647170
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50_OFF/preview.jpg",
+      "bytes": 22613,
+      "crc32": 3632452734
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50_OFF/pattern.jpg",
+      "bytes": 5291,
+      "crc32": 1530675570
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50_OFF/record.json",
+      "bytes": 10646,
+      "crc32": 638716120
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50_OFF/steps.json",
+      "bytes": 31760,
+      "crc32": 2133446532
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50_SRC_ONLY/preview.jpg",
+      "bytes": 25806,
+      "crc32": 397563970
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50_SRC_ONLY/pattern.jpg",
+      "bytes": 4599,
+      "crc32": 4163293593
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50_SRC_ONLY/record.json",
+      "bytes": 10699,
+      "crc32": 3810336389
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50_SRC_ONLY/steps.json",
+      "bytes": 61473,
+      "crc32": 1429751753
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_RAW/preview.jpg",
+      "bytes": 22808,
+      "crc32": 2753579353
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_RAW/pattern.jpg",
+      "bytes": 5011,
+      "crc32": 2405107353
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_RAW/record.json",
+      "bytes": 10532,
+      "crc32": 3862304181
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_RAW/steps.json",
+      "bytes": 28350,
+      "crc32": 1175378050
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_ETA03/preview.jpg",
+      "bytes": 29305,
+      "crc32": 1500716659
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_ETA03/pattern.jpg",
+      "bytes": 6066,
+      "crc32": 3883461406
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_ETA03/record.json",
+      "bytes": 10543,
+      "crc32": 1376341386
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_ETA03/steps.json",
+      "bytes": 28436,
+      "crc32": 1907481440
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_KV100/preview.jpg",
+      "bytes": 24019,
+      "crc32": 3788683706
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_KV100/pattern.jpg",
+      "bytes": 5718,
+      "crc32": 3502871287
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_KV100/record.json",
+      "bytes": 10578,
+      "crc32": 1205720783
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_KV100/steps.json",
+      "bytes": 172016,
+      "crc32": 2845376372
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C50/preview.jpg",
+      "bytes": 26021,
+      "crc32": 2647382104
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C50/pattern.jpg",
+      "bytes": 5957,
+      "crc32": 587426818
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C50/record.json",
+      "bytes": 10595,
+      "crc32": 770597313
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C50/steps.json",
+      "bytes": 173535,
+      "crc32": 2015436630
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C100/preview.jpg",
+      "bytes": 30971,
+      "crc32": 2234943854
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C100/pattern.jpg",
+      "bytes": 5827,
+      "crc32": 3915476817
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C100/record.json",
+      "bytes": 10601,
+      "crc32": 1941652517
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C100/steps.json",
+      "bytes": 173690,
+      "crc32": 3196847269
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT0/preview.jpg",
+      "bytes": 22865,
+      "crc32": 2847565514
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT0/pattern.jpg",
+      "bytes": 5250,
+      "crc32": 2003105734
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT0/record.json",
+      "bytes": 10630,
+      "crc32": 1474913465
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT0/steps.json",
+      "bytes": 175303,
+      "crc32": 4137603098
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50/preview.jpg",
+      "bytes": 24307,
+      "crc32": 1391143512
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50/pattern.jpg",
+      "bytes": 5674,
+      "crc32": 1378869875
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50/record.json",
+      "bytes": 10637,
+      "crc32": 2802412991
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50/steps.json",
+      "bytes": 175343,
+      "crc32": 304031901
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_FLOWEDIT/preview.jpg",
+      "bytes": 31467,
+      "crc32": 2637031484
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_FLOWEDIT/pattern.jpg",
+      "bytes": 6477,
+      "crc32": 2847430549
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_FLOWEDIT/record.json",
+      "bytes": 10834,
+      "crc32": 3420549099
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_FLOWEDIT/steps.json",
+      "bytes": 1058,
+      "crc32": 865696958
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C50_OFF/preview.jpg",
+      "bytes": 23800,
+      "crc32": 3348436318
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C50_OFF/pattern.jpg",
+      "bytes": 5541,
+      "crc32": 4208993596
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C50_OFF/record.json",
+      "bytes": 10601,
+      "crc32": 2370450599
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C50_OFF/steps.json",
+      "bytes": 30054,
+      "crc32": 2809243898
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50_OFF/preview.jpg",
+      "bytes": 23125,
+      "crc32": 3094836285
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50_OFF/pattern.jpg",
+      "bytes": 5327,
+      "crc32": 3005795912
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50_OFF/record.json",
+      "bytes": 10647,
+      "crc32": 2225039317
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50_OFF/steps.json",
+      "bytes": 31771,
+      "crc32": 1879562369
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50_SRC_ONLY/preview.jpg",
+      "bytes": 27057,
+      "crc32": 1268172703
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50_SRC_ONLY/pattern.jpg",
+      "bytes": 6730,
+      "crc32": 4281759849
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50_SRC_ONLY/record.json",
+      "bytes": 10701,
+      "crc32": 2262262999
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50_SRC_ONLY/steps.json",
+      "bytes": 61475,
+      "crc32": 253506091
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_RAW/preview.jpg",
+      "bytes": 28092,
+      "crc32": 3688868824
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_RAW/pattern.jpg",
+      "bytes": 8717,
+      "crc32": 926778283
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_RAW/record.json",
+      "bytes": 10494,
+      "crc32": 2213149459
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_RAW/steps.json",
+      "bytes": 28361,
+      "crc32": 3488714265
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_ETA03/preview.jpg",
+      "bytes": 34809,
+      "crc32": 3237084707
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_ETA03/pattern.jpg",
+      "bytes": 12326,
+      "crc32": 1396260136
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_ETA03/record.json",
+      "bytes": 10505,
+      "crc32": 1020429396
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_ETA03/steps.json",
+      "bytes": 28440,
+      "crc32": 856245068
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_KV100/preview.jpg",
+      "bytes": 29474,
+      "crc32": 1788940923
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_KV100/pattern.jpg",
+      "bytes": 12280,
+      "crc32": 479931225
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_KV100/record.json",
+      "bytes": 10541,
+      "crc32": 1572306773
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_KV100/steps.json",
+      "bytes": 171992,
+      "crc32": 4150547919
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C50/preview.jpg",
+      "bytes": 33565,
+      "crc32": 2534070587
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C50/pattern.jpg",
+      "bytes": 14258,
+      "crc32": 338308693
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C50/record.json",
+      "bytes": 10553,
+      "crc32": 1002941588
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C50/steps.json",
+      "bytes": 173618,
+      "crc32": 1798436171
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C100/preview.jpg",
+      "bytes": 39172,
+      "crc32": 1245973500
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C100/pattern.jpg",
+      "bytes": 14267,
+      "crc32": 2006173932
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C100/record.json",
+      "bytes": 10562,
+      "crc32": 894288094
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C100/steps.json",
+      "bytes": 173807,
+      "crc32": 3094931509
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT0/preview.jpg",
+      "bytes": 28465,
+      "crc32": 4123026904
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT0/pattern.jpg",
+      "bytes": 12658,
+      "crc32": 3928637253
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT0/record.json",
+      "bytes": 10599,
+      "crc32": 284982652
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT0/steps.json",
+      "bytes": 175408,
+      "crc32": 2662654535
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50/preview.jpg",
+      "bytes": 31817,
+      "crc32": 893506570
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50/pattern.jpg",
+      "bytes": 13719,
+      "crc32": 1718962771
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50/record.json",
+      "bytes": 10602,
+      "crc32": 4003987259
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50/steps.json",
+      "bytes": 175337,
+      "crc32": 2075119279
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_FLOWEDIT/preview.jpg",
+      "bytes": 36208,
+      "crc32": 907063681
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_FLOWEDIT/pattern.jpg",
+      "bytes": 15216,
+      "crc32": 1919595184
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_FLOWEDIT/record.json",
+      "bytes": 10796,
+      "crc32": 2984295624
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_FLOWEDIT/steps.json",
+      "bytes": 1057,
+      "crc32": 3415321987
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C50_OFF/preview.jpg",
+      "bytes": 33516,
+      "crc32": 1439075459
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C50_OFF/pattern.jpg",
+      "bytes": 9972,
+      "crc32": 3032770519
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C50_OFF/record.json",
+      "bytes": 10567,
+      "crc32": 3958238361
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C50_OFF/steps.json",
+      "bytes": 30063,
+      "crc32": 3462028851
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50_OFF/preview.jpg",
+      "bytes": 31753,
+      "crc32": 788028348
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50_OFF/pattern.jpg",
+      "bytes": 10349,
+      "crc32": 1242203295
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50_OFF/record.json",
+      "bytes": 10613,
+      "crc32": 1900001397
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50_OFF/steps.json",
+      "bytes": 31761,
+      "crc32": 3001443723
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50_SRC_ONLY/preview.jpg",
+      "bytes": 30956,
+      "crc32": 803487652
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50_SRC_ONLY/pattern.jpg",
+      "bytes": 11784,
+      "crc32": 2418712739
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50_SRC_ONLY/record.json",
+      "bytes": 10663,
+      "crc32": 1398080010
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50_SRC_ONLY/steps.json",
+      "bytes": 61457,
+      "crc32": 751479682
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_RAW/preview.jpg",
+      "bytes": 29432,
+      "crc32": 1932818813
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_RAW/pattern.jpg",
+      "bytes": 6077,
+      "crc32": 1215639832
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_RAW/record.json",
+      "bytes": 10498,
+      "crc32": 4178397272
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_RAW/steps.json",
+      "bytes": 28341,
+      "crc32": 2013614935
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_ETA03/preview.jpg",
+      "bytes": 35027,
+      "crc32": 2669506348
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_ETA03/pattern.jpg",
+      "bytes": 11590,
+      "crc32": 1280149503
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_ETA03/record.json",
+      "bytes": 10507,
+      "crc32": 970592769
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_ETA03/steps.json",
+      "bytes": 28420,
+      "crc32": 1161743970
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_KV100/preview.jpg",
+      "bytes": 26873,
+      "crc32": 762584993
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_KV100/pattern.jpg",
+      "bytes": 11856,
+      "crc32": 537066848
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_KV100/record.json",
+      "bytes": 10543,
+      "crc32": 233480605
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_KV100/steps.json",
+      "bytes": 171992,
+      "crc32": 157487358
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C50/preview.jpg",
+      "bytes": 31246,
+      "crc32": 2080596164
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C50/pattern.jpg",
+      "bytes": 13957,
+      "crc32": 340317303
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C50/record.json",
+      "bytes": 10563,
+      "crc32": 3459365908
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C50/steps.json",
+      "bytes": 173565,
+      "crc32": 4182643991
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C100/preview.jpg",
+      "bytes": 38417,
+      "crc32": 1324549458
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C100/pattern.jpg",
+      "bytes": 15570,
+      "crc32": 4253215575
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C100/record.json",
+      "bytes": 10565,
+      "crc32": 1397885770
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C100/steps.json",
+      "bytes": 173768,
+      "crc32": 141371306
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT0/preview.jpg",
+      "bytes": 26729,
+      "crc32": 372522809
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT0/pattern.jpg",
+      "bytes": 12353,
+      "crc32": 2808154415
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT0/record.json",
+      "bytes": 10607,
+      "crc32": 2477511235
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT0/steps.json",
+      "bytes": 175341,
+      "crc32": 3827310625
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50/preview.jpg",
+      "bytes": 29345,
+      "crc32": 524178402
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50/pattern.jpg",
+      "bytes": 13630,
+      "crc32": 3109661499
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50/record.json",
+      "bytes": 10610,
+      "crc32": 3471148236
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50/steps.json",
+      "bytes": 175284,
+      "crc32": 921511702
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_FLOWEDIT/preview.jpg",
+      "bytes": 36283,
+      "crc32": 1487423847
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_FLOWEDIT/pattern.jpg",
+      "bytes": 15763,
+      "crc32": 4265422719
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_FLOWEDIT/record.json",
+      "bytes": 10801,
+      "crc32": 1228625704
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_FLOWEDIT/steps.json",
+      "bytes": 1058,
+      "crc32": 865696958
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C50_OFF/preview.jpg",
+      "bytes": 33852,
+      "crc32": 2077630038
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C50_OFF/pattern.jpg",
+      "bytes": 8632,
+      "crc32": 3435271953
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C50_OFF/record.json",
+      "bytes": 10574,
+      "crc32": 3755804134
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C50_OFF/steps.json",
+      "bytes": 30032,
+      "crc32": 3373694773
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50_OFF/preview.jpg",
+      "bytes": 34032,
+      "crc32": 2815007268
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50_OFF/pattern.jpg",
+      "bytes": 9399,
+      "crc32": 976678175
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50_OFF/record.json",
+      "bytes": 10618,
+      "crc32": 3020324049
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50_OFF/steps.json",
+      "bytes": 31738,
+      "crc32": 436111473
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50_SRC_ONLY/preview.jpg",
+      "bytes": 28029,
+      "crc32": 1919266170
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50_SRC_ONLY/pattern.jpg",
+      "bytes": 11528,
+      "crc32": 2039840591
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50_SRC_ONLY/record.json",
+      "bytes": 10670,
+      "crc32": 2415385942
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50_SRC_ONLY/steps.json",
+      "bytes": 61415,
+      "crc32": 2048604591
+    },
+    {
+      "path": "R74_dog_snow_s0_RAW/preview.jpg",
+      "bytes": 22088,
+      "crc32": 1462503042
+    },
+    {
+      "path": "R74_dog_snow_s0_RAW/pattern.jpg",
+      "bytes": 11372,
+      "crc32": 647713454
+    },
+    {
+      "path": "R74_dog_snow_s0_RAW/record.json",
+      "bytes": 10103,
+      "crc32": 1007354611
+    },
+    {
+      "path": "R74_dog_snow_s0_RAW/steps.json",
+      "bytes": 28336,
+      "crc32": 3148318637
+    },
+    {
+      "path": "R74_dog_snow_s0_ETA03/preview.jpg",
+      "bytes": 45028,
+      "crc32": 3437221819
+    },
+    {
+      "path": "R74_dog_snow_s0_ETA03/pattern.jpg",
+      "bytes": 16047,
+      "crc32": 2892814473
+    },
+    {
+      "path": "R74_dog_snow_s0_ETA03/record.json",
+      "bytes": 10119,
+      "crc32": 2846440196
+    },
+    {
+      "path": "R74_dog_snow_s0_ETA03/steps.json",
+      "bytes": 28428,
+      "crc32": 75473198
+    },
+    {
+      "path": "R74_dog_snow_s0_KV100/preview.jpg",
+      "bytes": 30516,
+      "crc32": 3373470695
+    },
+    {
+      "path": "R74_dog_snow_s0_KV100/pattern.jpg",
+      "bytes": 13808,
+      "crc32": 2674088751
+    },
+    {
+      "path": "R74_dog_snow_s0_KV100/record.json",
+      "bytes": 10151,
+      "crc32": 807290007
+    },
+    {
+      "path": "R74_dog_snow_s0_KV100/steps.json",
+      "bytes": 172135,
+      "crc32": 2662358342
+    },
+    {
+      "path": "R74_dog_snow_s0_C50/preview.jpg",
+      "bytes": 42174,
+      "crc32": 1274029931
+    },
+    {
+      "path": "R74_dog_snow_s0_C50/pattern.jpg",
+      "bytes": 17227,
+      "crc32": 3990168374
+    },
+    {
+      "path": "R74_dog_snow_s0_C50/record.json",
+      "bytes": 10169,
+      "crc32": 1618076877
+    },
+    {
+      "path": "R74_dog_snow_s0_C50/steps.json",
+      "bytes": 173651,
+      "crc32": 2737440560
+    },
+    {
+      "path": "R74_dog_snow_s0_C100/preview.jpg",
+      "bytes": 54068,
+      "crc32": 2372631886
+    },
+    {
+      "path": "R74_dog_snow_s0_C100/pattern.jpg",
+      "bytes": 20469,
+      "crc32": 3378787252
+    },
+    {
+      "path": "R74_dog_snow_s0_C100/record.json",
+      "bytes": 10177,
+      "crc32": 1284535411
+    },
+    {
+      "path": "R74_dog_snow_s0_C100/steps.json",
+      "bytes": 173532,
+      "crc32": 2651529979
+    },
+    {
+      "path": "R74_dog_snow_s0_SPLIT0/preview.jpg",
+      "bytes": 30115,
+      "crc32": 4103174997
+    },
+    {
+      "path": "R74_dog_snow_s0_SPLIT0/pattern.jpg",
+      "bytes": 14067,
+      "crc32": 2093273356
+    },
+    {
+      "path": "R74_dog_snow_s0_SPLIT0/record.json",
+      "bytes": 10213,
+      "crc32": 3785873091
+    },
+    {
+      "path": "R74_dog_snow_s0_SPLIT0/steps.json",
+      "bytes": 175287,
+      "crc32": 2515745705
+    },
+    {
+      "path": "R74_dog_snow_s0_SPLIT50/preview.jpg",
+      "bytes": 36424,
+      "crc32": 3666249265
+    },
+    {
+      "path": "R74_dog_snow_s0_SPLIT50/pattern.jpg",
+      "bytes": 15992,
+      "crc32": 88443914
+    },
+    {
+      "path": "R74_dog_snow_s0_SPLIT50/record.json",
+      "bytes": 10217,
+      "crc32": 2312096108
+    },
+    {
+      "path": "R74_dog_snow_s0_SPLIT50/steps.json",
+      "bytes": 175369,
+      "crc32": 1270024216
+    },
+    {
+      "path": "R74_dog_snow_s0_FLOWEDIT/preview.jpg",
+      "bytes": 48418,
+      "crc32": 1151083131
+    },
+    {
+      "path": "R74_dog_snow_s0_FLOWEDIT/pattern.jpg",
+      "bytes": 18895,
+      "crc32": 3717399685
+    },
+    {
+      "path": "R74_dog_snow_s0_FLOWEDIT/record.json",
+      "bytes": 10413,
+      "crc32": 4135711126
+    },
+    {
+      "path": "R74_dog_snow_s0_FLOWEDIT/steps.json",
+      "bytes": 1057,
+      "crc32": 3415321987
+    },
+    {
+      "path": "R74_dog_snow_s17_RAW/preview.jpg",
+      "bytes": 22985,
+      "crc32": 95958224
+    },
+    {
+      "path": "R74_dog_snow_s17_RAW/pattern.jpg",
+      "bytes": 13557,
+      "crc32": 2245382815
+    },
+    {
+      "path": "R74_dog_snow_s17_RAW/record.json",
+      "bytes": 10117,
+      "crc32": 3298979919
+    },
+    {
+      "path": "R74_dog_snow_s17_RAW/steps.json",
+      "bytes": 28350,
+      "crc32": 1111215444
+    },
+    {
+      "path": "R74_dog_snow_s17_ETA03/preview.jpg",
+      "bytes": 44909,
+      "crc32": 3143574240
+    },
+    {
+      "path": "R74_dog_snow_s17_ETA03/pattern.jpg",
+      "bytes": 17499,
+      "crc32": 2252717047
+    },
+    {
+      "path": "R74_dog_snow_s17_ETA03/record.json",
+      "bytes": 10125,
+      "crc32": 3775141617
+    },
+    {
+      "path": "R74_dog_snow_s17_ETA03/steps.json",
+      "bytes": 28440,
+      "crc32": 3320481686
+    },
+    {
+      "path": "R74_dog_snow_s17_KV100/preview.jpg",
+      "bytes": 26321,
+      "crc32": 2881600738
+    },
+    {
+      "path": "R74_dog_snow_s17_KV100/pattern.jpg",
+      "bytes": 10707,
+      "crc32": 3404006833
+    },
+    {
+      "path": "R74_dog_snow_s17_KV100/record.json",
+      "bytes": 10154,
+      "crc32": 497812616
+    },
+    {
+      "path": "R74_dog_snow_s17_KV100/steps.json",
+      "bytes": 172120,
+      "crc32": 240702170
+    },
+    {
+      "path": "R74_dog_snow_s17_C50/preview.jpg",
+      "bytes": 43727,
+      "crc32": 2549420670
+    },
+    {
+      "path": "R74_dog_snow_s17_C50/pattern.jpg",
+      "bytes": 17005,
+      "crc32": 514309634
+    },
+    {
+      "path": "R74_dog_snow_s17_C50/record.json",
+      "bytes": 10174,
+      "crc32": 338786905
+    },
+    {
+      "path": "R74_dog_snow_s17_C50/steps.json",
+      "bytes": 173770,
+      "crc32": 3781959562
+    },
+    {
+      "path": "R74_dog_snow_s17_C100/preview.jpg",
+      "bytes": 55036,
+      "crc32": 188532528
+    },
+    {
+      "path": "R74_dog_snow_s17_C100/pattern.jpg",
+      "bytes": 23549,
+      "crc32": 508182400
+    },
+    {
+      "path": "R74_dog_snow_s17_C100/record.json",
+      "bytes": 10183,
+      "crc32": 4270974149
+    },
+    {
+      "path": "R74_dog_snow_s17_C100/steps.json",
+      "bytes": 173615,
+      "crc32": 2579985638
+    },
+    {
+      "path": "R74_dog_snow_s17_SPLIT0/preview.jpg",
+      "bytes": 26849,
+      "crc32": 1866840518
+    },
+    {
+      "path": "R74_dog_snow_s17_SPLIT0/pattern.jpg",
+      "bytes": 11196,
+      "crc32": 530444277
+    },
+    {
+      "path": "R74_dog_snow_s17_SPLIT0/record.json",
+      "bytes": 10216,
+      "crc32": 2978784031
+    },
+    {
+      "path": "R74_dog_snow_s17_SPLIT0/steps.json",
+      "bytes": 175225,
+      "crc32": 3550608532
+    },
+    {
+      "path": "R74_dog_snow_s17_SPLIT50/preview.jpg",
+      "bytes": 36680,
+      "crc32": 2789836655
+    },
+    {
+      "path": "R74_dog_snow_s17_SPLIT50/pattern.jpg",
+      "bytes": 14632,
+      "crc32": 163468968
+    },
+    {
+      "path": "R74_dog_snow_s17_SPLIT50/record.json",
+      "bytes": 10221,
+      "crc32": 3394217490
+    },
+    {
+      "path": "R74_dog_snow_s17_SPLIT50/steps.json",
+      "bytes": 175300,
+      "crc32": 3727032719
+    },
+    {
+      "path": "R74_dog_snow_s17_FLOWEDIT/preview.jpg",
+      "bytes": 48434,
+      "crc32": 1716573535
+    },
+    {
+      "path": "R74_dog_snow_s17_FLOWEDIT/pattern.jpg",
+      "bytes": 18456,
+      "crc32": 1103156438
+    },
+    {
+      "path": "R74_dog_snow_s17_FLOWEDIT/record.json",
+      "bytes": 10413,
+      "crc32": 2926552482
+    },
+    {
+      "path": "R74_dog_snow_s17_FLOWEDIT/steps.json",
+      "bytes": 1058,
+      "crc32": 865696958
+    },
+    {
+      "path": "R74_dog_rain_s0_RAW/preview.jpg",
+      "bytes": 30118,
+      "crc32": 1527642911
+    },
+    {
+      "path": "R74_dog_rain_s0_RAW/pattern.jpg",
+      "bytes": 11702,
+      "crc32": 1775109360
+    },
+    {
+      "path": "R74_dog_rain_s0_RAW/record.json",
+      "bytes": 10099,
+      "crc32": 486107531
+    },
+    {
+      "path": "R74_dog_rain_s0_RAW/steps.json",
+      "bytes": 28343,
+      "crc32": 380694070
+    },
+    {
+      "path": "R74_dog_rain_s0_ETA03/preview.jpg",
+      "bytes": 46806,
+      "crc32": 3130130307
+    },
+    {
+      "path": "R74_dog_rain_s0_ETA03/pattern.jpg",
+      "bytes": 16483,
+      "crc32": 2055477673
+    },
+    {
+      "path": "R74_dog_rain_s0_ETA03/record.json",
+      "bytes": 10115,
+      "crc32": 2242554451
+    },
+    {
+      "path": "R74_dog_rain_s0_ETA03/steps.json",
+      "bytes": 28428,
+      "crc32": 684594565
+    },
+    {
+      "path": "R74_dog_rain_s0_KV100/preview.jpg",
+      "bytes": 29755,
+      "crc32": 2925967249
+    },
+    {
+      "path": "R74_dog_rain_s0_KV100/pattern.jpg",
+      "bytes": 14330,
+      "crc32": 625417022
+    },
+    {
+      "path": "R74_dog_rain_s0_KV100/record.json",
+      "bytes": 10147,
+      "crc32": 3525948304
+    },
+    {
+      "path": "R74_dog_rain_s0_KV100/steps.json",
+      "bytes": 172111,
+      "crc32": 3612810387
+    },
+    {
+      "path": "R74_dog_rain_s0_C50/preview.jpg",
+      "bytes": 40578,
+      "crc32": 3307568502
+    },
+    {
+      "path": "R74_dog_rain_s0_C50/pattern.jpg",
+      "bytes": 18524,
+      "crc32": 2349131556
+    },
+    {
+      "path": "R74_dog_rain_s0_C50/record.json",
+      "bytes": 10163,
+      "crc32": 2235010599
+    },
+    {
+      "path": "R74_dog_rain_s0_C50/steps.json",
+      "bytes": 173682,
+      "crc32": 522200229
+    },
+    {
+      "path": "R74_dog_rain_s0_C100/preview.jpg",
+      "bytes": 51280,
+      "crc32": 1657939115
+    },
+    {
+      "path": "R74_dog_rain_s0_C100/pattern.jpg",
+      "bytes": 19636,
+      "crc32": 2748552164
+    },
+    {
+      "path": "R74_dog_rain_s0_C100/record.json",
+      "bytes": 10171,
+      "crc32": 93918696
+    },
+    {
+      "path": "R74_dog_rain_s0_C100/steps.json",
+      "bytes": 173608,
+      "crc32": 60670432
+    },
+    {
+      "path": "R74_dog_rain_s0_SPLIT0/preview.jpg",
+      "bytes": 29835,
+      "crc32": 2868722319
+    },
+    {
+      "path": "R74_dog_rain_s0_SPLIT0/pattern.jpg",
+      "bytes": 14712,
+      "crc32": 1781293646
+    },
+    {
+      "path": "R74_dog_rain_s0_SPLIT0/record.json",
+      "bytes": 10206,
+      "crc32": 849657338
+    },
+    {
+      "path": "R74_dog_rain_s0_SPLIT0/steps.json",
+      "bytes": 175297,
+      "crc32": 3774119305
+    },
+    {
+      "path": "R74_dog_rain_s0_SPLIT50/preview.jpg",
+      "bytes": 35790,
+      "crc32": 4073958904
+    },
+    {
+      "path": "R74_dog_rain_s0_SPLIT50/pattern.jpg",
+      "bytes": 16687,
+      "crc32": 3836665730
+    },
+    {
+      "path": "R74_dog_rain_s0_SPLIT50/record.json",
+      "bytes": 10212,
+      "crc32": 1293790461
+    },
+    {
+      "path": "R74_dog_rain_s0_SPLIT50/steps.json",
+      "bytes": 175445,
+      "crc32": 1839958824
+    },
+    {
+      "path": "R74_dog_rain_s0_FLOWEDIT/preview.jpg",
+      "bytes": 47234,
+      "crc32": 3405538717
+    },
+    {
+      "path": "R74_dog_rain_s0_FLOWEDIT/pattern.jpg",
+      "bytes": 19467,
+      "crc32": 1531596310
+    },
+    {
+      "path": "R74_dog_rain_s0_FLOWEDIT/record.json",
+      "bytes": 10405,
+      "crc32": 3471549333
+    },
+    {
+      "path": "R74_dog_rain_s0_FLOWEDIT/steps.json",
+      "bytes": 1057,
+      "crc32": 3415321987
+    },
+    {
+      "path": "R74_dog_rain_s17_RAW/preview.jpg",
+      "bytes": 30680,
+      "crc32": 3774404499
+    },
+    {
+      "path": "R74_dog_rain_s17_RAW/pattern.jpg",
+      "bytes": 12095,
+      "crc32": 2973996444
+    },
+    {
+      "path": "R74_dog_rain_s17_RAW/record.json",
+      "bytes": 10106,
+      "crc32": 132103983
+    },
+    {
+      "path": "R74_dog_rain_s17_RAW/steps.json",
+      "bytes": 28355,
+      "crc32": 1370291191
+    },
+    {
+      "path": "R74_dog_rain_s17_ETA03/preview.jpg",
+      "bytes": 46495,
+      "crc32": 249164173
+    },
+    {
+      "path": "R74_dog_rain_s17_ETA03/pattern.jpg",
+      "bytes": 16100,
+      "crc32": 1543074554
+    },
+    {
+      "path": "R74_dog_rain_s17_ETA03/record.json",
+      "bytes": 10117,
+      "crc32": 727970334
+    },
+    {
+      "path": "R74_dog_rain_s17_ETA03/steps.json",
+      "bytes": 28443,
+      "crc32": 767137408
+    },
+    {
+      "path": "R74_dog_rain_s17_KV100/preview.jpg",
+      "bytes": 26414,
+      "crc32": 1483609547
+    },
+    {
+      "path": "R74_dog_rain_s17_KV100/pattern.jpg",
+      "bytes": 10713,
+      "crc32": 3384819029
+    },
+    {
+      "path": "R74_dog_rain_s17_KV100/record.json",
+      "bytes": 10150,
+      "crc32": 316086139
+    },
+    {
+      "path": "R74_dog_rain_s17_KV100/steps.json",
+      "bytes": 172121,
+      "crc32": 3543959326
+    },
+    {
+      "path": "R74_dog_rain_s17_C50/preview.jpg",
+      "bytes": 42192,
+      "crc32": 3951032173
+    },
+    {
+      "path": "R74_dog_rain_s17_C50/pattern.jpg",
+      "bytes": 18325,
+      "crc32": 3589339286
+    },
+    {
+      "path": "R74_dog_rain_s17_C50/record.json",
+      "bytes": 10170,
+      "crc32": 3021325775
+    },
+    {
+      "path": "R74_dog_rain_s17_C50/steps.json",
+      "bytes": 173640,
+      "crc32": 3557290444
+    },
+    {
+      "path": "R74_dog_rain_s17_C100/preview.jpg",
+      "bytes": 53308,
+      "crc32": 190775213
+    },
+    {
+      "path": "R74_dog_rain_s17_C100/pattern.jpg",
+      "bytes": 20656,
+      "crc32": 3271031041
+    },
+    {
+      "path": "R74_dog_rain_s17_C100/record.json",
+      "bytes": 10173,
+      "crc32": 4037727441
+    },
+    {
+      "path": "R74_dog_rain_s17_C100/steps.json",
+      "bytes": 173593,
+      "crc32": 193757826
+    },
+    {
+      "path": "R74_dog_rain_s17_SPLIT0/preview.jpg",
+      "bytes": 27816,
+      "crc32": 785162006
+    },
+    {
+      "path": "R74_dog_rain_s17_SPLIT0/pattern.jpg",
+      "bytes": 12199,
+      "crc32": 2096311576
+    },
+    {
+      "path": "R74_dog_rain_s17_SPLIT0/record.json",
+      "bytes": 10211,
+      "crc32": 3113682484
+    },
+    {
+      "path": "R74_dog_rain_s17_SPLIT0/steps.json",
+      "bytes": 175263,
+      "crc32": 638662165
+    },
+    {
+      "path": "R74_dog_rain_s17_SPLIT50/preview.jpg",
+      "bytes": 35748,
+      "crc32": 4212346305
+    },
+    {
+      "path": "R74_dog_rain_s17_SPLIT50/pattern.jpg",
+      "bytes": 15904,
+      "crc32": 1485413116
+    },
+    {
+      "path": "R74_dog_rain_s17_SPLIT50/record.json",
+      "bytes": 10217,
+      "crc32": 1554174367
+    },
+    {
+      "path": "R74_dog_rain_s17_SPLIT50/steps.json",
+      "bytes": 175355,
+      "crc32": 1547909304
+    },
+    {
+      "path": "R74_dog_rain_s17_FLOWEDIT/preview.jpg",
+      "bytes": 46657,
+      "crc32": 2214594195
+    },
+    {
+      "path": "R74_dog_rain_s17_FLOWEDIT/pattern.jpg",
+      "bytes": 18887,
+      "crc32": 640175095
+    },
+    {
+      "path": "R74_dog_rain_s17_FLOWEDIT/record.json",
+      "bytes": 10411,
+      "crc32": 943552957
+    },
+    {
+      "path": "R74_dog_rain_s17_FLOWEDIT/steps.json",
+      "bytes": 1058,
+      "crc32": 865696958
+    },
+    {
+      "path": "R74_shirt_studio_s0_RAW/preview.jpg",
+      "bytes": 17620,
+      "crc32": 320180568
+    },
+    {
+      "path": "R74_shirt_studio_s0_RAW/pattern.jpg",
+      "bytes": 5881,
+      "crc32": 253717889
+    },
+    {
+      "path": "R74_shirt_studio_s0_RAW/record.json",
+      "bytes": 10241,
+      "crc32": 668632124
+    },
+    {
+      "path": "R74_shirt_studio_s0_RAW/steps.json",
+      "bytes": 28343,
+      "crc32": 1076718944
+    },
+    {
+      "path": "R74_shirt_studio_s0_ETA03/preview.jpg",
+      "bytes": 22437,
+      "crc32": 157031122
+    },
+    {
+      "path": "R74_shirt_studio_s0_ETA03/pattern.jpg",
+      "bytes": 6199,
+      "crc32": 3412009517
+    },
+    {
+      "path": "R74_shirt_studio_s0_ETA03/record.json",
+      "bytes": 10256,
+      "crc32": 136394402
+    },
+    {
+      "path": "R74_shirt_studio_s0_ETA03/steps.json",
+      "bytes": 28435,
+      "crc32": 2249828008
+    },
+    {
+      "path": "R74_shirt_studio_s0_KV100/preview.jpg",
+      "bytes": 20780,
+      "crc32": 3524243098
+    },
+    {
+      "path": "R74_shirt_studio_s0_KV100/pattern.jpg",
+      "bytes": 5502,
+      "crc32": 2783733167
+    },
+    {
+      "path": "R74_shirt_studio_s0_KV100/record.json",
+      "bytes": 10285,
+      "crc32": 3329105332
+    },
+    {
+      "path": "R74_shirt_studio_s0_KV100/steps.json",
+      "bytes": 172027,
+      "crc32": 410164384
+    },
+    {
+      "path": "R74_shirt_studio_s0_C50/preview.jpg",
+      "bytes": 19997,
+      "crc32": 2250082267
+    },
+    {
+      "path": "R74_shirt_studio_s0_C50/pattern.jpg",
+      "bytes": 5967,
+      "crc32": 1735006693
+    },
+    {
+      "path": "R74_shirt_studio_s0_C50/record.json",
+      "bytes": 10305,
+      "crc32": 1612109198
+    },
+    {
+      "path": "R74_shirt_studio_s0_C50/steps.json",
+      "bytes": 173643,
+      "crc32": 1298340992
+    },
+    {
+      "path": "R74_shirt_studio_s0_C100/preview.jpg",
+      "bytes": 23997,
+      "crc32": 414838011
+    },
+    {
+      "path": "R74_shirt_studio_s0_C100/pattern.jpg",
+      "bytes": 7287,
+      "crc32": 805565158
+    },
+    {
+      "path": "R74_shirt_studio_s0_C100/record.json",
+      "bytes": 10309,
+      "crc32": 1343448807
+    },
+    {
+      "path": "R74_shirt_studio_s0_C100/steps.json",
+      "bytes": 173837,
+      "crc32": 3957240590
+    },
+    {
+      "path": "R74_shirt_studio_s0_SPLIT0/preview.jpg",
+      "bytes": 18210,
+      "crc32": 526990743
+    },
+    {
+      "path": "R74_shirt_studio_s0_SPLIT0/pattern.jpg",
+      "bytes": 3758,
+      "crc32": 1887046626
+    },
+    {
+      "path": "R74_shirt_studio_s0_SPLIT0/record.json",
+      "bytes": 10345,
+      "crc32": 1309906915
+    },
+    {
+      "path": "R74_shirt_studio_s0_SPLIT0/steps.json",
+      "bytes": 175306,
+      "crc32": 46963706
+    },
+    {
+      "path": "R74_shirt_studio_s0_SPLIT50/preview.jpg",
+      "bytes": 19841,
+      "crc32": 4098602077
+    },
+    {
+      "path": "R74_shirt_studio_s0_SPLIT50/pattern.jpg",
+      "bytes": 5412,
+      "crc32": 3244783007
+    },
+    {
+      "path": "R74_shirt_studio_s0_SPLIT50/record.json",
+      "bytes": 10350,
+      "crc32": 2513200390
+    },
+    {
+      "path": "R74_shirt_studio_s0_SPLIT50/steps.json",
+      "bytes": 175320,
+      "crc32": 2528816432
+    },
+    {
+      "path": "R74_shirt_studio_s0_FLOWEDIT/preview.jpg",
+      "bytes": 27441,
+      "crc32": 49138094
+    },
+    {
+      "path": "R74_shirt_studio_s0_FLOWEDIT/pattern.jpg",
+      "bytes": 6264,
+      "crc32": 2061788869
+    },
+    {
+      "path": "R74_shirt_studio_s0_FLOWEDIT/record.json",
+      "bytes": 10544,
+      "crc32": 841275016
+    },
+    {
+      "path": "R74_shirt_studio_s0_FLOWEDIT/steps.json",
+      "bytes": 1057,
+      "crc32": 3415321987
+    },
+    {
+      "path": "R74_shirt_studio_s17_RAW/preview.jpg",
+      "bytes": 19371,
+      "crc32": 3343451476
+    },
+    {
+      "path": "R74_shirt_studio_s17_RAW/pattern.jpg",
+      "bytes": 7366,
+      "crc32": 1000061952
+    },
+    {
+      "path": "R74_shirt_studio_s17_RAW/record.json",
+      "bytes": 10246,
+      "crc32": 63811172
+    },
+    {
+      "path": "R74_shirt_studio_s17_RAW/steps.json",
+      "bytes": 28356,
+      "crc32": 2838000106
+    },
+    {
+      "path": "R74_shirt_studio_s17_ETA03/preview.jpg",
+      "bytes": 23171,
+      "crc32": 803609792
+    },
+    {
+      "path": "R74_shirt_studio_s17_ETA03/pattern.jpg",
+      "bytes": 6334,
+      "crc32": 900165114
+    },
+    {
+      "path": "R74_shirt_studio_s17_ETA03/record.json",
+      "bytes": 10257,
+      "crc32": 227853694
+    },
+    {
+      "path": "R74_shirt_studio_s17_ETA03/steps.json",
+      "bytes": 28435,
+      "crc32": 1322296048
+    },
+    {
+      "path": "R74_shirt_studio_s17_KV100/preview.jpg",
+      "bytes": 19789,
+      "crc32": 4041893406
+    },
+    {
+      "path": "R74_shirt_studio_s17_KV100/pattern.jpg",
+      "bytes": 6018,
+      "crc32": 4288845441
+    },
+    {
+      "path": "R74_shirt_studio_s17_KV100/record.json",
+      "bytes": 10290,
+      "crc32": 2345382615
+    },
+    {
+      "path": "R74_shirt_studio_s17_KV100/steps.json",
+      "bytes": 171993,
+      "crc32": 1572208397
+    },
+    {
+      "path": "R74_shirt_studio_s17_C50/preview.jpg",
+      "bytes": 20846,
+      "crc32": 799660224
+    },
+    {
+      "path": "R74_shirt_studio_s17_C50/pattern.jpg",
+      "bytes": 6665,
+      "crc32": 2671588820
+    },
+    {
+      "path": "R74_shirt_studio_s17_C50/record.json",
+      "bytes": 10309,
+      "crc32": 2444729513
+    },
+    {
+      "path": "R74_shirt_studio_s17_C50/steps.json",
+      "bytes": 173628,
+      "crc32": 3247443390
+    },
+    {
+      "path": "R74_shirt_studio_s17_C100/preview.jpg",
+      "bytes": 25586,
+      "crc32": 4280971659
+    },
+    {
+      "path": "R74_shirt_studio_s17_C100/pattern.jpg",
+      "bytes": 7567,
+      "crc32": 1695810628
+    },
+    {
+      "path": "R74_shirt_studio_s17_C100/record.json",
+      "bytes": 10308,
+      "crc32": 465958223
+    },
+    {
+      "path": "R74_shirt_studio_s17_C100/steps.json",
+      "bytes": 173738,
+      "crc32": 3512865560
+    },
+    {
+      "path": "R74_shirt_studio_s17_SPLIT0/preview.jpg",
+      "bytes": 17539,
+      "crc32": 504144568
+    },
+    {
+      "path": "R74_shirt_studio_s17_SPLIT0/pattern.jpg",
+      "bytes": 4644,
+      "crc32": 2243392014
+    },
+    {
+      "path": "R74_shirt_studio_s17_SPLIT0/record.json",
+      "bytes": 10351,
+      "crc32": 106280722
+    },
+    {
+      "path": "R74_shirt_studio_s17_SPLIT0/steps.json",
+      "bytes": 175410,
+      "crc32": 3569545971
+    },
+    {
+      "path": "R74_shirt_studio_s17_SPLIT50/preview.jpg",
+      "bytes": 19325,
+      "crc32": 2467106809
+    },
+    {
+      "path": "R74_shirt_studio_s17_SPLIT50/pattern.jpg",
+      "bytes": 5391,
+      "crc32": 4256556981
+    },
+    {
+      "path": "R74_shirt_studio_s17_SPLIT50/record.json",
+      "bytes": 10354,
+      "crc32": 1144630563
+    },
+    {
+      "path": "R74_shirt_studio_s17_SPLIT50/steps.json",
+      "bytes": 175338,
+      "crc32": 2290731811
+    },
+    {
+      "path": "R74_shirt_studio_s17_FLOWEDIT/preview.jpg",
+      "bytes": 26826,
+      "crc32": 588925407
+    },
+    {
+      "path": "R74_shirt_studio_s17_FLOWEDIT/pattern.jpg",
+      "bytes": 6252,
+      "crc32": 2498215427
+    },
+    {
+      "path": "R74_shirt_studio_s17_FLOWEDIT/record.json",
+      "bytes": 10550,
+      "crc32": 1196742661
+    },
+    {
+      "path": "R74_shirt_studio_s17_FLOWEDIT/steps.json",
+      "bytes": 1058,
+      "crc32": 865696958
+    },
+    {
+      "path": "R74_rug_floor_s0_RAW/preview.jpg",
+      "bytes": 41887,
+      "crc32": 3272571716
+    },
+    {
+      "path": "R74_rug_floor_s0_RAW/pattern.jpg",
+      "bytes": 34568,
+      "crc32": 1689578373
+    },
+    {
+      "path": "R74_rug_floor_s0_RAW/record.json",
+      "bytes": 10312,
+      "crc32": 3722476083
+    },
+    {
+      "path": "R74_rug_floor_s0_RAW/steps.json",
+      "bytes": 28354,
+      "crc32": 3787587783
+    },
+    {
+      "path": "R74_rug_floor_s0_ETA03/preview.jpg",
+      "bytes": 31244,
+      "crc32": 3179375541
+    },
+    {
+      "path": "R74_rug_floor_s0_ETA03/pattern.jpg",
+      "bytes": 18062,
+      "crc32": 3861449642
+    },
+    {
+      "path": "R74_rug_floor_s0_ETA03/record.json",
+      "bytes": 10328,
+      "crc32": 3259023824
+    },
+    {
+      "path": "R74_rug_floor_s0_ETA03/steps.json",
+      "bytes": 28439,
+      "crc32": 1277682537
+    },
+    {
+      "path": "R74_rug_floor_s0_KV100/preview.jpg",
+      "bytes": 46116,
+      "crc32": 2593551678
+    },
+    {
+      "path": "R74_rug_floor_s0_KV100/pattern.jpg",
+      "bytes": 32825,
+      "crc32": 2321769874
+    },
+    {
+      "path": "R74_rug_floor_s0_KV100/record.json",
+      "bytes": 10361,
+      "crc32": 3179292036
+    },
+    {
+      "path": "R74_rug_floor_s0_KV100/steps.json",
+      "bytes": 172113,
+      "crc32": 3708071643
+    },
+    {
+      "path": "R74_rug_floor_s0_C50/preview.jpg",
+      "bytes": 36378,
+      "crc32": 321921112
+    },
+    {
+      "path": "R74_rug_floor_s0_C50/pattern.jpg",
+      "bytes": 23064,
+      "crc32": 1212023332
+    },
+    {
+      "path": "R74_rug_floor_s0_C50/record.json",
+      "bytes": 10378,
+      "crc32": 3057044510
+    },
+    {
+      "path": "R74_rug_floor_s0_C50/steps.json",
+      "bytes": 173771,
+      "crc32": 3979335945
+    },
+    {
+      "path": "R74_rug_floor_s0_C100/preview.jpg",
+      "bytes": 29926,
+      "crc32": 3820432897
+    },
+    {
+      "path": "R74_rug_floor_s0_C100/pattern.jpg",
+      "bytes": 15354,
+      "crc32": 4227720473
+    },
+    {
+      "path": "R74_rug_floor_s0_C100/record.json",
+      "bytes": 10383,
+      "crc32": 1446067058
+    },
+    {
+      "path": "R74_rug_floor_s0_C100/steps.json",
+      "bytes": 173707,
+      "crc32": 3476673025
+    },
+    {
+      "path": "R74_rug_floor_s0_SPLIT0/preview.jpg",
+      "bytes": 34090,
+      "crc32": 1505683114
+    },
+    {
+      "path": "R74_rug_floor_s0_SPLIT0/pattern.jpg",
+      "bytes": 22341,
+      "crc32": 4027471327
+    },
+    {
+      "path": "R74_rug_floor_s0_SPLIT0/record.json",
+      "bytes": 10423,
+      "crc32": 238689252
+    },
+    {
+      "path": "R74_rug_floor_s0_SPLIT0/steps.json",
+      "bytes": 175434,
+      "crc32": 3708520724
+    },
+    {
+      "path": "R74_rug_floor_s0_SPLIT50/preview.jpg",
+      "bytes": 35548,
+      "crc32": 4261436126
+    },
+    {
+      "path": "R74_rug_floor_s0_SPLIT50/pattern.jpg",
+      "bytes": 22804,
+      "crc32": 2774754586
+    },
+    {
+      "path": "R74_rug_floor_s0_SPLIT50/record.json",
+      "bytes": 10426,
+      "crc32": 2717031158
+    },
+    {
+      "path": "R74_rug_floor_s0_SPLIT50/steps.json",
+      "bytes": 175477,
+      "crc32": 1745508451
+    },
+    {
+      "path": "R74_rug_floor_s0_FLOWEDIT/preview.jpg",
+      "bytes": 32691,
+      "crc32": 2898963061
+    },
+    {
+      "path": "R74_rug_floor_s0_FLOWEDIT/pattern.jpg",
+      "bytes": 16190,
+      "crc32": 1320882921
+    },
+    {
+      "path": "R74_rug_floor_s0_FLOWEDIT/record.json",
+      "bytes": 10620,
+      "crc32": 1844560773
+    },
+    {
+      "path": "R74_rug_floor_s0_FLOWEDIT/steps.json",
+      "bytes": 1057,
+      "crc32": 3415321987
+    },
+    {
+      "path": "R74_rug_floor_s17_RAW/preview.jpg",
+      "bytes": 44535,
+      "crc32": 3393612679
+    },
+    {
+      "path": "R74_rug_floor_s17_RAW/pattern.jpg",
+      "bytes": 36950,
+      "crc32": 2110281398
+    },
+    {
+      "path": "R74_rug_floor_s17_RAW/record.json",
+      "bytes": 10321,
+      "crc32": 3644845418
+    },
+    {
+      "path": "R74_rug_floor_s17_RAW/steps.json",
+      "bytes": 28356,
+      "crc32": 1927451224
+    },
+    {
+      "path": "R74_rug_floor_s17_ETA03/preview.jpg",
+      "bytes": 33923,
+      "crc32": 3754750713
+    },
+    {
+      "path": "R74_rug_floor_s17_ETA03/pattern.jpg",
+      "bytes": 19728,
+      "crc32": 1855232874
+    },
+    {
+      "path": "R74_rug_floor_s17_ETA03/record.json",
+      "bytes": 10331,
+      "crc32": 2388162321
+    },
+    {
+      "path": "R74_rug_floor_s17_ETA03/steps.json",
+      "bytes": 28442,
+      "crc32": 1568889568
+    },
+    {
+      "path": "R74_rug_floor_s17_KV100/preview.jpg",
+      "bytes": 47644,
+      "crc32": 1474601468
+    },
+    {
+      "path": "R74_rug_floor_s17_KV100/pattern.jpg",
+      "bytes": 35589,
+      "crc32": 2548953753
+    },
+    {
+      "path": "R74_rug_floor_s17_KV100/record.json",
+      "bytes": 10362,
+      "crc32": 3826335060
+    },
+    {
+      "path": "R74_rug_floor_s17_KV100/steps.json",
+      "bytes": 172106,
+      "crc32": 2793053994
+    },
+    {
+      "path": "R74_rug_floor_s17_C50/preview.jpg",
+      "bytes": 34597,
+      "crc32": 1328952840
+    },
+    {
+      "path": "R74_rug_floor_s17_C50/pattern.jpg",
+      "bytes": 23945,
+      "crc32": 194780524
+    },
+    {
+      "path": "R74_rug_floor_s17_C50/record.json",
+      "bytes": 10382,
+      "crc32": 3215477113
+    },
+    {
+      "path": "R74_rug_floor_s17_C50/steps.json",
+      "bytes": 173705,
+      "crc32": 1496260932
+    },
+    {
+      "path": "R74_rug_floor_s17_C100/preview.jpg",
+      "bytes": 27240,
+      "crc32": 557375329
+    },
+    {
+      "path": "R74_rug_floor_s17_C100/pattern.jpg",
+      "bytes": 13636,
+      "crc32": 4177288825
+    },
+    {
+      "path": "R74_rug_floor_s17_C100/record.json",
+      "bytes": 10390,
+      "crc32": 74738026
+    },
+    {
+      "path": "R74_rug_floor_s17_C100/steps.json",
+      "bytes": 173680,
+      "crc32": 1860757395
+    },
+    {
+      "path": "R74_rug_floor_s17_SPLIT0/preview.jpg",
+      "bytes": 38025,
+      "crc32": 1733232828
+    },
+    {
+      "path": "R74_rug_floor_s17_SPLIT0/pattern.jpg",
+      "bytes": 26509,
+      "crc32": 2382455255
+    },
+    {
+      "path": "R74_rug_floor_s17_SPLIT0/record.json",
+      "bytes": 10424,
+      "crc32": 3243494740
+    },
+    {
+      "path": "R74_rug_floor_s17_SPLIT0/steps.json",
+      "bytes": 175379,
+      "crc32": 2246406006
+    },
+    {
+      "path": "R74_rug_floor_s17_SPLIT50/preview.jpg",
+      "bytes": 36304,
+      "crc32": 3519192764
+    },
+    {
+      "path": "R74_rug_floor_s17_SPLIT50/pattern.jpg",
+      "bytes": 25248,
+      "crc32": 3993032131
+    },
+    {
+      "path": "R74_rug_floor_s17_SPLIT50/record.json",
+      "bytes": 10430,
+      "crc32": 1783424995
+    },
+    {
+      "path": "R74_rug_floor_s17_SPLIT50/steps.json",
+      "bytes": 175379,
+      "crc32": 3374452255
+    },
+    {
+      "path": "R74_rug_floor_s17_FLOWEDIT/preview.jpg",
+      "bytes": 32716,
+      "crc32": 3548136528
+    },
+    {
+      "path": "R74_rug_floor_s17_FLOWEDIT/pattern.jpg",
+      "bytes": 17716,
+      "crc32": 4261703212
+    },
+    {
+      "path": "R74_rug_floor_s17_FLOWEDIT/record.json",
+      "bytes": 10625,
+      "crc32": 180263802
+    },
+    {
+      "path": "R74_rug_floor_s17_FLOWEDIT/steps.json",
+      "bytes": 1058,
+      "crc32": 865696958
+    },
+    {
+      "path": "R74_cup_night_recon_s10_RECON_FULL/preview.jpg",
+      "bytes": 35919,
+      "crc32": 3156434290
+    },
+    {
+      "path": "R74_cup_night_recon_s10_RECON_FULL/pattern.jpg",
+      "bytes": 14802,
+      "crc32": 3801389624
+    },
+    {
+      "path": "R74_cup_night_recon_s10_RECON_FULL/record.json",
+      "bytes": 10193,
+      "crc32": 4207392511
+    },
+    {
+      "path": "R74_cup_night_recon_s10_RECON_FULL/steps.json",
+      "bytes": 30056,
+      "crc32": 2337594150
+    },
+    {
+      "path": "R74_cup_night_recon_s10_RECON_SPLIT50/preview.jpg",
+      "bytes": 35295,
+      "crc32": 1525945936
+    },
+    {
+      "path": "R74_cup_night_recon_s10_RECON_SPLIT50/pattern.jpg",
+      "bytes": 15206,
+      "crc32": 1321439797
+    },
+    {
+      "path": "R74_cup_night_recon_s10_RECON_SPLIT50/record.json",
+      "bytes": 10234,
+      "crc32": 3214772746
+    },
+    {
+      "path": "R74_cup_night_recon_s10_RECON_SPLIT50/steps.json",
+      "bytes": 31723,
+      "crc32": 3170888054
+    },
+    {
+      "path": "R74_printed_shirt_studio_recon_s0_RECON_FULL/preview.jpg",
+      "bytes": 33665,
+      "crc32": 612399601
+    },
+    {
+      "path": "R74_printed_shirt_studio_recon_s0_RECON_FULL/pattern.jpg",
+      "bytes": 5806,
+      "crc32": 1354454692
+    },
+    {
+      "path": "R74_printed_shirt_studio_recon_s0_RECON_FULL/record.json",
+      "bytes": 10260,
+      "crc32": 1021071938
+    },
+    {
+      "path": "R74_printed_shirt_studio_recon_s0_RECON_FULL/steps.json",
+      "bytes": 30096,
+      "crc32": 103265975
+    },
+    {
+      "path": "R74_printed_shirt_studio_recon_s0_RECON_SPLIT50/preview.jpg",
+      "bytes": 29815,
+      "crc32": 844525651
+    },
+    {
+      "path": "R74_printed_shirt_studio_recon_s0_RECON_SPLIT50/pattern.jpg",
+      "bytes": 5400,
+      "crc32": 3422392533
+    },
+    {
+      "path": "R74_printed_shirt_studio_recon_s0_RECON_SPLIT50/record.json",
+      "bytes": 10295,
+      "crc32": 2457080597
+    },
+    {
+      "path": "R74_printed_shirt_studio_recon_s0_RECON_SPLIT50/steps.json",
+      "bytes": 31743,
+      "crc32": 2987233386
+    },
+    {
+      "path": "R74_butterfly_sunset_recon_s0_RECON_FULL/preview.jpg",
+      "bytes": 37310,
+      "crc32": 219100877
+    },
+    {
+      "path": "R74_butterfly_sunset_recon_s0_RECON_FULL/pattern.jpg",
+      "bytes": 14744,
+      "crc32": 4244733275
+    },
+    {
+      "path": "R74_butterfly_sunset_recon_s0_RECON_FULL/record.json",
+      "bytes": 10187,
+      "crc32": 2938596855
+    },
+    {
+      "path": "R74_butterfly_sunset_recon_s0_RECON_FULL/steps.json",
+      "bytes": 30084,
+      "crc32": 874423680
+    },
+    {
+      "path": "R74_butterfly_sunset_recon_s0_RECON_SPLIT50/preview.jpg",
+      "bytes": 33373,
+      "crc32": 1173459898
+    },
+    {
+      "path": "R74_butterfly_sunset_recon_s0_RECON_SPLIT50/pattern.jpg",
+      "bytes": 11698,
+      "crc32": 905808585
+    },
+    {
+      "path": "R74_butterfly_sunset_recon_s0_RECON_SPLIT50/record.json",
+      "bytes": 10226,
+      "crc32": 1864673563
+    },
+    {
+      "path": "R74_butterfly_sunset_recon_s0_RECON_SPLIT50/steps.json",
+      "bytes": 31757,
+      "crc32": 4163170569
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "index.html",
+      "bytes": 79519,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sources/522000000000_source_eval.png",
+      "bytes": 219922,
+      "reason": "native image"
+    },
+    {
+      "path": "sources/423000000000_source_eval.png",
+      "bytes": 236628,
+      "reason": "native image"
+    },
+    {
+      "path": "sources/622000000002_source_eval.png",
+      "bytes": 301936,
+      "reason": "native image"
+    },
+    {
+      "path": "sources/121000000003_source_eval.png",
+      "bytes": 459446,
+      "reason": "native image"
+    },
+    {
+      "path": "sources/321000000001_source_eval.png",
+      "bytes": 327712,
+      "reason": "native image"
+    },
+    {
+      "path": "sources/723000000002_source_eval.png",
+      "bytes": 306743,
+      "reason": "native image"
+    },
+    {
+      "path": "review/index.html",
+      "bytes": 122540,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/cup_night_s10.jpg",
+      "bytes": 164354,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/cup_night_s17.jpg",
+      "bytes": 167853,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/printed_shirt_studio_s0.jpg",
+      "bytes": 141481,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/printed_shirt_studio_s17.jpg",
+      "bytes": 142633,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/butterfly_sunset_s0.jpg",
+      "bytes": 171853,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/butterfly_sunset_s17.jpg",
+      "bytes": 168760,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_snow_s0.jpg",
+      "bytes": 151794,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_snow_s17.jpg",
+      "bytes": 152507,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_rain_s0.jpg",
+      "bytes": 153660,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_rain_s17.jpg",
+      "bytes": 154012,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/shirt_studio_s0.jpg",
+      "bytes": 93622,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/shirt_studio_s17.jpg",
+      "bytes": 94512,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/rug_floor_s0.jpg",
+      "bytes": 119533,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/rug_floor_s17.jpg",
+      "bytes": 123800,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/cup_night_recon_s10.jpg",
+      "bytes": 49350,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/printed_shirt_studio_recon_s0.jpg",
+      "bytes": 43461,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/butterfly_sunset_recon_s0.jpg",
+      "bytes": 47403,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "R74_cup_night_s10_RAW/raw.png",
+      "bytes": 292026,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_RAW/pattern.png",
+      "bytes": 57798,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_ETA03/raw.png",
+      "bytes": 341089,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_ETA03/pattern.png",
+      "bytes": 68793,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_KV100/raw.png",
+      "bytes": 302277,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_KV100/pattern.png",
+      "bytes": 62253,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_C50/raw.png",
+      "bytes": 327228,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_C50/pattern.png",
+      "bytes": 63667,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_C100/raw.png",
+      "bytes": 323818,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_C100/pattern.png",
+      "bytes": 62560,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT0/raw.png",
+      "bytes": 285569,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT0/pattern.png",
+      "bytes": 60438,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50/raw.png",
+      "bytes": 300352,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50/pattern.png",
+      "bytes": 63602,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_FLOWEDIT/raw.png",
+      "bytes": 341858,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_FLOWEDIT/pattern.png",
+      "bytes": 75344,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_C50_OFF/raw.png",
+      "bytes": 293306,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_C50_OFF/pattern.png",
+      "bytes": 57139,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50_OFF/raw.png",
+      "bytes": 285698,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50_OFF/pattern.png",
+      "bytes": 57868,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50_SRC_ONLY/raw.png",
+      "bytes": 317184,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s10_SPLIT50_SRC_ONLY/pattern.png",
+      "bytes": 62945,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_RAW/raw.png",
+      "bytes": 287045,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_RAW/pattern.png",
+      "bytes": 56329,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_ETA03/raw.png",
+      "bytes": 338750,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_ETA03/pattern.png",
+      "bytes": 71109,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_KV100/raw.png",
+      "bytes": 305547,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_KV100/pattern.png",
+      "bytes": 69273,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_C50/raw.png",
+      "bytes": 320483,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_C50/pattern.png",
+      "bytes": 65436,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_C100/raw.png",
+      "bytes": 348430,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_C100/pattern.png",
+      "bytes": 59966,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT0/raw.png",
+      "bytes": 270962,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT0/pattern.png",
+      "bytes": 55940,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50/raw.png",
+      "bytes": 282121,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50/pattern.png",
+      "bytes": 59744,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_FLOWEDIT/raw.png",
+      "bytes": 340458,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_FLOWEDIT/pattern.png",
+      "bytes": 69224,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_C50_OFF/raw.png",
+      "bytes": 301055,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_C50_OFF/pattern.png",
+      "bytes": 55322,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50_OFF/raw.png",
+      "bytes": 286823,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50_OFF/pattern.png",
+      "bytes": 54508,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50_SRC_ONLY/raw.png",
+      "bytes": 309467,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_s17_SPLIT50_SRC_ONLY/pattern.png",
+      "bytes": 64682,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_RAW/raw.png",
+      "bytes": 267282,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_RAW/pattern.png",
+      "bytes": 21531,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_ETA03/raw.png",
+      "bytes": 326244,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_ETA03/pattern.png",
+      "bytes": 23675,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_KV100/raw.png",
+      "bytes": 288151,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_KV100/pattern.png",
+      "bytes": 18872,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C50/raw.png",
+      "bytes": 295167,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C50/pattern.png",
+      "bytes": 19805,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C100/raw.png",
+      "bytes": 309555,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C100/pattern.png",
+      "bytes": 23717,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT0/raw.png",
+      "bytes": 271727,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT0/pattern.png",
+      "bytes": 19659,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50/raw.png",
+      "bytes": 289523,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50/pattern.png",
+      "bytes": 20673,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_FLOWEDIT/raw.png",
+      "bytes": 332897,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_FLOWEDIT/pattern.png",
+      "bytes": 25877,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C50_OFF/raw.png",
+      "bytes": 284072,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_C50_OFF/pattern.png",
+      "bytes": 22219,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50_OFF/raw.png",
+      "bytes": 266535,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50_OFF/pattern.png",
+      "bytes": 22485,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50_SRC_ONLY/raw.png",
+      "bytes": 299494,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_SPLIT50_SRC_ONLY/pattern.png",
+      "bytes": 20938,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_RAW/raw.png",
+      "bytes": 271926,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_RAW/pattern.png",
+      "bytes": 20784,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_ETA03/raw.png",
+      "bytes": 333444,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_ETA03/pattern.png",
+      "bytes": 25548,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_KV100/raw.png",
+      "bytes": 273254,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_KV100/pattern.png",
+      "bytes": 21666,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C50/raw.png",
+      "bytes": 298783,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C50/pattern.png",
+      "bytes": 23484,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C100/raw.png",
+      "bytes": 322673,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C100/pattern.png",
+      "bytes": 24772,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT0/raw.png",
+      "bytes": 261925,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT0/pattern.png",
+      "bytes": 20540,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50/raw.png",
+      "bytes": 274512,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50/pattern.png",
+      "bytes": 22490,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_FLOWEDIT/raw.png",
+      "bytes": 331943,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_FLOWEDIT/pattern.png",
+      "bytes": 26897,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C50_OFF/raw.png",
+      "bytes": 286016,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_C50_OFF/pattern.png",
+      "bytes": 22745,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50_OFF/raw.png",
+      "bytes": 275480,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50_OFF/pattern.png",
+      "bytes": 21285,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50_SRC_ONLY/raw.png",
+      "bytes": 307241,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_SPLIT50_SRC_ONLY/pattern.png",
+      "bytes": 25693,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_RAW/raw.png",
+      "bytes": 289237,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_RAW/pattern.png",
+      "bytes": 40457,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_ETA03/raw.png",
+      "bytes": 359057,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_ETA03/pattern.png",
+      "bytes": 55580,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_KV100/raw.png",
+      "bytes": 295895,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_KV100/pattern.png",
+      "bytes": 51141,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C50/raw.png",
+      "bytes": 336714,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C50/pattern.png",
+      "bytes": 58108,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C100/raw.png",
+      "bytes": 375232,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C100/pattern.png",
+      "bytes": 59815,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT0/raw.png",
+      "bytes": 295764,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT0/pattern.png",
+      "bytes": 52686,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50/raw.png",
+      "bytes": 323166,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50/pattern.png",
+      "bytes": 56180,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_FLOWEDIT/raw.png",
+      "bytes": 356739,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_FLOWEDIT/pattern.png",
+      "bytes": 60896,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C50_OFF/raw.png",
+      "bytes": 324942,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_C50_OFF/pattern.png",
+      "bytes": 43490,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50_OFF/raw.png",
+      "bytes": 311735,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50_OFF/pattern.png",
+      "bytes": 44498,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50_SRC_ONLY/raw.png",
+      "bytes": 317068,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s0_SPLIT50_SRC_ONLY/pattern.png",
+      "bytes": 51318,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_RAW/raw.png",
+      "bytes": 289734,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_RAW/pattern.png",
+      "bytes": 30834,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_ETA03/raw.png",
+      "bytes": 355424,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_ETA03/pattern.png",
+      "bytes": 53265,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_KV100/raw.png",
+      "bytes": 283038,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_KV100/pattern.png",
+      "bytes": 50533,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C50/raw.png",
+      "bytes": 324838,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C50/pattern.png",
+      "bytes": 57930,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C100/raw.png",
+      "bytes": 374105,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C100/pattern.png",
+      "bytes": 62710,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT0/raw.png",
+      "bytes": 286549,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT0/pattern.png",
+      "bytes": 51406,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50/raw.png",
+      "bytes": 309515,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50/pattern.png",
+      "bytes": 57021,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_FLOWEDIT/raw.png",
+      "bytes": 361115,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_FLOWEDIT/pattern.png",
+      "bytes": 61569,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C50_OFF/raw.png",
+      "bytes": 326723,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_C50_OFF/pattern.png",
+      "bytes": 39737,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50_OFF/raw.png",
+      "bytes": 326642,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50_OFF/pattern.png",
+      "bytes": 42131,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50_SRC_ONLY/raw.png",
+      "bytes": 308022,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_s17_SPLIT50_SRC_ONLY/pattern.png",
+      "bytes": 51939,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_RAW/raw.png",
+      "bytes": 287573,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_RAW/pattern.png",
+      "bytes": 65329,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_ETA03/raw.png",
+      "bytes": 447339,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_ETA03/pattern.png",
+      "bytes": 85035,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_KV100/raw.png",
+      "bytes": 332117,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_KV100/pattern.png",
+      "bytes": 74253,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_C50/raw.png",
+      "bytes": 418819,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_C50/pattern.png",
+      "bytes": 86227,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_C100/raw.png",
+      "bytes": 549970,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_C100/pattern.png",
+      "bytes": 95021,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_SPLIT0/raw.png",
+      "bytes": 335788,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_SPLIT0/pattern.png",
+      "bytes": 74505,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_SPLIT50/raw.png",
+      "bytes": 380943,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_SPLIT50/pattern.png",
+      "bytes": 82260,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_FLOWEDIT/raw.png",
+      "bytes": 451023,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s0_FLOWEDIT/pattern.png",
+      "bytes": 88059,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_RAW/raw.png",
+      "bytes": 289977,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_RAW/pattern.png",
+      "bytes": 75010,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_ETA03/raw.png",
+      "bytes": 466500,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_ETA03/pattern.png",
+      "bytes": 90346,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_KV100/raw.png",
+      "bytes": 288994,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_KV100/pattern.png",
+      "bytes": 62443,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_C50/raw.png",
+      "bytes": 444165,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_C50/pattern.png",
+      "bytes": 84635,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_C100/raw.png",
+      "bytes": 539078,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_C100/pattern.png",
+      "bytes": 99196,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_SPLIT0/raw.png",
+      "bytes": 293364,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_SPLIT0/pattern.png",
+      "bytes": 62858,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_SPLIT50/raw.png",
+      "bytes": 382226,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_SPLIT50/pattern.png",
+      "bytes": 75424,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_FLOWEDIT/raw.png",
+      "bytes": 450762,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_snow_s17_FLOWEDIT/pattern.png",
+      "bytes": 85378,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_RAW/raw.png",
+      "bytes": 332637,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_RAW/pattern.png",
+      "bytes": 65951,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_ETA03/raw.png",
+      "bytes": 451294,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_ETA03/pattern.png",
+      "bytes": 86067,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_KV100/raw.png",
+      "bytes": 328719,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_KV100/pattern.png",
+      "bytes": 76378,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_C50/raw.png",
+      "bytes": 416661,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_C50/pattern.png",
+      "bytes": 91895,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_C100/raw.png",
+      "bytes": 484934,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_C100/pattern.png",
+      "bytes": 88459,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_SPLIT0/raw.png",
+      "bytes": 327862,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_SPLIT0/pattern.png",
+      "bytes": 76337,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_SPLIT50/raw.png",
+      "bytes": 374496,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_SPLIT50/pattern.png",
+      "bytes": 84520,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_FLOWEDIT/raw.png",
+      "bytes": 443753,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s0_FLOWEDIT/pattern.png",
+      "bytes": 89262,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_RAW/raw.png",
+      "bytes": 327541,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_RAW/pattern.png",
+      "bytes": 66845,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_ETA03/raw.png",
+      "bytes": 439312,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_ETA03/pattern.png",
+      "bytes": 82932,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_KV100/raw.png",
+      "bytes": 292499,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_KV100/pattern.png",
+      "bytes": 62381,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_C50/raw.png",
+      "bytes": 437210,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_C50/pattern.png",
+      "bytes": 90410,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_C100/raw.png",
+      "bytes": 513830,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_C100/pattern.png",
+      "bytes": 91521,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_SPLIT0/raw.png",
+      "bytes": 308308,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_SPLIT0/pattern.png",
+      "bytes": 66308,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_SPLIT50/raw.png",
+      "bytes": 375816,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_SPLIT50/pattern.png",
+      "bytes": 79279,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_FLOWEDIT/raw.png",
+      "bytes": 439993,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_dog_rain_s17_FLOWEDIT/pattern.png",
+      "bytes": 86804,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_RAW/raw.png",
+      "bytes": 210445,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_RAW/pattern.png",
+      "bytes": 38254,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_ETA03/raw.png",
+      "bytes": 267399,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_ETA03/pattern.png",
+      "bytes": 42516,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_KV100/raw.png",
+      "bytes": 254644,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_KV100/pattern.png",
+      "bytes": 41651,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_C50/raw.png",
+      "bytes": 282548,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_C50/pattern.png",
+      "bytes": 50317,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_C100/raw.png",
+      "bytes": 281080,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_C100/pattern.png",
+      "bytes": 48553,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_SPLIT0/raw.png",
+      "bytes": 220458,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_SPLIT0/pattern.png",
+      "bytes": 30349,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_SPLIT50/raw.png",
+      "bytes": 256448,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_SPLIT50/pattern.png",
+      "bytes": 44087,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_FLOWEDIT/raw.png",
+      "bytes": 276374,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s0_FLOWEDIT/pattern.png",
+      "bytes": 40865,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_RAW/raw.png",
+      "bytes": 225972,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_RAW/pattern.png",
+      "bytes": 47159,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_ETA03/raw.png",
+      "bytes": 266494,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_ETA03/pattern.png",
+      "bytes": 42367,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_KV100/raw.png",
+      "bytes": 228363,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_KV100/pattern.png",
+      "bytes": 41382,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_C50/raw.png",
+      "bytes": 276411,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_C50/pattern.png",
+      "bytes": 49314,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_C100/raw.png",
+      "bytes": 307155,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_C100/pattern.png",
+      "bytes": 52798,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_SPLIT0/raw.png",
+      "bytes": 206507,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_SPLIT0/pattern.png",
+      "bytes": 33561,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_SPLIT50/raw.png",
+      "bytes": 230591,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_SPLIT50/pattern.png",
+      "bytes": 38768,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_FLOWEDIT/raw.png",
+      "bytes": 277562,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_shirt_studio_s17_FLOWEDIT/pattern.png",
+      "bytes": 40626,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_RAW/raw.png",
+      "bytes": 482131,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_RAW/pattern.png",
+      "bytes": 172686,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_ETA03/raw.png",
+      "bytes": 346163,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_ETA03/pattern.png",
+      "bytes": 103450,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_KV100/raw.png",
+      "bytes": 499713,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_KV100/pattern.png",
+      "bytes": 168556,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_C50/raw.png",
+      "bytes": 416121,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_C50/pattern.png",
+      "bytes": 137316,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_C100/raw.png",
+      "bytes": 297363,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_C100/pattern.png",
+      "bytes": 82307,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_SPLIT0/raw.png",
+      "bytes": 387360,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_SPLIT0/pattern.png",
+      "bytes": 131667,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_SPLIT50/raw.png",
+      "bytes": 402145,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_SPLIT50/pattern.png",
+      "bytes": 133202,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_FLOWEDIT/raw.png",
+      "bytes": 318795,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s0_FLOWEDIT/pattern.png",
+      "bytes": 84305,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_RAW/raw.png",
+      "bytes": 498798,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_RAW/pattern.png",
+      "bytes": 180056,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_ETA03/raw.png",
+      "bytes": 355709,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_ETA03/pattern.png",
+      "bytes": 110831,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_KV100/raw.png",
+      "bytes": 484914,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_KV100/pattern.png",
+      "bytes": 168805,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_C50/raw.png",
+      "bytes": 394730,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_C50/pattern.png",
+      "bytes": 136494,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_C100/raw.png",
+      "bytes": 275447,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_C100/pattern.png",
+      "bytes": 79862,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_SPLIT0/raw.png",
+      "bytes": 410280,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_SPLIT0/pattern.png",
+      "bytes": 141559,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_SPLIT50/raw.png",
+      "bytes": 407738,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_SPLIT50/pattern.png",
+      "bytes": 140461,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_FLOWEDIT/raw.png",
+      "bytes": 316592,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_rug_floor_s17_FLOWEDIT/pattern.png",
+      "bytes": 89465,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_recon_s10_RECON_FULL/raw.png",
+      "bytes": 345857,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_recon_s10_RECON_FULL/pattern.png",
+      "bytes": 70196,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_recon_s10_RECON_SPLIT50/raw.png",
+      "bytes": 328373,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_cup_night_recon_s10_RECON_SPLIT50/pattern.png",
+      "bytes": 62651,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_recon_s0_RECON_FULL/raw.png",
+      "bytes": 344518,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_recon_s0_RECON_FULL/pattern.png",
+      "bytes": 25470,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_recon_s0_RECON_SPLIT50/raw.png",
+      "bytes": 313529,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_printed_shirt_studio_recon_s0_RECON_SPLIT50/pattern.png",
+      "bytes": 22812,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_recon_s0_RECON_FULL/raw.png",
+      "bytes": 364686,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_recon_s0_RECON_FULL/pattern.png",
+      "bytes": 61793,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_recon_s0_RECON_SPLIT50/raw.png",
+      "bytes": 332201,
+      "reason": "native image"
+    },
+    {
+      "path": "R74_butterfly_sunset_recon_s0_RECON_SPLIT50/pattern.png",
+      "bytes": 51283,
+      "reason": "native image"
+    }
+  ],
+  "text_normalized_members": [
+    "plan.json"
+  ],
+  "original_manifest_note": "Archived code/plan/input hashes identify the historical run. Neutral naming and path redaction change published text; hashes are not recalculated or presented as hashes of this export.",
+  "available": {
+    "completed": 136,
+    "total_planned": 136,
+    "pending": 0,
+    "step_summaries": 0,
+    "record_json": 136,
+    "full_steps_json": 136,
+    "native_raw_png_in_archive": 136,
+    "float_map_npz": 0
+  },
+  "missing": "Native generated images retained only in original ZIP; intentionally excluded from Git.",
+  "local_archive_locator": "R74_*_MethodStudy.zip",
+  "original_mapping": "Historical method-study root/output label normalized to R74_MethodStudy."
+}

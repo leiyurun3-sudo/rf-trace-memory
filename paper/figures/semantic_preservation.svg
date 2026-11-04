@@ -7,7 +7,7 @@
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
     <dc:date>2026-11-02T15:24:47.977265</dc:date>
-    <dc:description>Directional CLIP (higher) versus preservation LPIPS (lower). Separate R84 dose and R85 independent populations. CLIP n=10/40; LPIPS n=8/33 because empty preservation masks are excluded. Original source-equal means and marginal 95% bootstrap intervals, no joint interval or frontier estimation. Only R84 CORR lambda15/25/35 joined. R85 RFEDIT seed0 only. Input tables: D:\科研论文资料\实验交付\FinalNight_Evaluated_Review\R84_FinalNight\evidence\overnight_arm_summary.csv; D:\科研论文资料\实验交付\FinalNight_Evaluated_Review\R85_FinalNight\evidence\overnight_arm_summary.csv</dc:description>
+    <dc:description>Directional CLIP (higher) versus preservation LPIPS (lower). Separate R84 dose and R85 independent populations. CLIP n=10/40; LPIPS n=8/33 because empty preservation masks are excluded. Original source-equal means and marginal 95% bootstrap intervals, no joint interval or frontier estimation. Only R84 CORR lambda15/25/35 joined. R85 RFEDIT seed0 only. Input tables: archive/R84_FinalNight/evidence/overnight_arm_summary.csv; archive/R85_FinalNight/evidence/overnight_arm_summary.csv</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>

@@ -1,0 +1,13 @@
+{
+  "pid": 1317,
+  "status": "completed",
+  "stage": "completed",
+  "planned": 70,
+  "completed": 70,
+  "failed": 0,
+  "updated": 1793327016.303088,
+  "job": "R79_rug_floor_s17_ROI_LOCAL25_OFF",
+  "step": 28,
+  "steps": 28,
+  "new_nfe": 6272
+}

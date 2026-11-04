@@ -1,0 +1,450 @@
+{
+  "source_archive": "R82_SoftSupport_Ready.zip",
+  "source_location": "delivery",
+  "source_archive_bytes": 3766530,
+  "strip_root": true,
+  "source_member_root": "R82_SoftSupport",
+  "included_members": [
+    {
+      "path": "analyze.py",
+      "bytes": 10163,
+      "crc32": 1147792864
+    },
+    {
+      "path": "attention.py",
+      "bytes": 23083,
+      "crc32": 3996663911
+    },
+    {
+      "path": "controls.py",
+      "bytes": 6197,
+      "crc32": 2553439375
+    },
+    {
+      "path": "engine.py",
+      "bytes": 19639,
+      "crc32": 1864017841
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 15292,
+      "crc32": 598219020
+    },
+    {
+      "path": "evidence_stats.py",
+      "bytes": 6638,
+      "crc32": 4182015559
+    },
+    {
+      "path": "external.py",
+      "bytes": 2959,
+      "crc32": 2827260217
+    },
+    {
+      "path": "external_rfedit.py",
+      "bytes": 13132,
+      "crc32": 3130897619
+    },
+    {
+      "path": "mint_backend.py",
+      "bytes": 3893,
+      "crc32": 2892078264
+    },
+    {
+      "path": "model_loader.py",
+      "bytes": 5512,
+      "crc32": 1113038759
+    },
+    {
+      "path": "plan.json",
+      "bytes": 139116,
+      "crc32": 3807118756
+    },
+    {
+      "path": "prepare_benchmark.py",
+      "bytes": 10242,
+      "crc32": 543561155
+    },
+    {
+      "path": "prepare_eval_models.py",
+      "bytes": 899,
+      "crc32": 1506967537
+    },
+    {
+      "path": "prepare_pie.py",
+      "bytes": 13798,
+      "crc32": 751597631
+    },
+    {
+      "path": "reporting.py",
+      "bytes": 35482,
+      "crc32": 2013000931
+    },
+    {
+      "path": "review.py",
+      "bytes": 3805,
+      "crc32": 226794586
+    },
+    {
+      "path": "rf_kv.py",
+      "bytes": 1282,
+      "crc32": 4037482886
+    },
+    {
+      "path": "runner.py",
+      "bytes": 23089,
+      "crc32": 3616310246
+    },
+    {
+      "path": "run_all.sh",
+      "bytes": 377,
+      "crc32": 2409701665
+    },
+    {
+      "path": "start.sh",
+      "bytes": 662,
+      "crc32": 3472380461
+    },
+    {
+      "path": "value.py",
+      "bytes": 1929,
+      "crc32": 955245182
+    },
+    {
+      "path": "frozen_references/manifest.json",
+      "bytes": 238595,
+      "crc32": 2193257257
+    },
+    {
+      "path": "frozen_references/metrics.csv",
+      "bytes": 53899,
+      "crc32": 3641069775
+    },
+    {
+      "path": "frozen_references/R81_pie_000000000072_s0_AUTO_DETAIL.jpg",
+      "bytes": 15472,
+      "crc32": 1140204779
+    },
+    {
+      "path": "frozen_references/R81_pie_000000000072_s0_U25_KV.jpg",
+      "bytes": 12978,
+      "crc32": 1993707908
+    },
+    {
+      "path": "frozen_references/R81_pie_000000000072_s17_AUTO_DETAIL.jpg",
+      "bytes": 15355,
+      "crc32": 1624736257
+    },
+    {
+      "path": "frozen_references/R81_pie_000000000072_s17_U25_KV.jpg",
+      "bytes": 11576,
+      "crc32": 1612899372
+    },
+    {
+      "path": "frozen_references/R81_pie_121000000006_s0_AUTO_DETAIL.jpg",
+      "bytes": 16282,
+      "crc32": 1004910425
+    },
+    {
+      "path": "frozen_references/R81_pie_121000000006_s0_U25_KV.jpg",
+      "bytes": 16756,
+      "crc32": 819566508
+    },
+    {
+      "path": "frozen_references/R81_pie_121000000006_s17_AUTO_DETAIL.jpg",
+      "bytes": 15951,
+      "crc32": 4225149862
+    },
+    {
+      "path": "frozen_references/R81_pie_121000000006_s17_U25_KV.jpg",
+      "bytes": 16253,
+      "crc32": 2973062186
+    },
+    {
+      "path": "frozen_references/R81_pie_223000000008_s0_AUTO_DETAIL.jpg",
+      "bytes": 24695,
+      "crc32": 1430499439
+    },
+    {
+      "path": "frozen_references/R81_pie_223000000008_s0_U25_KV.jpg",
+      "bytes": 24415,
+      "crc32": 941527876
+    },
+    {
+      "path": "frozen_references/R81_pie_223000000008_s17_AUTO_DETAIL.jpg",
+      "bytes": 25143,
+      "crc32": 134559293
+    },
+    {
+      "path": "frozen_references/R81_pie_223000000008_s17_U25_KV.jpg",
+      "bytes": 24151,
+      "crc32": 3699699485
+    },
+    {
+      "path": "frozen_references/R81_pie_323000000002_s0_AUTO_DETAIL.jpg",
+      "bytes": 21331,
+      "crc32": 686880872
+    },
+    {
+      "path": "frozen_references/R81_pie_323000000002_s0_U25_KV.jpg",
+      "bytes": 18456,
+      "crc32": 4041355200
+    },
+    {
+      "path": "frozen_references/R81_pie_323000000002_s17_AUTO_DETAIL.jpg",
+      "bytes": 21793,
+      "crc32": 2678316102
+    },
+    {
+      "path": "frozen_references/R81_pie_323000000002_s17_U25_KV.jpg",
+      "bytes": 19341,
+      "crc32": 2990351888
+    },
+    {
+      "path": "frozen_references/R81_pie_424000000001_s0_AUTO_DETAIL.jpg",
+      "bytes": 22956,
+      "crc32": 2361173917
+    },
+    {
+      "path": "frozen_references/R81_pie_424000000001_s0_U25_KV.jpg",
+      "bytes": 22401,
+      "crc32": 243531318
+    },
+    {
+      "path": "frozen_references/R81_pie_424000000001_s17_AUTO_DETAIL.jpg",
+      "bytes": 22896,
+      "crc32": 1841493986
+    },
+    {
+      "path": "frozen_references/R81_pie_424000000001_s17_U25_KV.jpg",
+      "bytes": 23217,
+      "crc32": 1259460204
+    },
+    {
+      "path": "frozen_references/R81_pie_523000000001_s0_AUTO_DETAIL.jpg",
+      "bytes": 24359,
+      "crc32": 171817881
+    },
+    {
+      "path": "frozen_references/R81_pie_523000000001_s0_U25_KV.jpg",
+      "bytes": 23841,
+      "crc32": 1863295821
+    },
+    {
+      "path": "frozen_references/R81_pie_523000000001_s17_AUTO_DETAIL.jpg",
+      "bytes": 22556,
+      "crc32": 1358856323
+    },
+    {
+      "path": "frozen_references/R81_pie_523000000001_s17_U25_KV.jpg",
+      "bytes": 22322,
+      "crc32": 1255871807
+    },
+    {
+      "path": "frozen_references/R81_pie_621000000004_s0_AUTO_DETAIL.jpg",
+      "bytes": 16653,
+      "crc32": 3447106697
+    },
+    {
+      "path": "frozen_references/R81_pie_621000000004_s0_U25_KV.jpg",
+      "bytes": 15672,
+      "crc32": 4042443542
+    },
+    {
+      "path": "frozen_references/R81_pie_621000000004_s17_AUTO_DETAIL.jpg",
+      "bytes": 16472,
+      "crc32": 223199427
+    },
+    {
+      "path": "frozen_references/R81_pie_621000000004_s17_U25_KV.jpg",
+      "bytes": 15513,
+      "crc32": 2450104219
+    },
+    {
+      "path": "frozen_references/R81_pie_713000000001_s0_AUTO_DETAIL.jpg",
+      "bytes": 21737,
+      "crc32": 2212341535
+    },
+    {
+      "path": "frozen_references/R81_pie_713000000001_s0_U25_KV.jpg",
+      "bytes": 17809,
+      "crc32": 569196085
+    },
+    {
+      "path": "frozen_references/R81_pie_713000000001_s17_AUTO_DETAIL.jpg",
+      "bytes": 22500,
+      "crc32": 237637937
+    },
+    {
+      "path": "frozen_references/R81_pie_713000000001_s17_U25_KV.jpg",
+      "bytes": 19181,
+      "crc32": 3828220042
+    },
+    {
+      "path": "data/000000000072/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/000000000072/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/000000000072/outer.png",
+      "bytes": 1913,
+      "crc32": 3749646575
+    },
+    {
+      "path": "data/121000000006/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/121000000006/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/121000000006/outer.png",
+      "bytes": 2566,
+      "crc32": 942496977
+    },
+    {
+      "path": "data/223000000008/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/223000000008/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/223000000008/outer.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/323000000002/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/323000000002/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/323000000002/outer.png",
+      "bytes": 1921,
+      "crc32": 878830196
+    },
+    {
+      "path": "data/424000000001/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/424000000001/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/424000000001/outer.png",
+      "bytes": 1884,
+      "crc32": 2003114148
+    },
+    {
+      "path": "data/523000000001/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/523000000001/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/523000000001/outer.png",
+      "bytes": 2102,
+      "crc32": 2070351068
+    },
+    {
+      "path": "data/621000000004/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/621000000004/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/621000000004/outer.png",
+      "bytes": 2852,
+      "crc32": 3065837439
+    },
+    {
+      "path": "data/713000000001/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/713000000001/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/713000000001/outer.png",
+      "bytes": 2756,
+      "crc32": 893902419
+    }
+  ],
+  "omitted_inputs": [
+    {
+      "path": "data/000000000072/source.png",
+      "bytes": 245090,
+      "crc32": 1157804496
+    },
+    {
+      "path": "data/121000000006/source.png",
+      "bytes": 359499,
+      "crc32": 2012994082
+    },
+    {
+      "path": "data/223000000008/source.png",
+      "bytes": 477494,
+      "crc32": 47233116
+    },
+    {
+      "path": "data/323000000002/source.png",
+      "bytes": 385036,
+      "crc32": 3056325520
+    },
+    {
+      "path": "data/424000000001/source.png",
+      "bytes": 411368,
+      "crc32": 1730738777
+    },
+    {
+      "path": "data/523000000001/source.png",
+      "bytes": 498487,
+      "crc32": 1765378448
+    },
+    {
+      "path": "data/621000000004/source.png",
+      "bytes": 326662,
+      "crc32": 3954188767
+    },
+    {
+      "path": "data/713000000001/source.png",
+      "bytes": 314237,
+      "crc32": 1116762589
+    }
+  ],
+  "excluded_members": [],
+  "text_normalized_members": [],
+  "archive_identity": "Original ZIP byte count and member CRC32 values; no new hashes computed.",
+  "status": "Archived workflow; no execution during synchronization."
+}

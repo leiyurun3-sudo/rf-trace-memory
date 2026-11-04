@@ -1,0 +1,19 @@
+{
+  "input": "paper/evidence/dose_profiles_20261103/source_arm_values.csv",
+  "method": "Complete seed-averaged source-arm profiles, source-centered outcomes and features, no intercept; LOSO excludes all rows of held-out source from coefficient fitting. Arm dummies omit last arm, then are centered. Skill = 1 - pooled LOSO SSE / pooled zero-deviation SSE.",
+  "scope": "Held-out outcome mean defines centered scoring labels; relative profile assessment conditional on complete outcomes, not prospective absolute prediction. Realized impulse is output-dependent. Exploratory, associational, fixed intervention menus; no causal attribution or uncertainty interval.",
+  "menus": {
+    "R84": [
+      "RELEASE_CORR15",
+      "RELEASE_CORR25",
+      "RELEASE_CORR35",
+      "ENERGY_MATCH25"
+    ],
+    "R85": [
+      "RELEASE_CORR25",
+      "ENERGY_MATCH25",
+      "U25_KV"
+    ]
+  },
+  "original_results": "Original analysis preserved; impulse + allocation is a different model from arm + impulse. Development-to-independent transfer remains the original analysis and changes the arm menu."
+}

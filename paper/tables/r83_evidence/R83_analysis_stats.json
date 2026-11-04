@@ -1,8 +1,8 @@
 {
   "inputs": {
-    "metrics": "D:\\科研论文资料\\实验结果\\R83_RequestMemory\\metrics.csv",
-    "comparison_metrics": "D:\\科研论文资料\\实验结果\\R83_RequestMemory\\comparison_metrics.csv",
-    "summary": "D:\\科研论文资料\\实验结果\\R83_RequestMemory\\summary.json"
+    "metrics": "paper/tables/r83_evidence/metrics.csv",
+    "comparison_metrics": "paper/tables/r83_evidence/comparison_metrics.csv",
+    "summary": "paper/tables/r83_evidence/summary.json"
   },
   "method": {
     "pair_key": [

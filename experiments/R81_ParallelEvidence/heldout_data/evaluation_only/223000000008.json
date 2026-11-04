@@ -1,0 +1,19 @@
+{
+  "case": "223000000008",
+  "usage": "evaluation_only_after_generation",
+  "official_record": {
+    "image_path": "2_add_object_80/2_natural/3_indoor/223000000008.jpg",
+    "original_prompt": "a bowl of strawberries and blueberries on a striped tablecloth",
+    "editing_prompt": "a bowl of strawberries and blueberries [and a lemon] on a striped tablecloth",
+    "editing_instruction": "Add a lemon to the bowl of strawberries and blueberries",
+    "editing_type_id": "2",
+    "blended_word": "bowl bowl",
+    "mask": [
+      0,
+      262144
+    ]
+  },
+  "mask_encoding": "zero_based_start_length_pairs_row_major_512x512",
+  "official_evaluator_boundary_policy": "set four border edges to edited=1",
+  "independence": "supplied dataset annotation; not a new human annotation or ground-truth edited image"
+}

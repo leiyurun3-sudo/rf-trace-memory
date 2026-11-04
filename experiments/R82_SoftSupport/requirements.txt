@@ -1,0 +1,2 @@
+-r ../R81_ParallelEvidence/requirements.txt
+-r ../R81_ParallelEvidence/requirements_eval.txt

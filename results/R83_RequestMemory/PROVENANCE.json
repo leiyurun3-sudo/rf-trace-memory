@@ -1,0 +1,2327 @@
+{
+  "source_archive": "R83_RequestMemory.zip",
+  "source_location": "Downloads",
+  "source_archive_bytes": 8205090,
+  "included_members": [
+    {
+      "path": "manifest.json",
+      "bytes": 6331,
+      "crc32": 619133295
+    },
+    {
+      "path": "summary.json",
+      "bytes": 993,
+      "crc32": 3611522591
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 150703,
+      "crc32": 2154037126
+    },
+    {
+      "path": "arm_summary.csv",
+      "bytes": 1963,
+      "crc32": 229254575
+    },
+    {
+      "path": "comparison_metrics.csv",
+      "bytes": 319337,
+      "crc32": 3558671275
+    },
+    {
+      "path": "comparison_arm_summary.csv",
+      "bytes": 3533,
+      "crc32": 2747141856
+    },
+    {
+      "path": "progress.json",
+      "bytes": 246,
+      "crc32": 4226241027
+    },
+    {
+      "path": "sources/223000000008.jpg",
+      "bytes": 29680,
+      "crc32": 470920884
+    },
+    {
+      "path": "sources/523000000001.jpg",
+      "bytes": 31085,
+      "crc32": 1513277839
+    },
+    {
+      "path": "sources/814000000001.jpg",
+      "bytes": 21000,
+      "crc32": 373818344
+    },
+    {
+      "path": "sources/323000000002.jpg",
+      "bytes": 22845,
+      "crc32": 3036091923
+    },
+    {
+      "path": "sources/922000000003.jpg",
+      "bytes": 13518,
+      "crc32": 3214617375
+    },
+    {
+      "path": "sources/424000000001.jpg",
+      "bytes": 28501,
+      "crc32": 3219907922
+    },
+    {
+      "path": "sources/121000000006.jpg",
+      "bytes": 22425,
+      "crc32": 3971841982
+    },
+    {
+      "path": "sources/713000000001.jpg",
+      "bytes": 20380,
+      "crc32": 1269846094
+    },
+    {
+      "path": "sources/621000000004.jpg",
+      "bytes": 17530,
+      "crc32": 3120631853
+    },
+    {
+      "path": "sources/000000000072.jpg",
+      "bytes": 12732,
+      "crc32": 715823642
+    },
+    {
+      "path": "R83_pie_000000000072_s0_REQUEST_MEMORY/preview.jpg",
+      "bytes": 13080,
+      "crc32": 2030336053
+    },
+    {
+      "path": "R83_pie_000000000072_s0_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 13040,
+      "crc32": 112558645
+    },
+    {
+      "path": "R83_pie_000000000072_s0_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 10800,
+      "crc32": 622861742
+    },
+    {
+      "path": "R83_pie_000000000072_s0_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 1956,
+      "crc32": 2359341814
+    },
+    {
+      "path": "R83_pie_000000000072_s0_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70455,
+      "crc32": 3299782665
+    },
+    {
+      "path": "R83_pie_000000000072_s0_REQUEST_BOTH/preview.jpg",
+      "bytes": 12910,
+      "crc32": 916123749
+    },
+    {
+      "path": "R83_pie_000000000072_s0_REQUEST_BOTH/pattern.jpg",
+      "bytes": 12893,
+      "crc32": 3771612375
+    },
+    {
+      "path": "R83_pie_000000000072_s0_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 20617,
+      "crc32": 1554948440
+    },
+    {
+      "path": "R83_pie_000000000072_s0_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 10800,
+      "crc32": 622861742
+    },
+    {
+      "path": "R83_pie_000000000072_s0_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 1956,
+      "crc32": 2359341814
+    },
+    {
+      "path": "R83_pie_000000000072_s0_REQUEST_BOTH/step_summary.json",
+      "bytes": 75452,
+      "crc32": 3217165893
+    },
+    {
+      "path": "R83_pie_000000000072_s0_MEAN_MEMORY/preview.jpg",
+      "bytes": 12949,
+      "crc32": 354715097
+    },
+    {
+      "path": "R83_pie_000000000072_s0_MEAN_MEMORY/pattern.jpg",
+      "bytes": 12932,
+      "crc32": 745720595
+    },
+    {
+      "path": "R83_pie_000000000072_s0_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 20617,
+      "crc32": 1554948440
+    },
+    {
+      "path": "R83_pie_000000000072_s0_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 1755320331
+    },
+    {
+      "path": "R83_pie_000000000072_s0_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 1956,
+      "crc32": 2359341814
+    },
+    {
+      "path": "R83_pie_000000000072_s0_MEAN_MEMORY/step_summary.json",
+      "bytes": 75379,
+      "crc32": 2594441291
+    },
+    {
+      "path": "R83_pie_000000000072_s17_REQUEST_MEMORY/preview.jpg",
+      "bytes": 11477,
+      "crc32": 3176565821
+    },
+    {
+      "path": "R83_pie_000000000072_s17_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 11468,
+      "crc32": 4164940165
+    },
+    {
+      "path": "R83_pie_000000000072_s17_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 10999,
+      "crc32": 3441052742
+    },
+    {
+      "path": "R83_pie_000000000072_s17_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 1986,
+      "crc32": 2915965836
+    },
+    {
+      "path": "R83_pie_000000000072_s17_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70417,
+      "crc32": 1967003134
+    },
+    {
+      "path": "R83_pie_000000000072_s17_REQUEST_BOTH/preview.jpg",
+      "bytes": 11433,
+      "crc32": 2407227209
+    },
+    {
+      "path": "R83_pie_000000000072_s17_REQUEST_BOTH/pattern.jpg",
+      "bytes": 11461,
+      "crc32": 3153388452
+    },
+    {
+      "path": "R83_pie_000000000072_s17_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 20957,
+      "crc32": 142861530
+    },
+    {
+      "path": "R83_pie_000000000072_s17_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 10999,
+      "crc32": 3441052742
+    },
+    {
+      "path": "R83_pie_000000000072_s17_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 1986,
+      "crc32": 2915965836
+    },
+    {
+      "path": "R83_pie_000000000072_s17_REQUEST_BOTH/step_summary.json",
+      "bytes": 75428,
+      "crc32": 1947318805
+    },
+    {
+      "path": "R83_pie_000000000072_s17_MEAN_MEMORY/preview.jpg",
+      "bytes": 11028,
+      "crc32": 370903344
+    },
+    {
+      "path": "R83_pie_000000000072_s17_MEAN_MEMORY/pattern.jpg",
+      "bytes": 11036,
+      "crc32": 4045788948
+    },
+    {
+      "path": "R83_pie_000000000072_s17_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 20957,
+      "crc32": 142861530
+    },
+    {
+      "path": "R83_pie_000000000072_s17_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 348909487
+    },
+    {
+      "path": "R83_pie_000000000072_s17_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 1986,
+      "crc32": 2915965836
+    },
+    {
+      "path": "R83_pie_000000000072_s17_MEAN_MEMORY/step_summary.json",
+      "bytes": 75371,
+      "crc32": 2195914218
+    },
+    {
+      "path": "R83_pie_121000000006_s0_REQUEST_MEMORY/preview.jpg",
+      "bytes": 16732,
+      "crc32": 597573533
+    },
+    {
+      "path": "R83_pie_121000000006_s0_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 16799,
+      "crc32": 798023315
+    },
+    {
+      "path": "R83_pie_121000000006_s0_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 10334,
+      "crc32": 1724265993
+    },
+    {
+      "path": "R83_pie_121000000006_s0_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 1854,
+      "crc32": 4030238310
+    },
+    {
+      "path": "R83_pie_121000000006_s0_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70459,
+      "crc32": 44759572
+    },
+    {
+      "path": "R83_pie_121000000006_s0_REQUEST_BOTH/preview.jpg",
+      "bytes": 16606,
+      "crc32": 2946268098
+    },
+    {
+      "path": "R83_pie_121000000006_s0_REQUEST_BOTH/pattern.jpg",
+      "bytes": 16656,
+      "crc32": 412410098
+    },
+    {
+      "path": "R83_pie_121000000006_s0_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 18567,
+      "crc32": 3357992551
+    },
+    {
+      "path": "R83_pie_121000000006_s0_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 10334,
+      "crc32": 1724265993
+    },
+    {
+      "path": "R83_pie_121000000006_s0_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 1854,
+      "crc32": 4030238310
+    },
+    {
+      "path": "R83_pie_121000000006_s0_REQUEST_BOTH/step_summary.json",
+      "bytes": 75387,
+      "crc32": 3085373046
+    },
+    {
+      "path": "R83_pie_121000000006_s0_MEAN_MEMORY/preview.jpg",
+      "bytes": 16537,
+      "crc32": 1708139020
+    },
+    {
+      "path": "R83_pie_121000000006_s0_MEAN_MEMORY/pattern.jpg",
+      "bytes": 16623,
+      "crc32": 3290718463
+    },
+    {
+      "path": "R83_pie_121000000006_s0_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 18567,
+      "crc32": 3357992551
+    },
+    {
+      "path": "R83_pie_121000000006_s0_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 2109782227
+    },
+    {
+      "path": "R83_pie_121000000006_s0_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 1854,
+      "crc32": 4030238310
+    },
+    {
+      "path": "R83_pie_121000000006_s0_MEAN_MEMORY/step_summary.json",
+      "bytes": 75391,
+      "crc32": 217031371
+    },
+    {
+      "path": "R83_pie_121000000006_s17_REQUEST_MEMORY/preview.jpg",
+      "bytes": 16502,
+      "crc32": 3119433395
+    },
+    {
+      "path": "R83_pie_121000000006_s17_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 16555,
+      "crc32": 1304605932
+    },
+    {
+      "path": "R83_pie_121000000006_s17_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 9754,
+      "crc32": 2461537358
+    },
+    {
+      "path": "R83_pie_121000000006_s17_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 1786,
+      "crc32": 989419191
+    },
+    {
+      "path": "R83_pie_121000000006_s17_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70437,
+      "crc32": 447796771
+    },
+    {
+      "path": "R83_pie_121000000006_s17_REQUEST_BOTH/preview.jpg",
+      "bytes": 16583,
+      "crc32": 3594011820
+    },
+    {
+      "path": "R83_pie_121000000006_s17_REQUEST_BOTH/pattern.jpg",
+      "bytes": 16644,
+      "crc32": 2315766064
+    },
+    {
+      "path": "R83_pie_121000000006_s17_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 17241,
+      "crc32": 2599971289
+    },
+    {
+      "path": "R83_pie_121000000006_s17_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 9754,
+      "crc32": 2461537358
+    },
+    {
+      "path": "R83_pie_121000000006_s17_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 1786,
+      "crc32": 989419191
+    },
+    {
+      "path": "R83_pie_121000000006_s17_REQUEST_BOTH/step_summary.json",
+      "bytes": 75459,
+      "crc32": 1366903968
+    },
+    {
+      "path": "R83_pie_121000000006_s17_MEAN_MEMORY/preview.jpg",
+      "bytes": 16282,
+      "crc32": 1810869435
+    },
+    {
+      "path": "R83_pie_121000000006_s17_MEAN_MEMORY/pattern.jpg",
+      "bytes": 16357,
+      "crc32": 2229945347
+    },
+    {
+      "path": "R83_pie_121000000006_s17_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 17241,
+      "crc32": 2599971289
+    },
+    {
+      "path": "R83_pie_121000000006_s17_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 4089817251
+    },
+    {
+      "path": "R83_pie_121000000006_s17_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 1786,
+      "crc32": 989419191
+    },
+    {
+      "path": "R83_pie_121000000006_s17_MEAN_MEMORY/step_summary.json",
+      "bytes": 75427,
+      "crc32": 731556582
+    },
+    {
+      "path": "R83_pie_223000000008_s0_REQUEST_MEMORY/preview.jpg",
+      "bytes": 25016,
+      "crc32": 1549507900
+    },
+    {
+      "path": "R83_pie_223000000008_s0_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 24983,
+      "crc32": 1330440843
+    },
+    {
+      "path": "R83_pie_223000000008_s0_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 12160,
+      "crc32": 2705726760
+    },
+    {
+      "path": "R83_pie_223000000008_s0_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 2169,
+      "crc32": 3361030889
+    },
+    {
+      "path": "R83_pie_223000000008_s0_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70468,
+      "crc32": 1735807673
+    },
+    {
+      "path": "R83_pie_223000000008_s0_REQUEST_BOTH/preview.jpg",
+      "bytes": 24774,
+      "crc32": 3544937897
+    },
+    {
+      "path": "R83_pie_223000000008_s0_REQUEST_BOTH/pattern.jpg",
+      "bytes": 24751,
+      "crc32": 1229965943
+    },
+    {
+      "path": "R83_pie_223000000008_s0_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 23590,
+      "crc32": 2638865558
+    },
+    {
+      "path": "R83_pie_223000000008_s0_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 12160,
+      "crc32": 2705726760
+    },
+    {
+      "path": "R83_pie_223000000008_s0_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 2169,
+      "crc32": 3361030889
+    },
+    {
+      "path": "R83_pie_223000000008_s0_REQUEST_BOTH/step_summary.json",
+      "bytes": 75431,
+      "crc32": 404593812
+    },
+    {
+      "path": "R83_pie_223000000008_s0_MEAN_MEMORY/preview.jpg",
+      "bytes": 24807,
+      "crc32": 2462365422
+    },
+    {
+      "path": "R83_pie_223000000008_s0_MEAN_MEMORY/pattern.jpg",
+      "bytes": 24775,
+      "crc32": 2693398778
+    },
+    {
+      "path": "R83_pie_223000000008_s0_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 23590,
+      "crc32": 2638865558
+    },
+    {
+      "path": "R83_pie_223000000008_s0_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 3132538611
+    },
+    {
+      "path": "R83_pie_223000000008_s0_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 2169,
+      "crc32": 3361030889
+    },
+    {
+      "path": "R83_pie_223000000008_s0_MEAN_MEMORY/step_summary.json",
+      "bytes": 75425,
+      "crc32": 2908294726
+    },
+    {
+      "path": "R83_pie_223000000008_s17_REQUEST_MEMORY/preview.jpg",
+      "bytes": 24365,
+      "crc32": 1012845666
+    },
+    {
+      "path": "R83_pie_223000000008_s17_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 24370,
+      "crc32": 1129409172
+    },
+    {
+      "path": "R83_pie_223000000008_s17_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 11904,
+      "crc32": 2878955192
+    },
+    {
+      "path": "R83_pie_223000000008_s17_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 2127,
+      "crc32": 1809001288
+    },
+    {
+      "path": "R83_pie_223000000008_s17_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70438,
+      "crc32": 12308459
+    },
+    {
+      "path": "R83_pie_223000000008_s17_REQUEST_BOTH/preview.jpg",
+      "bytes": 24662,
+      "crc32": 403128138
+    },
+    {
+      "path": "R83_pie_223000000008_s17_REQUEST_BOTH/pattern.jpg",
+      "bytes": 24668,
+      "crc32": 2109980540
+    },
+    {
+      "path": "R83_pie_223000000008_s17_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 23207,
+      "crc32": 3977977716
+    },
+    {
+      "path": "R83_pie_223000000008_s17_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 11904,
+      "crc32": 2878955192
+    },
+    {
+      "path": "R83_pie_223000000008_s17_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 2127,
+      "crc32": 1809001288
+    },
+    {
+      "path": "R83_pie_223000000008_s17_REQUEST_BOTH/step_summary.json",
+      "bytes": 75368,
+      "crc32": 2581668486
+    },
+    {
+      "path": "R83_pie_223000000008_s17_MEAN_MEMORY/preview.jpg",
+      "bytes": 24438,
+      "crc32": 1589208562
+    },
+    {
+      "path": "R83_pie_223000000008_s17_MEAN_MEMORY/pattern.jpg",
+      "bytes": 24393,
+      "crc32": 742676650
+    },
+    {
+      "path": "R83_pie_223000000008_s17_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 23207,
+      "crc32": 3977977716
+    },
+    {
+      "path": "R83_pie_223000000008_s17_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 1733086249
+    },
+    {
+      "path": "R83_pie_223000000008_s17_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 2127,
+      "crc32": 1809001288
+    },
+    {
+      "path": "R83_pie_223000000008_s17_MEAN_MEMORY/step_summary.json",
+      "bytes": 75358,
+      "crc32": 2967932656
+    },
+    {
+      "path": "R83_pie_323000000002_s0_REQUEST_MEMORY/preview.jpg",
+      "bytes": 19314,
+      "crc32": 845693015
+    },
+    {
+      "path": "R83_pie_323000000002_s0_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 19300,
+      "crc32": 2936907071
+    },
+    {
+      "path": "R83_pie_323000000002_s0_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 11490,
+      "crc32": 4050804368
+    },
+    {
+      "path": "R83_pie_323000000002_s0_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 2058,
+      "crc32": 1474170171
+    },
+    {
+      "path": "R83_pie_323000000002_s0_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70451,
+      "crc32": 821884032
+    },
+    {
+      "path": "R83_pie_323000000002_s0_REQUEST_BOTH/preview.jpg",
+      "bytes": 19052,
+      "crc32": 1941432060
+    },
+    {
+      "path": "R83_pie_323000000002_s0_REQUEST_BOTH/pattern.jpg",
+      "bytes": 19060,
+      "crc32": 3310766359
+    },
+    {
+      "path": "R83_pie_323000000002_s0_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 21630,
+      "crc32": 91704234
+    },
+    {
+      "path": "R83_pie_323000000002_s0_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 11490,
+      "crc32": 4050804368
+    },
+    {
+      "path": "R83_pie_323000000002_s0_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 2058,
+      "crc32": 1474170171
+    },
+    {
+      "path": "R83_pie_323000000002_s0_REQUEST_BOTH/step_summary.json",
+      "bytes": 75403,
+      "crc32": 1529795582
+    },
+    {
+      "path": "R83_pie_323000000002_s0_MEAN_MEMORY/preview.jpg",
+      "bytes": 19231,
+      "crc32": 1960421412
+    },
+    {
+      "path": "R83_pie_323000000002_s0_MEAN_MEMORY/pattern.jpg",
+      "bytes": 19215,
+      "crc32": 2816736719
+    },
+    {
+      "path": "R83_pie_323000000002_s0_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 21630,
+      "crc32": 91704234
+    },
+    {
+      "path": "R83_pie_323000000002_s0_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 1733086249
+    },
+    {
+      "path": "R83_pie_323000000002_s0_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 2058,
+      "crc32": 1474170171
+    },
+    {
+      "path": "R83_pie_323000000002_s0_MEAN_MEMORY/step_summary.json",
+      "bytes": 75351,
+      "crc32": 1234722724
+    },
+    {
+      "path": "R83_pie_323000000002_s17_REQUEST_MEMORY/preview.jpg",
+      "bytes": 20179,
+      "crc32": 2634071120
+    },
+    {
+      "path": "R83_pie_323000000002_s17_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 20165,
+      "crc32": 3138234210
+    },
+    {
+      "path": "R83_pie_323000000002_s17_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 11498,
+      "crc32": 3911613650
+    },
+    {
+      "path": "R83_pie_323000000002_s17_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 2048,
+      "crc32": 640319179
+    },
+    {
+      "path": "R83_pie_323000000002_s17_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70472,
+      "crc32": 289422048
+    },
+    {
+      "path": "R83_pie_323000000002_s17_REQUEST_BOTH/preview.jpg",
+      "bytes": 19850,
+      "crc32": 840919974
+    },
+    {
+      "path": "R83_pie_323000000002_s17_REQUEST_BOTH/pattern.jpg",
+      "bytes": 19829,
+      "crc32": 1221868466
+    },
+    {
+      "path": "R83_pie_323000000002_s17_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 21482,
+      "crc32": 4138008237
+    },
+    {
+      "path": "R83_pie_323000000002_s17_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 11498,
+      "crc32": 3911613650
+    },
+    {
+      "path": "R83_pie_323000000002_s17_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 2048,
+      "crc32": 640319179
+    },
+    {
+      "path": "R83_pie_323000000002_s17_REQUEST_BOTH/step_summary.json",
+      "bytes": 75408,
+      "crc32": 1530967133
+    },
+    {
+      "path": "R83_pie_323000000002_s17_MEAN_MEMORY/preview.jpg",
+      "bytes": 19687,
+      "crc32": 1751640541
+    },
+    {
+      "path": "R83_pie_323000000002_s17_MEAN_MEMORY/pattern.jpg",
+      "bytes": 19633,
+      "crc32": 773573524
+    },
+    {
+      "path": "R83_pie_323000000002_s17_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 21482,
+      "crc32": 4138008237
+    },
+    {
+      "path": "R83_pie_323000000002_s17_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 1733086249
+    },
+    {
+      "path": "R83_pie_323000000002_s17_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 2048,
+      "crc32": 640319179
+    },
+    {
+      "path": "R83_pie_323000000002_s17_MEAN_MEMORY/step_summary.json",
+      "bytes": 75370,
+      "crc32": 3580965833
+    },
+    {
+      "path": "R83_pie_424000000001_s0_REQUEST_MEMORY/preview.jpg",
+      "bytes": 22644,
+      "crc32": 3662744978
+    },
+    {
+      "path": "R83_pie_424000000001_s0_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 22718,
+      "crc32": 3757963096
+    },
+    {
+      "path": "R83_pie_424000000001_s0_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 9574,
+      "crc32": 1221878822
+    },
+    {
+      "path": "R83_pie_424000000001_s0_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 1782,
+      "crc32": 3892238957
+    },
+    {
+      "path": "R83_pie_424000000001_s0_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70443,
+      "crc32": 2555349415
+    },
+    {
+      "path": "R83_pie_424000000001_s0_REQUEST_BOTH/preview.jpg",
+      "bytes": 22322,
+      "crc32": 2695745417
+    },
+    {
+      "path": "R83_pie_424000000001_s0_REQUEST_BOTH/pattern.jpg",
+      "bytes": 22403,
+      "crc32": 889317785
+    },
+    {
+      "path": "R83_pie_424000000001_s0_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 18412,
+      "crc32": 1093642510
+    },
+    {
+      "path": "R83_pie_424000000001_s0_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 9574,
+      "crc32": 1221878822
+    },
+    {
+      "path": "R83_pie_424000000001_s0_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 1782,
+      "crc32": 3892238957
+    },
+    {
+      "path": "R83_pie_424000000001_s0_REQUEST_BOTH/step_summary.json",
+      "bytes": 75446,
+      "crc32": 4114621896
+    },
+    {
+      "path": "R83_pie_424000000001_s0_MEAN_MEMORY/preview.jpg",
+      "bytes": 22593,
+      "crc32": 68391968
+    },
+    {
+      "path": "R83_pie_424000000001_s0_MEAN_MEMORY/pattern.jpg",
+      "bytes": 22690,
+      "crc32": 369182762
+    },
+    {
+      "path": "R83_pie_424000000001_s0_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 18412,
+      "crc32": 1093642510
+    },
+    {
+      "path": "R83_pie_424000000001_s0_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 4042394806
+    },
+    {
+      "path": "R83_pie_424000000001_s0_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 1782,
+      "crc32": 3892238957
+    },
+    {
+      "path": "R83_pie_424000000001_s0_MEAN_MEMORY/step_summary.json",
+      "bytes": 75413,
+      "crc32": 2400105558
+    },
+    {
+      "path": "R83_pie_424000000001_s17_REQUEST_MEMORY/preview.jpg",
+      "bytes": 22459,
+      "crc32": 2130651937
+    },
+    {
+      "path": "R83_pie_424000000001_s17_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 22501,
+      "crc32": 1697828096
+    },
+    {
+      "path": "R83_pie_424000000001_s17_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 10057,
+      "crc32": 3385074367
+    },
+    {
+      "path": "R83_pie_424000000001_s17_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 1937,
+      "crc32": 2497584627
+    },
+    {
+      "path": "R83_pie_424000000001_s17_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70465,
+      "crc32": 4245748294
+    },
+    {
+      "path": "R83_pie_424000000001_s17_REQUEST_BOTH/preview.jpg",
+      "bytes": 22597,
+      "crc32": 3300392249
+    },
+    {
+      "path": "R83_pie_424000000001_s17_REQUEST_BOTH/pattern.jpg",
+      "bytes": 22606,
+      "crc32": 3705367470
+    },
+    {
+      "path": "R83_pie_424000000001_s17_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 20750,
+      "crc32": 2729465946
+    },
+    {
+      "path": "R83_pie_424000000001_s17_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 10057,
+      "crc32": 3385074367
+    },
+    {
+      "path": "R83_pie_424000000001_s17_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 1937,
+      "crc32": 2497584627
+    },
+    {
+      "path": "R83_pie_424000000001_s17_REQUEST_BOTH/step_summary.json",
+      "bytes": 75382,
+      "crc32": 1863679482
+    },
+    {
+      "path": "R83_pie_424000000001_s17_MEAN_MEMORY/preview.jpg",
+      "bytes": 22481,
+      "crc32": 4124755539
+    },
+    {
+      "path": "R83_pie_424000000001_s17_MEAN_MEMORY/pattern.jpg",
+      "bytes": 22602,
+      "crc32": 3806896829
+    },
+    {
+      "path": "R83_pie_424000000001_s17_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 20750,
+      "crc32": 2729465946
+    },
+    {
+      "path": "R83_pie_424000000001_s17_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 1755320331
+    },
+    {
+      "path": "R83_pie_424000000001_s17_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 1937,
+      "crc32": 2497584627
+    },
+    {
+      "path": "R83_pie_424000000001_s17_MEAN_MEMORY/step_summary.json",
+      "bytes": 75311,
+      "crc32": 101067666
+    },
+    {
+      "path": "R83_pie_523000000001_s0_REQUEST_MEMORY/preview.jpg",
+      "bytes": 23606,
+      "crc32": 2710427219
+    },
+    {
+      "path": "R83_pie_523000000001_s0_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 23596,
+      "crc32": 410144987
+    },
+    {
+      "path": "R83_pie_523000000001_s0_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 13053,
+      "crc32": 3208626333
+    },
+    {
+      "path": "R83_pie_523000000001_s0_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 2255,
+      "crc32": 3494163387
+    },
+    {
+      "path": "R83_pie_523000000001_s0_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70476,
+      "crc32": 953436517
+    },
+    {
+      "path": "R83_pie_523000000001_s0_REQUEST_BOTH/preview.jpg",
+      "bytes": 23458,
+      "crc32": 2376855294
+    },
+    {
+      "path": "R83_pie_523000000001_s0_REQUEST_BOTH/pattern.jpg",
+      "bytes": 23428,
+      "crc32": 71640352
+    },
+    {
+      "path": "R83_pie_523000000001_s0_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 25193,
+      "crc32": 1522605253
+    },
+    {
+      "path": "R83_pie_523000000001_s0_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 13053,
+      "crc32": 3208626333
+    },
+    {
+      "path": "R83_pie_523000000001_s0_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 2255,
+      "crc32": 3494163387
+    },
+    {
+      "path": "R83_pie_523000000001_s0_REQUEST_BOTH/step_summary.json",
+      "bytes": 75457,
+      "crc32": 834037151
+    },
+    {
+      "path": "R83_pie_523000000001_s0_MEAN_MEMORY/preview.jpg",
+      "bytes": 23465,
+      "crc32": 3024807202
+    },
+    {
+      "path": "R83_pie_523000000001_s0_MEAN_MEMORY/pattern.jpg",
+      "bytes": 23431,
+      "crc32": 2480335956
+    },
+    {
+      "path": "R83_pie_523000000001_s0_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 25193,
+      "crc32": 1522605253
+    },
+    {
+      "path": "R83_pie_523000000001_s0_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 4280209556
+    },
+    {
+      "path": "R83_pie_523000000001_s0_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 2255,
+      "crc32": 3494163387
+    },
+    {
+      "path": "R83_pie_523000000001_s0_MEAN_MEMORY/step_summary.json",
+      "bytes": 75438,
+      "crc32": 2500026896
+    },
+    {
+      "path": "R83_pie_523000000001_s17_REQUEST_MEMORY/preview.jpg",
+      "bytes": 22510,
+      "crc32": 2955782262
+    },
+    {
+      "path": "R83_pie_523000000001_s17_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 22502,
+      "crc32": 2343668258
+    },
+    {
+      "path": "R83_pie_523000000001_s17_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 13292,
+      "crc32": 3186885961
+    },
+    {
+      "path": "R83_pie_523000000001_s17_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 2261,
+      "crc32": 2381614885
+    },
+    {
+      "path": "R83_pie_523000000001_s17_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70487,
+      "crc32": 858078430
+    },
+    {
+      "path": "R83_pie_523000000001_s17_REQUEST_BOTH/preview.jpg",
+      "bytes": 22255,
+      "crc32": 3289724835
+    },
+    {
+      "path": "R83_pie_523000000001_s17_REQUEST_BOTH/pattern.jpg",
+      "bytes": 22254,
+      "crc32": 2869015144
+    },
+    {
+      "path": "R83_pie_523000000001_s17_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 24772,
+      "crc32": 1081556063
+    },
+    {
+      "path": "R83_pie_523000000001_s17_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 13292,
+      "crc32": 3186885961
+    },
+    {
+      "path": "R83_pie_523000000001_s17_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 2261,
+      "crc32": 2381614885
+    },
+    {
+      "path": "R83_pie_523000000001_s17_REQUEST_BOTH/step_summary.json",
+      "bytes": 75471,
+      "crc32": 2940872185
+    },
+    {
+      "path": "R83_pie_523000000001_s17_MEAN_MEMORY/preview.jpg",
+      "bytes": 22367,
+      "crc32": 3706482322
+    },
+    {
+      "path": "R83_pie_523000000001_s17_MEAN_MEMORY/pattern.jpg",
+      "bytes": 22392,
+      "crc32": 532513684
+    },
+    {
+      "path": "R83_pie_523000000001_s17_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 24772,
+      "crc32": 1081556063
+    },
+    {
+      "path": "R83_pie_523000000001_s17_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 2205495088
+    },
+    {
+      "path": "R83_pie_523000000001_s17_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 2261,
+      "crc32": 2381614885
+    },
+    {
+      "path": "R83_pie_523000000001_s17_MEAN_MEMORY/step_summary.json",
+      "bytes": 75416,
+      "crc32": 2871623123
+    },
+    {
+      "path": "R83_pie_621000000004_s0_REQUEST_MEMORY/preview.jpg",
+      "bytes": 15922,
+      "crc32": 506029498
+    },
+    {
+      "path": "R83_pie_621000000004_s0_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 15993,
+      "crc32": 2743234306
+    },
+    {
+      "path": "R83_pie_621000000004_s0_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 10603,
+      "crc32": 2330018635
+    },
+    {
+      "path": "R83_pie_621000000004_s0_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 1911,
+      "crc32": 432831386
+    },
+    {
+      "path": "R83_pie_621000000004_s0_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70477,
+      "crc32": 2735406298
+    },
+    {
+      "path": "R83_pie_621000000004_s0_REQUEST_BOTH/preview.jpg",
+      "bytes": 15873,
+      "crc32": 503813234
+    },
+    {
+      "path": "R83_pie_621000000004_s0_REQUEST_BOTH/pattern.jpg",
+      "bytes": 15913,
+      "crc32": 2562412880
+    },
+    {
+      "path": "R83_pie_621000000004_s0_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 19625,
+      "crc32": 811333841
+    },
+    {
+      "path": "R83_pie_621000000004_s0_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 10603,
+      "crc32": 2330018635
+    },
+    {
+      "path": "R83_pie_621000000004_s0_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 1911,
+      "crc32": 432831386
+    },
+    {
+      "path": "R83_pie_621000000004_s0_REQUEST_BOTH/step_summary.json",
+      "bytes": 75455,
+      "crc32": 3853386136
+    },
+    {
+      "path": "R83_pie_621000000004_s0_MEAN_MEMORY/preview.jpg",
+      "bytes": 15730,
+      "crc32": 4110808591
+    },
+    {
+      "path": "R83_pie_621000000004_s0_MEAN_MEMORY/pattern.jpg",
+      "bytes": 15759,
+      "crc32": 1339707534
+    },
+    {
+      "path": "R83_pie_621000000004_s0_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 19625,
+      "crc32": 811333841
+    },
+    {
+      "path": "R83_pie_621000000004_s0_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 348909487
+    },
+    {
+      "path": "R83_pie_621000000004_s0_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 1911,
+      "crc32": 432831386
+    },
+    {
+      "path": "R83_pie_621000000004_s0_MEAN_MEMORY/step_summary.json",
+      "bytes": 75428,
+      "crc32": 550623436
+    },
+    {
+      "path": "R83_pie_621000000004_s17_REQUEST_MEMORY/preview.jpg",
+      "bytes": 15931,
+      "crc32": 895636490
+    },
+    {
+      "path": "R83_pie_621000000004_s17_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 15964,
+      "crc32": 706320321
+    },
+    {
+      "path": "R83_pie_621000000004_s17_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 10607,
+      "crc32": 4229047583
+    },
+    {
+      "path": "R83_pie_621000000004_s17_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 1862,
+      "crc32": 3783141301
+    },
+    {
+      "path": "R83_pie_621000000004_s17_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70391,
+      "crc32": 1788058991
+    },
+    {
+      "path": "R83_pie_621000000004_s17_REQUEST_BOTH/preview.jpg",
+      "bytes": 15832,
+      "crc32": 1586200225
+    },
+    {
+      "path": "R83_pie_621000000004_s17_REQUEST_BOTH/pattern.jpg",
+      "bytes": 15861,
+      "crc32": 1905485832
+    },
+    {
+      "path": "R83_pie_621000000004_s17_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 19244,
+      "crc32": 65519093
+    },
+    {
+      "path": "R83_pie_621000000004_s17_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 10607,
+      "crc32": 4229047583
+    },
+    {
+      "path": "R83_pie_621000000004_s17_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 1862,
+      "crc32": 3783141301
+    },
+    {
+      "path": "R83_pie_621000000004_s17_REQUEST_BOTH/step_summary.json",
+      "bytes": 75328,
+      "crc32": 2934844907
+    },
+    {
+      "path": "R83_pie_621000000004_s17_MEAN_MEMORY/preview.jpg",
+      "bytes": 15738,
+      "crc32": 734185146
+    },
+    {
+      "path": "R83_pie_621000000004_s17_MEAN_MEMORY/pattern.jpg",
+      "bytes": 15791,
+      "crc32": 4008353486
+    },
+    {
+      "path": "R83_pie_621000000004_s17_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 19244,
+      "crc32": 65519093
+    },
+    {
+      "path": "R83_pie_621000000004_s17_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 1141057808
+    },
+    {
+      "path": "R83_pie_621000000004_s17_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 1862,
+      "crc32": 3783141301
+    },
+    {
+      "path": "R83_pie_621000000004_s17_MEAN_MEMORY/step_summary.json",
+      "bytes": 75395,
+      "crc32": 2930395254
+    },
+    {
+      "path": "R83_pie_713000000001_s0_REQUEST_MEMORY/preview.jpg",
+      "bytes": 17888,
+      "crc32": 3503435240
+    },
+    {
+      "path": "R83_pie_713000000001_s0_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 17869,
+      "crc32": 2964756600
+    },
+    {
+      "path": "R83_pie_713000000001_s0_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 11818,
+      "crc32": 1193384656
+    },
+    {
+      "path": "R83_pie_713000000001_s0_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 2087,
+      "crc32": 2082778899
+    },
+    {
+      "path": "R83_pie_713000000001_s0_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70414,
+      "crc32": 1468441491
+    },
+    {
+      "path": "R83_pie_713000000001_s0_REQUEST_BOTH/preview.jpg",
+      "bytes": 18175,
+      "crc32": 316845256
+    },
+    {
+      "path": "R83_pie_713000000001_s0_REQUEST_BOTH/pattern.jpg",
+      "bytes": 18162,
+      "crc32": 1682006016
+    },
+    {
+      "path": "R83_pie_713000000001_s0_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 21959,
+      "crc32": 1630737419
+    },
+    {
+      "path": "R83_pie_713000000001_s0_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 11818,
+      "crc32": 1193384656
+    },
+    {
+      "path": "R83_pie_713000000001_s0_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 2087,
+      "crc32": 2082778899
+    },
+    {
+      "path": "R83_pie_713000000001_s0_REQUEST_BOTH/step_summary.json",
+      "bytes": 75429,
+      "crc32": 2874340739
+    },
+    {
+      "path": "R83_pie_713000000001_s0_MEAN_MEMORY/preview.jpg",
+      "bytes": 18039,
+      "crc32": 2601192390
+    },
+    {
+      "path": "R83_pie_713000000001_s0_MEAN_MEMORY/pattern.jpg",
+      "bytes": 17993,
+      "crc32": 3207011447
+    },
+    {
+      "path": "R83_pie_713000000001_s0_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 21959,
+      "crc32": 1630737419
+    },
+    {
+      "path": "R83_pie_713000000001_s0_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 3132538611
+    },
+    {
+      "path": "R83_pie_713000000001_s0_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 2087,
+      "crc32": 2082778899
+    },
+    {
+      "path": "R83_pie_713000000001_s0_MEAN_MEMORY/step_summary.json",
+      "bytes": 75430,
+      "crc32": 3615135820
+    },
+    {
+      "path": "R83_pie_713000000001_s17_REQUEST_MEMORY/preview.jpg",
+      "bytes": 19847,
+      "crc32": 3339872043
+    },
+    {
+      "path": "R83_pie_713000000001_s17_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 19813,
+      "crc32": 747850266
+    },
+    {
+      "path": "R83_pie_713000000001_s17_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 12339,
+      "crc32": 1043827036
+    },
+    {
+      "path": "R83_pie_713000000001_s17_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 2130,
+      "crc32": 928097703
+    },
+    {
+      "path": "R83_pie_713000000001_s17_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70473,
+      "crc32": 3281893111
+    },
+    {
+      "path": "R83_pie_713000000001_s17_REQUEST_BOTH/preview.jpg",
+      "bytes": 19882,
+      "crc32": 2977956558
+    },
+    {
+      "path": "R83_pie_713000000001_s17_REQUEST_BOTH/pattern.jpg",
+      "bytes": 19810,
+      "crc32": 1755382987
+    },
+    {
+      "path": "R83_pie_713000000001_s17_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 22615,
+      "crc32": 2023365210
+    },
+    {
+      "path": "R83_pie_713000000001_s17_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 12339,
+      "crc32": 1043827036
+    },
+    {
+      "path": "R83_pie_713000000001_s17_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 2130,
+      "crc32": 928097703
+    },
+    {
+      "path": "R83_pie_713000000001_s17_REQUEST_BOTH/step_summary.json",
+      "bytes": 75426,
+      "crc32": 2974589899
+    },
+    {
+      "path": "R83_pie_713000000001_s17_MEAN_MEMORY/preview.jpg",
+      "bytes": 19495,
+      "crc32": 2803052966
+    },
+    {
+      "path": "R83_pie_713000000001_s17_MEAN_MEMORY/pattern.jpg",
+      "bytes": 19439,
+      "crc32": 1608153958
+    },
+    {
+      "path": "R83_pie_713000000001_s17_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 22615,
+      "crc32": 2023365210
+    },
+    {
+      "path": "R83_pie_713000000001_s17_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 455553933
+    },
+    {
+      "path": "R83_pie_713000000001_s17_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 2130,
+      "crc32": 928097703
+    },
+    {
+      "path": "R83_pie_713000000001_s17_MEAN_MEMORY/step_summary.json",
+      "bytes": 75400,
+      "crc32": 682458872
+    },
+    {
+      "path": "R83_pie_814000000001_s0_REQUEST_MEMORY/preview.jpg",
+      "bytes": 16597,
+      "crc32": 1707744478
+    },
+    {
+      "path": "R83_pie_814000000001_s0_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 16679,
+      "crc32": 2662080936
+    },
+    {
+      "path": "R83_pie_814000000001_s0_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 12895,
+      "crc32": 600395496
+    },
+    {
+      "path": "R83_pie_814000000001_s0_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 2210,
+      "crc32": 2476456064
+    },
+    {
+      "path": "R83_pie_814000000001_s0_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70459,
+      "crc32": 3044960264
+    },
+    {
+      "path": "R83_pie_814000000001_s0_REQUEST_BOTH/preview.jpg",
+      "bytes": 16432,
+      "crc32": 3991963735
+    },
+    {
+      "path": "R83_pie_814000000001_s0_REQUEST_BOTH/pattern.jpg",
+      "bytes": 16512,
+      "crc32": 3607835961
+    },
+    {
+      "path": "R83_pie_814000000001_s0_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 23983,
+      "crc32": 2549602951
+    },
+    {
+      "path": "R83_pie_814000000001_s0_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 12895,
+      "crc32": 600395496
+    },
+    {
+      "path": "R83_pie_814000000001_s0_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 2210,
+      "crc32": 2476456064
+    },
+    {
+      "path": "R83_pie_814000000001_s0_REQUEST_BOTH/step_summary.json",
+      "bytes": 75388,
+      "crc32": 842507878
+    },
+    {
+      "path": "R83_pie_814000000001_s0_MEAN_MEMORY/preview.jpg",
+      "bytes": 16422,
+      "crc32": 2290763380
+    },
+    {
+      "path": "R83_pie_814000000001_s0_MEAN_MEMORY/pattern.jpg",
+      "bytes": 16524,
+      "crc32": 116902978
+    },
+    {
+      "path": "R83_pie_814000000001_s0_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 23983,
+      "crc32": 2549602951
+    },
+    {
+      "path": "R83_pie_814000000001_s0_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 2205495088
+    },
+    {
+      "path": "R83_pie_814000000001_s0_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 2210,
+      "crc32": 2476456064
+    },
+    {
+      "path": "R83_pie_814000000001_s0_MEAN_MEMORY/step_summary.json",
+      "bytes": 75422,
+      "crc32": 2648913807
+    },
+    {
+      "path": "R83_pie_814000000001_s17_REQUEST_MEMORY/preview.jpg",
+      "bytes": 15151,
+      "crc32": 2470091573
+    },
+    {
+      "path": "R83_pie_814000000001_s17_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 15254,
+      "crc32": 3397988546
+    },
+    {
+      "path": "R83_pie_814000000001_s17_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 12840,
+      "crc32": 1023253290
+    },
+    {
+      "path": "R83_pie_814000000001_s17_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 2214,
+      "crc32": 1665767026
+    },
+    {
+      "path": "R83_pie_814000000001_s17_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70427,
+      "crc32": 397304294
+    },
+    {
+      "path": "R83_pie_814000000001_s17_REQUEST_BOTH/preview.jpg",
+      "bytes": 15110,
+      "crc32": 3851899117
+    },
+    {
+      "path": "R83_pie_814000000001_s17_REQUEST_BOTH/pattern.jpg",
+      "bytes": 15244,
+      "crc32": 1094275158
+    },
+    {
+      "path": "R83_pie_814000000001_s17_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 23997,
+      "crc32": 2118821258
+    },
+    {
+      "path": "R83_pie_814000000001_s17_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 12840,
+      "crc32": 1023253290
+    },
+    {
+      "path": "R83_pie_814000000001_s17_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 2214,
+      "crc32": 1665767026
+    },
+    {
+      "path": "R83_pie_814000000001_s17_REQUEST_BOTH/step_summary.json",
+      "bytes": 75297,
+      "crc32": 1021622671
+    },
+    {
+      "path": "R83_pie_814000000001_s17_MEAN_MEMORY/preview.jpg",
+      "bytes": 14929,
+      "crc32": 2845708692
+    },
+    {
+      "path": "R83_pie_814000000001_s17_MEAN_MEMORY/pattern.jpg",
+      "bytes": 15031,
+      "crc32": 2387320281
+    },
+    {
+      "path": "R83_pie_814000000001_s17_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 23997,
+      "crc32": 2118821258
+    },
+    {
+      "path": "R83_pie_814000000001_s17_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 239573845
+    },
+    {
+      "path": "R83_pie_814000000001_s17_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 2214,
+      "crc32": 1665767026
+    },
+    {
+      "path": "R83_pie_814000000001_s17_MEAN_MEMORY/step_summary.json",
+      "bytes": 75212,
+      "crc32": 2133706671
+    },
+    {
+      "path": "R83_pie_922000000003_s0_REQUEST_MEMORY/preview.jpg",
+      "bytes": 16663,
+      "crc32": 2306855973
+    },
+    {
+      "path": "R83_pie_922000000003_s0_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 16714,
+      "crc32": 75947217
+    },
+    {
+      "path": "R83_pie_922000000003_s0_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 10215,
+      "crc32": 410544508
+    },
+    {
+      "path": "R83_pie_922000000003_s0_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 1867,
+      "crc32": 2335534165
+    },
+    {
+      "path": "R83_pie_922000000003_s0_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70460,
+      "crc32": 1023997487
+    },
+    {
+      "path": "R83_pie_922000000003_s0_REQUEST_BOTH/preview.jpg",
+      "bytes": 16267,
+      "crc32": 1536944363
+    },
+    {
+      "path": "R83_pie_922000000003_s0_REQUEST_BOTH/pattern.jpg",
+      "bytes": 16276,
+      "crc32": 1803725179
+    },
+    {
+      "path": "R83_pie_922000000003_s0_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 19447,
+      "crc32": 3177949319
+    },
+    {
+      "path": "R83_pie_922000000003_s0_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 10215,
+      "crc32": 410544508
+    },
+    {
+      "path": "R83_pie_922000000003_s0_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 1867,
+      "crc32": 2335534165
+    },
+    {
+      "path": "R83_pie_922000000003_s0_REQUEST_BOTH/step_summary.json",
+      "bytes": 75400,
+      "crc32": 807960143
+    },
+    {
+      "path": "R83_pie_922000000003_s0_MEAN_MEMORY/preview.jpg",
+      "bytes": 17940,
+      "crc32": 3590497852
+    },
+    {
+      "path": "R83_pie_922000000003_s0_MEAN_MEMORY/pattern.jpg",
+      "bytes": 17952,
+      "crc32": 741164151
+    },
+    {
+      "path": "R83_pie_922000000003_s0_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 19447,
+      "crc32": 3177949319
+    },
+    {
+      "path": "R83_pie_922000000003_s0_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 1755320331
+    },
+    {
+      "path": "R83_pie_922000000003_s0_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 1867,
+      "crc32": 2335534165
+    },
+    {
+      "path": "R83_pie_922000000003_s0_MEAN_MEMORY/step_summary.json",
+      "bytes": 75341,
+      "crc32": 1977464751
+    },
+    {
+      "path": "R83_pie_922000000003_s17_REQUEST_MEMORY/preview.jpg",
+      "bytes": 20766,
+      "crc32": 2645197204
+    },
+    {
+      "path": "R83_pie_922000000003_s17_REQUEST_MEMORY/pattern.jpg",
+      "bytes": 20800,
+      "crc32": 430132521
+    },
+    {
+      "path": "R83_pie_922000000003_s17_REQUEST_MEMORY/memory_query_gate.jpg",
+      "bytes": 10551,
+      "crc32": 4157315295
+    },
+    {
+      "path": "R83_pie_922000000003_s17_REQUEST_MEMORY/edit_response64.jpg",
+      "bytes": 1937,
+      "crc32": 1772251268
+    },
+    {
+      "path": "R83_pie_922000000003_s17_REQUEST_MEMORY/step_summary.json",
+      "bytes": 70447,
+      "crc32": 2583020018
+    },
+    {
+      "path": "R83_pie_922000000003_s17_REQUEST_BOTH/preview.jpg",
+      "bytes": 19307,
+      "crc32": 869531531
+    },
+    {
+      "path": "R83_pie_922000000003_s17_REQUEST_BOTH/pattern.jpg",
+      "bytes": 19317,
+      "crc32": 1841137419
+    },
+    {
+      "path": "R83_pie_922000000003_s17_REQUEST_BOTH/route_mask.jpg",
+      "bytes": 19990,
+      "crc32": 1571893375
+    },
+    {
+      "path": "R83_pie_922000000003_s17_REQUEST_BOTH/memory_query_gate.jpg",
+      "bytes": 10551,
+      "crc32": 4157315295
+    },
+    {
+      "path": "R83_pie_922000000003_s17_REQUEST_BOTH/edit_response64.jpg",
+      "bytes": 1937,
+      "crc32": 1772251268
+    },
+    {
+      "path": "R83_pie_922000000003_s17_REQUEST_BOTH/step_summary.json",
+      "bytes": 75386,
+      "crc32": 2169031191
+    },
+    {
+      "path": "R83_pie_922000000003_s17_MEAN_MEMORY/preview.jpg",
+      "bytes": 20233,
+      "crc32": 3161867679
+    },
+    {
+      "path": "R83_pie_922000000003_s17_MEAN_MEMORY/pattern.jpg",
+      "bytes": 20267,
+      "crc32": 3078676385
+    },
+    {
+      "path": "R83_pie_922000000003_s17_MEAN_MEMORY/route_mask.jpg",
+      "bytes": 19990,
+      "crc32": 1571893375
+    },
+    {
+      "path": "R83_pie_922000000003_s17_MEAN_MEMORY/memory_query_gate.jpg",
+      "bytes": 883,
+      "crc32": 1755320331
+    },
+    {
+      "path": "R83_pie_922000000003_s17_MEAN_MEMORY/edit_response64.jpg",
+      "bytes": 1937,
+      "crc32": 1772251268
+    },
+    {
+      "path": "R83_pie_922000000003_s17_MEAN_MEMORY/step_summary.json",
+      "bytes": 75269,
+      "crc32": 2772273869
+    },
+    {
+      "path": "references/manifest.json",
+      "bytes": 606826,
+      "crc32": 1260145149
+    },
+    {
+      "path": "references/metrics.csv",
+      "bytes": 150644,
+      "crc32": 1972109603
+    },
+    {
+      "path": "references/R81_pie_000000000072_s0_U25_KV.jpg",
+      "bytes": 12978,
+      "crc32": 1993707908
+    },
+    {
+      "path": "references/R81_pie_000000000072_s0_FLOWEDIT_N26.jpg",
+      "bytes": 12138,
+      "crc32": 2755690157
+    },
+    {
+      "path": "references/R81_pie_000000000072_s17_U25_KV.jpg",
+      "bytes": 11576,
+      "crc32": 1612899372
+    },
+    {
+      "path": "references/R81_pie_000000000072_s17_FLOWEDIT_N26.jpg",
+      "bytes": 12475,
+      "crc32": 4030164297
+    },
+    {
+      "path": "references/R81_pie_121000000006_s0_U25_KV.jpg",
+      "bytes": 16756,
+      "crc32": 819566508
+    },
+    {
+      "path": "references/R81_pie_121000000006_s0_FLOWEDIT_N26.jpg",
+      "bytes": 19877,
+      "crc32": 3877124789
+    },
+    {
+      "path": "references/R81_pie_121000000006_s17_U25_KV.jpg",
+      "bytes": 16253,
+      "crc32": 2973062186
+    },
+    {
+      "path": "references/R81_pie_121000000006_s17_FLOWEDIT_N26.jpg",
+      "bytes": 18939,
+      "crc32": 1024952107
+    },
+    {
+      "path": "references/R81_pie_223000000008_s0_U25_KV.jpg",
+      "bytes": 24415,
+      "crc32": 941527876
+    },
+    {
+      "path": "references/R81_pie_223000000008_s0_FLOWEDIT_N26.jpg",
+      "bytes": 24605,
+      "crc32": 1831728617
+    },
+    {
+      "path": "references/R81_pie_223000000008_s17_U25_KV.jpg",
+      "bytes": 24151,
+      "crc32": 3699699485
+    },
+    {
+      "path": "references/R81_pie_223000000008_s17_FLOWEDIT_N26.jpg",
+      "bytes": 26234,
+      "crc32": 456130296
+    },
+    {
+      "path": "references/R81_pie_323000000002_s0_U25_KV.jpg",
+      "bytes": 18456,
+      "crc32": 4041355200
+    },
+    {
+      "path": "references/R81_pie_323000000002_s0_FLOWEDIT_N26.jpg",
+      "bytes": 20989,
+      "crc32": 2070080358
+    },
+    {
+      "path": "references/R81_pie_323000000002_s17_U25_KV.jpg",
+      "bytes": 19341,
+      "crc32": 2990351888
+    },
+    {
+      "path": "references/R81_pie_323000000002_s17_FLOWEDIT_N26.jpg",
+      "bytes": 17695,
+      "crc32": 2820030337
+    },
+    {
+      "path": "references/R81_pie_424000000001_s0_U25_KV.jpg",
+      "bytes": 22401,
+      "crc32": 243531318
+    },
+    {
+      "path": "references/R81_pie_424000000001_s0_FLOWEDIT_N26.jpg",
+      "bytes": 23433,
+      "crc32": 2006869510
+    },
+    {
+      "path": "references/R81_pie_424000000001_s17_U25_KV.jpg",
+      "bytes": 23217,
+      "crc32": 1259460204
+    },
+    {
+      "path": "references/R81_pie_424000000001_s17_FLOWEDIT_N26.jpg",
+      "bytes": 22570,
+      "crc32": 2438369633
+    },
+    {
+      "path": "references/R81_pie_523000000001_s0_U25_KV.jpg",
+      "bytes": 23841,
+      "crc32": 1863295821
+    },
+    {
+      "path": "references/R81_pie_523000000001_s0_FLOWEDIT_N26.jpg",
+      "bytes": 21469,
+      "crc32": 2432185729
+    },
+    {
+      "path": "references/R81_pie_523000000001_s17_U25_KV.jpg",
+      "bytes": 22322,
+      "crc32": 1255871807
+    },
+    {
+      "path": "references/R81_pie_523000000001_s17_FLOWEDIT_N26.jpg",
+      "bytes": 21132,
+      "crc32": 2300320189
+    },
+    {
+      "path": "references/R81_pie_621000000004_s0_U25_KV.jpg",
+      "bytes": 15672,
+      "crc32": 4042443542
+    },
+    {
+      "path": "references/R81_pie_621000000004_s0_FLOWEDIT_N26.jpg",
+      "bytes": 18862,
+      "crc32": 3268861921
+    },
+    {
+      "path": "references/R81_pie_621000000004_s17_U25_KV.jpg",
+      "bytes": 15513,
+      "crc32": 2450104219
+    },
+    {
+      "path": "references/R81_pie_621000000004_s17_FLOWEDIT_N26.jpg",
+      "bytes": 17508,
+      "crc32": 2288585055
+    },
+    {
+      "path": "references/R81_pie_713000000001_s0_U25_KV.jpg",
+      "bytes": 17809,
+      "crc32": 569196085
+    },
+    {
+      "path": "references/R81_pie_713000000001_s0_FLOWEDIT_N26.jpg",
+      "bytes": 19375,
+      "crc32": 922929771
+    },
+    {
+      "path": "references/R81_pie_713000000001_s17_U25_KV.jpg",
+      "bytes": 19181,
+      "crc32": 3828220042
+    },
+    {
+      "path": "references/R81_pie_713000000001_s17_FLOWEDIT_N26.jpg",
+      "bytes": 20096,
+      "crc32": 3535373395
+    },
+    {
+      "path": "references/R81_pie_814000000001_s0_U25_KV.jpg",
+      "bytes": 16998,
+      "crc32": 2674802523
+    },
+    {
+      "path": "references/R81_pie_814000000001_s0_FLOWEDIT_N26.jpg",
+      "bytes": 18215,
+      "crc32": 1148284353
+    },
+    {
+      "path": "references/R81_pie_814000000001_s17_U25_KV.jpg",
+      "bytes": 15101,
+      "crc32": 3003763327
+    },
+    {
+      "path": "references/R81_pie_814000000001_s17_FLOWEDIT_N26.jpg",
+      "bytes": 17732,
+      "crc32": 3210166301
+    },
+    {
+      "path": "references/R81_pie_922000000003_s0_U25_KV.jpg",
+      "bytes": 16963,
+      "crc32": 2549378391
+    },
+    {
+      "path": "references/R81_pie_922000000003_s0_FLOWEDIT_N26.jpg",
+      "bytes": 17182,
+      "crc32": 838209009
+    },
+    {
+      "path": "references/R81_pie_922000000003_s17_U25_KV.jpg",
+      "bytes": 18119,
+      "crc32": 1829077433
+    },
+    {
+      "path": "references/R81_pie_922000000003_s17_FLOWEDIT_N26.jpg",
+      "bytes": 17484,
+      "crc32": 1896312007
+    },
+    {
+      "path": "references/R82_pie_000000000072_s0_SOFT75.jpg",
+      "bytes": 12875,
+      "crc32": 584317237
+    },
+    {
+      "path": "references/R82_pie_000000000072_s0_REQUEST_SOFT25.jpg",
+      "bytes": 13417,
+      "crc32": 2715396941
+    },
+    {
+      "path": "references/R82_pie_000000000072_s17_SOFT75.jpg",
+      "bytes": 12442,
+      "crc32": 3784546756
+    },
+    {
+      "path": "references/R82_pie_000000000072_s17_REQUEST_SOFT25.jpg",
+      "bytes": 11255,
+      "crc32": 2745673672
+    },
+    {
+      "path": "references/R82_pie_121000000006_s0_SOFT75.jpg",
+      "bytes": 16640,
+      "crc32": 1771380163
+    },
+    {
+      "path": "references/R82_pie_121000000006_s0_REQUEST_SOFT25.jpg",
+      "bytes": 16544,
+      "crc32": 41980176
+    },
+    {
+      "path": "references/R82_pie_121000000006_s17_SOFT75.jpg",
+      "bytes": 16095,
+      "crc32": 1363028597
+    },
+    {
+      "path": "references/R82_pie_121000000006_s17_REQUEST_SOFT25.jpg",
+      "bytes": 16382,
+      "crc32": 328640910
+    },
+    {
+      "path": "references/R82_pie_223000000008_s0_SOFT75.jpg",
+      "bytes": 24280,
+      "crc32": 3582537918
+    },
+    {
+      "path": "references/R82_pie_223000000008_s0_REQUEST_SOFT25.jpg",
+      "bytes": 24291,
+      "crc32": 3328563698
+    },
+    {
+      "path": "references/R82_pie_223000000008_s17_SOFT75.jpg",
+      "bytes": 24403,
+      "crc32": 1310133795
+    },
+    {
+      "path": "references/R82_pie_223000000008_s17_REQUEST_SOFT25.jpg",
+      "bytes": 24555,
+      "crc32": 196469065
+    },
+    {
+      "path": "references/R82_pie_323000000002_s0_SOFT75.jpg",
+      "bytes": 18808,
+      "crc32": 126884856
+    },
+    {
+      "path": "references/R82_pie_323000000002_s0_REQUEST_SOFT25.jpg",
+      "bytes": 18223,
+      "crc32": 3381280333
+    },
+    {
+      "path": "references/R82_pie_323000000002_s17_SOFT75.jpg",
+      "bytes": 19758,
+      "crc32": 1657753124
+    },
+    {
+      "path": "references/R82_pie_323000000002_s17_REQUEST_SOFT25.jpg",
+      "bytes": 18684,
+      "crc32": 671112585
+    },
+    {
+      "path": "references/R82_pie_424000000001_s0_SOFT75.jpg",
+      "bytes": 22443,
+      "crc32": 3001008093
+    },
+    {
+      "path": "references/R82_pie_424000000001_s0_REQUEST_SOFT25.jpg",
+      "bytes": 22097,
+      "crc32": 1748857162
+    },
+    {
+      "path": "references/R82_pie_424000000001_s17_SOFT75.jpg",
+      "bytes": 23306,
+      "crc32": 2562637985
+    },
+    {
+      "path": "references/R82_pie_424000000001_s17_REQUEST_SOFT25.jpg",
+      "bytes": 23346,
+      "crc32": 3867284588
+    },
+    {
+      "path": "references/R82_pie_523000000001_s0_SOFT75.jpg",
+      "bytes": 23713,
+      "crc32": 86183530
+    },
+    {
+      "path": "references/R82_pie_523000000001_s0_REQUEST_SOFT25.jpg",
+      "bytes": 23848,
+      "crc32": 383176999
+    },
+    {
+      "path": "references/R82_pie_523000000001_s17_SOFT75.jpg",
+      "bytes": 22545,
+      "crc32": 2391557023
+    },
+    {
+      "path": "references/R82_pie_523000000001_s17_REQUEST_SOFT25.jpg",
+      "bytes": 22176,
+      "crc32": 4291551329
+    },
+    {
+      "path": "references/R82_pie_621000000004_s0_SOFT75.jpg",
+      "bytes": 15830,
+      "crc32": 2009085541
+    },
+    {
+      "path": "references/R82_pie_621000000004_s0_REQUEST_SOFT25.jpg",
+      "bytes": 15370,
+      "crc32": 195281241
+    },
+    {
+      "path": "references/R82_pie_621000000004_s17_SOFT75.jpg",
+      "bytes": 15650,
+      "crc32": 2409754374
+    },
+    {
+      "path": "references/R82_pie_621000000004_s17_REQUEST_SOFT25.jpg",
+      "bytes": 15436,
+      "crc32": 3334822403
+    },
+    {
+      "path": "references/R82_pie_713000000001_s0_SOFT75.jpg",
+      "bytes": 18089,
+      "crc32": 1720006148
+    },
+    {
+      "path": "references/R82_pie_713000000001_s0_REQUEST_SOFT25.jpg",
+      "bytes": 17355,
+      "crc32": 361299711
+    },
+    {
+      "path": "references/R82_pie_713000000001_s17_SOFT75.jpg",
+      "bytes": 19598,
+      "crc32": 3916423200
+    },
+    {
+      "path": "references/R82_pie_713000000001_s17_REQUEST_SOFT25.jpg",
+      "bytes": 19207,
+      "crc32": 1871145751
+    },
+    {
+      "path": "references/R82_pie_814000000001_s0_SOFT75.jpg",
+      "bytes": 17288,
+      "crc32": 2121367816
+    },
+    {
+      "path": "references/R82_pie_814000000001_s0_REQUEST_SOFT25.jpg",
+      "bytes": 16575,
+      "crc32": 608807153
+    },
+    {
+      "path": "references/R82_pie_814000000001_s17_SOFT75.jpg",
+      "bytes": 15325,
+      "crc32": 1916239800
+    },
+    {
+      "path": "references/R82_pie_814000000001_s17_REQUEST_SOFT25.jpg",
+      "bytes": 14874,
+      "crc32": 928020921
+    },
+    {
+      "path": "references/R82_pie_922000000003_s0_SOFT75.jpg",
+      "bytes": 17305,
+      "crc32": 3827387617
+    },
+    {
+      "path": "references/R82_pie_922000000003_s0_REQUEST_SOFT25.jpg",
+      "bytes": 16776,
+      "crc32": 290473076
+    },
+    {
+      "path": "references/R82_pie_922000000003_s17_SOFT75.jpg",
+      "bytes": 19278,
+      "crc32": 472170592
+    },
+    {
+      "path": "references/R82_pie_922000000003_s17_REQUEST_SOFT25.jpg",
+      "bytes": 16193,
+      "crc32": 2633113778
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "index.html",
+      "bytes": 40636,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "review/index.html",
+      "bytes": 42304,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_000000000072_s0.jpg",
+      "bytes": 78487,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_000000000072_s17.jpg",
+      "bytes": 72740,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_121000000006_s0.jpg",
+      "bytes": 102613,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_121000000006_s17.jpg",
+      "bytes": 101916,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_223000000008_s0.jpg",
+      "bytes": 140592,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_223000000008_s17.jpg",
+      "bytes": 140413,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_323000000002_s0.jpg",
+      "bytes": 116733,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_323000000002_s17.jpg",
+      "bytes": 116704,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_424000000001_s0.jpg",
+      "bytes": 123682,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_424000000001_s17.jpg",
+      "bytes": 124724,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_523000000001_s0.jpg",
+      "bytes": 138049,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_523000000001_s17.jpg",
+      "bytes": 132522,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_621000000004_s0.jpg",
+      "bytes": 95565,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_621000000004_s17.jpg",
+      "bytes": 95284,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_713000000001_s0.jpg",
+      "bytes": 107504,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_713000000001_s17.jpg",
+      "bytes": 114661,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_814000000001_s0.jpg",
+      "bytes": 98917,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_814000000001_s17.jpg",
+      "bytes": 91582,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_922000000003_s0.jpg",
+      "bytes": 95019,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_922000000003_s17.jpg",
+      "bytes": 103378,
+      "reason": "comparison grid or generated interface"
+    }
+  ],
+  "text_normalized_members": [],
+  "original_manifest_note": "Archived code/plan/input hashes identify the historical run. Neutral naming and path redaction change published text; hashes are not recalculated or presented as hashes of this export.",
+  "available": {
+    "completed": 60,
+    "total_planned": 60,
+    "pending": 0,
+    "step_summaries": 60,
+    "record_json": 0,
+    "full_steps_json": 0,
+    "native_raw_png_in_archive": 0,
+    "float_map_npz": 0
+  },
+  "missing": "Native generated images absent from compact source ZIP."
+}

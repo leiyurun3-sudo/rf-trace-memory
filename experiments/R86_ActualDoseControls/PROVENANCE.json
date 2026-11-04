@@ -1,0 +1,68 @@
+{
+  "source_archive": "R86_ProfileFix_v2.zip",
+  "source_location": "delivery",
+  "source_archive_bytes": 59233,
+  "strip_root": true,
+  "source_member_root": "R86_ActualDoseControls",
+  "included_members": [
+    {
+      "path": "run.py",
+      "bytes": 21765,
+      "crc32": 3402868841
+    },
+    {
+      "path": "start.sh",
+      "bytes": 1565,
+      "crc32": 2837865851
+    },
+    {
+      "path": "r86_compat.py",
+      "bytes": 5625,
+      "crc32": 2304297521
+    },
+    {
+      "path": "check_engine.py",
+      "bytes": 4035,
+      "crc32": 1526375648
+    },
+    {
+      "path": "profiles.json",
+      "bytes": 365442,
+      "crc32": 2992917221
+    },
+    {
+      "path": "anchor_plan.json",
+      "bytes": 364421,
+      "crc32": 1346821771
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 647,
+      "crc32": 2450207091
+    },
+    {
+      "path": "paired.py",
+      "bytes": 3575,
+      "crc32": 3464910366
+    },
+    {
+      "path": "localization.py",
+      "bytes": 3335,
+      "crc32": 2233572474
+    }
+  ],
+  "omitted_inputs": [],
+  "excluded_members": [
+    {
+      "path": "README.txt",
+      "reason": "historical narrative; current workflow is in experiment index"
+    }
+  ],
+  "text_normalized_members": [],
+  "archive_identity": "Original ZIP byte count and member CRC32 values; no new hashes computed.",
+  "status": "Archived workflow; no execution during synchronization.",
+  "supersedes": [
+    "R86_ActualDoseControls.zip"
+  ],
+  "native_dependency": "Original R85 server working directory with record.json, steps.json, raw.png, input images and matching code; compact results cannot substitute."
+}

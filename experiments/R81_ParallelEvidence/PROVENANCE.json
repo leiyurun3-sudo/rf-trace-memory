@@ -1,0 +1,1207 @@
+{
+  "source_archive": "R81_ParallelEvidence_Ready.zip",
+  "source_location": "delivery",
+  "source_archive_bytes": 16004201,
+  "strip_root": true,
+  "source_member_root": "R81_ParallelEvidence",
+  "included_members": [
+    {
+      "path": "analyze.py",
+      "bytes": 10163,
+      "crc32": 1147792864
+    },
+    {
+      "path": "arm_templates.json",
+      "bytes": 60171,
+      "crc32": 2645358391
+    },
+    {
+      "path": "attention.py",
+      "bytes": 23083,
+      "crc32": 3996663911
+    },
+    {
+      "path": "BASELINE.md",
+      "bytes": 20969,
+      "crc32": 2896885836
+    },
+    {
+      "path": "controls.py",
+      "bytes": 6197,
+      "crc32": 2553439375
+    },
+    {
+      "path": "data/000000000007/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/000000000007/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/000000000007/outer.png",
+      "bytes": 1754,
+      "crc32": 2779963878
+    },
+    {
+      "path": "data/000000000034/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/000000000034/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/000000000034/outer.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/000000000072/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/000000000072/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/000000000072/outer.png",
+      "bytes": 1913,
+      "crc32": 3749646575
+    },
+    {
+      "path": "data/113000000000/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/113000000000/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/113000000000/outer.png",
+      "bytes": 2294,
+      "crc32": 3692310266
+    },
+    {
+      "path": "data/121000000003/outer.png",
+      "bytes": 2367,
+      "crc32": 1630368804
+    },
+    {
+      "path": "data/121000000006/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/121000000006/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/121000000006/outer.png",
+      "bytes": 2566,
+      "crc32": 942496977
+    },
+    {
+      "path": "data/124000000000/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/124000000000/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/124000000000/outer.png",
+      "bytes": 1877,
+      "crc32": 3862311105
+    },
+    {
+      "path": "data/212000000009/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/212000000009/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/212000000009/outer.png",
+      "bytes": 1671,
+      "crc32": 1122664741
+    },
+    {
+      "path": "data/221000000006/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/221000000006/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/221000000006/outer.png",
+      "bytes": 2506,
+      "crc32": 1314141270
+    },
+    {
+      "path": "data/223000000008/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/223000000008/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/223000000008/outer.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/312000000008/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/312000000008/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/312000000008/outer.png",
+      "bytes": 1632,
+      "crc32": 2442590634
+    },
+    {
+      "path": "data/321000000001/outer.png",
+      "bytes": 2016,
+      "crc32": 978068677
+    },
+    {
+      "path": "data/322000000005/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/322000000005/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/322000000005/outer.png",
+      "bytes": 1575,
+      "crc32": 3022391895
+    },
+    {
+      "path": "data/323000000002/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/323000000002/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/323000000002/outer.png",
+      "bytes": 1921,
+      "crc32": 878830196
+    },
+    {
+      "path": "data/412000000001/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/412000000001/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/412000000001/outer.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/423000000000/outer.png",
+      "bytes": 1020,
+      "crc32": 3795552631
+    },
+    {
+      "path": "data/424000000001/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/424000000001/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/424000000001/outer.png",
+      "bytes": 1884,
+      "crc32": 2003114148
+    },
+    {
+      "path": "data/513000000001/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/513000000001/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/513000000001/outer.png",
+      "bytes": 1411,
+      "crc32": 2308272703
+    },
+    {
+      "path": "data/522000000000/outer.png",
+      "bytes": 2486,
+      "crc32": 3130133692
+    },
+    {
+      "path": "data/523000000001/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/523000000001/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/523000000001/outer.png",
+      "bytes": 2102,
+      "crc32": 2070351068
+    },
+    {
+      "path": "data/621000000004/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/621000000004/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/621000000004/outer.png",
+      "bytes": 2852,
+      "crc32": 3065837439
+    },
+    {
+      "path": "data/622000000001/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/622000000001/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/622000000001/outer.png",
+      "bytes": 2515,
+      "crc32": 3464812289
+    },
+    {
+      "path": "data/622000000002/outer.png",
+      "bytes": 1303,
+      "crc32": 1779003446
+    },
+    {
+      "path": "data/712000000000/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/712000000000/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/712000000000/outer.png",
+      "bytes": 2320,
+      "crc32": 4012651768
+    },
+    {
+      "path": "data/713000000001/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/713000000001/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/713000000001/outer.png",
+      "bytes": 2756,
+      "crc32": 893902419
+    },
+    {
+      "path": "data/723000000002/outer.png",
+      "bytes": 1853,
+      "crc32": 995071571
+    },
+    {
+      "path": "data/811000000000/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/811000000000/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/811000000000/outer.png",
+      "bytes": 2270,
+      "crc32": 1493992837
+    },
+    {
+      "path": "data/814000000001/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/814000000001/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/814000000001/outer.png",
+      "bytes": 2435,
+      "crc32": 4087533193
+    },
+    {
+      "path": "data/922000000003/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/922000000003/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/922000000003/outer.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/922000000009/core.png",
+      "bytes": 334,
+      "crc32": 2491340598
+    },
+    {
+      "path": "data/922000000009/full_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "data/922000000009/outer.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "DATA.md",
+      "bytes": 8548,
+      "crc32": 661317141
+    },
+    {
+      "path": "engine.py",
+      "bytes": 18377,
+      "crc32": 2888649787
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 15292,
+      "crc32": 598219020
+    },
+    {
+      "path": "evaluate_all.sh",
+      "bytes": 882,
+      "crc32": 382789120
+    },
+    {
+      "path": "EVALUATION.md",
+      "bytes": 4967,
+      "crc32": 3485884230
+    },
+    {
+      "path": "evidence_stats.py",
+      "bytes": 6638,
+      "crc32": 4182015559
+    },
+    {
+      "path": "external.py",
+      "bytes": 2959,
+      "crc32": 2827260217
+    },
+    {
+      "path": "external_rfedit.py",
+      "bytes": 13132,
+      "crc32": 3130897619
+    },
+    {
+      "path": "external_sources.md",
+      "bytes": 9805,
+      "crc32": 2492901181
+    },
+    {
+      "path": "heldout_data/evaluation_only/000000000007.json",
+      "bytes": 17674,
+      "crc32": 3440856100
+    },
+    {
+      "path": "heldout_data/evaluation_only/000000000007_mask.png",
+      "bytes": 1754,
+      "crc32": 2779963878
+    },
+    {
+      "path": "heldout_data/evaluation_only/000000000034.json",
+      "bytes": 826,
+      "crc32": 3673466202
+    },
+    {
+      "path": "heldout_data/evaluation_only/000000000034_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "heldout_data/evaluation_only/000000000072.json",
+      "bytes": 27469,
+      "crc32": 3910241345
+    },
+    {
+      "path": "heldout_data/evaluation_only/000000000072_mask.png",
+      "bytes": 1913,
+      "crc32": 3749646575
+    },
+    {
+      "path": "heldout_data/evaluation_only/113000000000.json",
+      "bytes": 21047,
+      "crc32": 3460738704
+    },
+    {
+      "path": "heldout_data/evaluation_only/113000000000_mask.png",
+      "bytes": 2294,
+      "crc32": 3692310266
+    },
+    {
+      "path": "heldout_data/evaluation_only/121000000006.json",
+      "bytes": 27739,
+      "crc32": 1011786059
+    },
+    {
+      "path": "heldout_data/evaluation_only/121000000006_mask.png",
+      "bytes": 2566,
+      "crc32": 942496977
+    },
+    {
+      "path": "heldout_data/evaluation_only/124000000000.json",
+      "bytes": 18599,
+      "crc32": 3831526286
+    },
+    {
+      "path": "heldout_data/evaluation_only/124000000000_mask.png",
+      "bytes": 1877,
+      "crc32": 3862311105
+    },
+    {
+      "path": "heldout_data/evaluation_only/212000000009.json",
+      "bytes": 16209,
+      "crc32": 2021739903
+    },
+    {
+      "path": "heldout_data/evaluation_only/212000000009_mask.png",
+      "bytes": 1671,
+      "crc32": 1122664741
+    },
+    {
+      "path": "heldout_data/evaluation_only/221000000006.json",
+      "bytes": 11613,
+      "crc32": 2963740106
+    },
+    {
+      "path": "heldout_data/evaluation_only/221000000006_mask.png",
+      "bytes": 2506,
+      "crc32": 1314141270
+    },
+    {
+      "path": "heldout_data/evaluation_only/223000000008.json",
+      "bytes": 829,
+      "crc32": 2760912855
+    },
+    {
+      "path": "heldout_data/evaluation_only/223000000008_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "heldout_data/evaluation_only/312000000008.json",
+      "bytes": 15644,
+      "crc32": 1207734781
+    },
+    {
+      "path": "heldout_data/evaluation_only/312000000008_mask.png",
+      "bytes": 1632,
+      "crc32": 2442590634
+    },
+    {
+      "path": "heldout_data/evaluation_only/322000000005.json",
+      "bytes": 23086,
+      "crc32": 644642518
+    },
+    {
+      "path": "heldout_data/evaluation_only/322000000005_mask.png",
+      "bytes": 1575,
+      "crc32": 3022391895
+    },
+    {
+      "path": "heldout_data/evaluation_only/323000000002.json",
+      "bytes": 15950,
+      "crc32": 3346690222
+    },
+    {
+      "path": "heldout_data/evaluation_only/323000000002_mask.png",
+      "bytes": 1921,
+      "crc32": 878830196
+    },
+    {
+      "path": "heldout_data/evaluation_only/412000000001.json",
+      "bytes": 790,
+      "crc32": 634563284
+    },
+    {
+      "path": "heldout_data/evaluation_only/412000000001_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "heldout_data/evaluation_only/424000000001.json",
+      "bytes": 11588,
+      "crc32": 3435198746
+    },
+    {
+      "path": "heldout_data/evaluation_only/424000000001_mask.png",
+      "bytes": 1884,
+      "crc32": 2003114148
+    },
+    {
+      "path": "heldout_data/evaluation_only/513000000001.json",
+      "bytes": 16135,
+      "crc32": 3380732752
+    },
+    {
+      "path": "heldout_data/evaluation_only/513000000001_mask.png",
+      "bytes": 1411,
+      "crc32": 2308272703
+    },
+    {
+      "path": "heldout_data/evaluation_only/523000000001.json",
+      "bytes": 8118,
+      "crc32": 843841297
+    },
+    {
+      "path": "heldout_data/evaluation_only/523000000001_mask.png",
+      "bytes": 2102,
+      "crc32": 2070351068
+    },
+    {
+      "path": "heldout_data/evaluation_only/621000000004.json",
+      "bytes": 27225,
+      "crc32": 2929734842
+    },
+    {
+      "path": "heldout_data/evaluation_only/621000000004_mask.png",
+      "bytes": 2852,
+      "crc32": 3065837439
+    },
+    {
+      "path": "heldout_data/evaluation_only/622000000001.json",
+      "bytes": 24720,
+      "crc32": 2579216543
+    },
+    {
+      "path": "heldout_data/evaluation_only/622000000001_mask.png",
+      "bytes": 2515,
+      "crc32": 3464812289
+    },
+    {
+      "path": "heldout_data/evaluation_only/712000000000.json",
+      "bytes": 21812,
+      "crc32": 2540363375
+    },
+    {
+      "path": "heldout_data/evaluation_only/712000000000_mask.png",
+      "bytes": 2320,
+      "crc32": 4012651768
+    },
+    {
+      "path": "heldout_data/evaluation_only/713000000001.json",
+      "bytes": 31811,
+      "crc32": 2794417280
+    },
+    {
+      "path": "heldout_data/evaluation_only/713000000001_mask.png",
+      "bytes": 2756,
+      "crc32": 893902419
+    },
+    {
+      "path": "heldout_data/evaluation_only/811000000000.json",
+      "bytes": 8628,
+      "crc32": 2034425259
+    },
+    {
+      "path": "heldout_data/evaluation_only/811000000000_mask.png",
+      "bytes": 2270,
+      "crc32": 1493992837
+    },
+    {
+      "path": "heldout_data/evaluation_only/814000000001.json",
+      "bytes": 19513,
+      "crc32": 1010497036
+    },
+    {
+      "path": "heldout_data/evaluation_only/814000000001_mask.png",
+      "bytes": 2435,
+      "crc32": 4087533193
+    },
+    {
+      "path": "heldout_data/evaluation_only/922000000003.json",
+      "bytes": 786,
+      "crc32": 2387705097
+    },
+    {
+      "path": "heldout_data/evaluation_only/922000000003_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "heldout_data/evaluation_only/922000000009.json",
+      "bytes": 780,
+      "crc32": 1058776462
+    },
+    {
+      "path": "heldout_data/evaluation_only/922000000009_mask.png",
+      "bytes": 1301,
+      "crc32": 2892556792
+    },
+    {
+      "path": "heldout_data/manifest.csv",
+      "bytes": 6631,
+      "crc32": 3361252775
+    },
+    {
+      "path": "heldout_data/raw_pie/mapping_file.json",
+      "bytes": 360460,
+      "crc32": 2477845455
+    },
+    {
+      "path": "heldout_tasks.json",
+      "bytes": 24016,
+      "crc32": 1990390598
+    },
+    {
+      "path": "LITERATURE.md",
+      "bytes": 19093,
+      "crc32": 1521794190
+    },
+    {
+      "path": "mint_backend.py",
+      "bytes": 3893,
+      "crc32": 2892078264
+    },
+    {
+      "path": "model_loader.py",
+      "bytes": 5512,
+      "crc32": 1113038759
+    },
+    {
+      "path": "plan.json",
+      "bytes": 1470177,
+      "crc32": 3523144684
+    },
+    {
+      "path": "prepare_benchmark.py",
+      "bytes": 10242,
+      "crc32": 543561155
+    },
+    {
+      "path": "prepare_eval_models.py",
+      "bytes": 899,
+      "crc32": 1506967537
+    },
+    {
+      "path": "prepare_pie.py",
+      "bytes": 13798,
+      "crc32": 751597631
+    },
+    {
+      "path": "reporting.py",
+      "bytes": 39467,
+      "crc32": 2962405012
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 390,
+      "crc32": 3486942803
+    },
+    {
+      "path": "requirements_eval.txt",
+      "bytes": 139,
+      "crc32": 1775092259
+    },
+    {
+      "path": "review.py",
+      "bytes": 3805,
+      "crc32": 226794586
+    },
+    {
+      "path": "rf_kv.py",
+      "bytes": 1282,
+      "crc32": 4037482886
+    },
+    {
+      "path": "run_all.sh",
+      "bytes": 770,
+      "crc32": 2554094334
+    },
+    {
+      "path": "runner.py",
+      "bytes": 22520,
+      "crc32": 3329943952
+    },
+    {
+      "path": "start.sh",
+      "bytes": 859,
+      "crc32": 3407352485
+    },
+    {
+      "path": "value.py",
+      "bytes": 1929,
+      "crc32": 955245182
+    }
+  ],
+  "omitted_inputs": [
+    {
+      "path": "data/000000000007/source.png",
+      "bytes": 449541,
+      "crc32": 2056196606
+    },
+    {
+      "path": "data/000000000034/source.png",
+      "bytes": 511576,
+      "crc32": 741569658
+    },
+    {
+      "path": "data/000000000072/source.png",
+      "bytes": 245090,
+      "crc32": 1157804496
+    },
+    {
+      "path": "data/113000000000/source.png",
+      "bytes": 398155,
+      "crc32": 4240402745
+    },
+    {
+      "path": "data/121000000003/source.png",
+      "bytes": 449239,
+      "crc32": 3699728353
+    },
+    {
+      "path": "data/121000000006/source.png",
+      "bytes": 359499,
+      "crc32": 2012994082
+    },
+    {
+      "path": "data/124000000000/source.png",
+      "bytes": 222833,
+      "crc32": 76303313
+    },
+    {
+      "path": "data/212000000009/source.png",
+      "bytes": 298115,
+      "crc32": 1548723727
+    },
+    {
+      "path": "data/221000000006/source.png",
+      "bytes": 537849,
+      "crc32": 1303318017
+    },
+    {
+      "path": "data/223000000008/source.png",
+      "bytes": 477494,
+      "crc32": 47233116
+    },
+    {
+      "path": "data/312000000008/source.png",
+      "bytes": 387009,
+      "crc32": 398637918
+    },
+    {
+      "path": "data/321000000001/source.png",
+      "bytes": 331220,
+      "crc32": 2239209372
+    },
+    {
+      "path": "data/322000000005/source.png",
+      "bytes": 346785,
+      "crc32": 3550682697
+    },
+    {
+      "path": "data/323000000002/source.png",
+      "bytes": 385036,
+      "crc32": 3056325520
+    },
+    {
+      "path": "data/412000000001/source.png",
+      "bytes": 402241,
+      "crc32": 219367430
+    },
+    {
+      "path": "data/423000000000/source.png",
+      "bytes": 232237,
+      "crc32": 4083644331
+    },
+    {
+      "path": "data/424000000001/source.png",
+      "bytes": 411368,
+      "crc32": 1730738777
+    },
+    {
+      "path": "data/513000000001/source.png",
+      "bytes": 177436,
+      "crc32": 3950787580
+    },
+    {
+      "path": "data/522000000000/source.png",
+      "bytes": 222678,
+      "crc32": 3133429392
+    },
+    {
+      "path": "data/523000000001/source.png",
+      "bytes": 498487,
+      "crc32": 1765378448
+    },
+    {
+      "path": "data/621000000004/source.png",
+      "bytes": 326662,
+      "crc32": 3954188767
+    },
+    {
+      "path": "data/622000000001/source.png",
+      "bytes": 472728,
+      "crc32": 1206639003
+    },
+    {
+      "path": "data/622000000002/source.png",
+      "bytes": 302579,
+      "crc32": 1790874418
+    },
+    {
+      "path": "data/712000000000/source.png",
+      "bytes": 427223,
+      "crc32": 1062218478
+    },
+    {
+      "path": "data/713000000001/source.png",
+      "bytes": 314237,
+      "crc32": 1116762589
+    },
+    {
+      "path": "data/723000000002/source.png",
+      "bytes": 305414,
+      "crc32": 2004488360
+    },
+    {
+      "path": "data/811000000000/source.png",
+      "bytes": 146729,
+      "crc32": 2805132611
+    },
+    {
+      "path": "data/814000000001/source.png",
+      "bytes": 399224,
+      "crc32": 919894422
+    },
+    {
+      "path": "data/922000000003/source.png",
+      "bytes": 264751,
+      "crc32": 851833534
+    },
+    {
+      "path": "data/922000000009/source.png",
+      "bytes": 333385,
+      "crc32": 2264366872
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/0_random_140/000000000007.jpg",
+      "bytes": 222846,
+      "crc32": 105526981
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/0_random_140/000000000034.jpg",
+      "bytes": 145695,
+      "crc32": 207885634
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/0_random_140/000000000072.jpg",
+      "bytes": 60329,
+      "crc32": 3882361889
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/1_change_object_80/1_artificial/3_indoor/113000000000.jpg",
+      "bytes": 99687,
+      "crc32": 771612876
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/1_change_object_80/2_natural/1_animal/121000000006.jpg",
+      "bytes": 88832,
+      "crc32": 603997084
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/1_change_object_80/2_natural/4_outdoor/124000000000.jpg",
+      "bytes": 55895,
+      "crc32": 3725654254
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/2_add_object_80/1_artificial/2_human/212000000009.jpg",
+      "bytes": 72433,
+      "crc32": 1442654290
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/2_add_object_80/2_natural/1_animal/221000000006.jpg",
+      "bytes": 149969,
+      "crc32": 458832265
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/2_add_object_80/2_natural/3_indoor/223000000008.jpg",
+      "bytes": 135655,
+      "crc32": 86802870
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/3_delete_object_80/1_artificial/2_human/312000000008.jpg",
+      "bytes": 104232,
+      "crc32": 3076259588
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/3_delete_object_80/2_natural/2_human/322000000005.jpg",
+      "bytes": 82667,
+      "crc32": 2986222256
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/3_delete_object_80/2_natural/3_indoor/323000000002.jpg",
+      "bytes": 94320,
+      "crc32": 3321070215
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/4_change_attribute_content_40/1_artificial/2_human/412000000001.jpg",
+      "bytes": 96373,
+      "crc32": 2607203919
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/4_change_attribute_content_40/2_natural/4_outdoor/424000000001.jpg",
+      "bytes": 137154,
+      "crc32": 1669813058
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/5_change_attribute_pose_40/1_artificial/3_indoor/513000000001.jpg",
+      "bytes": 46394,
+      "crc32": 645737299
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/5_change_attribute_pose_40/2_natural/3_indoor/523000000001.jpg",
+      "bytes": 134863,
+      "crc32": 2168354329
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/6_change_attribute_color_40/2_natural/1_animal/621000000004.jpg",
+      "bytes": 83751,
+      "crc32": 747865187
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/6_change_attribute_color_40/2_natural/2_human/622000000001.jpg",
+      "bytes": 126239,
+      "crc32": 1429482118
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/7_change_attribute_material_40/1_artificial/2_human/712000000000.jpg",
+      "bytes": 108777,
+      "crc32": 1258456572
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/7_change_attribute_material_40/1_artificial/3_indoor/713000000001.jpg",
+      "bytes": 174750,
+      "crc32": 2128026924
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/8_change_background_80/1_artificial/1_animal/811000000000.jpg",
+      "bytes": 41161,
+      "crc32": 2491341541
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/8_change_background_80/1_artificial/4_outdoor/814000000001.jpg",
+      "bytes": 92279,
+      "crc32": 1675041248
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/9_change_style_80/2_natural/2_human/922000000003.jpg",
+      "bytes": 66459,
+      "crc32": 284945743
+    },
+    {
+      "path": "heldout_data/raw_pie/annotation_images/9_change_style_80/2_natural/2_human/922000000009.jpg",
+      "bytes": 81854,
+      "crc32": 4037832982
+    },
+    {
+      "path": "heldout_data/sources/000000000007.jpg",
+      "bytes": 222846,
+      "crc32": 105526981
+    },
+    {
+      "path": "heldout_data/sources/000000000034.jpg",
+      "bytes": 145695,
+      "crc32": 207885634
+    },
+    {
+      "path": "heldout_data/sources/000000000072.jpg",
+      "bytes": 60329,
+      "crc32": 3882361889
+    },
+    {
+      "path": "heldout_data/sources/113000000000.jpg",
+      "bytes": 99687,
+      "crc32": 771612876
+    },
+    {
+      "path": "heldout_data/sources/121000000006.jpg",
+      "bytes": 88832,
+      "crc32": 603997084
+    },
+    {
+      "path": "heldout_data/sources/124000000000.jpg",
+      "bytes": 55895,
+      "crc32": 3725654254
+    },
+    {
+      "path": "heldout_data/sources/212000000009.jpg",
+      "bytes": 72433,
+      "crc32": 1442654290
+    },
+    {
+      "path": "heldout_data/sources/221000000006.jpg",
+      "bytes": 149969,
+      "crc32": 458832265
+    },
+    {
+      "path": "heldout_data/sources/223000000008.jpg",
+      "bytes": 135655,
+      "crc32": 86802870
+    },
+    {
+      "path": "heldout_data/sources/312000000008.jpg",
+      "bytes": 104232,
+      "crc32": 3076259588
+    },
+    {
+      "path": "heldout_data/sources/322000000005.jpg",
+      "bytes": 82667,
+      "crc32": 2986222256
+    },
+    {
+      "path": "heldout_data/sources/323000000002.jpg",
+      "bytes": 94320,
+      "crc32": 3321070215
+    },
+    {
+      "path": "heldout_data/sources/412000000001.jpg",
+      "bytes": 96373,
+      "crc32": 2607203919
+    },
+    {
+      "path": "heldout_data/sources/424000000001.jpg",
+      "bytes": 137154,
+      "crc32": 1669813058
+    },
+    {
+      "path": "heldout_data/sources/513000000001.jpg",
+      "bytes": 46394,
+      "crc32": 645737299
+    },
+    {
+      "path": "heldout_data/sources/523000000001.jpg",
+      "bytes": 134863,
+      "crc32": 2168354329
+    },
+    {
+      "path": "heldout_data/sources/621000000004.jpg",
+      "bytes": 83751,
+      "crc32": 747865187
+    },
+    {
+      "path": "heldout_data/sources/622000000001.jpg",
+      "bytes": 126239,
+      "crc32": 1429482118
+    },
+    {
+      "path": "heldout_data/sources/712000000000.jpg",
+      "bytes": 108777,
+      "crc32": 1258456572
+    },
+    {
+      "path": "heldout_data/sources/713000000001.jpg",
+      "bytes": 174750,
+      "crc32": 2128026924
+    },
+    {
+      "path": "heldout_data/sources/811000000000.jpg",
+      "bytes": 41161,
+      "crc32": 2491341541
+    },
+    {
+      "path": "heldout_data/sources/814000000001.jpg",
+      "bytes": 92279,
+      "crc32": 1675041248
+    },
+    {
+      "path": "heldout_data/sources/922000000003.jpg",
+      "bytes": 66459,
+      "crc32": 284945743
+    },
+    {
+      "path": "heldout_data/sources/922000000009.jpg",
+      "bytes": 81854,
+      "crc32": 4037832982
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "README.md",
+      "reason": "historical narrative; current workflow is in experiment index"
+    }
+  ],
+  "text_normalized_members": [
+    "DATA.md"
+  ],
+  "archive_identity": "Original ZIP byte count and member CRC32 values; no new hashes computed.",
+  "status": "Archived workflow; no execution during synchronization."
+}

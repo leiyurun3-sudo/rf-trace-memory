@@ -1,0 +1,20 @@
+Upload A_Qwen_FactualJudge_v2_Ready.zip to /root/autodl-tmp, then run:
+
+cd /root/autodl-tmp
+unzip -o A_Qwen_FactualJudge_v2_Ready.zip
+cd A_Qwen_FactualJudge_v2
+bash start.sh
+tail -n 30 -f run.log
+
+Uses the existing local Qwen weights and native R85 images. No download or install.
+Runs 6 factual, 6 ordered-pair and 3 clean-artifact checks first. All must pass.
+If they pass, the same process continues to 520 benchmark outputs automatically.
+If a check fails, preserves all raw answers and writes a diagnostic ZIP; does not launch 520 outputs.
+Result ZIP: /root/autodl-tmp/A_Qwen_FactualJudge_v2_results.zip
+Current status: summary.json run_error and progress.json.
+Prior failures on resume are preserved in failure_history/.
+Old evaluator outputs remain untouched. Unknown remains unknown.
+
+Optional checks only: CONTROLS_ONLY=1 bash start.sh
+After checks-only succeeds, use bash start.sh to resume with the same validated cache.
+Ctrl+C while tailing stops log viewing only; it does not stop the background evaluator.

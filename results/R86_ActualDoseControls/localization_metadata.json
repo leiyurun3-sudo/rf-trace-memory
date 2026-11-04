@@ -1,0 +1,14 @@
+{
+  "scope": "post-hoc diagnostic; official mask not used by inference",
+  "L_definition": "area-weighted mean E within official edit mask minus area-weighted mean E outside it; not a pre-existing benchmark metric",
+  "mask": "data/<case>/outer.png; grayscale 0..255 converted to [0,1], PIL BOX area downsample to 64x64; mask 1 = edit region",
+  "shift": "E_shifted is toroidal 32,32 roll of native E; for GLOBAL E_original is diagnostic of the probe, not an applied global allocation",
+  "R85_anchor": "raw float tensor was not archived; marked missing rather than substituting a new run or JPEG",
+  "denominators": "inside and outside weighted cell mass; empty region or missing tensor yields missing L",
+  "rows": 50,
+  "statuses": {
+    "empty_preservation_region": 4,
+    "missing_tensor": 10,
+    "ok": 36
+  }
+}

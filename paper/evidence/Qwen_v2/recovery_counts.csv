@@ -1,0 +1,8 @@
+arm,planned,before_edit_positive_outputs,before_edit_negative_outputs,before_edit_unknown_outputs,before_edit_output_rate_lower,before_edit_output_rate_upper,before_joint_positive_outputs,before_joint_negative_outputs,before_joint_unknown_outputs,before_joint_output_rate_lower,before_joint_output_rate_upper,after_edit_positive_outputs,after_edit_negative_outputs,after_edit_unknown_outputs,after_edit_output_rate_lower,after_edit_output_rate_upper,after_joint_positive_outputs,after_joint_negative_outputs,after_joint_unknown_outputs,after_joint_output_rate_lower,after_joint_output_rate_upper
+ENERGY_MATCH25,80,34,38,8,0.425,0.525,14,51,15,0.175,0.3625,35,45,0,0.4375,0.4375,14,57,9,0.175,0.2875
+ETA03,80,39,35,6,0.4875,0.5625,15,55,10,0.1875,0.3125,42,38,0,0.525,0.525,16,58,6,0.2,0.275
+FLOWEDIT_N26,80,37,36,7,0.4625,0.55,16,49,15,0.2,0.3875,41,39,0,0.5125,0.5125,16,52,12,0.2,0.35
+RELEASE_BOTH25,80,40,32,8,0.5,0.6,19,44,17,0.2375,0.45,42,38,0,0.525,0.525,19,48,13,0.2375,0.4
+RELEASE_CORR25,80,35,37,8,0.4375,0.5375,16,52,12,0.2,0.35,36,43,1,0.45,0.4625,16,56,8,0.2,0.3
+RFEDIT_I08,40,4,33,3,0.1,0.175,3,34,3,0.075,0.15,4,36,0,0.1,0.1,3,36,1,0.075,0.1
+U25_KV,80,40,35,5,0.5,0.5625,20,47,13,0.25,0.4125,40,40,0,0.5,0.5,20,51,9,0.25,0.3625

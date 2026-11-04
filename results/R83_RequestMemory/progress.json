@@ -1,0 +1,13 @@
+{
+  "pid": 1319,
+  "status": "completed",
+  "stage": "completed",
+  "planned": 60,
+  "completed": 60,
+  "failed": 0,
+  "updated": 1793367447.9254646,
+  "job": "R83_pie_922000000003_s17_MEAN_MEMORY",
+  "step": 28,
+  "steps": 28,
+  "new_nfe": 582
+}

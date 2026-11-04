@@ -1,0 +1,624 @@
+{
+  "schema_version": 1,
+  "dataset": "PIE-Bench",
+  "source_repository": "https://github.com/cure-lab/PnPInversion",
+  "data_origin": "https://huggingface.co/datasets/yanlinli/image-editing-evaluation-handoff (third-party PIE-Bench mirror; official schema and data license checked separately)",
+  "annotation_license": "CC-BY-NC-SA-4.0",
+  "data_license_url": "https://docs.google.com/document/d/1K7pjAgGwS8-lsA-D6Me4jAKmYszKpcyydiAEyZuTm2I/edit",
+  "image_rights": "retained by original authors/copyright holders",
+  "selection_rule": "R81-PIE-heldout-v1; SHA256 order; category round-robin; one task per source",
+  "content_exclusion": "RGB identity OR (64-bit dHash distance<=8 AND 64x64 RGB MAE<=12); also reject R80 IDs",
+  "excluded_source_ids": [
+    "121000000003",
+    "321000000001",
+    "423000000000",
+    "522000000000",
+    "622000000002",
+    "723000000002"
+  ],
+  "excluded_source_rgb_sha256": {
+    "121000000003": "d353f1327a78ac555f7638bbcc5f0fb544fa8b14315ea234b85b7936e305c5bb",
+    "321000000001": "e4fea51283884ec90cd46d2bd78294493684cd3c4028def0d7c277d18909a274",
+    "423000000000": "bc205d0a3b4cefb5da2578654a520619b59edccce01656439315f3b4cf499f3e",
+    "522000000000": "83b9f29f0b9d2b422e7d4dd557081cd43dfefa1b0d12ec20fbf0e758b9e3ad31",
+    "622000000002": "31c30b3c9fd57d7fce2dd952916ae6fd1dcc2e3ce1c248cd6ff416a540efa77a",
+    "723000000002": "a96b05d6731ebe7db771f927161ce057b86e2c3cff3948beb58760f19a6b7cb7"
+  },
+  "mapping_sha256": "d2d21961ac1822206c6d5bd1fac0b2daaabe42a48d4257ccd70312eb24066a2c",
+  "seeds": [
+    0,
+    17
+  ],
+  "source_count": 24,
+  "source_seed_pairs": 48,
+  "evaluation_annotations": {
+    "000000000072": "heldout_data/evaluation_only/000000000072.json",
+    "121000000006": "heldout_data/evaluation_only/121000000006.json",
+    "223000000008": "heldout_data/evaluation_only/223000000008.json",
+    "323000000002": "heldout_data/evaluation_only/323000000002.json",
+    "424000000001": "heldout_data/evaluation_only/424000000001.json",
+    "523000000001": "heldout_data/evaluation_only/523000000001.json",
+    "621000000004": "heldout_data/evaluation_only/621000000004.json",
+    "713000000001": "heldout_data/evaluation_only/713000000001.json",
+    "814000000001": "heldout_data/evaluation_only/814000000001.json",
+    "922000000003": "heldout_data/evaluation_only/922000000003.json",
+    "000000000034": "heldout_data/evaluation_only/000000000034.json",
+    "113000000000": "heldout_data/evaluation_only/113000000000.json",
+    "212000000009": "heldout_data/evaluation_only/212000000009.json",
+    "322000000005": "heldout_data/evaluation_only/322000000005.json",
+    "412000000001": "heldout_data/evaluation_only/412000000001.json",
+    "513000000001": "heldout_data/evaluation_only/513000000001.json",
+    "622000000001": "heldout_data/evaluation_only/622000000001.json",
+    "712000000000": "heldout_data/evaluation_only/712000000000.json",
+    "811000000000": "heldout_data/evaluation_only/811000000000.json",
+    "922000000009": "heldout_data/evaluation_only/922000000009.json",
+    "000000000007": "heldout_data/evaluation_only/000000000007.json",
+    "124000000000": "heldout_data/evaluation_only/124000000000.json",
+    "221000000006": "heldout_data/evaluation_only/221000000006.json",
+    "312000000008": "heldout_data/evaluation_only/312000000008.json"
+  },
+  "evaluation_masks": {
+    "000000000072": "heldout_data/evaluation_only/000000000072_mask.png",
+    "121000000006": "heldout_data/evaluation_only/121000000006_mask.png",
+    "223000000008": "heldout_data/evaluation_only/223000000008_mask.png",
+    "323000000002": "heldout_data/evaluation_only/323000000002_mask.png",
+    "424000000001": "heldout_data/evaluation_only/424000000001_mask.png",
+    "523000000001": "heldout_data/evaluation_only/523000000001_mask.png",
+    "621000000004": "heldout_data/evaluation_only/621000000004_mask.png",
+    "713000000001": "heldout_data/evaluation_only/713000000001_mask.png",
+    "814000000001": "heldout_data/evaluation_only/814000000001_mask.png",
+    "922000000003": "heldout_data/evaluation_only/922000000003_mask.png",
+    "000000000034": "heldout_data/evaluation_only/000000000034_mask.png",
+    "113000000000": "heldout_data/evaluation_only/113000000000_mask.png",
+    "212000000009": "heldout_data/evaluation_only/212000000009_mask.png",
+    "322000000005": "heldout_data/evaluation_only/322000000005_mask.png",
+    "412000000001": "heldout_data/evaluation_only/412000000001_mask.png",
+    "513000000001": "heldout_data/evaluation_only/513000000001_mask.png",
+    "622000000001": "heldout_data/evaluation_only/622000000001_mask.png",
+    "712000000000": "heldout_data/evaluation_only/712000000000_mask.png",
+    "811000000000": "heldout_data/evaluation_only/811000000000_mask.png",
+    "922000000009": "heldout_data/evaluation_only/922000000009_mask.png",
+    "000000000007": "heldout_data/evaluation_only/000000000007_mask.png",
+    "124000000000": "heldout_data/evaluation_only/124000000000_mask.png",
+    "221000000006": "heldout_data/evaluation_only/221000000006_mask.png",
+    "312000000008": "heldout_data/evaluation_only/312000000008_mask.png"
+  },
+  "annotation_policy": {
+    "method_inputs": "tasks contains only images, prompts, categories and source identity metadata",
+    "evaluation_only_directory": "heldout_data/evaluation_only",
+    "method_mask": "Generate independently from source image / allowed prompts. Never read official mask, blended_word, or evaluation annotations for method masks, tuning or selection.",
+    "enforcement": "Manifest separation; runtime consumer must enforce access. This preparer does not change the engine."
+  },
+  "counts": {
+    "mapping_records": 24,
+    "excluded_reference_sources": 6,
+    "available_image_mapping_pairs": 24,
+    "invalid_records": 0,
+    "missing_images": 0,
+    "unreadable_images": 0,
+    "excluded_r80": 0,
+    "duplicate_source_records": 0,
+    "eligible_distinct_sources": 24,
+    "requested_sources": 24,
+    "selected_sources": 24,
+    "selected_with_official_mask": 24,
+    "eligible_by_category": {
+      "2": 3,
+      "0": 3,
+      "1": 3,
+      "9": 2,
+      "8": 2,
+      "3": 3,
+      "6": 2,
+      "5": 2,
+      "4": 2,
+      "7": 2
+    }
+  },
+  "tasks": [
+    {
+      "case": "000000000072",
+      "key": "pie_000000000072",
+      "source_image": "heldout_data/sources/000000000072.jpg",
+      "image": "heldout_data/sources/000000000072.jpg",
+      "task": "pie_000000000072",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "colorful cups",
+      "target_prompt": "wooden colorful cups",
+      "target_category_id": "0",
+      "target_category": "random editing",
+      "edit_rubric": "Change the glass cups to wooden",
+      "source_rgb_sha256": "935818fdd7c59ea9d3737ab8bd9d5e82f054a15c208fcd45f9eaad307a620bfd",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "121000000006",
+      "key": "pie_121000000006",
+      "source_image": "heldout_data/sources/121000000006.jpg",
+      "image": "heldout_data/sources/121000000006.jpg",
+      "task": "pie_121000000006",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a dog sitting on the beach with a body of water in the background",
+      "target_prompt": "a wolf sitting on the beach with a body of water in the background",
+      "target_category_id": "1",
+      "target_category": "change object",
+      "edit_rubric": "Change the dog to a wolf",
+      "source_rgb_sha256": "f294054ead567685a19b6cef244952629cd6a75ed0a7c8a1baa46c0e56b47b1a",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "223000000008",
+      "key": "pie_223000000008",
+      "source_image": "heldout_data/sources/223000000008.jpg",
+      "image": "heldout_data/sources/223000000008.jpg",
+      "task": "pie_223000000008",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a bowl of strawberries and blueberries on a striped tablecloth",
+      "target_prompt": "a bowl of strawberries and blueberries and a lemon on a striped tablecloth",
+      "target_category_id": "2",
+      "target_category": "add object",
+      "edit_rubric": "Add a lemon to the bowl of strawberries and blueberries",
+      "source_rgb_sha256": "5eb5010e026c7a59227c118bcb8883dbca08bfb8cc9453beb45edde1299ada25",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "323000000002",
+      "key": "pie_323000000002",
+      "source_image": "heldout_data/sources/323000000002.jpg",
+      "image": "heldout_data/sources/323000000002.jpg",
+      "task": "pie_323000000002",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "olive oil being poured into a bowl with olive on table",
+      "target_prompt": "olive oil being poured into a bowl on table",
+      "target_category_id": "3",
+      "target_category": "delete object",
+      "edit_rubric": "Remove olives from the table",
+      "source_rgb_sha256": "d588c27dfaf9d45db6b7dc91180d76b4d784dac7ea59935cdc72a3d78f1ed5d4",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "424000000001",
+      "key": "pie_424000000001",
+      "source_image": "heldout_data/sources/424000000001.jpg",
+      "image": "heldout_data/sources/424000000001.jpg",
+      "task": "pie_424000000001",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "peaceful sea",
+      "target_prompt": "rough sea",
+      "target_category_id": "4",
+      "target_category": "change attribute content",
+      "edit_rubric": "Make the sea rough",
+      "source_rgb_sha256": "3389378b7260c7adbf36791b90cabbc9a66e2f7d537389aa792c7d70e7c01253",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "523000000001",
+      "key": "pie_523000000001",
+      "source_image": "heldout_data/sources/523000000001.jpg",
+      "image": "heldout_data/sources/523000000001.jpg",
+      "task": "pie_523000000001",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a red pepper on a towel",
+      "target_prompt": "a red pepper under a towel",
+      "target_category_id": "5",
+      "target_category": "change attribute pose",
+      "edit_rubric": "move the red pepper under the towel",
+      "source_rgb_sha256": "fea177a4c726dcd7e63a95bdb690cf49bbcdfe5e239f6642a018a7457ccbfb4b",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "621000000004",
+      "key": "pie_621000000004",
+      "source_image": "heldout_data/sources/621000000004.jpg",
+      "image": "heldout_data/sources/621000000004.jpg",
+      "task": "pie_621000000004",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a white kitten sitting on a leopard print blanket",
+      "target_prompt": "a yellow kitten sitting on a leopard print blanket",
+      "target_category_id": "6",
+      "target_category": "change attribute color",
+      "edit_rubric": "Change the kitten's color to yellow",
+      "source_rgb_sha256": "cb1115ae5c736e843da86c762f726911b2ffaddd12dc5678de15238ea158ad6a",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "713000000001",
+      "key": "pie_713000000001",
+      "source_image": "heldout_data/sources/713000000001.jpg",
+      "image": "heldout_data/sources/713000000001.jpg",
+      "task": "pie_713000000001",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "illustration of a cup and a lamp on a table by a window",
+      "target_prompt": "illustration of a cup and a crystal lamp on a table by a window",
+      "target_category_id": "7",
+      "target_category": "change attribute material",
+      "edit_rubric": "Replace the lamp with a crystal lamp",
+      "source_rgb_sha256": "1642b794827d00cbf7a8e15712013bcb5971a3e94677381aa80fbd34a54c4ec1",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "814000000001",
+      "key": "pie_814000000001",
+      "source_image": "heldout_data/sources/814000000001.jpg",
+      "image": "heldout_data/sources/814000000001.jpg",
+      "task": "pie_814000000001",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a person sitting on a mountain with a starry sky above",
+      "target_prompt": "a person sitting on a mountain with monsters and dragons above",
+      "target_category_id": "8",
+      "target_category": "change background",
+      "edit_rubric": "Add monsters and dragons above the mountain",
+      "source_rgb_sha256": "4a0d33aff8b999be4411a5f57e825fb5cd5e2a416c313d35c99418ddc8ceb5d2",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "922000000003",
+      "key": "pie_922000000003",
+      "source_image": "heldout_data/sources/922000000003.jpg",
+      "image": "heldout_data/sources/922000000003.jpg",
+      "task": "pie_922000000003",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a young boy with curly hair and blue shirt",
+      "target_prompt": "kids crayon drawing of a young boy with curly hair and blue shirt",
+      "target_category_id": "9",
+      "target_category": "change style",
+      "edit_rubric": "change the image with a kids crayon drawing style",
+      "source_rgb_sha256": "288849dd3f4033f640496fbe6130aa325c0e2c4bbaf0a22219d0d4480569f398",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "000000000034",
+      "key": "pie_000000000034",
+      "source_image": "heldout_data/sources/000000000034.jpg",
+      "image": "heldout_data/sources/000000000034.jpg",
+      "task": "pie_000000000034",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a mother duck and her babies are standing near the water",
+      "target_prompt": "a sketch painting of a mother duck and her babies are standing near the water",
+      "target_category_id": "0",
+      "target_category": "random editing",
+      "edit_rubric": "Add a sketch painting effect of the picture of the mother duck and her babies",
+      "source_rgb_sha256": "4fbc4fb61c4acf0992526807e9e5ace8f339244c6cf1aab28d3fcf8f56d5ba9c",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "113000000000",
+      "key": "pie_113000000000",
+      "source_image": "heldout_data/sources/113000000000.jpg",
+      "image": "heldout_data/sources/113000000000.jpg",
+      "task": "pie_113000000000",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a gold plated bowl filled with fruit",
+      "target_prompt": "a gold plated bowl filled with candy",
+      "target_category_id": "1",
+      "target_category": "change object",
+      "edit_rubric": "change the fruit to candy",
+      "source_rgb_sha256": "295f8cda35a35c806ea6268e5cfab59c12823e09600a56c877da3fed05d9a83d",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "212000000009",
+      "key": "pie_212000000009",
+      "source_image": "heldout_data/sources/212000000009.jpg",
+      "image": "heldout_data/sources/212000000009.jpg",
+      "task": "pie_212000000009",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a black skin man with a tree head and branches on his face",
+      "target_prompt": "a black skin man with a tree head and branches on his face and eyes closed",
+      "target_category_id": "2",
+      "target_category": "add object",
+      "edit_rubric": "Add closed eyes to the black skin man's face",
+      "source_rgb_sha256": "aaf099d45e6924729104fd80ed084c43a26a2f41d956253324b3f2a99525adbf",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "322000000005",
+      "key": "pie_322000000005",
+      "source_image": "heldout_data/sources/322000000005.jpg",
+      "image": "heldout_data/sources/322000000005.jpg",
+      "task": "pie_322000000005",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a woman in sunglasses sitting at a table with a bottles of water",
+      "target_prompt": "a woman in sunglasses sitting at a table",
+      "target_category_id": "3",
+      "target_category": "delete object",
+      "edit_rubric": "Remove the bottles of water",
+      "source_rgb_sha256": "a59766640b72ead38371da7bca5d687cc1149b4650c6bab52df2fb06ffa3902e",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "412000000001",
+      "key": "pie_412000000001",
+      "source_image": "heldout_data/sources/412000000001.jpg",
+      "image": "heldout_data/sources/412000000001.jpg",
+      "task": "pie_412000000001",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a painting of a woman with colorful paint on her face",
+      "target_prompt": "a painting of a woman with drab paint on her face",
+      "target_category_id": "4",
+      "target_category": "change attribute content",
+      "edit_rubric": "change the paint color to drab",
+      "source_rgb_sha256": "88760ad665038be235a1b4c67e3609f6e0f1b91c27948ca12c3751e78500b2aa",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "513000000001",
+      "key": "pie_513000000001",
+      "source_image": "heldout_data/sources/513000000001.jpg",
+      "image": "heldout_data/sources/513000000001.jpg",
+      "task": "pie_513000000001",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a glass jar with a lid closed",
+      "target_prompt": "a glass jar with a lid opened",
+      "target_category_id": "5",
+      "target_category": "change attribute pose",
+      "edit_rubric": "Change the lid from being closed to being opened",
+      "source_rgb_sha256": "7636f79f324f7e294dc8707072ad91099affcc62838a6608e58787fb969c7fb9",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "622000000001",
+      "key": "pie_622000000001",
+      "source_image": "heldout_data/sources/622000000001.jpg",
+      "image": "heldout_data/sources/622000000001.jpg",
+      "task": "pie_622000000001",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a woman in a white dress sitting on a chair with flowers",
+      "target_prompt": "a woman in a red dress sitting on a chair with flowers",
+      "target_category_id": "6",
+      "target_category": "change attribute color",
+      "edit_rubric": "Change the woman's dress color to red",
+      "source_rgb_sha256": "ab05b034b1646dcb59fca27a2a105d9949b2b12ea52067046e5c694933c73d6f",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "712000000000",
+      "key": "pie_712000000000",
+      "source_image": "heldout_data/sources/712000000000.jpg",
+      "image": "heldout_data/sources/712000000000.jpg",
+      "task": "pie_712000000000",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a woman in a kimono sitting on a rock",
+      "target_prompt": "a chintzy woman doll in a kimono sitting on a rock",
+      "target_category_id": "7",
+      "target_category": "change attribute material",
+      "edit_rubric": "Change the woman to a chintzy doll",
+      "source_rgb_sha256": "4a92adfabca9d51f3955fa14c2deda973b2e3b0189fc4a8cc3b355f5eb0409ea",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "811000000000",
+      "key": "pie_811000000000",
+      "source_image": "heldout_data/sources/811000000000.jpg",
+      "image": "heldout_data/sources/811000000000.jpg",
+      "task": "pie_811000000000",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a little carton sheep in a white background",
+      "target_prompt": "a little carton sheep in a forest background",
+      "target_category_id": "8",
+      "target_category": "change background",
+      "edit_rubric": "Add a forest",
+      "source_rgb_sha256": "a55aa56b115a24369e9d03a9753d9b75abbdea277e0ce185de43f9539bec8b2c",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "922000000009",
+      "key": "pie_922000000009",
+      "source_image": "heldout_data/sources/922000000009.jpg",
+      "image": "heldout_data/sources/922000000009.jpg",
+      "task": "pie_922000000009",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a young girl with painted hands and face",
+      "target_prompt": "black and white sketch of a young girl with painted hands and face",
+      "target_category_id": "9",
+      "target_category": "change style",
+      "edit_rubric": "Make the young girl a black and white sketch",
+      "source_rgb_sha256": "31cdc34ea6793043a148a5785b29028fe2b6ce111630b6f87b7a2c2605362896",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "000000000007",
+      "key": "pie_000000000007",
+      "source_image": "heldout_data/sources/000000000007.jpg",
+      "image": "heldout_data/sources/000000000007.jpg",
+      "task": "pie_000000000007",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a german shepherd dog stands on the grass with mouth closed",
+      "target_prompt": "a german shepherd dog stands on the grass with mouth opened",
+      "target_category_id": "0",
+      "target_category": "random editing",
+      "edit_rubric": "Change the german shepherd dog's mouth from closed to opened",
+      "source_rgb_sha256": "0e498f369211086d379b9fa1beea58601007c643c1cd2f49f375579aef436598",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "124000000000",
+      "key": "pie_124000000000",
+      "source_image": "heldout_data/sources/124000000000.jpg",
+      "image": "heldout_data/sources/124000000000.jpg",
+      "task": "pie_124000000000",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "cars driving on a highway at sunset",
+      "target_prompt": "boats driving on a highway at sunset",
+      "target_category_id": "1",
+      "target_category": "change object",
+      "edit_rubric": "Replace cars with boats",
+      "source_rgb_sha256": "68d1e712a0fdb6b814154d9060d30f0e5197ed4bedf55b380056ad07e3c7cb74",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "221000000006",
+      "key": "pie_221000000006",
+      "source_image": "heldout_data/sources/221000000006.jpg",
+      "image": "heldout_data/sources/221000000006.jpg",
+      "task": "pie_221000000006",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a koala is sitting on a tree",
+      "target_prompt": "a koala and a bird is sitting on a tree",
+      "target_category_id": "2",
+      "target_category": "add object",
+      "edit_rubric": "Add a bird on the tree with the koala",
+      "source_rgb_sha256": "ea2e3f85d4b6b51cebd3dd59ad1ca8a307aca604148da3ce0914c157db9ca8cb",
+      "source_size": [
+        512,
+        512
+      ]
+    },
+    {
+      "case": "312000000008",
+      "key": "pie_312000000008",
+      "source_image": "heldout_data/sources/312000000008.jpg",
+      "image": "heldout_data/sources/312000000008.jpg",
+      "task": "pie_312000000008",
+      "seeds": [
+        0,
+        17
+      ],
+      "source_prompt": "a young woman in sunglasses driving an old car",
+      "target_prompt": "a young woman driving an old car",
+      "target_category_id": "3",
+      "target_category": "delete object",
+      "edit_rubric": "Remove the sunglasses from the woman",
+      "source_rgb_sha256": "2b5d3cf590d937a77b781ae69854d39fed99a5911e1d0c7b2161faea1e2a30e5",
+      "source_size": [
+        512,
+        512
+      ]
+    }
+  ]
+}

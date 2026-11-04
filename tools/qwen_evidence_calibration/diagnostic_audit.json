@@ -1,0 +1,1486 @@
+{
+  "audit_version": "saved-diagnostic-audit-v1",
+  "archive_directory": "A_Qwen_Diagnostic_results_20261102_200746",
+  "scope": "Zero-GPU reanalysis of raw replies and recorded input diagnostics; no method ranking or repaired labels.",
+  "tensor_evidence": "Recorded checksums/shapes/finite flags only; tensors are not stored or recomputed.",
+  "original_summary": {
+    "calls": 26,
+    "errors": 0,
+    "known_color_pass": 0,
+    "known_color_total": 6,
+    "note": "Diagnostic only. Inspect real-case observations, old/new prompts, and frozen applicability; no method ranking or repaired labels."
+  },
+  "input_summary": {
+    "planned_calls": 26,
+    "records_found": 26,
+    "missing_records": [],
+    "image_occurrences": 41,
+    "calls_all_checks_ok": 26,
+    "identity_pairs": 10,
+    "identity_tensor_equal": 10,
+    "default_red_blue_tensor_order_reversed_correctly": true
+  },
+  "per_call_input_audit": [
+    {
+      "id": "synthetic_red",
+      "kind": "synthetic",
+      "record_file": "responses/synthetic_red.json",
+      "image_count": 1,
+      "rendered_image_slots": 1,
+      "expected_image_tokens": 256,
+      "actual_image_tokens": 256,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          32,
+          32
+        ]
+      ],
+      "file_sha256": [
+        "0ee3a8a8575d1c9385b20c47d93df0bf4567d5a995e2d587d48e2433fe6bc5f0"
+      ],
+      "per_image_tensor_sha256": [
+        "51802258326cbc9cd2aae8f729786b8eb966197d27fed7addb36309aaa24cff7"
+      ],
+      "same_file_hash": null,
+      "same_tensor_hash": null,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "synthetic_blue",
+      "kind": "synthetic",
+      "record_file": "responses/synthetic_blue.json",
+      "image_count": 1,
+      "rendered_image_slots": 1,
+      "expected_image_tokens": 256,
+      "actual_image_tokens": 256,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          32,
+          32
+        ]
+      ],
+      "file_sha256": [
+        "256e693d13e434bcf9a0d2fe3cb0f306967f935303553622860c4c3d445f4928"
+      ],
+      "per_image_tensor_sha256": [
+        "7446475fdda047013e00f29dd85e87e97e1e53a5ce174dd00e8dde1ad53fa7a0"
+      ],
+      "same_file_hash": null,
+      "same_tensor_hash": null,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "synthetic_red_blue",
+      "kind": "synthetic",
+      "record_file": "responses/synthetic_red_blue.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 512,
+      "actual_image_tokens": 512,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          32,
+          32
+        ],
+        [
+          1,
+          32,
+          32
+        ]
+      ],
+      "file_sha256": [
+        "0ee3a8a8575d1c9385b20c47d93df0bf4567d5a995e2d587d48e2433fe6bc5f0",
+        "256e693d13e434bcf9a0d2fe3cb0f306967f935303553622860c4c3d445f4928"
+      ],
+      "per_image_tensor_sha256": [
+        "51802258326cbc9cd2aae8f729786b8eb966197d27fed7addb36309aaa24cff7",
+        "7446475fdda047013e00f29dd85e87e97e1e53a5ce174dd00e8dde1ad53fa7a0"
+      ],
+      "same_file_hash": false,
+      "same_tensor_hash": false,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "synthetic_blue_red",
+      "kind": "synthetic",
+      "record_file": "responses/synthetic_blue_red.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 512,
+      "actual_image_tokens": 512,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          32,
+          32
+        ],
+        [
+          1,
+          32,
+          32
+        ]
+      ],
+      "file_sha256": [
+        "256e693d13e434bcf9a0d2fe3cb0f306967f935303553622860c4c3d445f4928",
+        "0ee3a8a8575d1c9385b20c47d93df0bf4567d5a995e2d587d48e2433fe6bc5f0"
+      ],
+      "per_image_tensor_sha256": [
+        "7446475fdda047013e00f29dd85e87e97e1e53a5ce174dd00e8dde1ad53fa7a0",
+        "51802258326cbc9cd2aae8f729786b8eb966197d27fed7addb36309aaa24cff7"
+      ],
+      "same_file_hash": false,
+      "same_tensor_hash": false,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "synthetic_red_red",
+      "kind": "synthetic",
+      "record_file": "responses/synthetic_red_red.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 512,
+      "actual_image_tokens": 512,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          32,
+          32
+        ],
+        [
+          1,
+          32,
+          32
+        ]
+      ],
+      "file_sha256": [
+        "0ee3a8a8575d1c9385b20c47d93df0bf4567d5a995e2d587d48e2433fe6bc5f0",
+        "0ee3a8a8575d1c9385b20c47d93df0bf4567d5a995e2d587d48e2433fe6bc5f0"
+      ],
+      "per_image_tensor_sha256": [
+        "51802258326cbc9cd2aae8f729786b8eb966197d27fed7addb36309aaa24cff7",
+        "51802258326cbc9cd2aae8f729786b8eb966197d27fed7addb36309aaa24cff7"
+      ],
+      "same_file_hash": true,
+      "same_tensor_hash": true,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true,
+        "identity_pair_tensor_hashes_equal": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "613000000003_caption",
+      "kind": "caption",
+      "record_file": "responses/613000000003_caption.json",
+      "image_count": 1,
+      "rendered_image_slots": 1,
+      "expected_image_tokens": 324,
+      "actual_image_tokens": 324,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "2b4ca936c4f794bdf1747e20eafdbcc046191f0882db008b1f1ecdaa213c9bcc"
+      ],
+      "per_image_tensor_sha256": [
+        "5a41021f5af9475b5513a4e673da78f46ff5b1606ff0e55e5ec11993795e6361"
+      ],
+      "same_file_hash": null,
+      "same_tensor_hash": null,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "613000000003_pair_observation",
+      "kind": "pair_observation",
+      "record_file": "responses/613000000003_pair_observation.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 648,
+      "actual_image_tokens": 648,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ],
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "2b4ca936c4f794bdf1747e20eafdbcc046191f0882db008b1f1ecdaa213c9bcc",
+        "2b4ca936c4f794bdf1747e20eafdbcc046191f0882db008b1f1ecdaa213c9bcc"
+      ],
+      "per_image_tensor_sha256": [
+        "5a41021f5af9475b5513a4e673da78f46ff5b1606ff0e55e5ec11993795e6361",
+        "5a41021f5af9475b5513a4e673da78f46ff5b1606ff0e55e5ec11993795e6361"
+      ],
+      "same_file_hash": true,
+      "same_tensor_hash": true,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true,
+        "identity_pair_tensor_hashes_equal": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "613000000003_old_rating",
+      "kind": "old_rating",
+      "record_file": "responses/613000000003_old_rating.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 648,
+      "actual_image_tokens": 648,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ],
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "2b4ca936c4f794bdf1747e20eafdbcc046191f0882db008b1f1ecdaa213c9bcc",
+        "2b4ca936c4f794bdf1747e20eafdbcc046191f0882db008b1f1ecdaa213c9bcc"
+      ],
+      "per_image_tensor_sha256": [
+        "5a41021f5af9475b5513a4e673da78f46ff5b1606ff0e55e5ec11993795e6361",
+        "5a41021f5af9475b5513a4e673da78f46ff5b1606ff0e55e5ec11993795e6361"
+      ],
+      "same_file_hash": true,
+      "same_tensor_hash": true,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true,
+        "identity_pair_tensor_hashes_equal": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "613000000003_evidence_rating",
+      "kind": "evidence_rating",
+      "record_file": "responses/613000000003_evidence_rating.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 648,
+      "actual_image_tokens": 648,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ],
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "2b4ca936c4f794bdf1747e20eafdbcc046191f0882db008b1f1ecdaa213c9bcc",
+        "2b4ca936c4f794bdf1747e20eafdbcc046191f0882db008b1f1ecdaa213c9bcc"
+      ],
+      "per_image_tensor_sha256": [
+        "5a41021f5af9475b5513a4e673da78f46ff5b1606ff0e55e5ec11993795e6361",
+        "5a41021f5af9475b5513a4e673da78f46ff5b1606ff0e55e5ec11993795e6361"
+      ],
+      "same_file_hash": true,
+      "same_tensor_hash": true,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true,
+        "identity_pair_tensor_hashes_equal": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "613000000003_old_rubric",
+      "kind": "old_rubric",
+      "record_file": "responses/613000000003_old_rubric.json",
+      "image_count": 1,
+      "rendered_image_slots": 1,
+      "expected_image_tokens": 324,
+      "actual_image_tokens": 324,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "2b4ca936c4f794bdf1747e20eafdbcc046191f0882db008b1f1ecdaa213c9bcc"
+      ],
+      "per_image_tensor_sha256": [
+        "5a41021f5af9475b5513a4e673da78f46ff5b1606ff0e55e5ec11993795e6361"
+      ],
+      "same_file_hash": null,
+      "same_tensor_hash": null,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "613000000003_evidence_rubric",
+      "kind": "evidence_rubric",
+      "record_file": "responses/613000000003_evidence_rubric.json",
+      "image_count": 1,
+      "rendered_image_slots": 1,
+      "expected_image_tokens": 324,
+      "actual_image_tokens": 324,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "2b4ca936c4f794bdf1747e20eafdbcc046191f0882db008b1f1ecdaa213c9bcc"
+      ],
+      "per_image_tensor_sha256": [
+        "5a41021f5af9475b5513a4e673da78f46ff5b1606ff0e55e5ec11993795e6361"
+      ],
+      "same_file_hash": null,
+      "same_tensor_hash": null,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "324000000005_caption",
+      "kind": "caption",
+      "record_file": "responses/324000000005_caption.json",
+      "image_count": 1,
+      "rendered_image_slots": 1,
+      "expected_image_tokens": 324,
+      "actual_image_tokens": 324,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "30a1ff409c8521740e67a6ea5c32f4026038776f5783758f6877a08b2c28e763"
+      ],
+      "per_image_tensor_sha256": [
+        "5649ac3019a0b5cb1c90da83224d346237b17f5d3e18c6f8279a1aad5de492fe"
+      ],
+      "same_file_hash": null,
+      "same_tensor_hash": null,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "324000000005_pair_observation",
+      "kind": "pair_observation",
+      "record_file": "responses/324000000005_pair_observation.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 648,
+      "actual_image_tokens": 648,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ],
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "30a1ff409c8521740e67a6ea5c32f4026038776f5783758f6877a08b2c28e763",
+        "30a1ff409c8521740e67a6ea5c32f4026038776f5783758f6877a08b2c28e763"
+      ],
+      "per_image_tensor_sha256": [
+        "5649ac3019a0b5cb1c90da83224d346237b17f5d3e18c6f8279a1aad5de492fe",
+        "5649ac3019a0b5cb1c90da83224d346237b17f5d3e18c6f8279a1aad5de492fe"
+      ],
+      "same_file_hash": true,
+      "same_tensor_hash": true,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true,
+        "identity_pair_tensor_hashes_equal": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "324000000005_old_rating",
+      "kind": "old_rating",
+      "record_file": "responses/324000000005_old_rating.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 648,
+      "actual_image_tokens": 648,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ],
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "30a1ff409c8521740e67a6ea5c32f4026038776f5783758f6877a08b2c28e763",
+        "30a1ff409c8521740e67a6ea5c32f4026038776f5783758f6877a08b2c28e763"
+      ],
+      "per_image_tensor_sha256": [
+        "5649ac3019a0b5cb1c90da83224d346237b17f5d3e18c6f8279a1aad5de492fe",
+        "5649ac3019a0b5cb1c90da83224d346237b17f5d3e18c6f8279a1aad5de492fe"
+      ],
+      "same_file_hash": true,
+      "same_tensor_hash": true,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true,
+        "identity_pair_tensor_hashes_equal": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "324000000005_evidence_rating",
+      "kind": "evidence_rating",
+      "record_file": "responses/324000000005_evidence_rating.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 648,
+      "actual_image_tokens": 648,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ],
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "30a1ff409c8521740e67a6ea5c32f4026038776f5783758f6877a08b2c28e763",
+        "30a1ff409c8521740e67a6ea5c32f4026038776f5783758f6877a08b2c28e763"
+      ],
+      "per_image_tensor_sha256": [
+        "5649ac3019a0b5cb1c90da83224d346237b17f5d3e18c6f8279a1aad5de492fe",
+        "5649ac3019a0b5cb1c90da83224d346237b17f5d3e18c6f8279a1aad5de492fe"
+      ],
+      "same_file_hash": true,
+      "same_tensor_hash": true,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true,
+        "identity_pair_tensor_hashes_equal": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "324000000005_old_rubric",
+      "kind": "old_rubric",
+      "record_file": "responses/324000000005_old_rubric.json",
+      "image_count": 1,
+      "rendered_image_slots": 1,
+      "expected_image_tokens": 324,
+      "actual_image_tokens": 324,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "30a1ff409c8521740e67a6ea5c32f4026038776f5783758f6877a08b2c28e763"
+      ],
+      "per_image_tensor_sha256": [
+        "5649ac3019a0b5cb1c90da83224d346237b17f5d3e18c6f8279a1aad5de492fe"
+      ],
+      "same_file_hash": null,
+      "same_tensor_hash": null,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "324000000005_evidence_rubric",
+      "kind": "evidence_rubric",
+      "record_file": "responses/324000000005_evidence_rubric.json",
+      "image_count": 1,
+      "rendered_image_slots": 1,
+      "expected_image_tokens": 324,
+      "actual_image_tokens": 324,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "30a1ff409c8521740e67a6ea5c32f4026038776f5783758f6877a08b2c28e763"
+      ],
+      "per_image_tensor_sha256": [
+        "5649ac3019a0b5cb1c90da83224d346237b17f5d3e18c6f8279a1aad5de492fe"
+      ],
+      "same_file_hash": null,
+      "same_tensor_hash": null,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "313000000008_caption",
+      "kind": "caption",
+      "record_file": "responses/313000000008_caption.json",
+      "image_count": 1,
+      "rendered_image_slots": 1,
+      "expected_image_tokens": 324,
+      "actual_image_tokens": 324,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "66a7e53f8f063ab7dd8075ceda5ff3bc3dcb4884e9266da976dbbf5fd2c3ec61"
+      ],
+      "per_image_tensor_sha256": [
+        "1b25b93362b370e1a32d83fc31f4356693810fd69e3b2d4e4bd5cc9cdec8c5ed"
+      ],
+      "same_file_hash": null,
+      "same_tensor_hash": null,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "313000000008_pair_observation",
+      "kind": "pair_observation",
+      "record_file": "responses/313000000008_pair_observation.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 648,
+      "actual_image_tokens": 648,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ],
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "66a7e53f8f063ab7dd8075ceda5ff3bc3dcb4884e9266da976dbbf5fd2c3ec61",
+        "66a7e53f8f063ab7dd8075ceda5ff3bc3dcb4884e9266da976dbbf5fd2c3ec61"
+      ],
+      "per_image_tensor_sha256": [
+        "1b25b93362b370e1a32d83fc31f4356693810fd69e3b2d4e4bd5cc9cdec8c5ed",
+        "1b25b93362b370e1a32d83fc31f4356693810fd69e3b2d4e4bd5cc9cdec8c5ed"
+      ],
+      "same_file_hash": true,
+      "same_tensor_hash": true,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true,
+        "identity_pair_tensor_hashes_equal": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "313000000008_old_rating",
+      "kind": "old_rating",
+      "record_file": "responses/313000000008_old_rating.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 648,
+      "actual_image_tokens": 648,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ],
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "66a7e53f8f063ab7dd8075ceda5ff3bc3dcb4884e9266da976dbbf5fd2c3ec61",
+        "66a7e53f8f063ab7dd8075ceda5ff3bc3dcb4884e9266da976dbbf5fd2c3ec61"
+      ],
+      "per_image_tensor_sha256": [
+        "1b25b93362b370e1a32d83fc31f4356693810fd69e3b2d4e4bd5cc9cdec8c5ed",
+        "1b25b93362b370e1a32d83fc31f4356693810fd69e3b2d4e4bd5cc9cdec8c5ed"
+      ],
+      "same_file_hash": true,
+      "same_tensor_hash": true,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true,
+        "identity_pair_tensor_hashes_equal": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "313000000008_evidence_rating",
+      "kind": "evidence_rating",
+      "record_file": "responses/313000000008_evidence_rating.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 648,
+      "actual_image_tokens": 648,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ],
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "66a7e53f8f063ab7dd8075ceda5ff3bc3dcb4884e9266da976dbbf5fd2c3ec61",
+        "66a7e53f8f063ab7dd8075ceda5ff3bc3dcb4884e9266da976dbbf5fd2c3ec61"
+      ],
+      "per_image_tensor_sha256": [
+        "1b25b93362b370e1a32d83fc31f4356693810fd69e3b2d4e4bd5cc9cdec8c5ed",
+        "1b25b93362b370e1a32d83fc31f4356693810fd69e3b2d4e4bd5cc9cdec8c5ed"
+      ],
+      "same_file_hash": true,
+      "same_tensor_hash": true,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true,
+        "identity_pair_tensor_hashes_equal": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "313000000008_old_rubric",
+      "kind": "old_rubric",
+      "record_file": "responses/313000000008_old_rubric.json",
+      "image_count": 1,
+      "rendered_image_slots": 1,
+      "expected_image_tokens": 324,
+      "actual_image_tokens": 324,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "66a7e53f8f063ab7dd8075ceda5ff3bc3dcb4884e9266da976dbbf5fd2c3ec61"
+      ],
+      "per_image_tensor_sha256": [
+        "1b25b93362b370e1a32d83fc31f4356693810fd69e3b2d4e4bd5cc9cdec8c5ed"
+      ],
+      "same_file_hash": null,
+      "same_tensor_hash": null,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "313000000008_evidence_rubric",
+      "kind": "evidence_rubric",
+      "record_file": "responses/313000000008_evidence_rubric.json",
+      "image_count": 1,
+      "rendered_image_slots": 1,
+      "expected_image_tokens": 324,
+      "actual_image_tokens": 324,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "66a7e53f8f063ab7dd8075ceda5ff3bc3dcb4884e9266da976dbbf5fd2c3ec61"
+      ],
+      "per_image_tensor_sha256": [
+        "1b25b93362b370e1a32d83fc31f4356693810fd69e3b2d4e4bd5cc9cdec8c5ed"
+      ],
+      "same_file_hash": null,
+      "same_tensor_hash": null,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "real_pair_1",
+      "kind": "real_pair",
+      "record_file": "responses/real_pair_1.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 648,
+      "actual_image_tokens": 648,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ],
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "2b4ca936c4f794bdf1747e20eafdbcc046191f0882db008b1f1ecdaa213c9bcc",
+        "ef13cdbfb8475b31beb7b009dfe2c03debf3eb458fd7b938a73c7eb1de700ddc"
+      ],
+      "per_image_tensor_sha256": [
+        "5a41021f5af9475b5513a4e673da78f46ff5b1606ff0e55e5ec11993795e6361",
+        "250d32e493f24a02687743502727c715ce148ae8d727420c52707c93da7e9f22"
+      ],
+      "same_file_hash": false,
+      "same_tensor_hash": false,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "real_pair_2",
+      "kind": "real_pair",
+      "record_file": "responses/real_pair_2.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 648,
+      "actual_image_tokens": 648,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          36,
+          36
+        ],
+        [
+          1,
+          36,
+          36
+        ]
+      ],
+      "file_sha256": [
+        "2b4ca936c4f794bdf1747e20eafdbcc046191f0882db008b1f1ecdaa213c9bcc",
+        "de6e70c69526f771278797f1a2176c57f254a89c6c6db813dbfdf8a33a650b4c"
+      ],
+      "per_image_tensor_sha256": [
+        "5a41021f5af9475b5513a4e673da78f46ff5b1606ff0e55e5ec11993795e6361",
+        "9e3608388c30d0cb4bef00430bc8c0919cf3c8f5a5dc60db39e37defec9ed1ef"
+      ],
+      "same_file_hash": false,
+      "same_tensor_hash": false,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    },
+    {
+      "id": "synthetic_red_blue_slow",
+      "kind": "synthetic",
+      "record_file": "responses/synthetic_red_blue_slow.json",
+      "image_count": 2,
+      "rendered_image_slots": 2,
+      "expected_image_tokens": 512,
+      "actual_image_tokens": 512,
+      "pixels_finite": true,
+      "image_grid_thw": [
+        [
+          1,
+          32,
+          32
+        ],
+        [
+          1,
+          32,
+          32
+        ]
+      ],
+      "file_sha256": [
+        "0ee3a8a8575d1c9385b20c47d93df0bf4567d5a995e2d587d48e2433fe6bc5f0",
+        "256e693d13e434bcf9a0d2fe3cb0f306967f935303553622860c4c3d445f4928"
+      ],
+      "per_image_tensor_sha256": [
+        "8fa7617363b7fe519b80e3c565f20d4f725ce07d3a3a186f55fbafe1ebf2ea59",
+        "778a2d6c2a3f1b5691ef033a2bc0f81cee08fd3590e6cd509cb3cda5208b2b1a"
+      ],
+      "same_file_hash": false,
+      "same_tensor_hash": false,
+      "checks": {
+        "inference_complete": true,
+        "image_count_matches_plan": true,
+        "image_paths_match_plan": true,
+        "rendered_slots_match_images": true,
+        "prompt_slots_match_images": true,
+        "grid_count_matches_images": true,
+        "image_tokens_match": true,
+        "pixels_finite_recorded": true,
+        "pixel_extrema_finite": true,
+        "file_hashes_present": true,
+        "tensor_hashes_present": true,
+        "grid_rows_match_pixel_tensor": true
+      },
+      "all_checks_ok": true
+    }
+  ],
+  "colors_summary": {
+    "total": 6,
+    "json_syntax_ok": 6,
+    "accepted_schema_ok": 6,
+    "semantic_exact_colors_match": 6
+  },
+  "colors": [
+    {
+      "id": "synthetic_red",
+      "expected_colors": [
+        "red"
+      ],
+      "raw_response": "```json\n[\n  \"red\"\n]\n```",
+      "archived_known_answer_match": false,
+      "json_syntax_ok": true,
+      "colors_schema_ok": true,
+      "semantic_exact_colors_match": true,
+      "colors": [
+        "red"
+      ],
+      "response_form": "list"
+    },
+    {
+      "id": "synthetic_blue",
+      "expected_colors": [
+        "blue"
+      ],
+      "raw_response": "```json\n[\n  \"blue\"\n]\n```",
+      "archived_known_answer_match": false,
+      "json_syntax_ok": true,
+      "colors_schema_ok": true,
+      "semantic_exact_colors_match": true,
+      "colors": [
+        "blue"
+      ],
+      "response_form": "list"
+    },
+    {
+      "id": "synthetic_red_blue",
+      "expected_colors": [
+        "red",
+        "blue"
+      ],
+      "raw_response": "```json\n[\n  \"red\",\n  \"blue\"\n]\n```",
+      "archived_known_answer_match": false,
+      "json_syntax_ok": true,
+      "colors_schema_ok": true,
+      "semantic_exact_colors_match": true,
+      "colors": [
+        "red",
+        "blue"
+      ],
+      "response_form": "list"
+    },
+    {
+      "id": "synthetic_blue_red",
+      "expected_colors": [
+        "blue",
+        "red"
+      ],
+      "raw_response": "```json\n[\n  \"blue\",\n  \"red\"\n]\n```",
+      "archived_known_answer_match": false,
+      "json_syntax_ok": true,
+      "colors_schema_ok": true,
+      "semantic_exact_colors_match": true,
+      "colors": [
+        "blue",
+        "red"
+      ],
+      "response_form": "list"
+    },
+    {
+      "id": "synthetic_red_red",
+      "expected_colors": [
+        "red",
+        "red"
+      ],
+      "raw_response": "```json\n[\n  \"red\",\n  \"red\"\n]\n```",
+      "archived_known_answer_match": false,
+      "json_syntax_ok": true,
+      "colors_schema_ok": true,
+      "semantic_exact_colors_match": true,
+      "colors": [
+        "red",
+        "red"
+      ],
+      "response_form": "list"
+    },
+    {
+      "id": "synthetic_red_blue_slow",
+      "expected_colors": [
+        "red",
+        "blue"
+      ],
+      "raw_response": "```json\n[\n  \"red\",\n  \"blue\"\n]\n```",
+      "archived_known_answer_match": false,
+      "json_syntax_ok": true,
+      "colors_schema_ok": true,
+      "semantic_exact_colors_match": true,
+      "colors": [
+        "red",
+        "blue"
+      ],
+      "response_form": "list"
+    }
+  ],
+  "identity_ratings_summary": {
+    "old_rating": {
+      "total": 3,
+      "schema_ok": 3,
+      "edit_yes": 3,
+      "edit_no": 0,
+      "edit_null": 0
+    },
+    "evidence_rating": {
+      "total": 3,
+      "schema_ok": 3,
+      "edit_yes": 2,
+      "edit_no": 1,
+      "edit_null": 0
+    }
+  },
+  "identity_rating_comparisons": [
+    {
+      "case": "613000000003",
+      "old_rating": {
+        "id": "613000000003_old_rating",
+        "record_file": "responses/613000000003_old_rating.json",
+        "raw_response": "{\n  \"edit\": {\n    \"value\": 1,\n    \"reason\": \"The wall has been visibly changed to red, fulfilling the requested edit.\"\n  },\n  \"artifact\": {\n    \"value\": 0,\n    \"reason\": \"No severe visual artifacts are present; the transition between the old and new wall colors appears smooth.\"\n  }\n}",
+        "json_syntax_ok": true,
+        "schema_ok": true,
+        "reported_data": {
+          "edit": {
+            "value": 1,
+            "reason": "The wall has been visibly changed to red, fulfilling the requested edit."
+          },
+          "artifact": {
+            "value": 0,
+            "reason": "No severe visual artifacts are present; the transition between the old and new wall colors appears smooth."
+          }
+        },
+        "validated_edit": 1,
+        "identity_file_hashes_equal": true,
+        "identity_tensor_hashes_equal": true
+      },
+      "evidence_rating": {
+        "id": "613000000003_evidence_rating",
+        "record_file": "responses/613000000003_evidence_rating.json",
+        "raw_response": "```json\n{\n  \"observed_source\": \"The wall in Image 1 is white with vertical wooden planks.\",\n  \"observed_candidate\": \"The wall in Image 2 is also white with vertical wooden planks, similar to Image 1.\",\n  \"reason\": \"Both images display a white wall with vertical wooden planks, indicating no change has been made to the wall's color.\",\n  \"edit\": 0\n}\n```",
+        "json_syntax_ok": true,
+        "schema_ok": true,
+        "reported_data": {
+          "observed_source": "The wall in Image 1 is white with vertical wooden planks.",
+          "observed_candidate": "The wall in Image 2 is also white with vertical wooden planks, similar to Image 1.",
+          "reason": "Both images display a white wall with vertical wooden planks, indicating no change has been made to the wall's color.",
+          "edit": 0
+        },
+        "validated_edit": 0,
+        "identity_file_hashes_equal": true,
+        "identity_tensor_hashes_equal": true
+      }
+    },
+    {
+      "case": "324000000005",
+      "old_rating": {
+        "id": "324000000005_old_rating",
+        "record_file": "responses/324000000005_old_rating.json",
+        "raw_response": "```json\n{\n  \"edit\": {\n    \"value\": 1,\n    \"reason\": \"The bright moon is no longer visible in the second image, indicating that the requested change has been achieved.\"\n  },\n  \"artifact\": {\n    \"value\": 0,\n    \"reason\": \"There are no visible artifacts or distortions introduced by the removal of the moon.\"\n  }\n}\n```",
+        "json_syntax_ok": true,
+        "schema_ok": true,
+        "reported_data": {
+          "edit": {
+            "value": 1,
+            "reason": "The bright moon is no longer visible in the second image, indicating that the requested change has been achieved."
+          },
+          "artifact": {
+            "value": 0,
+            "reason": "There are no visible artifacts or distortions introduced by the removal of the moon."
+          }
+        },
+        "validated_edit": 1,
+        "identity_file_hashes_equal": true,
+        "identity_tensor_hashes_equal": true
+      },
+      "evidence_rating": {
+        "id": "324000000005_evidence_rating",
+        "record_file": "responses/324000000005_evidence_rating.json",
+        "raw_response": "```json\n{\n  \"observed_source\": \"The image shows a single tree standing on a reflective surface under a starry night sky with a bright moon visible.\",\n  \"observed_candidate\": \"The image displays a solitary tree reflecting on a smooth surface against a backdrop of a starry night sky without the presence of a bright moon.\",\n  \"reason\": \"The moon is visibly absent in the second image, which aligns with the request to remove it from the scene.\",\n  \"edit\": 1\n}\n```",
+        "json_syntax_ok": true,
+        "schema_ok": true,
+        "reported_data": {
+          "observed_source": "The image shows a single tree standing on a reflective surface under a starry night sky with a bright moon visible.",
+          "observed_candidate": "The image displays a solitary tree reflecting on a smooth surface against a backdrop of a starry night sky without the presence of a bright moon.",
+          "reason": "The moon is visibly absent in the second image, which aligns with the request to remove it from the scene.",
+          "edit": 1
+        },
+        "validated_edit": 1,
+        "identity_file_hashes_equal": true,
+        "identity_tensor_hashes_equal": true
+      }
+    },
+    {
+      "case": "313000000008",
+      "old_rating": {
+        "id": "313000000008_old_rating",
+        "record_file": "responses/313000000008_old_rating.json",
+        "raw_response": "{\n  \"edit\": {\n    \"value\": 1,\n    \"reason\": \"The kiwi has been removed from the image, leaving only strawberries and blueberries as requested.\"\n  },\n  \"artifact\": {\n    \"value\": 0,\n    \"reason\": \"No severe visual artifacts are present. The image remains coherent and the remaining elements are clearly identifiable.\"\n  }\n}",
+        "json_syntax_ok": true,
+        "schema_ok": true,
+        "reported_data": {
+          "edit": {
+            "value": 1,
+            "reason": "The kiwi has been removed from the image, leaving only strawberries and blueberries as requested."
+          },
+          "artifact": {
+            "value": 0,
+            "reason": "No severe visual artifacts are present. The image remains coherent and the remaining elements are clearly identifiable."
+          }
+        },
+        "validated_edit": 1,
+        "identity_file_hashes_equal": true,
+        "identity_tensor_hashes_equal": true
+      },
+      "evidence_rating": {
+        "id": "313000000008_evidence_rating",
+        "record_file": "responses/313000000008_evidence_rating.json",
+        "raw_response": "```json\n{\n  \"observed_source\": \"The image shows a glass of smoothie with various fruits and berries around it, including a kiwi slice.\",\n  \"observed_candidate\": \"The image displays a similar glass of smoothie with fruits and berries, but the kiwi slice has been removed from the scene.\",\n  \"reason\": \"The kiwi slice that was present in the first image is missing in the second image, indicating the removal as requested.\",\n  \"edit\": 1\n}\n```",
+        "json_syntax_ok": true,
+        "schema_ok": true,
+        "reported_data": {
+          "observed_source": "The image shows a glass of smoothie with various fruits and berries around it, including a kiwi slice.",
+          "observed_candidate": "The image displays a similar glass of smoothie with fruits and berries, but the kiwi slice has been removed from the scene.",
+          "reason": "The kiwi slice that was present in the first image is missing in the second image, indicating the removal as requested.",
+          "edit": 1
+        },
+        "validated_edit": 1,
+        "identity_file_hashes_equal": true,
+        "identity_tensor_hashes_equal": true
+      }
+    }
+  ],
+  "neutral_pair_summary": {
+    "total": 3,
+    "schema_ok": 0,
+    "reported_same_image_true": 3,
+    "note": "Reported fields remain visible even when the full prompt schema fails; no list-to-string coercion."
+  },
+  "neutral_pairs": [
+    {
+      "case": "613000000003",
+      "id": "613000000003_pair_observation",
+      "record_file": "responses/613000000003_pair_observation.json",
+      "raw_response": "```json\n{\n  \"image_1\": \"A hanging plant with heart-shaped leaves is suspended from the ceiling against a white wooden wall. The floor below is dark wood.\",\n  \"image_2\": \"A hanging plant with heart-shaped leaves is suspended from the ceiling against a white wooden wall. The floor below is dark wood.\",\n  \"differences\": [\n    \"There are no differences between the two images.\"\n  ],\n  \"same_image\": true\n}\n```",
+      "json_syntax_ok": true,
+      "schema_ok": false,
+      "reported_data": {
+        "image_1": "A hanging plant with heart-shaped leaves is suspended from the ceiling against a white wooden wall. The floor below is dark wood.",
+        "image_2": "A hanging plant with heart-shaped leaves is suspended from the ceiling against a white wooden wall. The floor below is dark wood.",
+        "differences": [
+          "There are no differences between the two images."
+        ],
+        "same_image": true
+      },
+      "schema_error": "differences must be a nonempty string under the original prompt schema",
+      "identity_file_hashes_equal": true,
+      "identity_tensor_hashes_equal": true
+    },
+    {
+      "case": "324000000005",
+      "id": "324000000005_pair_observation",
+      "record_file": "responses/324000000005_pair_observation.json",
+      "raw_response": "```json\n{\n  \"image_1\": \"A solitary tree stands tall against a starry night sky, its reflection mirrored perfectly in the calm water below.\",\n  \"image_2\": \"A solitary tree stands tall against a starry night sky, its reflection mirrored perfectly in the calm water below.\",\n  \"differences\": [\n    \"There is no discernible difference between the two images.\"\n  ],\n  \"same_image\": true\n}\n```",
+      "json_syntax_ok": true,
+      "schema_ok": false,
+      "reported_data": {
+        "image_1": "A solitary tree stands tall against a starry night sky, its reflection mirrored perfectly in the calm water below.",
+        "image_2": "A solitary tree stands tall against a starry night sky, its reflection mirrored perfectly in the calm water below.",
+        "differences": [
+          "There is no discernible difference between the two images."
+        ],
+        "same_image": true
+      },
+      "schema_error": "differences must be a nonempty string under the original prompt schema",
+      "identity_file_hashes_equal": true,
+      "identity_tensor_hashes_equal": true
+    },
+    {
+      "case": "313000000008",
+      "id": "313000000008_pair_observation",
+      "record_file": "responses/313000000008_pair_observation.json",
+      "raw_response": "```json\n{\n  \"image_1\": \"A glass of creamy smoothie topped with a strawberry and garnished with oats, surrounded by fresh fruits like strawberries, blueberries, raspberries, kiwi, and a banana on a dark surface.\",\n  \"image_2\": \"A glass of creamy smoothie topped with a strawberry and garnished with oats, surrounded by fresh fruits like strawberries, blueberries, raspberries, kiwi, and a banana on a dark surface.\",\n  \"differences\": [\n    \"There is no discernible difference between the two images provided.\"\n  ],\n  \"same_image\": true\n}\n```",
+      "json_syntax_ok": true,
+      "schema_ok": false,
+      "reported_data": {
+        "image_1": "A glass of creamy smoothie topped with a strawberry and garnished with oats, surrounded by fresh fruits like strawberries, blueberries, raspberries, kiwi, and a banana on a dark surface.",
+        "image_2": "A glass of creamy smoothie topped with a strawberry and garnished with oats, surrounded by fresh fruits like strawberries, blueberries, raspberries, kiwi, and a banana on a dark surface.",
+        "differences": [
+          "There is no discernible difference between the two images provided."
+        ],
+        "same_image": true
+      },
+      "schema_error": "differences must be a nonempty string under the original prompt schema",
+      "identity_file_hashes_equal": true,
+      "identity_tensor_hashes_equal": true
+    }
+  ]
+}

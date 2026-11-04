@@ -1,0 +1,1562 @@
+{
+  "source_archive": "R79_RegionMemory.zip",
+  "source_location": "Downloads",
+  "source_archive_bytes": 5295376,
+  "included_members": [
+    {
+      "path": "manifest.json",
+      "bytes": 2862,
+      "crc32": 287637233
+    },
+    {
+      "path": "summary.json",
+      "bytes": 579,
+      "crc32": 816227923
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 130133,
+      "crc32": 483457791
+    },
+    {
+      "path": "arm_summary.csv",
+      "bytes": 2667,
+      "crc32": 3507861488
+    },
+    {
+      "path": "progress.json",
+      "bytes": 243,
+      "crc32": 2181946619
+    },
+    {
+      "path": "sources/723000000002.jpg",
+      "bytes": 19020,
+      "crc32": 2275911347
+    },
+    {
+      "path": "sources/622000000002.jpg",
+      "bytes": 16765,
+      "crc32": 300695938
+    },
+    {
+      "path": "sources/522000000000.jpg",
+      "bytes": 13036,
+      "crc32": 3053922829
+    },
+    {
+      "path": "sources/121000000003.jpg",
+      "bytes": 27238,
+      "crc32": 3499695915
+    },
+    {
+      "path": "sources/321000000001.jpg",
+      "bytes": 18560,
+      "crc32": 3959143
+    },
+    {
+      "path": "sources/423000000000.jpg",
+      "bytes": 15597,
+      "crc32": 3729756092
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_ONLINE25/preview.jpg",
+      "bytes": 15837,
+      "crc32": 1816166509
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_ONLINE25/pattern.jpg",
+      "bytes": 8565,
+      "crc32": 2336518491
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_ONLINE25/step_summary.json",
+      "bytes": 73851,
+      "crc32": 4193399377
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 14844,
+      "crc32": 1636766770
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 8585,
+      "crc32": 237443589
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74564,
+      "crc32": 2513560159
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_LOCAL25/preview.jpg",
+      "bytes": 15229,
+      "crc32": 2026065694
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_LOCAL25/pattern.jpg",
+      "bytes": 8578,
+      "crc32": 2524392758
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_LOCAL25/step_summary.json",
+      "bytes": 72246,
+      "crc32": 4291265670
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 13833,
+      "crc32": 427456055
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 7795,
+      "crc32": 1173040282
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 72946,
+      "crc32": 637544438
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 14194,
+      "crc32": 1684289710
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 7367,
+      "crc32": 366489135
+    },
+    {
+      "path": "R79_cup_night_s10_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 72089,
+      "crc32": 728455999
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_ONLINE25/preview.jpg",
+      "bytes": 16919,
+      "crc32": 4096589636
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_ONLINE25/pattern.jpg",
+      "bytes": 8757,
+      "crc32": 1171868499
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_ONLINE25/step_summary.json",
+      "bytes": 73833,
+      "crc32": 2592889344
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 15047,
+      "crc32": 4103426960
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 8746,
+      "crc32": 1600222019
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74558,
+      "crc32": 2942420998
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_LOCAL25/preview.jpg",
+      "bytes": 16002,
+      "crc32": 1333451649
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_LOCAL25/pattern.jpg",
+      "bytes": 9013,
+      "crc32": 1213259290
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_LOCAL25/step_summary.json",
+      "bytes": 72225,
+      "crc32": 2678566174
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 14226,
+      "crc32": 3769522028
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 9058,
+      "crc32": 1715951061
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 72971,
+      "crc32": 59941181
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 14896,
+      "crc32": 2806131133
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 7563,
+      "crc32": 4087840212
+    },
+    {
+      "path": "R79_cup_night_s17_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 72096,
+      "crc32": 261331784
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_ONLINE25/preview.jpg",
+      "bytes": 13752,
+      "crc32": 2956314962
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_ONLINE25/pattern.jpg",
+      "bytes": 3387,
+      "crc32": 1172629529
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_ONLINE25/step_summary.json",
+      "bytes": 74250,
+      "crc32": 1567240187
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 12823,
+      "crc32": 3218513356
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 3825,
+      "crc32": 1106312084
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74791,
+      "crc32": 211984381
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_LOCAL25/preview.jpg",
+      "bytes": 12912,
+      "crc32": 1621980531
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_LOCAL25/pattern.jpg",
+      "bytes": 2558,
+      "crc32": 3995336038
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_LOCAL25/step_summary.json",
+      "bytes": 72640,
+      "crc32": 3248701992
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 12324,
+      "crc32": 4226428394
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 2796,
+      "crc32": 49971966
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 73237,
+      "crc32": 1451297125
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 11816,
+      "crc32": 3037190925
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 2901,
+      "crc32": 3644788670
+    },
+    {
+      "path": "R79_printed_shirt_studio_s0_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 72499,
+      "crc32": 763601107
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_ONLINE25/preview.jpg",
+      "bytes": 12498,
+      "crc32": 1416447204
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_ONLINE25/pattern.jpg",
+      "bytes": 3437,
+      "crc32": 4187305958
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_ONLINE25/step_summary.json",
+      "bytes": 74226,
+      "crc32": 2229345262
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 11637,
+      "crc32": 2094432281
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 3803,
+      "crc32": 3407205807
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74851,
+      "crc32": 707905114
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_LOCAL25/preview.jpg",
+      "bytes": 12341,
+      "crc32": 1698500525
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_LOCAL25/pattern.jpg",
+      "bytes": 3111,
+      "crc32": 2102961225
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_LOCAL25/step_summary.json",
+      "bytes": 72646,
+      "crc32": 2281280096
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 11204,
+      "crc32": 2939519478
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 3124,
+      "crc32": 1384494663
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 73290,
+      "crc32": 976343864
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 11709,
+      "crc32": 343592443
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 2817,
+      "crc32": 3304822344
+    },
+    {
+      "path": "R79_printed_shirt_studio_s17_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 72525,
+      "crc32": 288894625
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_ONLINE25/preview.jpg",
+      "bytes": 15822,
+      "crc32": 1191927465
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_ONLINE25/pattern.jpg",
+      "bytes": 8405,
+      "crc32": 3982894227
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_ONLINE25/step_summary.json",
+      "bytes": 73939,
+      "crc32": 3230934056
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 17890,
+      "crc32": 2910586960
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 9041,
+      "crc32": 1186391097
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74554,
+      "crc32": 2175101285
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_LOCAL25/preview.jpg",
+      "bytes": 14870,
+      "crc32": 1318540483
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_LOCAL25/pattern.jpg",
+      "bytes": 6979,
+      "crc32": 451138029
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_LOCAL25/step_summary.json",
+      "bytes": 72321,
+      "crc32": 3042082744
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 16529,
+      "crc32": 308344164
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 7706,
+      "crc32": 1442343965
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 72955,
+      "crc32": 1845937977
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 14893,
+      "crc32": 2416134642
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 5955,
+      "crc32": 55710526
+    },
+    {
+      "path": "R79_butterfly_sunset_s0_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 72181,
+      "crc32": 2282250567
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_ONLINE25/preview.jpg",
+      "bytes": 14657,
+      "crc32": 1765784551
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_ONLINE25/pattern.jpg",
+      "bytes": 8562,
+      "crc32": 2716775898
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_ONLINE25/step_summary.json",
+      "bytes": 73956,
+      "crc32": 2787392415
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 17608,
+      "crc32": 896219489
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 9089,
+      "crc32": 4247541083
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74563,
+      "crc32": 529467272
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_LOCAL25/preview.jpg",
+      "bytes": 13538,
+      "crc32": 2515727380
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_LOCAL25/pattern.jpg",
+      "bytes": 6958,
+      "crc32": 3866581526
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_LOCAL25/step_summary.json",
+      "bytes": 72367,
+      "crc32": 989034444
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 16361,
+      "crc32": 1726685958
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 7110,
+      "crc32": 3050786336
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 72980,
+      "crc32": 791534635
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 15463,
+      "crc32": 2633513704
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 3832,
+      "crc32": 1954169347
+    },
+    {
+      "path": "R79_butterfly_sunset_s17_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 72207,
+      "crc32": 2139815497
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_ONLINE25/preview.jpg",
+      "bytes": 17841,
+      "crc32": 1363295738
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_ONLINE25/pattern.jpg",
+      "bytes": 8191,
+      "crc32": 989606247
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_ONLINE25/step_summary.json",
+      "bytes": 73788,
+      "crc32": 1390032210
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 15291,
+      "crc32": 2083162511
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 9171,
+      "crc32": 1986607311
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74448,
+      "crc32": 2997141878
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_LOCAL25/preview.jpg",
+      "bytes": 16286,
+      "crc32": 2543020310
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_LOCAL25/pattern.jpg",
+      "bytes": 7607,
+      "crc32": 4109636609
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_LOCAL25/step_summary.json",
+      "bytes": 72188,
+      "crc32": 3024283154
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 13145,
+      "crc32": 3048427137
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 8204,
+      "crc32": 4910631
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 72881,
+      "crc32": 792493695
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 12405,
+      "crc32": 1121279464
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 7286,
+      "crc32": 500401096
+    },
+    {
+      "path": "R79_dog_snow_s0_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 71989,
+      "crc32": 3784319346
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_ONLINE25/preview.jpg",
+      "bytes": 17927,
+      "crc32": 2158578355
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_ONLINE25/pattern.jpg",
+      "bytes": 8022,
+      "crc32": 4124850437
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_ONLINE25/step_summary.json",
+      "bytes": 73779,
+      "crc32": 3147193325
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 14850,
+      "crc32": 3699214989
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 9077,
+      "crc32": 2158874748
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74480,
+      "crc32": 2586443540
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_LOCAL25/preview.jpg",
+      "bytes": 16110,
+      "crc32": 3705415782
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_LOCAL25/pattern.jpg",
+      "bytes": 6888,
+      "crc32": 3322680420
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_LOCAL25/step_summary.json",
+      "bytes": 72181,
+      "crc32": 3364963587
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 12743,
+      "crc32": 1473930339
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 7968,
+      "crc32": 3185433171
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 72910,
+      "crc32": 188931339
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 12411,
+      "crc32": 3430970158
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 8015,
+      "crc32": 314315559
+    },
+    {
+      "path": "R79_dog_snow_s17_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 72061,
+      "crc32": 2449200307
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_ONLINE25/preview.jpg",
+      "bytes": 16908,
+      "crc32": 1615670494
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_ONLINE25/pattern.jpg",
+      "bytes": 8278,
+      "crc32": 1454860712
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_ONLINE25/step_summary.json",
+      "bytes": 73790,
+      "crc32": 1674113221
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 17187,
+      "crc32": 3587336907
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 8754,
+      "crc32": 2442409057
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74499,
+      "crc32": 2468925143
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_LOCAL25/preview.jpg",
+      "bytes": 15747,
+      "crc32": 973391588
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_LOCAL25/pattern.jpg",
+      "bytes": 8062,
+      "crc32": 2532823873
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_LOCAL25/step_summary.json",
+      "bytes": 72206,
+      "crc32": 3170439919
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 16235,
+      "crc32": 553840727
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 8423,
+      "crc32": 3593341828
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 72915,
+      "crc32": 374105578
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 16158,
+      "crc32": 2581647902
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 7384,
+      "crc32": 1989780986
+    },
+    {
+      "path": "R79_dog_rain_s0_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 72038,
+      "crc32": 1199492218
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_ONLINE25/preview.jpg",
+      "bytes": 16759,
+      "crc32": 1934536170
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_ONLINE25/pattern.jpg",
+      "bytes": 7940,
+      "crc32": 3184761392
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_ONLINE25/step_summary.json",
+      "bytes": 73803,
+      "crc32": 2307075979
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 17744,
+      "crc32": 2446175213
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 8815,
+      "crc32": 4177275503
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74560,
+      "crc32": 1990074264
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_LOCAL25/preview.jpg",
+      "bytes": 15565,
+      "crc32": 4009852097
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_LOCAL25/pattern.jpg",
+      "bytes": 6757,
+      "crc32": 2666885136
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_LOCAL25/step_summary.json",
+      "bytes": 72208,
+      "crc32": 488645280
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 16426,
+      "crc32": 4258839749
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 8513,
+      "crc32": 3840988584
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 72931,
+      "crc32": 2266302661
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 16467,
+      "crc32": 1618097669
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 7163,
+      "crc32": 2852798834
+    },
+    {
+      "path": "R79_dog_rain_s17_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 72049,
+      "crc32": 3708448085
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_ONLINE25/preview.jpg",
+      "bytes": 11177,
+      "crc32": 1112113605
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_ONLINE25/pattern.jpg",
+      "bytes": 2738,
+      "crc32": 2942584413
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_ONLINE25/step_summary.json",
+      "bytes": 73833,
+      "crc32": 3506289596
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 9351,
+      "crc32": 2466750598
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 3669,
+      "crc32": 1254902346
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74387,
+      "crc32": 2917605737
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_LOCAL25/preview.jpg",
+      "bytes": 10674,
+      "crc32": 92413819
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_LOCAL25/pattern.jpg",
+      "bytes": 2689,
+      "crc32": 294326823
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_LOCAL25/step_summary.json",
+      "bytes": 72230,
+      "crc32": 1639140237
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 8475,
+      "crc32": 4260871141
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 2231,
+      "crc32": 314111711
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 72811,
+      "crc32": 37082462
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 8685,
+      "crc32": 1729885643
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 2985,
+      "crc32": 2001270254
+    },
+    {
+      "path": "R79_shirt_studio_s0_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 72076,
+      "crc32": 589213974
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_ONLINE25/preview.jpg",
+      "bytes": 10181,
+      "crc32": 3675557063
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_ONLINE25/pattern.jpg",
+      "bytes": 2770,
+      "crc32": 2938254143
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_ONLINE25/step_summary.json",
+      "bytes": 73835,
+      "crc32": 767542913
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 9624,
+      "crc32": 3170263971
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 3675,
+      "crc32": 3862258273
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74406,
+      "crc32": 761473366
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_LOCAL25/preview.jpg",
+      "bytes": 10231,
+      "crc32": 1657587840
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_LOCAL25/pattern.jpg",
+      "bytes": 3060,
+      "crc32": 1443046697
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_LOCAL25/step_summary.json",
+      "bytes": 72245,
+      "crc32": 3031800518
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 9320,
+      "crc32": 2061463312
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 3226,
+      "crc32": 2940247731
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 72865,
+      "crc32": 1146588392
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 9489,
+      "crc32": 2273706490
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 3565,
+      "crc32": 558945913
+    },
+    {
+      "path": "R79_shirt_studio_s17_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 72104,
+      "crc32": 3703416100
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_ONLINE25/preview.jpg",
+      "bytes": 17118,
+      "crc32": 2926470242
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_ONLINE25/pattern.jpg",
+      "bytes": 4303,
+      "crc32": 4170199030
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_ONLINE25/step_summary.json",
+      "bytes": 73823,
+      "crc32": 883780660
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 15547,
+      "crc32": 3335805753
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 4659,
+      "crc32": 4024519847
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74442,
+      "crc32": 359494256
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_LOCAL25/preview.jpg",
+      "bytes": 15619,
+      "crc32": 2376336580
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_LOCAL25/pattern.jpg",
+      "bytes": 4060,
+      "crc32": 2412081433
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_LOCAL25/step_summary.json",
+      "bytes": 72187,
+      "crc32": 3839730827
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 14697,
+      "crc32": 3881455985
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 4740,
+      "crc32": 1947406473
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 72864,
+      "crc32": 2919958383
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 14469,
+      "crc32": 3952723390
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 5272,
+      "crc32": 1091097424
+    },
+    {
+      "path": "R79_rug_floor_s0_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 72073,
+      "crc32": 135432709
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_ONLINE25/preview.jpg",
+      "bytes": 16407,
+      "crc32": 2739771220
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_ONLINE25/pattern.jpg",
+      "bytes": 5117,
+      "crc32": 1036420612
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_ONLINE25/step_summary.json",
+      "bytes": 73884,
+      "crc32": 620486138
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_ONLINE25_QROI/preview.jpg",
+      "bytes": 16624,
+      "crc32": 4128976222
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_ONLINE25_QROI/pattern.jpg",
+      "bytes": 5662,
+      "crc32": 3391115489
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_ONLINE25_QROI/step_summary.json",
+      "bytes": 74527,
+      "crc32": 4240383708
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_LOCAL25/preview.jpg",
+      "bytes": 17391,
+      "crc32": 4202832095
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_LOCAL25/pattern.jpg",
+      "bytes": 7057,
+      "crc32": 1554246006
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_LOCAL25/step_summary.json",
+      "bytes": 72229,
+      "crc32": 830504482
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_LOCAL25_QROI/preview.jpg",
+      "bytes": 16235,
+      "crc32": 2376444924
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_LOCAL25_QROI/pattern.jpg",
+      "bytes": 6773,
+      "crc32": 357550513
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_LOCAL25_QROI/step_summary.json",
+      "bytes": 72891,
+      "crc32": 2785751915
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_LOCAL25_OFF/preview.jpg",
+      "bytes": 15320,
+      "crc32": 3468267022
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_LOCAL25_OFF/pattern.jpg",
+      "bytes": 6419,
+      "crc32": 1396725902
+    },
+    {
+      "path": "R79_rug_floor_s17_ROI_LOCAL25_OFF/step_summary.json",
+      "bytes": 72096,
+      "crc32": 700175563
+    },
+    {
+      "path": "references/manifest.json",
+      "bytes": 416212,
+      "crc32": 4247192702
+    },
+    {
+      "path": "references/R78_cup_night_s10_ROI_UNIFORM25.jpg",
+      "bytes": 16179,
+      "crc32": 2015062257
+    },
+    {
+      "path": "references/R78_cup_night_s10_ROUTE_ONLINE25.jpg",
+      "bytes": 17856,
+      "crc32": 2563335468
+    },
+    {
+      "path": "references/R78_cup_night_s10_U25_KV.jpg",
+      "bytes": 14881,
+      "crc32": 2417010196
+    },
+    {
+      "path": "references/R78_cup_night_s10_FLOWEDIT_N24.jpg",
+      "bytes": 18253,
+      "crc32": 331084101
+    },
+    {
+      "path": "references/R78_cup_night_s17_ROI_UNIFORM25.jpg",
+      "bytes": 17217,
+      "crc32": 680248092
+    },
+    {
+      "path": "references/R78_cup_night_s17_ROUTE_ONLINE25.jpg",
+      "bytes": 17825,
+      "crc32": 3020220226
+    },
+    {
+      "path": "references/R78_cup_night_s17_U25_KV.jpg",
+      "bytes": 15972,
+      "crc32": 1709387509
+    },
+    {
+      "path": "references/R78_cup_night_s17_FLOWEDIT_N24.jpg",
+      "bytes": 18821,
+      "crc32": 4158829503
+    },
+    {
+      "path": "references/R78_printed_shirt_studio_s0_ROI_UNIFORM25.jpg",
+      "bytes": 14069,
+      "crc32": 3717091597
+    },
+    {
+      "path": "references/R78_printed_shirt_studio_s0_ROUTE_ONLINE25.jpg",
+      "bytes": 14155,
+      "crc32": 945716279
+    },
+    {
+      "path": "references/R78_printed_shirt_studio_s0_U25_KV.jpg",
+      "bytes": 13100,
+      "crc32": 1223412330
+    },
+    {
+      "path": "references/R78_printed_shirt_studio_s0_FLOWEDIT_N24.jpg",
+      "bytes": 16697,
+      "crc32": 2671603055
+    },
+    {
+      "path": "references/R78_printed_shirt_studio_s17_ROI_UNIFORM25.jpg",
+      "bytes": 12776,
+      "crc32": 746508406
+    },
+    {
+      "path": "references/R78_printed_shirt_studio_s17_ROUTE_ONLINE25.jpg",
+      "bytes": 14435,
+      "crc32": 626019
+    },
+    {
+      "path": "references/R78_printed_shirt_studio_s17_U25_KV.jpg",
+      "bytes": 13463,
+      "crc32": 428237149
+    },
+    {
+      "path": "references/R78_printed_shirt_studio_s17_FLOWEDIT_N24.jpg",
+      "bytes": 16113,
+      "crc32": 3728270120
+    },
+    {
+      "path": "references/R78_butterfly_sunset_s0_ROI_UNIFORM25.jpg",
+      "bytes": 16084,
+      "crc32": 3819018089
+    },
+    {
+      "path": "references/R78_butterfly_sunset_s0_ROUTE_ONLINE25.jpg",
+      "bytes": 17586,
+      "crc32": 1450151411
+    },
+    {
+      "path": "references/R78_butterfly_sunset_s0_U25_KV.jpg",
+      "bytes": 16212,
+      "crc32": 989715597
+    },
+    {
+      "path": "references/R78_butterfly_sunset_s0_FLOWEDIT_N24.jpg",
+      "bytes": 18559,
+      "crc32": 2393055668
+    },
+    {
+      "path": "references/R78_butterfly_sunset_s17_ROI_UNIFORM25.jpg",
+      "bytes": 14809,
+      "crc32": 3008743293
+    },
+    {
+      "path": "references/R78_butterfly_sunset_s17_ROUTE_ONLINE25.jpg",
+      "bytes": 15947,
+      "crc32": 2326719303
+    },
+    {
+      "path": "references/R78_butterfly_sunset_s17_U25_KV.jpg",
+      "bytes": 14708,
+      "crc32": 3585700751
+    },
+    {
+      "path": "references/R78_butterfly_sunset_s17_FLOWEDIT_N24.jpg",
+      "bytes": 18438,
+      "crc32": 1710758163
+    },
+    {
+      "path": "references/R78_dog_snow_s0_ROI_UNIFORM25.jpg",
+      "bytes": 18184,
+      "crc32": 843196836
+    },
+    {
+      "path": "references/R78_dog_snow_s0_ROUTE_ONLINE25.jpg",
+      "bytes": 22918,
+      "crc32": 1425797884
+    },
+    {
+      "path": "references/R78_dog_snow_s0_U25_KV.jpg",
+      "bytes": 20905,
+      "crc32": 4077175865
+    },
+    {
+      "path": "references/R78_dog_snow_s0_FLOWEDIT_N24.jpg",
+      "bytes": 24525,
+      "crc32": 2540802480
+    },
+    {
+      "path": "references/R78_dog_snow_s17_ROI_UNIFORM25.jpg",
+      "bytes": 18035,
+      "crc32": 1273920092
+    },
+    {
+      "path": "references/R78_dog_snow_s17_ROUTE_ONLINE25.jpg",
+      "bytes": 25910,
+      "crc32": 2541237974
+    },
+    {
+      "path": "references/R78_dog_snow_s17_U25_KV.jpg",
+      "bytes": 22795,
+      "crc32": 3082362053
+    },
+    {
+      "path": "references/R78_dog_snow_s17_FLOWEDIT_N24.jpg",
+      "bytes": 24587,
+      "crc32": 2937554658
+    },
+    {
+      "path": "references/R78_dog_rain_s0_ROI_UNIFORM25.jpg",
+      "bytes": 17204,
+      "crc32": 2654985300
+    },
+    {
+      "path": "references/R78_dog_rain_s0_ROUTE_ONLINE25.jpg",
+      "bytes": 22216,
+      "crc32": 165431373
+    },
+    {
+      "path": "references/R78_dog_rain_s0_U25_KV.jpg",
+      "bytes": 20188,
+      "crc32": 3380947300
+    },
+    {
+      "path": "references/R78_dog_rain_s0_FLOWEDIT_N24.jpg",
+      "bytes": 23914,
+      "crc32": 3614132974
+    },
+    {
+      "path": "references/R78_dog_rain_s17_ROI_UNIFORM25.jpg",
+      "bytes": 17029,
+      "crc32": 395010291
+    },
+    {
+      "path": "references/R78_dog_rain_s17_ROUTE_ONLINE25.jpg",
+      "bytes": 23200,
+      "crc32": 2466285191
+    },
+    {
+      "path": "references/R78_dog_rain_s17_U25_KV.jpg",
+      "bytes": 21228,
+      "crc32": 1215193652
+    },
+    {
+      "path": "references/R78_dog_rain_s17_FLOWEDIT_N24.jpg",
+      "bytes": 23636,
+      "crc32": 2468011156
+    },
+    {
+      "path": "references/R78_shirt_studio_s0_ROI_UNIFORM25.jpg",
+      "bytes": 11599,
+      "crc32": 784861227
+    },
+    {
+      "path": "references/R78_shirt_studio_s0_ROUTE_ONLINE25.jpg",
+      "bytes": 12021,
+      "crc32": 415489269
+    },
+    {
+      "path": "references/R78_shirt_studio_s0_U25_KV.jpg",
+      "bytes": 11068,
+      "crc32": 3635052299
+    },
+    {
+      "path": "references/R78_shirt_studio_s0_FLOWEDIT_N24.jpg",
+      "bytes": 14445,
+      "crc32": 1970872120
+    },
+    {
+      "path": "references/R78_shirt_studio_s17_ROI_UNIFORM25.jpg",
+      "bytes": 10666,
+      "crc32": 4266717660
+    },
+    {
+      "path": "references/R78_shirt_studio_s17_ROUTE_ONLINE25.jpg",
+      "bytes": 11075,
+      "crc32": 154956751
+    },
+    {
+      "path": "references/R78_shirt_studio_s17_U25_KV.jpg",
+      "bytes": 10917,
+      "crc32": 3515456012
+    },
+    {
+      "path": "references/R78_shirt_studio_s17_FLOWEDIT_N24.jpg",
+      "bytes": 13829,
+      "crc32": 2602893042
+    },
+    {
+      "path": "references/R78_rug_floor_s0_ROI_UNIFORM25.jpg",
+      "bytes": 17722,
+      "crc32": 2433245518
+    },
+    {
+      "path": "references/R78_rug_floor_s0_ROUTE_ONLINE25.jpg",
+      "bytes": 16736,
+      "crc32": 2724394545
+    },
+    {
+      "path": "references/R78_rug_floor_s0_U25_KV.jpg",
+      "bytes": 14775,
+      "crc32": 4117275117
+    },
+    {
+      "path": "references/R78_rug_floor_s0_FLOWEDIT_N24.jpg",
+      "bytes": 17296,
+      "crc32": 3286686179
+    },
+    {
+      "path": "references/R78_rug_floor_s17_ROI_UNIFORM25.jpg",
+      "bytes": 17105,
+      "crc32": 3037011900
+    },
+    {
+      "path": "references/R78_rug_floor_s17_ROUTE_ONLINE25.jpg",
+      "bytes": 15199,
+      "crc32": 3955684131
+    },
+    {
+      "path": "references/R78_rug_floor_s17_U25_KV.jpg",
+      "bytes": 15656,
+      "crc32": 3332865620
+    },
+    {
+      "path": "references/R78_rug_floor_s17_FLOWEDIT_N24.jpg",
+      "bytes": 17380,
+      "crc32": 3073510066
+    },
+    {
+      "path": "references/R76_cup_night_s10_FLOWEDIT_N26.jpg",
+      "bytes": 17246,
+      "crc32": 1050812696
+    },
+    {
+      "path": "references/R76_cup_night_s17_FLOWEDIT_N26.jpg",
+      "bytes": 16145,
+      "crc32": 2103375163
+    },
+    {
+      "path": "references/R76_printed_shirt_studio_s0_FLOWEDIT_N26.jpg",
+      "bytes": 14968,
+      "crc32": 2379557620
+    },
+    {
+      "path": "references/R76_printed_shirt_studio_s17_FLOWEDIT_N26.jpg",
+      "bytes": 14495,
+      "crc32": 2610946778
+    },
+    {
+      "path": "references/R76_butterfly_sunset_s0_FLOWEDIT_N26.jpg",
+      "bytes": 17922,
+      "crc32": 1892220373
+    },
+    {
+      "path": "references/R76_butterfly_sunset_s17_FLOWEDIT_N26.jpg",
+      "bytes": 17491,
+      "crc32": 1738149221
+    },
+    {
+      "path": "references/R76_dog_snow_s0_FLOWEDIT_N26.jpg",
+      "bytes": 21070,
+      "crc32": 3013197242
+    },
+    {
+      "path": "references/R76_dog_snow_s17_FLOWEDIT_N26.jpg",
+      "bytes": 20513,
+      "crc32": 2741157158
+    },
+    {
+      "path": "references/R76_dog_rain_s0_FLOWEDIT_N26.jpg",
+      "bytes": 21445,
+      "crc32": 3595528754
+    },
+    {
+      "path": "references/R76_dog_rain_s17_FLOWEDIT_N26.jpg",
+      "bytes": 21449,
+      "crc32": 3137392584
+    },
+    {
+      "path": "references/R76_shirt_studio_s0_FLOWEDIT_N26.jpg",
+      "bytes": 12920,
+      "crc32": 2128047079
+    },
+    {
+      "path": "references/R76_shirt_studio_s17_FLOWEDIT_N26.jpg",
+      "bytes": 13345,
+      "crc32": 4182265221
+    },
+    {
+      "path": "references/R76_rug_floor_s0_FLOWEDIT_N26.jpg",
+      "bytes": 16723,
+      "crc32": 1211800871
+    },
+    {
+      "path": "references/R76_rug_floor_s17_FLOWEDIT_N26.jpg",
+      "bytes": 20422,
+      "crc32": 926249156
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "index.html",
+      "bytes": 34646,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "review/index.html",
+      "bytes": 68660,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/cup_night_s10.jpg",
+      "bytes": 139654,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/cup_night_s17.jpg",
+      "bytes": 143809,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/printed_shirt_studio_s0.jpg",
+      "bytes": 122078,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/printed_shirt_studio_s17.jpg",
+      "bytes": 117266,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/butterfly_sunset_s0.jpg",
+      "bytes": 142745,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/butterfly_sunset_s17.jpg",
+      "bytes": 137374,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_snow_s0.jpg",
+      "bytes": 159277,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_snow_s17.jpg",
+      "bytes": 163110,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_rain_s0.jpg",
+      "bytes": 162055,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_rain_s17.jpg",
+      "bytes": 164465,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/shirt_studio_s0.jpg",
+      "bytes": 102941,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/shirt_studio_s17.jpg",
+      "bytes": 101190,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/rug_floor_s0.jpg",
+      "bytes": 135329,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/rug_floor_s17.jpg",
+      "bytes": 136850,
+      "reason": "comparison grid or generated interface"
+    }
+  ],
+  "text_normalized_members": [],
+  "original_manifest_note": "Archived code/plan/input hashes identify the historical run. Neutral naming and path redaction change published text; hashes are not recalculated or presented as hashes of this export.",
+  "available": {
+    "completed": 70,
+    "total_planned": 70,
+    "pending": 0,
+    "step_summaries": 70,
+    "record_json": 0,
+    "full_steps_json": 0,
+    "native_raw_png_in_archive": 0,
+    "float_map_npz": 0
+  },
+  "missing": "Native generated images absent from compact source ZIP."
+}

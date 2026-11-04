@@ -1,0 +1,18 @@
+{
+  "schema": "r86-request-maps-v1",
+  "case": "723000000004",
+  "seed": 0,
+  "arm": "GLOBAL_07",
+  "dtype": "float32",
+  "shape": [
+    64,
+    64
+  ],
+  "E_original": "mean of three normalized native target/source response magnitudes",
+  "P_original": "1 - 0.75 * E_original",
+  "route_mask": "engine route_mask64 stores 1-E before floor; packed route mask is same un-floored support",
+  "P_shifted": "toroidal roll of P_original by (32,32), only SHIFT",
+  "P_correction": "actual correction allocation for CORR/SHIFT; absent for GLOBAL, which uses an unmasked global residual",
+  "mask_source": "native prompt-response probes; no official mask",
+  "sha256": "2d8785737bf96806a29d3609b36f9284fdf0cc64d2ae98dc20da674134f332e5"
+}

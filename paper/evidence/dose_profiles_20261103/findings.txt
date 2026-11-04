@@ -1,0 +1,93 @@
+CPU OFFLINE ANALYSIS — exploratory; no GPU, no VLM
+
+Step reconstruction: 160 R85 outputs, 28 steps each; max |recomputed-native I|=4.44e-16.
+R84 130 outputs/10 sources; R85 520 outputs/40 sources. Sources disjoint. Complete source-seed means required. Preservation support: R84 8, R85 33 sources.
+FlowEdit, RF-Edit and ETA03 comparable dose undefined (ETA03 native zeros replaced with NaN).
+Centered CV predicts within-source profile deviations, NOT absolute performance of an unseen source; held-out outcomes never enter training.
+No model chosen from these exploratory candidates; all linear/quadratic/log results retained.
+
+R84 same-memory, linear centered LOSO:
+  lpips_full: I skill=0.610, RMSE=0.02679, n_sources=10, rows=40; I+allocation skill=0.611, RMSE=0.02674, n_sources=10, rows=40
+  lpips_preserved: I skill=0.799, RMSE=0.01688, n_sources=8, rows=32; I+allocation skill=0.801, RMSE=0.01682, n_sources=8, rows=32
+  dino_full_feature_similarity: I skill=0.113, RMSE=0.03475, n_sources=10, rows=40; I+allocation skill=0.119, RMSE=0.03464, n_sources=10, rows=40
+  clip_target_similarity: I skill=-0.055, RMSE=0.00691, n_sources=10, rows=40; I+allocation skill=-0.075, RMSE=0.00697, n_sources=10, rows=40
+  clip_directional_similarity: I skill=-0.122, RMSE=0.01371, n_sources=10, rows=40; I+allocation skill=-0.157, RMSE=0.01392, n_sources=10, rows=40
+R84 with BOTH, linear centered LOSO:
+  lpips_full: I skill=0.577, RMSE=0.02528; I+allocation+memory skill=0.599, RMSE=0.02463
+  clip_directional_similarity: I skill=-0.049, RMSE=0.01822; I+allocation+memory skill=0.017, RMSE=0.01764
+R85 same-memory, linear centered LOSO:
+  lpips_full: I skill=0.791, RMSE=0.01137, n_sources=40, rows=120; I+allocation skill=0.803, RMSE=0.01104, n_sources=40, rows=120
+  lpips_preserved: I skill=0.712, RMSE=0.01276, n_sources=33, rows=99; I+allocation skill=0.729, RMSE=0.01237, n_sources=33, rows=99
+  dino_full_feature_similarity: I skill=0.072, RMSE=0.03295, n_sources=40, rows=120; I+allocation skill=0.054, RMSE=0.03327, n_sources=40, rows=120
+  clip_target_similarity: I skill=-0.036, RMSE=0.00748, n_sources=40, rows=120; I+allocation skill=-0.045, RMSE=0.00752, n_sources=40, rows=120
+  clip_directional_similarity: I skill=-0.005, RMSE=0.01178, n_sources=40, rows=120; I+allocation skill=-0.017, RMSE=0.01185, n_sources=40, rows=120
+R85 with BOTH, linear centered LOSO:
+  lpips_full: I skill=0.571, RMSE=0.01828; I+allocation+memory skill=0.666, RMSE=0.01611
+  clip_directional_similarity: I skill=-0.009, RMSE=0.01996; I+allocation+memory skill=0.127, RMSE=0.01857
+
+Transfer R84 -> R85 common CORR25/ENERGY, fixed linear fits:
+  clip_directional_similarity raw: skill=-0.008, RMSE=0.09944, test sources=40, out-of-range=4/80
+  clip_directional_similarity centered: skill=-0.000, RMSE=0.00768, test sources=40, out-of-range=4/80
+  lpips_full raw: skill=-0.099, RMSE=0.10964, test sources=40, out-of-range=4/80
+  lpips_full centered: skill=-0.306, RMSE=0.00725, test sources=40, out-of-range=4/80
+  lpips_preserved raw: skill=-0.091, RMSE=0.13743, test sources=33, out-of-range=4/66
+  lpips_preserved centered: skill=-0.182, RMSE=0.01076, test sources=33, out-of-range=4/66
+
+R85 U25 minus CORR (direction-aligned mean differences):
+  dino_full_feature_similarity: +0.020783, n=40, positive=32
+  lpips_full: +0.044793, n=40, positive=40
+  lpips_preserved: +0.039911, n=33, positive=33
+  clip_directional_similarity: +0.004580, n=40, positive=23
+U25 has both higher mean DINO and lower mean LPIPS than CORR; no three-metric conflict is asserted.
+Pairwise disagreement refers to signs of source-averaged method contrasts, not image-level ground truth.
+Realized impulse changes with state and memory; regression adjustment cannot establish causal dose sufficiency.
+No universal dose-collapse conclusion follows from in-sample R2. See LOSO skill/RMSE, transfer failure and per-source residuals.
+
+Additional metric findings (source-level, seven-method menu):
+  R85 clip_directional_similarity vs direction-aligned dino_full_feature_similarity: mean within-source rho=-0.186607, 95% source-bootstrap CI [-0.330402,-0.044621], n=40.
+  R85 dino_full_feature_similarity vs direction-aligned lpips_full: mean within-source rho=0.600000, 95% source-bootstrap CI [0.499063,0.690179], n=40.
+  R85 lpips_full vs direction-aligned lpips_preserved: mean within-source rho=0.929654, 95% source-bootstrap CI [0.901515,0.954545], n=33.
+  CORR-U25 dino_full_feature_similarity vs lpips_full: source contrast signs disagree for 8/40; aggregate means agree in favor of U25.
+  CORR-U25 dino_full_feature_similarity vs lpips_preserved: source contrast signs disagree for 6/33; aggregate means agree in favor of U25.
+  Linear allocation-adjusted R84->R85 centered preservation-LPIPS transfer skill=0.084; impulse-only=-0.182. This qualifies a blanket transfer-failure statement.
+  Associations depend on the included seven-method menu; they do not establish agreement with human judgments.
+  Candidate fits with constant indicator columns have deficient design rank; coefficient indices and minimum training rank are retained. Treat indicator-set predictions jointly, not constant/aliased coefficients as identified effects.
+
+
+======================================================================
+SOURCE-CENTERED LOSO: EXACT DEFINITIONS AND HELD-OUT Y SCOPE
+Let y_sa be the seed-averaged outcome for source s and arm a in population A_s; f_sa is the selected feature vector. Define ybar_s=mean_{a in A_s}(y_sa), fbar_s=mean_{a in A_s}(f_sa), ytilde_sa=y_sa-ybar_s, and ftilde_sa=f_sa-fbar_s. Transform I before centering: centered I^2 is I_sa^2-mean_a(I_sa^2), not (I_sa-mean_a I_sa)^2. Indicators are centered in the same way. Fit beta_{-s} to all centered rows from other sources without intercept, then predict ftilde_sa^T beta_{-s}. The held-out source's full observed outcome profile supplies ybar_s solely for defining the centered scoring targets. It does not enter beta, predictor centering, model selection, or an absolute prediction reconstruction. Because held-out Y is required to define the target, this is a conditional profile/contrast evaluation, not label-free prospective prediction of absolute outcomes. Centering each source before LOSO is algebraically source-local; all seeds of s are excluded from fitting together.
+
+Arm populations (complete source-seed support required separately for each outcome): R84 local_dose=CORR15/CORR25/CORR35 (30 source-arm rows, 10 sources; regional 24 rows, 8 sources); R84 same_memory adds ENERGY (40/32 rows); R84 with_memory further adds BOTH (50/40 rows). R85 same_memory=CORR25/ENERGY/U25 (120 rows, 40 sources; regional 99 rows, 33 sources); R85 with_memory adds BOTH (160/132 rows). The same_memory indicator is local residual allocation versus global residual direction; with_memory adds a separate BOTH memory-release flag. No external algorithm is assigned zero comparable dose.
+
+CV skill=1-sum_{s,a}(ytilde_sa-yhat_sa)^2/sum_{s,a}ytilde_sa^2. Negative skill means worse squared error than predicting zero source-centered deviation. RMSE is pooled over source-arm rows; complete arm support gives equal weight to each source. Raw CV baseline is the training-source outcome mean, not the held-out mean. For transfer, raw baseline is the R84 training mean; centered baseline remains zero.
+
+R84->R85 TRANSFER DESIGN: R84 same_memory (CORR15/CORR25/CORR35/ENERGY) fits transferred unchanged to R85 common policies CORR25/ENERGY. Training centers use the four R84 arms; held-out evaluation centers use the two R85 arms. Thus the intervention menu and population differ; centered R85 evaluation concerns a two-policy contrast. No R85 coefficient fit, no U25 unseen-policy extrapolation, and no BOTH extrapolation. R84 full metrics: 10 sources/40 training rows; regional: 8/32. R85 full: 40 sources/80 evaluation rows; regional: 33/66. Four evaluation rows lie outside the R84 training impulse range in either support.
+
+PAPER-READY SHORT ENGLISH METHODS PARAGRAPH
+We first averaged the complete planned seeds within each source and configuration. For each outcome and comparison population, we centered the outcome and each transformed predictor (I, I-squared, or log I, plus the included indicators) over that source's eligible configurations. Least-squares models were fit without an intercept, leaving out all configurations and seeds of one source at a time. For a held-out source, its observed outcome mean was used only to define the centered evaluation targets; no held-out outcomes entered coefficient estimation. Thus this cross-validation assesses conditional within-source configuration profiles, rather than absolute prediction for an unseen source with unavailable outcome labels. Prediction skill was defined as 1 minus pooled held-out squared error divided by the squared error of the zero-deviation baseline. Raw models used an intercept and the training-set outcome mean as baseline. All candidate forms were exploratory.
+
+EXACT LINEAR TRANSFER SKILL (12 decimal places; full CSV retained)
+lpips_full; indicators=False; raw; skill=-0.099394141036; RMSE=0.109642206158; n_sources=40; rows=80.
+lpips_full; indicators=False; centered; skill=-0.305557124084; RMSE=0.007246853314; n_sources=40; rows=80.
+lpips_full; indicators=True; raw; skill=-0.090632338584; RMSE=0.109204426375; n_sources=40; rows=80.
+lpips_full; indicators=True; centered; skill=-0.025283306372; RMSE=0.006422046922; n_sources=40; rows=80.
+lpips_preserved; indicators=False; raw; skill=-0.091403919934; RMSE=0.137431015543; n_sources=33; rows=66.
+lpips_preserved; indicators=False; centered; skill=-0.181611106775; RMSE=0.010756658050; n_sources=33; rows=66.
+lpips_preserved; indicators=True; raw; skill=-0.084870178587; RMSE=0.137019029376; n_sources=33; rows=66.
+lpips_preserved; indicators=True; centered; skill=0.084154685256; RMSE=0.009470025414; n_sources=33; rows=66.
+clip_directional_similarity; indicators=False; raw; skill=-0.008079714774; RMSE=0.099438745176; n_sources=40; rows=80.
+clip_directional_similarity; indicators=False; centered; skill=-0.000111900899; RMSE=0.007675430857; n_sources=40; rows=80.
+clip_directional_similarity; indicators=True; raw; skill=-0.008152240331; RMSE=0.099442322136; n_sources=40; rows=80.
+clip_directional_similarity; indicators=True; centered; skill=-0.006228520005; RMSE=0.007698866297; n_sources=40; rows=80.
+clip_target_similarity; indicators=False; raw; skill=-0.045251661178; RMSE=0.037208319632; n_sources=40; rows=80.
+clip_target_similarity; indicators=False; centered; skill=0.007336244461; RMSE=0.004425894899; n_sources=40; rows=80.
+clip_target_similarity; indicators=True; raw; skill=-0.045167458531; RMSE=0.037206820901; n_sources=40; rows=80.
+clip_target_similarity; indicators=True; centered; skill=-0.003130501154; RMSE=0.004449167252; n_sources=40; rows=80.
+dino_full_feature_similarity; indicators=False; raw; skill=0.016863856635; RMSE=0.203419814063; n_sources=40; rows=80.
+dino_full_feature_similarity; indicators=False; centered; skill=0.004380039445; RMSE=0.025938811281; n_sources=40; rows=80.
+dino_full_feature_similarity; indicators=True; raw; skill=0.014888757222; RMSE=0.203624044561; n_sources=40; rows=80.
+dino_full_feature_similarity; indicators=True; centered; skill=-0.076140325160; RMSE=0.026967316036; n_sources=40; rows=80.
+
+REQUEST-MAP ARCHIVE RESULT
+Both extracted R85 result trees and both checked original ZIP paths contain edit_response64.jpg and route_mask.jpg only (240 of each per result copy: three routed/probed arms x 40 sources x 2 seeds). No .npy/.npz/.pt/.pth/.safetensors E/P archive was found. Native writer quantizes to uint8 and writes JPEG quality=90; E preview is 64x64 and P preview is resized to 320x320. The map-localization analysis stopped here. L=mean_edit(E)-mean_pres(E) and its relation to CORR-ENERGY preservation differences were NOT computed. See request_map_archive_audit.json for exact inspected scopes and writer provenance.

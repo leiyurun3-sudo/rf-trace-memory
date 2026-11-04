@@ -1,0 +1,15 @@
+{
+  "sources": 40,
+  "paired_seeds": 2,
+  "steps": 28,
+  "aggregation": "Average two seeds within each source, equal source weights",
+  "source_glob": "R85_FinalNight/*_RELEASE_CORR25/step_summary.json",
+  "comparator": "ENERGY_MATCH25",
+  "normalization": "100*(source_mean_I_CORR-source_mean_I_ENERGY)/source_mean_I_ENERGY",
+  "final_corr": 0.1807353502089704,
+  "final_energy": 0.18269034021973202,
+  "final_source_relative_mean_percent": -1.0198008640942797,
+  "units": "latent model units; not semantic effect or physical energy",
+  "matplotlib": "3.11.2",
+  "numpy": "2.5.4"
+}

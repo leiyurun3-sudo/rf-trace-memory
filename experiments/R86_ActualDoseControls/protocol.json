@@ -1,0 +1,25 @@
+{
+  "selection": "sort SHA256 of ASCII R86-pilot-20261103:<case ID>, ascending; first 10",
+  "seed": 0,
+  "case_ids": [
+    "224000000007",
+    "111000000009",
+    "122000000002",
+    "422000000001",
+    "812000000004",
+    "614000000004",
+    "723000000004",
+    "312000000006",
+    "000000000058",
+    "813000000003"
+  ],
+  "primary_contrasts": [
+    "CORR_1 - GLOBAL_1",
+    "CORR_1 - SHIFT_1"
+  ],
+  "exploratory_contrasts": [
+    "CORR_07 - GLOBAL_07",
+    "(CORR_1 - GLOBAL_1) - (CORR_07 - GLOBAL_07)"
+  ],
+  "interpretation": "post-hoc mechanism reuse of R85, not independent test or retroactive preregistration"
+}

@@ -1,0 +1,15 @@
+上传 A_Qwen_EvidenceCalibration.zip 到服务器 /root/autodl-tmp。
+若当前终端还在 tail -f，先按 Ctrl+C 回到命令提示符，再粘贴：
+
+cd /root/autodl-tmp
+unzip -o A_Qwen_EvidenceCalibration.zip
+cd A_Qwen_EvidenceCalibration
+nohup bash run.sh > calibration.log 2>&1 < /dev/null &
+tail -f calibration.log
+
+24 次单图事实询问。使用已下载的本地 Qwen，不下载，不重跑图像生成，不修改原评测。
+12 次合成图观察对应改对、未改、改错对象；12 次真实图观察对应三个源、原图对照、六个真实输出。
+图像推理阶段不提供编辑目标；完成后按预定规则计算三种任务的编辑判定。
+不把 schema_ok 当作语义正确；真实输出没有预设胜负，也不生成方法排行榜。
+输出 /root/autodl-tmp/A_Qwen_EvidenceCalibration_results_时间.zip。
+这是小规模校准，非完整评测替代。先看 known_attribute_correct、known_edit_correct 及原始回答。

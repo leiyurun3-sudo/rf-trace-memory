@@ -1,4 +1,4 @@
-# Reproducing finalized R84/R85
+# Reproducing the frozen R84/R85 benchmark
 
 Download the intact [R84_R85_FinalNight_Ready.zip](https://github.com/leiyurun3-sudo/rf-trace-memory/releases/download/evaluated-r84-r85-20261102/R84_R85_FinalNight_Ready.zip) from the [evaluated release](https://github.com/leiyurun3-sudo/rf-trace-memory/releases/tag/evaluated-r84-r85-20261102). The same release supplies the compact final results and manuscript PDF.
 
@@ -25,14 +25,18 @@ bash R84_R85_FinalNight/start_final_night.sh --eval-only
 
 The launcher calls `run_final_night.sh`, then each round's `runner.py` and `evaluate_all.sh`. It writes the compact `R84_R85_FinalNight_results.zip` in the MINT project root. Native PNGs stay in each nested round's `results/` on the server and are needed for reevaluation. Compact numeric files alone do not supply those images.
 
-## Frozen primary method and result mapping
+## Frozen routing arm and result mapping
 
 | Final record | Snapshot round | Role | Completed native outputs |
 | --- | --- | --- | --- |
 | `results/R84/` | `R84_RequestRelease/` | Development, 10 sources, seeds 0 and 17 | 130 |
 | `results/R85/` | `R85_IndependentComparison/` | Independent predeclared comparison, 40 sources, seeds 0 and 17 | 520 |
 
-The latest frozen primary is `RELEASE_CORR25`: request response from three native prompt-difference probes on the same reference (sigmas 0.25, 0.5, 0.75), `route_floor=0.25`, `corr_lambda=0.25`, `correction_budget_mode=local_coefficient`, `match_residual_rms=false`. `engine.py` applies the local candidate with gain 0.25 directly, with no global RMS renormalization. Source K/V memory uses window `[0,7)`. This maps to the direct local coefficient branch; the separate `online_same_state`/ONLINE budget branch is not the finalized primary. `RELEASE_BOTH25` is the fixed secondary candidate; `ENERGY_MATCH25` is the scalar energy control. R85 includes U25_KV, FLOWEDIT_N26, RFEDIT_I08 and ETA03; RFEDIT uses seed 0 only. The plans retain all per-arm settings.
+The frozen routing arm in these two studies is `RELEASE_CORR25`: request response from three native prompt-difference probes on the same reference (sigmas 0.25, 0.5, 0.75), `route_floor=0.25`, `corr_lambda=0.25`, `correction_budget_mode=local_coefficient`, `match_residual_rms=false`. `engine.py` applies the local candidate with gain 0.25 directly, with no global RMS renormalization. Source K/V memory uses window `[0,7)`. This maps to the direct local coefficient branch; the separate `online_same_state`/ONLINE budget branch is a historical alternative. `RELEASE_BOTH25` is the fixed secondary candidate; `ENERGY_MATCH25` is the scalar energy control. R85 includes U25_KV, FLOWEDIT_N26, RFEDIT_I08 and ETA03; RFEDIT uses seed 0 only. The plans retain all per-arm settings.
+
+## Later matched-profile controls
+
+The [experiment index](EXPERIMENT_INDEX.md) covers the later pilot and fresh-source studies. Their launchers reuse source preparation across directions and match the request arm's measured RMS sequence at each step. R87 contains 20 fresh sources, two seeds, four directions, 160 generated and evaluated outputs. Use its own protocol and launcher rather than modifying this historical benchmark.
 
 ## Included evidence and provenance
 

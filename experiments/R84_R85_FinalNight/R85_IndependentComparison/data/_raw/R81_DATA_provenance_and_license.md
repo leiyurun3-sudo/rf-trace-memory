@@ -6,7 +6,7 @@ Prepared 2026-10-30. Ready for parent package integration: **24 distinct sources
 
 | Item | Exact count |
 |---|---:|
-| Pre-existing official mapping files in D:/科研论文资料 and C:/Users/14725/Downloads | 0 |
+| Pre-existing official mapping files in the local research and download roots | 0 |
 | Pre-existing images under annotation_images in those roots | 0 |
 | ZIP archives whose member lists were searched | 353 (219 D:, 134 Downloads) |
 | R80 reference source images read for content exclusion | 6 |

@@ -1,0 +1,19 @@
+{
+  "case": "412000000001",
+  "usage": "evaluation_only_after_generation",
+  "official_record": {
+    "image_path": "4_change_attribute_content_40/1_artificial/2_human/412000000001.jpg",
+    "original_prompt": "a painting of a woman with [colorful paint] on her face",
+    "editing_prompt": "a painting of a woman with [drab paint] on her face",
+    "editing_instruction": "change the paint color to drab",
+    "editing_type_id": "4",
+    "blended_word": "paint paint",
+    "mask": [
+      0,
+      262144
+    ]
+  },
+  "mask_encoding": "zero_based_start_length_pairs_row_major_512x512",
+  "official_evaluator_boundary_policy": "set four border edges to edited=1",
+  "independence": "supplied dataset annotation; not a new human annotation or ground-truth edited image"
+}

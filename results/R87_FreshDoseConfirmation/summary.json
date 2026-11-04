@@ -1,0 +1,31 @@
+{
+  "completed": 160,
+  "failed": 0,
+  "planned": 160,
+  "total_planned": 160,
+  "pending": 0,
+  "fingerprint": "ae2e04a583eacb1d012fc0fc891dca7988a8adb42e4dce1745aad6d1031688d7",
+  "edit_planned": 160,
+  "edit_judged": 0,
+  "edit_successes": 0,
+  "edit_success_rate": null,
+  "joint_successes": 0,
+  "joint_success_rate": null,
+  "artifact_count": 0,
+  "artifact_rate": null,
+  "rate_denominator_n": 160,
+  "diagnostic_planned": 0,
+  "success_rate_denominator": "all planned non-diagnostic jobs; failed generations count as unsuccessful; rates pending until remaining images rated",
+  "evaluation_status_counts": {
+    "ok": 160
+  },
+  "required_metric_missing_counts": {
+    "clip_target_similarity": 0,
+    "clip_directional_similarity": 0,
+    "clip_image_similarity": 0,
+    "dino_full_feature_similarity": 0,
+    "dino_pattern_crop_feature_similarity": 0
+  },
+  "clip_directional_undefined_count": 0,
+  "reference_evaluation_status_counts": {}
+}

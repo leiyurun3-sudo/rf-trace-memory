@@ -1,0 +1,462 @@
+{
+  "source_archive": "R75_TransportStudy_Ready.zip",
+  "source_location": "delivery",
+  "source_archive_bytes": 2868466,
+  "strip_root": true,
+  "source_member_root": "R75_TransportStudy",
+  "included_members": [
+    {
+      "path": "attention.py",
+      "bytes": 21836,
+      "crc32": 3378683391
+    },
+    {
+      "path": "controls.py",
+      "bytes": 2575,
+      "crc32": 2321579762
+    },
+    {
+      "path": "data/121000000003/outer.png",
+      "bytes": 2367,
+      "crc32": 1630368804
+    },
+    {
+      "path": "data/321000000001/outer.png",
+      "bytes": 2016,
+      "crc32": 978068677
+    },
+    {
+      "path": "data/423000000000/outer.png",
+      "bytes": 1020,
+      "crc32": 3795552631
+    },
+    {
+      "path": "data/522000000000/outer.png",
+      "bytes": 2486,
+      "crc32": 3130133692
+    },
+    {
+      "path": "data/622000000002/outer.png",
+      "bytes": 1303,
+      "crc32": 1779003446
+    },
+    {
+      "path": "data/723000000002/outer.png",
+      "bytes": 1853,
+      "crc32": 995071571
+    },
+    {
+      "path": "engine.py",
+      "bytes": 7329,
+      "crc32": 1476593904
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 10127,
+      "crc32": 506880330
+    },
+    {
+      "path": "external.py",
+      "bytes": 2959,
+      "crc32": 2827260217
+    },
+    {
+      "path": "external_sources.md",
+      "bytes": 8827,
+      "crc32": 876103941
+    },
+    {
+      "path": "mint_backend.py",
+      "bytes": 3893,
+      "crc32": 2892078264
+    },
+    {
+      "path": "model_loader.py",
+      "bytes": 5512,
+      "crc32": 1113038759
+    },
+    {
+      "path": "plan.json",
+      "bytes": 305855,
+      "crc32": 2756470050
+    },
+    {
+      "path": "prepare_benchmark.py",
+      "bytes": 7919,
+      "crc32": 1471473918
+    },
+    {
+      "path": "reference_r74/manifest.json",
+      "bytes": 132773,
+      "crc32": 2528595107
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s0_C100.jpg",
+      "bytes": 19578,
+      "crc32": 650739002
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s0_ETA03.jpg",
+      "bytes": 17038,
+      "crc32": 2796233716
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s0_FLOWEDIT.jpg",
+      "bytes": 17992,
+      "crc32": 268682967
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s0_SPLIT0.jpg",
+      "bytes": 14383,
+      "crc32": 6059067
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s17_C100.jpg",
+      "bytes": 19369,
+      "crc32": 958715541
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s17_ETA03.jpg",
+      "bytes": 17436,
+      "crc32": 1211865876
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s17_FLOWEDIT.jpg",
+      "bytes": 17922,
+      "crc32": 1544427077
+    },
+    {
+      "path": "reference_r74/R74_butterfly_sunset_s17_SPLIT0.jpg",
+      "bytes": 13190,
+      "crc32": 1601238363
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s10_C100.jpg",
+      "bytes": 15751,
+      "crc32": 4225953944
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s10_ETA03.jpg",
+      "bytes": 16743,
+      "crc32": 2639396787
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s10_FLOWEDIT.jpg",
+      "bytes": 17799,
+      "crc32": 3011512710
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s10_SPLIT0.jpg",
+      "bytes": 14172,
+      "crc32": 82174009
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s17_C100.jpg",
+      "bytes": 18904,
+      "crc32": 329165061
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s17_ETA03.jpg",
+      "bytes": 16571,
+      "crc32": 3633019340
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s17_FLOWEDIT.jpg",
+      "bytes": 18430,
+      "crc32": 1224676968
+    },
+    {
+      "path": "reference_r74/R74_cup_night_s17_SPLIT0.jpg",
+      "bytes": 13767,
+      "crc32": 891295127
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s0_C100.jpg",
+      "bytes": 24521,
+      "crc32": 650004060
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s0_ETA03.jpg",
+      "bytes": 22503,
+      "crc32": 728071742
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s0_FLOWEDIT.jpg",
+      "bytes": 23485,
+      "crc32": 1734291379
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s0_SPLIT0.jpg",
+      "bytes": 14975,
+      "crc32": 809110942
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s17_C100.jpg",
+      "bytes": 24421,
+      "crc32": 2904169424
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s17_ETA03.jpg",
+      "bytes": 22442,
+      "crc32": 3725971684
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s17_FLOWEDIT.jpg",
+      "bytes": 23201,
+      "crc32": 3433503505
+    },
+    {
+      "path": "reference_r74/R74_dog_rain_s17_SPLIT0.jpg",
+      "bytes": 14548,
+      "crc32": 3128234710
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s0_C100.jpg",
+      "bytes": 23399,
+      "crc32": 3959245796
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s0_ETA03.jpg",
+      "bytes": 22013,
+      "crc32": 2421546482
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s0_FLOWEDIT.jpg",
+      "bytes": 24084,
+      "crc32": 3929707703
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s0_SPLIT0.jpg",
+      "bytes": 15134,
+      "crc32": 3563554914
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s17_C100.jpg",
+      "bytes": 24320,
+      "crc32": 3300226936
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s17_ETA03.jpg",
+      "bytes": 20483,
+      "crc32": 3118140639
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s17_FLOWEDIT.jpg",
+      "bytes": 24179,
+      "crc32": 376306047
+    },
+    {
+      "path": "reference_r74/R74_dog_snow_s17_SPLIT0.jpg",
+      "bytes": 14368,
+      "crc32": 1921730362
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s0_C100.jpg",
+      "bytes": 15102,
+      "crc32": 3978786379
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s0_ETA03.jpg",
+      "bytes": 14323,
+      "crc32": 3576449033
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s0_FLOWEDIT.jpg",
+      "bytes": 16348,
+      "crc32": 2375787507
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s0_SPLIT0.jpg",
+      "bytes": 11402,
+      "crc32": 700436570
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s17_C100.jpg",
+      "bytes": 15453,
+      "crc32": 3752917757
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s17_ETA03.jpg",
+      "bytes": 14133,
+      "crc32": 2018941860
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s17_FLOWEDIT.jpg",
+      "bytes": 15797,
+      "crc32": 1674845761
+    },
+    {
+      "path": "reference_r74/R74_printed_shirt_studio_s17_SPLIT0.jpg",
+      "bytes": 11739,
+      "crc32": 785607428
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s0_C100.jpg",
+      "bytes": 14150,
+      "crc32": 744108323
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s0_ETA03.jpg",
+      "bytes": 13630,
+      "crc32": 772346773
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s0_FLOWEDIT.jpg",
+      "bytes": 16945,
+      "crc32": 1057230451
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s0_SPLIT0.jpg",
+      "bytes": 13018,
+      "crc32": 1444991436
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s17_C100.jpg",
+      "bytes": 13179,
+      "crc32": 2382482545
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s17_ETA03.jpg",
+      "bytes": 14930,
+      "crc32": 229381487
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s17_FLOWEDIT.jpg",
+      "bytes": 16966,
+      "crc32": 2915869052
+    },
+    {
+      "path": "reference_r74/R74_rug_floor_s17_SPLIT0.jpg",
+      "bytes": 15667,
+      "crc32": 743996825
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s0_C100.jpg",
+      "bytes": 11561,
+      "crc32": 238286101
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s0_ETA03.jpg",
+      "bytes": 10922,
+      "crc32": 3175538928
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s0_FLOWEDIT.jpg",
+      "bytes": 14028,
+      "crc32": 2496308946
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s0_SPLIT0.jpg",
+      "bytes": 9614,
+      "crc32": 4067032137
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s17_C100.jpg",
+      "bytes": 12848,
+      "crc32": 4214996728
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s17_ETA03.jpg",
+      "bytes": 11165,
+      "crc32": 3386506361
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s17_FLOWEDIT.jpg",
+      "bytes": 13488,
+      "crc32": 3808212203
+    },
+    {
+      "path": "reference_r74/R74_shirt_studio_s17_SPLIT0.jpg",
+      "bytes": 9267,
+      "crc32": 605579445
+    },
+    {
+      "path": "reporting.py",
+      "bytes": 31974,
+      "crc32": 1320887904
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 601,
+      "crc32": 191286072
+    },
+    {
+      "path": "requirements_eval.txt",
+      "bytes": 139,
+      "crc32": 1775092259
+    },
+    {
+      "path": "review.py",
+      "bytes": 3884,
+      "crc32": 2931742665
+    },
+    {
+      "path": "rf_kv.py",
+      "bytes": 1282,
+      "crc32": 4037482886
+    },
+    {
+      "path": "run_all.sh",
+      "bytes": 551,
+      "crc32": 2509902044
+    },
+    {
+      "path": "runner.py",
+      "bytes": 17616,
+      "crc32": 571649383
+    },
+    {
+      "path": "start.sh",
+      "bytes": 857,
+      "crc32": 1704525131
+    },
+    {
+      "path": "value.py",
+      "bytes": 1929,
+      "crc32": 955245182
+    }
+  ],
+  "omitted_inputs": [
+    {
+      "path": "data/121000000003/source.png",
+      "bytes": 449239,
+      "crc32": 3699728353
+    },
+    {
+      "path": "data/321000000001/source.png",
+      "bytes": 331220,
+      "crc32": 2239209372
+    },
+    {
+      "path": "data/423000000000/source.png",
+      "bytes": 232237,
+      "crc32": 4083644331
+    },
+    {
+      "path": "data/522000000000/source.png",
+      "bytes": 222678,
+      "crc32": 3133429392
+    },
+    {
+      "path": "data/622000000002/source.png",
+      "bytes": 302579,
+      "crc32": 1790874418
+    },
+    {
+      "path": "data/723000000002/source.png",
+      "bytes": 305414,
+      "crc32": 2004488360
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "README.md",
+      "reason": "historical narrative; current workflow is in experiment index"
+    }
+  ],
+  "text_normalized_members": [
+    "plan.json"
+  ],
+  "archive_identity": "Original ZIP byte count and member CRC32 values; no new hashes computed.",
+  "status": "Archived workflow; no execution during synchronization."
+}

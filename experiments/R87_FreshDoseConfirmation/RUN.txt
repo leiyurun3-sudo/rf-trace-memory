@@ -1,0 +1,22 @@
+上传 R87_FreshDoseConfirmation_Ready.zip 到 /root/autodl-tmp，执行：
+
+cd /root/autodl-tmp
+unzip -o R87_FreshDoseConfirmation_Ready.zip
+cd R87_FreshDoseConfirmation
+bash start.sh
+tail -f run.log
+
+160张生成 → CPU自动指标 → 源级配对统计 → 最终ZIP → Qwen源图对照。
+复用服务器已有FLUX/CLIP/DINO/LPIPS/Qwen权重；不联网下载、不重装环境。
+同一源与种子的四臂连续生成；只缓存当前组可共享的计算；最终打包一次。
+断线不影响后台进程，服务器需保持开机。Ctrl+C仅退出tail查看。
+中断后重跑bash start.sh，已完成图像保留并跳过。
+
+结果：/root/autodl-tmp/R87_FreshDoseConfirmation_results.zip
+Qwen结果：/root/autodl-tmp/R87_IdentityControl_results.zip
+原生PNG在runtime_base/results，保留在服务器。
+仅补跑Qwen：bash identity.sh
+本轮20个新源，2个种子；统计独立单位是20个源。
+
+复用同组28步反演及6次参考探针：常规完整运行预计从15520降至11440次模型调用。
+这是调用数节省约26%，实际墙钟耗时由服务器决定；独立运行成本另外记录。

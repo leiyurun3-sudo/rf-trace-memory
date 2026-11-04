@@ -1,0 +1,8 @@
+{
+  "source_directory": "R86_result_review",
+  "files": [
+    "analysis/audit.py",
+    "analysis/audit.json"
+  ],
+  "status": "Local post-hoc analysis; assistant visual screening is not blinded human evaluation."
+}

@@ -1,16 +1,37 @@
 # TraceMemory
 
-**Disentangling spatial allocation, correction dose, and source memory in rectified-flow image editing**
+**Calibrating source correction in rectified-flow editing: spatial allocation, dose, and memory**
 
-Updated **3 November 2026** with the mechanism-study interpretation and before/after factual-parser recovery sensitivity.
+Updated **4 November 2026** with fresh-source matched-magnitude controls and research workflows through R87.
 
 [Manuscript PDF](paper/main.pdf) · [LaTeX source](paper/main.tex) · [Development controls](paper/development_dose.tex) · [Final evaluation](paper/final_evaluation.tex) · [Run instructions](docs/REPRODUCING_FINAL.md) · [Download packages](https://github.com/leiyurun3-sudo/rf-trace-memory/releases/tag/evaluated-r84-r85-20261102)
+
+## Fresh-source direction confirmation
+
+Where source correction acts affects retention even when its applied magnitude is fixed. The confirmation study uses **20 previously unused PIE-Bench sources, two seeds, and four directions: request-weighted (REQ), uniform global (GLB), shifted (SFT), and block-permuted (PERM)**. All 160 outputs completed generation and automatic evaluation. The request arm supplies a 28-step RMS profile; the other arms follow their own states while matching that profile. **GLB applies nonzero global correction.**
+
+| Matched direction | Preservation LPIPS ↓ | REQ minus comparator | Source-bootstrap 95% CI | Declared test | Holm across 18 tests |
+|---|---:|---:|---|---:|---:|
+| REQ | **0.5381** | — | — | — | — |
+| GLB | 0.5506 | −0.0126 (2.28%) | [−0.0235, −0.0038] | primary exact p = 0.0061 | 0.0615 |
+| SFT | 0.5604 | −0.0223 | [−0.0402, −0.0077] | secondary Holm p = 0.0045 | 0.0581 |
+| PERM | 0.5578 | −0.0197 (3.53%) | [−0.0328, −0.0091] | secondary Holm p = 0.0004 | 0.0026 |
+
+The primary endpoint and two secondary preservation comparisons were fixed in the fresh-source protocol before generation. Seeds are averaged within each source; inference uses all 2²⁰ source sign flips and 10,000 source-bootstrap resamples. The broader 18-test family is sensitivity analysis. Its adjusted value 0.0026 belongs to **REQ–PERM**, not REQ–GLB.
+
+Across 3,360 matched control steps, maximum absolute RMS discrepancy is **5.96 × 10⁻⁸**, and maximum relative discrepancy is **1.75 × 10⁻⁷**. Maximum cumulative relative discrepancy is **2.48 × 10⁻⁸**. REQ improves preservation LPIPS on 15/20 sources against GLB, 15/20 against SFT, and 16/20 against PERM. CLIP and DINO intervals span zero; retention effects and text-response measurements are reported separately.
+
+PERM preserves the weight histogram and within-block content while changing block arrangement. One fixed permutation per source is shared across seeds. The result concerns these spatial arrangements. The native benchmark below measures complete configurations at their original doses.
+
+The study reuses source preparation across directions: **11,440 new transformer calls**, versus 15,520 calls for independent runs. Shared-run incremental cost and standalone NFE are distinct quantities.
+
+[Experiment index](docs/EXPERIMENT_INDEX.md) · [Research archive downloads](https://github.com/leiyurun3-sudo/rf-trace-memory/releases/tag/research-evidence-r87-20261104) · [Evaluator history](docs/EVALUATOR_HISTORY.md)
 
 ## Research question and controlled interventions
 
 Text-guided editing must change the requested attributes while preserving unaffected content. TraceMemory investigates how the **location, magnitude, and memory coverage** of source correction affect this balance.
 
-The pre-registered routing arm is **CORR25**, recorded as `RELEASE_CORR25` in the plans and results. Three source/target prompt-response probes on an inverted reference define an edit-response map. Its complement supplies a soft protection weight. The method applies the protected residual directly, with coefficient 0.25, and uses paired source K/V memory during the first seven editing steps.
+The frozen routing arm is **CORR25**, recorded as `RELEASE_CORR25` in the plans and results. Three source/target prompt-response probes on an inverted reference define an edit-response map. Its complement supplies a soft protection weight. The method applies the protected residual directly, with coefficient 0.25, and uses paired source K/V memory during the first seven editing steps.
 
 For reference states $r_i$, edited state $z_i$, and positive generation interval $h_i$:
 
@@ -30,11 +51,11 @@ $$
 \widehat c_i^{\rm energy}=0.25\frac{\mathrm{RMS}(P\odot c_i)}{\mathrm{RMS}(c_i)}c_i.
 $$
 
-This matches the local rule's correction RMS at a common state while keeping its global direction. Each arm follows its own trajectory. The paired experiment compares allocation policies with common-state calibration. Subsequent state evolution changes realized dose: mean cumulative injection is 0.18074 for CORR and 0.18269 for ENERGY; the source-averaged relative difference is −1.02%, and the largest absolute single-step difference is 9.53%. Random, shifted, shuffled-prompt, and oracle request-support controls remain separate evidence gaps.
+This matches the local rule's correction RMS at a common state while keeping its global direction. Each arm follows its own trajectory. The paired experiment compares allocation policies with common-state calibration. Subsequent state evolution changes realized dose: mean cumulative injection is 0.18074 for CORR and 0.18269 for ENERGY; the source-averaged relative difference is −1.02%, and the largest absolute single-step difference is 9.53%. The later realized-profile study adds shifted and block-permuted controls with matched per-step RMS. Shuffled-prompt and oracle-support comparisons remain outside the completed studies.
 
-`RELEASE_BOTH25` is the pre-registered memory-release arm: it additionally weights memory queries by protection support. The primary/secondary roles in the frozen plan record selection history rather than a performance ranking.
+`RELEASE_BOTH25` is the frozen memory-release arm: it additionally weights memory queries by protection support. The primary/secondary roles in the frozen plan record selection history rather than a performance ranking.
 
-## Final evaluated results
+## Native working-point benchmark (R84/R85)
 
 **650 outputs completed, zero generation failures, and automatic evaluation completed for all outputs.** R84 contains 130 development outputs on ten sources. R85 contains 520 outputs on 40 new sources, balanced across ten PIE-Bench categories. Six methods use two seeds per source; deterministic RF-Edit uses one run per source.
 
@@ -54,7 +75,7 @@ The table reports equal-source means. Preservation LPIPS and preservation MAE us
 
 ### Findings
 
-1. **Uniform correction retains source content more strongly at lower cost.** CORR25 minus U25 preservation LPIPS is **+0.0399**, with 95% source-bootstrap CI **[0.0331, 0.0469]**; preserved SSIM is −0.0359 and preservation MAE is +0.0196. All three six-comparison Holm-adjusted p-values are 0.0006. U25 uses 91 rather than 97 NFE.
+1. **Uniform correction retains source content more strongly at lower cost.** CORR25 minus U25 preservation LPIPS is **+0.0399**, with 95% source-bootstrap CI **[0.0331, 0.0469]**; preserved SSIM is −0.0359 and preservation MAE is +0.0196. All three six-comparison Holm-adjusted p-values are 0.0006. U25 uses 91 rather than 97 NFE and has 32.5% more cumulative correction than CORR25. This is a comparison of native working points, not equal realized dose.
 2. **The allocation-policy effect is small and comparison-family sensitive.** CORR25 reduces preservation LPIPS by **0.0084** versus ENERGY, CI **[−0.0143, −0.0022]**. Adjusted p-values are 0.0238 for the six-contrast family, 0.0702 for all 21 pairs within the metric, and 0.2856 for the 66-numeric-test family. Full-image LPIPS decreases by 0.0064 and retains p = 0.0238 in the broad family. The contrast includes evolving dose and does not isolate request-localization quality.
 3. **Memory release trades retention for semantic alignment.** BOTH25 increases directional CLIP by **0.0207** over CORR25, while preservation LPIPS increases by **0.0127** and DINO decreases by 0.0325.
 4. **Retention depends on dose in the development sweep.** Increasing the local coefficient 0.15 → 0.25 → 0.35 changes preservation LPIPS **0.5544 → 0.4983 → 0.4561**. Semantic-score intervals span zero on these ten sources.
@@ -85,7 +106,7 @@ Counts below are **pass / fail / unknown**. Bounds are deterministic planned-out
 | RF-Edit I08 | 40 | 4 / 36 / 0 | 25 / 6 / 9 | 3 / 36 / 1 | 7.50–10.00 |
 | All outputs | 520 | 240 / 279 / 1 | 255 / 129 / 136 | 104 / 358 / 58 | 20.00–31.15 |
 
-The archived joint event is factual edit AND protection AND no severe artifact, using three-valued logic. All 520 artifact calls report absence; the event therefore numerically equals factual edit AND protection. The artifact channel has only three clean controls, no positive-artifact controls, and is unvalidated and non-informative about defect sensitivity. All 15 factual/pair/clean controls passed; independent human calibration is absent. Protected content remains unknown for 26.2% of outputs.
+The reported event is **edit AND preserve (J_EP)**, using three-valued logic. The historical archived event also included no severe artifact; all 520 artifact calls report absence, so both events coincide numerically. We exclude that channel from the event interpretation. The artifact channel has only three clean controls, no positive-artifact controls, and is unvalidated and non-informative about defect sensitivity. All 15 factual/pair/clean controls passed; independent human calibration is absent. Protected content remains unknown for 26.2% of outputs.
 
 Complete-source paired proxy estimates favor U25 over CORR25 (CORR−U25 −0.0606, pointwise CI [−0.1212, −0.0152], 33 sources); CORR−FlowEdit is 0.0000, CI [−0.1333, 0.1333], 30 sources. These use 5,000 paired source-bootstrap resamples without multiplicity adjustment. Output-dependent completion changes the selected source population, and planned-output bounds overlap.
 
@@ -103,7 +124,7 @@ The [recovery sensitivity script](tools/factual_qwen_audit/recovery_sensitivity.
 python tools/factual_qwen_audit/recovery_sensitivity.py /path/to/A_Qwen_FactualJudge_v2_results.zip sensitivity_recomputed
 ```
 
-The old v6 judge is retained as evaluator-development provenance and excluded from the current comparison. A revised task-rule evaluation, positive-artifact calibration, and independent request-support controls would add evidence beyond this analysis.
+The old v6 judge is retained as evaluator-development provenance and excluded from the current comparison. Revised task rules and positive-artifact calibration would strengthen this exploratory channel. Independent-source shifted and block-permuted controls are now available in R87.
 
 ### Qualitative examples
 
@@ -118,6 +139,8 @@ The extended manuscript contains the method, experiments, statistical analysis, 
 The current factual-judge comparison is reproduced from the corrected records in `results/QwenFactualV2` using `tools/factual_qwen_audit/recompute.py`. Inference ran locally with Qwen2.5-VL-7B-Instruct; images were not uploaded. The earlier runner under `tools/local_qwen_judge` is historical, and its v6 scores are excluded from the current comparison.
 
 ## Files and reproduction
+
+The [experiment index](docs/EXPERIMENT_INDEX.md) links the development history through R87. [Research release assets](https://github.com/leiyurun3-sudo/rf-trace-memory/releases/tag/research-evidence-r87-20261104) supply runnable packages and compact result archives; the earlier R84/R85 release below remains an immutable dated snapshot.
 
 | Location | Contents |
 |---|---|

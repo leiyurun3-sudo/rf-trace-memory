@@ -1,0 +1,18 @@
+# Reuse the existing FLUX environment; run_all.sh does not install packages.
+torch
+
+# Versions enforced by model_loader.py.
+diffusers==0.35.1
+transformers==4.55.4
+accelerate==1.10.1
+
+# Direct imports, weight loading, and the FLUX T5 tokenizer conversion path.
+# Their historical versions are not recorded in the published R71-R73 results.
+numpy
+Pillow
+safetensors
+sentencepiece
+protobuf
+
+
+

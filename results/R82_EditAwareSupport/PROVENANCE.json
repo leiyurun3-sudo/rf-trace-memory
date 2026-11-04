@@ -1,0 +1,2247 @@
+{
+  "source_archive": "R82_EditAwareSupport.zip",
+  "source_location": "Downloads",
+  "source_archive_bytes": 8308343,
+  "included_members": [
+    {
+      "path": "manifest.json",
+      "bytes": 6331,
+      "crc32": 2249417995
+    },
+    {
+      "path": "summary.json",
+      "bytes": 974,
+      "crc32": 1341607987
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 169006,
+      "crc32": 3744595820
+    },
+    {
+      "path": "arm_summary.csv",
+      "bytes": 2339,
+      "crc32": 4056795777
+    },
+    {
+      "path": "comparison_metrics.csv",
+      "bytes": 286346,
+      "crc32": 4183998584
+    },
+    {
+      "path": "comparison_arm_summary.csv",
+      "bytes": 3517,
+      "crc32": 1177391688
+    },
+    {
+      "path": "category_summary.csv",
+      "bytes": 14298,
+      "crc32": 792694284
+    },
+    {
+      "path": "progress.json",
+      "bytes": 251,
+      "crc32": 4079682543
+    },
+    {
+      "path": "evaluation.csv",
+      "bytes": 17265,
+      "crc32": 3624401524
+    },
+    {
+      "path": "evaluation_config.json",
+      "bytes": 3814,
+      "crc32": 1849914081
+    },
+    {
+      "path": "statistics.json",
+      "bytes": 219515,
+      "crc32": 4203159150
+    },
+    {
+      "path": "sources/223000000008.jpg",
+      "bytes": 29680,
+      "crc32": 470920884
+    },
+    {
+      "path": "sources/922000000003.jpg",
+      "bytes": 13518,
+      "crc32": 3214617375
+    },
+    {
+      "path": "sources/121000000006.jpg",
+      "bytes": 22425,
+      "crc32": 3971841982
+    },
+    {
+      "path": "sources/424000000001.jpg",
+      "bytes": 28501,
+      "crc32": 3219907922
+    },
+    {
+      "path": "sources/621000000004.jpg",
+      "bytes": 17530,
+      "crc32": 3120631853
+    },
+    {
+      "path": "sources/523000000001.jpg",
+      "bytes": 31085,
+      "crc32": 1513277839
+    },
+    {
+      "path": "sources/713000000001.jpg",
+      "bytes": 20380,
+      "crc32": 1269846094
+    },
+    {
+      "path": "sources/814000000001.jpg",
+      "bytes": 21000,
+      "crc32": 373818344
+    },
+    {
+      "path": "sources/323000000002.jpg",
+      "bytes": 22845,
+      "crc32": 3036091923
+    },
+    {
+      "path": "sources/000000000072.jpg",
+      "bytes": 12732,
+      "crc32": 715823642
+    },
+    {
+      "path": "R82_pie_000000000072_s0_SOFT25/preview.jpg",
+      "bytes": 13703,
+      "crc32": 273531843
+    },
+    {
+      "path": "R82_pie_000000000072_s0_SOFT25/pattern.jpg",
+      "bytes": 13688,
+      "crc32": 1014330006
+    },
+    {
+      "path": "R82_pie_000000000072_s0_SOFT25/route_mask.jpg",
+      "bytes": 9166,
+      "crc32": 1106298593
+    },
+    {
+      "path": "R82_pie_000000000072_s0_SOFT25/step_summary.json",
+      "bytes": 73557,
+      "crc32": 2929348557
+    },
+    {
+      "path": "R82_pie_000000000072_s0_SOFT50/preview.jpg",
+      "bytes": 12960,
+      "crc32": 282564043
+    },
+    {
+      "path": "R82_pie_000000000072_s0_SOFT50/pattern.jpg",
+      "bytes": 12940,
+      "crc32": 3887722274
+    },
+    {
+      "path": "R82_pie_000000000072_s0_SOFT50/route_mask.jpg",
+      "bytes": 7867,
+      "crc32": 1010140645
+    },
+    {
+      "path": "R82_pie_000000000072_s0_SOFT50/step_summary.json",
+      "bytes": 73521,
+      "crc32": 2367380126
+    },
+    {
+      "path": "R82_pie_000000000072_s0_SOFT75/preview.jpg",
+      "bytes": 12875,
+      "crc32": 584317237
+    },
+    {
+      "path": "R82_pie_000000000072_s0_SOFT75/pattern.jpg",
+      "bytes": 12863,
+      "crc32": 2880611214
+    },
+    {
+      "path": "R82_pie_000000000072_s0_SOFT75/route_mask.jpg",
+      "bytes": 5925,
+      "crc32": 3837167829
+    },
+    {
+      "path": "R82_pie_000000000072_s0_SOFT75/step_summary.json",
+      "bytes": 73505,
+      "crc32": 3183218117
+    },
+    {
+      "path": "R82_pie_000000000072_s0_REQUEST_SOFT25/preview.jpg",
+      "bytes": 13417,
+      "crc32": 2715396941
+    },
+    {
+      "path": "R82_pie_000000000072_s0_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 13399,
+      "crc32": 2353402862
+    },
+    {
+      "path": "R82_pie_000000000072_s0_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 20617,
+      "crc32": 1554948440
+    },
+    {
+      "path": "R82_pie_000000000072_s0_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 1956,
+      "crc32": 2359341814
+    },
+    {
+      "path": "R82_pie_000000000072_s0_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74566,
+      "crc32": 1207385782
+    },
+    {
+      "path": "R82_pie_000000000072_s17_SOFT25/preview.jpg",
+      "bytes": 14319,
+      "crc32": 3146406222
+    },
+    {
+      "path": "R82_pie_000000000072_s17_SOFT25/pattern.jpg",
+      "bytes": 14290,
+      "crc32": 722483311
+    },
+    {
+      "path": "R82_pie_000000000072_s17_SOFT25/route_mask.jpg",
+      "bytes": 9166,
+      "crc32": 1106298593
+    },
+    {
+      "path": "R82_pie_000000000072_s17_SOFT25/step_summary.json",
+      "bytes": 73569,
+      "crc32": 572272901
+    },
+    {
+      "path": "R82_pie_000000000072_s17_SOFT50/preview.jpg",
+      "bytes": 13696,
+      "crc32": 1594862330
+    },
+    {
+      "path": "R82_pie_000000000072_s17_SOFT50/pattern.jpg",
+      "bytes": 13711,
+      "crc32": 3602861933
+    },
+    {
+      "path": "R82_pie_000000000072_s17_SOFT50/route_mask.jpg",
+      "bytes": 7867,
+      "crc32": 1010140645
+    },
+    {
+      "path": "R82_pie_000000000072_s17_SOFT50/step_summary.json",
+      "bytes": 73510,
+      "crc32": 2219851983
+    },
+    {
+      "path": "R82_pie_000000000072_s17_SOFT75/preview.jpg",
+      "bytes": 12442,
+      "crc32": 3784546756
+    },
+    {
+      "path": "R82_pie_000000000072_s17_SOFT75/pattern.jpg",
+      "bytes": 12491,
+      "crc32": 3238799295
+    },
+    {
+      "path": "R82_pie_000000000072_s17_SOFT75/route_mask.jpg",
+      "bytes": 5925,
+      "crc32": 3837167829
+    },
+    {
+      "path": "R82_pie_000000000072_s17_SOFT75/step_summary.json",
+      "bytes": 73546,
+      "crc32": 2171981886
+    },
+    {
+      "path": "R82_pie_000000000072_s17_REQUEST_SOFT25/preview.jpg",
+      "bytes": 11255,
+      "crc32": 2745673672
+    },
+    {
+      "path": "R82_pie_000000000072_s17_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 11257,
+      "crc32": 3038204705
+    },
+    {
+      "path": "R82_pie_000000000072_s17_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 20957,
+      "crc32": 142861530
+    },
+    {
+      "path": "R82_pie_000000000072_s17_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 1986,
+      "crc32": 2915965836
+    },
+    {
+      "path": "R82_pie_000000000072_s17_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74546,
+      "crc32": 1412568405
+    },
+    {
+      "path": "R82_pie_121000000006_s0_SOFT25/preview.jpg",
+      "bytes": 16644,
+      "crc32": 1162147639
+    },
+    {
+      "path": "R82_pie_121000000006_s0_SOFT25/pattern.jpg",
+      "bytes": 16715,
+      "crc32": 3943942712
+    },
+    {
+      "path": "R82_pie_121000000006_s0_SOFT25/route_mask.jpg",
+      "bytes": 8681,
+      "crc32": 3699177714
+    },
+    {
+      "path": "R82_pie_121000000006_s0_SOFT25/step_summary.json",
+      "bytes": 73588,
+      "crc32": 591042511
+    },
+    {
+      "path": "R82_pie_121000000006_s0_SOFT50/preview.jpg",
+      "bytes": 16628,
+      "crc32": 2627973089
+    },
+    {
+      "path": "R82_pie_121000000006_s0_SOFT50/pattern.jpg",
+      "bytes": 16666,
+      "crc32": 1272497001
+    },
+    {
+      "path": "R82_pie_121000000006_s0_SOFT50/route_mask.jpg",
+      "bytes": 7362,
+      "crc32": 410449234
+    },
+    {
+      "path": "R82_pie_121000000006_s0_SOFT50/step_summary.json",
+      "bytes": 73563,
+      "crc32": 2280575661
+    },
+    {
+      "path": "R82_pie_121000000006_s0_SOFT75/preview.jpg",
+      "bytes": 16640,
+      "crc32": 1771380163
+    },
+    {
+      "path": "R82_pie_121000000006_s0_SOFT75/pattern.jpg",
+      "bytes": 16673,
+      "crc32": 157280797
+    },
+    {
+      "path": "R82_pie_121000000006_s0_SOFT75/route_mask.jpg",
+      "bytes": 5415,
+      "crc32": 3364659290
+    },
+    {
+      "path": "R82_pie_121000000006_s0_SOFT75/step_summary.json",
+      "bytes": 73578,
+      "crc32": 3722528354
+    },
+    {
+      "path": "R82_pie_121000000006_s0_REQUEST_SOFT25/preview.jpg",
+      "bytes": 16544,
+      "crc32": 41980176
+    },
+    {
+      "path": "R82_pie_121000000006_s0_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 16613,
+      "crc32": 1365223022
+    },
+    {
+      "path": "R82_pie_121000000006_s0_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 18567,
+      "crc32": 3357992551
+    },
+    {
+      "path": "R82_pie_121000000006_s0_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 1854,
+      "crc32": 4030238310
+    },
+    {
+      "path": "R82_pie_121000000006_s0_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74500,
+      "crc32": 1540660513
+    },
+    {
+      "path": "R82_pie_121000000006_s17_SOFT25/preview.jpg",
+      "bytes": 16174,
+      "crc32": 680082811
+    },
+    {
+      "path": "R82_pie_121000000006_s17_SOFT25/pattern.jpg",
+      "bytes": 16244,
+      "crc32": 2790568104
+    },
+    {
+      "path": "R82_pie_121000000006_s17_SOFT25/route_mask.jpg",
+      "bytes": 8681,
+      "crc32": 3699177714
+    },
+    {
+      "path": "R82_pie_121000000006_s17_SOFT25/step_summary.json",
+      "bytes": 73582,
+      "crc32": 4095120308
+    },
+    {
+      "path": "R82_pie_121000000006_s17_SOFT50/preview.jpg",
+      "bytes": 16047,
+      "crc32": 642382119
+    },
+    {
+      "path": "R82_pie_121000000006_s17_SOFT50/pattern.jpg",
+      "bytes": 16114,
+      "crc32": 2613406116
+    },
+    {
+      "path": "R82_pie_121000000006_s17_SOFT50/route_mask.jpg",
+      "bytes": 7362,
+      "crc32": 410449234
+    },
+    {
+      "path": "R82_pie_121000000006_s17_SOFT50/step_summary.json",
+      "bytes": 73578,
+      "crc32": 2628961732
+    },
+    {
+      "path": "R82_pie_121000000006_s17_SOFT75/preview.jpg",
+      "bytes": 16095,
+      "crc32": 1363028597
+    },
+    {
+      "path": "R82_pie_121000000006_s17_SOFT75/pattern.jpg",
+      "bytes": 16154,
+      "crc32": 1273079488
+    },
+    {
+      "path": "R82_pie_121000000006_s17_SOFT75/route_mask.jpg",
+      "bytes": 5415,
+      "crc32": 3364659290
+    },
+    {
+      "path": "R82_pie_121000000006_s17_SOFT75/step_summary.json",
+      "bytes": 73560,
+      "crc32": 2591266076
+    },
+    {
+      "path": "R82_pie_121000000006_s17_REQUEST_SOFT25/preview.jpg",
+      "bytes": 16382,
+      "crc32": 328640910
+    },
+    {
+      "path": "R82_pie_121000000006_s17_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 16470,
+      "crc32": 2449352067
+    },
+    {
+      "path": "R82_pie_121000000006_s17_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 17241,
+      "crc32": 2599971289
+    },
+    {
+      "path": "R82_pie_121000000006_s17_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 1786,
+      "crc32": 989419191
+    },
+    {
+      "path": "R82_pie_121000000006_s17_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74541,
+      "crc32": 3497897065
+    },
+    {
+      "path": "R82_pie_223000000008_s0_SOFT25/preview.jpg",
+      "bytes": 25058,
+      "crc32": 735044523
+    },
+    {
+      "path": "R82_pie_223000000008_s0_SOFT25/pattern.jpg",
+      "bytes": 24998,
+      "crc32": 3496097621
+    },
+    {
+      "path": "R82_pie_223000000008_s0_SOFT25/route_mask.jpg",
+      "bytes": 9688,
+      "crc32": 3755863199
+    },
+    {
+      "path": "R82_pie_223000000008_s0_SOFT25/step_summary.json",
+      "bytes": 73590,
+      "crc32": 3092703219
+    },
+    {
+      "path": "R82_pie_223000000008_s0_SOFT50/preview.jpg",
+      "bytes": 24429,
+      "crc32": 3660744850
+    },
+    {
+      "path": "R82_pie_223000000008_s0_SOFT50/pattern.jpg",
+      "bytes": 24387,
+      "crc32": 107134415
+    },
+    {
+      "path": "R82_pie_223000000008_s0_SOFT50/route_mask.jpg",
+      "bytes": 8254,
+      "crc32": 1606778599
+    },
+    {
+      "path": "R82_pie_223000000008_s0_SOFT50/step_summary.json",
+      "bytes": 73615,
+      "crc32": 507854242
+    },
+    {
+      "path": "R82_pie_223000000008_s0_SOFT75/preview.jpg",
+      "bytes": 24280,
+      "crc32": 3582537918
+    },
+    {
+      "path": "R82_pie_223000000008_s0_SOFT75/pattern.jpg",
+      "bytes": 24276,
+      "crc32": 2577735922
+    },
+    {
+      "path": "R82_pie_223000000008_s0_SOFT75/route_mask.jpg",
+      "bytes": 6150,
+      "crc32": 1431213701
+    },
+    {
+      "path": "R82_pie_223000000008_s0_SOFT75/step_summary.json",
+      "bytes": 73564,
+      "crc32": 2135650412
+    },
+    {
+      "path": "R82_pie_223000000008_s0_REQUEST_SOFT25/preview.jpg",
+      "bytes": 24291,
+      "crc32": 3328563698
+    },
+    {
+      "path": "R82_pie_223000000008_s0_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 24307,
+      "crc32": 4268939991
+    },
+    {
+      "path": "R82_pie_223000000008_s0_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 23590,
+      "crc32": 2638865558
+    },
+    {
+      "path": "R82_pie_223000000008_s0_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 2169,
+      "crc32": 3361030889
+    },
+    {
+      "path": "R82_pie_223000000008_s0_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74556,
+      "crc32": 1201151724
+    },
+    {
+      "path": "R82_pie_223000000008_s17_SOFT25/preview.jpg",
+      "bytes": 25092,
+      "crc32": 1851870911
+    },
+    {
+      "path": "R82_pie_223000000008_s17_SOFT25/pattern.jpg",
+      "bytes": 25065,
+      "crc32": 1292543434
+    },
+    {
+      "path": "R82_pie_223000000008_s17_SOFT25/route_mask.jpg",
+      "bytes": 9688,
+      "crc32": 3755863199
+    },
+    {
+      "path": "R82_pie_223000000008_s17_SOFT25/step_summary.json",
+      "bytes": 73614,
+      "crc32": 220660812
+    },
+    {
+      "path": "R82_pie_223000000008_s17_SOFT50/preview.jpg",
+      "bytes": 24812,
+      "crc32": 3333974318
+    },
+    {
+      "path": "R82_pie_223000000008_s17_SOFT50/pattern.jpg",
+      "bytes": 24786,
+      "crc32": 919530860
+    },
+    {
+      "path": "R82_pie_223000000008_s17_SOFT50/route_mask.jpg",
+      "bytes": 8254,
+      "crc32": 1606778599
+    },
+    {
+      "path": "R82_pie_223000000008_s17_SOFT50/step_summary.json",
+      "bytes": 73586,
+      "crc32": 3170650721
+    },
+    {
+      "path": "R82_pie_223000000008_s17_SOFT75/preview.jpg",
+      "bytes": 24403,
+      "crc32": 1310133795
+    },
+    {
+      "path": "R82_pie_223000000008_s17_SOFT75/pattern.jpg",
+      "bytes": 24424,
+      "crc32": 1674305213
+    },
+    {
+      "path": "R82_pie_223000000008_s17_SOFT75/route_mask.jpg",
+      "bytes": 6150,
+      "crc32": 1431213701
+    },
+    {
+      "path": "R82_pie_223000000008_s17_SOFT75/step_summary.json",
+      "bytes": 73575,
+      "crc32": 2618296571
+    },
+    {
+      "path": "R82_pie_223000000008_s17_REQUEST_SOFT25/preview.jpg",
+      "bytes": 24555,
+      "crc32": 196469065
+    },
+    {
+      "path": "R82_pie_223000000008_s17_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 24558,
+      "crc32": 1201791481
+    },
+    {
+      "path": "R82_pie_223000000008_s17_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 23207,
+      "crc32": 3977977716
+    },
+    {
+      "path": "R82_pie_223000000008_s17_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 2127,
+      "crc32": 1809001288
+    },
+    {
+      "path": "R82_pie_223000000008_s17_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74512,
+      "crc32": 4014423840
+    },
+    {
+      "path": "R82_pie_323000000002_s0_SOFT25/preview.jpg",
+      "bytes": 20370,
+      "crc32": 2662155604
+    },
+    {
+      "path": "R82_pie_323000000002_s0_SOFT25/pattern.jpg",
+      "bytes": 20369,
+      "crc32": 2843497808
+    },
+    {
+      "path": "R82_pie_323000000002_s0_SOFT25/route_mask.jpg",
+      "bytes": 9815,
+      "crc32": 306608205
+    },
+    {
+      "path": "R82_pie_323000000002_s0_SOFT25/step_summary.json",
+      "bytes": 73606,
+      "crc32": 783314063
+    },
+    {
+      "path": "R82_pie_323000000002_s0_SOFT50/preview.jpg",
+      "bytes": 19532,
+      "crc32": 1074775121
+    },
+    {
+      "path": "R82_pie_323000000002_s0_SOFT50/pattern.jpg",
+      "bytes": 19541,
+      "crc32": 2564932317
+    },
+    {
+      "path": "R82_pie_323000000002_s0_SOFT50/route_mask.jpg",
+      "bytes": 8261,
+      "crc32": 2398447371
+    },
+    {
+      "path": "R82_pie_323000000002_s0_SOFT50/step_summary.json",
+      "bytes": 73509,
+      "crc32": 4096741813
+    },
+    {
+      "path": "R82_pie_323000000002_s0_SOFT75/preview.jpg",
+      "bytes": 18808,
+      "crc32": 126884856
+    },
+    {
+      "path": "R82_pie_323000000002_s0_SOFT75/pattern.jpg",
+      "bytes": 18757,
+      "crc32": 1352900117
+    },
+    {
+      "path": "R82_pie_323000000002_s0_SOFT75/route_mask.jpg",
+      "bytes": 6040,
+      "crc32": 3081615978
+    },
+    {
+      "path": "R82_pie_323000000002_s0_SOFT75/step_summary.json",
+      "bytes": 73596,
+      "crc32": 4082537388
+    },
+    {
+      "path": "R82_pie_323000000002_s0_REQUEST_SOFT25/preview.jpg",
+      "bytes": 18223,
+      "crc32": 3381280333
+    },
+    {
+      "path": "R82_pie_323000000002_s0_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 18169,
+      "crc32": 616031215
+    },
+    {
+      "path": "R82_pie_323000000002_s0_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 21630,
+      "crc32": 91704234
+    },
+    {
+      "path": "R82_pie_323000000002_s0_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 2058,
+      "crc32": 1474170171
+    },
+    {
+      "path": "R82_pie_323000000002_s0_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74446,
+      "crc32": 1535287991
+    },
+    {
+      "path": "R82_pie_323000000002_s17_SOFT25/preview.jpg",
+      "bytes": 21015,
+      "crc32": 3552952875
+    },
+    {
+      "path": "R82_pie_323000000002_s17_SOFT25/pattern.jpg",
+      "bytes": 21023,
+      "crc32": 3439216266
+    },
+    {
+      "path": "R82_pie_323000000002_s17_SOFT25/route_mask.jpg",
+      "bytes": 9815,
+      "crc32": 306608205
+    },
+    {
+      "path": "R82_pie_323000000002_s17_SOFT25/step_summary.json",
+      "bytes": 73597,
+      "crc32": 1557177786
+    },
+    {
+      "path": "R82_pie_323000000002_s17_SOFT50/preview.jpg",
+      "bytes": 20112,
+      "crc32": 2561017326
+    },
+    {
+      "path": "R82_pie_323000000002_s17_SOFT50/pattern.jpg",
+      "bytes": 20076,
+      "crc32": 899657338
+    },
+    {
+      "path": "R82_pie_323000000002_s17_SOFT50/route_mask.jpg",
+      "bytes": 8261,
+      "crc32": 2398447371
+    },
+    {
+      "path": "R82_pie_323000000002_s17_SOFT50/step_summary.json",
+      "bytes": 73489,
+      "crc32": 2898389873
+    },
+    {
+      "path": "R82_pie_323000000002_s17_SOFT75/preview.jpg",
+      "bytes": 19758,
+      "crc32": 1657753124
+    },
+    {
+      "path": "R82_pie_323000000002_s17_SOFT75/pattern.jpg",
+      "bytes": 19712,
+      "crc32": 2847418132
+    },
+    {
+      "path": "R82_pie_323000000002_s17_SOFT75/route_mask.jpg",
+      "bytes": 6040,
+      "crc32": 3081615978
+    },
+    {
+      "path": "R82_pie_323000000002_s17_SOFT75/step_summary.json",
+      "bytes": 73591,
+      "crc32": 2424999958
+    },
+    {
+      "path": "R82_pie_323000000002_s17_REQUEST_SOFT25/preview.jpg",
+      "bytes": 18684,
+      "crc32": 671112585
+    },
+    {
+      "path": "R82_pie_323000000002_s17_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 18687,
+      "crc32": 999413287
+    },
+    {
+      "path": "R82_pie_323000000002_s17_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 21482,
+      "crc32": 4138008237
+    },
+    {
+      "path": "R82_pie_323000000002_s17_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 2048,
+      "crc32": 640319179
+    },
+    {
+      "path": "R82_pie_323000000002_s17_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74492,
+      "crc32": 2197292452
+    },
+    {
+      "path": "R82_pie_424000000001_s0_SOFT25/preview.jpg",
+      "bytes": 22439,
+      "crc32": 95087497
+    },
+    {
+      "path": "R82_pie_424000000001_s0_SOFT25/pattern.jpg",
+      "bytes": 22519,
+      "crc32": 2059442321
+    },
+    {
+      "path": "R82_pie_424000000001_s0_SOFT25/route_mask.jpg",
+      "bytes": 5831,
+      "crc32": 1583979032
+    },
+    {
+      "path": "R82_pie_424000000001_s0_SOFT25/step_summary.json",
+      "bytes": 73660,
+      "crc32": 2540486189
+    },
+    {
+      "path": "R82_pie_424000000001_s0_SOFT50/preview.jpg",
+      "bytes": 22433,
+      "crc32": 3233906161
+    },
+    {
+      "path": "R82_pie_424000000001_s0_SOFT50/pattern.jpg",
+      "bytes": 22499,
+      "crc32": 1044260196
+    },
+    {
+      "path": "R82_pie_424000000001_s0_SOFT50/route_mask.jpg",
+      "bytes": 5044,
+      "crc32": 3160607921
+    },
+    {
+      "path": "R82_pie_424000000001_s0_SOFT50/step_summary.json",
+      "bytes": 73556,
+      "crc32": 1712241461
+    },
+    {
+      "path": "R82_pie_424000000001_s0_SOFT75/preview.jpg",
+      "bytes": 22443,
+      "crc32": 3001008093
+    },
+    {
+      "path": "R82_pie_424000000001_s0_SOFT75/pattern.jpg",
+      "bytes": 22526,
+      "crc32": 952784299
+    },
+    {
+      "path": "R82_pie_424000000001_s0_SOFT75/route_mask.jpg",
+      "bytes": 3742,
+      "crc32": 784187394
+    },
+    {
+      "path": "R82_pie_424000000001_s0_SOFT75/step_summary.json",
+      "bytes": 73633,
+      "crc32": 542597924
+    },
+    {
+      "path": "R82_pie_424000000001_s0_REQUEST_SOFT25/preview.jpg",
+      "bytes": 22097,
+      "crc32": 1748857162
+    },
+    {
+      "path": "R82_pie_424000000001_s0_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 22223,
+      "crc32": 1334043798
+    },
+    {
+      "path": "R82_pie_424000000001_s0_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 18412,
+      "crc32": 1093642510
+    },
+    {
+      "path": "R82_pie_424000000001_s0_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 1782,
+      "crc32": 3892238957
+    },
+    {
+      "path": "R82_pie_424000000001_s0_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74559,
+      "crc32": 3382470270
+    },
+    {
+      "path": "R82_pie_424000000001_s17_SOFT25/preview.jpg",
+      "bytes": 23299,
+      "crc32": 4293433076
+    },
+    {
+      "path": "R82_pie_424000000001_s17_SOFT25/pattern.jpg",
+      "bytes": 23320,
+      "crc32": 3788493486
+    },
+    {
+      "path": "R82_pie_424000000001_s17_SOFT25/route_mask.jpg",
+      "bytes": 5831,
+      "crc32": 1583979032
+    },
+    {
+      "path": "R82_pie_424000000001_s17_SOFT25/step_summary.json",
+      "bytes": 73654,
+      "crc32": 3406798260
+    },
+    {
+      "path": "R82_pie_424000000001_s17_SOFT50/preview.jpg",
+      "bytes": 23309,
+      "crc32": 331981542
+    },
+    {
+      "path": "R82_pie_424000000001_s17_SOFT50/pattern.jpg",
+      "bytes": 23396,
+      "crc32": 474414344
+    },
+    {
+      "path": "R82_pie_424000000001_s17_SOFT50/route_mask.jpg",
+      "bytes": 5044,
+      "crc32": 3160607921
+    },
+    {
+      "path": "R82_pie_424000000001_s17_SOFT50/step_summary.json",
+      "bytes": 73597,
+      "crc32": 2185024913
+    },
+    {
+      "path": "R82_pie_424000000001_s17_SOFT75/preview.jpg",
+      "bytes": 23306,
+      "crc32": 2562637985
+    },
+    {
+      "path": "R82_pie_424000000001_s17_SOFT75/pattern.jpg",
+      "bytes": 23376,
+      "crc32": 766392578
+    },
+    {
+      "path": "R82_pie_424000000001_s17_SOFT75/route_mask.jpg",
+      "bytes": 3742,
+      "crc32": 784187394
+    },
+    {
+      "path": "R82_pie_424000000001_s17_SOFT75/step_summary.json",
+      "bytes": 73640,
+      "crc32": 3323661633
+    },
+    {
+      "path": "R82_pie_424000000001_s17_REQUEST_SOFT25/preview.jpg",
+      "bytes": 23346,
+      "crc32": 3867284588
+    },
+    {
+      "path": "R82_pie_424000000001_s17_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 23402,
+      "crc32": 2649304570
+    },
+    {
+      "path": "R82_pie_424000000001_s17_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 20750,
+      "crc32": 2729465946
+    },
+    {
+      "path": "R82_pie_424000000001_s17_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 1937,
+      "crc32": 2497584627
+    },
+    {
+      "path": "R82_pie_424000000001_s17_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74465,
+      "crc32": 3721036067
+    },
+    {
+      "path": "R82_pie_523000000001_s0_SOFT25/preview.jpg",
+      "bytes": 24227,
+      "crc32": 412289039
+    },
+    {
+      "path": "R82_pie_523000000001_s0_SOFT25/pattern.jpg",
+      "bytes": 24157,
+      "crc32": 297102560
+    },
+    {
+      "path": "R82_pie_523000000001_s0_SOFT25/route_mask.jpg",
+      "bytes": 12361,
+      "crc32": 2593128314
+    },
+    {
+      "path": "R82_pie_523000000001_s0_SOFT25/step_summary.json",
+      "bytes": 73581,
+      "crc32": 95139350
+    },
+    {
+      "path": "R82_pie_523000000001_s0_SOFT50/preview.jpg",
+      "bytes": 23888,
+      "crc32": 3230209115
+    },
+    {
+      "path": "R82_pie_523000000001_s0_SOFT50/pattern.jpg",
+      "bytes": 23900,
+      "crc32": 1096145203
+    },
+    {
+      "path": "R82_pie_523000000001_s0_SOFT50/route_mask.jpg",
+      "bytes": 10389,
+      "crc32": 2222058889
+    },
+    {
+      "path": "R82_pie_523000000001_s0_SOFT50/step_summary.json",
+      "bytes": 73551,
+      "crc32": 2833387472
+    },
+    {
+      "path": "R82_pie_523000000001_s0_SOFT75/preview.jpg",
+      "bytes": 23713,
+      "crc32": 86183530
+    },
+    {
+      "path": "R82_pie_523000000001_s0_SOFT75/pattern.jpg",
+      "bytes": 23639,
+      "crc32": 3208254373
+    },
+    {
+      "path": "R82_pie_523000000001_s0_SOFT75/route_mask.jpg",
+      "bytes": 7542,
+      "crc32": 28702743
+    },
+    {
+      "path": "R82_pie_523000000001_s0_SOFT75/step_summary.json",
+      "bytes": 73576,
+      "crc32": 3596088318
+    },
+    {
+      "path": "R82_pie_523000000001_s0_REQUEST_SOFT25/preview.jpg",
+      "bytes": 23848,
+      "crc32": 383176999
+    },
+    {
+      "path": "R82_pie_523000000001_s0_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 23872,
+      "crc32": 1192998749
+    },
+    {
+      "path": "R82_pie_523000000001_s0_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 25193,
+      "crc32": 1522605253
+    },
+    {
+      "path": "R82_pie_523000000001_s0_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 2255,
+      "crc32": 3494163387
+    },
+    {
+      "path": "R82_pie_523000000001_s0_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74553,
+      "crc32": 3214536682
+    },
+    {
+      "path": "R82_pie_523000000001_s17_SOFT25/preview.jpg",
+      "bytes": 22725,
+      "crc32": 1979051195
+    },
+    {
+      "path": "R82_pie_523000000001_s17_SOFT25/pattern.jpg",
+      "bytes": 22691,
+      "crc32": 40670179
+    },
+    {
+      "path": "R82_pie_523000000001_s17_SOFT25/route_mask.jpg",
+      "bytes": 12361,
+      "crc32": 2593128314
+    },
+    {
+      "path": "R82_pie_523000000001_s17_SOFT25/step_summary.json",
+      "bytes": 73586,
+      "crc32": 674862337
+    },
+    {
+      "path": "R82_pie_523000000001_s17_SOFT50/preview.jpg",
+      "bytes": 22601,
+      "crc32": 3496374926
+    },
+    {
+      "path": "R82_pie_523000000001_s17_SOFT50/pattern.jpg",
+      "bytes": 22577,
+      "crc32": 809170458
+    },
+    {
+      "path": "R82_pie_523000000001_s17_SOFT50/route_mask.jpg",
+      "bytes": 10389,
+      "crc32": 2222058889
+    },
+    {
+      "path": "R82_pie_523000000001_s17_SOFT50/step_summary.json",
+      "bytes": 73556,
+      "crc32": 2835622951
+    },
+    {
+      "path": "R82_pie_523000000001_s17_SOFT75/preview.jpg",
+      "bytes": 22545,
+      "crc32": 2391557023
+    },
+    {
+      "path": "R82_pie_523000000001_s17_SOFT75/pattern.jpg",
+      "bytes": 22519,
+      "crc32": 1373557047
+    },
+    {
+      "path": "R82_pie_523000000001_s17_SOFT75/route_mask.jpg",
+      "bytes": 7542,
+      "crc32": 28702743
+    },
+    {
+      "path": "R82_pie_523000000001_s17_SOFT75/step_summary.json",
+      "bytes": 73603,
+      "crc32": 2829904917
+    },
+    {
+      "path": "R82_pie_523000000001_s17_REQUEST_SOFT25/preview.jpg",
+      "bytes": 22176,
+      "crc32": 4291551329
+    },
+    {
+      "path": "R82_pie_523000000001_s17_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 22223,
+      "crc32": 745443940
+    },
+    {
+      "path": "R82_pie_523000000001_s17_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 24772,
+      "crc32": 1081556063
+    },
+    {
+      "path": "R82_pie_523000000001_s17_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 2261,
+      "crc32": 2381614885
+    },
+    {
+      "path": "R82_pie_523000000001_s17_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74559,
+      "crc32": 332013929
+    },
+    {
+      "path": "R82_pie_621000000004_s0_SOFT25/preview.jpg",
+      "bytes": 16205,
+      "crc32": 494026201
+    },
+    {
+      "path": "R82_pie_621000000004_s0_SOFT25/pattern.jpg",
+      "bytes": 16226,
+      "crc32": 497192313
+    },
+    {
+      "path": "R82_pie_621000000004_s0_SOFT25/route_mask.jpg",
+      "bytes": 10620,
+      "crc32": 1576820791
+    },
+    {
+      "path": "R82_pie_621000000004_s0_SOFT25/step_summary.json",
+      "bytes": 73464,
+      "crc32": 2528292048
+    },
+    {
+      "path": "R82_pie_621000000004_s0_SOFT50/preview.jpg",
+      "bytes": 15957,
+      "crc32": 31310504
+    },
+    {
+      "path": "R82_pie_621000000004_s0_SOFT50/pattern.jpg",
+      "bytes": 15991,
+      "crc32": 3449432767
+    },
+    {
+      "path": "R82_pie_621000000004_s0_SOFT50/route_mask.jpg",
+      "bytes": 9007,
+      "crc32": 2765510546
+    },
+    {
+      "path": "R82_pie_621000000004_s0_SOFT50/step_summary.json",
+      "bytes": 73378,
+      "crc32": 3042233031
+    },
+    {
+      "path": "R82_pie_621000000004_s0_SOFT75/preview.jpg",
+      "bytes": 15830,
+      "crc32": 2009085541
+    },
+    {
+      "path": "R82_pie_621000000004_s0_SOFT75/pattern.jpg",
+      "bytes": 15833,
+      "crc32": 2289768528
+    },
+    {
+      "path": "R82_pie_621000000004_s0_SOFT75/route_mask.jpg",
+      "bytes": 6675,
+      "crc32": 2215200522
+    },
+    {
+      "path": "R82_pie_621000000004_s0_SOFT75/step_summary.json",
+      "bytes": 73460,
+      "crc32": 1828392278
+    },
+    {
+      "path": "R82_pie_621000000004_s0_REQUEST_SOFT25/preview.jpg",
+      "bytes": 15370,
+      "crc32": 195281241
+    },
+    {
+      "path": "R82_pie_621000000004_s0_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 15376,
+      "crc32": 4187552428
+    },
+    {
+      "path": "R82_pie_621000000004_s0_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 19625,
+      "crc32": 811333841
+    },
+    {
+      "path": "R82_pie_621000000004_s0_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 1911,
+      "crc32": 432831386
+    },
+    {
+      "path": "R82_pie_621000000004_s0_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74562,
+      "crc32": 1282913199
+    },
+    {
+      "path": "R82_pie_621000000004_s17_SOFT25/preview.jpg",
+      "bytes": 15923,
+      "crc32": 2831329778
+    },
+    {
+      "path": "R82_pie_621000000004_s17_SOFT25/pattern.jpg",
+      "bytes": 15945,
+      "crc32": 537179152
+    },
+    {
+      "path": "R82_pie_621000000004_s17_SOFT25/route_mask.jpg",
+      "bytes": 10620,
+      "crc32": 1576820791
+    },
+    {
+      "path": "R82_pie_621000000004_s17_SOFT25/step_summary.json",
+      "bytes": 73455,
+      "crc32": 4289003624
+    },
+    {
+      "path": "R82_pie_621000000004_s17_SOFT50/preview.jpg",
+      "bytes": 15822,
+      "crc32": 3197266964
+    },
+    {
+      "path": "R82_pie_621000000004_s17_SOFT50/pattern.jpg",
+      "bytes": 15869,
+      "crc32": 531338042
+    },
+    {
+      "path": "R82_pie_621000000004_s17_SOFT50/route_mask.jpg",
+      "bytes": 9007,
+      "crc32": 2765510546
+    },
+    {
+      "path": "R82_pie_621000000004_s17_SOFT50/step_summary.json",
+      "bytes": 73391,
+      "crc32": 3978690285
+    },
+    {
+      "path": "R82_pie_621000000004_s17_SOFT75/preview.jpg",
+      "bytes": 15650,
+      "crc32": 2409754374
+    },
+    {
+      "path": "R82_pie_621000000004_s17_SOFT75/pattern.jpg",
+      "bytes": 15720,
+      "crc32": 678774029
+    },
+    {
+      "path": "R82_pie_621000000004_s17_SOFT75/route_mask.jpg",
+      "bytes": 6675,
+      "crc32": 2215200522
+    },
+    {
+      "path": "R82_pie_621000000004_s17_SOFT75/step_summary.json",
+      "bytes": 73421,
+      "crc32": 1884177333
+    },
+    {
+      "path": "R82_pie_621000000004_s17_REQUEST_SOFT25/preview.jpg",
+      "bytes": 15436,
+      "crc32": 3334822403
+    },
+    {
+      "path": "R82_pie_621000000004_s17_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 15474,
+      "crc32": 9459615
+    },
+    {
+      "path": "R82_pie_621000000004_s17_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 19244,
+      "crc32": 65519093
+    },
+    {
+      "path": "R82_pie_621000000004_s17_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 1862,
+      "crc32": 3783141301
+    },
+    {
+      "path": "R82_pie_621000000004_s17_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74503,
+      "crc32": 1238491960
+    },
+    {
+      "path": "R82_pie_713000000001_s0_SOFT25/preview.jpg",
+      "bytes": 19879,
+      "crc32": 100579662
+    },
+    {
+      "path": "R82_pie_713000000001_s0_SOFT25/pattern.jpg",
+      "bytes": 19824,
+      "crc32": 1651757896
+    },
+    {
+      "path": "R82_pie_713000000001_s0_SOFT25/route_mask.jpg",
+      "bytes": 8509,
+      "crc32": 419362365
+    },
+    {
+      "path": "R82_pie_713000000001_s0_SOFT25/step_summary.json",
+      "bytes": 73563,
+      "crc32": 681817013
+    },
+    {
+      "path": "R82_pie_713000000001_s0_SOFT50/preview.jpg",
+      "bytes": 18888,
+      "crc32": 2765302492
+    },
+    {
+      "path": "R82_pie_713000000001_s0_SOFT50/pattern.jpg",
+      "bytes": 18878,
+      "crc32": 2445878071
+    },
+    {
+      "path": "R82_pie_713000000001_s0_SOFT50/route_mask.jpg",
+      "bytes": 7200,
+      "crc32": 1550258566
+    },
+    {
+      "path": "R82_pie_713000000001_s0_SOFT50/step_summary.json",
+      "bytes": 73443,
+      "crc32": 3693447522
+    },
+    {
+      "path": "R82_pie_713000000001_s0_SOFT75/preview.jpg",
+      "bytes": 18089,
+      "crc32": 1720006148
+    },
+    {
+      "path": "R82_pie_713000000001_s0_SOFT75/pattern.jpg",
+      "bytes": 18074,
+      "crc32": 3387927711
+    },
+    {
+      "path": "R82_pie_713000000001_s0_SOFT75/route_mask.jpg",
+      "bytes": 5341,
+      "crc32": 2640586607
+    },
+    {
+      "path": "R82_pie_713000000001_s0_SOFT75/step_summary.json",
+      "bytes": 73501,
+      "crc32": 2909034312
+    },
+    {
+      "path": "R82_pie_713000000001_s0_REQUEST_SOFT25/preview.jpg",
+      "bytes": 17355,
+      "crc32": 361299711
+    },
+    {
+      "path": "R82_pie_713000000001_s0_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 17346,
+      "crc32": 2432689333
+    },
+    {
+      "path": "R82_pie_713000000001_s0_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 21959,
+      "crc32": 1630737419
+    },
+    {
+      "path": "R82_pie_713000000001_s0_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 2087,
+      "crc32": 2082778899
+    },
+    {
+      "path": "R82_pie_713000000001_s0_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74536,
+      "crc32": 951564469
+    },
+    {
+      "path": "R82_pie_713000000001_s17_SOFT25/preview.jpg",
+      "bytes": 20957,
+      "crc32": 4166457261
+    },
+    {
+      "path": "R82_pie_713000000001_s17_SOFT25/pattern.jpg",
+      "bytes": 20912,
+      "crc32": 2230423635
+    },
+    {
+      "path": "R82_pie_713000000001_s17_SOFT25/route_mask.jpg",
+      "bytes": 8509,
+      "crc32": 419362365
+    },
+    {
+      "path": "R82_pie_713000000001_s17_SOFT25/step_summary.json",
+      "bytes": 73560,
+      "crc32": 1177733533
+    },
+    {
+      "path": "R82_pie_713000000001_s17_SOFT50/preview.jpg",
+      "bytes": 20127,
+      "crc32": 1452459443
+    },
+    {
+      "path": "R82_pie_713000000001_s17_SOFT50/pattern.jpg",
+      "bytes": 20067,
+      "crc32": 379953249
+    },
+    {
+      "path": "R82_pie_713000000001_s17_SOFT50/route_mask.jpg",
+      "bytes": 7200,
+      "crc32": 1550258566
+    },
+    {
+      "path": "R82_pie_713000000001_s17_SOFT50/step_summary.json",
+      "bytes": 73493,
+      "crc32": 3086071326
+    },
+    {
+      "path": "R82_pie_713000000001_s17_SOFT75/preview.jpg",
+      "bytes": 19598,
+      "crc32": 3916423200
+    },
+    {
+      "path": "R82_pie_713000000001_s17_SOFT75/pattern.jpg",
+      "bytes": 19478,
+      "crc32": 4199829202
+    },
+    {
+      "path": "R82_pie_713000000001_s17_SOFT75/route_mask.jpg",
+      "bytes": 5341,
+      "crc32": 2640586607
+    },
+    {
+      "path": "R82_pie_713000000001_s17_SOFT75/step_summary.json",
+      "bytes": 73540,
+      "crc32": 1520252134
+    },
+    {
+      "path": "R82_pie_713000000001_s17_REQUEST_SOFT25/preview.jpg",
+      "bytes": 19207,
+      "crc32": 1871145751
+    },
+    {
+      "path": "R82_pie_713000000001_s17_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 19138,
+      "crc32": 497710180
+    },
+    {
+      "path": "R82_pie_713000000001_s17_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 22615,
+      "crc32": 2023365210
+    },
+    {
+      "path": "R82_pie_713000000001_s17_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 2130,
+      "crc32": 928097703
+    },
+    {
+      "path": "R82_pie_713000000001_s17_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74525,
+      "crc32": 3254881818
+    },
+    {
+      "path": "R82_pie_814000000001_s0_SOFT25/preview.jpg",
+      "bytes": 18469,
+      "crc32": 887634729
+    },
+    {
+      "path": "R82_pie_814000000001_s0_SOFT25/pattern.jpg",
+      "bytes": 18529,
+      "crc32": 1298144090
+    },
+    {
+      "path": "R82_pie_814000000001_s0_SOFT25/route_mask.jpg",
+      "bytes": 9773,
+      "crc32": 2387327601
+    },
+    {
+      "path": "R82_pie_814000000001_s0_SOFT25/step_summary.json",
+      "bytes": 73663,
+      "crc32": 811888029
+    },
+    {
+      "path": "R82_pie_814000000001_s0_SOFT50/preview.jpg",
+      "bytes": 17692,
+      "crc32": 1880752248
+    },
+    {
+      "path": "R82_pie_814000000001_s0_SOFT50/pattern.jpg",
+      "bytes": 17775,
+      "crc32": 682360067
+    },
+    {
+      "path": "R82_pie_814000000001_s0_SOFT50/route_mask.jpg",
+      "bytes": 8273,
+      "crc32": 4204313369
+    },
+    {
+      "path": "R82_pie_814000000001_s0_SOFT50/step_summary.json",
+      "bytes": 73547,
+      "crc32": 3148040369
+    },
+    {
+      "path": "R82_pie_814000000001_s0_SOFT75/preview.jpg",
+      "bytes": 17288,
+      "crc32": 2121367816
+    },
+    {
+      "path": "R82_pie_814000000001_s0_SOFT75/pattern.jpg",
+      "bytes": 17355,
+      "crc32": 1343343385
+    },
+    {
+      "path": "R82_pie_814000000001_s0_SOFT75/route_mask.jpg",
+      "bytes": 6088,
+      "crc32": 221187801
+    },
+    {
+      "path": "R82_pie_814000000001_s0_SOFT75/step_summary.json",
+      "bytes": 73587,
+      "crc32": 677649309
+    },
+    {
+      "path": "R82_pie_814000000001_s0_REQUEST_SOFT25/preview.jpg",
+      "bytes": 16575,
+      "crc32": 608807153
+    },
+    {
+      "path": "R82_pie_814000000001_s0_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 16674,
+      "crc32": 351299636
+    },
+    {
+      "path": "R82_pie_814000000001_s0_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 23983,
+      "crc32": 2549602951
+    },
+    {
+      "path": "R82_pie_814000000001_s0_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 2210,
+      "crc32": 2476456064
+    },
+    {
+      "path": "R82_pie_814000000001_s0_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74491,
+      "crc32": 3726558665
+    },
+    {
+      "path": "R82_pie_814000000001_s17_SOFT25/preview.jpg",
+      "bytes": 16265,
+      "crc32": 3709953842
+    },
+    {
+      "path": "R82_pie_814000000001_s17_SOFT25/pattern.jpg",
+      "bytes": 16315,
+      "crc32": 172628394
+    },
+    {
+      "path": "R82_pie_814000000001_s17_SOFT25/route_mask.jpg",
+      "bytes": 9773,
+      "crc32": 2387327601
+    },
+    {
+      "path": "R82_pie_814000000001_s17_SOFT25/step_summary.json",
+      "bytes": 73633,
+      "crc32": 57689969
+    },
+    {
+      "path": "R82_pie_814000000001_s17_SOFT50/preview.jpg",
+      "bytes": 15697,
+      "crc32": 1938742906
+    },
+    {
+      "path": "R82_pie_814000000001_s17_SOFT50/pattern.jpg",
+      "bytes": 15784,
+      "crc32": 3699694201
+    },
+    {
+      "path": "R82_pie_814000000001_s17_SOFT50/route_mask.jpg",
+      "bytes": 8273,
+      "crc32": 4204313369
+    },
+    {
+      "path": "R82_pie_814000000001_s17_SOFT50/step_summary.json",
+      "bytes": 73546,
+      "crc32": 700175059
+    },
+    {
+      "path": "R82_pie_814000000001_s17_SOFT75/preview.jpg",
+      "bytes": 15325,
+      "crc32": 1916239800
+    },
+    {
+      "path": "R82_pie_814000000001_s17_SOFT75/pattern.jpg",
+      "bytes": 15409,
+      "crc32": 1859020105
+    },
+    {
+      "path": "R82_pie_814000000001_s17_SOFT75/route_mask.jpg",
+      "bytes": 6088,
+      "crc32": 221187801
+    },
+    {
+      "path": "R82_pie_814000000001_s17_SOFT75/step_summary.json",
+      "bytes": 73590,
+      "crc32": 3647384040
+    },
+    {
+      "path": "R82_pie_814000000001_s17_REQUEST_SOFT25/preview.jpg",
+      "bytes": 14874,
+      "crc32": 928020921
+    },
+    {
+      "path": "R82_pie_814000000001_s17_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 14949,
+      "crc32": 1105267067
+    },
+    {
+      "path": "R82_pie_814000000001_s17_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 23997,
+      "crc32": 2118821258
+    },
+    {
+      "path": "R82_pie_814000000001_s17_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 2214,
+      "crc32": 1665767026
+    },
+    {
+      "path": "R82_pie_814000000001_s17_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74397,
+      "crc32": 2288414290
+    },
+    {
+      "path": "R82_pie_922000000003_s0_SOFT25/preview.jpg",
+      "bytes": 18214,
+      "crc32": 974058161
+    },
+    {
+      "path": "R82_pie_922000000003_s0_SOFT25/pattern.jpg",
+      "bytes": 18258,
+      "crc32": 869637377
+    },
+    {
+      "path": "R82_pie_922000000003_s0_SOFT25/route_mask.jpg",
+      "bytes": 5902,
+      "crc32": 968585314
+    },
+    {
+      "path": "R82_pie_922000000003_s0_SOFT25/step_summary.json",
+      "bytes": 73210,
+      "crc32": 2456228168
+    },
+    {
+      "path": "R82_pie_922000000003_s0_SOFT50/preview.jpg",
+      "bytes": 17105,
+      "crc32": 1487211752
+    },
+    {
+      "path": "R82_pie_922000000003_s0_SOFT50/pattern.jpg",
+      "bytes": 17142,
+      "crc32": 2051971630
+    },
+    {
+      "path": "R82_pie_922000000003_s0_SOFT50/route_mask.jpg",
+      "bytes": 5096,
+      "crc32": 1280455341
+    },
+    {
+      "path": "R82_pie_922000000003_s0_SOFT50/step_summary.json",
+      "bytes": 73154,
+      "crc32": 541141341
+    },
+    {
+      "path": "R82_pie_922000000003_s0_SOFT75/preview.jpg",
+      "bytes": 17305,
+      "crc32": 3827387617
+    },
+    {
+      "path": "R82_pie_922000000003_s0_SOFT75/pattern.jpg",
+      "bytes": 17328,
+      "crc32": 221226476
+    },
+    {
+      "path": "R82_pie_922000000003_s0_SOFT75/route_mask.jpg",
+      "bytes": 3938,
+      "crc32": 345069656
+    },
+    {
+      "path": "R82_pie_922000000003_s0_SOFT75/step_summary.json",
+      "bytes": 73223,
+      "crc32": 3342440279
+    },
+    {
+      "path": "R82_pie_922000000003_s0_REQUEST_SOFT25/preview.jpg",
+      "bytes": 16776,
+      "crc32": 290473076
+    },
+    {
+      "path": "R82_pie_922000000003_s0_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 16773,
+      "crc32": 2066950839
+    },
+    {
+      "path": "R82_pie_922000000003_s0_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 19447,
+      "crc32": 3177949319
+    },
+    {
+      "path": "R82_pie_922000000003_s0_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 1867,
+      "crc32": 2335534165
+    },
+    {
+      "path": "R82_pie_922000000003_s0_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74531,
+      "crc32": 765694410
+    },
+    {
+      "path": "R82_pie_922000000003_s17_SOFT25/preview.jpg",
+      "bytes": 22723,
+      "crc32": 2849799592
+    },
+    {
+      "path": "R82_pie_922000000003_s17_SOFT25/pattern.jpg",
+      "bytes": 22759,
+      "crc32": 4055602425
+    },
+    {
+      "path": "R82_pie_922000000003_s17_SOFT25/route_mask.jpg",
+      "bytes": 5902,
+      "crc32": 968585314
+    },
+    {
+      "path": "R82_pie_922000000003_s17_SOFT25/step_summary.json",
+      "bytes": 73171,
+      "crc32": 1576974856
+    },
+    {
+      "path": "R82_pie_922000000003_s17_SOFT50/preview.jpg",
+      "bytes": 21317,
+      "crc32": 2037591147
+    },
+    {
+      "path": "R82_pie_922000000003_s17_SOFT50/pattern.jpg",
+      "bytes": 21343,
+      "crc32": 2753835372
+    },
+    {
+      "path": "R82_pie_922000000003_s17_SOFT50/route_mask.jpg",
+      "bytes": 5096,
+      "crc32": 1280455341
+    },
+    {
+      "path": "R82_pie_922000000003_s17_SOFT50/step_summary.json",
+      "bytes": 73151,
+      "crc32": 2503884363
+    },
+    {
+      "path": "R82_pie_922000000003_s17_SOFT75/preview.jpg",
+      "bytes": 19278,
+      "crc32": 472170592
+    },
+    {
+      "path": "R82_pie_922000000003_s17_SOFT75/pattern.jpg",
+      "bytes": 19334,
+      "crc32": 1260089124
+    },
+    {
+      "path": "R82_pie_922000000003_s17_SOFT75/route_mask.jpg",
+      "bytes": 3938,
+      "crc32": 345069656
+    },
+    {
+      "path": "R82_pie_922000000003_s17_SOFT75/step_summary.json",
+      "bytes": 73232,
+      "crc32": 2542027933
+    },
+    {
+      "path": "R82_pie_922000000003_s17_REQUEST_SOFT25/preview.jpg",
+      "bytes": 16193,
+      "crc32": 2633113778
+    },
+    {
+      "path": "R82_pie_922000000003_s17_REQUEST_SOFT25/pattern.jpg",
+      "bytes": 16277,
+      "crc32": 623541803
+    },
+    {
+      "path": "R82_pie_922000000003_s17_REQUEST_SOFT25/route_mask.jpg",
+      "bytes": 19990,
+      "crc32": 1571893375
+    },
+    {
+      "path": "R82_pie_922000000003_s17_REQUEST_SOFT25/edit_response64.jpg",
+      "bytes": 1937,
+      "crc32": 1772251268
+    },
+    {
+      "path": "R82_pie_922000000003_s17_REQUEST_SOFT25/step_summary.json",
+      "bytes": 74483,
+      "crc32": 2402622576
+    },
+    {
+      "path": "references/manifest.json",
+      "bytes": 425611,
+      "crc32": 152578289
+    },
+    {
+      "path": "references/metrics.csv",
+      "bytes": 92925,
+      "crc32": 996582520
+    },
+    {
+      "path": "references/R81_pie_000000000072_s0_AUTO_DETAIL.jpg",
+      "bytes": 15472,
+      "crc32": 1140204779
+    },
+    {
+      "path": "references/R81_pie_000000000072_s0_U25_KV.jpg",
+      "bytes": 12978,
+      "crc32": 1993707908
+    },
+    {
+      "path": "references/R81_pie_000000000072_s0_FLOWEDIT_N26.jpg",
+      "bytes": 12138,
+      "crc32": 2755690157
+    },
+    {
+      "path": "references/R81_pie_000000000072_s17_AUTO_DETAIL.jpg",
+      "bytes": 15355,
+      "crc32": 1624736257
+    },
+    {
+      "path": "references/R81_pie_000000000072_s17_U25_KV.jpg",
+      "bytes": 11576,
+      "crc32": 1612899372
+    },
+    {
+      "path": "references/R81_pie_000000000072_s17_FLOWEDIT_N26.jpg",
+      "bytes": 12475,
+      "crc32": 4030164297
+    },
+    {
+      "path": "references/R81_pie_121000000006_s0_AUTO_DETAIL.jpg",
+      "bytes": 16282,
+      "crc32": 1004910425
+    },
+    {
+      "path": "references/R81_pie_121000000006_s0_U25_KV.jpg",
+      "bytes": 16756,
+      "crc32": 819566508
+    },
+    {
+      "path": "references/R81_pie_121000000006_s0_FLOWEDIT_N26.jpg",
+      "bytes": 19877,
+      "crc32": 3877124789
+    },
+    {
+      "path": "references/R81_pie_121000000006_s17_AUTO_DETAIL.jpg",
+      "bytes": 15951,
+      "crc32": 4225149862
+    },
+    {
+      "path": "references/R81_pie_121000000006_s17_U25_KV.jpg",
+      "bytes": 16253,
+      "crc32": 2973062186
+    },
+    {
+      "path": "references/R81_pie_121000000006_s17_FLOWEDIT_N26.jpg",
+      "bytes": 18939,
+      "crc32": 1024952107
+    },
+    {
+      "path": "references/R81_pie_223000000008_s0_AUTO_DETAIL.jpg",
+      "bytes": 24695,
+      "crc32": 1430499439
+    },
+    {
+      "path": "references/R81_pie_223000000008_s0_U25_KV.jpg",
+      "bytes": 24415,
+      "crc32": 941527876
+    },
+    {
+      "path": "references/R81_pie_223000000008_s0_FLOWEDIT_N26.jpg",
+      "bytes": 24605,
+      "crc32": 1831728617
+    },
+    {
+      "path": "references/R81_pie_223000000008_s17_AUTO_DETAIL.jpg",
+      "bytes": 25143,
+      "crc32": 134559293
+    },
+    {
+      "path": "references/R81_pie_223000000008_s17_U25_KV.jpg",
+      "bytes": 24151,
+      "crc32": 3699699485
+    },
+    {
+      "path": "references/R81_pie_223000000008_s17_FLOWEDIT_N26.jpg",
+      "bytes": 26234,
+      "crc32": 456130296
+    },
+    {
+      "path": "references/R81_pie_323000000002_s0_AUTO_DETAIL.jpg",
+      "bytes": 21331,
+      "crc32": 686880872
+    },
+    {
+      "path": "references/R81_pie_323000000002_s0_U25_KV.jpg",
+      "bytes": 18456,
+      "crc32": 4041355200
+    },
+    {
+      "path": "references/R81_pie_323000000002_s0_FLOWEDIT_N26.jpg",
+      "bytes": 20989,
+      "crc32": 2070080358
+    },
+    {
+      "path": "references/R81_pie_323000000002_s17_AUTO_DETAIL.jpg",
+      "bytes": 21793,
+      "crc32": 2678316102
+    },
+    {
+      "path": "references/R81_pie_323000000002_s17_U25_KV.jpg",
+      "bytes": 19341,
+      "crc32": 2990351888
+    },
+    {
+      "path": "references/R81_pie_323000000002_s17_FLOWEDIT_N26.jpg",
+      "bytes": 17695,
+      "crc32": 2820030337
+    },
+    {
+      "path": "references/R81_pie_424000000001_s0_AUTO_DETAIL.jpg",
+      "bytes": 22956,
+      "crc32": 2361173917
+    },
+    {
+      "path": "references/R81_pie_424000000001_s0_U25_KV.jpg",
+      "bytes": 22401,
+      "crc32": 243531318
+    },
+    {
+      "path": "references/R81_pie_424000000001_s0_FLOWEDIT_N26.jpg",
+      "bytes": 23433,
+      "crc32": 2006869510
+    },
+    {
+      "path": "references/R81_pie_424000000001_s17_AUTO_DETAIL.jpg",
+      "bytes": 22896,
+      "crc32": 1841493986
+    },
+    {
+      "path": "references/R81_pie_424000000001_s17_U25_KV.jpg",
+      "bytes": 23217,
+      "crc32": 1259460204
+    },
+    {
+      "path": "references/R81_pie_424000000001_s17_FLOWEDIT_N26.jpg",
+      "bytes": 22570,
+      "crc32": 2438369633
+    },
+    {
+      "path": "references/R81_pie_523000000001_s0_AUTO_DETAIL.jpg",
+      "bytes": 24359,
+      "crc32": 171817881
+    },
+    {
+      "path": "references/R81_pie_523000000001_s0_U25_KV.jpg",
+      "bytes": 23841,
+      "crc32": 1863295821
+    },
+    {
+      "path": "references/R81_pie_523000000001_s0_FLOWEDIT_N26.jpg",
+      "bytes": 21469,
+      "crc32": 2432185729
+    },
+    {
+      "path": "references/R81_pie_523000000001_s17_AUTO_DETAIL.jpg",
+      "bytes": 22556,
+      "crc32": 1358856323
+    },
+    {
+      "path": "references/R81_pie_523000000001_s17_U25_KV.jpg",
+      "bytes": 22322,
+      "crc32": 1255871807
+    },
+    {
+      "path": "references/R81_pie_523000000001_s17_FLOWEDIT_N26.jpg",
+      "bytes": 21132,
+      "crc32": 2300320189
+    },
+    {
+      "path": "references/R81_pie_621000000004_s0_AUTO_DETAIL.jpg",
+      "bytes": 16653,
+      "crc32": 3447106697
+    },
+    {
+      "path": "references/R81_pie_621000000004_s0_U25_KV.jpg",
+      "bytes": 15672,
+      "crc32": 4042443542
+    },
+    {
+      "path": "references/R81_pie_621000000004_s0_FLOWEDIT_N26.jpg",
+      "bytes": 18862,
+      "crc32": 3268861921
+    },
+    {
+      "path": "references/R81_pie_621000000004_s17_AUTO_DETAIL.jpg",
+      "bytes": 16472,
+      "crc32": 223199427
+    },
+    {
+      "path": "references/R81_pie_621000000004_s17_U25_KV.jpg",
+      "bytes": 15513,
+      "crc32": 2450104219
+    },
+    {
+      "path": "references/R81_pie_621000000004_s17_FLOWEDIT_N26.jpg",
+      "bytes": 17508,
+      "crc32": 2288585055
+    },
+    {
+      "path": "references/R81_pie_713000000001_s0_AUTO_DETAIL.jpg",
+      "bytes": 21737,
+      "crc32": 2212341535
+    },
+    {
+      "path": "references/R81_pie_713000000001_s0_U25_KV.jpg",
+      "bytes": 17809,
+      "crc32": 569196085
+    },
+    {
+      "path": "references/R81_pie_713000000001_s0_FLOWEDIT_N26.jpg",
+      "bytes": 19375,
+      "crc32": 922929771
+    },
+    {
+      "path": "references/R81_pie_713000000001_s17_AUTO_DETAIL.jpg",
+      "bytes": 22500,
+      "crc32": 237637937
+    },
+    {
+      "path": "references/R81_pie_713000000001_s17_U25_KV.jpg",
+      "bytes": 19181,
+      "crc32": 3828220042
+    },
+    {
+      "path": "references/R81_pie_713000000001_s17_FLOWEDIT_N26.jpg",
+      "bytes": 20096,
+      "crc32": 3535373395
+    },
+    {
+      "path": "references/R81_pie_814000000001_s0_AUTO_DETAIL.jpg",
+      "bytes": 19609,
+      "crc32": 373758114
+    },
+    {
+      "path": "references/R81_pie_814000000001_s0_U25_KV.jpg",
+      "bytes": 16998,
+      "crc32": 2674802523
+    },
+    {
+      "path": "references/R81_pie_814000000001_s0_FLOWEDIT_N26.jpg",
+      "bytes": 18215,
+      "crc32": 1148284353
+    },
+    {
+      "path": "references/R81_pie_814000000001_s17_AUTO_DETAIL.jpg",
+      "bytes": 16760,
+      "crc32": 160577124
+    },
+    {
+      "path": "references/R81_pie_814000000001_s17_U25_KV.jpg",
+      "bytes": 15101,
+      "crc32": 3003763327
+    },
+    {
+      "path": "references/R81_pie_814000000001_s17_FLOWEDIT_N26.jpg",
+      "bytes": 17732,
+      "crc32": 3210166301
+    },
+    {
+      "path": "references/R81_pie_922000000003_s0_AUTO_DETAIL.jpg",
+      "bytes": 19280,
+      "crc32": 1827994652
+    },
+    {
+      "path": "references/R81_pie_922000000003_s0_U25_KV.jpg",
+      "bytes": 16963,
+      "crc32": 2549378391
+    },
+    {
+      "path": "references/R81_pie_922000000003_s0_FLOWEDIT_N26.jpg",
+      "bytes": 17182,
+      "crc32": 838209009
+    },
+    {
+      "path": "references/R81_pie_922000000003_s17_AUTO_DETAIL.jpg",
+      "bytes": 22567,
+      "crc32": 526232694
+    },
+    {
+      "path": "references/R81_pie_922000000003_s17_U25_KV.jpg",
+      "bytes": 18119,
+      "crc32": 1829077433
+    },
+    {
+      "path": "references/R81_pie_922000000003_s17_FLOWEDIT_N26.jpg",
+      "bytes": 17484,
+      "crc32": 1896312007
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "index.html",
+      "bytes": 39253,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "review/index.html",
+      "bytes": 54536,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_000000000072_s0.jpg",
+      "bytes": 80022,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_000000000072_s17.jpg",
+      "bytes": 78302,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_121000000006_s0.jpg",
+      "bytes": 101796,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_121000000006_s17.jpg",
+      "bytes": 100280,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_223000000008_s0.jpg",
+      "bytes": 139610,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_223000000008_s17.jpg",
+      "bytes": 140218,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_323000000002_s0.jpg",
+      "bytes": 118119,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_323000000002_s17.jpg",
+      "bytes": 118063,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_424000000001_s0.jpg",
+      "bytes": 123900,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_424000000001_s17.jpg",
+      "bytes": 126067,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_523000000001_s0.jpg",
+      "bytes": 138318,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_523000000001_s17.jpg",
+      "bytes": 131866,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_621000000004_s0.jpg",
+      "bytes": 95341,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_621000000004_s17.jpg",
+      "bytes": 94923,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_713000000001_s0.jpg",
+      "bytes": 110711,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_713000000001_s17.jpg",
+      "bytes": 115913,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_814000000001_s0.jpg",
+      "bytes": 101800,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_814000000001_s17.jpg",
+      "bytes": 92817,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_922000000003_s0.jpg",
+      "bytes": 96380,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/pie_922000000003_s17.jpg",
+      "bytes": 106654,
+      "reason": "comparison grid or generated interface"
+    }
+  ],
+  "text_normalized_members": [],
+  "original_manifest_note": "Archived code/plan/input hashes identify the historical run. Neutral naming and path redaction change published text; hashes are not recalculated or presented as hashes of this export.",
+  "available": {
+    "completed": 80,
+    "total_planned": 80,
+    "pending": 0,
+    "step_summaries": 80,
+    "record_json": 0,
+    "full_steps_json": 0,
+    "native_raw_png_in_archive": 0,
+    "float_map_npz": 0
+  },
+  "missing": "Native generated images absent from compact source ZIP."
+}

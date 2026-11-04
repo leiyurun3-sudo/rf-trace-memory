@@ -1,0 +1,180 @@
+{
+  "source_archive": "R80_RegionBalance_Ready.zip",
+  "source_location": "delivery",
+  "source_archive_bytes": 1923613,
+  "strip_root": true,
+  "source_member_root": "R80_RegionBalance",
+  "included_members": [
+    {
+      "path": "attention.py",
+      "bytes": 23034,
+      "crc32": 1977317430
+    },
+    {
+      "path": "controls.py",
+      "bytes": 5754,
+      "crc32": 1782394919
+    },
+    {
+      "path": "engine.py",
+      "bytes": 18171,
+      "crc32": 1635539949
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 15292,
+      "crc32": 598219020
+    },
+    {
+      "path": "evidence_stats.py",
+      "bytes": 6638,
+      "crc32": 4182015559
+    },
+    {
+      "path": "external.py",
+      "bytes": 2959,
+      "crc32": 2827260217
+    },
+    {
+      "path": "external_sources.md",
+      "bytes": 9805,
+      "crc32": 2492901181
+    },
+    {
+      "path": "mint_backend.py",
+      "bytes": 3893,
+      "crc32": 2892078264
+    },
+    {
+      "path": "model_loader.py",
+      "bytes": 5512,
+      "crc32": 1113038759
+    },
+    {
+      "path": "plan.json",
+      "bytes": 407381,
+      "crc32": 2461506315
+    },
+    {
+      "path": "prepare_benchmark.py",
+      "bytes": 9993,
+      "crc32": 929670605
+    },
+    {
+      "path": "reporting.py",
+      "bytes": 39187,
+      "crc32": 288267379
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 390,
+      "crc32": 3486942803
+    },
+    {
+      "path": "requirements_eval.txt",
+      "bytes": 139,
+      "crc32": 1775092259
+    },
+    {
+      "path": "review.py",
+      "bytes": 3805,
+      "crc32": 2547160291
+    },
+    {
+      "path": "rf_kv.py",
+      "bytes": 1282,
+      "crc32": 4037482886
+    },
+    {
+      "path": "runner.py",
+      "bytes": 22115,
+      "crc32": 3183401564
+    },
+    {
+      "path": "run_all.sh",
+      "bytes": 551,
+      "crc32": 2509902044
+    },
+    {
+      "path": "start.sh",
+      "bytes": 856,
+      "crc32": 1050316442
+    },
+    {
+      "path": "value.py",
+      "bytes": 1929,
+      "crc32": 955245182
+    },
+    {
+      "path": "data/121000000003/outer.png",
+      "bytes": 2367,
+      "crc32": 1630368804
+    },
+    {
+      "path": "data/321000000001/outer.png",
+      "bytes": 2016,
+      "crc32": 978068677
+    },
+    {
+      "path": "data/423000000000/outer.png",
+      "bytes": 1020,
+      "crc32": 3795552631
+    },
+    {
+      "path": "data/522000000000/outer.png",
+      "bytes": 2486,
+      "crc32": 3130133692
+    },
+    {
+      "path": "data/622000000002/outer.png",
+      "bytes": 1303,
+      "crc32": 1779003446
+    },
+    {
+      "path": "data/723000000002/outer.png",
+      "bytes": 1853,
+      "crc32": 995071571
+    }
+  ],
+  "omitted_inputs": [
+    {
+      "path": "data/121000000003/source.png",
+      "bytes": 449239,
+      "crc32": 3699728353
+    },
+    {
+      "path": "data/321000000001/source.png",
+      "bytes": 331220,
+      "crc32": 2239209372
+    },
+    {
+      "path": "data/423000000000/source.png",
+      "bytes": 232237,
+      "crc32": 4083644331
+    },
+    {
+      "path": "data/522000000000/source.png",
+      "bytes": 222678,
+      "crc32": 3133429392
+    },
+    {
+      "path": "data/622000000002/source.png",
+      "bytes": 302579,
+      "crc32": 1790874418
+    },
+    {
+      "path": "data/723000000002/source.png",
+      "bytes": 305414,
+      "crc32": 2004488360
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "README.md",
+      "reason": "historical narrative; current workflow is in experiment index"
+    }
+  ],
+  "text_normalized_members": [],
+  "archive_identity": "Original ZIP byte count and member CRC32 values; no new hashes computed.",
+  "status": "Archived workflow; no execution during synchronization."
+}

@@ -1,9 +1,22 @@
-import argparse, csv, hashlib, json, random, statistics, sys
+import argparse, csv, hashlib, json, random, statistics, sys, time
 from pathlib import Path
+from response_schema import (parse_json_object, validate_rubric, validate_ratings,
+                             RUBRIC_SCHEMA_EXAMPLE, RATINGS_SCHEMA_EXAMPLE,
+                             active_ratings_example, validate_active_ratings)
 
-PROMPT = '''You are evaluating an image edit. Image 1 is the source, image 2 is the edited result. Judge only visible content. Source description: {source_prompt}\nRequested target: {target_prompt}\nSpecific edit: {rubric}\nReturn ONLY a JSON object with exactly four keys edit, subject, pattern, artifact. Each value is an object with keys value, applicable, reason. value is integer 0 or 1, or null if uncertain/not applicable; For edit and artifact applicable MUST be true; use value null with a reason when uncertain. For subject and pattern use exactly the frozen subject_applicable and pattern_applicable values. reason is a short concrete visual explanation. edit: 1 if requested change is visibly achieved, 0 if not. subject: 1 if identity/shape and important unrelated content are preserved as appropriate to the request, 0 for substantial unrelated damage; when replacement, removal, posture or shape change is requested, do not penalize that intended change. pattern: assess preservation of meaningful distinctive source patterns/textures outside requested changes; use the frozen source-only rubric applicability exactly; when false or null, value must be null. Do not change applicability based on the edited image. Do not invent patterns. artifact: 1 for severe visual artifacts (broken anatomy, major incoherence, etc.), 0 if absent. If unclear, use null rather than guessing. Global style changes may legitimately alter textures, but preserve relevant scene content. Do not assess by pixel similarity.''' 
-VERSION='local-qwen-judge-v4'
-RUBRIC_PROMPT='''Inspect ONLY the source image and task descriptions, before seeing any outputs. Source description: {source_prompt}\nRequested target: {target_prompt}\nSpecific edit: {rubric}\nReturn ONLY JSON with exactly: requested_edit (nonempty array of strings), protected_requirements (nonempty array of strings), subject_applicable (true, false, or null if uncertain), subject_reason (string), pattern_applicable (true, false, or null if uncertain), pattern_reason (string). Include task-appropriate preservation requirements; never require preserving a requested identity/shape change. subject_applicable is false if the request replaces, removes, or changes the count of the subject such that preserving the original subject identity/shape is not appropriate. Do not require source subject identity for such tasks; use true if meaningful source identity/shape should be preserved, or null if uncertain. Independently consider protected unrelated content under artifact and edit. pattern_applicable is true only when distinctive source patterns or textures should be preserved outside the requested edit; false when none is relevant or the edit legitimately replaces them. If unclear use null. This rubric is frozen across all outputs.'''
+PROMPT = '''Evaluate an image edit from visible evidence. Image 1 is the source; image 2 is the edited result.
+Source description: {source_prompt}
+Requested target: {target_prompt}
+Specific edit: {rubric}
+The source-only rubric is frozen. The program already handles applicability. Do NOT predict or repeat any applicability field. Rate ONLY the criteria listed in the Required response below. Each criterion has value (integer 0 or 1, or null if uncertain) and reason (a short concrete visual explanation).
+edit: 1 if the requested change is visibly achieved, 0 otherwise.
+artifact: 1 if severe visual artifacts are present (broken anatomy, major incoherence), 0 if absent.
+subject, when requested: 1 if task-appropriate identity/shape and important unrelated content are preserved, 0 if substantially damaged. Do not penalize intended replacements, posture/shape changes, or global style changes.
+pattern, when requested: 1 if meaningful distinctive source patterns/textures outside intended changes are preserved, 0 if damaged.
+Use null and explain uncertainty when evidence is insufficient. Judge the task and visible content, not pixel similarity. Do not return unrequested criteria. Return one JSON object only.'''
+VERSION='local-qwen-judge-v6'
+AGGREGATION_VERSION='joint-failure-dominates-v1'
+RUBRIC_PROMPT='''Inspect ONLY the source image and task descriptions, before seeing any outputs. Source description: {source_prompt}\nRequested target: {target_prompt}\nSpecific edit: {rubric}\nReturn ONLY JSON with exactly: requested_edit (nonempty array of strings), protected_requirements (array of strings; an empty array is valid when nothing is required to be preserved), subject_applicable (true, false, or null if uncertain), subject_reason (string), pattern_applicable (true, false, or null if uncertain), pattern_reason (string). Include task-appropriate preservation requirements; never require preserving a requested identity/shape change. subject_applicable is false if the request replaces, removes, or changes the count of the subject such that preserving the original subject identity/shape is not appropriate. Do not require source subject identity for such tasks; use true if meaningful source identity/shape should be preserved, or null if uncertain. Independently consider protected unrelated content under artifact and edit. pattern_applicable is true only when distinctive source patterns or textures should be preserved outside the requested edit; false when none is relevant or the edit legitimately replaces them. If unclear use null. This rubric is frozen across all outputs.'''
 
 def canonical(x): return json.dumps(x,ensure_ascii=False,sort_keys=True,separators=(',',':'))
 def digest(x): return hashlib.sha256(x).hexdigest()
@@ -29,8 +42,16 @@ def prepare(root,out,revision,model_hash):
  choices=[root/'results',root/'results'/'R85',root]
  rd=next((p for p in choices if any((p/j['id']/'raw.png').is_file() for j in plan['jobs'])),None)
  if rd is None: rd=next((p for p in choices if (p/'plan.json').is_file()),root/'results')
- protocol={'version':VERSION,'rubric_prompt':RUBRIC_PROMPT,'prompt':PROMPT,'model':'Qwen/Qwen2.5-VL-7B-Instruct','revision':revision,'model_fingerprint':model_hash,'max_new_tokens':768,'do_sample':False,'max_pixels':512*512,'schema':'four ratings applicability reasons v1'}
- ph=digest(canonical(protocol).encode()); dump(out/'protocol.json',protocol)
+ protocol={'version':VERSION,'rubric_prompt':RUBRIC_PROMPT,'prompt':PROMPT,'model':'Qwen/Qwen2.5-VL-7B-Instruct','revision':revision,'model_fingerprint':model_hash,'max_new_tokens':768,'do_sample':False,'max_pixels':512*512,'schema':'active decisions value/reason; program attaches frozen applicability; omitted preservation is null','rubric_schema':RUBRIC_SCHEMA_EXAMPLE,'max_schema_attempts':3,'retry_policy':'same images; show previous answer and validation error; never fill missing judgments','migration_policy':'reuse validated v5 rubrics and already-valid v5 scores only when model, images, task and frozen rubric agree; record original protocol and file' }
+ ph=digest(canonical(protocol).encode())
+ previous=out/'protocol.json'
+ if previous.is_file():
+  old=load(previous); old_hash=digest(canonical(old).encode())
+  if old_hash!=ph:
+   for name in ('protocol.json','jobs_private.json','controls_private.json','repeats_private.json','summary.json','aggregation_policy.json'):
+    original=out/name
+    if original.is_file(): dump(out/'history'/old_hash/name,load(original))
+ dump(out/'protocol.json',protocol)
  for job in plan['jobs']:
   t=tasks[job['case']]; jid=job['id']
   if not isinstance(jid,str) or not jid or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-' for c in jid): raise ValueError('invalid job id')
@@ -92,94 +113,181 @@ def load_model(model):
  from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
  print('Loading local model and processor as a GPU smoke check...',flush=True)
  modelobj=Qwen2_5_VLForConditionalGeneration.from_pretrained(str(model),torch_dtype=torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16,device_map='auto',local_files_only=True)
+ modelobj.generation_config.do_sample=False
+ for option in ('temperature','top_p','top_k'):
+  setattr(modelobj.generation_config,option,None)
  processor=AutoProcessor.from_pretrained(str(model),local_files_only=True,max_pixels=512*512)
  if not any(p.device.type=='cuda' for p in modelobj.parameters()): raise RuntimeError('model did not load on GPU')
  print('Model load smoke check passed; GPU allocated GiB:',round(torch.cuda.memory_allocated()/2**30,2),flush=True)
  return modelobj,processor
 
+def structured_response(modelobj,processor,images,prompt,validator,rec):
+ import torch
+ messages=[{'role':'user','content':[{'type':'image'} for _ in images]+[{'type':'text','text':prompt}]}]
+ rec['attempts']=[]
+ for attempt in range(1,4):
+  template=processor.apply_chat_template(messages,tokenize=False,add_generation_prompt=True)
+  inp=processor(text=[template],images=images,padding=True,return_tensors='pt').to(modelobj.device)
+  with torch.inference_mode(): gen=modelobj.generate(**inp,max_new_tokens=768,do_sample=False)
+  raw=processor.batch_decode(gen[:,inp.input_ids.shape[1]:],skip_special_tokens=True)[0]
+  rec['raw_response']=raw
+  entry={'attempt':attempt,'rendered_prompt':template,'raw_response':raw}
+  rec['attempts'].append(entry)
+  try:
+   data=validator(parse_json_object(raw)); entry['status']='ok'; return data
+  except (ValueError,TypeError,KeyError) as exc:
+   entry['status']='schema_error'; entry['error']=str(exc)
+   print('SCHEMA RETRY',attempt,'/ 3:',str(exc),flush=True)
+   if attempt==3: raise ValueError('Schema validation failed after 3 attempts: '+str(exc)) from exc
+   messages.append({'role':'assistant','content':[{'type':'text','text':raw}]})
+   messages.append({'role':'user','content':[{'type':'text','text':
+    'Your response has a format error: '+str(exc)+'. Return the complete JSON in the exact schema from the first instruction. '
+    'Keep judgments grounded in the same images. Do not change a judgment merely to get a passing score. '
+    'Match each required field and its type. Use null with a reason for uncertainty. '
+    'Do not invent a preservation requirement. Return JSON only.'}]})
+
+
+def previous_v5_context(out, revision, model_hash):
+ p=out/'protocol.json'
+ if not p.is_file(): return None
+ protocol=load(p)
+ required={'version':'local-qwen-judge-v5','revision':revision,'model_fingerprint':model_hash,
+           'rubric_prompt':RUBRIC_PROMPT,'max_new_tokens':768,'do_sample':False,'max_pixels':512*512}
+ if any(protocol.get(k)!=v for k,v in required.items()): return None
+ jobs=[]
+ for name in ('jobs_private.json','controls_private.json'):
+  if (out/name).is_file(): jobs.extend(load(out/name))
+ return {'protocol':digest(canonical(protocol).encode()),'jobs':{j['job_id']:j for j in jobs}}
+
+
+def migrate_v5_rubric(out, context, job, new_key, destination):
+ if not context: return None
+ old_key=digest(canonical({'protocol':context['protocol'],'source':job['content']['source_sha256'],'task':job['public']}).encode())
+ old_path=out/'rubrics'/f'{old_key}.json'
+ if not old_path.is_file(): return None
+ old=load(old_path)
+ if old.get('status')!='ok' or old.get('fingerprint')!=old_key: return None
+ try: rubric=validate_rubric(old['rubric'])
+ except (ValueError,KeyError,TypeError): return None
+ record=dict(old, fingerprint=new_key, rubric=rubric,
+             cache_migration={'from_protocol':context['protocol'],'from_file':str(old_path.relative_to(out)),
+                              'reason':'Same source, task, model and unchanged source-only rubric prompt; no new inference.'})
+ dump(destination,record); return record
+
+
+def migrate_v5_response(out, context, job, rubric, destination):
+ if not context: return False
+ old_job=context['jobs'].get(job['job_id'])
+ if not old_job or old_job.get('content')!=job['content'] or old_job.get('public')!=job['public']: return False
+ old_key=digest(canonical({'job':old_job['fingerprint'],'rubric':rubric}).encode())
+ folder='repeat_responses' if job.get('audit_repeat') else 'responses'
+ old_path=out/folder/f'{old_key}.json'
+ if not old_path.is_file(): return False
+ old=load(old_path)
+ if old.get('status')!='ok' or old.get('fingerprint')!=old_key: return False
+ try:
+  checked=validate_ratings(old['ratings'],rubric)
+  ratings=validate_active_ratings(checked,rubric)
+ except (ValueError,KeyError,TypeError): return False
+ record=dict(old, fingerprint=job['fingerprint'], blind_id=job['blind_id'], ratings=ratings,
+             cache_migration={'from_protocol':context['protocol'],'from_file':str(old_path.relative_to(out)),
+                              'reason':'Previously valid decisions under the identical frozen rubric; applicability now attached by program.'})
+ dump(destination,record); return True
+
+
 def run(root,out,model,preflight_only,repeat_count=None):
  revision,mh=preflight(model)
  if preflight_only: return
- import torch
  from PIL import Image
- from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
+ migration=previous_v5_context(out,revision,mh)
  jobs,ph=prepare(root,out,revision,mh)
+ if migration: print('Validated v5 cache migration enabled; frozen rubrics and already-valid scores can be reused.',flush=True)
  if any(not j['fingerprint'] for j in jobs): raise RuntimeError('Missing native inputs; see missing_inputs.json. No model loaded.')
  modelobj,processor=load_model(model)
- # Stage 1: source-only rubric, frozen for all arms and controls.
- rubrics={}
- for case in sorted({j['case'] for j in jobs}):
-  j=next(x for x in jobs if x['case']==case)
+ rubrics={}; consecutive_errors=0; cases=sorted({j['case'] for j in jobs})
+ for index,case in enumerate(cases,1):
+  started=time.monotonic();j=next(x for x in jobs if x['case']==case)
   rk=digest(canonical({'protocol':ph,'source':j['content']['source_sha256'],'task':j['public']}).encode())
   rp=out/'rubrics'/f'{rk}.json'; rec=load(rp) if rp.exists() else {}
+  if rec.get('status')!='ok': rec=migrate_v5_rubric(out,migration,j,rk,rp) or rec
   if rec.get('status')!='ok':
-   rec={'fingerprint':rk,'model_revision':revision,'prompt':RUBRIC_PROMPT.format(**j['public']),'raw_response':None,'status':'failed'}
+   prompt=RUBRIC_PROMPT.format(**j['public'])+'\nExact JSON structure (null means uncertain; empty protected_requirements is permitted):\n'+RUBRIC_SCHEMA_EXAMPLE
+   rec={'fingerprint':rk,'model_revision':revision,'prompt':prompt,'raw_response':None,'status':'failed'}
    try:
     if filehash(safe(root,j['source']))!=j['content']['source_sha256']: raise ValueError('source changed after preparation')
     with Image.open(safe(root,j['source'])) as im: source=im.convert('RGB')
-    messages=[{'role':'user','content':[{'type':'image'},{'type':'text','text':rec['prompt']}]}]
-    template=processor.apply_chat_template(messages,tokenize=False,add_generation_prompt=True)
-    inp=processor(text=[template],images=[source],padding=True,return_tensors='pt').to(modelobj.device)
-    with torch.inference_mode(): gen=modelobj.generate(**inp,max_new_tokens=768,do_sample=False)
-    rec['raw_response']=processor.batch_decode(gen[:,inp.input_ids.shape[1]:],skip_special_tokens=True)[0]
-    raw=rec['raw_response'].strip()
-    if raw.startswith('```'): raw=raw.split('\n',1)[1].rsplit('```',1)[0].strip()
-    rubric=json.loads(raw)
-    if set(rubric)!={'requested_edit','protected_requirements','subject_applicable','subject_reason','pattern_applicable','pattern_reason'}: raise ValueError('rubric keys')
-    for k in ('requested_edit','protected_requirements'):
-     if not isinstance(rubric[k],list) or not rubric[k] or any(not isinstance(v,str) or not v.strip() for v in rubric[k]): raise ValueError('rubric '+k)
-    for k in ('subject','pattern'):
-     if rubric[k+'_applicable'] is not None and type(rubric[k+'_applicable']) is not bool: raise ValueError('rubric '+k+' applicability')
-     if not isinstance(rubric[k+'_reason'],str) or not rubric[k+'_reason'].strip(): raise ValueError('rubric '+k+' reason')
-    rec['rubric']=rubric;rec['status']='ok'
+    rec['rubric']=structured_response(modelobj,processor,[source],prompt,validate_rubric,rec)
+    rec['status']='ok'
    except Exception as e: rec['error']=str(e);print('RUBRIC FAILED',case,str(e),flush=True)
    dump(rp,rec)
   rubrics[case]=rec
- print('Source-only rubric phase complete; starting output phase.',flush=True)
+  consecutive_errors=consecutive_errors+1 if rec.get('status')!='ok' else 0
+  print('RUBRIC',index,'/',len(cases),case,rec.get('status'),round(time.monotonic()-started,1),'seconds',flush=True)
+  dump(out/'progress.json',{'stage':'rubrics','visited':index,'planned':len(cases),'valid':sum(r.get('status')=='ok' for r in rubrics.values()),'updated':time.time()})
+  if consecutive_errors>=3: raise RuntimeError('Three consecutive rubric failures. Stopped before output scoring; inspect saved raw responses.')
+ failed=[c for c,r in rubrics.items() if r.get('status')!='ok']
+ if failed: raise RuntimeError('Output phase not started: '+str(len(failed))+' unresolved source rubrics. Rerun after fixing; successful rubrics are cached.')
+ print('All source-only rubrics valid; starting output phase.',flush=True)
  if repeat_count is None:
   previous=out/'repeats_private.json'; previous_ids={x['job_id'] for x in load(previous)} if previous.exists() else set()
   selected=[j for j in jobs if j['job_id'] in previous_ids]
  else:
   if repeat_count<0 or repeat_count>len(jobs): raise ValueError('--repeat-count must be between 0 and number of main jobs')
   selected=random.Random(85007).sample(jobs,repeat_count)
- # One extra invocation for each fixed sampled job; main and controls stay separate.
  repeats=[dict(j,audit_repeat=True) for j in selected]
  dump(out/'repeats_private.json',[{'job_id':j['job_id'],'blind_id':j['blind_id']} for j in repeats])
  alljobs=jobs+load(out/'controls_private.json')+repeats;random.Random(85006).shuffle(alljobs)
+ phase_start=time.monotonic(); fresh_calls=0; consecutive_errors=0; failures=0; reused=0
  for n,j in enumerate(alljobs,1):
   frozen=rubrics[j['case']]
-  if frozen.get('status')!='ok': print('UNRESOLVED rubric',j['blind_id'],flush=True);continue
-  # Response cache incorporates the exact frozen rubric content.
   j['fingerprint']=digest(canonical({'job':j['fingerprint'],'rubric':frozen['rubric']}).encode())
   dest=out/('repeat_responses' if j.get('audit_repeat') else 'responses')/f"{j['fingerprint']}.json"
+  if not dest.exists(): migrate_v5_response(out,migration,j,frozen['rubric'],dest)
   if dest.exists():
    old=load(dest)
-   if old.get('status')=='ok' and old.get('fingerprint')==j['fingerprint']: continue
-  rec={'blind_id':j['blind_id'],'fingerprint':j['fingerprint'],'protocol_fingerprint':ph,'model_revision':revision,'prompt':PROMPT.format(**j['public'])+'\nFrozen source-only rubric (must follow subject_applicable and pattern_applicable exactly): '+canonical(frozen['rubric']),'raw_response':None,'status':'failed','ratings':None,'audit_repeat':bool(j.get('audit_repeat'))}
+   if old.get('status')=='ok' and old.get('fingerprint')==j['fingerprint']:
+    reused+=1; consecutive_errors=0; print(n,'/',len(alljobs),j['blind_id'],'ok cached',flush=True); continue
+  example=active_ratings_example(frozen['rubric'])
+  prompt=PROMPT.format(**j['public'])+'\nFrozen source-only rubric: '+canonical(frozen['rubric'])+'\nRequired response (only these criteria; each value is an object with value and reason). Fill each value and reason from the images; null placeholders mean uncertainty, not a passing judgment:\n'+json.dumps(example,ensure_ascii=False,indent=2)
+  rec={'blind_id':j['blind_id'],'fingerprint':j['fingerprint'],'protocol_fingerprint':ph,'model_revision':revision,'prompt':prompt,'raw_response':None,'status':'failed','ratings':None,'audit_repeat':bool(j.get('audit_repeat'))}
+  started=time.monotonic()
   try:
-   sp=safe(root,j['source']); op=safe(root,j['output'])
+   sp=safe(root,j['source']);op=safe(root,j['output'])
    if filehash(sp)!=j['content']['source_sha256'] or filehash(op)!=j['content']['output_sha256']: raise ValueError('input changed after prepare')
    with Image.open(sp) as im: source=im.convert('RGB')
    with Image.open(op) as im: output=im.convert('RGB')
-   messages=[{'role':'user','content':[{'type':'image'},{'type':'image'},{'type':'text','text':rec['prompt']}]}]
-   template=processor.apply_chat_template(messages,tokenize=False,add_generation_prompt=True)
-   inputs=processor(text=[template],images=[source,output],padding=True,return_tensors='pt').to(modelobj.device)
-   with torch.inference_mode(): generated=modelobj.generate(**inputs,max_new_tokens=768,do_sample=False)
-   rec['raw_response']=processor.batch_decode(generated[:,inputs.input_ids.shape[1]:],skip_special_tokens=True)[0]
-   raw=rec['raw_response'].strip()
-   if raw.startswith('```'):
-    raw=raw.split('\n',1)[1].rsplit('```',1)[0].strip()
-   rec['ratings']=valid(json.loads(raw))
-   for k in ('subject','pattern'):
-    if rec['ratings'][k]['applicable'] is not frozen['rubric'][k+'_applicable']: raise ValueError(k+' applicability contradicts frozen source rubric')
+   rec['ratings']=structured_response(modelobj,processor,[source,output],prompt,lambda d:validate_active_ratings(d,frozen['rubric']),rec)
+   rec['applicability_origin']='program-owned frozen source-only rubric; inactive criteria not inferred from edited output'
    rec['status']='ok'
-  except Exception as e: rec['error']=str(e); print('FAILED',j['blind_id'],str(e),flush=True)
-  dump(dest,rec); print(n,'/',len(alljobs),j['blind_id'],rec['status'],flush=True)
+  except Exception as e: rec['error']=str(e);print('FAILED',j['blind_id'],str(e),flush=True)
+  dump(dest,rec);fresh_calls+=1
+  failures+=int(rec['status']!='ok');consecutive_errors=consecutive_errors+1 if rec['status']!='ok' else 0
+  avg=(time.monotonic()-phase_start)/fresh_calls;eta=(len(alljobs)-n)*avg/60
+  print(n,'/',len(alljobs),j['blind_id'],rec['status'],'seconds=',round(time.monotonic()-started,1),'estimated_remaining_min=',round(eta,1),flush=True)
+  dump(out/'progress.json',{'stage':'output_scoring','visited':n,'planned':len(alljobs),'failed_this_run':failures,'mean_seconds_this_run':avg,'estimated_remaining_minutes':eta,'updated':time.time()})
+  if consecutive_errors>=3: raise RuntimeError('Three consecutive output-schema/inference failures; stopped. Inspect saved attempts before resuming.')
+ summarize(out)
+ dump(out/'progress.json',{'stage':'complete' if failures==0 else 'complete_with_errors','planned':len(alljobs),'failed_this_run':failures,'cached':reused,'new_judgments':fresh_calls,'updated':time.time()})
 
 def ci(vals,rng,n=2000):
  if len(vals)<2: return None
  vals=sorted(sum(rng.choice(vals) for _ in vals)/len(vals) for _ in range(n)); return [vals[int(.025*(n-1))],vals[int(.975*(n-1))]]
+
+def joint_outcome(values, applicability):
+ # Three-valued conjunction: an observed failure determines J=0 even
+ # when another component remains unknown. Explicit N/A is omitted.
+ if values['edit']==0 or values['artifact']==1:
+  return 0
+ if any(applicability[k] is True and values[k]==0 for k in ('subject','pattern')):
+  return 0
+ if (values['edit']==1 and values['artifact']==0 and
+     all(applicability[k] is False or
+         (applicability[k] is True and values[k]==1) for k in ('subject','pattern'))):
+  return 1
+ return None
+
 def summarize(out):
+ dump(out/'aggregation_policy.json',{'version':AGGREGATION_VERSION,'inference_protocol_unchanged':True,'joint_rule':'Any observed applicable failure determines zero; all required passes determine one; otherwise unresolved. Explicit NA is omitted.','input_policy':'Reuse saved rubrics and model responses; no inference or model download.'})
  jobs=load(out/'jobs_private.json'); controls=load(out/'controls_private.json'); rows=[]
  for j in jobs+controls:
   protocol=load(out/'protocol.json'); ph=digest(canonical(protocol).encode())
@@ -191,9 +299,7 @@ def summarize(out):
   vals={k:(v[k]['value'] if v and v[k]['applicable'] is True else None) for k in ('edit','subject','pattern','artifact')}
   applicability={k:(rub['rubric'][k+'_applicable'] if rub.get('status')=='ok' else None) for k in ('subject','pattern')}
   nas={k:applicability[k] is False for k in ('subject','pattern')}
-  joint=None
-  if v and all(vals[k] is not None for k in ('edit','artifact')) and all(nas[k] or (applicability[k] is True and vals[k] is not None) for k in ('subject','pattern')):
-   joint=int(vals['edit']==1 and vals['artifact']==0 and all(nas[k] or vals[k]==1 for k in ('subject','pattern')))
+  joint=joint_outcome(vals,applicability)
   details={}
   for k in ('edit','subject','pattern','artifact'):
    details[k+'_reason']=v[k]['reason'] if v else ''
@@ -240,12 +346,12 @@ def summarize(out):
   fields=['reference','comparator','paired_sources','mean_difference','ci_lower','ci_upper','estimand','note'];w=csv.DictWriter(f,fieldnames=fields);w.writeheader()
   for arm,d in comparisons.items():
    bounds=d['source_bootstrap_95ci'];w.writerow({'reference':base,'comparator':arm,'paired_sources':d['paired_sources'],'mean_difference':d['mean_difference'],'ci_lower':bounds[0] if bounds else None,'ci_upper':bounds[1] if bounds else None,'estimand':d['estimand'],'note':d['note']})
- dump(out/'summary.json',{'repeat_audit':{'selected_jobs':len(selected),'criteria':repeat_summary,'note':'Separate deterministic greedy reruns of fixed selected jobs; reproducibility audit, not an independent rater or guarantee of correctness.'},'label':'VLM-labelled, not human; missing excluded; descriptive source-clustered bootstrap','applicability_denominator':'subject and pattern explicit NA excluded from their denominators; joint ignores explicit NA for both; unknown remains missing; if all NA eligible denominator is zero and rate is null','arms':reports,'paired_joint':comparisons,'source_as_output_calibration':{'total':sum(r['arm']=='SOURCE_CONTROL' for r in rows),'edit_pass':sum(r['arm']=='SOURCE_CONTROL' and r['edit']==1 for r in rows),'edit_fail':sum(r['arm']=='SOURCE_CONTROL' and r['edit']==0 for r in rows),'edit_unresolved':sum(r['arm']=='SOURCE_CONTROL' and r['edit'] is None for r in rows),'interpretation':'Inspect each requested edit; source-as-output is a control, not automatically a failure.'}});print('Wrote ratings.csv and summary.json')
+ dump(out/'summary.json',{'repeat_audit':{'selected_jobs':len(selected),'criteria':repeat_summary,'note':'Separate deterministic greedy reruns of fixed selected jobs; reproducibility audit, not an independent rater or guarantee of correctness.'},'aggregation_version':AGGREGATION_VERSION,'label':'VLM-labelled, not human; known failures included; unresolved excluded from available-case estimates and included in bounds; descriptive source-clustered bootstrap','applicability_denominator':'subject and pattern explicit NA excluded from their denominators; joint ignores explicit NA for both; unknown remains missing; if all NA eligible denominator is zero and rate is null','arms':reports,'paired_joint':comparisons,'source_as_output_calibration':{'total':sum(r['arm']=='SOURCE_CONTROL' for r in rows),'edit_pass':sum(r['arm']=='SOURCE_CONTROL' and r['edit']==1 for r in rows),'edit_fail':sum(r['arm']=='SOURCE_CONTROL' and r['edit']==0 for r in rows),'edit_unresolved':sum(r['arm']=='SOURCE_CONTROL' and r['edit'] is None for r in rows),'interpretation':'Inspect each requested edit; source-as-output is a control, not automatically a failure.'}});print('Wrote ratings.csv and summary.json')
 
 def main():
  p=argparse.ArgumentParser();sub=p.add_subparsers(dest='cmd',required=True)
  for name in ('preflight','run'):
-  q=sub.add_parser(name);q.add_argument('--model',type=Path,required=True);q.add_argument('--root',type=Path);q.add_argument('--out',type=Path);q.add_argument('--repeat-count',type=int,default=None)
+  q=sub.add_parser(name);q.add_argument('--model',type=Path,required=True);q.add_argument('--root',type=Path);q.add_argument('--out',type=Path);q.add_argument('--repeat-count',type=int,default=None);q.add_argument('--load-model',action='store_true')
  q=sub.add_parser('summarize');q.add_argument('--out',type=Path,required=True)
  a=p.parse_args()
  if a.cmd=='summarize':summarize(a.out)

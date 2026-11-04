@@ -1,0 +1,22 @@
+\section{Configuration Selection and Recorded Cost}
+Table~\ref{tab:configuration-guide} links measured operating points to distinct objectives. These are choices within the tested settings: target and directional CLIP describe text compatibility, while retention metrics describe source similarity. CORR25--ENERGY estimates the allocation-policy contrast; its CLIP intervals span zero and do not establish semantic noninferiority.
+\begin{table}[t]
+\centering\small
+\caption{Configuration guide for the tested operating points.}
+\label{tab:configuration-guide}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.27\columnwidth}>{\raggedright\arraybackslash}p{0.63\columnwidth}}
+\toprule
+Objective & Measured choice and evidence\\
+\midrule
+Retention within correction arms & U25: best mean retention metrics in this family, 91 calls.\\
+Target-text compatibility & BOTH25: highest mean target CLIP, 0.2733; 97 calls.\\
+Directional response and call budget & FlowEdit N26: directional CLIP 0.1177 and 52 calls.\\
+Allocation attribution & CORR25 versus ENERGY: small LPIPS gain under common-state calibration, with measured trajectory drift.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+RF-Edit I08 is a high-retention, weak-editing working point: its factual-edit count is 4/40 and edit-and-preserve count 3/40. Its retention maxima are shown in the complete tables alongside that editing response.
+
+Table~\ref{tab:runtime-cost} summarizes recorded synchronized generation time and CUDA allocation/reservation peaks. These are arithmetic means over native outputs (80 per arm, 40 for RF-Edit), with evaluation time excluded. They describe this sequential run, including its cache and startup state; the arms were not randomized for a dedicated timing benchmark. CUDA peaks measure allocator usage, not total device memory. NFE remains the standalone structural call count.
+\input{tables/runtime_cost}

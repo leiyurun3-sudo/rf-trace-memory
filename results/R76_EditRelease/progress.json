@@ -1,0 +1,13 @@
+{
+  "pid": 198135,
+  "status": "completed",
+  "stage": "completed",
+  "planned": 84,
+  "completed": 84,
+  "failed": 0,
+  "updated": 1793272409.256778,
+  "job": "R76_rug_floor_s17_FLOWEDIT_N26",
+  "step": 28,
+  "steps": 28,
+  "new_nfe": 7196
+}

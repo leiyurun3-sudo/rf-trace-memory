@@ -1,0 +1,432 @@
+{
+  "source_archive": "R74_SplitDebt_Results.zip",
+  "source_location": "Downloads",
+  "source_archive_bytes": 1428549,
+  "included_members": [
+    {
+      "path": "manifest.json",
+      "bytes": 2085,
+      "crc32": 320922825
+    },
+    {
+      "path": "plan.json",
+      "bytes": 147933,
+      "crc32": 419588330
+    },
+    {
+      "path": "summary.json",
+      "bytes": 612,
+      "crc32": 3393397948
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 65582,
+      "crc32": 995005899
+    },
+    {
+      "path": "arm_summary.csv",
+      "bytes": 1141,
+      "crc32": 1909650864
+    },
+    {
+      "path": "comparison_metrics.csv",
+      "bytes": 65723,
+      "crc32": 3438912411
+    },
+    {
+      "path": "comparison_arm_summary.csv",
+      "bytes": 1141,
+      "crc32": 1909650864
+    },
+    {
+      "path": "progress.json",
+      "bytes": 262,
+      "crc32": 2315392726
+    },
+    {
+      "path": "sources/622000000002.jpg",
+      "bytes": 33767,
+      "crc32": 136874421
+    },
+    {
+      "path": "sources/723000000002.jpg",
+      "bytes": 37124,
+      "crc32": 2628851883
+    },
+    {
+      "path": "sources/121000000003.jpg",
+      "bytes": 55489,
+      "crc32": 3037233563
+    },
+    {
+      "path": "sources/423000000000.jpg",
+      "bytes": 30696,
+      "crc32": 3438298511
+    },
+    {
+      "path": "R74_cup_night_s10_DISC_ONLY/preview.jpg",
+      "bytes": 28473,
+      "crc32": 427004203
+    },
+    {
+      "path": "R74_cup_night_s10_DISC_ONLY/pattern.jpg",
+      "bytes": 14315,
+      "crc32": 1573717556
+    },
+    {
+      "path": "R74_cup_night_s10_DISC_ONLY/record.json",
+      "bytes": 12188,
+      "crc32": 934959845
+    },
+    {
+      "path": "R74_cup_night_s10_DISC_ONLY/steps.json",
+      "bytes": 173482,
+      "crc32": 4192384694
+    },
+    {
+      "path": "R74_cup_night_s10_COND_ONLY/preview.jpg",
+      "bytes": 38902,
+      "crc32": 2593144015
+    },
+    {
+      "path": "R74_cup_night_s10_COND_ONLY/pattern.jpg",
+      "bytes": 14081,
+      "crc32": 2079336534
+    },
+    {
+      "path": "R74_cup_night_s10_COND_ONLY/record.json",
+      "bytes": 12200,
+      "crc32": 3573817015
+    },
+    {
+      "path": "R74_cup_night_s10_COND_ONLY/steps.json",
+      "bytes": 167086,
+      "crc32": 181859068
+    },
+    {
+      "path": "R74_cup_night_s10_GATE_FADE/preview.jpg",
+      "bytes": 33181,
+      "crc32": 3943507444
+    },
+    {
+      "path": "R74_cup_night_s10_GATE_FADE/pattern.jpg",
+      "bytes": 11841,
+      "crc32": 1726348847
+    },
+    {
+      "path": "R74_cup_night_s10_GATE_FADE/record.json",
+      "bytes": 12176,
+      "crc32": 2816602048
+    },
+    {
+      "path": "R74_cup_night_s10_GATE_FADE/steps.json",
+      "bytes": 169634,
+      "crc32": 3853153979
+    },
+    {
+      "path": "R74_cup_night_s10_DISC_FADE/preview.jpg",
+      "bytes": 28893,
+      "crc32": 4083826761
+    },
+    {
+      "path": "R74_cup_night_s10_DISC_FADE/pattern.jpg",
+      "bytes": 14602,
+      "crc32": 2655899963
+    },
+    {
+      "path": "R74_cup_night_s10_DISC_FADE/record.json",
+      "bytes": 12192,
+      "crc32": 3850948022
+    },
+    {
+      "path": "R74_cup_night_s10_DISC_FADE/steps.json",
+      "bytes": 169633,
+      "crc32": 2341949181
+    },
+    {
+      "path": "R74_cup_night_s17_DISC_ONLY/preview.jpg",
+      "bytes": 27195,
+      "crc32": 2690965915
+    },
+    {
+      "path": "R74_cup_night_s17_DISC_ONLY/pattern.jpg",
+      "bytes": 13988,
+      "crc32": 3636526255
+    },
+    {
+      "path": "R74_cup_night_s17_DISC_ONLY/record.json",
+      "bytes": 12196,
+      "crc32": 1578420643
+    },
+    {
+      "path": "R74_cup_night_s17_DISC_ONLY/steps.json",
+      "bytes": 173477,
+      "crc32": 2046779584
+    },
+    {
+      "path": "R74_cup_night_s17_COND_ONLY/preview.jpg",
+      "bytes": 40774,
+      "crc32": 2555078561
+    },
+    {
+      "path": "R74_cup_night_s17_COND_ONLY/pattern.jpg",
+      "bytes": 15142,
+      "crc32": 3393042854
+    },
+    {
+      "path": "R74_cup_night_s17_COND_ONLY/record.json",
+      "bytes": 12199,
+      "crc32": 3199212192
+    },
+    {
+      "path": "R74_cup_night_s17_COND_ONLY/steps.json",
+      "bytes": 167062,
+      "crc32": 2949731206
+    },
+    {
+      "path": "R74_cup_night_s17_GATE_FADE/preview.jpg",
+      "bytes": 35382,
+      "crc32": 3440448414
+    },
+    {
+      "path": "R74_cup_night_s17_GATE_FADE/pattern.jpg",
+      "bytes": 12680,
+      "crc32": 3461290064
+    },
+    {
+      "path": "R74_cup_night_s17_GATE_FADE/record.json",
+      "bytes": 12174,
+      "crc32": 2886437260
+    },
+    {
+      "path": "R74_cup_night_s17_GATE_FADE/steps.json",
+      "bytes": 169569,
+      "crc32": 763520774
+    },
+    {
+      "path": "R74_cup_night_s17_DISC_FADE/preview.jpg",
+      "bytes": 25914,
+      "crc32": 40058605
+    },
+    {
+      "path": "R74_cup_night_s17_DISC_FADE/pattern.jpg",
+      "bytes": 11648,
+      "crc32": 295850849
+    },
+    {
+      "path": "R74_cup_night_s17_DISC_FADE/record.json",
+      "bytes": 12193,
+      "crc32": 2304030124
+    },
+    {
+      "path": "R74_cup_night_s17_DISC_FADE/steps.json",
+      "bytes": 169625,
+      "crc32": 1479116328
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_DISC_ONLY/preview.jpg",
+      "bytes": 23644,
+      "crc32": 3224737363
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_DISC_ONLY/pattern.jpg",
+      "bytes": 5574,
+      "crc32": 258013219
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_DISC_ONLY/record.json",
+      "bytes": 12442,
+      "crc32": 462174628
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_DISC_ONLY/steps.json",
+      "bytes": 173451,
+      "crc32": 3183534791
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_COND_ONLY/preview.jpg",
+      "bytes": 35084,
+      "crc32": 2905316915
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_COND_ONLY/pattern.jpg",
+      "bytes": 4503,
+      "crc32": 1252286584
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_COND_ONLY/record.json",
+      "bytes": 12455,
+      "crc32": 1715323559
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_COND_ONLY/steps.json",
+      "bytes": 166984,
+      "crc32": 1273620609
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_GATE_FADE/preview.jpg",
+      "bytes": 28747,
+      "crc32": 4156151569
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_GATE_FADE/pattern.jpg",
+      "bytes": 5167,
+      "crc32": 2340356603
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_GATE_FADE/record.json",
+      "bytes": 12428,
+      "crc32": 527188757
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_GATE_FADE/steps.json",
+      "bytes": 169636,
+      "crc32": 3855257608
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_DISC_FADE/preview.jpg",
+      "bytes": 23577,
+      "crc32": 1880404668
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_DISC_FADE/pattern.jpg",
+      "bytes": 5562,
+      "crc32": 2017944177
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_DISC_FADE/record.json",
+      "bytes": 12441,
+      "crc32": 4184209291
+    },
+    {
+      "path": "R74_printed_shirt_studio_s0_DISC_FADE/steps.json",
+      "bytes": 169576,
+      "crc32": 3738673061
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_DISC_ONLY/preview.jpg",
+      "bytes": 24810,
+      "crc32": 1313140623
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_DISC_ONLY/pattern.jpg",
+      "bytes": 5200,
+      "crc32": 2176004575
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_DISC_ONLY/record.json",
+      "bytes": 12461,
+      "crc32": 799323163
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_DISC_ONLY/steps.json",
+      "bytes": 173510,
+      "crc32": 621153740
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_COND_ONLY/preview.jpg",
+      "bytes": 34491,
+      "crc32": 3505728608
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_COND_ONLY/pattern.jpg",
+      "bytes": 6772,
+      "crc32": 3908523633
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_COND_ONLY/record.json",
+      "bytes": 12466,
+      "crc32": 3927702102
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_COND_ONLY/steps.json",
+      "bytes": 166987,
+      "crc32": 2199410987
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_GATE_FADE/preview.jpg",
+      "bytes": 29712,
+      "crc32": 606249931
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_GATE_FADE/pattern.jpg",
+      "bytes": 6014,
+      "crc32": 3399842435
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_GATE_FADE/record.json",
+      "bytes": 12439,
+      "crc32": 2242782839
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_GATE_FADE/steps.json",
+      "bytes": 169676,
+      "crc32": 1276015931
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_DISC_FADE/preview.jpg",
+      "bytes": 23689,
+      "crc32": 3025516849
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_DISC_FADE/pattern.jpg",
+      "bytes": 5103,
+      "crc32": 4217905737
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_DISC_FADE/record.json",
+      "bytes": 12455,
+      "crc32": 3888356820
+    },
+    {
+      "path": "R74_printed_shirt_studio_s17_DISC_FADE/steps.json",
+      "bytes": 169624,
+      "crc32": 1515146016
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "index.html",
+      "bytes": 13248,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "review/index.html",
+      "bytes": 15417,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/cup_night_s10.jpg",
+      "bytes": 77372,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/cup_night_s17.jpg",
+      "bytes": 78020,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/printed_shirt_studio_s0.jpg",
+      "bytes": 67490,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/printed_shirt_studio_s17.jpg",
+      "bytes": 67766,
+      "reason": "comparison grid or generated interface"
+    }
+  ],
+  "text_normalized_members": [],
+  "original_manifest_note": "Archived code/plan/input hashes identify the historical run. Neutral naming and path redaction change published text; hashes are not recalculated or presented as hashes of this export.",
+  "available": {
+    "completed": 16,
+    "total_planned": 32,
+    "pending": 16,
+    "step_summaries": 0,
+    "record_json": 16,
+    "full_steps_json": 16,
+    "native_raw_png_in_archive": 0,
+    "float_map_npz": 0
+  },
+  "missing": "Native generated images absent from compact source ZIP."
+}

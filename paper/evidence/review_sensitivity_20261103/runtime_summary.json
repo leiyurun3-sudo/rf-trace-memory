@@ -1,0 +1,51 @@
+[
+  {
+    "arm": "RELEASE_CORR25",
+    "n": 80,
+    "seconds": 66.01399514498189,
+    "allocated_gib": 22.396203327178956,
+    "reserved_gib": 22.5166015625
+  },
+  {
+    "arm": "RELEASE_BOTH25",
+    "n": 80,
+    "seconds": 55.10437225038186,
+    "allocated_gib": 22.396207332611084,
+    "reserved_gib": 22.515625
+  },
+  {
+    "arm": "ENERGY_MATCH25",
+    "n": 80,
+    "seconds": 54.93701210841537,
+    "allocated_gib": 22.39620351791382,
+    "reserved_gib": 22.515625
+  },
+  {
+    "arm": "U25_KV",
+    "n": 80,
+    "seconds": 53.234624023363,
+    "allocated_gib": 22.39565420150757,
+    "reserved_gib": 22.51728515625
+  },
+  {
+    "arm": "FLOWEDIT_N26",
+    "n": 80,
+    "seconds": 39.636549628153446,
+    "allocated_gib": 22.334230422973633,
+    "reserved_gib": 22.505859375
+  },
+  {
+    "arm": "RFEDIT_I08",
+    "n": 40,
+    "seconds": 54.96573684588075,
+    "allocated_gib": 22.333498001098633,
+    "reserved_gib": 22.50390625
+  },
+  {
+    "arm": "ETA03",
+    "n": 80,
+    "seconds": 44.65474067116156,
+    "allocated_gib": 22.335448265075684,
+    "reserved_gib": 22.5060546875
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "source_archive": "R75_MatchedStrength_Update.zip",
+  "source_location": "delivery",
+  "source_archive_bytes": 4999,
+  "strip_root": false,
+  "source_member_root": "",
+  "included_members": [
+    {
+      "path": "install_r75.py",
+      "bytes": 6824,
+      "crc32": 983675214
+    },
+    {
+      "path": "judge_sheets.py",
+      "bytes": 2690,
+      "crc32": 782016104
+    },
+    {
+      "path": "R75_README.txt",
+      "bytes": 283,
+      "crc32": 3550114178
+    }
+  ],
+  "omitted_inputs": [],
+  "excluded_members": [],
+  "text_normalized_members": [
+    "install_r75.py"
+  ],
+  "archive_identity": "Original ZIP byte count and member CRC32 values; no new hashes computed.",
+  "status": "Archived workflow; no execution during synchronization."
+}

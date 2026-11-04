@@ -1,0 +1,13 @@
+{
+  "pid": 4537,
+  "status": "running",
+  "stage": "image complete; packaging",
+  "planned": 32,
+  "completed": 16,
+  "failed": 0,
+  "updated": 1793244107.273826,
+  "job": "R74_printed_shirt_studio_s17_DISC_FADE",
+  "step": 28,
+  "steps": 28,
+  "new_nfe": 1008
+}

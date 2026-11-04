@@ -10,7 +10,7 @@ from matplotlib.ticker import MultipleLocator
 from PIL import Image
 
 BASE = Path(__file__).resolve().parents[1]
-ARCHIVE = BASE.parents[1] / '实验交付/FinalNight_Evaluated_Review'
+ARCHIVE = BASE.parent / 'results'
 STYLE = {'font.family': 'sans-serif', 'font.sans-serif': ['Arial', 'DejaVu Sans'],
          'font.size': 8.5, 'axes.labelsize': 8.5, 'axes.titlesize': 9.5,
          'xtick.labelsize': 8.5, 'ytick.labelsize': 8.5, 'legend.fontsize': 8.5,
@@ -168,8 +168,8 @@ def request_figure(r85):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--r84', type=Path, default=ARCHIVE / 'R84_FinalNight')
-    parser.add_argument('--r85', type=Path, default=ARCHIVE / 'R85_FinalNight')
+    parser.add_argument('--r84', type=Path, default=ARCHIVE / 'R84')
+    parser.add_argument('--r85', type=Path, default=ARCHIVE / 'R85')
     args = parser.parse_args()
     with plt.rc_context(STYLE):
         semantic_figure(args.r84, args.r85)

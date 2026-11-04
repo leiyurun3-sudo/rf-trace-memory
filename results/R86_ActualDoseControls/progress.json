@@ -1,0 +1,13 @@
+{
+  "pid": 13605,
+  "status": "completed",
+  "stage": "completed",
+  "planned": 40,
+  "completed": 40,
+  "failed": 0,
+  "updated": 1793702091.520938,
+  "job": "R86_pie_812000000004_s0_GLOBAL_07",
+  "step": 28,
+  "steps": 28,
+  "new_nfe": 3880
+}

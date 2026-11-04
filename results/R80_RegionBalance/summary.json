@@ -1,0 +1,19 @@
+{
+  "completed": 98,
+  "failed": 0,
+  "planned": 98,
+  "total_planned": 98,
+  "pending": 0,
+  "fingerprint": "004c7e89217b05ff8bb15f9dd08a0204c197e3266f4f6fb375dac42d01f1e487",
+  "edit_planned": 98,
+  "edit_judged": 0,
+  "edit_successes": 0,
+  "edit_success_rate": null,
+  "joint_successes": 0,
+  "joint_success_rate": null,
+  "artifact_count": 0,
+  "artifact_rate": null,
+  "rate_denominator_n": 98,
+  "diagnostic_planned": 0,
+  "success_rate_denominator": "all planned non-diagnostic jobs; failed generations count as unsuccessful; rates pending until remaining images rated"
+}

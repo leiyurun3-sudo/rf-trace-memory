@@ -1,0 +1,13 @@
+{
+  "pairs": 80,
+  "sources": 40,
+  "corr_mean_impulse": 0.18073535020897044,
+  "energy_mean_impulse": 0.182690340219732,
+  "source_mean_relative_diff": -0.010193504390996887,
+  "relative_diff_range": [
+    -0.06669183964194969,
+    0.010257984952410037
+  ],
+  "max_step_relative_diff": 0.09531606741488774,
+  "note": "Sum h_i RMS(applied correction). This is an injection-magnitude integral, not squared physical energy."
+}

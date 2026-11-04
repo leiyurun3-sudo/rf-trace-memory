@@ -1,0 +1,22 @@
+\paragraph{Method-identity baseline under identical LOSO folds.}
+We compare zero deviation, arm identity, impulse $I$, and arm identity plus $I$ using the same complete source--arm profiles, source-exclusive folds, centering, and zero-deviation skill denominator. Arm identity uses configuration dummies with one reference arm omitted; the dummies are centered within source, and least-squares fitting has no intercept. The development menu contains CORR15/25/35 and ENERGY; the independent menu contains CORR25, ENERGY, and U25. No held-out outcome enters fitting. These arm indicators differ from the earlier local-allocation indicator, which groups multiple global-direction configurations together.
+
+\begin{table}[t]
+\centering\small
+\caption{Source-centered LOSO skill under four models and identical folds. Parentheses give sources; full/regional source--arm rows are 40/32 in development and 120/99 in the independent menu. All skills use zero deviation as baseline; these are exploratory point estimates.}
+\label{tab:arm-identity-loso}
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{lrrrr}
+\toprule
+Population / outcome & Zero & Arm & $I$ & Arm+$I$\\
+\midrule
+Development full (10) & 0.0000 & 0.6580 & 0.6100 & 0.7705\\
+Development pres. (8) & 0.0000 & 0.8256 & 0.7991 & 0.8275\\
+Independent full (40) & 0.0000 & 0.8284 & 0.7913 & 0.8253\\
+Independent pres. (33) & 0.0000 & 0.7721 & 0.7117 & 0.7756\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For independent preservation LPIPS, arm identity gives skill 0.772063, impulse alone 0.711726, and arm plus impulse 0.775621. The increment over identity is 0.003558. For full LPIPS, identity gives 0.828406 and adding impulse gives 0.825267, a slight decrease. Thus configuration identity already predicts most of the relative variation captured here. Development full-image skill rises from 0.657957 to 0.770509 when impulse is added, whereas development regional skill changes from 0.825610 to 0.827497. These population-dependent associations neither attribute a causal fraction of quality to dose nor replace the separate fixed-sequence direction and same-source magnitude interventions. The earlier impulse-plus-allocation model remains a distinct analysis; its transfer values are unchanged.
+

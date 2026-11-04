@@ -1,0 +1,75 @@
+{
+  "decision": "JPEG previews only in inspected R85 result archives; no localization statistic or localization-retention correlation computed.",
+  "writer_provenance": {
+    "file": "experiments/R84_R85_FinalNight/R85_IndependentComparison/runner.py",
+    "lines": "289-302",
+    "E": "edit_response64 tensor clamped to [0,1], multiplied by 255, cast to uint8, saved as edit_response64.jpg quality=90",
+    "P": "effective_route_mask64 (effective P) clamped/quantized similarly, resized to 320x320 nearest neighbor and saved as route_mask.jpg quality=90"
+  },
+  "directories": [
+    {
+      "root": "archive/R85_result_review",
+      "files": 2293,
+      "map_filenames": {
+        "edit_response64.jpg": 240,
+        "route_mask.jpg": 240
+      },
+      "tensor_candidates": []
+    },
+    {
+      "root": "archive/R85_FinalNight",
+      "files": 2264,
+      "map_filenames": {
+        "edit_response64.jpg": 240,
+        "route_mask.jpg": 240
+      },
+      "tensor_candidates": []
+    }
+  ],
+  "archives": [
+    {
+      "path": "archive/R84_R85_FinalNight_results.zip::R85_FinalNight.zip",
+      "files": 2264,
+      "extensions": {
+        ".json": 531,
+        ".csv": 10,
+        ".html": 2,
+        ".jpg": 1720,
+        ".txt": 1
+      },
+      "map_filenames": {
+        "route_mask.jpg": 240,
+        "edit_response64.jpg": 240
+      },
+      "tensor_candidates": []
+    },
+    {
+      "path": "archive/R85_FinalNight_generation_pending.zip",
+      "files": 2253,
+      "map_filenames": {
+        "route_mask.jpg": 240,
+        "edit_response64.jpg": 240
+      },
+      "tensor_candidates": []
+    }
+  ],
+  "reason": "Lossy, quantized previews are not the archived floating-point E/P maps requested for exact offline localization. No values inferred from generated outputs or JPEG previews.",
+  "sample_E_metadata": {
+    "path": "archive/R85_result_review/R85_pie_000000000021_s0_RELEASE_CORR25/edit_response64.jpg",
+    "size": [
+      64,
+      64
+    ],
+    "mode": "RGB",
+    "format": "JPEG"
+  },
+  "sample_P_metadata": {
+    "path": "archive/R85_result_review/R85_pie_000000000021_s0_RELEASE_CORR25/route_mask.jpg",
+    "size": [
+      320,
+      320
+    ],
+    "mode": "RGB",
+    "format": "JPEG"
+  }
+}

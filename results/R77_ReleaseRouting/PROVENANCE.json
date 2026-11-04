@@ -1,0 +1,1632 @@
+{
+  "source_archive": "R77_ReleaseRouting.zip",
+  "source_location": "Downloads",
+  "source_archive_bytes": 4855821,
+  "included_members": [
+    {
+      "path": "manifest.json",
+      "bytes": 2868,
+      "crc32": 411339247
+    },
+    {
+      "path": "summary.json",
+      "bytes": 579,
+      "crc32": 386023639
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 118870,
+      "crc32": 3804303473
+    },
+    {
+      "path": "arm_summary.csv",
+      "bytes": 3002,
+      "crc32": 2786478638
+    },
+    {
+      "path": "progress.json",
+      "bytes": 239,
+      "crc32": 2922494435
+    },
+    {
+      "path": "sources/522000000000.jpg",
+      "bytes": 13036,
+      "crc32": 3053922829
+    },
+    {
+      "path": "sources/423000000000.jpg",
+      "bytes": 15597,
+      "crc32": 3729756092
+    },
+    {
+      "path": "sources/321000000001.jpg",
+      "bytes": 18560,
+      "crc32": 3959143
+    },
+    {
+      "path": "sources/121000000003.jpg",
+      "bytes": 27238,
+      "crc32": 3499695915
+    },
+    {
+      "path": "sources/622000000002.jpg",
+      "bytes": 16765,
+      "crc32": 300695938
+    },
+    {
+      "path": "sources/723000000002.jpg",
+      "bytes": 19020,
+      "crc32": 2275911347
+    },
+    {
+      "path": "R77_cup_night_s10_U25_KV/preview.jpg",
+      "bytes": 14436,
+      "crc32": 1359208965
+    },
+    {
+      "path": "R77_cup_night_s10_U25_KV/pattern.jpg",
+      "bytes": 8898,
+      "crc32": 350748059
+    },
+    {
+      "path": "R77_cup_night_s10_U25_KV/step_summary.json",
+      "bytes": 42159,
+      "crc32": 3333136989
+    },
+    {
+      "path": "R77_cup_night_s10_U25_OFF/preview.jpg",
+      "bytes": 14540,
+      "crc32": 3775987296
+    },
+    {
+      "path": "R77_cup_night_s10_U25_OFF/pattern.jpg",
+      "bytes": 8313,
+      "crc32": 2808371484
+    },
+    {
+      "path": "R77_cup_night_s10_U25_OFF/step_summary.json",
+      "bytes": 42063,
+      "crc32": 4114760171
+    },
+    {
+      "path": "R77_cup_night_s10_U25_MID/preview.jpg",
+      "bytes": 14409,
+      "crc32": 3593362274
+    },
+    {
+      "path": "R77_cup_night_s10_U25_MID/pattern.jpg",
+      "bytes": 8227,
+      "crc32": 2782586853
+    },
+    {
+      "path": "R77_cup_night_s10_U25_MID/step_summary.json",
+      "bytes": 42149,
+      "crc32": 4097609617
+    },
+    {
+      "path": "R77_cup_night_s10_S25_W050/preview.jpg",
+      "bytes": 14270,
+      "crc32": 1314725510
+    },
+    {
+      "path": "R77_cup_night_s10_S25_W050/pattern.jpg",
+      "bytes": 9114,
+      "crc32": 485327070
+    },
+    {
+      "path": "R77_cup_night_s10_S25_W050/step_summary.json",
+      "bytes": 43739,
+      "crc32": 1467049576
+    },
+    {
+      "path": "R77_cup_night_s10_ROUTE25/preview.jpg",
+      "bytes": 17565,
+      "crc32": 4136751322
+    },
+    {
+      "path": "R77_cup_night_s10_ROUTE25/pattern.jpg",
+      "bytes": 8590,
+      "crc32": 4258964407
+    },
+    {
+      "path": "R77_cup_night_s10_ROUTE25/step_summary.json",
+      "bytes": 45344,
+      "crc32": 1455077873
+    },
+    {
+      "path": "R77_cup_night_s10_REF25_KV/preview.jpg",
+      "bytes": 15033,
+      "crc32": 959818060
+    },
+    {
+      "path": "R77_cup_night_s10_REF25_KV/pattern.jpg",
+      "bytes": 9032,
+      "crc32": 3379521788
+    },
+    {
+      "path": "R77_cup_night_s10_REF25_KV/step_summary.json",
+      "bytes": 41658,
+      "crc32": 1623736185
+    },
+    {
+      "path": "R77_cup_night_s17_U25_KV/preview.jpg",
+      "bytes": 15503,
+      "crc32": 3661308400
+    },
+    {
+      "path": "R77_cup_night_s17_U25_KV/pattern.jpg",
+      "bytes": 9589,
+      "crc32": 2632597312
+    },
+    {
+      "path": "R77_cup_night_s17_U25_KV/step_summary.json",
+      "bytes": 42172,
+      "crc32": 1433667454
+    },
+    {
+      "path": "R77_cup_night_s17_U25_OFF/preview.jpg",
+      "bytes": 15023,
+      "crc32": 2210795735
+    },
+    {
+      "path": "R77_cup_night_s17_U25_OFF/pattern.jpg",
+      "bytes": 7721,
+      "crc32": 1483607650
+    },
+    {
+      "path": "R77_cup_night_s17_U25_OFF/step_summary.json",
+      "bytes": 42070,
+      "crc32": 1352828182
+    },
+    {
+      "path": "R77_cup_night_s17_U25_MID/preview.jpg",
+      "bytes": 15333,
+      "crc32": 3147400822
+    },
+    {
+      "path": "R77_cup_night_s17_U25_MID/pattern.jpg",
+      "bytes": 8670,
+      "crc32": 3507664062
+    },
+    {
+      "path": "R77_cup_night_s17_U25_MID/step_summary.json",
+      "bytes": 42178,
+      "crc32": 3277680802
+    },
+    {
+      "path": "R77_cup_night_s17_S25_W050/preview.jpg",
+      "bytes": 14843,
+      "crc32": 1352253274
+    },
+    {
+      "path": "R77_cup_night_s17_S25_W050/pattern.jpg",
+      "bytes": 9438,
+      "crc32": 2236467639
+    },
+    {
+      "path": "R77_cup_night_s17_S25_W050/step_summary.json",
+      "bytes": 43756,
+      "crc32": 1191510384
+    },
+    {
+      "path": "R77_cup_night_s17_ROUTE25/preview.jpg",
+      "bytes": 17462,
+      "crc32": 69297432
+    },
+    {
+      "path": "R77_cup_night_s17_ROUTE25/pattern.jpg",
+      "bytes": 9476,
+      "crc32": 2287603560
+    },
+    {
+      "path": "R77_cup_night_s17_ROUTE25/step_summary.json",
+      "bytes": 45364,
+      "crc32": 3944584441
+    },
+    {
+      "path": "R77_cup_night_s17_REF25_KV/preview.jpg",
+      "bytes": 15924,
+      "crc32": 4249250443
+    },
+    {
+      "path": "R77_cup_night_s17_REF25_KV/pattern.jpg",
+      "bytes": 9478,
+      "crc32": 2579534196
+    },
+    {
+      "path": "R77_cup_night_s17_REF25_KV/step_summary.json",
+      "bytes": 41678,
+      "crc32": 1301288659
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_U25_KV/preview.jpg",
+      "bytes": 12698,
+      "crc32": 1418004888
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_U25_KV/pattern.jpg",
+      "bytes": 2796,
+      "crc32": 1974747684
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_U25_KV/step_summary.json",
+      "bytes": 42187,
+      "crc32": 1719771026
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_U25_OFF/preview.jpg",
+      "bytes": 12364,
+      "crc32": 2336085367
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_U25_OFF/pattern.jpg",
+      "bytes": 3251,
+      "crc32": 2166037942
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_U25_OFF/step_summary.json",
+      "bytes": 42059,
+      "crc32": 1646026481
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_U25_MID/preview.jpg",
+      "bytes": 12221,
+      "crc32": 3248371999
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_U25_MID/pattern.jpg",
+      "bytes": 3259,
+      "crc32": 3432594659
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_U25_MID/step_summary.json",
+      "bytes": 42192,
+      "crc32": 875017443
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_S25_W050/preview.jpg",
+      "bytes": 12233,
+      "crc32": 1963870293
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_S25_W050/pattern.jpg",
+      "bytes": 2613,
+      "crc32": 3859925821
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_S25_W050/step_summary.json",
+      "bytes": 43800,
+      "crc32": 3056507496
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_ROUTE25/preview.jpg",
+      "bytes": 13876,
+      "crc32": 4002794894
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_ROUTE25/pattern.jpg",
+      "bytes": 2780,
+      "crc32": 824752623
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_ROUTE25/step_summary.json",
+      "bytes": 45472,
+      "crc32": 444248622
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_REF25_KV/preview.jpg",
+      "bytes": 12694,
+      "crc32": 24847626
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_REF25_KV/pattern.jpg",
+      "bytes": 2658,
+      "crc32": 4092321763
+    },
+    {
+      "path": "R77_printed_shirt_studio_s0_REF25_KV/step_summary.json",
+      "bytes": 41667,
+      "crc32": 1643374056
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_U25_KV/preview.jpg",
+      "bytes": 13065,
+      "crc32": 2305165707
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_U25_KV/pattern.jpg",
+      "bytes": 3597,
+      "crc32": 4043375228
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_U25_KV/step_summary.json",
+      "bytes": 42172,
+      "crc32": 2224910375
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_U25_OFF/preview.jpg",
+      "bytes": 12595,
+      "crc32": 3797602334
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_U25_OFF/pattern.jpg",
+      "bytes": 3095,
+      "crc32": 170728017
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_U25_OFF/step_summary.json",
+      "bytes": 42065,
+      "crc32": 1599123277
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_U25_MID/preview.jpg",
+      "bytes": 12515,
+      "crc32": 2136231401
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_U25_MID/pattern.jpg",
+      "bytes": 3427,
+      "crc32": 3488400439
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_U25_MID/step_summary.json",
+      "bytes": 42170,
+      "crc32": 2146105984
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_S25_W050/preview.jpg",
+      "bytes": 12426,
+      "crc32": 3267879570
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_S25_W050/pattern.jpg",
+      "bytes": 3405,
+      "crc32": 1638734101
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_S25_W050/step_summary.json",
+      "bytes": 43790,
+      "crc32": 1495146746
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_ROUTE25/preview.jpg",
+      "bytes": 14072,
+      "crc32": 585430161
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_ROUTE25/pattern.jpg",
+      "bytes": 3244,
+      "crc32": 1632375709
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_ROUTE25/step_summary.json",
+      "bytes": 45477,
+      "crc32": 114087002
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_REF25_KV/preview.jpg",
+      "bytes": 12656,
+      "crc32": 1667016782
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_REF25_KV/pattern.jpg",
+      "bytes": 3394,
+      "crc32": 3813930542
+    },
+    {
+      "path": "R77_printed_shirt_studio_s17_REF25_KV/step_summary.json",
+      "bytes": 41673,
+      "crc32": 724903105
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_U25_KV/preview.jpg",
+      "bytes": 15729,
+      "crc32": 3235116239
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_U25_KV/pattern.jpg",
+      "bytes": 8271,
+      "crc32": 3135581007
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_U25_KV/step_summary.json",
+      "bytes": 42187,
+      "crc32": 2062867869
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_U25_OFF/preview.jpg",
+      "bytes": 16963,
+      "crc32": 2003236402
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_U25_OFF/pattern.jpg",
+      "bytes": 6687,
+      "crc32": 2237262339
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_U25_OFF/step_summary.json",
+      "bytes": 42065,
+      "crc32": 1975209509
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_U25_MID/preview.jpg",
+      "bytes": 16365,
+      "crc32": 2805967795
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_U25_MID/pattern.jpg",
+      "bytes": 7410,
+      "crc32": 3521445900
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_U25_MID/step_summary.json",
+      "bytes": 42192,
+      "crc32": 1234583189
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_S25_W050/preview.jpg",
+      "bytes": 14947,
+      "crc32": 1165016365
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_S25_W050/pattern.jpg",
+      "bytes": 7587,
+      "crc32": 643408314
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_S25_W050/step_summary.json",
+      "bytes": 43784,
+      "crc32": 3586818969
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_ROUTE25/preview.jpg",
+      "bytes": 17187,
+      "crc32": 2125474848
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_ROUTE25/pattern.jpg",
+      "bytes": 7994,
+      "crc32": 1045218190
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_ROUTE25/step_summary.json",
+      "bytes": 45299,
+      "crc32": 889236499
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_REF25_KV/preview.jpg",
+      "bytes": 15564,
+      "crc32": 2951952611
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_REF25_KV/pattern.jpg",
+      "bytes": 7566,
+      "crc32": 1212952506
+    },
+    {
+      "path": "R77_butterfly_sunset_s0_REF25_KV/step_summary.json",
+      "bytes": 41677,
+      "crc32": 287043000
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_U25_KV/preview.jpg",
+      "bytes": 14287,
+      "crc32": 3641541097
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_U25_KV/pattern.jpg",
+      "bytes": 8165,
+      "crc32": 3009256992
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_U25_KV/step_summary.json",
+      "bytes": 42153,
+      "crc32": 3250655359
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_U25_OFF/preview.jpg",
+      "bytes": 17031,
+      "crc32": 1729509297
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_U25_OFF/pattern.jpg",
+      "bytes": 6588,
+      "crc32": 3022254830
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_U25_OFF/step_summary.json",
+      "bytes": 42053,
+      "crc32": 4054954659
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_U25_MID/preview.jpg",
+      "bytes": 15087,
+      "crc32": 794382238
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_U25_MID/pattern.jpg",
+      "bytes": 7422,
+      "crc32": 2983828614
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_U25_MID/step_summary.json",
+      "bytes": 42185,
+      "crc32": 3332600448
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_S25_W050/preview.jpg",
+      "bytes": 13381,
+      "crc32": 2196683438
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_S25_W050/pattern.jpg",
+      "bytes": 7600,
+      "crc32": 3585532115
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_S25_W050/step_summary.json",
+      "bytes": 43768,
+      "crc32": 1413809791
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_ROUTE25/preview.jpg",
+      "bytes": 15620,
+      "crc32": 47163702
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_ROUTE25/pattern.jpg",
+      "bytes": 8164,
+      "crc32": 1091479179
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_ROUTE25/step_summary.json",
+      "bytes": 45273,
+      "crc32": 1846106112
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_REF25_KV/preview.jpg",
+      "bytes": 14417,
+      "crc32": 2573928149
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_REF25_KV/pattern.jpg",
+      "bytes": 7453,
+      "crc32": 4238380527
+    },
+    {
+      "path": "R77_butterfly_sunset_s17_REF25_KV/step_summary.json",
+      "bytes": 41658,
+      "crc32": 79731147
+    },
+    {
+      "path": "R77_dog_snow_s0_U25_KV/preview.jpg",
+      "bytes": 20470,
+      "crc32": 1004873972
+    },
+    {
+      "path": "R77_dog_snow_s0_U25_KV/pattern.jpg",
+      "bytes": 9516,
+      "crc32": 4105920327
+    },
+    {
+      "path": "R77_dog_snow_s0_U25_KV/step_summary.json",
+      "bytes": 42168,
+      "crc32": 3729488587
+    },
+    {
+      "path": "R77_dog_snow_s0_U25_OFF/preview.jpg",
+      "bytes": 17045,
+      "crc32": 3020443582
+    },
+    {
+      "path": "R77_dog_snow_s0_U25_OFF/pattern.jpg",
+      "bytes": 8942,
+      "crc32": 166927180
+    },
+    {
+      "path": "R77_dog_snow_s0_U25_OFF/step_summary.json",
+      "bytes": 42061,
+      "crc32": 4074588314
+    },
+    {
+      "path": "R77_dog_snow_s0_U25_MID/preview.jpg",
+      "bytes": 17793,
+      "crc32": 22443005
+    },
+    {
+      "path": "R77_dog_snow_s0_U25_MID/pattern.jpg",
+      "bytes": 9318,
+      "crc32": 938745180
+    },
+    {
+      "path": "R77_dog_snow_s0_U25_MID/step_summary.json",
+      "bytes": 42180,
+      "crc32": 4013826402
+    },
+    {
+      "path": "R77_dog_snow_s0_S25_W050/preview.jpg",
+      "bytes": 17660,
+      "crc32": 59797197
+    },
+    {
+      "path": "R77_dog_snow_s0_S25_W050/pattern.jpg",
+      "bytes": 8585,
+      "crc32": 4271881861
+    },
+    {
+      "path": "R77_dog_snow_s0_S25_W050/step_summary.json",
+      "bytes": 43791,
+      "crc32": 918600800
+    },
+    {
+      "path": "R77_dog_snow_s0_ROUTE25/preview.jpg",
+      "bytes": 22509,
+      "crc32": 3407660247
+    },
+    {
+      "path": "R77_dog_snow_s0_ROUTE25/pattern.jpg",
+      "bytes": 8776,
+      "crc32": 1489746461
+    },
+    {
+      "path": "R77_dog_snow_s0_ROUTE25/step_summary.json",
+      "bytes": 45358,
+      "crc32": 2000549610
+    },
+    {
+      "path": "R77_dog_snow_s0_REF25_KV/preview.jpg",
+      "bytes": 17705,
+      "crc32": 3340581356
+    },
+    {
+      "path": "R77_dog_snow_s0_REF25_KV/pattern.jpg",
+      "bytes": 8978,
+      "crc32": 860151860
+    },
+    {
+      "path": "R77_dog_snow_s0_REF25_KV/step_summary.json",
+      "bytes": 41668,
+      "crc32": 413824981
+    },
+    {
+      "path": "R77_dog_snow_s17_U25_KV/preview.jpg",
+      "bytes": 22396,
+      "crc32": 533194915
+    },
+    {
+      "path": "R77_dog_snow_s17_U25_KV/pattern.jpg",
+      "bytes": 9159,
+      "crc32": 4111098327
+    },
+    {
+      "path": "R77_dog_snow_s17_U25_KV/step_summary.json",
+      "bytes": 42170,
+      "crc32": 4029731505
+    },
+    {
+      "path": "R77_dog_snow_s17_U25_OFF/preview.jpg",
+      "bytes": 16624,
+      "crc32": 3265190847
+    },
+    {
+      "path": "R77_dog_snow_s17_U25_OFF/pattern.jpg",
+      "bytes": 9704,
+      "crc32": 2839846153
+    },
+    {
+      "path": "R77_dog_snow_s17_U25_OFF/step_summary.json",
+      "bytes": 42056,
+      "crc32": 1710235422
+    },
+    {
+      "path": "R77_dog_snow_s17_U25_MID/preview.jpg",
+      "bytes": 16077,
+      "crc32": 440989212
+    },
+    {
+      "path": "R77_dog_snow_s17_U25_MID/pattern.jpg",
+      "bytes": 9837,
+      "crc32": 4204193647
+    },
+    {
+      "path": "R77_dog_snow_s17_U25_MID/step_summary.json",
+      "bytes": 42180,
+      "crc32": 1832567487
+    },
+    {
+      "path": "R77_dog_snow_s17_S25_W050/preview.jpg",
+      "bytes": 18181,
+      "crc32": 1219221123
+    },
+    {
+      "path": "R77_dog_snow_s17_S25_W050/pattern.jpg",
+      "bytes": 7719,
+      "crc32": 3127511729
+    },
+    {
+      "path": "R77_dog_snow_s17_S25_W050/step_summary.json",
+      "bytes": 43753,
+      "crc32": 2050997686
+    },
+    {
+      "path": "R77_dog_snow_s17_ROUTE25/preview.jpg",
+      "bytes": 25539,
+      "crc32": 2579075618
+    },
+    {
+      "path": "R77_dog_snow_s17_ROUTE25/pattern.jpg",
+      "bytes": 8744,
+      "crc32": 805301051
+    },
+    {
+      "path": "R77_dog_snow_s17_ROUTE25/step_summary.json",
+      "bytes": 45388,
+      "crc32": 1247028433
+    },
+    {
+      "path": "R77_dog_snow_s17_REF25_KV/preview.jpg",
+      "bytes": 17733,
+      "crc32": 4069600911
+    },
+    {
+      "path": "R77_dog_snow_s17_REF25_KV/pattern.jpg",
+      "bytes": 8069,
+      "crc32": 3484994874
+    },
+    {
+      "path": "R77_dog_snow_s17_REF25_KV/step_summary.json",
+      "bytes": 41664,
+      "crc32": 4222937096
+    },
+    {
+      "path": "R77_dog_rain_s0_U25_KV/preview.jpg",
+      "bytes": 19750,
+      "crc32": 1165716538
+    },
+    {
+      "path": "R77_dog_rain_s0_U25_KV/pattern.jpg",
+      "bytes": 9949,
+      "crc32": 673497901
+    },
+    {
+      "path": "R77_dog_rain_s0_U25_KV/step_summary.json",
+      "bytes": 42165,
+      "crc32": 1132156597
+    },
+    {
+      "path": "R77_dog_rain_s0_U25_OFF/preview.jpg",
+      "bytes": 19331,
+      "crc32": 2237342944
+    },
+    {
+      "path": "R77_dog_rain_s0_U25_OFF/pattern.jpg",
+      "bytes": 9083,
+      "crc32": 2615640139
+    },
+    {
+      "path": "R77_dog_rain_s0_U25_OFF/step_summary.json",
+      "bytes": 42055,
+      "crc32": 1388526928
+    },
+    {
+      "path": "R77_dog_rain_s0_U25_MID/preview.jpg",
+      "bytes": 20126,
+      "crc32": 2961100508
+    },
+    {
+      "path": "R77_dog_rain_s0_U25_MID/pattern.jpg",
+      "bytes": 9727,
+      "crc32": 1859887898
+    },
+    {
+      "path": "R77_dog_rain_s0_U25_MID/step_summary.json",
+      "bytes": 42172,
+      "crc32": 2073902845
+    },
+    {
+      "path": "R77_dog_rain_s0_S25_W050/preview.jpg",
+      "bytes": 17174,
+      "crc32": 2162756354
+    },
+    {
+      "path": "R77_dog_rain_s0_S25_W050/pattern.jpg",
+      "bytes": 9297,
+      "crc32": 512619214
+    },
+    {
+      "path": "R77_dog_rain_s0_S25_W050/step_summary.json",
+      "bytes": 43780,
+      "crc32": 3529472941
+    },
+    {
+      "path": "R77_dog_rain_s0_ROUTE25/preview.jpg",
+      "bytes": 21741,
+      "crc32": 3126466185
+    },
+    {
+      "path": "R77_dog_rain_s0_ROUTE25/pattern.jpg",
+      "bytes": 9271,
+      "crc32": 2172444707
+    },
+    {
+      "path": "R77_dog_rain_s0_ROUTE25/step_summary.json",
+      "bytes": 45371,
+      "crc32": 1539302199
+    },
+    {
+      "path": "R77_dog_rain_s0_REF25_KV/preview.jpg",
+      "bytes": 17385,
+      "crc32": 4064355957
+    },
+    {
+      "path": "R77_dog_rain_s0_REF25_KV/pattern.jpg",
+      "bytes": 9546,
+      "crc32": 2621888202
+    },
+    {
+      "path": "R77_dog_rain_s0_REF25_KV/step_summary.json",
+      "bytes": 41666,
+      "crc32": 1180102877
+    },
+    {
+      "path": "R77_dog_rain_s17_U25_KV/preview.jpg",
+      "bytes": 20788,
+      "crc32": 385325693
+    },
+    {
+      "path": "R77_dog_rain_s17_U25_KV/pattern.jpg",
+      "bytes": 9926,
+      "crc32": 429699421
+    },
+    {
+      "path": "R77_dog_rain_s17_U25_KV/step_summary.json",
+      "bytes": 42188,
+      "crc32": 1039573036
+    },
+    {
+      "path": "R77_dog_rain_s17_U25_OFF/preview.jpg",
+      "bytes": 20114,
+      "crc32": 1127905710
+    },
+    {
+      "path": "R77_dog_rain_s17_U25_OFF/pattern.jpg",
+      "bytes": 8861,
+      "crc32": 147881478
+    },
+    {
+      "path": "R77_dog_rain_s17_U25_OFF/step_summary.json",
+      "bytes": 42052,
+      "crc32": 889691411
+    },
+    {
+      "path": "R77_dog_rain_s17_U25_MID/preview.jpg",
+      "bytes": 17549,
+      "crc32": 2872487076
+    },
+    {
+      "path": "R77_dog_rain_s17_U25_MID/pattern.jpg",
+      "bytes": 9705,
+      "crc32": 2159742110
+    },
+    {
+      "path": "R77_dog_rain_s17_U25_MID/step_summary.json",
+      "bytes": 42167,
+      "crc32": 4062173752
+    },
+    {
+      "path": "R77_dog_rain_s17_S25_W050/preview.jpg",
+      "bytes": 17156,
+      "crc32": 3912669723
+    },
+    {
+      "path": "R77_dog_rain_s17_S25_W050/pattern.jpg",
+      "bytes": 8274,
+      "crc32": 2763525628
+    },
+    {
+      "path": "R77_dog_rain_s17_S25_W050/step_summary.json",
+      "bytes": 43791,
+      "crc32": 2474039251
+    },
+    {
+      "path": "R77_dog_rain_s17_ROUTE25/preview.jpg",
+      "bytes": 22827,
+      "crc32": 1394895808
+    },
+    {
+      "path": "R77_dog_rain_s17_ROUTE25/pattern.jpg",
+      "bytes": 9603,
+      "crc32": 2062886895
+    },
+    {
+      "path": "R77_dog_rain_s17_ROUTE25/step_summary.json",
+      "bytes": 45365,
+      "crc32": 2254512692
+    },
+    {
+      "path": "R77_dog_rain_s17_REF25_KV/preview.jpg",
+      "bytes": 17191,
+      "crc32": 1970914835
+    },
+    {
+      "path": "R77_dog_rain_s17_REF25_KV/pattern.jpg",
+      "bytes": 8721,
+      "crc32": 2471978258
+    },
+    {
+      "path": "R77_dog_rain_s17_REF25_KV/step_summary.json",
+      "bytes": 41665,
+      "crc32": 1623775604
+    },
+    {
+      "path": "R77_shirt_studio_s0_U25_KV/preview.jpg",
+      "bytes": 10596,
+      "crc32": 2256959058
+    },
+    {
+      "path": "R77_shirt_studio_s0_U25_KV/pattern.jpg",
+      "bytes": 2684,
+      "crc32": 789915225
+    },
+    {
+      "path": "R77_shirt_studio_s0_U25_KV/step_summary.json",
+      "bytes": 42166,
+      "crc32": 2302021616
+    },
+    {
+      "path": "R77_shirt_studio_s0_U25_OFF/preview.jpg",
+      "bytes": 9484,
+      "crc32": 1481850307
+    },
+    {
+      "path": "R77_shirt_studio_s0_U25_OFF/pattern.jpg",
+      "bytes": 3252,
+      "crc32": 2943870536
+    },
+    {
+      "path": "R77_shirt_studio_s0_U25_OFF/step_summary.json",
+      "bytes": 42044,
+      "crc32": 182447240
+    },
+    {
+      "path": "R77_shirt_studio_s0_U25_MID/preview.jpg",
+      "bytes": 10206,
+      "crc32": 3628639598
+    },
+    {
+      "path": "R77_shirt_studio_s0_U25_MID/pattern.jpg",
+      "bytes": 2398,
+      "crc32": 3712425682
+    },
+    {
+      "path": "R77_shirt_studio_s0_U25_MID/step_summary.json",
+      "bytes": 42187,
+      "crc32": 432970331
+    },
+    {
+      "path": "R77_shirt_studio_s0_S25_W050/preview.jpg",
+      "bytes": 10536,
+      "crc32": 2922753035
+    },
+    {
+      "path": "R77_shirt_studio_s0_S25_W050/pattern.jpg",
+      "bytes": 2596,
+      "crc32": 1261682859
+    },
+    {
+      "path": "R77_shirt_studio_s0_S25_W050/step_summary.json",
+      "bytes": 43766,
+      "crc32": 315852437
+    },
+    {
+      "path": "R77_shirt_studio_s0_ROUTE25/preview.jpg",
+      "bytes": 11542,
+      "crc32": 1440102956
+    },
+    {
+      "path": "R77_shirt_studio_s0_ROUTE25/pattern.jpg",
+      "bytes": 2415,
+      "crc32": 1014761054
+    },
+    {
+      "path": "R77_shirt_studio_s0_ROUTE25/step_summary.json",
+      "bytes": 45274,
+      "crc32": 3484867636
+    },
+    {
+      "path": "R77_shirt_studio_s0_REF25_KV/preview.jpg",
+      "bytes": 10303,
+      "crc32": 187454361
+    },
+    {
+      "path": "R77_shirt_studio_s0_REF25_KV/pattern.jpg",
+      "bytes": 2931,
+      "crc32": 3490652946
+    },
+    {
+      "path": "R77_shirt_studio_s0_REF25_KV/step_summary.json",
+      "bytes": 41667,
+      "crc32": 2511958677
+    },
+    {
+      "path": "R77_shirt_studio_s17_U25_KV/preview.jpg",
+      "bytes": 10401,
+      "crc32": 445431679
+    },
+    {
+      "path": "R77_shirt_studio_s17_U25_KV/pattern.jpg",
+      "bytes": 3065,
+      "crc32": 4133698739
+    },
+    {
+      "path": "R77_shirt_studio_s17_U25_KV/step_summary.json",
+      "bytes": 42168,
+      "crc32": 3570788202
+    },
+    {
+      "path": "R77_shirt_studio_s17_U25_OFF/preview.jpg",
+      "bytes": 10405,
+      "crc32": 1818247278
+    },
+    {
+      "path": "R77_shirt_studio_s17_U25_OFF/pattern.jpg",
+      "bytes": 4140,
+      "crc32": 2416456649
+    },
+    {
+      "path": "R77_shirt_studio_s17_U25_OFF/step_summary.json",
+      "bytes": 42052,
+      "crc32": 2335629257
+    },
+    {
+      "path": "R77_shirt_studio_s17_U25_MID/preview.jpg",
+      "bytes": 10552,
+      "crc32": 415064032
+    },
+    {
+      "path": "R77_shirt_studio_s17_U25_MID/pattern.jpg",
+      "bytes": 3242,
+      "crc32": 4215685315
+    },
+    {
+      "path": "R77_shirt_studio_s17_U25_MID/step_summary.json",
+      "bytes": 42172,
+      "crc32": 4225106057
+    },
+    {
+      "path": "R77_shirt_studio_s17_S25_W050/preview.jpg",
+      "bytes": 9968,
+      "crc32": 2721099386
+    },
+    {
+      "path": "R77_shirt_studio_s17_S25_W050/pattern.jpg",
+      "bytes": 2857,
+      "crc32": 3136048782
+    },
+    {
+      "path": "R77_shirt_studio_s17_S25_W050/step_summary.json",
+      "bytes": 43770,
+      "crc32": 3345756845
+    },
+    {
+      "path": "R77_shirt_studio_s17_ROUTE25/preview.jpg",
+      "bytes": 10656,
+      "crc32": 3809694025
+    },
+    {
+      "path": "R77_shirt_studio_s17_ROUTE25/pattern.jpg",
+      "bytes": 2580,
+      "crc32": 2423728847
+    },
+    {
+      "path": "R77_shirt_studio_s17_ROUTE25/step_summary.json",
+      "bytes": 45272,
+      "crc32": 1491169628
+    },
+    {
+      "path": "R77_shirt_studio_s17_REF25_KV/preview.jpg",
+      "bytes": 10342,
+      "crc32": 688340590
+    },
+    {
+      "path": "R77_shirt_studio_s17_REF25_KV/pattern.jpg",
+      "bytes": 3282,
+      "crc32": 2531981567
+    },
+    {
+      "path": "R77_shirt_studio_s17_REF25_KV/step_summary.json",
+      "bytes": 41666,
+      "crc32": 2766006823
+    },
+    {
+      "path": "R77_rug_floor_s0_U25_KV/preview.jpg",
+      "bytes": 14114,
+      "crc32": 4087892741
+    },
+    {
+      "path": "R77_rug_floor_s0_U25_KV/pattern.jpg",
+      "bytes": 4729,
+      "crc32": 1504637
+    },
+    {
+      "path": "R77_rug_floor_s0_U25_KV/step_summary.json",
+      "bytes": 42172,
+      "crc32": 1268902604
+    },
+    {
+      "path": "R77_rug_floor_s0_U25_OFF/preview.jpg",
+      "bytes": 13767,
+      "crc32": 523447859
+    },
+    {
+      "path": "R77_rug_floor_s0_U25_OFF/pattern.jpg",
+      "bytes": 5955,
+      "crc32": 170665520
+    },
+    {
+      "path": "R77_rug_floor_s0_U25_OFF/step_summary.json",
+      "bytes": 42066,
+      "crc32": 1088997526
+    },
+    {
+      "path": "R77_rug_floor_s0_U25_MID/preview.jpg",
+      "bytes": 16341,
+      "crc32": 2569326040
+    },
+    {
+      "path": "R77_rug_floor_s0_U25_MID/pattern.jpg",
+      "bytes": 6868,
+      "crc32": 1676857457
+    },
+    {
+      "path": "R77_rug_floor_s0_U25_MID/step_summary.json",
+      "bytes": 42204,
+      "crc32": 454536678
+    },
+    {
+      "path": "R77_rug_floor_s0_S25_W050/preview.jpg",
+      "bytes": 15034,
+      "crc32": 2075255619
+    },
+    {
+      "path": "R77_rug_floor_s0_S25_W050/pattern.jpg",
+      "bytes": 5407,
+      "crc32": 2608715408
+    },
+    {
+      "path": "R77_rug_floor_s0_S25_W050/step_summary.json",
+      "bytes": 43779,
+      "crc32": 3170906837
+    },
+    {
+      "path": "R77_rug_floor_s0_ROUTE25/preview.jpg",
+      "bytes": 16203,
+      "crc32": 1681715938
+    },
+    {
+      "path": "R77_rug_floor_s0_ROUTE25/pattern.jpg",
+      "bytes": 5514,
+      "crc32": 977283834
+    },
+    {
+      "path": "R77_rug_floor_s0_ROUTE25/step_summary.json",
+      "bytes": 45348,
+      "crc32": 1637480024
+    },
+    {
+      "path": "R77_rug_floor_s0_REF25_KV/preview.jpg",
+      "bytes": 14499,
+      "crc32": 3435614233
+    },
+    {
+      "path": "R77_rug_floor_s0_REF25_KV/pattern.jpg",
+      "bytes": 5210,
+      "crc32": 62172857
+    },
+    {
+      "path": "R77_rug_floor_s0_REF25_KV/step_summary.json",
+      "bytes": 41668,
+      "crc32": 1495729145
+    },
+    {
+      "path": "R77_rug_floor_s17_U25_KV/preview.jpg",
+      "bytes": 14893,
+      "crc32": 281221109
+    },
+    {
+      "path": "R77_rug_floor_s17_U25_KV/pattern.jpg",
+      "bytes": 7405,
+      "crc32": 3353799343
+    },
+    {
+      "path": "R77_rug_floor_s17_U25_KV/step_summary.json",
+      "bytes": 42175,
+      "crc32": 1392574871
+    },
+    {
+      "path": "R77_rug_floor_s17_U25_OFF/preview.jpg",
+      "bytes": 14228,
+      "crc32": 512343450
+    },
+    {
+      "path": "R77_rug_floor_s17_U25_OFF/pattern.jpg",
+      "bytes": 6404,
+      "crc32": 2013562837
+    },
+    {
+      "path": "R77_rug_floor_s17_U25_OFF/step_summary.json",
+      "bytes": 42061,
+      "crc32": 508208917
+    },
+    {
+      "path": "R77_rug_floor_s17_U25_MID/preview.jpg",
+      "bytes": 17775,
+      "crc32": 1068717086
+    },
+    {
+      "path": "R77_rug_floor_s17_U25_MID/pattern.jpg",
+      "bytes": 8112,
+      "crc32": 3933353198
+    },
+    {
+      "path": "R77_rug_floor_s17_U25_MID/step_summary.json",
+      "bytes": 42179,
+      "crc32": 1576329518
+    },
+    {
+      "path": "R77_rug_floor_s17_S25_W050/preview.jpg",
+      "bytes": 16858,
+      "crc32": 1849299806
+    },
+    {
+      "path": "R77_rug_floor_s17_S25_W050/pattern.jpg",
+      "bytes": 8876,
+      "crc32": 1879451325
+    },
+    {
+      "path": "R77_rug_floor_s17_S25_W050/step_summary.json",
+      "bytes": 43791,
+      "crc32": 3893876739
+    },
+    {
+      "path": "R77_rug_floor_s17_ROUTE25/preview.jpg",
+      "bytes": 14458,
+      "crc32": 4067518610
+    },
+    {
+      "path": "R77_rug_floor_s17_ROUTE25/pattern.jpg",
+      "bytes": 6714,
+      "crc32": 66560138
+    },
+    {
+      "path": "R77_rug_floor_s17_ROUTE25/step_summary.json",
+      "bytes": 45352,
+      "crc32": 1701480563
+    },
+    {
+      "path": "R77_rug_floor_s17_REF25_KV/preview.jpg",
+      "bytes": 15143,
+      "crc32": 873905541
+    },
+    {
+      "path": "R77_rug_floor_s17_REF25_KV/pattern.jpg",
+      "bytes": 8201,
+      "crc32": 987686856
+    },
+    {
+      "path": "R77_rug_floor_s17_REF25_KV/step_summary.json",
+      "bytes": 41677,
+      "crc32": 2462743276
+    },
+    {
+      "path": "reference_r76/manifest.json",
+      "bytes": 213984,
+      "crc32": 2917928989
+    },
+    {
+      "path": "reference_r76/R76_cup_night_s10_UNIFORM50_KV.jpg",
+      "bytes": 14853,
+      "crc32": 57315792
+    },
+    {
+      "path": "reference_r76/R76_cup_night_s10_SPECTRAL50_KV.jpg",
+      "bytes": 14981,
+      "crc32": 908497796
+    },
+    {
+      "path": "reference_r76/R76_cup_night_s10_FLOWEDIT_N26.jpg",
+      "bytes": 16854,
+      "crc32": 298938043
+    },
+    {
+      "path": "reference_r76/R76_cup_night_s17_UNIFORM50_KV.jpg",
+      "bytes": 15440,
+      "crc32": 38880394
+    },
+    {
+      "path": "reference_r76/R76_cup_night_s17_SPECTRAL50_KV.jpg",
+      "bytes": 15032,
+      "crc32": 1340281644
+    },
+    {
+      "path": "reference_r76/R76_cup_night_s17_FLOWEDIT_N26.jpg",
+      "bytes": 15737,
+      "crc32": 1572607079
+    },
+    {
+      "path": "reference_r76/R76_printed_shirt_studio_s0_UNIFORM50_KV.jpg",
+      "bytes": 13515,
+      "crc32": 2506933146
+    },
+    {
+      "path": "reference_r76/R76_printed_shirt_studio_s0_SPECTRAL50_KV.jpg",
+      "bytes": 12481,
+      "crc32": 334593677
+    },
+    {
+      "path": "reference_r76/R76_printed_shirt_studio_s0_FLOWEDIT_N26.jpg",
+      "bytes": 14595,
+      "crc32": 3201557681
+    },
+    {
+      "path": "reference_r76/R76_printed_shirt_studio_s17_UNIFORM50_KV.jpg",
+      "bytes": 13995,
+      "crc32": 1930905166
+    },
+    {
+      "path": "reference_r76/R76_printed_shirt_studio_s17_SPECTRAL50_KV.jpg",
+      "bytes": 12927,
+      "crc32": 70459754
+    },
+    {
+      "path": "reference_r76/R76_printed_shirt_studio_s17_FLOWEDIT_N26.jpg",
+      "bytes": 14102,
+      "crc32": 2791141970
+    },
+    {
+      "path": "reference_r76/R76_butterfly_sunset_s0_UNIFORM50_KV.jpg",
+      "bytes": 16148,
+      "crc32": 4104276631
+    },
+    {
+      "path": "reference_r76/R76_butterfly_sunset_s0_SPECTRAL50_KV.jpg",
+      "bytes": 14865,
+      "crc32": 1453475459
+    },
+    {
+      "path": "reference_r76/R76_butterfly_sunset_s0_FLOWEDIT_N26.jpg",
+      "bytes": 17465,
+      "crc32": 4048321012
+    },
+    {
+      "path": "reference_r76/R76_butterfly_sunset_s17_UNIFORM50_KV.jpg",
+      "bytes": 15673,
+      "crc32": 552948455
+    },
+    {
+      "path": "reference_r76/R76_butterfly_sunset_s17_SPECTRAL50_KV.jpg",
+      "bytes": 13779,
+      "crc32": 4045245215
+    },
+    {
+      "path": "reference_r76/R76_butterfly_sunset_s17_FLOWEDIT_N26.jpg",
+      "bytes": 17068,
+      "crc32": 2697530469
+    },
+    {
+      "path": "reference_r76/R76_dog_snow_s0_UNIFORM50_KV.jpg",
+      "bytes": 24455,
+      "crc32": 3811668300
+    },
+    {
+      "path": "reference_r76/R76_dog_snow_s0_SPECTRAL50_KV.jpg",
+      "bytes": 17396,
+      "crc32": 2665298117
+    },
+    {
+      "path": "reference_r76/R76_dog_snow_s0_FLOWEDIT_N26.jpg",
+      "bytes": 20633,
+      "crc32": 1339379366
+    },
+    {
+      "path": "reference_r76/R76_dog_snow_s17_UNIFORM50_KV.jpg",
+      "bytes": 25142,
+      "crc32": 3796715045
+    },
+    {
+      "path": "reference_r76/R76_dog_snow_s17_SPECTRAL50_KV.jpg",
+      "bytes": 17538,
+      "crc32": 1623706693
+    },
+    {
+      "path": "reference_r76/R76_dog_snow_s17_FLOWEDIT_N26.jpg",
+      "bytes": 20089,
+      "crc32": 1282983392
+    },
+    {
+      "path": "reference_r76/R76_dog_rain_s0_UNIFORM50_KV.jpg",
+      "bytes": 23304,
+      "crc32": 2161178136
+    },
+    {
+      "path": "reference_r76/R76_dog_rain_s0_SPECTRAL50_KV.jpg",
+      "bytes": 16843,
+      "crc32": 3031784790
+    },
+    {
+      "path": "reference_r76/R76_dog_rain_s0_FLOWEDIT_N26.jpg",
+      "bytes": 21023,
+      "crc32": 2683364763
+    },
+    {
+      "path": "reference_r76/R76_dog_rain_s17_UNIFORM50_KV.jpg",
+      "bytes": 23498,
+      "crc32": 132504829
+    },
+    {
+      "path": "reference_r76/R76_dog_rain_s17_SPECTRAL50_KV.jpg",
+      "bytes": 16861,
+      "crc32": 2930379624
+    },
+    {
+      "path": "reference_r76/R76_dog_rain_s17_FLOWEDIT_N26.jpg",
+      "bytes": 21048,
+      "crc32": 3455041736
+    },
+    {
+      "path": "reference_r76/R76_shirt_studio_s0_UNIFORM50_KV.jpg",
+      "bytes": 10623,
+      "crc32": 838547557
+    },
+    {
+      "path": "reference_r76/R76_shirt_studio_s0_SPECTRAL50_KV.jpg",
+      "bytes": 10332,
+      "crc32": 3532609998
+    },
+    {
+      "path": "reference_r76/R76_shirt_studio_s0_FLOWEDIT_N26.jpg",
+      "bytes": 12439,
+      "crc32": 2855712260
+    },
+    {
+      "path": "reference_r76/R76_shirt_studio_s17_UNIFORM50_KV.jpg",
+      "bytes": 10784,
+      "crc32": 203317481
+    },
+    {
+      "path": "reference_r76/R76_shirt_studio_s17_SPECTRAL50_KV.jpg",
+      "bytes": 10106,
+      "crc32": 1331158994
+    },
+    {
+      "path": "reference_r76/R76_shirt_studio_s17_FLOWEDIT_N26.jpg",
+      "bytes": 12892,
+      "crc32": 476392649
+    },
+    {
+      "path": "reference_r76/R76_rug_floor_s0_UNIFORM50_KV.jpg",
+      "bytes": 13081,
+      "crc32": 3942232933
+    },
+    {
+      "path": "reference_r76/R76_rug_floor_s0_SPECTRAL50_KV.jpg",
+      "bytes": 17354,
+      "crc32": 2479529034
+    },
+    {
+      "path": "reference_r76/R76_rug_floor_s0_FLOWEDIT_N26.jpg",
+      "bytes": 16285,
+      "crc32": 940072017
+    },
+    {
+      "path": "reference_r76/R76_rug_floor_s17_UNIFORM50_KV.jpg",
+      "bytes": 13331,
+      "crc32": 3087806636
+    },
+    {
+      "path": "reference_r76/R76_rug_floor_s17_SPECTRAL50_KV.jpg",
+      "bytes": 18092,
+      "crc32": 1209622268
+    },
+    {
+      "path": "reference_r76/R76_rug_floor_s17_FLOWEDIT_N26.jpg",
+      "bytes": 19992,
+      "crc32": 2670767786
+    }
+  ],
+  "excluded_members": [
+    {
+      "path": "index.html",
+      "bytes": 38797,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "review/index.html",
+      "bytes": 80122,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/cup_night_s10.jpg",
+      "bytes": 121513,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/cup_night_s17.jpg",
+      "bytes": 123766,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/printed_shirt_studio_s0.jpg",
+      "bytes": 105265,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/printed_shirt_studio_s17.jpg",
+      "bytes": 105914,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/butterfly_sunset_s0.jpg",
+      "bytes": 125478,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/butterfly_sunset_s17.jpg",
+      "bytes": 119020,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_snow_s0.jpg",
+      "bytes": 149550,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_snow_s17.jpg",
+      "bytes": 152678,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_rain_s0.jpg",
+      "bytes": 149657,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/dog_rain_s17.jpg",
+      "bytes": 149696,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/shirt_studio_s0.jpg",
+      "bytes": 91381,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/shirt_studio_s17.jpg",
+      "bytes": 90782,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/rug_floor_s0.jpg",
+      "bytes": 115935,
+      "reason": "comparison grid or generated interface"
+    },
+    {
+      "path": "sheets/rug_floor_s17.jpg",
+      "bytes": 118771,
+      "reason": "comparison grid or generated interface"
+    }
+  ],
+  "text_normalized_members": [],
+  "original_manifest_note": "Archived code/plan/input hashes identify the historical run. Neutral naming and path redaction change published text; hashes are not recalculated or presented as hashes of this export.",
+  "available": {
+    "completed": 84,
+    "total_planned": 84,
+    "pending": 0,
+    "step_summaries": 84,
+    "record_json": 0,
+    "full_steps_json": 0,
+    "native_raw_png_in_archive": 0,
+    "float_map_npz": 0
+  },
+  "missing": "Native generated images absent from compact source ZIP."
+}

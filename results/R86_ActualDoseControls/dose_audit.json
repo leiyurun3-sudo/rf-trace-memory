@@ -1,0 +1,13 @@
+{
+  "profiles": 10,
+  "archived_anchor_nfe_each": 97,
+  "anchor_generation_new_nfe": 0,
+  "new_outputs": 40,
+  "new_nfe_each_expected": 97,
+  "per_output_with_unshared_anchor_nfe": 194,
+  "profile_reuse": true,
+  "total_cells": 50,
+  "dose_definition": "target RMS before h; applied state update RMS = h * target",
+  "max_absolute_step_rms_error": 5.960464477539063e-08,
+  "max_relative_step_rms_error": 1.5167696329767743e-07
+}
